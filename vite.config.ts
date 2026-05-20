@@ -10,4 +10,13 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('@babylonjs')) return 'babylon';
+        },
+      },
+    },
+  },
 })

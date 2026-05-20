@@ -1,6 +1,9 @@
-import { useEffect, useState } from 'react';
-import { SceneCanvas } from './components/Scene';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { useBuildingStore } from './stores/buildingStore';
+
+const SceneCanvas = lazy(() =>
+  import('./components/Scene').then(m => ({ default: m.SceneCanvas }))
+);
 
 function App() {
   const loadDefaultBase  = useBuildingStore((s) => s.loadDefaultBase);
@@ -29,7 +32,9 @@ function App() {
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', background: '#000' }}>
-      <SceneCanvas />
+      <Suspense fallback={null}>
+        <SceneCanvas />
+      </Suspense>
 
       {/* Crosshair */}
       <div style={{
