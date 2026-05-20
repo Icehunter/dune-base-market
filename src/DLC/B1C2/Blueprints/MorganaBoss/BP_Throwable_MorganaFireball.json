@@ -1,0 +1,995 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Throwable_MorganaFireball_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_Seeker_Assault_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.0"
+    },
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_Throwable_MorganaFireball_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.2"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Throwable_MorganaFireball_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ExecuteUbergraph_BP_Throwable_MorganaFireball'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_Seeker_Assault_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.7"
+      },
+      {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ReceiveActorBeginOverlap'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.6"
+      },
+      {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:BndEvt__BP_Throwable_MorganaFireball_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.4"
+      },
+      {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ExecuteUbergraph_BP_Throwable_MorganaFireball'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Haz_Fire_Sphere4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDelayComplete",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Throwable_MorganaFireball": {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ExecuteUbergraph_BP_Throwable_MorganaFireball'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.5"
+      },
+      "BndEvt__BP_Throwable_MorganaFireball_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:BndEvt__BP_Throwable_MorganaFireball_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.4"
+      },
+      "ReceiveActorBeginOverlap": {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ReceiveActorBeginOverlap'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Throwable_MorganaFireball_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.7"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Throwable_MorganaFireball_C'Default__BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Throwable_MorganaFireball_C",
+    "Name": "Default__BP_Throwable_MorganaFireball_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.BP_Throwable_MorganaFireball_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball",
+    "Template": {
+      "ObjectName": "BP_Throwable_Seeker_Assault_C'Default__BP_Throwable_Seeker_Assault_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "AutoDetonateTime": 6.0,
+      "MaxDamage": 300.0,
+      "RadialMinDamageScalar": 1.0,
+      "LaunchSFX": {
+        "ObjectName": "FcAudioEvent'AD_AI_Boss_Dragon_FireBall'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/AI/AI_Boss_Dragon/AD_AI_Boss_Dragon_FireBall.0"
+      },
+      "m_ProjectileComp": {
+        "ObjectName": "DuneProjectileMovementComponent'Default__BP_Throwable_MorganaFireball_C:ProjectileMovement'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.3"
+      },
+      "m_SphereCollisionComp": {
+        "ObjectName": "SphereComponent'Default__BP_Throwable_MorganaFireball_C:SphereCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.17"
+      },
+      "m_SphereOverlapComp": {
+        "ObjectName": "SphereComponent'Default__BP_Throwable_MorganaFireball_C:SphereOverlap'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.18"
+      },
+      "m_MeshComp": {
+        "ObjectName": "StaticMeshComponent'Default__BP_Throwable_MorganaFireball_C:Mesh'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.19"
+      },
+      "m_Audio_ActiveLoop": {
+        "ObjectName": "FcAudioEvent'AD_AI_Boss_Dragon_FireBall_Whoosh'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/AI/AI_Boss_Dragon/AD_AI_Boss_Dragon_FireBall_Whoosh.0"
+      },
+      "InitialLifeSpan": 20.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BP_Throwable_MorganaFireball_C:SphereCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.17"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Sphere",
+          "DelegatePropertyName": "OnComponentBeginOverlap",
+          "FunctionNameToBind": "BndEvt__BP_Throwable_MorganaFireball_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DuneProjectileMovementComponent",
+    "Name": "ProjectileMovement",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Throwable_MorganaFireball_C'Default__BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.1"
+    },
+    "Template": {
+      "ObjectName": "DuneProjectileMovementComponent'Default__BP_Throwable_Seeker_Assault_C:ProjectileMovement'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.3"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_Throwable_MorganaFireball_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Throwable_MorganaFireball",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_ComponentBoundEvent_SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveActorBeginOverlap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveActorBeginOverlap'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ProjectileThrowableBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/ThrowableBase/BP_ProjectileThrowableBase.19"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_ProjectileThrowableBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/ThrowableBase/BP_ProjectileThrowableBase.19"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PointLightComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PointLightComponent'BP_Throwable_MorganaFireball_C:PointLight_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Throwable_Seeker_Assault_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.0"
+            },
+            "SCSVariableName": "PointLight",
+            "AssociatedGuid": "C72E6EBD-49E83DD7-FC32B88C-526F2D5A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Haz_Fire_Sphere4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Wpn_ThermiteTrail_01'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/DragonFlameTurret/Niagara/NS_VFX_Wpn_ThermiteTrail_01.112"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Beam End",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraPosition'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Beam End",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraPosition'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Impact Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Impact Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "ExplosionOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.ExplosionOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Beam End",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraPosition'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 12,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.ExplosionOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 28,
+            "Name": "User.Impact Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          123,
+          217,
+          134,
+          62,
+          0,
+          0,
+          128,
+          60,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          160,
+          64,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "OriginalPositionData": [
+          {
+            "Name": "User.Beam End",
+            "Value": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            }
+          }
+        ]
+      },
+      "RelativeLocation": {
+        "X": 62.74764,
+        "Y": -3.1672893E-13,
+        "Z": -2.3974033E-07
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Template": {
+      "ObjectName": "PointLightComponent'BP_Throwable_Seeker_Assault_C:PointLight_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.11"
+    },
+    "Properties": {
+      "AttenuationRadius": 100.0,
+      "Intensity": 2000.0,
+      "LightColor": {
+        "B": 0,
+        "G": 212,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFD400"
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Throwable_MorganaFireball_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.11"
+      },
+      "VariableGuid": "F3D140E4-4F6E2FB1-47602F9B-D1BACFEE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_Throwable_MorganaFireball_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.16"
+      },
+      "ParentComponentOrVariableName": "SphereCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4AA76080-41A123E4-166FBBAB-DE70381D",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Throwable_MorganaFireball_C:NS_Haz_Fire_Sphere4_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.9"
+      },
+      "ParentComponentOrVariableName": "SphereCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A5C2D488-43271514-06202796-E25D2DCD",
+      "InternalVariableName": "NS_Haz_Fire_Sphere4"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Throwable_MorganaFireball_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.12"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.0"
+    },
+    "Properties": {
+      "bGenerateOverlapEvents": true,
+      "bForceGenerateOverlapEvents": true,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "WorldStatic": "Overlap",
+          "WorldDynamic": "Overlap",
+          "Pawn": "Overlap",
+          "PhysicsBody": "Overlap",
+          "Vehicle": "Overlap",
+          "Destructible": "Overlap",
+          "Building_Structure": "Overlap",
+          "Weapon_Projectile": "Overlap",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 19.082935,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.3719943,
+        "Y": 0.3719943,
+        "Z": 0.3719943
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereCollision",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Throwable_MorganaFireball_C'Default__BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.1"
+    },
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_Throwable_Seeker_Assault_C:SphereCollision'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.17"
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereOverlap",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BP_Throwable_MorganaFireball_C'Default__BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.1"
+    },
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_Throwable_Seeker_Assault_C:SphereOverlap'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.18"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Throwable_MorganaFireball_C:SphereCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.17"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_Throwable_MorganaFireball_C'Default__BP_Throwable_MorganaFireball_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.1"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_Throwable_Seeker_Assault_C:Mesh'",
+      "ObjectPath": "DuneSandbox/Content/Dune/GadgetsAbilities/AssaultSeeker/BP_Throwable_Seeker_Assault.19"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_BauxitePlaceholder'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Rocks/Siltstone/Meshes/SM_BauxitePlaceholder.1"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BP_Throwable_MorganaFireball_C:SphereCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Throwable_MorganaFireball.17"
+      },
+      "RelativeLocation": {
+        "X": 6.7036476,
+        "Y": 1.8418952E-14,
+        "Z": 3.1632712
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      },
+      "bVisible": false
+    }
+  }
+]

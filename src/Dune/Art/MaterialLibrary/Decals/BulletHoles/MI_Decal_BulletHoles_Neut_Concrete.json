@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Decal_BulletHoles_Neut_Concrete",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/BulletHoles/MI_Decal_BulletHoles_Neut_Concrete",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_DuneMaster_BasicDecal'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_BasicDecal.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Texture Density (meters covered by texture)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "851AE52A-425FF18E-B52DE1A1-2A30A160"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Basecolor (RGB) + Alpha (A)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_BulletHoles_Neut_Concrete_01_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/BulletHoles/T_BasicDecal_BulletHoles_Neut_Concrete_01_D.0"
+          },
+          "ExpressionGUID": "1DA9C30E-4D94E0FE-B43B45B3-76B360D6"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal (RG) + Metallic (B) + Roughness (A)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_BulletHoles_Neut_Concrete_01_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/BulletHoles/T_BasicDecal_BulletHoles_Neut_Concrete_01_N.0"
+          },
+          "ExpressionGUID": "104D305E-4243D625-5740639D-C9984BB3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Opacity masks OR Composite opacity (R+G+B)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_BulletHoles_Neut_Concrete_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/BulletHoles/T_BasicDecal_BulletHoles_Neut_Concrete_01_M.0"
+          },
+          "ExpressionGUID": "90CC74B3-4AF208A8-3B69B099-61D6F1B0"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Mask Vertical Surfaces?",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CA617C7A-4EE8D09A-4EAB3EAB-CF5D156E"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

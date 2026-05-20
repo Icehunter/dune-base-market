@@ -1,0 +1,680 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FireZone_Morgana_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZoneBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_FireZone_Morgana_C:Timeline_Fade_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.20"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_FireZone_Morgana_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_FireZone_Morgana_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ExecuteUbergraph_BP_FireZone_Morgana'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZoneBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:FadeDecal'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.6"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:UserConstructionScript'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.12"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:Timeline_Fade__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.10"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:Timeline_Fade__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.11"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ReceiveDestroyed'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.9"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.8"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ClearFireZone'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.4"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:FadeOut'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.7"
+      },
+      {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ExecuteUbergraph_BP_FireZone_Morgana'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_Fade_NewTrack_0_A6F0AAA249E165BE43E262AF191E7D4C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_Fade__Direction_A6F0AAA249E165BE43E262AF191E7D4C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_Fade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FireZoneLifetime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_FireZone_Morgana": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ExecuteUbergraph_BP_FireZone_Morgana'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.5"
+      },
+      "FadeOut": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:FadeOut'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.7"
+      },
+      "ClearFireZone": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ClearFireZone'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.8"
+      },
+      "ReceiveDestroyed": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:ReceiveDestroyed'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.9"
+      },
+      "Timeline_Fade__UpdateFunc": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:Timeline_Fade__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.11"
+      },
+      "Timeline_Fade__FinishedFunc": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:Timeline_Fade__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.10"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:UserConstructionScript'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.12"
+      },
+      "FadeDecal": {
+        "ObjectName": "Function'BP_FireZone_Morgana_C:FadeDecal'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FireZone_Morgana_C'Default__BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_FireZone_Morgana_C",
+    "Name": "Default__BP_FireZone_Morgana_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.BP_FireZone_Morgana_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana",
+    "Template": {
+      "ObjectName": "BP_FireZoneBase_C'Default__BP_FireZoneBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "FireZoneLifetime": 8.0,
+      "m_FireDamageAreaComponent": {
+        "ObjectName": "HazardZoneVisComponent'Default__BP_FireZone_Morgana_C:FireDamageAreaComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.13"
+      },
+      "m_FireZoneData": {
+        "ObjectName": "FireZoneData'DA_FireZoneData'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/DA_FireZoneData.0"
+      },
+      "m_AutoReenableTime": 0.0,
+      "m_AutoDestructionTime": 10.0,
+      "m_VisComponent": {
+        "ObjectName": "HazardZoneVisComponent'Default__BP_FireZone_Morgana_C:VisComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.14"
+      },
+      "m_BoxSize": {
+        "X": 700.0,
+        "Y": 700.0,
+        "Z": 600.0
+      },
+      "bNetLoadOnClient": false,
+      "NetDormancy": "DORM_Awake",
+      "NetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "HazardZoneVisComponent'Default__BP_FireZone_Morgana_C:VisComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.14"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'DecalComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Template": {
+      "ObjectName": "DecalComponent'BP_FireZoneBase_C:Decal_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.3"
+    },
+    "Properties": {
+      "DecalSize": {
+        "X": 0.6,
+        "Y": 1.6,
+        "Z": 1.6
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearFireZone",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_FireZone_Morgana",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeDecal",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_FireZoneBase_C:FadeDecal'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_FireZoneBase_C:FadeDecal'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.8"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeOut",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_FireZoneBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.9"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_FireZoneBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.9"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveDestroyed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveDestroyed'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_Fade__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_Fade__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_FireZoneBase_C:UserConstructionScript'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.10"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_FireZoneBase_C:UserConstructionScript'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HazardZoneVisComponent",
+    "Name": "FireDamageAreaComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HazardZoneVisComponent'",
+    "Outer": {
+      "ObjectName": "BP_FireZone_Morgana_C'Default__BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.1"
+    },
+    "Template": {
+      "ObjectName": "HazardZoneVisComponent'Default__BP_FireZoneBase_C:FireDamageAreaComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.11"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "HazardZoneVisComponent'Default__BP_FireZone_Morgana_C:VisComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.14"
+      }
+    }
+  },
+  {
+    "Type": "HazardZoneVisComponent",
+    "Name": "VisComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HazardZoneVisComponent'",
+    "Outer": {
+      "ObjectName": "BP_FireZone_Morgana_C'Default__BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.1"
+    },
+    "Template": {
+      "ObjectName": "HazardZoneVisComponent'Default__BP_FireZoneBase_C:VisComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.12"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'NiagaraComponent'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent'BP_FireZone_Morgana_C:FireNiagaraActor_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FireZoneBase_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.0"
+            },
+            "SCSVariableName": "FireNiagaraActor",
+            "AssociatedGuid": "A08A4999-4355D78A-96FA6C95-7DF70BF2"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'DecalComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "DecalComponent'BP_FireZone_Morgana_C:Decal_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_FireZoneBase_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.0"
+            },
+            "SCSVariableName": "Decal",
+            "AssociatedGuid": "22A07537-48A781B8-BE1D2FAD-26A668FD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "FireNiagaraActor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Template": {
+      "ObjectName": "NiagaraComponent'BP_FireZoneBase_C:FireNiagaraActor_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Hazards/Fire/BP_FireZoneBase.13"
+    },
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FireZone_Morgana_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_FireZone_Morgana_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.17"
+      },
+      "VariableGuid": "E1D7DE1E-451DE533-DE817D99-DB1D611E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_FireZone_Morgana_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.18"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Fade_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FireZone_Morgana_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FireZone_Morgana_C:CurveFloat_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_FireZone_Morgana.2"
+          },
+          "PropertyName": "Timeline_Fade_NewTrack_0_A6F0AAA249E165BE43E262AF191E7D4C",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "A6F0AAA2-49E165BE-43E262AF-191E7D4C",
+      "VariableName": "Timeline_Fade",
+      "DirectionPropertyName": "Timeline_Fade__Direction_A6F0AAA249E165BE43E262AF191E7D4C",
+      "UpdateFunctionName": "Timeline_Fade__UpdateFunc",
+      "FinishedFunctionName": "Timeline_Fade__FinishedFunc"
+    }
+  }
+]

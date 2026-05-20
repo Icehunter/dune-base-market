@@ -1,0 +1,473 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Hark_StandingLight_02'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Hark/Lights/Meshes/SM_Env_Prop_Hark_StandingLight_02.1"
+    },
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.017416477,
+              "Y": 0.0755229,
+              "Z": 15.183823
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 14.550136,
+            "Length": 5.4635,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1EC86EC84933F033F475999EED4FB8BD",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x35B"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Env_Prop_Hark_StandingLight_02",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Hark/Lights/Meshes/SM_Env_Prop_Hark_StandingLight_02",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_Env_Prop_Hark_Lights'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Hark/Lights/Materials/ML_Env_Prop_Hark_Lights.0"
+          },
+          "MaterialSlotName": "ML_Env_Prop_Hark_LightCeiling",
+          "ImportedMaterialSlotName": "ML_Env_Prop_Hark_LightCeiling",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 500.6212,
+            "LocalUVDensities[1]": 700.9843,
+            "LocalUVDensities[2]": 101.035065,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Env_Prop_Hark_Lights'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Hark/Table/Materials/MI_Env_Prop_Hark_Lights.0"
+          },
+          "MaterialSlotName": "ML_Env_Prop_Hark_Lights",
+          "ImportedMaterialSlotName": "ML_Env_Prop_Hark_Lights",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 67.312325,
+            "LocalUVDensities[1]": 269.58865,
+            "LocalUVDensities[2]": 101.14125,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Env_Prop_Hark_Lights_Glass_Clean_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Hark/Lights/Materials/MI_Env_Prop_Hark_Lights_Glass_Clean_01.0"
+          },
+          "MaterialSlotName": "ML_Env_Prop_Hark_LightCeiling_Glass",
+          "ImportedMaterialSlotName": "ML_Env_Prop_Hark_LightCeiling_Glass",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 884.20966,
+            "LocalUVDensities[1]": 592.6313,
+            "LocalUVDensities[2]": 70.35669,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 605.8529,
+      "LightMapResolution": 64,
+      "bLoadNaniteFallbackMeshGeometry": true,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -0.017416477,
+          "Y": 0.0755229,
+          "Z": 16.183823
+        },
+        "BoxExtent": {
+          "X": 14.426609,
+          "Y": 14.414349,
+          "Z": 16.183823
+        },
+        "SphereRadius": 26.034911349574646
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Env_Prop_Hark_StandingLight_02:BodySetup_1'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Hark/Lights/Meshes/SM_Env_Prop_Hark_StandingLight_02.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "557AEB29-42632D26-F0EF098C-4ED48DB7",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1108,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 916,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 3324,
+              "NumTriangles": 120,
+              "MinVertexIndex": 917,
+              "MaxVertexIndex": 989,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 3684,
+              "NumTriangles": 480,
+              "MinVertexIndex": 990,
+              "MaxVertexIndex": 1329,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 1330
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 1330,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -15.444025,
+                "Y": -15.338825,
+                "Z": -1.0
+              },
+              "Max": {
+                "X": 15.409193,
+                "Y": 15.489872,
+                "Z": 33.367645
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -5.017416,
+                    "Y": 0.07552338,
+                    "Z": 16.183823
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.982584,
+                    "Y": 0.07552338,
+                    "Z": 16.183823
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.017416,
+                    "Y": -4.9244766,
+                    "Z": 16.183823
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.017416,
+                    "Y": 0.07552338,
+                    "Z": 16.183823
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 20.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": -0.017416,
+                    "Y": 0.07552338,
+                    "Z": 6.1838226
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": -0.017416,
+                    "Y": 0.07552338,
+                    "Z": 26.183823
+                  },
+                  "Extent": {
+                    "X": 15.0,
+                    "Y": 15.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0xD5F6"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -0.017416477,
+          "Y": 0.0755229,
+          "Z": 16.183823
+        },
+        "BoxExtent": {
+          "X": 14.426609,
+          "Y": 14.414349,
+          "Z": 16.183823
+        },
+        "SphereRadius": 20.702541
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

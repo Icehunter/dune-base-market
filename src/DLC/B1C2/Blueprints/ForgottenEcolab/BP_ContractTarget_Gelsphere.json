@@ -1,0 +1,465 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ContractTarget_Gelsphere_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractInteractionTarget_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.1"
+    },
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_ContractTarget_Gelsphere_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.3"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ContractTarget_Gelsphere_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_ContractTarget_Gelsphere_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ContractTarget_Gelsphere_C:ExecuteUbergraph_BP_ContractTarget_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractInteractionTarget_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ContractTarget_Gelsphere_C:BndEvt__BP_ContractTarget_Gelsphere_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.4"
+      },
+      {
+        "ObjectName": "Function'BP_ContractTarget_Gelsphere_C:ExecuteUbergraph_BP_ContractTarget_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interface",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_GelsphereInterface_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_GelsphereInterface.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ContractTarget_Gelsphere": {
+        "ObjectName": "Function'BP_ContractTarget_Gelsphere_C:ExecuteUbergraph_BP_ContractTarget_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.5"
+      },
+      "BndEvt__BP_ContractTarget_Gelsphere_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature": {
+        "ObjectName": "Function'BP_ContractTarget_Gelsphere_C:BndEvt__BP_ContractTarget_Gelsphere_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ContractTarget_Gelsphere_C'Default__BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractionCollision_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'BP_ContractInteractionTarget_C:InteractionCollision_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.2"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 25.0,
+        "Y": 25.0,
+        "Z": 25.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BP_ContractTarget_Gelsphere_C",
+    "Name": "Default__BP_ContractTarget_Gelsphere_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.BP_ContractTarget_Gelsphere_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere",
+    "Template": {
+      "ObjectName": "BP_ContractInteractionTarget_C'Default__BP_ContractInteractionTarget_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "InteractableBase",
+          "DelegatePropertyName": "m_NotifyOnInteract",
+          "FunctionNameToBind": "BndEvt__BP_ContractTarget_Gelsphere_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_ContractTarget_Gelsphere_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ContractTarget_Gelsphere",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeLiteralGameplayTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'BoxComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BoxComponent'BP_ContractTarget_Gelsphere_C:InteractionCollision_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.1"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_ContractInteractionTarget_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.1"
+            },
+            "SCSVariableName": "InteractionCollision",
+            "AssociatedGuid": "E80F804F-418EE525-A5D4BB8F-93210215"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_ContractTarget_Gelsphere_C:Visuals_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.11"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_ContractInteractionTarget_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.1"
+            },
+            "SCSVariableName": "Visuals",
+            "AssociatedGuid": "B2C415AA-43DA73B4-BB933389-3B1A5C5E"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'InteractableBaseComponent'",
+            "ObjectPath": "/Script/DuneSandbox"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "InteractableBaseComponent'BP_ContractTarget_Gelsphere_C:InteractableBase_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_ContractInteractionTarget_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.1"
+            },
+            "SCSVariableName": "InteractableBase",
+            "AssociatedGuid": "03599BB2-43C28222-9C9261BB-B12E200B"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractableBase_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Template": {
+      "ObjectName": "InteractableBaseComponent'BP_ContractInteractionTarget_C:InteractableBase_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.10"
+    },
+    "Properties": {
+      "m_InteractableDisplayName": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_LostHarvest_Gelsphere",
+        "SourceString": "Storage Device",
+        "LocalizedString": "Storage Device"
+      },
+      "m_bEnableAutoCollision": false,
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_ContractTargetInteraction_Gelsphere_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.0"
+        }
+      ],
+      "m_InteractionFeedbackUIWorldOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 15.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ContractTarget_Gelsphere_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ContractTarget_Gelsphere_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.8"
+      },
+      "VariableGuid": "62C4C7D7-4E2FFFFE-D55DAAA9-28086778",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ContractTarget_Gelsphere_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Visuals_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTarget_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTarget_Gelsphere.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_ContractInteractionTarget_C:Visuals_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.24"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_DLC_B1C2_Env_Prop_ForgotEco_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Ecolab/GelsphereConsole/Meshes/SM_DLC_B1C2_Env_Prop_ForgotEco_Gelsphere.1"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  }
+]

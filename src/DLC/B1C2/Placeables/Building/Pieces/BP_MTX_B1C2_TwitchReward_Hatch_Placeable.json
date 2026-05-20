@@ -1,0 +1,630 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PlaceableAnimatedDoorBase'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_CollisionMesh_Top",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_CollisionMesh_Bottom",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DiegeticGuiActorComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DiegeticGuiActorComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 225.0,
+        "Y": 50.0,
+        "Z": 240.98933
+      },
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_BuildingOverlap": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -10.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
+    "Type": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C",
+    "Name": "Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable",
+    "Properties": {
+      "m_SkeletalMeshComponent": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SkeletalMeshComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.19"
+      },
+      "m_PivotComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.10"
+      },
+      "m_MeshContainerComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.9"
+      },
+      "m_SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.11"
+      },
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.6"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.4"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.17"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.3"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.7"
+      },
+      "m_BuildingType": {
+        "Name": "MTX_Choam_TwitchReward_Hatch_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.11"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.11"
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    }
+  },
+  {
+    "Type": "DiegeticGuiActorComponent",
+    "Name": "DiegeticGuiActorComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DiegeticGuiActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    },
+    "Properties": {
+      "m_SetupType": {
+        "Name": "Hatch"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1.368563E-07,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "Properties": {
+      "m_bUseSphereCollision": false,
+      "m_BoxExtent": {
+        "X": 167.89536,
+        "Y": 167.97932,
+        "Z": 29.730795
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.11"
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MeshContainer",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.10"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PivotComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.11"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.8"
+      },
+      "VariableGuid": "54BE3B4A-4F176229-2C4CC480-D4E9C0D6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DiegeticGuiActorComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DiegeticGuiActorComponent'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:DiegeticGuiActorComponent_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.5"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E970C944-4EE3FFDA-ABF752B7-E7FD7288",
+      "InternalVariableName": "DiegeticGuiActorComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.1"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DD8E5653-4403AD93-E4D605BC-AA0D04B2",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SM_CollisionMesh_Bottom_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.20"
+      },
+      "AttachToName": "hatchDoor_collider_bottomSocket",
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DAF12C9C-4B4DC9B6-46DD8AB4-B4291987",
+      "InternalVariableName": "SM_CollisionMesh_Bottom"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SM_CollisionMesh_Top_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.21"
+      },
+      "AttachToName": "hatchDoor_collider_topSocket",
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FCA9216F-46AF7ACC-6CAF5F89-CA613F64",
+      "InternalVariableName": "SM_CollisionMesh_Top"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.2"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_MTX_B1C2_Choam2_TwitchReward_HatchDoor_C'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Choam/TwitchReward/ObserverSet/Blueprints/AB_MTX_B1C2_Choam2_TwitchReward_HatchDoor.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_MTX_Env_PB_Choam_TwitchReward_HatchDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Choam/TwitchReward/Meshes/SK_MTX_Env_PB_Choam_TwitchReward_HatchDoor.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_MTX_Env_PB_Choam_TwitchReward_HatchDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Choam/TwitchReward/Meshes/SK_MTX_Env_PB_Choam_TwitchReward_HatchDoor.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_CollisionMesh_Bottom_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_CollisionBox'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/PlayerBuilt/Hark/Level3/Meshes/SM_CollisionBox.1"
+      },
+      "CastShadow": false,
+      "bApplyImpulseOnDamage": false,
+      "bReplicatePhysicsToAutonomousProxy": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAllDynamic",
+        "ResponseArray": {
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "Trace_MapMesh": "Block"
+        },
+        "Flags": 1888,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "bHiddenInGame": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_CollisionMesh_Top_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_TwitchReward_Hatch_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Placeables/Building/Pieces/BP_MTX_B1C2_TwitchReward_Hatch_Placeable.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_CollisionBox'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/PlayerBuilt/Hark/Level3/Meshes/SM_CollisionBox.1"
+      },
+      "CastShadow": false,
+      "bApplyImpulseOnDamage": false,
+      "bReplicatePhysicsToAutonomousProxy": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAllDynamic",
+        "ResponseArray": {
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "Trace_MapMesh": "Block"
+        },
+        "Flags": 1888,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "bHiddenInGame": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bCanEverAffectNavigation": false
+    }
+  }
+]

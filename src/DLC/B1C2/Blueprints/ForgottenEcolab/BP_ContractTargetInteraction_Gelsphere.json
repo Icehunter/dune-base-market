@@ -1,0 +1,360 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ContractTargetInteraction_Gelsphere_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere",
+    "SuperStruct": {
+      "ObjectName": "Class'ContractTargetInteraction'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ContractTargetInteraction_Gelsphere_C:OnCompleteInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.3"
+      },
+      {
+        "ObjectName": "Function'BP_ContractTargetInteraction_Gelsphere_C:CanActivateInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "FeedbackFormat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "CanActivateInteraction": {
+        "ObjectName": "Function'BP_ContractTargetInteraction_Gelsphere_C:CanActivateInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.2"
+      },
+      "OnCompleteInteraction": {
+        "ObjectName": "Function'BP_ContractTargetInteraction_Gelsphere_C:OnCompleteInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.3"
+      }
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ContractTargetInteraction_Gelsphere_C'Default__BP_ContractTargetInteraction_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ContractTargetInteraction_Gelsphere_C",
+    "Name": "Default__BP_ContractTargetInteraction_Gelsphere_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.BP_ContractTargetInteraction_Gelsphere_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere",
+    "Properties": {
+      "FeedbackFormat": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_Lore_Pickups_Contracts.ST_Localization_Lore_Pickups_Contracts",
+        "Key": "LORE_PICKUPS_AND_CONTRACTS/CONTRACT_CONDITION_RECEIVE_GENERIC",
+        "SourceString": "Acquire {item_name} x {number}",
+        "LocalizedString": "Acquire {item_name} x {number}"
+      },
+      "m_DisplayName": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/InputAction_TakeItem",
+        "SourceString": "Take",
+        "LocalizedString": "Take"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanActivateInteraction",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTargetInteraction_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Interaction:CanActivateInteraction'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "OutFailReason",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InteractionPlayerVisualData'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CachedCondition",
+        "Flags": "RF_Public",
+        "ElementSize": 1280,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'ContractCondition'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetFormattedItemText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_InteractionPlayerVisualData",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'InteractionPlayerVisualData'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetNumberOfItemsInBackpackInventory_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetContractCondition_OutCondition",
+        "Flags": "RF_Public",
+        "ElementSize": 1280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'ContractCondition'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_CanActivateInteraction_OutFailReason",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'InteractionPlayerVisualData'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CanActivateInteraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleteInteraction",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ContractTargetInteraction_Gelsphere_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ContractTargetInteraction_Gelsphere.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Interaction:OnCompleteInteraction'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CachedCondition",
+        "Flags": "RF_Public",
+        "ElementSize": 1280,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'ContractCondition'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetContractCondition_OutCondition",
+        "Flags": "RF_Public",
+        "ElementSize": 1280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'ContractCondition'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveItemAmountFromBackpackByTemplateId_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_OnCompleteInteraction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  }
+]

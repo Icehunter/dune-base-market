@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ForgottenLab_RemoveGelsphereInteraction_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ForgottenLab_RemoveGelsphereInteraction_C'Default__BP_ForgottenLab_RemoveGelsphereInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ForgottenLab_RemoveGelsphereInteraction_C",
+    "Name": "Default__BP_ForgottenLab_RemoveGelsphereInteraction_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction.BP_ForgottenLab_RemoveGelsphereInteraction_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction",
+    "Template": {
+      "ObjectName": "BP_SimpleConditionalInteraction_C'Default__BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.1"
+    },
+    "Properties": {
+      "m_InteractionConditions": [
+        {
+          "ObjectName": "BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C'Default__BP_ForgottenLab_RemoveGelsphereInteraction_C:BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction.2"
+        }
+      ],
+      "m_TagsToAddOnInteract": [
+        "Contract.Tracking.Completed.MTX.B1C2.Journey3.FinalGelsphereTaken"
+      ],
+      "m_DisplayName": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_LostHarvest_TakeGelsphere",
+        "SourceString": "Take Storage Device",
+        "LocalizedString": "Take Storage Device"
+      }
+    }
+  },
+  {
+    "Type": "BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C",
+    "Name": "BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_GelsphereInterface_ForgottenLab_FightCompleteCondition.BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C'",
+    "Outer": {
+      "ObjectName": "BP_ForgottenLab_RemoveGelsphereInteraction_C'Default__BP_ForgottenLab_RemoveGelsphereInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_RemoveGelsphereInteraction.1"
+    },
+    "Template": {
+      "ObjectName": "BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C'Default__BP_GelsphereInterface_ForgottenLab_FightCompleteCondition_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_GelsphereInterface_ForgottenLab_FightCompleteCondition.1"
+    },
+    "Properties": {
+      "ConditionFailText": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_ForgottenLab_Error_DownloadInProgress",
+        "SourceString": "Download in Progress",
+        "LocalizedString": "Download in Progress"
+      }
+    }
+  }
+]

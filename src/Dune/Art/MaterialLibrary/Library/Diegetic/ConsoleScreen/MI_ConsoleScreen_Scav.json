@@ -1,0 +1,213 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_ConsoleScreen_Scav",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Diegetic/ConsoleScreen/MI_ConsoleScreen_Scav",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Glass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Glass.0"
+      },
+      "Parent": {
+        "ObjectName": "Material'M_ConsoleScreen'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Diegetic/ConsoleScreen/M_ConsoleScreen.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Surface Grunge - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "5BE8F531-4E480B89-2F1BBEBF-A36FEB76"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Dirt - Roughness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "F88D702B-49710C7A-EB1FF18C-37AA7D07"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Dirt - Mask Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "25CFF2B3-4846F29A-799FC4B9-2A8977F4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Cracks - Color Brightness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.15,
+          "ExpressionGUID": "4881D484-4DFD6A24-0386A595-52C87410"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Cracks - Roughness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.9,
+          "ExpressionGUID": "58F4A730-4E1B80EB-8BD97796-D9BE55A1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Secondary Elements - Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.25,
+          "ExpressionGUID": "2ED32BF3-45C86275-A18C3894-F54D3467"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Buildup textures tiling (in meters for triplanar)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "32DBA5E2-4692DC61-7C9EB681-6EBA8F26"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Surface Grunge - Channel Selection",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 1.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "00FF00"
+          },
+          "ExpressionGUID": "F123C79F-41D2B7B7-EEAB699E-F83527A5"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Dirt - Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          },
+          "ExpressionGUID": "8E7EB2BB-485F4C1F-665540AA-B7458573"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 1.0,
+            "G": 0.402425,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "FFAA00"
+          },
+          "ExpressionGUID": "2F7C06C3-4D4A2008-E312FCA0-1AAC71CA"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Black_Mat_ID'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Textures/T_Black_Mat_ID.0"
+          },
+          "ExpressionGUID": "39EF5666-4B929D1F-1B6025A8-FA55B428"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Sand Buildup uses Triplanar Projection",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "8F27A56C-496B30B8-C09D4A9A-26827B58"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.099975586,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Diegetic_Screen_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Lib_DetailMask_Scratches_01_M"
+        },
+        {
+          "SamplingScale": 1.0234375,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

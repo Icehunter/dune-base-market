@@ -1,0 +1,68 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Env_Prop_Choam_Terminal_Comms01_Light",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Terminals/Materials/MI_Env_Prop_Choam_Terminal_Comms01_Light",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Plastic'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Plastic.0"
+      },
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_Env_Prop_Choam_Lights'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Lights/Materials/MI_Env_Prop_Choam_Lights.0"
+      },
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_Neut_Utility_Mask_Black_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Maps/Testing/Materials/Utilities/Textures/T_Lib_Neut_Utility_Mask_Black_01_M.0"
+          },
+          "ExpressionGUID": "0AE72F20-451653DF-F5561685-7EB6AB70"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Lib_Neut_Utility_Mask_Black_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_Noise_Grunge_01_M"
+        },
+        {
+          "SamplingScale": 1.6992188,
+          "UVChannelIndex": 2,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

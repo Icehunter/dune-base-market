@@ -1,0 +1,979 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PentashieldFrame'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara_LightRays_BottomR",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara_LightRays_TopR",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara_LightRays_TopL",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara_LightRays_BottomL",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DiegeticGuiActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DiegeticGuiActorComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "DoorBuildingCollisionBoxComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 115.0,
+        "Y": 10.0,
+        "Z": 115.0
+      },
+      "bGenerateOverlapEvents": true,
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      },
+      "RelativeLocation": {
+        "X": 1E-06,
+        "Y": 0.0,
+        "Z": 133.69508
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "DoorCollisionBoxComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 115.0,
+        "Y": 10.0,
+        "Z": 115.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "PentaShieldSurface",
+        "ResponseArray": {
+          "Camera": "Ignore",
+          "Trace_Shelter_Buildables": "Block",
+          "Building_Structure": "Overlap",
+          "Trace_Combat": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      },
+      "RelativeLocation": {
+        "X": 1.4232711E-06,
+        "Y": 1.4626928E-12,
+        "Z": 133.69508
+      }
+    }
+  },
+  {
+    "Type": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C",
+    "Name": "Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+    "Package": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S",
+    "Properties": {
+      "m_PentashieldFrameMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:PentashieldFrameMesh'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.24"
+      },
+      "m_DoorStaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DoorStaticMeshComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.23"
+      },
+      "m_DoorCollisionBoxComponent": {
+        "ObjectName": "BoxComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DoorCollisionBoxComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.2"
+      },
+      "m_DoorBuidingCollisionBoxComponent": {
+        "ObjectName": "BoxComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DoorBuildingCollisionBoxComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.1"
+      },
+      "m_SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      },
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.7"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.5"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.21"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.4"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.12"
+      },
+      "m_BuildingType": {
+        "Name": "MTX_DesertMechanic_Prudence_Door_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    }
+  },
+  {
+    "Type": "DiegeticGuiActorComponent",
+    "Name": "DiegeticGuiActor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DiegeticGuiActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "m_SetupType": {
+        "Name": "Door"
+      },
+      "RelativeLocation": {
+        "X": -2.436289E-13,
+        "Y": 2.2744812E-08,
+        "Z": -13.377892
+      }
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "m_bUseSphereCollision": false,
+      "m_BoxExtent": {
+        "X": 89.331825,
+        "Y": 25.0,
+        "Z": 102.75228
+      },
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_OpenPlaceableGUIMainInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_OpenPlaceableGUIMainInteraction.0"
+        },
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_OpenPlaceableGUISecondaryInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_OpenPlaceableGUISecondaryInteraction.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      },
+      "RelativeLocation": {
+        "X": -3.458185E-06,
+        "Y": 1.8746039E-14,
+        "Z": 128.77875
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_LightRays_BottomL_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_PrudenceDoor_LightRays_02'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Abilities/Pentashield/NS_VFX_PrudenceDoor_LightRays_02.12"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.LightRayColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          32,
+          51,
+          14,
+          64,
+          0,
+          0,
+          160,
+          65,
+          205,
+          204,
+          204,
+          61
+        ]
+      },
+      "RelativeLocation": {
+        "X": -104.23706,
+        "Y": -0.3493492,
+        "Z": 30.590422
+      },
+      "RelativeRotation": {
+        "Pitch": -0.23288865,
+        "Yaw": 359.99997,
+        "Roll": 359.99997
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_LightRays_BottomR_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_PrudenceDoor_LightRays_02'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Abilities/Pentashield/NS_VFX_PrudenceDoor_LightRays_02.12"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.LightRayColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          32,
+          51,
+          14,
+          64,
+          0,
+          0,
+          160,
+          65,
+          205,
+          204,
+          204,
+          61
+        ]
+      },
+      "RelativeLocation": {
+        "X": 102.25737,
+        "Y": -0.49827787,
+        "Z": 31.947474
+      },
+      "RelativeRotation": {
+        "Pitch": 87.01577,
+        "Yaw": 1260.0,
+        "Roll": 1260.0
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_LightRays_TopL_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_PrudenceDoor_LightRays_02'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Abilities/Pentashield/NS_VFX_PrudenceDoor_LightRays_02.12"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.LightRayColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          32,
+          51,
+          14,
+          64,
+          0,
+          0,
+          160,
+          65,
+          205,
+          204,
+          204,
+          61
+        ]
+      },
+      "RelativeLocation": {
+        "X": -103.4976,
+        "Y": -0.4437341,
+        "Z": 230.63011
+      },
+      "RelativeRotation": {
+        "Pitch": -77.77505,
+        "Yaw": 359.9999,
+        "Roll": 360.00003
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_LightRays_TopR_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_PrudenceDoor_LightRays_02'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Abilities/Pentashield/NS_VFX_PrudenceDoor_LightRays_02.12"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.LightRayColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.LightRayColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          32,
+          51,
+          14,
+          64,
+          0,
+          0,
+          160,
+          65,
+          205,
+          204,
+          204,
+          61
+        ]
+      },
+      "RelativeLocation": {
+        "X": 102.49627,
+        "Y": -0.3828145,
+        "Z": 231.47047
+      },
+      "RelativeRotation": {
+        "Pitch": 17.406322,
+        "Yaw": 539.9999,
+        "Roll": 540.00006
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.13"
+      },
+      "VariableGuid": "BF6D4A2C-4B969D6D-26EB65A9-172681AE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DiegeticGuiActorComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DiegeticGuiActorComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:DiegeticGuiActor_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.6"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B441923E-47F7AD91-971AFEB3-7736852B",
+      "InternalVariableName": "DiegeticGuiActor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Niagara_LightRays_BottomL_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.8"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9C9B6440-40C5471A-F1AB6BB9-8A5B8B24",
+      "InternalVariableName": "Niagara_LightRays_BottomL"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Niagara_LightRays_TopL_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.10"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CC113049-4EAAC992-2CD773A2-F800AC46",
+      "InternalVariableName": "Niagara_LightRays_TopL"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Niagara_LightRays_TopR_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.11"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "11D6280D-45D3DE11-23991E8E-FBFA4721",
+      "InternalVariableName": "Niagara_LightRays_TopR"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.22"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Niagara_LightRays_BottomR_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.9"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F97DF2ED-44D4509F-ACBECA82-D36C5EE1",
+      "InternalVariableName": "Niagara_LightRays_BottomR"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.20"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.20"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.15"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DoorStaticMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Ecolab_Pentashield_Prudence'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/PlayerBuilt/Choam/Outpost/Pentashield/SM_Ecolab_Pentashield_Prudence.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      },
+      "RelativeLocation": {
+        "X": 5.138062E-07,
+        "Y": 9.782635,
+        "Z": -8.698574
+      },
+      "RelativeScale3D": {
+        "X": 1.3200669,
+        "Y": 1.0,
+        "Z": 0.7900005
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PentashieldFrameMesh",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.3"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MTX_Env_PB_Neut_DesertMechanic_PrudenceDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Meshes/SM_MTX_Env_PB_Neut_DesertMechanic_PrudenceDoor.1"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_B1C2_Dunemen_Prudence_Door_S_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Blueprints/BP_MTX_B1C2_Dunemen_Prudence_Door_S.14"
+      }
+    }
+  }
+]

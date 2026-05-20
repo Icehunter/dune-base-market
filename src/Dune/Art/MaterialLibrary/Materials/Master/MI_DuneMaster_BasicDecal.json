@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_BasicDecal",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_BasicDecal",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_BasicDecal'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_BasicDecal.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "First Custom Depth Stencil Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "C022681C-49DA5602-84D315B1-7635E982"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Second Custom Depth Stencil Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 4.0,
+          "ExpressionGUID": "B4A8EFED-4F87AEA0-8A1DC382-27FF8DF8"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "EnableCustomDepthStencilMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "09ADB6A4-41316ED9-A63C07B5-0FF23B30"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

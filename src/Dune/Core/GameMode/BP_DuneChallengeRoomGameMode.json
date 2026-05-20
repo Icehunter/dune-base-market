@@ -1,0 +1,815 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DuneChallengeRoomGameMode_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DuneChallengeRoomGameMode_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:ExecuteUbergraph_BP_DuneChallengeRoomGameMode'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DuneSandboxChallengeRoomGameModeBase'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceLoaded_CDD470804411549FC5A252ACC6007F10'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.5"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceLoadingFailed_CDD470804411549FC5A252ACC6007F10'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.6"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceStopped_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.8"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceInterrupted_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.4"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceStarted_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.7"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceFailed_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.3"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:PlayWakeUpCinematic'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.11"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:OnChallengeRoomLoaded'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.9"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:OnPlayerSpawnedInChallengeRoom'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.10"
+      },
+      {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:ExecuteUbergraph_BP_DuneChallengeRoomGameMode'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "ChallengeRoomWakeUpSequence",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequence'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_DuneChallengeRoomGameMode": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:ExecuteUbergraph_BP_DuneChallengeRoomGameMode'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.2"
+      },
+      "OnPlayerSpawnedInChallengeRoom": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:OnPlayerSpawnedInChallengeRoom'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.10"
+      },
+      "OnChallengeRoomLoaded": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:OnChallengeRoomLoaded'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.9"
+      },
+      "PlayWakeUpCinematic": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:PlayWakeUpCinematic'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.11"
+      },
+      "m_OnSequenceFailed_B9982D00403C9FDF5E687FADED19C05D": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceFailed_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.3"
+      },
+      "m_OnSequenceStarted_B9982D00403C9FDF5E687FADED19C05D": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceStarted_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.7"
+      },
+      "m_OnSequenceInterrupted_B9982D00403C9FDF5E687FADED19C05D": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceInterrupted_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.4"
+      },
+      "m_OnSequenceStopped_B9982D00403C9FDF5E687FADED19C05D": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceStopped_B9982D00403C9FDF5E687FADED19C05D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.8"
+      },
+      "m_OnSequenceLoadingFailed_CDD470804411549FC5A252ACC6007F10": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceLoadingFailed_CDD470804411549FC5A252ACC6007F10'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.6"
+      },
+      "m_OnSequenceLoaded_CDD470804411549FC5A252ACC6007F10": {
+        "ObjectName": "Function'BP_DuneChallengeRoomGameMode_C:m_OnSequenceLoaded_CDD470804411549FC5A252ACC6007F10'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Transient | CLASS_NotPlaceable | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DuneChallengeRoomGameMode_C'Default__BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DuneChallengeRoomGameMode_C",
+    "Name": "Default__BP_DuneChallengeRoomGameMode_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.BP_DuneChallengeRoomGameMode_C'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ChallengeRoomWakeUpSequence": {
+        "AssetPathName": "/Game/Dune/Cinematics/Sequencers/ChallengeRooms/StillSuit/ChallengeRoom_Wakeup/Master/CINE_ChallengeRoom_StillSuit_Wakeup_01_MASTER_V1.CINE_ChallengeRoom_StillSuit_Wakeup_01_MASTER_V1",
+        "SubPathString": ""
+      },
+      "m_StartingHudUnlockLevelOverride": "EHUDUnlockLevel::Journey",
+      "m_DefaultInventory": {
+        "Name": "ChallengeRoom_Start"
+      },
+      "GameStateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+      },
+      "PlayerControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DunePlayerController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/BP_DunePlayerController.1"
+      },
+      "PlayerStateClass": {
+        "ObjectName": "Class'DunePlayerState'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "HUDClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DuneHUD_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Blueprints/BP_DuneHUD.0"
+      },
+      "DefaultPawnClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DunePlayerCharacter_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/BP_DunePlayerCharacter.15"
+      },
+      "ReplaySpectatorPlayerControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DunePlayerController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/BP_DunePlayerController.1"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_DuneChallengeRoomGameMode",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ApplyEffectByClass_Target_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'AbilitySystemInterface'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ApplyEffectByClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'EffectHandle'",
+          "ObjectPath": "/Script/DWGameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentLoaderAsync:OnSequenceEventForLoaderDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentLoaderAsync:OnSequenceEventForLoaderDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentPlayerAsyncBase:OnSequenceEventForPlayerDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentPlayerAsyncBase:OnSequenceEventForPlayerDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentPlayerAsyncBase:OnSequenceEventForPlayerDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'CinematicComponentPlayerAsyncBase:OnSequenceEventForPlayerDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameInstanceSubsystem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'JourneySubsystem'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_CinematicModeSettings",
+        "Flags": "RF_Public",
+        "ElementSize": 5,
+        "Struct": {
+          "ObjectName": "ScriptStruct'CinematicModeSettings'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SequencePlaySettingsData",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'SequencePlaySettingsData'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerInChallengeRoom_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ApplyEffectByClass_Target_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'AbilitySystemInterface'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ApplyEffectByClass_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'EffectHandle'",
+          "ObjectPath": "/Script/DWGameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_PlayerInChallengeRoom",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_LoadLevelSequence_Character_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CinematicComponentLoaderAsync'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayCinematicFromAsset_Character_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CinematicComponentAssetPlayerAsync'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ApplyEffectByClass_Target_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'AbilitySystemInterface'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ApplyEffectByClass_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'EffectHandle'",
+          "ObjectPath": "/Script/DWGameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ApplyEffectByClass_Target_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'AbilitySystemInterface'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ApplyEffectByClass_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "ScriptStruct'EffectHandle'",
+          "ObjectPath": "/Script/DWGameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceFailed_B9982D00403C9FDF5E687FADED19C05D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceInterrupted_B9982D00403C9FDF5E687FADED19C05D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceLoaded_CDD470804411549FC5A252ACC6007F10",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceLoadingFailed_CDD470804411549FC5A252ACC6007F10",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceStarted_B9982D00403C9FDF5E687FADED19C05D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "m_OnSequenceStopped_B9982D00403C9FDF5E687FADED19C05D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCinematicComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCinematicComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChallengeRoomLoaded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DuneSandboxChallengeRoomGameModeBase:OnChallengeRoomLoaded'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerInChallengeRoom",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayerSpawnedInChallengeRoom",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DuneSandboxChallengeRoomGameModeBase:OnPlayerSpawnedInChallengeRoom'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerInChallengeRoom",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayWakeUpCinematic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DuneChallengeRoomGameMode_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DuneChallengeRoomGameMode_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.12"
+      },
+      "VariableGuid": "34A914EC-4C7D1A41-312B5092-71775704",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneChallengeRoomGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneChallengeRoomGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneChallengeRoomGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DuneChallengeRoomGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneChallengeRoomGameMode.13"
+      }
+    }
+  }
+]

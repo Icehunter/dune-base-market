@@ -1,0 +1,453 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DuneGameInstance_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_DuneGameInstance_C:ExecuteUbergraph_BP_DuneGameInstance'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DuneGameInstance'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DuneGameInstance_C:HandleNetworkError'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.3"
+      },
+      {
+        "ObjectName": "Function'BP_DuneGameInstance_C:HandleTravelError'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.4"
+      },
+      {
+        "ObjectName": "Function'BP_DuneGameInstance_C:ExecuteUbergraph_BP_DuneGameInstance'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_DuneGameInstance": {
+        "ObjectName": "Function'BP_DuneGameInstance_C:ExecuteUbergraph_BP_DuneGameInstance'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.2"
+      },
+      "HandleTravelError": {
+        "ObjectName": "Function'BP_DuneGameInstance_C:HandleTravelError'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.4"
+      },
+      "HandleNetworkError": {
+        "ObjectName": "Function'BP_DuneGameInstance_C:HandleNetworkError'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DuneGameInstance_C'Default__BP_DuneGameInstance_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DuneGameInstance_C",
+    "Name": "Default__BP_DuneGameInstance_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.BP_DuneGameInstance_C'",
+    "Package": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance",
+    "Properties": {
+      "UberGraphFrame": {},
+      "m_LoadingScreenMainWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'W_LoadingScreenMain_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Widgets/Menus/Meta/Loading/W_LoadingScreenMain.64"
+      },
+      "m_LoadingScreenLoginWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'W_LoadingScreenLogin_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Widgets/Menus/Meta/Loading/W_LoadingScreenLogin.13"
+      },
+      "m_LoadingScreenChallengeWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'W_LoadingScreenChallengeRoom_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Widgets/Menus/Meta/Loading/W_LoadingScreenChallengeRoom.6"
+      },
+      "m_LoadingScreenBlackWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'W_LoadingScreenBlack_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Widgets/Menus/Meta/Loading/W_LoadingScreenBlack.2"
+      },
+      "m_TravelFailureLocTexts": [
+        {
+          "Key": "ETravelFailure::ClientTravelFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_CLIENT_TRAVEL_FAILURE",
+            "SourceString": "Client Travel Failure",
+            "LocalizedString": "Client Travel Failure"
+          }
+        },
+        {
+          "Key": "ETravelFailure::ServerTravelFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_SERVER_TRAVEL_FAILURE",
+            "SourceString": "Server Travel Failure",
+            "LocalizedString": "Server Travel Failure"
+          }
+        },
+        {
+          "Key": "ETravelFailure::CloudSaveFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_CLOUD_SAVE_FAILURE\n",
+            "SourceString": null,
+            "LocalizedString": null
+          }
+        },
+        {
+          "Key": "ETravelFailure::PendingNetGameCreateFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_PENDING_NET_GAME_CREATE_FAILURE",
+            "SourceString": "Pending Net Game Create Failure",
+            "LocalizedString": "Pending Net Game Create Failure"
+          }
+        },
+        {
+          "Key": "ETravelFailure::CheatCommands",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_CHEAT_COMMANDS",
+            "SourceString": "Cheat Commands",
+            "LocalizedString": "Cheat Commands"
+          }
+        },
+        {
+          "Key": "ETravelFailure::TravelFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_TRAVEL_FAILURE",
+            "SourceString": "Travel Failure",
+            "LocalizedString": "Travel Failure"
+          }
+        },
+        {
+          "Key": "ETravelFailure::NoDownload",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_NO_DOWNLOAD",
+            "SourceString": "No Download",
+            "LocalizedString": "No Download"
+          }
+        },
+        {
+          "Key": "ETravelFailure::PackageVersion",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_PACKAGE_VERSION",
+            "SourceString": "Package Version",
+            "LocalizedString": "Package Version"
+          }
+        },
+        {
+          "Key": "ETravelFailure::PackageMissing",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_PACKAGE_MISSING",
+            "SourceString": "Package Missing",
+            "LocalizedString": "Package Missing"
+          }
+        },
+        {
+          "Key": "ETravelFailure::InvalidURL",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_INVALID_URL",
+            "SourceString": "Invalid URL",
+            "LocalizedString": "Invalid URL"
+          }
+        },
+        {
+          "Key": "ETravelFailure::LoadMapFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_LOAD_MAP_FAILURE",
+            "SourceString": "Map Load Failure",
+            "LocalizedString": "Map Load Failure"
+          }
+        },
+        {
+          "Key": "ETravelFailure::NoLevel",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_TRAVELFAILURE_MESSAGE_NO_LEVEL",
+            "SourceString": "No Level",
+            "LocalizedString": "No Level"
+          }
+        }
+      ],
+      "m_NetworkFailureLocTexts": [
+        {
+          "Key": "ENetworkFailure::NetChecksumMismatch",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_NET_CHECKSUM_MISMATCH",
+            "SourceString": "Net Checksum Mismatch",
+            "LocalizedString": "Net Checksum Mismatch"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::NetGuidMismatch",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_NET_GUID_MISMATCH",
+            "SourceString": "Net GUID Mismatch",
+            "LocalizedString": "Net GUID Mismatch"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::PendingConnectionFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_PENDING_CONNECTION_FAILURE",
+            "SourceString": "Pending Connection Failure",
+            "LocalizedString": "Pending Connection Failure"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::OutdatedServer",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_OUTDATED_SERVER",
+            "SourceString": "Outdated World",
+            "LocalizedString": "Outdated World"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::OutdatedClient",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_OUTDATED_CLIENT",
+            "SourceString": "Outdated Client",
+            "LocalizedString": "Outdated Client"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::FailureReceived",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_FAILURE_RECEIVED",
+            "SourceString": "Failure Received",
+            "LocalizedString": "Failure Received"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::ConnectionTimeout",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_CONNECTION_TIMEOUT",
+            "SourceString": "Connection Timeout",
+            "LocalizedString": "Connection Timeout"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::ConnectionLostGeneric",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_CONNECTION_LOST_GENERIC",
+            "SourceString": "Connection Lost Generic",
+            "LocalizedString": "Connection Lost Generic"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::ConnectionLost",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_CONNECTION_LOST",
+            "SourceString": "Connection Lost",
+            "LocalizedString": "Connection Lost"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::NetDriverListenFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_NET_DRIVER_LISTEN_FAILURE",
+            "SourceString": "Net Driver Listen Failure",
+            "LocalizedString": "Net Driver Listen Failure"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::NetDriverCreateFailure",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_NET_DRIVER_CREATE_FAILURE",
+            "SourceString": "Net Driver Create Failure",
+            "LocalizedString": "Net Driver Create Failure"
+          }
+        },
+        {
+          "Key": "ENetworkFailure::NetDriverAlreadyExists",
+          "Value": {
+            "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+            "Key": "UI/METADIALOGUE_NETWORKFAILURE_MESSAGE_NET_DRIVER_ALREADY_EXISTS",
+            "SourceString": "Net Driver Already Exists",
+            "LocalizedString": "Net Driver Already Exists"
+          }
+        }
+      ],
+      "m_IntroMovie": {
+        "AssetPathName": "/Game/Movies/IntroMovie/DA_InitialIntro.DA_InitialIntro",
+        "SubPathString": ""
+      },
+      "m_WatermarkWidgetClass": {
+        "AssetPathName": "/Game/Dune/GUI/Widgets/HUD/W_Watermark.W_Watermark_C",
+        "SubPathString": ""
+      },
+      "m_ServiceMessageNotificationListWidgetClass": {
+        "AssetPathName": "/Game/Dune/GUI/Widgets/Menus/Gameplay/ServiceMessageNotification/W_ServiceMessageNotificationList.W_ServiceMessageNotificationList_C",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_DuneGameInstance",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameInstance_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_FailureType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETravelFailure'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_FailureType_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ENetworkFailure'",
+          "ObjectPath": "/Script/NetCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsServer",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleNetworkError",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameInstance_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'GameInstance:HandleNetworkError'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "FailureType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'ENetworkFailure'",
+          "ObjectPath": "/Script/NetCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsServer",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTravelError",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameInstance_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/BP_DuneGameInstance.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'GameInstance:HandleTravelError'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "FailureType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'ETravelFailure'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  }
+]

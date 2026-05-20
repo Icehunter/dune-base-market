@@ -1,0 +1,162 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_CC_Cinematic_Liquid_Flowing",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_CC_Cinematic_Liquid_Flowing",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_CC_Cinematic_Liquid'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_CC_Cinematic_Liquid.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Murkiness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "846C5BED-4B4F855A-459882B6-1B7ADB43"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "U Scale - Flowing B",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.25,
+          "ExpressionGUID": "E337D28A-407CBE93-8CDDD691-C6339C9F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "V Scale - Flowing B",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "4BC339B8-44A4F1A9-7932B082-245D8B5A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal Strength Flowing A",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.25,
+          "ExpressionGUID": "F376F3F6-44C1668C-154D678F-0A418362"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "U Scale - Flowing A",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.25,
+          "ExpressionGUID": "BC9BD58B-47097056-0C07EA9B-A31F8876"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "V Scale - Flowing A",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.15,
+          "ExpressionGUID": "E674E575-40F7A8A1-26B4E682-2141436F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "X Speed Flowing A",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "FBF719AC-4E24C2E4-19C5CB97-FE0184A2"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal Strength Flowing B",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.25,
+          "ExpressionGUID": "D99500DC-4FA0D081-D172FEA3-6E2248CD"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "X Speed Flowing B",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "D7FB7460-40361346-8BAD89BE-33E517C3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "ShadingModel": "MSM_SingleLayerWater",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Flow Blending",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "AD4110EC-4E428EB3-2AAFB9BC-7684D03C"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Mirror Flow Direction X",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "0E9A366C-40DCCB55-957078B8-1A2FF1E5"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Emissive",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "EA190327-4C4CD3A7-C2AC18B4-0C880F7A"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.04095459,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Water_Calm_Normal_1_D"
+        },
+        {
+          "SamplingScale": 0.04095459,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Water_Flowing_Normal_1_D"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

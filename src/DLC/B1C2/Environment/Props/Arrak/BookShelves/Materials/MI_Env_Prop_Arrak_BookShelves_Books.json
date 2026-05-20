@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Env_Prop_Arrak_BookShelves_Books",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/BookShelves/Materials/MI_Env_Prop_Arrak_BookShelves_Books",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Leather'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Leather.0"
+      },
+      "Parent": {
+        "ObjectName": "Material'M_Basic'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/Materials/M_Basic.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Dust - Target  Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": -0.3,
+          "ExpressionGUID": "47847DD0-430E47E9-DCD6F988-7B128DE7"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "BaseColor (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Env_Prop_Arrak_BookShelves_Books_D'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/BookShelves/Textures/T_Env_Prop_Arrak_BookShelves_Books_D.0"
+          },
+          "ExpressionGUID": "199B110C-4635EEAB-EE76AF9F-E5C494A2"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Env_Prop_Arrak_BookShelves_Books_N'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/BookShelves/Textures/T_Env_Prop_Arrak_BookShelves_Books_N.0"
+          },
+          "ExpressionGUID": "16BDF4EE-42AB7C3D-BE650A9A-D1AFBE68"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "SimpleProp",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "3DF627C2-46E148EF-84C080B6-2ACAAC3E"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DisableVirtualTextures",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "4949F503-417FAB12-72681882-6E90A08A"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Sand",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "C450440A-421E3FFF-ACDD189E-BFF4F951"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Env_Prop_Arrak_BookShelves_Books_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Env_Prop_Arrak_BookShelves_Books_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_DetailMask_Flat_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

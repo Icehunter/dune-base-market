@@ -1,0 +1,2806 @@
+[
+  {
+    "Type": "AiCombatVolume",
+    "Name": "AiCombatVolume_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AiCombatVolume'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "m_BoundingBox": {
+        "Min": {
+          "X": -4031.0012,
+          "Y": -2494.6863,
+          "Z": -1290.554
+        },
+        "Max": {
+          "X": 4031.0012,
+          "Y": 2494.6863,
+          "Z": 1290.554
+        },
+        "IsValid": 1
+      },
+      "BrushType": "Brush_Add",
+      "Brush": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.48"
+      },
+      "BrushComponent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.27"
+      },
+      "bHidden": false,
+      "RootComponent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.27"
+      }
+    },
+    "ActorLabel": "AiCombatVolume"
+  },
+  {
+    "Type": "AiPopulationSpawnComponent",
+    "Name": "AiPopulationSpawn",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AiPopulationSpawnComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "AiPopulationSpawnComponent'BP_RoomDescriptor_C:AiPopulationSpawn_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.0"
+    },
+    "Properties": {
+      "m_PvEContentDescriptor": {
+        "ObjectName": "BP_PvEContentDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.25"
+      },
+      "m_DesiredContentTags": {
+        "TagDictionary": [
+          {
+            "TagName": "NPC.Tactical.Hall.Medium.02"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "AutoDescription": " ALL( NPC.Tactical.Hall.Medium.02 )"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AiReinforcementComponent",
+    "Name": "AiReinforcement",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AiReinforcementComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "AiReinforcementComponent'BP_RoomDescriptor_C:AiReinforcement_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.1"
+    },
+    "Properties": {
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AISpawnTriggerComponent",
+    "Name": "AISpawnTrigger",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AISpawnTriggerComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "AISpawnTriggerComponent'BP_ContractInteractionTarget_C:AISpawnTrigger_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.0"
+    },
+    "Properties": {
+      "m_RoomDescriptors": [
+        {
+          "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+        }
+      ],
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AISpawnTriggerListenerComponent",
+    "Name": "TriggerListenerComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AISpawnTriggerListenerComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "AISpawnTriggerListenerComponent'Default__BP_RoomDescriptor_C:TriggerListenerComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.2"
+    },
+    "Properties": {
+      "m_bCanOnlySpawnFromTrigger": true
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'BP_AiSpawnLocation_C:Arrow_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.28"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'BP_AiSpawnLocation_C:Arrow_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.29"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'BP_AiSpawnLocation_C:Arrow_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.30"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_AiSpawnLocation_C:Billboard_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.28"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_AiSpawnLocation_C:Billboard_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.29"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_AiSpawnLocation_C:Billboard_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.30"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard1",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_ConditionalSetDressing_C:Billboard1_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BP_PvEContentDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.25"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_PvEContentDescriptor_C:Billboard_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_PvEContentDescriptor.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Scene'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.59"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.BrushComponent0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.27"
+    },
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -4031.0012,
+                "Y": 2494.6863,
+                "Z": -1290.554
+              },
+              {
+                "X": -4031.0012,
+                "Y": 2494.6863,
+                "Z": 1290.554
+              },
+              {
+                "X": -4031.0012,
+                "Y": -2494.6863,
+                "Z": 1290.554
+              },
+              {
+                "X": -4031.0012,
+                "Y": -2494.6863,
+                "Z": -1290.554
+              },
+              {
+                "X": 4031.0012,
+                "Y": 2494.6863,
+                "Z": -1290.554
+              },
+              {
+                "X": 4031.0012,
+                "Y": 2494.6863,
+                "Z": 1290.554
+              },
+              {
+                "X": 4031.0012,
+                "Y": -2494.6863,
+                "Z": -1290.554
+              },
+              {
+                "X": 4031.0012,
+                "Y": -2494.6863,
+                "Z": 1290.554
+              }
+            ],
+            "IndexData": [
+              5,
+              4,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              4,
+              3,
+              0,
+              4,
+              3,
+              2,
+              0,
+              6,
+              3,
+              4,
+              6,
+              2,
+              3,
+              5,
+              1,
+              2,
+              5,
+              6,
+              4,
+              7,
+              5,
+              2,
+              7,
+              6,
+              5,
+              7,
+              2,
+              6
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -4031.0012,
+                "Y": -2494.6863,
+                "Z": -1290.554
+              },
+              "Max": {
+                "X": 4031.0012,
+                "Y": 2494.6863,
+                "Z": 1290.554
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "bGenerateMirroredCollision": false,
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "AFBD53D943573DE227864D836822982D",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 503,
+        "SizeOnDisk": 503,
+        "OffsetInFile": "0x4D8"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractionCollision",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'BP_ContractInteractionTarget_C:InteractionCollision_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.2"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 167.90387,
+        "Z": 50.0
+      },
+      "LineThickness": 1.024061,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "Building_Structure": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Interactable": "Block"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "InteractableBaseComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.InteractableBase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.44"
+      },
+      "RelativeLocation": {
+        "X": 26.436426,
+        "Y": -4.838176,
+        "Z": 78.638374
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0046886844,
+        "Yaw": -1.7319461,
+        "Roll": 10.263984
+      },
+      "RelativeScale3D": {
+        "X": 0.22119784,
+        "Y": 0.09762591,
+        "Z": 0.42126375
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoundsComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "ExclusionZone'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.ExclusionZone_5'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.42"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 2749.1147,
+        "Y": -8826.8545,
+        "Z": 6343.415
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 50.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 4.7474656,
+        "Y": 6.939161,
+        "Z": 3.1573691
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.LevelBounds_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.47"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 3261.425,
+        "Y": -9129.616,
+        "Z": 7028.7114
+      },
+      "RelativeScale3D": {
+        "X": 9228.716,
+        "Y": 9228.716,
+        "Z": 4786.1865
+      }
+    }
+  },
+  {
+    "Type": "BP_AiSpawnLocation_C",
+    "Name": "BP_AiSpawnLocation_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.BP_AiSpawnLocation_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_AiSpawnLocation_C'Default__BP_AiSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.3"
+    },
+    "Properties": {
+      "SkeletalMesh": null,
+      "Info": null,
+      "Billboard": {
+        "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Billboard'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.8"
+      },
+      "Arrow": {
+        "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Arrow'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.5"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.28"
+      },
+      "m_EncounterActorComponent": {
+        "ObjectName": "EncounterActorComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.EncounterActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.38"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.28"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Capsule'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.28"
+        },
+        {
+          "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Arrow'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.5"
+        },
+        {
+          "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1.Billboard'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.8"
+        },
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "BP_AiSpawnLocation3"
+  },
+  {
+    "Type": "BP_AiSpawnLocation_C",
+    "Name": "BP_AiSpawnLocation_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.BP_AiSpawnLocation_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_AiSpawnLocation_C'Default__BP_AiSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.3"
+    },
+    "Properties": {
+      "SkeletalMesh": null,
+      "Info": null,
+      "Billboard": {
+        "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Billboard'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.9"
+      },
+      "Arrow": {
+        "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Arrow'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.6"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.29"
+      },
+      "m_EncounterActorComponent": {
+        "ObjectName": "EncounterActorComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.EncounterActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.39"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.29"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Capsule'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.29"
+        },
+        {
+          "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Arrow'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.6"
+        },
+        {
+          "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2.Billboard'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.9"
+        },
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "BP_AiSpawnLocation4"
+  },
+  {
+    "Type": "BP_AiSpawnLocation_C",
+    "Name": "BP_AiSpawnLocation_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.BP_AiSpawnLocation_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_AiSpawnLocation_C'Default__BP_AiSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.3"
+    },
+    "Properties": {
+      "SkeletalMesh": null,
+      "Info": null,
+      "Billboard": {
+        "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Billboard'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.10"
+      },
+      "Arrow": {
+        "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Arrow'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.7"
+      },
+      "Capsule": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.30"
+      },
+      "m_EncounterActorComponent": {
+        "ObjectName": "EncounterActorComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.EncounterActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.40"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Capsule'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.30"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Capsule'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.30"
+        },
+        {
+          "ObjectName": "ArrowComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Arrow'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.7"
+        },
+        {
+          "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3.Billboard'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.10"
+        },
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "BP_AiSpawnLocation5"
+  },
+  {
+    "Type": "BP_ConditionalSetDressing_C",
+    "Name": "BP_ConditionalSetDressing_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.BP_ConditionalSetDressing_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_ConditionalSetDressing_C'Default__BP_ConditionalSetDressing_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.2"
+    },
+    "Properties": {
+      "Billboard1": {
+        "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Billboard1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.11"
+      },
+      "Deactivate": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Deactivate'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.53"
+      },
+      "Root": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "Activate": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Activate'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.52"
+      },
+      "Hide": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Hide'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.54"
+      },
+      "Show": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Show'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.56"
+      },
+      "ActivationQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "Contract.Tracking.Completed.MTX.Ch1.Journey1.CommsTowerComplete"
+          },
+          {
+            "TagName": "Contract.Tracking.Active.MTX_Ch1_Journey1_CommsRepair2.Condition.1"
+          },
+          {
+            "TagName": "Contract.Tracking.Completed.MTX.Ch1.Journey1.Completed"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          1,
+          3,
+          0,
+          1,
+          2
+        ],
+        "AutoDescription": " ANY( Contract.Tracking.Completed.MTX.Ch1.Journey1.CommsTowerComplete, Contract.Tracking.Active.MTX_Ch1_Journey1_CommsRepair2.Condition.1, Contract.Tracking.Completed.MTX.Ch1.Journey1.Completed )"
+      },
+      "JourneyNodeQuery": {
+        "m_RootExpression": {
+          "ObjectName": "JourneyQueryExpression_None'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.JourneyQueryExpression_None_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.45"
+        }
+      },
+      "ActorsToShowHide": [
+        {
+          "Key": "StaticMeshActor'DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.StaticMeshActor_0'",
+          "Value": true
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Show'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.56"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Hide'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.54"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Activate'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.52"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Deactivate'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.53"
+        },
+        {
+          "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Billboard1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.11"
+        }
+      ]
+    },
+    "ActorLabel": "BP_ConditionalSetDressing_Antenna"
+  },
+  {
+    "Type": "BP_ContentGateComponent_C",
+    "Name": "GatedContentComponent",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/NPCBases/CampGameplay/ContentGate/BP_ContentGateComponent.BP_ContentGateComponent_C'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "BP_ContentGateComponent_C'BP_RoomDescriptor_C:GatedContentComponent_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.4"
+    },
+    "Properties": {
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BP_ContractInteractionTarget_C",
+    "Name": "BP_ContractInteractionTarget_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.BP_ContractInteractionTarget_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_ContractInteractionTarget_C'Default__BP_ContractInteractionTarget_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.3"
+    },
+    "Properties": {
+      "BP_ContractTargetHighlightComponent": {
+        "ObjectName": "BP_ContractTargetHighlightComponent_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.BP_ContractTargetHighlightComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.23"
+      },
+      "Highlight": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.Highlight'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.57"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.SceneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.58"
+      },
+      "AISpawnTrigger": {
+        "ObjectName": "AISpawnTriggerComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.AISpawnTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.3"
+      },
+      "ContractContent": {
+        "ObjectName": "ContractContentComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.ContractContent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.33"
+      },
+      "InteractionCollision": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.InteractionCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.14"
+      },
+      "InteractableBase": {
+        "ObjectName": "InteractableBaseComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.InteractableBase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.44"
+      },
+      "Visuals": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.Visuals'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.62"
+      },
+      "RoomDescriptor": [
+        {
+          "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.SceneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.58"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "ContractContentComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.ContractContent'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.33"
+        },
+        {
+          "ObjectName": "AISpawnTriggerComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.AISpawnTrigger'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.3"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.SceneComponent'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.58"
+        },
+        {
+          "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.Visuals'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.62"
+        },
+        {
+          "ObjectName": "InteractableBaseComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.InteractableBase'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.44"
+        },
+        {
+          "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.InteractionCollision'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.14"
+        },
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.Highlight'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.57"
+        },
+        {
+          "ObjectName": "BP_ContractTargetHighlightComponent_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.BP_ContractTargetHighlightComponent'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.23"
+        }
+      ]
+    },
+    "ActorLabel": "BP_ContractInteractionTarget_Antenna"
+  },
+  {
+    "Type": "BP_ContractTargetHighlightComponent_C",
+    "Name": "BP_ContractTargetHighlightComponent",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractTargetHighlightComponent.BP_ContractTargetHighlightComponent_C'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "BP_ContractTargetHighlightComponent_C'BP_ContractInteractionTarget_C:BP_ContractTargetHighlightComponent_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.4"
+    },
+    "Properties": {
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BP_CoverSpot_C",
+    "Name": "BP_CoverSpot_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Attractors/BP_CoverSpot.BP_CoverSpot_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_CoverSpot_C'Default__BP_CoverSpot_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/BP_CoverSpot.1"
+    },
+    "Properties": {
+      "Billboard": null,
+      "m_bFullCover": true,
+      "m_CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_CoverSpot_C_1.CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.31"
+      },
+      "m_ArrowComponent": null,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_CoverSpot_C_1.CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.31"
+      },
+      "BlueprintCreatedComponents": [
+        null
+      ]
+    },
+    "ActorLabel": "BP_CoverSpot"
+  },
+  {
+    "Type": "BP_PvEContentDescriptor_C",
+    "Name": "BP_PvEContentDescriptor_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Spawners/BP_PvEContentDescriptor.BP_PvEContentDescriptor_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_PvEContentDescriptor_C'Default__BP_PvEContentDescriptor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_PvEContentDescriptor.2"
+    },
+    "Properties": {
+      "Billboard": {
+        "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Billboard'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.12"
+      },
+      "Scene": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Scene'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.59"
+      },
+      "m_FallbackGroupComposition": {
+        "ObjectName": "NPCCompositionData'NPCComp_Kirab'",
+        "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/NPCCompositions/NPCComp_Kirab.0"
+      },
+      "m_ManagedSpawners": [
+        {
+          "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Scene'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.59"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Scene'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.59"
+        },
+        {
+          "ObjectName": "BillboardComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1.Billboard'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.12"
+        }
+      ]
+    },
+    "ActorLabel": "BP_PvEContentDescriptor2"
+  },
+  {
+    "Type": "BP_RoomDescriptor_C",
+    "Name": "BP_RoomDescriptor_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.BP_RoomDescriptor_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Template": {
+      "ObjectName": "BP_RoomDescriptor_C'Default__BP_RoomDescriptor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.5"
+    },
+    "Properties": {
+      "Audio": {
+        "ObjectName": "FcAudioComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.Audio'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.43"
+      },
+      "TextRender": null,
+      "GatedContentComponent": {
+        "ObjectName": "BP_ContentGateComponent_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.GatedContentComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.21"
+      },
+      "NpcTotemTrigger": {
+        "ObjectName": "NpcTotemTriggerComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.NpcTotemTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.51"
+      },
+      "AiReinforcement": {
+        "ObjectName": "AiReinforcementComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.AiReinforcement'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.2"
+      },
+      "Billboard": null,
+      "AiPopulationSpawn": {
+        "ObjectName": "AiPopulationSpawnComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.AiPopulationSpawn'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.1"
+      },
+      "m_SpawnLocations": [
+        {
+          "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+        },
+        {
+          "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+        },
+        {
+          "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+        }
+      ],
+      "m_SpawnComponent": {
+        "ObjectName": "AiPopulationSpawnComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.AiPopulationSpawn'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.1"
+      },
+      "m_EncounterActorComponent": {
+        "ObjectName": "EncounterActorComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.EncounterActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.41"
+      },
+      "m_TriggerListenerComponent": {
+        "ObjectName": "AISpawnTriggerListenerComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.TriggerListenerComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.4"
+      },
+      "m_CombatVolume": {
+        "ObjectName": "AiCombatVolume'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.60"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "AiPopulationSpawnComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.AiPopulationSpawn'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.1"
+        },
+        null,
+        {
+          "ObjectName": "AiReinforcementComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.AiReinforcement'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.2"
+        },
+        {
+          "ObjectName": "NpcTotemTriggerComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.NpcTotemTrigger'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.51"
+        },
+        {
+          "ObjectName": "BP_ContentGateComponent_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.GatedContentComponent'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.21"
+        },
+        null,
+        {
+          "ObjectName": "FcAudioComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.Audio'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.43"
+        }
+      ]
+    },
+    "ActorLabel": "BP_RoomDescriptor_KirabAmbush"
+  },
+  {
+    "Type": "BrushComponent",
+    "Name": "BrushComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BrushComponent'",
+    "Outer": {
+      "ObjectName": "AiCombatVolume'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.0"
+    },
+    "Properties": {
+      "Brush": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.48"
+      },
+      "BrushBodySetup": {
+        "ObjectName": "BodySetup'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0.BrushComponent0.BodySetup_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.13"
+      },
+      "bHasNoStreamableTextures": true,
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 3261.425,
+        "Y": -9129.616,
+        "Z": 5926.1724
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -45.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'BP_AiSpawnLocation_C:Capsule_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.4"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 1968.0597,
+        "Y": -8745.3955,
+        "Z": 5161.0337
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 30.875175,
+        "Roll": 0.0
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'BP_AiSpawnLocation_C:Capsule_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.4"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -687.3285,
+        "Y": -7322.168,
+        "Z": 6457.912
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 52.020206,
+        "Roll": 0.0
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'BP_AiSpawnLocation_C:Capsule_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.4"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 2892.9802,
+        "Y": -8184.3633,
+        "Z": 5143.5693
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 168.3934,
+        "Roll": 0.0
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_CoverSpot_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_CoverSpot_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.24"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_CoverSpot_C:CapsuleComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/BP_CoverSpot.2"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "Visibility": "Ignore",
+          "Camera": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 2233.2998,
+        "Y": -8796.4,
+        "Z": 5107.8037
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 85.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ContentBlockWorldComponent",
+    "Name": "ContentBlockWorldComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContentBlockWorldComponent'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+    }
+  },
+  {
+    "Type": "ContractContentComponent",
+    "Name": "ContractContent",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContractContentComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "ContractContentComponent'BP_ContractInteractionTarget_C:ContractContent_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.6"
+    },
+    "Properties": {
+      "m_ContractTags": [
+        "Contract.Target.Interaction.MTX.Ch1.Journey1.Antenna"
+      ],
+      "m_bIsGlobalContent": true,
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "DuneMinimapGenerator",
+    "Name": "MinimapGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneMinimapGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+    }
+  },
+  {
+    "Type": "DuneWorldGenerator",
+    "Name": "WorldGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+    }
+  },
+  {
+    "Type": "DuneWorldPartitioner",
+    "Name": "WorldPartitioner",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldPartitioner'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+    },
+    "Properties": {
+      "GridSize": {
+        "X": 1,
+        "Y": 1
+      }
+    }
+  },
+  {
+    "Type": "DuneWorldSettings",
+    "Name": "DuneWorldSettings",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldSettings'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "m_ContentBlockWorldComponent": {
+        "ObjectName": "ContentBlockWorldComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings.ContentBlockWorldComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.32"
+      },
+      "m_WorldGenerator": {
+        "ObjectName": "DuneWorldGenerator'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings.WorldGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.35"
+      },
+      "m_MinimapGenerator": {
+        "ObjectName": "DuneMinimapGenerator'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings.MinimapGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.34"
+      },
+      "WorldPartitioner": {
+        "ObjectName": "DuneWorldPartitioner'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings.WorldPartitioner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.36"
+      },
+      "NavigationSystemConfig": {
+        "ObjectName": "NavigationSystemModuleConfig'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings.NavigationSystemModuleConfig_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.50"
+      },
+      "BookmarkArray": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "DuneWorldSettings"
+  },
+  {
+    "Type": "EncounterActorComponent",
+    "Name": "EncounterActorComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EncounterActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+    },
+    "Template": {
+      "ObjectName": "EncounterActorComponent'Default__BP_AiSpawnLocation_C:EncounterActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.5"
+    }
+  },
+  {
+    "Type": "EncounterActorComponent",
+    "Name": "EncounterActorComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EncounterActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+    },
+    "Template": {
+      "ObjectName": "EncounterActorComponent'Default__BP_AiSpawnLocation_C:EncounterActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.5"
+    }
+  },
+  {
+    "Type": "EncounterActorComponent",
+    "Name": "EncounterActorComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EncounterActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+    },
+    "Template": {
+      "ObjectName": "EncounterActorComponent'Default__BP_AiSpawnLocation_C:EncounterActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AiSpawnLocation.5"
+    }
+  },
+  {
+    "Type": "EncounterActorComponent",
+    "Name": "EncounterActorComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EncounterActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "EncounterActorComponent'Default__BP_RoomDescriptor_C:EncounterActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.6"
+    }
+  },
+  {
+    "Type": "ExclusionZone",
+    "Name": "ExclusionZone_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ExclusionZone'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "m_BoundsComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.ExclusionZone_5.BoundsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.15"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.ExclusionZone_5.BoundsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.15"
+      }
+    },
+    "ActorLabel": "ExclusionZone5"
+  },
+  {
+    "Type": "FcAudioComponent",
+    "Name": "Audio",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FcAudioComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "FcAudioComponent'BP_RoomDescriptor_C:Audio_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.7"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.60"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractableBase",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "InteractableBaseComponent'BP_ContractInteractionTarget_C:InteractableBase_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.10"
+    },
+    "Properties": {
+      "m_NotifyOnInteract": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+            },
+            "FunctionName": "BndEvt__BP_ContractInteractionTarget_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature"
+          }
+        ]
+      },
+      "m_InteractionFeedbackUIWorldOffset": {
+        "X": 0.0,
+        "Y": -6.274896,
+        "Z": 64.788864
+      },
+      "m_MaxInteractionDistance": 150.0,
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.Visuals'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.62"
+      },
+      "RelativeLocation": {
+        "X": -2.4683528,
+        "Y": -1.095737,
+        "Z": -21.314426
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "JourneyQueryExpression_None",
+    "Name": "JourneyQueryExpression_None_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'JourneyQueryExpression_None'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "JourneyQueryExpression_None'Default__BP_ConditionalSetDressing_C:JourneyQueryExpression_None_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.18"
+    }
+  },
+  {
+    "Type": "Level",
+    "Name": "PersistentLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Level'",
+    "Outer": {
+      "ObjectName": "World'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.66"
+    },
+    "Properties": {
+      "Model": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.49"
+      },
+      "LevelBuildDataId": "99131E52-4DB2A554-E98A3F85-ABC5C3A5",
+      "WorldSettings": {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+      }
+    },
+    "Actors": [
+      {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+      },
+      null,
+      {
+        "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.LevelBounds_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.47"
+      },
+      {
+        "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.17"
+      },
+      {
+        "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.18"
+      },
+      {
+        "ObjectName": "BP_AiSpawnLocation_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_AiSpawnLocation_C_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.19"
+      },
+      {
+        "ObjectName": "BP_PvEContentDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.25"
+      },
+      {
+        "ObjectName": "AiCombatVolume'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.0"
+      },
+      {
+        "ObjectName": "BP_CoverSpot_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_CoverSpot_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.24"
+      },
+      {
+        "ObjectName": "TextRenderActor'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.TextRenderActor_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.64"
+      },
+      {
+        "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+      },
+      {
+        "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.StaticMeshActor_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.61"
+      },
+      {
+        "ObjectName": "ExclusionZone'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.ExclusionZone_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.42"
+      },
+      {
+        "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+      },
+      {
+        "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+      }
+    ],
+    "URL": {
+      "Protocol": "unreal",
+      "Host": "",
+      "Port": 7777,
+      "Valid": true,
+      "Map": "/Game/Dune/Maps/MainMenu",
+      "Op": [],
+      "Portal": ""
+    },
+    "Model": {
+      "ObjectName": "Model'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.Model_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.49"
+    },
+    "ModelComponents": [],
+    "LevelScriptActor": null,
+    "NavListStart": null,
+    "NavListEnd": null,
+    "PrecomputedVisibilityHandler": {
+      "PrecomputedVisibilityCellBucketOriginXY": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "PrecomputedVisibilityCellSizeXY": 0.0,
+      "PrecomputedVisibilityCellSizeZ": 0.0,
+      "PrecomputedVisibilityCellBucketSizeXY": 0,
+      "PrecomputedVisibilityNumCellBuckets": 0,
+      "PrecomputedVisibilityCellBuckets": []
+    },
+    "PrecomputedVolumeDistanceField": {
+      "VolumeMaxDistance": 0.0,
+      "VolumeBox": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 0
+      },
+      "VolumeSizeX": 0,
+      "VolumeSizeY": 0,
+      "VolumeSizeZ": 0,
+      "Data": []
+    }
+  },
+  {
+    "Type": "LevelBounds",
+    "Name": "LevelBounds_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'LevelBounds'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "BoxComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.LevelBounds_0.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.16"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.LevelBounds_0.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.16"
+      }
+    },
+    "ActorLabel": "LevelBounds0"
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Model'",
+    "Outer": {
+      "ObjectName": "AiCombatVolume'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.AiCombatVolume_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.0"
+    },
+    "Bounds": {
+      "Origin": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 4031.0012,
+        "Y": 2494.6863,
+        "Z": 1290.554
+      },
+      "SphereRadius": 4913.0396
+    },
+    "Vectors": [
+      {
+        "X": -1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
+      },
+      {
+        "X": 1.0,
+        "Y": -0.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": -1.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      }
+    ],
+    "Points": [
+      {
+        "X": -4031.0012,
+        "Y": -2494.6863,
+        "Z": -1290.554
+      },
+      {
+        "X": -4031.0012,
+        "Y": -2494.6863,
+        "Z": 1290.554
+      },
+      {
+        "X": -4031.0012,
+        "Y": 2494.6863,
+        "Z": 1290.554
+      },
+      {
+        "X": -4031.0012,
+        "Y": 2494.6863,
+        "Z": -1290.554
+      },
+      {
+        "X": 4031.0012,
+        "Y": 2494.6863,
+        "Z": 1290.554
+      },
+      {
+        "X": 4031.0012,
+        "Y": 2494.6863,
+        "Z": -1290.554
+      },
+      {
+        "X": 4031.0012,
+        "Y": -2494.6863,
+        "Z": 1290.554
+      },
+      {
+        "X": 4031.0012,
+        "Y": -2494.6863,
+        "Z": -1290.554
+      }
+    ],
+    "Nodes": [
+      {
+        "Plane": {
+          "Vector": {
+            "X": -1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 4031.0012,
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "iVertPool": 0,
+        "iSurf": 0,
+        "iVertexIndex": 0,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 1,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 1.0,
+            "Z": 0.0
+          },
+          "W": 2494.6863,
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "iVertPool": 4,
+        "iSurf": 1,
+        "iVertexIndex": 4,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 2,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 4031.0012,
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "iVertPool": 8,
+        "iSurf": 2,
+        "iVertexIndex": 8,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 3,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 0.0
+          },
+          "W": 2494.6863,
+          "X": 0.0,
+          "Y": -1.0,
+          "Z": 0.0
+        },
+        "iVertPool": 12,
+        "iSurf": 3,
+        "iVertexIndex": 12,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 4,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 1.0
+          },
+          "W": 1290.554,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "iVertPool": 16,
+        "iSurf": 4,
+        "iVertexIndex": 16,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 5,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -1.0
+          },
+          "W": 1290.554,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "iVertPool": 20,
+        "iSurf": 5,
+        "iVertexIndex": 20,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": -1,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": 0,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      }
+    ],
+    "Surfs": [
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 0,
+        "vNormal": 0,
+        "vTextureU": 1,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": -1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 4031.0012,
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 3,
+        "vNormal": 1,
+        "vTextureU": 3,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 1.0,
+            "Z": 0.0
+          },
+          "W": 2494.6863,
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 5,
+        "vNormal": 3,
+        "vTextureU": 4,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 4031.0012,
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 7,
+        "vNormal": 4,
+        "vTextureU": 0,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": -1.0,
+            "Z": 0.0
+          },
+          "W": 2494.6863,
+          "X": 0.0,
+          "Y": -1.0,
+          "Z": 0.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 2,
+        "vNormal": 5,
+        "vTextureU": 3,
+        "vTextureV": 1,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 1.0
+          },
+          "W": 1290.554,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 0,
+        "vNormal": 2,
+        "vTextureU": 3,
+        "vTextureV": 4,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -1.0
+          },
+          "W": 1290.554,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      }
+    ],
+    "NumSharedSides": 4,
+    "VertexBuffer": null,
+    "LightingGuid": "66621944-4584E1DD-4A68478C-43239EE6",
+    "LightmassSettings": [
+      {
+        "bUseTwoSidedLighting": false,
+        "bShadowIndirectOnly": false,
+        "bUseEmissiveForStaticLighting": false,
+        "bUseVertexNormalForHemisphereGather": false,
+        "EmissiveLightFalloffExponent": 8.0,
+        "EmissiveLightExplicitInfluenceRadius": 0.0,
+        "EmissiveBoost": 1.0,
+        "DiffuseBoost": 1.0,
+        "FullyOccludedSamplesFraction": 1.0
+      }
+    ]
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Model'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Bounds": {
+      "Origin": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "SphereRadius": 0.0
+    },
+    "Vectors": [],
+    "Points": [],
+    "Nodes": [],
+    "Surfs": [],
+    "NumSharedSides": 4,
+    "VertexBuffer": {
+      "Vertices": []
+    },
+    "LightingGuid": "71BE4D52-49ED0D2C-8EA903B8-C1DBF66C",
+    "LightmassSettings": []
+  },
+  {
+    "Type": "NavigationSystemModuleConfig",
+    "Name": "NavigationSystemModuleConfig_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NavigationSystemModuleConfig'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.37"
+    },
+    "Properties": {
+      "bAutoSpawnMissingNavData": true,
+      "NavigationSystemClass": {
+        "AssetPathName": "/Script/NavigationSystem.NavigationSystemV1",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "NpcTotemTriggerComponent",
+    "Name": "NpcTotemTrigger",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NpcTotemTriggerComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "NpcTotemTriggerComponent'BP_RoomDescriptor_C:NpcTotemTrigger_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.25"
+    },
+    "Properties": {
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Activate",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ConditionalSetDressing_C:Activate_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.19"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Deactivate",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ConditionalSetDressing_C:Deactivate_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.20"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Hide",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ConditionalSetDressing_C:Hide_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.22"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ConditionalSetDressing_C:Root_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.23"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 517.5284,
+        "Y": -5602.5674,
+        "Z": 5361.8325
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Show",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ConditionalSetDressing_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.20"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ConditionalSetDressing_C:Show_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ConditionalSetDressing.24"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ConditionalSetDressing_C_0.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.55"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Highlight",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ContractInteractionTarget_C:Highlight_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.12"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.SceneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.58"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_ContractInteractionTarget_C:SceneComponent_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.13"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 533.5535,
+        "Y": -5655.8047,
+        "Z": 5389.0464
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_PvEContentDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_PvEContentDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.25"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_PvEContentDescriptor_C:Scene_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_PvEContentDescriptor.12"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1421.4459,
+        "Y": -7184.6772,
+        "Z": 8133.8047
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_RoomDescriptor_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_RoomDescriptor_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.26"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_RoomDescriptor_C:Root'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.27"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1577.9865,
+        "Y": -6817.548,
+        "Z": 7427.3496
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshActor",
+    "Name": "StaticMeshActor_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshActor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.63"
+      },
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.63"
+      }
+    },
+    "ActorLabel": "SM_DLC_Env_Prop_Dunemen_RelayBeacon_Device"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Visuals",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_ContractInteractionTarget_C'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.22"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_ContractInteractionTarget_C:Visuals_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Systems/Contracts/BP_ContractInteractionTarget.24"
+    },
+    "Properties": {
+      "StaticMesh": null,
+      "OverrideMaterials": [],
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.BP_ContractInteractionTarget_C_0.SceneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.58"
+      },
+      "RelativeLocation": {
+        "X": 7.6944165,
+        "Y": 69.02792,
+        "Z": 20.148247
+      },
+      "RelativeRotation": {
+        "Pitch": -83.40279,
+        "Yaw": -90.201965,
+        "Roll": -2.7395735
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.StaticMeshActor_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.61"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_DLC_Env_Prop_Dunemen_RelayBeacon_Device'",
+        "ObjectPath": "DuneSandbox/Content/DLC/Environment/Props/Dunemen/RelayBeacon/Meshes/SM_DLC_Env_Prop_Dunemen_RelayBeacon_Device.1"
+      },
+      "RelativeLocation": {
+        "X": 532.5025,
+        "Y": -5651.7134,
+        "Z": 5393.7944
+      },
+      "RelativeRotation": {
+        "Pitch": 3.386088,
+        "Yaw": 186.83769,
+        "Roll": -4.295574
+      }
+    }
+  },
+  {
+    "Type": "TextRenderActor",
+    "Name": "TextRenderActor_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextRenderActor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "Properties": {
+      "TextRender": {
+        "ObjectName": "TextRenderComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.TextRenderActor_1.NewTextRenderComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.65"
+      },
+      "bHidden": true,
+      "RootComponent": {
+        "ObjectName": "TextRenderComponent'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.TextRenderActor_1.NewTextRenderComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.65"
+      }
+    },
+    "ActorLabel": "TextRenderActor"
+  },
+  {
+    "Type": "TextRenderComponent",
+    "Name": "NewTextRenderComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TextRenderComponent'",
+    "Outer": {
+      "ObjectName": "TextRenderActor'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel.TextRenderActor_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.64"
+    },
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "814F266F403CC1467CE64881BE9447FD",
+        "SourceString": "Contract 2/3 - Repair the Comms Antenna\r\n\r\nGet close to the Antenna to \"Interact\"\r\n\r\nSpawns Kirab Ambush",
+        "LocalizedString": "Contract 2/3 - Repair the Comms Antenna\r\n\r\nGet close to the Antenna to \"Interact\"\r\n\r\nSpawns Kirab Ambush"
+      },
+      "HorizontalAlignment": "EHTA_Center",
+      "RelativeLocation": {
+        "X": 449.7358,
+        "Y": -5528.6675,
+        "Z": 5894.9204
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -60.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 2.6789408,
+        "Z": 2.6789408
+      }
+    }
+  },
+  {
+    "Type": "World",
+    "Name": "CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'World'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay",
+    "PersistentLevel": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_CommsAntenna_Gameplay.46"
+    },
+    "ExtraReferencedObjects": [],
+    "StreamingLevels": []
+  }
+]

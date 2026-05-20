@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_MTX_EcolabA_IdleClosestAttractor",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_MTX_EcolabA_IdleClosestAttractor:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_SoldierBase'",
+        "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/BT/BB_SoldierBase.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_MTX_EcolabA_IdleClosestAttractor:BTTask_RunBehavior_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_MTX_EcolabA_IdleClosestAttractor:BTTask_Wait_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+    },
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_UseClosestAttractorPoint'",
+        "ObjectPath": "DuneSandbox/Content/Dune/AI/Shared/BehaviorTrees/BT_UseClosestAttractorPoint.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_MTX_EcolabA_IdleClosestAttractor:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+    },
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_MTX_EcolabA_IdleClosestAttractor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_MTX_EcolabA_IdleClosestAttractor:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/AI/BT_MTX_EcolabA_IdleClosestAttractor.1"
+      }
+    }
+  }
+]

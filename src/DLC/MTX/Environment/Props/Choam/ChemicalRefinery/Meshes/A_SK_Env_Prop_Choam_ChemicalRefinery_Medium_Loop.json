@@ -1,0 +1,224 @@
+[
+  {
+    "Type": "AnimNotifyState_TimedNiagaraEffectAdvanced",
+    "Name": "AnimNotifyState_TimedNiagaraEffectAdvanced_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimNotifyState_TimedNiagaraEffectAdvanced'",
+    "Outer": {
+      "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Ast_Refinery_Chemical_Medium'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Refineries/Niagara/NS_VFX_Ast_Refinery_Chemical_Medium.81"
+      },
+      "SocketName": "VFX_Socket"
+    }
+  },
+  {
+    "Type": "AnimNotifyState_TimedNiagaraEffectAdvanced",
+    "Name": "AnimNotifyState_TimedNiagaraEffectAdvanced_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimNotifyState_TimedNiagaraEffectAdvanced'",
+    "Outer": {
+      "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Ast_Refineries_Smoke'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Refineries/Niagara/NS_VFX_Ast_Refineries_Smoke.67"
+      },
+      "SocketName": "VFX_Smoke_R"
+    }
+  },
+  {
+    "Type": "AnimNotifyState_TimedNiagaraEffectAdvanced",
+    "Name": "AnimNotifyState_TimedNiagaraEffectAdvanced_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimNotifyState_TimedNiagaraEffectAdvanced'",
+    "Outer": {
+      "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Ast_Refineries_Smoke'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Refineries/Niagara/NS_VFX_Ast_Refineries_Smoke.67"
+      },
+      "SocketName": "VFX_Smoke_L"
+    }
+  },
+  {
+    "Type": "AnimSequence",
+    "Name": "A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimSequence'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop",
+    "Properties": {
+      "BoneCompressionSettings": {
+        "ObjectName": "AnimBoneCompressionSettings'ACLAnimBoneCompressionSettings'",
+        "ObjectPath": "Engine/Plugins/ACLPlugin/Content/ACLAnimBoneCompressionSettings.2"
+      },
+      "CurveCompressionSettings": {
+        "ObjectName": "AnimCurveCompressionSettings'ACLAnimCurveCompressionSettings'",
+        "ObjectPath": "Engine/Plugins/ACLPlugin/Content/ACLAnimCurveCompressionSettings.2"
+      },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "TimedNiagaraEffectAdvanced",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "AnimNotifyState_TimedNiagaraEffectAdvanced'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop:AnimNotifyState_TimedNiagaraEffectAdvanced_0'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.0"
+          },
+          "Duration": 5.3333335,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 5.3333335,
+            "LinkValue": 5.3333335,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": false,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 5.3333335,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "TimedNiagaraEffectAdvanced",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "AnimNotifyState_TimedNiagaraEffectAdvanced'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop:AnimNotifyState_TimedNiagaraEffectAdvanced_2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.2"
+          },
+          "Duration": 5.3333335,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 5.3333335,
+            "LinkValue": 5.3333335,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": false,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 5.3333335,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "TimedNiagaraEffectAdvanced",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "AnimNotifyState_TimedNiagaraEffectAdvanced'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop:AnimNotifyState_TimedNiagaraEffectAdvanced_1'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.1"
+          },
+          "Duration": 5.3333335,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 5.3333335,
+            "LinkValue": 5.3333335,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": false,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 2,
+          "LinkedMontage": null,
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 5.3333335,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/A_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Loop.3"
+          }
+        }
+      ],
+      "SequenceLength": 5.3333335,
+      "Skeleton": {
+        "ObjectName": "Skeleton'SKEL_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Skeleton'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/ChemicalRefinery/Meshes/SKEL_SK_Env_Prop_Choam_ChemicalRefinery_Medium_Skeleton.3"
+      }
+    },
+    "SkeletonGuid": "7792C88B-4FB4FD13-F78833B3-D14BD171",
+    "CompressedTrackToSkeletonMapTable": [
+      0,
+      1
+    ],
+    "CompressedDataStructure": {
+      "CompressedNumberOfFrames": 161
+    },
+    "CompressedRawDataSize": 5328
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Decal_Cracks_Concrete_EcolabsWall_02",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/Cracks/MI_Decal_Cracks_Concrete_EcolabsWall_02",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_DuneMaster_BasicDecal'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_BasicDecal.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Select channel for opacity mask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 1.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "00FF00"
+          },
+          "ExpressionGUID": "B4FD0E9C-43026FF3-43CCE181-12A36CBB"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.047,
+            "G": 0.044305,
+            "B": 0.034761,
+            "A": 0.0,
+            "Hex": "3D3B34"
+          },
+          "ExpressionGUID": "929D920D-454E8C00-D90BDAB3-69F2B5C8"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Normal (RG) + Metallic (B) + Roughness (A)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_Concrete_EcolabsWall_02_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/Cracks/T_BasicDecal_Concrete_EcolabsWall_02_N.0"
+          },
+          "ExpressionGUID": "104D305E-4243D625-5740639D-C9984BB3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Opacity masks OR Composite opacity (R+G+B)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_Concrete_Cracks_Alpha_04_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/Cracks/T_BasicDecal_Concrete_Cracks_Alpha_04_M.0"
+          },
+          "ExpressionGUID": "90CC74B3-4AF208A8-3B69B099-61D6F1B0"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Decal Custom Primitive Data Driven Parameters",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "98C11348-409EE5DB-B85C0D97-76391B26"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Tint is Basecolor",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "05E0F3F4-4DD85E65-3DF2749F-91D2B905"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Mask Vertical Surfaces?",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CA617C7A-4EE8D09A-4EAB3EAB-CF5D156E"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

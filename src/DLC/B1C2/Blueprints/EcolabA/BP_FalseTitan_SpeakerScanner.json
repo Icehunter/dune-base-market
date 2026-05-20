@@ -1,0 +1,1042 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FalseTitan_SpeakerScanner_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner",
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:ExecuteUbergraph_BP_FalseTitan_SpeakerScanner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.6"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:ReceiveTick'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.9"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:Multi_StartFX'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.8"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:FX_Complete'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.5"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:Multi_PlayCue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.7"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:ExecuteUbergraph_BP_FalseTitan_SpeakerScanner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter_Scanner",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScanEffect",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter_FalseTitan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerToScan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | DisableEditOnInstance",
+        "RepIndex": 16,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "BarkCues",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AudioEvents",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AudioEvents",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScanSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_FalseTitan_SpeakerScanner": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:ExecuteUbergraph_BP_FalseTitan_SpeakerScanner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.4"
+      },
+      "Multi_PlayCue": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:Multi_PlayCue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.7"
+      },
+      "FX_Complete": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:FX_Complete'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.5"
+      },
+      "Multi_StartFX": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:Multi_StartFX'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.8"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:ReceiveTick'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.9"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_FalseTitan_SpeakerScanner_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FalseTitan_SpeakerScanner_C'Default__BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BP_FalseTitan_SpeakerScanner_C",
+    "Name": "Default__BP_FalseTitan_SpeakerScanner_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.BP_FalseTitan_SpeakerScanner_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AudioEvents": [
+        {
+          "ObjectName": "FcAudioEvent'AD_von_lostharvest_laba_falsetitan_01a'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/DuneEvents/VO_NPCInter/VO_NPCInter_B1C2/FalseTitan/AD_von_lostharvest_laba_falsetitan_01a.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_von_lostharvest_laba_falsetitan_02'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/DuneEvents/VO_NPCInter/VO_NPCInter_B1C2/FalseTitan/AD_von_lostharvest_laba_falsetitan_02.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_von_lostharvest_laba_falsetitan_03'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/DuneEvents/VO_NPCInter/VO_NPCInter_B1C2/FalseTitan/AD_von_lostharvest_laba_falsetitan_03.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_von_lostharvest_laba_falsetitan_04'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/DuneEvents/VO_NPCInter/VO_NPCInter_B1C2/FalseTitan/AD_von_lostharvest_laba_falsetitan_04.0"
+        }
+      ],
+      "ScanSound": {
+        "ObjectName": "FcAudioEvent'AD_DLC_ENV_Ecolab_A_3D_LaserScan'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_Ecolab/DLC_ENV_Ecolab_B1C2/DLC_ENV_Ecolab_A/3D/AD_DLC_ENV_Ecolab_A_3D_LaserScan.0"
+      },
+      "PrimaryActorTick": {
+        "bCanEverTick": true,
+        "bStartWithTickEnabled": false
+      },
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_FalseTitan_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_Scanner_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_FalseTitan_SpeakerScanner",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnNiagaraSystemFinished__DelegateSignature'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDunePlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FFloor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchName_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PSystem",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Cue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FFloor_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FX_Complete",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PSystem",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multi_PlayCue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Cue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multi_StartFX",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "ScanEffect_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_TEMP_PLACEHOLDER_FalseTitanScan'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/PLACEHOLDERS/NS_TEMP_PLACEHOLDER_FalseTitanScan.79"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "ResourceNodeStaticMeshComponent",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceStaticMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.ResourceNodeStaticMeshComponent",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceStaticMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "ScanProgress",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.ScanProgress",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "TargetBounds",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.TargetBounds",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "TargetLocation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraPosition'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.TargetLocation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraPosition'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.ResourceNodeStaticMeshComponent",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraDataInterfaceStaticMesh'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.ScanProgress",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 20,
+            "Name": "User.TargetBounds",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.TargetLocation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraPosition'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          160,
+          64,
+          25,
+          30,
+          155,
+          62,
+          169,
+          107,
+          29,
+          62,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          240,
+          65,
+          0,
+          0,
+          240,
+          65,
+          0,
+          0,
+          210,
+          66,
+          204,
+          136,
+          6,
+          67,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "DataInterfaces": [
+          {
+            "ObjectName": "NiagaraDataInterfaceStaticMesh'BP_FalseTitan_SpeakerScanner_C:ScanEffect_GEN_VARIABLE.NiagaraDataInterfaceStaticMesh_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.11"
+          }
+        ],
+        "OriginalPositionData": [
+          {
+            "Name": "User.TargetLocation",
+            "Value": {
+              "X": 134.53436,
+              "Y": 0.0,
+              "Z": 0.0
+            }
+          }
+        ]
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceStaticMesh",
+    "Name": "NiagaraDataInterfaceStaticMesh_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraDataInterfaceStaticMesh'",
+    "Outer": {
+      "ObjectName": "NiagaraComponent'BP_FalseTitan_SpeakerScanner_C:ScanEffect_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.10"
+    },
+    "Properties": {
+      "SourceMode": "ENDIStaticMesh_SourceMode::Source",
+      "LODIndexUserParameter": {
+        "Parameter": {
+          "VarData": "",
+          "Name": "None",
+          "TypeDef": {
+            "ClassStructOrEnum": {
+              "ObjectName": "ScriptStruct'NiagaraInt32'",
+              "ObjectPath": "/Script/Niagara"
+            },
+            "UnderlyingType": 2,
+            "Flags": 0
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_FalseTitan_SpeakerScanner_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.16"
+        }
+      ],
+      "VariableGuid": "997169E2-44A60781-C83DBA92-70B9C4BD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_FalseTitan_SpeakerScanner_C:DuneAudioEmitter_FalseTitan_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.2"
+      },
+      "VariableGuid": "A65EB939-4DF8EEC9-ABBF7B96-B248391C",
+      "InternalVariableName": "DuneAudioEmitter_FalseTitan"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_FalseTitan_SpeakerScanner_C:ScanEffect_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.10"
+      },
+      "VariableGuid": "8471332F-4110EA3C-C9D32EB4-A23052BE",
+      "InternalVariableName": "ScanEffect"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_FalseTitan_SpeakerScanner_C:DuneAudioEmitter_Scanner_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.3"
+      },
+      "VariableGuid": "AF781D4C-4258B172-09CC0F9F-D0BB14AB",
+      "InternalVariableName": "DuneAudioEmitter_Scanner"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitan_SpeakerScanner_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_FalseTitan_SpeakerScanner_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitan_SpeakerScanner.13"
+      }
+    }
+  }
+]

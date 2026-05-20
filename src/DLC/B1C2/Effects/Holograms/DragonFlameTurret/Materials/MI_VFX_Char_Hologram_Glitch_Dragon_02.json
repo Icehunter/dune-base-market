@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_VFX_Char_Hologram_Glitch_Dragon_02",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/DragonFlameTurret/Materials/MI_VFX_Char_Hologram_Glitch_Dragon_02",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_VFX_Char_Hologram_Glitch'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/HologramNPCs/Materials/M_VFX_Char_Hologram_Glitch.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Drift",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": -0.1,
+          "ExpressionGUID": "F0C73046-41DD4523-B9A44F8B-D63B2F42"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Drift2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.1,
+          "ExpressionGUID": "BD92EDDD-48173932-DCCB638D-AD9014B5"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "ShadingModel": "MSM_Unlit",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "DirectionSwitch",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E4326C6E-4CF64660-47037F8A-B6171E39"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseOnlyParticleColor",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "02362727-4C63EAB5-B1341C99-41E77715"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

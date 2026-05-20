@@ -1,0 +1,510 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_UniqueThumper_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_UniqueThumper_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Thumper'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "QueryCapsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QueryCollisionSphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_UniqueThumper_C",
+    "Name": "Default__BP_UniqueThumper_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.BP_UniqueThumper_C'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper",
+    "Properties": {
+      "m_ThreatGenerationStartDelay": 4.0,
+      "m_ThumperThreatValuePerBeat": 800.0,
+      "m_SkeletalMeshComponent": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_UniqueThumper_C:SkeletalMeshComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.15"
+      },
+      "m_SandwormThreatSourceComponent": {
+        "ObjectName": "SandwormThreatSourceComponent'Default__BP_UniqueThumper_C:SandwormThreatSource'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.7"
+      },
+      "m_ThumperAnimation": {
+        "ObjectName": "AnimMontage'AM_Plac_Thumper'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Animations/Placeables/Thumper/AM_Plac_Thumper.0"
+      },
+      "m_ThumperLifeSpan": 300.0,
+      "m_SceneComponent": null,
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_UniqueThumper_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.5"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_UniqueThumper_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.4"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_UniqueThumper_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.13"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_UniqueThumper_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.2"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_UniqueThumper_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.6"
+      },
+      "m_BuildingType": {
+        "Name": "LongDurationThumper_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_UniqueThumper_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.9"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_UniqueThumper_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.9"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "QueryCapsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.0"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 92.0,
+      "CapsuleRadius": 40.0,
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "Deployable_PlacementCollider",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Overlap",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Trace_Shelter_Buildables": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_BuildingStructure": "Block",
+          "Trace_Shelter": "Ignore",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    },
+    "Properties": {
+      "m_SphereRadius": 30.0,
+      "m_CollisionRelativeTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -32.0
+        }
+      },
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_PickupNoTotemPlaceableInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_PickupNoTotemPlaceableInteraction.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_UniqueThumper_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.9"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 64.0
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    }
+  },
+  {
+    "Type": "SandwormThreatSourceComponent",
+    "Name": "SandwormThreatSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SandwormThreatSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    },
+    "Properties": {
+      "m_SandowmTargetPriority": "ESandowmTargetPriority::High",
+      "m_ThreatBlobType": "EThreatBlobType::UniqueThumper",
+      "m_MaxThreatScore": 10000.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_UniqueThumper_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_UniqueThumper_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.8"
+      },
+      "VariableGuid": "533070F6-433E21D7-F7099BBB-9F06CAE3",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_UniqueThumper_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_UniqueThumper_C:QueryCapsule_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.3"
+      },
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "06C34756-47C514FA-A395A2BB-7A8B3E5F",
+      "InternalVariableName": "QueryCapsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_UniqueThumper_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_UniqueThumper_C:QueryCollisionSphere_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.16"
+      },
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9341D8A6-466058F1-D0CF588A-25CF0494",
+      "InternalVariableName": "QueryCollisionSphere"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_UniqueThumper_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_UniqueThumper_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_UniqueThumper_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_UniqueThumper_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_UniqueThumper_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_UniqueThumper_C'Default__BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.1"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_Thumper_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Animations/Placeables/Thumper/AB_Thumper.1"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'A_Plac_Thumper01_Loop_01'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Animations/Placeables/Thumper/A_Plac_Thumper01_Loop_01.1"
+        }
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Plac_Choam_Thumper_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/Meshes/SK_Plac_Choam_Thumper_01.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Plac_Choam_Thumper_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/Meshes/SK_Plac_Choam_Thumper_01.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceLayered'ML_Choam_Thumper_02'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/Materials/ML_Choam_Thumper_02.0"
+        },
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Combat": "Block",
+          "Trace_BuildingStructure": "Block",
+          "Trace_BuildingGhost": "Block",
+          "Trace_Interactable": "Block",
+          "Trace_Harvesting": "Block",
+          "Trace_BuildingOverlap": "Block",
+          "SpiceField": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Block",
+          "Trace_VehicleGroundTrace": "Block"
+        },
+        "Flags": 1616,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_UniqueThumper_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.9"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -25.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "QueryCollisionSphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_UniqueThumper_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Thumper/BP_UniqueThumper.0"
+    },
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "Deployable_CollisionNoVehicle",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_Shelter": "Ignore",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      }
+    }
+  }
+]

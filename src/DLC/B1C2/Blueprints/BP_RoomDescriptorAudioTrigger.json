@@ -1,0 +1,795 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_RoomDescriptorAudioTrigger_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:ExecuteUbergraph_BP_RoomDescriptorAudioTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.8"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:SpawnerCleared'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.9"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:PlaySoundOnCombatEnd'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.7"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.4"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnNPCSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.5"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnNPCSpawnedPlaySound'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.6"
+      },
+      {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:ExecuteUbergraph_BP_RoomDescriptorAudioTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RoomDescriptor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptor_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.3"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "SFX_TriggeredAudio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "SFX_TriggeredAudio",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DelayBetweenLines",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bCanTrigger",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 16,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CharacterTemplateNameID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bCanPlayNPCSpawnedSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 17,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "SFX_NPCSpawned",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "SFX_NPCSpawned",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SFXCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SFXCount_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TimeToDelaySFXOnCombatEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TimeToDelaySFXOnSpawnedNPC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_RoomDescriptorAudioTrigger": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:ExecuteUbergraph_BP_RoomDescriptorAudioTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.3"
+      },
+      "OnNPCSpawnedPlaySound": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnNPCSpawnedPlaySound'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.6"
+      },
+      "OnNPCSpawned": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnNPCSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.5"
+      },
+      "OnForceReset": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:OnForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.4"
+      },
+      "PlaySoundOnCombatEnd": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:PlaySoundOnCombatEnd'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.7"
+      },
+      "SpawnerCleared": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:SpawnerCleared'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.9"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_RoomDescriptorAudioTrigger_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.8"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_RoomDescriptorAudioTrigger_C'Default__BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_RoomDescriptorAudioTrigger_C",
+    "Name": "Default__BP_RoomDescriptorAudioTrigger_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.BP_RoomDescriptorAudioTrigger_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DelayBetweenLines": 0.15,
+      "bCanTrigger": true,
+      "bCanPlayNPCSpawnedSound": true,
+      "TimeToDelaySFXOnCombatEnd": 2.0,
+      "TimeToDelaySFXOnSpawnedNPC": 0.2,
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "Properties": {
+      "m_AudioSettings": {
+        "ObjectName": "FcAudioObjectSettingsAsset'AOS_10m'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/AudioObjectSettings/AOS_10m.0"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_RoomDescriptorAudioTrigger",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'AISpawnManagerClearedEvent__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SpawnManager_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm",
+        "PropertyClass": {
+          "ObjectName": "Class'AISpawnManager'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_DespawnConditionFlags",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDespawnConditionFlags'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SpawnManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm",
+        "PropertyClass": {
+          "ObjectName": "Class'AISpawnManager'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SpawnedNpc",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Npc_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneNpcCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindNpcConfig_OutConfig",
+        "Flags": "RF_Public",
+        "ElementSize": 1480,
+        "Struct": {
+          "ObjectName": "ScriptStruct'NpcConfigurationDataRowBase'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_FindNpcConfig_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'AISpawnManagerNpcSpawnedEvent__DelegateSignature'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnForceReset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNPCSpawned",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AISpawnManager'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnedNpc",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNPCSpawnedPlaySound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlaySoundOnCombatEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SpawnerCleared",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AISpawnManager'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "DespawnConditionFlags",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EDespawnConditionFlags'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_RoomDescriptorAudioTrigger_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.10"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.12"
+        }
+      ],
+      "VariableGuid": "6A9BD026-413A136E-DAF81394-E16E35B1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_RoomDescriptorAudioTrigger_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.2"
+      },
+      "VariableGuid": "1A39772B-4239C4F4-14C20797-F0280DD4",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptorAudioTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_RoomDescriptorAudioTrigger_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_RoomDescriptorAudioTrigger.11"
+      }
+    }
+  }
+]

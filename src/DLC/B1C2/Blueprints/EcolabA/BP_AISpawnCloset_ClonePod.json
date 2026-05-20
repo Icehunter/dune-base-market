@@ -1,0 +1,4065 @@
+[
+  {
+    "Type": "AISpawnLocationCollector_ChildActors",
+    "Name": "AISpawnLocationCollector_ChildActors_1",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AISpawnLocationCollector_ChildActors'",
+    "Outer": {
+      "ObjectName": "BP_AISpawnCloset_ClonePod_C'Default__BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.3"
+    },
+    "Template": {
+      "ObjectName": "AISpawnLocationCollector_ChildActors'Default__BP_AISpawnClosetBase_C:AISpawnLocationCollector_ChildActors_1'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AISpawnCloset_ClonePod_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnClosetBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.1"
+    },
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_AISpawnCloset_ClonePod_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.17"
+        }
+      ],
+      "ComponentTemplates": [
+        {
+          "ObjectName": "StaticMeshComponent'BP_AISpawnCloset_ClonePod_C:NODE_AddStaticMeshComponent-0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.72"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AISpawnCloset_ClonePod_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.40"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ExecuteUbergraph_BP_AISpawnCloset_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.26"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnClosetBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:IsClimbable'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.31"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:GetCollisionActors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.29"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:UpdateMutableAppearance'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.39"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:F_SpawnReplacementMesh'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.28"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:F_BlastDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.27"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.36"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:NPCSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.34"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:BlastDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.22"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.30"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ResetPod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.37"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:EnableCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.25"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:PawnReceivedMessage'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.35"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:DeleteDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.24"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:MulticastWarning'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.33"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:BndEvt__BP_AISpawnCloset_ClonePod_Box_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.23"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:Multi_HideSkeleton'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.32"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:TogglePodCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.38"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ExecuteUbergraph_BP_AISpawnCloset_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.26"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_05",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudio_Blast",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CustomizableSkeletalComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableSkeletalComponent'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudio_Steam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FX_Steam_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Window",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Door_right",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Door_left",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BlastPoint",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PodBody",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pod",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Child_Ecolab_Geo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnedPawn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DoorLeftTransform",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DoorRightTransform",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "WindowTransform",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "TempMeshes",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "TempMeshes",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DoorBlastPower",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AudioEvent_Steam_START",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AudioEvent_Steam_STOP",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AudioEvent_BlastOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mutable Instance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Current Mutable Instance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AISpawnCloset_ClonePod": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ExecuteUbergraph_BP_AISpawnCloset_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.26"
+      },
+      "TogglePodCollision": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:TogglePodCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.38"
+      },
+      "Multi_HideSkeleton": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:Multi_HideSkeleton'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.32"
+      },
+      "BndEvt__BP_AISpawnCloset_ClonePod_Box_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:BndEvt__BP_AISpawnCloset_ClonePod_Box_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.23"
+      },
+      "MulticastWarning": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:MulticastWarning'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.33"
+      },
+      "DeleteDoors": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:DeleteDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.24"
+      },
+      "PawnReceivedMessage": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:PawnReceivedMessage'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.35"
+      },
+      "EnableCollision": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:EnableCollision'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.25"
+      },
+      "ResetPod": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ResetPod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.37"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.30"
+      },
+      "BlastDoors": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:BlastDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.22"
+      },
+      "NPCSpawned": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:NPCSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.34"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.36"
+      },
+      "F_BlastDoors": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:F_BlastDoors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.27"
+      },
+      "F_SpawnReplacementMesh": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:F_SpawnReplacementMesh'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.28"
+      },
+      "UpdateMutableAppearance": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:UpdateMutableAppearance'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.39"
+      },
+      "GetCollisionActors": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:GetCollisionActors'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.29"
+      },
+      "IsClimbable": {
+        "ObjectName": "Function'BP_AISpawnCloset_ClonePod_C:IsClimbable'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.31"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      },
+      {
+        "Class": {
+          "ObjectName": "Class'DuneClimbExclusionInterface'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AISpawnCloset_ClonePod_C'Default__BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'),(Interface=/Script/CoreUObject.Class'\"/Script/DuneSandbox.DuneClimbExclusionInterface\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 48.240513,
+        "Y": 36.51562,
+        "Z": 140.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "Building_Structure": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Pawn": "Overlap",
+          "PhysicsBody": "Overlap"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 1.497468,
+        "Y": -25.715317,
+        "Z": 144.156
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BP_AISpawnCloset_ClonePod_C",
+    "Name": "Default__BP_AISpawnCloset_ClonePod_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.BP_AISpawnCloset_ClonePod_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod",
+    "Template": {
+      "ObjectName": "BP_AISpawnClosetBase_C'Default__BP_AISpawnClosetBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "DoorLeftTransform": {
+        "Rotation": {
+          "X": -0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0,
+          "IsNormalized": true,
+          "Size": 1.0,
+          "SizeSquared": 1.0
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "DoorRightTransform": {
+        "Rotation": {
+          "X": -0.0,
+          "Y": 8.726646E-09,
+          "Z": 0.0,
+          "W": 1.0,
+          "IsNormalized": true,
+          "Size": 1.0,
+          "SizeSquared": 1.0
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "WindowTransform": {
+        "Rotation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0,
+          "IsNormalized": true,
+          "Size": 1.0,
+          "SizeSquared": 1.0
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "DoorBlastPower": 0.7,
+      "AudioEvent_Steam_START": {
+        "ObjectName": "FcAudioEvent'AD_ENV_LabCarthag_Facility_Entrance_SteamGrate_3D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_Ecolab/ENV_LabUnderOldCarthag/Z2/AD_ENV_LabCarthag_Facility_Entrance_SteamGrate_3D.0"
+      },
+      "Mutable Instance": {
+        "ObjectName": "CustomizableObjectInstance'COI_Trader02NoHelm_Male_2'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPCs/StaticCivilian/MutableInstances/COI_Trader02NoHelm_Male_2.1"
+      },
+      "m_SpawnLocationCollector": {
+        "ObjectName": "AISpawnLocationCollector_ChildActors'Default__BP_AISpawnCloset_ClonePod_C:AISpawnLocationCollector_ChildActors_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.0"
+      },
+      "bReplicates": true,
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "BP_AiSpawnLocation_B1C2_ClonePod_C",
+    "Name": "SpawnLocationActor_GEN_VARIABLE_BP_AiSpawnLocation_B1C2_ClonePod_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.BP_AiSpawnLocation_B1C2_ClonePod_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:SpawnLocationActor_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.15"
+    },
+    "Template": {
+      "ObjectName": "BP_AiSpawnLocation_B1C2_ClonePod_C'Default__BP_AiSpawnLocation_B1C2_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.1"
+    },
+    "Properties": {
+      "m_EncounterActorComponent": {
+        "ObjectName": "EncounterActorComponent'BP_AISpawnCloset_ClonePod_C:SpawnLocationActor_GEN_VARIABLE.SpawnLocationActor_GEN_VARIABLE_BP_AiSpawnLocation_B1C2_ClonePod_C_CAT.EncounterActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.21"
+      }
+    },
+    "ActorLabel": "BP_AiSpawnLocation_B1C2_ClonePod"
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "Collision_01_GEN_VARIABLE_BP_CollisionVolume_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_01_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.10"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "ActorLabel": "BP_CollisionVolume"
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "Collision_02_GEN_VARIABLE_BP_CollisionVolume_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_02_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.11"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "ActorLabel": "BP_CollisionVolume"
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "Collision_03_GEN_VARIABLE_BP_CollisionVolume_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_03_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.12"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "ActorLabel": "BP_CollisionVolume"
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "Collision_04_GEN_VARIABLE_BP_CollisionVolume_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_04_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.13"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "ActorLabel": "BP_CollisionVolume"
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "Collision_05_GEN_VARIABLE_BP_CollisionVolume_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_05_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.14"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "ActorLabel": "BP_CollisionVolume"
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Collision_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_CollisionVolume_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_CollisionVolume_C'BP_AISpawnCloset_ClonePod_C:Collision_01_GEN_VARIABLE.Collision_01_GEN_VARIABLE_BP_CollisionVolume_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.5"
+      },
+      "RelativeLocation": {
+        "X": -1.0959061E-12,
+        "Y": -50.74292,
+        "Z": 119.724754
+      },
+      "RelativeScale3D": {
+        "X": 0.24251004,
+        "Y": 0.049634125,
+        "Z": 0.9201203
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Collision_02_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_CollisionVolume_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_CollisionVolume_C'BP_AISpawnCloset_ClonePod_C:Collision_02_GEN_VARIABLE.Collision_02_GEN_VARIABLE_BP_CollisionVolume_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.6"
+      },
+      "RelativeLocation": {
+        "X": 45.395657,
+        "Y": -32.941868,
+        "Z": 119.724754
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 73.74024,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.09914118,
+        "Y": 0.049634125,
+        "Z": 0.9201203
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Collision_03_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_CollisionVolume_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_CollisionVolume_C'BP_AISpawnCloset_ClonePod_C:Collision_03_GEN_VARIABLE.Collision_03_GEN_VARIABLE_BP_CollisionVolume_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.7"
+      },
+      "RelativeLocation": {
+        "X": -43.729847,
+        "Y": -41.294304,
+        "Z": 119.724754
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -73.74024,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.09914118,
+        "Y": 0.049634125,
+        "Z": 0.9201203
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Collision_04_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_CollisionVolume_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_CollisionVolume_C'BP_AISpawnCloset_ClonePod_C:Collision_04_GEN_VARIABLE.Collision_04_GEN_VARIABLE_BP_CollisionVolume_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.8"
+      },
+      "RelativeLocation": {
+        "X": -42.49412,
+        "Y": -10.075727,
+        "Z": 119.724754
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -77.339355,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.09914118,
+        "Y": 0.049634125,
+        "Z": 0.9201203
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Collision_05_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_CollisionVolume_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_CollisionVolume_C'BP_AISpawnCloset_ClonePod_C:Collision_05_GEN_VARIABLE.Collision_05_GEN_VARIABLE_BP_CollisionVolume_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.9"
+      },
+      "RelativeLocation": {
+        "X": 44.84372,
+        "Y": -5.0576086,
+        "Z": 119.724754
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -95.08272,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.09914118,
+        "Y": 0.049634125,
+        "Z": 0.9201203
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "SpawnLocationActor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_AISpawnClosetBase_C:SpawnLocationActor_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.3"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_AiSpawnLocation_B1C2_ClonePod_C'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_AiSpawnLocation_B1C2_ClonePod_C'BP_AISpawnCloset_ClonePod_C:SpawnLocationActor_GEN_VARIABLE.SpawnLocationActor_GEN_VARIABLE_BP_AiSpawnLocation_B1C2_ClonePod_C_CAT'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.4"
+      },
+      "RelativeLocation": {
+        "X": -0.6884181,
+        "Y": -1.5098699,
+        "Z": 107.82368
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "WarningLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 52.09297,
+        "Y": -1.7529283E-13,
+        "Z": 272.10388
+      },
+      "RelativeRotation": {
+        "Pitch": -50.0,
+        "Yaw": 180.0,
+        "Roll": 540.0
+      },
+      "bVisible": false,
+      "Mobility": "EComponentMobility::Static",
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "ComponentNeedsLoadFor": "EObjectNeedsLoadFor::ClientOnly",
+      "bIsClientOnly": true
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Box",
+          "DelegatePropertyName": "OnComponentEndOverlap",
+          "FunctionNameToBind": "BndEvt__BP_AISpawnCloset_ClonePod_Box_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CustomizableSkeletalComponent",
+    "Name": "CustomizableSkeletalComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CustomizableSkeletalComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "CustomizableObjectInstance": {
+        "ObjectName": "CustomizableObjectInstance'COI_B1C2_Clones_Hatched'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/MutableDev/Mutable_CharacterInstances/COI_B1C2_Clones_Hatched.1"
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudio_Blast_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -6.212041E-14,
+        "Y": 64.0,
+        "Z": 152.0
+      },
+      "RelativeRotation": {
+        "Pitch": 4.4979775E-15,
+        "Yaw": 4.4527766E-14,
+        "Roll": 5.4731334E-23
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudio_Steam_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -6.36905E-14,
+        "Y": 64.0,
+        "Z": 172.0
+      },
+      "RelativeRotation": {
+        "Pitch": 4.4979775E-15,
+        "Yaw": 4.4527766E-14,
+        "Roll": 5.4731334E-23
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "EncounterActorComponent",
+    "Name": "EncounterActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EncounterActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_AiSpawnLocation_B1C2_ClonePod_C'BP_AISpawnCloset_ClonePod_C:SpawnLocationActor_GEN_VARIABLE.SpawnLocationActor_GEN_VARIABLE_BP_AiSpawnLocation_B1C2_ClonePod_C_CAT'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.4"
+    },
+    "Template": {
+      "ObjectName": "EncounterActorComponent'Default__BP_AiSpawnLocation_B1C2_ClonePod_C:EncounterActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.2"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BlastDoors",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_AISpawnCloset_ClonePod_Box_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DeleteDoors",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EnableCollision",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AISpawnCloset_ClonePod",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetCollisionActors_OutCollisions",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetCollisionActors_OutCollisions",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Ai_Spawn_Location_B1C2_Clone_Pod",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AiSpawnLocation_B1C2_ClonePod_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchName_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_F_BlastDoors_TempMeshes",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_F_BlastDoors_TempMeshes",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_SetActorRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_AiSpawnLocation_B1C2_ClonePod_C:NPCSpawned__DelegateSignature'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AiSpawnLocation_B1C2_ClonePod.4"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Event_Delay",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Npc_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneNpcCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bEnableCollision",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "F_BlastDoors",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "TempMeshes",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "TempMeshes",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "L_DoorRight",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "L_DoorLeft",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "L_Window",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "L_GeneralVariation",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "L_Range_Rot",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "L_Range_Vel",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "L_Variation_Rot",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "L_Variation_Vel",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_F_SpawnReplacementMesh_MeshOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_F_SpawnReplacementMesh_MeshOut_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_F_SpawnReplacementMesh_MeshOut_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_TransformDirection_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_13",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_14",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_15",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_16",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_17",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_13",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorVector_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_TransformDirection_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_TransformDirection_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "F_SpawnReplacementMesh",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshIn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetRelativeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetStaticMesh_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCollisionActors",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "OutCollisions",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "OutCollisions",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsClimbable",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multi_HideSkeleton",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "MulticastWarning",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AISpawnClosetBase_C:MulticastWarning'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_AISpawnClosetBase_C:MulticastWarning'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "Delay",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "NPCSpawned",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PawnReceivedMessage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetPod",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TogglePodCollision",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bEnableCollision",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateMutableAppearance",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Clone_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:SpawnLocationActor_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_AISpawnClosetBase_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AISpawnClosetBase.1"
+            },
+            "SCSVariableName": "SpawnLocationActor",
+            "AssociatedGuid": "A192C898-4E758FA4-D3D89BAF-75B82F51"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "AttenuationRadius": 100.0,
+      "Intensity": 100.0,
+      "LightColor": {
+        "B": 93,
+        "G": 118,
+        "R": 246,
+        "A": 255,
+        "Hex": "F6765D"
+      },
+      "RelativeLocation": {
+        "X": 1.5442885,
+        "Y": 23.127592,
+        "Z": 219.13553
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "BlastPoint_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -23.731016,
+        "Y": -4.5656057E-13,
+        "Z": 96.39647
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Child_Ecolab_Geo_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FX_Steam_1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 2.6137022E-07,
+        "Y": 21.480158,
+        "Z": 1.4178121E-07
+      },
+      "RelativeRotation": {
+        "Pitch": -5.186962E-13,
+        "Yaw": 90.0,
+        "Roll": 4.4979834E-15
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Pod_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 1.2722219E-14,
+        "Roll": -0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnCloset_ClonePod_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.44"
+      },
+      "VariableGuid": "2DAE2C23-44139D54-0A25B88A-99C9B1C8",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnCloset_ClonePod_C:Child_Ecolab_Geo_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.43"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "7DD83FE7-42333145-D8A584AE-03131967",
+      "InternalVariableName": "Child_Ecolab_Geo"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_AISpawnCloset_ClonePod_C:DuneAudio_Blast_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.19"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "95854CFE-43A152EF-BAFABF97-FEDC2562",
+      "InternalVariableName": "DuneAudio_Blast"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AISpawnCloset_ClonePod_C:Door_left_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.70"
+      },
+      "VariableGuid": "095C53F6-44B09221-B25ED8BE-440103D8",
+      "InternalVariableName": "Door_left"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AISpawnCloset_ClonePod_C:Door_right_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.71"
+      },
+      "VariableGuid": "4BD26922-422845A8-905E608D-D8023C34",
+      "InternalVariableName": "Door_right"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_02_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.11"
+      },
+      "VariableGuid": "E73F2BAE-4D6A7C4F-48192F8E-B5BD4387",
+      "InternalVariableName": "Collision_02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_03_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.12"
+      },
+      "VariableGuid": "23E6E467-4215D566-DE2502A6-896364DC",
+      "InternalVariableName": "Collision_03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AISpawnCloset_ClonePod_C:PodBody_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.73"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.60"
+        }
+      ],
+      "VariableGuid": "F795C604-4B79FC52-F9763384-B8C3E90A",
+      "InternalVariableName": "PodBody"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_AISpawnCloset_ClonePod_C:DuneAudio_Steam_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.20"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "1901021A-42CB742C-6DBE4AB5-581AA1DE",
+      "InternalVariableName": "DuneAudio_Steam"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_04_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.13"
+      },
+      "VariableGuid": "BF18C5AE-4BA9ADFF-572B19A3-2D2BF6E2",
+      "InternalVariableName": "Collision_04"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnCloset_ClonePod_C:Pod_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.46"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.62"
+        }
+      ],
+      "VariableGuid": "93527DDC-4D5E7E40-97CB559E-9D063C0B",
+      "InternalVariableName": "Pod"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnCloset_ClonePod_C:BlastPoint_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.42"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "3AC9E768-496BC75F-C46DD4A3-15468FEB",
+      "InternalVariableName": "BlastPoint"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_AISpawnCloset_ClonePod_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.2"
+      },
+      "VariableGuid": "9ADF721E-4459DB98-4D2C33BA-467AA65D",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_05_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.14"
+      },
+      "VariableGuid": "AFDBCB2A-41F6E712-7C5E8B86-CECCE092",
+      "InternalVariableName": "Collision_05"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_AISpawnCloset_ClonePod_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.41"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "ABDFF909-4A788045-B0FF97BC-5099D851",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AISpawnCloset_ClonePod_C:Window_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.74"
+      },
+      "VariableGuid": "6D4B7184-4F9155A1-ACB36BB9-93AA4C99",
+      "InternalVariableName": "Window"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:WarningLight_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.16"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "38EFCF9A-46833184-4CFD1EA9-88BDECCF",
+      "InternalVariableName": "WarningLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CustomizableSkeletalComponent'",
+        "ObjectPath": "/Script/CustomizableObject"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CustomizableSkeletalComponent'BP_AISpawnCloset_ClonePod_C:CustomizableSkeletalComponent_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.18"
+      },
+      "VariableGuid": "C45494E0-40C6032E-7DCD43B8-41C53534",
+      "InternalVariableName": "CustomizableSkeletalComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AISpawnCloset_ClonePod_C:Collision_01_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.10"
+      },
+      "VariableGuid": "F296C76D-40C5CE4D-0DB94683-5993D2F0",
+      "InternalVariableName": "Collision_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnCloset_ClonePod_C:FX_Steam_1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.45"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "VariableGuid": "474C59B2-4F257205-5FAA02A4-D6D7F243",
+      "InternalVariableName": "FX_Steam_1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.68"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BP_AISpawnCloset_ClonePod_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.69"
+      },
+      "ParentComponentOrVariableName": "Scene",
+      "ParentComponentOwnerClassName": "BP_AISpawnClosetBase_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.64"
+        }
+      ],
+      "VariableGuid": "E14CE301-4DD5BA58-4B2A75BB-F63B6B33",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.49"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.60"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AISpawnCloset_ClonePod_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.47"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimMontage'AM_Human_NPC_IncubationPod_Clone_01_StepOut_01'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Combat/AM_Human_NPC_IncubationPod_Clone_01_StepOut_01.0"
+        },
+        "bSavedPlaying": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Dune_FullBody_Base_Male_Rigupdate'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/SK_Dune_FullBody_Base_Male_Rigupdate.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Dune_FullBody_Base_Male_Rigupdate'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/SK_Dune_FullBody_Base_Male_Rigupdate.0"
+      },
+      "RelativeLocation": {
+        "X": -0.6884176,
+        "Y": -0.788793,
+        "Z": 0.3858595
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Door_left_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_EcoA_Pod_Door_02'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/Pod/Meshes/SM_Env_Prop_EcoA_Pod_Door_02.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1880,
+        "SomeVector": {
+          "X": 5.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Door_right_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_EcoA_Pod_Door_01'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/Pod/Meshes/SM_Env_Prop_EcoA_Pod_Door_01.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1880,
+        "SomeVector": {
+          "X": 5.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -1.1822542,
+        "Y": 1.0839857E-16,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "NODE_AddStaticMeshComponent-0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "PhysicsBody": "Ignore",
+          "Pawn": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PodBody_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_EcoA_Pod_01'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/Pod/Meshes/SM_Env_Prop_EcoA_Pod_01.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "PhysicsBody": "Ignore",
+          "Pawn": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.48818377,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Window_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnCloset_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnCloset_ClonePod.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_EcoA_Pod_Window'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/Pod/Meshes/SM_Env_Prop_EcoA_Pod_Window.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1880,
+        "SomeVector": {
+          "X": 2.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  }
+]

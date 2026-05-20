@@ -1,0 +1,237 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Choam_BloodPurifier_A_Glass'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/BloodPurifierAdvanced/Meshes/SM_Env_Prop_Choam_BloodPurifier_A_Glass.1"
+    },
+    "Properties": {
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BF8260BE432A14378FD6EDB46285E1BB",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x177"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Env_Prop_Choam_BloodPurifier_A_Glass",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/BloodPurifierAdvanced/Meshes/SM_Env_Prop_Choam_BloodPurifier_A_Glass",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Glass_Choam_Blood_Purifier_Advanced_WaterWindow'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/BloodPurifierAdvanced/Materials/MI_Glass_Choam_Blood_Purifier_Advanced_WaterWindow.1"
+          },
+          "MaterialSlotName": "ML_Advanced_Blood_Purifier_Glass_Water",
+          "ImportedMaterialSlotName": "ML_Advanced_Blood_Purifier_Glass_Water",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 237.04605,
+            "LocalUVDensities[1]": 232.02615,
+            "LocalUVDensities[2]": 100.04145,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Glass_Choam_Blood_Purifier_Advanced_BloodWindow'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/BloodPurifierAdvanced/Materials/MI_Glass_Choam_Blood_Purifier_Advanced_BloodWindow.0"
+          },
+          "MaterialSlotName": "ML_Advanced_Blood_Purifier_Glass",
+          "ImportedMaterialSlotName": "ML_Advanced_Blood_Purifier_Glass",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 246.98898,
+            "LocalUVDensities[1]": 261.66364,
+            "LocalUVDensities[2]": 99.97662,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 244.14992,
+      "LightMapResolution": 64,
+      "bLoadNaniteFallbackMeshGeometry": true,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -43.649597,
+          "Y": 20.662642,
+          "Z": 205.31516
+        },
+        "BoxExtent": {
+          "X": 182.3578,
+          "Y": 0.5148525,
+          "Z": 59.99076
+        },
+        "SphereRadius": 191.97271914411357
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Env_Prop_Choam_BloodPurifier_A_Glass:BodySetup_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/BloodPurifierAdvanced/Meshes/SM_Env_Prop_Choam_BloodPurifier_A_Glass.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "1A84CF55-40F62C50-5EB1D7BC-C82CCAC0",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 0,
+              "NumTriangles": 20,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 39,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 60,
+              "NumTriangles": 10,
+              "MinVertexIndex": 40,
+              "MaxVertexIndex": 58,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 59
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 59,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -227.0074,
+                "Y": 19.147789,
+                "Z": 144.3244
+              },
+              "Max": {
+                "X": 139.7082,
+                "Y": 22.177494,
+                "Z": 266.3059
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": []
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0xE46"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -43.649597,
+          "Y": 20.662642,
+          "Z": 205.31516
+        },
+        "BoxExtent": {
+          "X": 182.3578,
+          "Y": 0.5148525,
+          "Z": 59.99076
+        },
+        "SphereRadius": 191.15903
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_Light_Glass",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_Light_Glass",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_Light_Glass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_Light_Glass.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Use CPD Input - Material Toggle",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "8EAF9686-46B5CAE1-8E4F138E-C1426654"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Light Glass - Surface Grunge - Channel Selection",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 0.25,
+            "B": 0.75,
+            "A": 1.0,
+            "Hex": "0089E1"
+          },
+          "ExpressionGUID": "E8E8B2E7-461B4ED1-F0F9C98D-06A31A97"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Light Glass - Surface Grunge - Color TInt",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.305882,
+            "G": 0.239216,
+            "B": 0.172549,
+            "A": 1.0,
+            "Hex": "968673"
+          },
+          "ExpressionGUID": "1D739421-4BA85351-5C99568B-5D0A0998"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_Neut_Utility_Mask_Black_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Maps/Testing/Materials/Utilities/Textures/T_Lib_Neut_Utility_Mask_Black_01_M.0"
+          },
+          "ExpressionGUID": "0AE72F20-451653DF-F5561685-7EB6AB70"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MaterialPreview_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_M.0"
+          },
+          "ExpressionGUID": "97E4411A-4DAFBE78-3A7CD796-5F54CB9F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailMask Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_DetailMask_Scratches_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_Lib_DetailMask_Scratches_01_M.0"
+          },
+          "ExpressionGUID": "18C1A320-446E9F59-54870592-253502D0"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DisableVirtualTextureOnMeshMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "845EA8AF-45678636-BF36DA92-D29CA636"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseTilingTexturesUVChannel",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "43961A49-4DAD5008-C1217C96-D808F343"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Add Surface Grunge",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E99D22B9-496CCDB0-50B05EAA-F1913A51"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.9907005,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_Light_Choam_Pattern_01_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_Noise_Grunge_01_M"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

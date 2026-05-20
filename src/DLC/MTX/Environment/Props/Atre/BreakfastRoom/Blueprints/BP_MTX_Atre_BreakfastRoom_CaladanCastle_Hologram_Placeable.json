@@ -1,0 +1,1689 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DunePlaceableBase'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_MTX_Env_Prop_Atre_Movie_CaladanCastle_Hologram",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Env_Prop_Atre_Projector",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C",
+    "Name": "Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+    "Package": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable",
+    "Properties": {
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.3"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.12"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.2"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.5"
+      },
+      "m_BuildingType": {
+        "Name": "MTX_Atre_Movie_CaladanCastle_Hologram_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.7"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.7"
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Ast_Hologram_Beam_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/Niagara/NS_VFX_Ast_Hologram_Beam_01.68"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "TimeOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.TimeOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "JitterMin",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.JitterMin",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "JitterMax",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.JitterMax",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IsSK",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IsSK",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerFresnelOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerFresnelOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerAttenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerAttenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareZOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareZOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareSize",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareSize",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SpawnPosition",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SpawnPosition",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Attenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Attenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "DirectionRescaleAmount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.DirectionRescaleAmount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLIght_Fading_FarStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLIght_Fading_FarStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_NearStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_NearStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_NearRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_NearRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_FarRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_FarRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Offset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Offset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Spawn",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Spawn",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightContrast",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightContrast",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightStrength",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightStrength",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Attenuation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 4,
+            "Name": "User.BeamGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 8,
+            "Name": "User.BeamOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 12,
+            "Name": "User.BeamWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.DirectionRescaleAmount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.FakeLight_Fading_FarRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.FakeLIght_Fading_FarStart",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 44,
+            "Name": "User.FakeLight_Fading_NearRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 48,
+            "Name": "User.FakeLight_Fading_NearStart",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 52,
+            "Name": "User.FakeLight_Offset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 64,
+            "Name": "User.FakeLight_Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.FakeLight_Spawn",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 72,
+            "Name": "User.FakeLightColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 88,
+            "Name": "User.FakeLightContrast",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 92,
+            "Name": "User.FakeLightStrength",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 96,
+            "Name": "User.FlareGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 100,
+            "Name": "User.FlareSize",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 104,
+            "Name": "User.FlareZOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 108,
+            "Name": "User.InnerAttenuation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 112,
+            "Name": "User.InnerFresnelOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 116,
+            "Name": "User.InnerGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 120,
+            "Name": "User.InnerOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 124,
+            "Name": "User.InnerWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 128,
+            "Name": "User.IsSK",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 132,
+            "Name": "User.JitterMax",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 136,
+            "Name": "User.JitterMin",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 140,
+            "Name": "User.SpawnPosition",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 152,
+            "Name": "User.TimeOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          250,
+          66,
+          51,
+          51,
+          179,
+          62,
+          0,
+          0,
+          0,
+          0,
+          51,
+          51,
+          179,
+          63,
+          102,
+          102,
+          38,
+          63,
+          0,
+          0,
+          128,
+          63,
+          152,
+          191,
+          94,
+          63,
+          154,
+          153,
+          25,
+          62,
+          205,
+          204,
+          76,
+          63,
+          0,
+          64,
+          28,
+          69,
+          0,
+          64,
+          28,
+          69,
+          0,
+          0,
+          175,
+          67,
+          0,
+          0,
+          112,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          190,
+          66,
+          0,
+          0,
+          160,
+          67,
+          1,
+          0,
+          0,
+          0,
+          51,
+          51,
+          51,
+          63,
+          0,
+          0,
+          128,
+          63,
+          174,
+          127,
+          99,
+          63,
+          0,
+          0,
+          128,
+          63,
+          154,
+          153,
+          73,
+          64,
+          0,
+          0,
+          160,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          205,
+          204,
+          204,
+          61,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.6"
+      },
+      "VariableGuid": "0AA831C3-4A23648B-8E99CB9F-66084DFD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SM_MTX_Env_Prop_Atre_Movie_CaladanCastle_Hologram_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.15"
+      },
+      "VariableGuid": "740CC477-4BC9F355-4122728B-90D1BA39",
+      "InternalVariableName": "SM_MTX_Env_Prop_Atre_Movie_CaladanCastle_Hologram"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SM_Env_Prop_Atre_Projector_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.14"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.9"
+        }
+      ],
+      "VariableGuid": "F67DC30B-441D59D1-1C6CC59E-71090830",
+      "InternalVariableName": "SM_Env_Prop_Atre_Projector"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:Niagara1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.4"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7BFF5FF5-4D6DD52F-84BF3BB2-2B0B755A",
+      "InternalVariableName": "Niagara1"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'Default__BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Env_Prop_Atre_Projector_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MTX_Env_Prop_Atre_BedRoom_Projector'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BedRoom/Meshes/SM_MTX_Env_Prop_Atre_BedRoom_Projector.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "PlaceableStructure",
+        "ResponseArray": {
+          "Trace_Shelter_Buildables": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_BuildingStructure": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_MTX_Env_Prop_Atre_Movie_CaladanCastle_Hologram_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Blueprints/BP_MTX_Atre_BreakfastRoom_CaladanCastle_Hologram_Placeable.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MTX_Env_Prop_Atre_BreakfastRoom_CaladanCastle_Hologram'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/Props/Atre/BreakfastRoom/Meshes/SM_MTX_Env_Prop_Atre_BreakfastRoom_CaladanCastle_Hologram.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_VFX_Hologram_MTX_Atre_Highlight'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/Materials/Hologram/MTX/MI_VFX_Hologram_MTX_Atre_Highlight.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_VFX_Hologram_MTX_Atre_Faded'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/Materials/Hologram/MTX/MI_VFX_Hologram_MTX_Atre_Faded.0"
+        }
+      ],
+      "bRenderCustomDepth": true,
+      "BodyInstance": {
+        "CollisionEnabled": "PlaceableStructure",
+        "ResponseArray": {
+          "Trace_Shelter_Buildables": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_BuildingStructure": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -7.5228364E-08,
+        "Y": -6.1828027,
+        "Z": 80.0
+      },
+      "RelativeScale3D": {
+        "X": 0.75,
+        "Y": 0.75,
+        "Z": 0.75
+      }
+    }
+  }
+]

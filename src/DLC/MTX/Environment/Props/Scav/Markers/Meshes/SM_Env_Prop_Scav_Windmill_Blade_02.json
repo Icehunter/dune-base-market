@@ -1,0 +1,486 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Scav_Windmill_Blade_02'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Scav/Markers/Meshes/SM_Env_Prop_Scav_Windmill_Blade_02.1"
+    },
+    "Properties": {
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "61EBBC0A4E591A1B7F0C82903EBA41D2",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x177"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Env_Prop_Scav_Windmill_Blade_02",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Scav/Markers/Meshes/SM_Env_Prop_Scav_Windmill_Blade_02",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_Env_Prop_Kirab_Windmill_01_Blade'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Kirab/Windmills/Materials/ML_Env_Prop_Kirab_Windmill_01_Blade.0"
+          },
+          "MaterialSlotName": "UVMap",
+          "ImportedMaterialSlotName": "UVMap",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 566.9001,
+            "LocalUVDensities[1]": 5959.212,
+            "LocalUVDensities[2]": 101.370026,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Env_Prop_Scav_Windmill_Logo_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Scav/Markers/Materials/MI_Env_Prop_Scav_Windmill_Logo_01.0"
+          },
+          "MaterialSlotName": "Tarp_Sail",
+          "ImportedMaterialSlotName": "Tarp_Sail",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 423.69293,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 68.74168,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 5959.212,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 4.4285784,
+          "Y": 10.99324,
+          "Z": 78.68203
+        },
+        "BoxExtent": {
+          "X": 7.877898,
+          "Y": 364.5404,
+          "Z": 325.47333
+        },
+        "SphereRadius": 488.7582790706941
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Env_Prop_Scav_Windmill_Blade_02:BodySetup_1'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Scav/Markers/Meshes/SM_Env_Prop_Scav_Windmill_Blade_02.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "05CADAE5-48541B9A-3ACB3BB1-00358FE1",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1780,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2386,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 5340,
+              "NumTriangles": 19,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2386,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 2387
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 2387,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 4,
+            "NumVertices": 2387
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -4.44932,
+                "Y": -354.54718,
+                "Z": -247.79129
+              },
+              "Max": {
+                "X": 13.306477,
+                "Y": 376.53363,
+                "Z": 405.15536
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 10.993225,
+                    "Z": 78.68204
+                  },
+                  "Extent": {
+                    "X": 365.5404,
+                    "Y": 325.55942,
+                    "Z": 17.134706
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 10.993225,
+                    "Z": 78.68204
+                  },
+                  "Extent": {
+                    "X": 365.5404,
+                    "Y": 325.55942,
+                    "Z": 17.134706
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": -11.853027,
+                    "Z": 78.68204
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 325.55942,
+                    "Z": 348.4057
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 170.91718,
+                    "Z": 95.81674
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 308.4247,
+                    "Z": 188.48177
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 28.12793,
+                    "Z": 78.68204
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 325.55942,
+                    "Z": 354.11725
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": -160.35382,
+                    "Z": 95.81674
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 308.4247,
+                    "Z": 142.78923
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 10.993225,
+                    "Z": -86.95346
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 365.5404,
+                    "Z": 165.6355
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 4.4285784,
+                    "Y": 10.993225,
+                    "Z": 95.81674
+                  },
+                  "Extent": {
+                    "X": 8.877899,
+                    "Y": 365.5404,
+                    "Z": 314.13626
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_PayloadAtEndOfFile | BULKDATA_PayloadInSeperateFile | BULKDATA_Force_NOT_InlinePayload | BULKDATA_NoOffsetFixUp",
+          "ElementCount": 177104,
+          "SizeOnDisk": 177104,
+          "OffsetInFile": "0x0"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 1,
+        "PositionPrecision": 4,
+        "NormalPrecision": 8,
+        "NumInputTriangles": 5437,
+        "NumInputVertices": 5292,
+        "NumInputMeshes": 1,
+        "NumInputTexCoords": 3,
+        "NumClusters": 88,
+        "ResourceFlags": "HAS_VERTEX_COLOR"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 4.4285784,
+          "Y": 10.99324,
+          "Z": 78.68203
+        },
+        "BoxExtent": {
+          "X": 7.877898,
+          "Y": 364.5404,
+          "Z": 325.47333
+        },
+        "SphereRadius": 467.11136
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

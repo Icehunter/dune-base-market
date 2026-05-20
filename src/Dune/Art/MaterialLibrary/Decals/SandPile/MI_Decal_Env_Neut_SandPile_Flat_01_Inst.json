@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Decal_Env_Neut_SandPile_Flat_01_Inst",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/SandPile/MI_Decal_Env_Neut_SandPile_Flat_01_Inst",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_Decal_Env_Sand'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/Sand/MI_Decal_Env_Sand.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Texture Density (meters covered by texture)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.5,
+          "ExpressionGUID": "851AE52A-425FF18E-B52DE1A1-2A30A160"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Select channel for opacity mask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 1.0,
+            "B": 0.0,
+            "A": 0.0,
+            "Hex": "00FF00"
+          },
+          "ExpressionGUID": "B4FD0E9C-43026FF3-43CCE181-12A36CBB"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Basecolor (RGB) + Alpha (A)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_Env_Neut_SandPile_01_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/SandPile/T_BasicDecal_Env_Neut_SandPile_01_D.0"
+          },
+          "ExpressionGUID": "1DA9C30E-4D94E0FE-B43B45B3-76B360D6"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal (RG) + Metallic (B) + Roughness (A)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_Env_Neut_SandPile_01_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/SandPile/T_BasicDecal_Env_Neut_SandPile_01_N.0"
+          },
+          "ExpressionGUID": "104D305E-4243D625-5740639D-C9984BB3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Opacity masks OR Composite opacity (R+G+B)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_BasicDecal_Env_Neut_SandPile_05-08_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Decals/SandPile/T_BasicDecal_Env_Neut_SandPile_05-08_M.0"
+          },
+          "ExpressionGUID": "90CC74B3-4AF208A8-3B69B099-61D6F1B0"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Decal Custom Primitive Data Driven Parameters",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "98C11348-409EE5DB-B85C0D97-76391B26"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Scalable Decal?",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "D1D012C2-4A5590F1-9AA79C9F-B2F75886"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

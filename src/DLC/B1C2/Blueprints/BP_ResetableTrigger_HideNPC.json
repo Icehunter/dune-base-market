@@ -1,0 +1,430 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ResetableTrigger_HideNPC_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ResetableTrigger_HideNPC_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_ResetableTrigger_HideNPC_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:ExecuteUbergraph_BP_ResetableTrigger_HideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:OnTriggerOverlapped'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.5"
+      },
+      {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:OnNPCSpawn'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.4"
+      },
+      {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:ExecuteUbergraph_BP_ResetableTrigger_HideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AISpawnLocationStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AISpawnLocationEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ResetableTrigger_HideNPC": {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:ExecuteUbergraph_BP_ResetableTrigger_HideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.3"
+      },
+      "OnNPCSpawn": {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:OnNPCSpawn'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.4"
+      },
+      "OnTriggerOverlapped": {
+        "ObjectName": "Function'BP_ResetableTrigger_HideNPC_C:OnTriggerOverlapped'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_NPCSpawn_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BPI_NPCSpawn.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ResetableTrigger_HideNPC_C'Default__BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/DLC/B1C2/Blueprints/BPI_NPCSpawn.BPI_NPCSpawn_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_ResetableTrigger_HideNPC_C'Default__BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.2"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ResetableTrigger_C:CollisionComp'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.1"
+    },
+    "Properties": {
+      "bGenerateOverlapEvents": true,
+      "bForceGenerateOverlapEvents": true,
+      "CanCharacterStepUpOn": "ECB_No"
+    }
+  },
+  {
+    "Type": "BP_ResetableTrigger_HideNPC_C",
+    "Name": "Default__BP_ResetableTrigger_HideNPC_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.BP_ResetableTrigger_HideNPC_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC",
+    "Template": {
+      "ObjectName": "BP_ResetableTrigger_C'Default__BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_ResetableTrigger_HideNPC_C:CollisionComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.1"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_ResetableTrigger_HideNPC_C:CollisionComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.1"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ResetableTrigger_HideNPC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_NPCPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNPCSpawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NPCPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerOverlapped",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnTriggerOverlapped'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnTriggerOverlapped'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TriggeringActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Player_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Idle_Civilian_Hologram_Pal_End",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Idle_Civilian_Hologram_Pal_Start",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_Start_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_Start.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ResetableTrigger_HideNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ResetableTrigger_HideNPC_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.7"
+      },
+      "VariableGuid": "69A735D4-4441E27F-553D7C9A-2AE8062C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ResetableTrigger_HideNPC_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.8"
+      }
+    }
+  }
+]

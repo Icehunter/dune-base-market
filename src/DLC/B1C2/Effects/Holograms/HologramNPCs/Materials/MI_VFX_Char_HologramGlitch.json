@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_VFX_Char_HologramGlitch",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/HologramNPCs/Materials/MI_VFX_Char_HologramGlitch",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_VFX_Char_Hologram_Glitch'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/HologramNPCs/Materials/M_VFX_Char_Hologram_Glitch.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Drift",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.05,
+          "ExpressionGUID": "F0C73046-41DD4523-B9A44F8B-D63B2F42"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "ScreenPixelMax",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 300.0,
+          "ExpressionGUID": "3931E872-4738DB7F-C9CEA2A4-17FC969C"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "ScreenPixelMin",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 150.0,
+          "ExpressionGUID": "2964D46D-45D20735-32110F8A-379E0262"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "BLEND_Translucent",
+        "ShadingModel": "MSM_Unlit",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "SineDistortion",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "4E1E1B0D-4AF3FCAB-5C32B9B1-C8C3399C"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseOnlyParticleColor",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "02362727-4C63EAB5-B1341C99-41E77715"
+          }
+        ]
+      }
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

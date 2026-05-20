@@ -1,0 +1,614 @@
+[
+  {
+    "Type": "AB_Player_PB_Watershipper_DeployableHeatSource_C",
+    "Name": "Default__AB_Player_PB_Watershipper_DeployableHeatSource_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "AnimBlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimBlueprintExtension_Tag": {},
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 1
+        }
+      },
+      "AnimGraphNode_LinkedAnimGraph": {
+        "InputPoses": [],
+        "InputPoseNames": [],
+        "InstanceClass": {
+          "ObjectName": "AnimBlueprintGeneratedClass'AB_PoweredPlaceableTemplateAnim_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Systems/Crafting/AB_PoweredPlaceableTemplateAnim.1"
+        },
+        "PendingBlendOutProfile": null,
+        "PendingBlendInProfile": null,
+        "bReceiveNotifiesFromLinkedInstances": false,
+        "bPropagateNotifiesToLinkedInstances": false,
+        "SourcePropertyNames": [
+          "__CustomProperty_CanStartInPoweredOffState_2A466E974E720FE85B957E8818597D12",
+          "__CustomProperty_m_IdleAnimSequence_2A466E974E720FE85B957E8818597D12",
+          "__CustomProperty_m_PowerOnAnimSequence_2A466E974E720FE85B957E8818597D12",
+          "__CustomProperty_m_PowerOffAnimSequence_2A466E974E720FE85B957E8818597D12",
+          "__CustomProperty_m_IdlePoweredAnimSequence_2A466E974E720FE85B957E8818597D12",
+          "__CustomProperty_m_bUsePowerAnimations_2A466E974E720FE85B957E8818597D12"
+        ],
+        "DestPropertyNames": [
+          "CanStartInPoweredOffState",
+          "m_IdleAnimSequence",
+          "m_PowerOnAnimSequence",
+          "m_PowerOffAnimSequence",
+          "m_IdlePoweredAnimSequence",
+          "m_bUsePowerAnimations"
+        ],
+        "TargetInstance": null
+      },
+      "__CustomProperty_m_bUsePowerAnimations_2A466E974E720FE85B957E8818597D12": true,
+      "__CustomProperty_m_IdlePoweredAnimSequence_2A466E974E720FE85B957E8818597D12": {
+        "ObjectName": "AnimSequence'A_Anim_PowerIdle_Player_PB_Watershippers_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/Props/WaterS/DeployableHeatSource/Animations/A_Anim_PowerIdle_Player_PB_Watershippers_DeployableHeatSource.0"
+      },
+      "__CustomProperty_m_PowerOffAnimSequence_2A466E974E720FE85B957E8818597D12": {
+        "ObjectName": "AnimSequence'A_Anim_PowerOff_Player_PB_Watershippers_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/Props/WaterS/DeployableHeatSource/Animations/A_Anim_PowerOff_Player_PB_Watershippers_DeployableHeatSource.0"
+      },
+      "__CustomProperty_m_PowerOnAnimSequence_2A466E974E720FE85B957E8818597D12": {
+        "ObjectName": "AnimSequence'A_Anim_PowerOn_Player_PB_Watershippers_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/Props/WaterS/DeployableHeatSource/Animations/A_Anim_PowerOn_Player_PB_Watershippers_DeployableHeatSource.0"
+      },
+      "__CustomProperty_CanStartInPoweredOffState_2A466E974E720FE85B957E8818597D12": true
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.AB_Player_PB_Watershipper_DeployableHeatSource_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_4": "None",
+      "__NameProperty_5": "AnimGraph",
+      "__StructProperty_6": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_Tag": {
+        "NodeIndices": [
+          {
+            "Key": "Template",
+            "Value": 0
+          }
+        ]
+      },
+      "AnimBlueprintExtension_PropertyAccess": {
+        "Library": {
+          "PathSegments": [],
+          "SrcPaths": [],
+          "DestPaths": [],
+          "CopyBatchArray": []
+        }
+      },
+      "AnimBlueprintExtension_Base": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AB_Player_PB_Watershipper_DeployableHeatSource_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource",
+    "Properties": {
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SKEL_SK_Player_PB_Watershippers_DeployableHeatSource_Skeleton_Skeleton'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/Props/WaterS/DeployableHeatSource/Skeletons/SKEL_SK_Player_PB_Watershippers_DeployableHeatSource_Skeleton_Skeleton.2"
+      },
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+          },
+          "Entries": [
+            2,
+            2,
+            2,
+            4294967295,
+            1,
+            0
+          ],
+          "NodeIndex": 0,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+          },
+          "Entries": [
+            2,
+            2,
+            2,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": 0
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_LinkedAnimGraph'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "SourcePropertyNames",
+                "Value": 3
+              },
+              {
+                "Key": "DestPropertyNames",
+                "Value": 4
+              },
+              {
+                "Key": "TargetInstance",
+                "Value": 5
+              },
+              {
+                "Key": "SourceInstance",
+                "Value": 6
+              },
+              {
+                "Key": "InputPoses",
+                "Value": 7
+              },
+              {
+                "Key": "InputPoseNames",
+                "Value": 8
+              },
+              {
+                "Key": "InstanceClass",
+                "Value": 9
+              },
+              {
+                "Key": "Tag",
+                "Value": 10
+              },
+              {
+                "Key": "PendingBlendOutProfile",
+                "Value": 11
+              },
+              {
+                "Key": "PendingBlendInProfile",
+                "Value": 12
+              },
+              {
+                "Key": "bReceiveNotifiesFromLinkedInstances",
+                "Value": 13
+              },
+              {
+                "Key": "bPropagateNotifiesToLinkedInstances",
+                "Value": 14
+              }
+            ],
+            "NumProperties": 15
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_CustomProperty'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "SourcePropertyNames",
+                "Value": 3
+              },
+              {
+                "Key": "DestPropertyNames",
+                "Value": 4
+              },
+              {
+                "Key": "TargetInstance",
+                "Value": 5
+              },
+              {
+                "Key": "SourceInstance",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'AB_Player_PB_Watershipper_DeployableHeatSource_C:ExecuteUbergraph_AB_Player_PB_Watershipper_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnimInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'AB_Player_PB_Watershipper_DeployableHeatSource_C:AnimGraph'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.2"
+      },
+      {
+        "ObjectName": "Function'AB_Player_PB_Watershipper_DeployableHeatSource_C:ExecuteUbergraph_AB_Player_PB_Watershipper_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Tag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LinkedAnimGraph",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LinkedAnimGraph'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__CustomProperty_m_bUsePowerAnimations_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CustomProperty_m_IdlePoweredAnimSequence_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CustomProperty_m_PowerOffAnimSequence_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CustomProperty_m_PowerOnAnimSequence_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "__CustomProperty_m_IdleAnimSequence_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__CustomProperty_CanStartInPoweredOffState_2A466E974E720FE85B957E8818597D12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AB_Player_PB_Watershipper_DeployableHeatSource": {
+        "ObjectName": "Function'AB_Player_PB_Watershipper_DeployableHeatSource_C:ExecuteUbergraph_AB_Player_PB_Watershipper_DeployableHeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.3"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'AB_Player_PB_Watershipper_DeployableHeatSource_C:AnimGraph'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AB_Player_PB_Watershipper_DeployableHeatSource_C'Default__AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AB_Player_PB_Watershipper_DeployableHeatSource",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Tag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Tag'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Player_PB_Watershipper_DeployableHeatSource_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/AB_Player_PB_Watershipper_DeployableHeatSource.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

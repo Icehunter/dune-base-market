@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_LayeredMaterial_ResourceNode",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_LayeredMaterial_ResourceNode",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Metal'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Metal.0"
+      },
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_LayeredMaterial_ResourceNode'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_LayeredMaterial_ResourceNode.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "DitheredLODTransition": true,
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "HitSystem",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "797C5B5F-4C3A1948-7D41B1BA-A7E4AFA8"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseBlackBody",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "AF9D62D1-4999A208-5A9D278A-32B27AB5"
+          }
+        ]
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'HumanSkinSSS'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Materials/HumanSkinSSS.0"
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_DetailMask_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_Checker_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_FlatNormal_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_N"
+        },
+        {
+          "SamplingScale": 5.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_VFX_Env_MoltenMetal_M"
+        },
+        {
+          "SamplingScale": 5.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_VFX_Env_MoltenMetalB_M"
+        },
+        {
+          "SamplingScale": 5.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_VFX_Env_MoltenRock_D"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

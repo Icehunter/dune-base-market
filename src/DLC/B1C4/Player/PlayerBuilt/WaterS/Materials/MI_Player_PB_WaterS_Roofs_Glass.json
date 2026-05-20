@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Player_PB_WaterS_Roofs_Glass",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/WaterS/Materials/MI_Player_PB_WaterS_Roofs_Glass",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Glass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Glass.0"
+      },
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_Player_PB_WaterS_Glass_Parent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/WaterS/Materials/MI_Player_PB_WaterS_Glass_Parent.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Player_PB_WaterS_Roofs_M'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/WaterS/Textures/T_Player_PB_WaterS_Roofs_M.0"
+          },
+          "ExpressionGUID": "0AE72F20-451653DF-F5561685-7EB6AB70"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "bOverride_TwoSided": true,
+        "DitheredLODTransition": true,
+        "bOutputTranslucentVelocity": true,
+        "BlendMode": "BLEND_Translucent",
+        "OpacityMaskClipValue": 0.0
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DisableVirtualTextureOnMeshMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "845EA8AF-45678636-BF36DA92-D29CA636"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Player_PB_WaterS_Roofs_M"
+        },
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

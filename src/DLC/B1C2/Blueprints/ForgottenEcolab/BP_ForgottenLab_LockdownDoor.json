@@ -1,0 +1,1915 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ForgottenLab_LockdownDoor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor",
+    "Properties": {
+      "NumReplicatedProperties": 3,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.38"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_ForgottenLab_LockdownDoor_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.21"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:ExecuteUbergraph_BP_ForgottenLab_LockdownDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'NPCDoor'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:OnRep_IsOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.12"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.18"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.20"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__End__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.17"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__Start__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.19"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:FX_Start'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.10"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:FX_End'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.9"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Close'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.7"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Open'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.13"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.11"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Play'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.14"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Reverse'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.15"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:SetNewTime'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.16"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:ExecuteUbergraph_BP_ForgottenLab_LockdownDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_FallingSand_dynamic1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_FallingSand_dynamic0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Door_S",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pivot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TL_DoorMovement_MovementVectorMultiplier_57E246DB4B7C8D56C9BFC69229F3B969",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TL_DoorMovement__Direction_57E246DB4B7C8D56C9BFC69229F3B969",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TL_DoorMovement",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "InitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FinalOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ResetFromInsideTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 18,
+        "RepNotifyFunc": "OnRep_IsOpen",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SequenceCompleted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 19,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "New Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "DoorState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | Interp",
+        "RepIndex": 20,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'E_Door_States'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Level/E_Door_States.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ForgottenLab_LockdownDoor": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:ExecuteUbergraph_BP_ForgottenLab_LockdownDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.8"
+      },
+      "SetNewTime": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:SetNewTime'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.16"
+      },
+      "Reverse": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Reverse'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.15"
+      },
+      "Play": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Play'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.14"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.11"
+      },
+      "Open": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Open'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.13"
+      },
+      "Close": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:Close'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.7"
+      },
+      "FX_End": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:FX_End'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.9"
+      },
+      "FX_Start": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:FX_Start'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.10"
+      },
+      "TL_DoorMovement__Start__EventFunc": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__Start__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.19"
+      },
+      "TL_DoorMovement__End__EventFunc": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__End__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.17"
+      },
+      "TL_DoorMovement__UpdateFunc": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.20"
+      },
+      "TL_DoorMovement__FinishedFunc": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:TL_DoorMovement__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.18"
+      },
+      "OnRep_IsOpen": {
+        "ObjectName": "Function'BP_ForgottenLab_LockdownDoor_C:OnRep_IsOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.12"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ForgottenLab_LockdownDoor_C'Default__BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 510.6778,
+        "Y": 20.733927,
+        "Z": 209.34462
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -21.594727,
+        "Y": 0.8520099,
+        "Z": 215.94727
+      }
+    }
+  },
+  {
+    "Type": "BP_ForgottenLab_LockdownDoor_C",
+    "Name": "Default__BP_ForgottenLab_LockdownDoor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.BP_ForgottenLab_LockdownDoor_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TL_DoorMovement_MovementVectorMultiplier_57E246DB4B7C8D56C9BFC69229F3B969": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "InitialLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "FinalOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 375.0
+      },
+      "ResetFromInsideTimer": {
+        "Handle": 0
+      },
+      "m_PivotComponent": {
+        "ObjectName": "SceneComponent'Default__BP_ForgottenLab_LockdownDoor_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.27"
+      },
+      "m_MeshContainerComponent": {
+        "ObjectName": "SceneComponent'Default__BP_ForgottenLab_LockdownDoor_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.26"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_ForgottenLab_LockdownDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.28"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.9715424,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.4,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveVector",
+    "Name": "CurveVector_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveVector'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "FloatCurves": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[1]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[2]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    },
+    "FloatCurves": [
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      }
+    ]
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Close",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ForgottenLab_LockdownDoor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchName_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FX_End",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FX_Start",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_IsOpen",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Open",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Play",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Reverse",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetNewTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__End__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__Start__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_FallingSand_dynamic0_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Env_EcoLab_SecretDoor'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Environment/EcoLab/Niagara/NS_VFX_Env_EcoLab_SecretDoor.55"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 8,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.Opacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 4,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          63,
+          0,
+          0,
+          128,
+          63,
+          187,
+          78,
+          45,
+          61,
+          49,
+          33,
+          242,
+          60,
+          34,
+          172,
+          189,
+          60,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": -229.60149,
+        "Y": 1.9689835E-06,
+        "Z": 347.6056
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_FallingSand_dynamic1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Env_EcoLab_SecretDoor'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Environment/EcoLab/Niagara/NS_VFX_Env_EcoLab_SecretDoor.55"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Opacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 8,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.Opacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 4,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          63,
+          0,
+          0,
+          128,
+          63,
+          187,
+          78,
+          45,
+          61,
+          49,
+          33,
+          242,
+          60,
+          34,
+          172,
+          189,
+          60,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": 263.32736,
+        "Y": -16.000004,
+        "Z": 300.2762
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Pivot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MeshContainer",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ForgottenLab_LockdownDoor_C'Default__BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.2"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_ForgottenLab_LockdownDoor_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.27"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PivotComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ForgottenLab_LockdownDoor_C'Default__BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.2"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_ForgottenLab_LockdownDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.28"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_ForgottenLab_LockdownDoor_C'Default__BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ForgottenLab_LockdownDoor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.24"
+      },
+      "VariableGuid": "29BA7BF5-4B3AC7FD-D88559A6-849B9719",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_ForgottenLab_LockdownDoor_C:NS_FallingSand_dynamic0_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.22"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AFFB0176-4DEB40DA-F281E9AE-8EB609EF",
+      "InternalVariableName": "NS_FallingSand_dynamic0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_ForgottenLab_LockdownDoor_C:NS_FallingSand_dynamic1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.23"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E4634B0F-4E3CF1D8-B6D0D5BA-90FE41AF",
+      "InternalVariableName": "NS_FallingSand_dynamic1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_ForgottenLab_LockdownDoor_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.6"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E1ACA14F-4F32E40E-F697D1AE-EECED0BA",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ForgottenLab_LockdownDoor_C:SM_Door_S_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.37"
+      },
+      "VariableGuid": "517E36FF-41FC151A-958A7E90-73506547",
+      "InternalVariableName": "SM_Door_S"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ForgottenLab_LockdownDoor_C:Pivot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.25"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.35"
+        }
+      ],
+      "VariableGuid": "A9E38E9F-40AC7BAC-E8B34792-8AC4323C",
+      "InternalVariableName": "Pivot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_ForgottenLab_LockdownDoor_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.1"
+      },
+      "VariableGuid": "8BC7AF00-4BD43DCB-029CEDBB-70B3E758",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.32"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.35"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ForgottenLab_LockdownDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.29"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Door_S_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Arch_Eco_Kit03_Door_Large_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Architecture/Ecolabs/Kit03/Meshes/Doors/SM_Env_Arch_Eco_Kit03_Door_Large_01.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "EngineTraceChannel2": "Ignore",
+          "EngineTraceChannel3": "Ignore",
+          "EngineTraceChannel4": "Ignore",
+          "EngineTraceChannel5": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -20.0,
+        "Y": 4.3220362E-16,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.25,
+        "Z": 0.5
+      },
+      "ComponentTags": [
+        "PlaceableStaticMesh"
+      ]
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TL_DoorMovement_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenLab_LockdownDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.0"
+    },
+    "Properties": {
+      "EventTracks": [
+        {
+          "FunctionName": "TL_DoorMovement__Start__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_ForgottenLab_LockdownDoor_C:CurveFloat_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.4"
+          },
+          "TrackName": "Start",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TL_DoorMovement__End__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_ForgottenLab_LockdownDoor_C:CurveFloat_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.3"
+          },
+          "TrackName": "End",
+          "bIsExternalCurve": false
+        }
+      ],
+      "VectorTracks": [
+        {
+          "CurveVector": {
+            "ObjectName": "CurveVector'BP_ForgottenLab_LockdownDoor_C:CurveVector_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_LockdownDoor.5"
+          },
+          "PropertyName": "TL_DoorMovement_MovementVectorMultiplier_57E246DB4B7C8D56C9BFC69229F3B969",
+          "TrackName": "MovementVectorMultiplier",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "57E246DB-4B7C8D56-C9BFC692-29F3B969",
+      "VariableName": "TL_DoorMovement",
+      "DirectionPropertyName": "TL_DoorMovement__Direction_57E246DB4B7C8D56C9BFC69229F3B969",
+      "UpdateFunctionName": "TL_DoorMovement__UpdateFunc",
+      "FinishedFunctionName": "TL_DoorMovement__FinishedFunc"
+    }
+  }
+]

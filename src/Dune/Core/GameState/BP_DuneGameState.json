@@ -1,0 +1,477 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DuneGameState_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DuneGameState_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_DuneGameState_C:ExecuteUbergraph_BP_DuneGameState'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DuneGameState'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DuneGameState_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.6"
+      },
+      {
+        "ObjectName": "Function'BP_DuneGameState_C:OnCutsceneStarted'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.5"
+      },
+      {
+        "ObjectName": "Function'BP_DuneGameState_C:OnCutsceneEnded'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.4"
+      },
+      {
+        "ObjectName": "Function'BP_DuneGameState_C:ExecuteUbergraph_BP_DuneGameState'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_PlayerEventComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayerEventsComponent_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/PlayerEvents/BP_PlayerEventsComponent.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_DuneGameState": {
+        "ObjectName": "Function'BP_DuneGameState_C:ExecuteUbergraph_BP_DuneGameState'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.3"
+      },
+      "OnCutsceneEnded": {
+        "ObjectName": "Function'BP_DuneGameState_C:OnCutsceneEnded'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.4"
+      },
+      "OnCutsceneStarted": {
+        "ObjectName": "Function'BP_DuneGameState_C:OnCutsceneStarted'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_DuneGameState_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_NotPlaceable | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DuneGameState_C",
+    "Name": "Default__BP_DuneGameState_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.BP_DuneGameState_C'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState",
+    "Properties": {
+      "UberGraphFrame": {},
+      "m_WorldLayoutCoordinatorComponent": {
+        "ObjectName": "WorldLayoutCoordinatorComponent'Default__BP_DuneGameState_C:WorldLayoutCoordinatorComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.15"
+      },
+      "m_LandsraadStateComponent": {
+        "ObjectName": "LandsraadStateComponent'Default__BP_DuneGameState_C:LandsraadStateComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.8"
+      },
+      "m_LandsraadReplicatedStateComponent": {
+        "ObjectName": "LandsraadReplicatedStateComponent'Default__BP_DuneGameState_C:LandsraadReplicatedStateComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.7"
+      },
+      "m_ResourceDistributionStateComponent": {
+        "ObjectName": "ResourceDistributionStateComponent'Default__BP_DuneGameState_C:ResourceDistributionStateComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.9"
+      },
+      "m_TimeOfDayComponent": {
+        "ObjectName": "TimeOfDayComponent'Default__BP_DuneGameState_C:TimeOfDayComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.14"
+      }
+    }
+  },
+  {
+    "Type": "BP_PlayerEventsComponent_C",
+    "Name": "BP_PlayerEventComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Prototyping/PlayerEvents/BP_PlayerEventsComponent.BP_PlayerEventsComponent_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "Template": {
+      "ObjectName": "BP_PlayerEventsComponent_C'Default__BP_PlayerEventsComponent_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/PlayerEvents/BP_PlayerEventsComponent.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_DuneGameState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ClassClass_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCutsceneEnded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DuneGameState:OnCutsceneEnded'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCutsceneStarted",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DuneGameState:OnCutsceneStarted'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "LandsraadReplicatedStateComponent",
+    "Name": "LandsraadReplicatedStateComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'LandsraadReplicatedStateComponent'",
+    "Outer": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    }
+  },
+  {
+    "Type": "LandsraadStateComponent",
+    "Name": "LandsraadStateComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'LandsraadStateComponent'",
+    "Outer": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    }
+  },
+  {
+    "Type": "ResourceDistributionStateComponent",
+    "Name": "ResourceDistributionStateComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ResourceDistributionStateComponent'",
+    "Outer": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DuneGameState_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DuneGameState_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.10"
+      },
+      "VariableGuid": "8E0AADEA-4C610F1C-85418E87-31FAA10D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DuneGameState_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_PlayerEventsComponent_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/PlayerEvents/BP_PlayerEventsComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_PlayerEventsComponent_C'BP_DuneGameState_C:BP_PlayerEventComponent_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.2"
+      },
+      "VariableGuid": "82632E5F-421B2AC3-8576B8BB-C556843A",
+      "InternalVariableName": "BP_PlayerEventComponent"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DuneGameState_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DuneGameState_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DuneGameState_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.11"
+      }
+    }
+  },
+  {
+    "Type": "TimeOfDayComponent",
+    "Name": "TimeOfDayComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimeOfDayComponent'",
+    "Outer": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    }
+  },
+  {
+    "Type": "WorldLayoutCoordinatorComponent",
+    "Name": "WorldLayoutCoordinatorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WorldLayoutCoordinatorComponent'",
+    "Outer": {
+      "ObjectName": "BP_DuneGameState_C'Default__BP_DuneGameState_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.1"
+    }
+  }
+]

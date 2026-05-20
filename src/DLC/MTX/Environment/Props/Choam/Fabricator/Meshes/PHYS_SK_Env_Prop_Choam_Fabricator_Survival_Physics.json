@@ -1,0 +1,65 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics:SkeletalBodySetup_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics.1"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": []
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Outer": {
+      "ObjectName": "PhysicsAsset'PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Survival_Physics.0"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 4.196167E-05,
+              "Y": 13.039288,
+              "Z": 43.180126
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 147.39137,
+            "Y": 173.73074,
+            "Z": 86.0862,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "move",
+      "PhysicsType": "PhysType_Kinematic",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "A3DC106A4D284252DC2C6B95F384904A"
+  }
+]

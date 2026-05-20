@@ -1,0 +1,334 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Choam_ExchangeHologram_01'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Holograms/Meshes/SM_Env_Prop_Choam_ExchangeHologram_01.1"
+    },
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 192.10117,
+                "Y": -0.08129537,
+                "Z": -0.0625
+              },
+              {
+                "X": 192.10117,
+                "Y": -0.08128619,
+                "Z": 512.125
+              },
+              {
+                "X": 192.10117,
+                "Y": 3.2187347,
+                "Z": 512.125
+              },
+              {
+                "X": 192.10117,
+                "Y": 3.21875,
+                "Z": -0.10083008
+              },
+              {
+                "X": -0.09688721,
+                "Y": 3.21875,
+                "Z": -0.0625
+              },
+              {
+                "X": -0.09688721,
+                "Y": 3.2187653,
+                "Z": 512.125
+              },
+              {
+                "X": -0.09688721,
+                "Y": -0.08130455,
+                "Z": 512.125
+              },
+              {
+                "X": -0.09688721,
+                "Y": -0.08129537,
+                "Z": -0.10083008
+              }
+            ],
+            "IndexData": [
+              0,
+              1,
+              2,
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              4,
+              6,
+              7,
+              3,
+              2,
+              5,
+              3,
+              5,
+              4,
+              7,
+              6,
+              1,
+              7,
+              1,
+              0,
+              2,
+              1,
+              6,
+              2,
+              6,
+              5,
+              0,
+              3,
+              4,
+              0,
+              4,
+              7
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -0.09688721,
+                "Y": -0.08130455,
+                "Z": -0.10083008
+              },
+              "Max": {
+                "X": 192.10117,
+                "Y": 3.2187653,
+                "Z": 512.125
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B45ECAF74D34ED1D9E83AE8EF2AD5DC6",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1044,
+        "SizeOnDisk": 1044,
+        "OffsetInFile": "0x5D8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Env_Prop_Choam_ExchangeHologram_01",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Holograms/Meshes/SM_Env_Prop_Choam_ExchangeHologram_01",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_BasicHologram_white'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Systems/Holograms/Material/Hologram/Basic/MI_BasicHologram_white.0"
+          },
+          "MaterialSlotName": "ML_Env_Arch_HologramStand_01",
+          "ImportedMaterialSlotName": "ML_Env_Arch_HologramStand_01",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 513.2042,
+            "LocalUVDensities[1]": 2170.7705,
+            "LocalUVDensities[2]": 99.1873,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 2170.7705,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 96.00214,
+          "Y": 1.5469894,
+          "Z": 255.99904
+        },
+        "BoxExtent": {
+          "X": 95.99902,
+          "Y": 1.54708,
+          "Z": 255.9999
+        },
+        "SphereRadius": 273.41205399564075
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Env_Prop_Choam_ExchangeHologram_01:BodySetup_1'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Holograms/Meshes/SM_Env_Prop_Choam_ExchangeHologram_01.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "792B6CEF-4A899B41-85BE6B9A-D0EF7B06",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 10,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 19,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 20
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 20,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -0.9968872,
+                "Y": -1.0000906,
+                "Z": -1.0008545
+              },
+              "Max": {
+                "X": 193.00116,
+                "Y": 4.0940695,
+                "Z": 512.9989
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": []
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x775"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 96.00214,
+          "Y": 1.5469894,
+          "Z": 255.99904
+        },
+        "BoxExtent": {
+          "X": 95.99902,
+          "Y": 1.54708,
+          "Z": 255.9999
+        },
+        "SphereRadius": 273.41205
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

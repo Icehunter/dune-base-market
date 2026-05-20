@@ -1,0 +1,1909 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_DuneMaster_LayeredMaterial_ClothTarp",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Material'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_LayeredMaterial_ClothTarp",
+    "Properties": {
+      "BlendMode": "BLEND_Masked",
+      "ShadingModel": "MSM_FromMaterialExpression",
+      "ShadingModels": {
+        "ShadingModelField": 258
+      },
+      "TwoSided": true,
+      "bUsedWithSkeletalMesh": true,
+      "bUsedWithInstancedStaticMeshes": true,
+      "bUsedWithNanite": true,
+      "bUseMaterialAttributes": true,
+      "StateId": "2A31046D-482C4EAA-6B81F799-03CFFEBE",
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_DetailMask_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Canvas_01_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Canvas_01_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "water_n"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedExpressionData": {
+      "RuntimeEntries": {
+        "ParameterInfoSet": [
+          {
+            "Name": "ClothShading",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Cloth Fuzz",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Cloth Silk Shading",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Cloth Fuzz - Fresnel - Base",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Cloth Fuzz - Fresnel - Exponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "UV_Width",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "UV_Height",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WindSpeed_Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaveIntensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wear - Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wear - Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Tiling",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Min - Height Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Max - Height Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - NormalStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - BaseLayerNormalStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Metalness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer WearLayerNormalStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - UseWearHeightForBlend",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask - HeightMaskStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask - TransitionWidth",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask - DetailMaskStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Wear Override Start",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Wear Override End",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Roughness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Normal Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Roughness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Metallic Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Specular",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tiling UV Aspect Y",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tiling UV Aspect X",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Tiling",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Min - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Min - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Max - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Mask Max - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Wear Override",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Detail UV Tile",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "World Aligned Mask - Size",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - Mask Min - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - Mask Min - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - Mask Max - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - Mask Max - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - HeightMask - Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - HeightMask - Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - DetailMask - Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - DetailMask - Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Min - Height Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Max - Height Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Metallic Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Roughness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - AddOrReplaceRoughness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask - HeightMaskStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask - TransitionWidth",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask - DetailMaskStrength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Dirt Override Start",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Dirt Override End",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Min - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Min - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Max - Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - Mask Max - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TarpEdgeContrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_UV_Width",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_UV_Height",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_Wear_Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_Wear_Bias_Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WindSpeed_Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WindSpeed_Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_Opacity_Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_Opacity_Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wear Factor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tear_Wear_Bias_Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaveAmount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Factor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tiling of breakup noise for procedural masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Buildup textures tiling (in meters for triplanar)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dust - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Direction - Up",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Direction - Sides",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Direction - Down",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Target Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dust - Target  Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dust - Biome Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Sandstorm Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dust Opacity Multiplier",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dust - Mask Invert",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand - Mask Invert",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Bottom",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Top",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Normal Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Buildup Texture - Height Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Buildup Texture - Height Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Detail Mask Mode - Dust",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Detail Mask Mode - Sand",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Rough Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Rough Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[1]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Cloth Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Cloth Override - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear Override - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer Override - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "World Aligned Mask - Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Layer World Aligned Mask Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Dirt Override - ColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "VertexColorMaskSelector",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[2]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[3]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Surface Wear - BaseColor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Wear - Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "DetailMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "World Aligned Mask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Surface Edge - Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Mesh Masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "BaseColor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Mesh Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SandBuildup Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[4]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[5]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[6]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[7]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Cloth",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Silk",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Change Shading Model",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Use Fresnel falloff on Cloth",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "LOD",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Override Wear Level",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "EnableVertexColorMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "UseTilingTexturesUVChannel",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "RandomizeUVOffsets",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WorldAlignedMaskBreakup",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Edge Wear",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Apply Dirt",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "UseVertexColors",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "DisableVirtualTextureOnMeshMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Use MPC sand color value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sand Buildup uses Triplanar Projection",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "EnableBoundingBoxGradient",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CharacterGradient",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "UseWorldAlignedMaskForSandDetail",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[8]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[9]": {
+        "ParameterInfoSet": []
+      },
+      "ScalarPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        11,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "ScalarValues": [
+        0.0,
+        0.0,
+        0.0,
+        0.05,
+        5.0,
+        1.0,
+        1.0,
+        0.1,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        -1.0,
+        0.25,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        2.0,
+        4000.0,
+        0.02,
+        2.0,
+        0.3,
+        10.0,
+        0.1,
+        0.35,
+        0.1,
+        0.35,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.25,
+        -1.0,
+        0.25,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.2,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.28,
+        1.0,
+        1.5,
+        0.5,
+        1.0,
+        0.5,
+        0.1,
+        0.0,
+        0.0,
+        0.3,
+        1.0,
+        0.7,
+        0.6,
+        0.125,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.5,
+        2.0
+      ],
+      "StaticSwitchValues": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "DynamicSwitchValues": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "VectorValues": [
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "000000"
+        },
+        {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "000000"
+        },
+        {
+          "R": 0.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "000000"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.05,
+          "Hex": "0CFFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "FF0000"
+        }
+      ],
+      "ScalarArrayValues": [],
+      "VectorArrayValues": [],
+      "DoubleVectorValues": [],
+      "TextureValues": [
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_D.T_MLS_Metal_Steel_05_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_N.T_MLS_Metal_Steel_05_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_01_M.T_DetailMask_01_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_Grunge_01_M.T_DetailMask_Grunge_01_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_N.T_MLS_Metal_Steel_05_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_M.T_MaterialPreview_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_D.T_MLS_Canvas_01_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_N.T_MLS_Canvas_01_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_N.T_MaterialPreview_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreviewNoVT_M.T_MaterialPreviewNoVT_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/SandBuildup/T_SandBuildup_02_N.T_SandBuildup_02_N",
+          "SubPathString": ""
+        }
+      ],
+      "FontValues": [],
+      "FontPageValues": [],
+      "RuntimeVirtualTextureValues": [],
+      "SparseVolumeTextureValues": [],
+      "ReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'water_n'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/water_n.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MLS_Metal_Steel_05_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MLS_Metal_Steel_05_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_DetailMask_01_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_01_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'DefaultDiffuse'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_DetailMask_Grunge_01_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_Grunge_01_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MaterialPreview_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MaterialPreviewNoVT_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreviewNoVT_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MLS_Canvas_01_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MLS_Canvas_01_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MaterialPreview_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'TNoise1024'",
+          "ObjectPath": "Engine/Plugins/Experimental/Landmass/Content/TextureCreation/Textures/TNoise1024.0"
+        },
+        {
+          "ObjectName": "Texture2D'BlendFunc_DefBlend'",
+          "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
+        },
+        {
+          "ObjectName": "Texture2D'BlendFunc_DefBase'",
+          "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_MLS_Ground_Neut_Sand_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Ground/T_MLS_Ground_Neut_Sand_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_SandBuildup_02_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/SandBuildup/T_SandBuildup_02_N.0"
+        }
+      ],
+      "FunctionInfos": [
+        {
+          "StateId": "1955C13B-48A8D432-CB4CE78D-7874D16D",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Silk'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Silk.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "DBA1E0D7-4287006A-4692ACBC-E6B1DCC6",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_ClothShading'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_ClothShading.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "1CC33DC1-42527843-23318CA0-8C27D20F",
+          "Function": {
+            "ObjectName": "MaterialFunction'IsFloatValid'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/IsFloatValid.0"
+          }
+        },
+        {
+          "StateId": "3915C0D8-4C5A5CDE-727E5A91-CAD8A01D",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_BaseMaterial'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_BaseMaterial.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "0B475451-499224C4-5F91BD90-75EEADD9",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Mask_V2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Mask_V2.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "C3E59C7C-47A93ECB-E15B70A7-A0F393E7",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_SurfaceAdjustments_v2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SurfaceAdjustments_v2.0"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "85DF1E41-42BC1551-160A9AA8-132C4AF2",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_SurfaceAdjustment_Wear'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SurfaceAdjustment_Wear.0"
+          }
+        },
+        {
+          "StateId": "8F0B84F1-4C0577DA-49D329B4-750D7346",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_TilingUV_V2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_TilingUV_V2.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "9266BF7A-41122BB3-EC5C82B7-A3E751C3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat4'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.0"
+          }
+        },
+        {
+          "StateId": "9266BF7A-41122BB3-EC5C82B7-A3E751C3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat4'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.0"
+          }
+        },
+        {
+          "StateId": "7535CFF4-4183994A-36DB7DB5-1CA987A9",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_WearMask'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_WearMask.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "8F0B84F1-4C0577DA-49D329B4-750D7346",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_TilingUV_V2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_TilingUV_V2.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "BDC7AB9C-418E30AC-5815BFB0-1EF022E9",
+          "Function": {
+            "ObjectName": "MaterialFunction'WorldAlignedTexture'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/WorldAlignedTexture.0"
+          }
+        },
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "8347C5D2-41ADA459-D606A8AF-6A3D6693",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_WorldAlignedMask'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_WorldAlignedMask.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "0B475451-499224C4-5F91BD90-75EEADD9",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Mask_V2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Mask_V2.0"
+          }
+        },
+        {
+          "StateId": "9266BF7A-41122BB3-EC5C82B7-A3E751C3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat4'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "0B475451-499224C4-5F91BD90-75EEADD9",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Mask_V2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Mask_V2.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "C3E59C7C-47A93ECB-E15B70A7-A0F393E7",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_SurfaceAdjustments_v2'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SurfaceAdjustments_v2.0"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "F1A8C6A9-4D37E691-BD787485-98A34AB8",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRange'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
+          }
+        },
+        {
+          "StateId": "27753D80-4B2D37AD-AF106297-C966EB48",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_SurfaceAdjustment_Dirt'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SurfaceAdjustment_Dirt.0"
+          }
+        },
+        {
+          "StateId": "9266BF7A-41122BB3-EC5C82B7-A3E751C3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat4'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.0"
+          }
+        },
+        {
+          "StateId": "A209EFAA-4767032B-C34B8C93-40211487",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_Color'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_Color.0"
+          }
+        },
+        {
+          "StateId": "9266BF7A-41122BB3-EC5C82B7-A3E751C3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat4'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat4.0"
+          }
+        },
+        {
+          "StateId": "7535CFF4-4183994A-36DB7DB5-1CA987A9",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Override_WearMask'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Override_WearMask.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "7186B216-4E147DF1-B9F1C282-7E24D0EB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_Wear-SandFactors'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_Wear-SandFactors.0"
+          }
+        },
+        {
+          "StateId": "9905D359-4DE163F9-E898A0A6-D582886D",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Lib_MeshMasks'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Lib_MeshMasks.0"
+          }
+        },
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        },
+        {
+          "StateId": "E6EF41E3-4AA8C2E8-BCCD89BB-265A2462",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRangeNormalized'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRangeNormalized.0"
+          }
+        },
+        {
+          "StateId": "E6EF41E3-4AA8C2E8-BCCD89BB-265A2462",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRangeNormalized'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRangeNormalized.0"
+          }
+        },
+        {
+          "StateId": "DDB616F6-45461DBB-6B0367AD-CBAD6687",
+          "Function": {
+            "ObjectName": "MaterialFunction'LocalPosition'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.0"
+          }
+        },
+        {
+          "StateId": "DDB616F6-45461DBB-6B0367AD-CBAD6687",
+          "Function": {
+            "ObjectName": "MaterialFunction'LocalPosition'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/LocalPosition.0"
+          }
+        },
+        {
+          "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+          }
+        },
+        {
+          "StateId": "C330DE33-4A86FAB2-7255B1AC-3A6AC1B4",
+          "Function": {
+            "ObjectName": "MaterialFunction'Transform3x3Matrix'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "CCAE6EC8-40AAB714-0BA1F68D-D5B8E581",
+          "Function": {
+            "ObjectName": "MaterialFunction'DeriveTangentBasis'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/DeriveTangentBasis.0"
+          }
+        },
+        {
+          "StateId": "12B6F73F-4D5D4FF9-D2FBF18B-43945D5B",
+          "Function": {
+            "ObjectName": "MaterialFunction'Blend_Overlay'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "12B6F73F-4D5D4FF9-D2FBF18B-43945D5B",
+          "Function": {
+            "ObjectName": "MaterialFunction'Blend_Overlay'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.0"
+          }
+        },
+        {
+          "StateId": "444CC8CD-4ED274B8-CCB5F6B4-BD1AA91A",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_SandBuildup_Simple'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SandBuildup_Simple.0"
+          }
+        },
+        {
+          "StateId": "B17233C3-4C41C4B7-CC68D6B4-A243082C",
+          "Function": {
+            "ObjectName": "MaterialFunctionInstance'MF_SandBuildup_Props'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_SandBuildup_Props.0"
+          }
+        }
+      ],
+      "ParameterCollectionInfos": [
+        {
+          "StateId": "26D0C8E5-44054EC2-19B44FB9-47255DDD",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'MPC_MasterMaterialConfig'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MPC_MasterMaterialConfig.0"
+          }
+        }
+      ],
+      "GrassTypes": [],
+      "MaterialLayers": {
+        "Layers": [],
+        "Blends": []
+      },
+      "DynamicParameterNames": [],
+      "QualityLevelsUsed": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "bHasMaterialLayers": false,
+      "bHasRuntimeVirtualTextureOutput": false,
+      "bHasSceneColor": false,
+      "bHasPerInstanceCustomData": true,
+      "bHasPerInstanceRandom": true,
+      "bHasVertexInterpolator": true,
+      "PropertyConnectedBitmask": 537232868
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'BlendFunc_DefBase'",
+        "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
+      },
+      {
+        "ObjectName": "Texture2D'BlendFunc_DefBlend'",
+        "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
+      },
+      {
+        "ObjectName": "Texture2D'DefaultDiffuse'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+      },
+      {
+        "ObjectName": "Texture2D'water_n'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/water_n.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MaterialPreview_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MaterialPreview_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MaterialPreviewNoVT_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreviewNoVT_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_DetailMask_01_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_01_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_DetailMask_Grunge_01_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_DetailMask_Grunge_01_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_SandBuildup_02_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/SandBuildup/T_SandBuildup_02_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MLS_Canvas_01_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_D.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MLS_Canvas_01_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Canvas_01_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MLS_Ground_Neut_Sand_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Ground/T_MLS_Ground_Neut_Sand_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MLS_Metal_Steel_05_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_D.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_MLS_Metal_Steel_05_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Metal/T_MLS_Metal_Steel_05_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'TNoise1024'",
+        "ObjectPath": "Engine/Plugins/Experimental/Landmass/Content/TextureCreation/Textures/TNoise1024.0"
+      }
+    ]
+  }
+]

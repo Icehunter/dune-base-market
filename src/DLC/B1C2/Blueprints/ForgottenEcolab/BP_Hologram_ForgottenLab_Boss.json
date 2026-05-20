@@ -1,0 +1,1471 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Hologram_ForgottenLab_Boss_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_Complex_Mutable_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.0"
+    },
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.23"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Hologram_ForgottenLab_Boss_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:ExecuteUbergraph_BP_Hologram_ForgottenLab_Boss'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_Complex_Mutable_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:OnRep_HoloActive'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.12"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.7"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:StartMonologue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.14"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multicast_CuedDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.10"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:TriggerPrefightCallout'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.16"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:TriggerFightCallout'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.15"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Disappear'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.4"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.13"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multicast_SingleDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.11"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:HaltDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.6"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multi_Dialogue_Fight'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.9"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:ExecuteUbergraph_BP_Hologram_ForgottenLab_Boss'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.5"
+      },
+      {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:IntroComplete__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HologramSFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HologramDialogue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HoloActive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 16,
+        "RepNotifyFunc": "OnRep_HoloActive",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SequenceActive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentCue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 17
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CalloutTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "IntroComplete",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:IntroComplete__DelegateSignature'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.8"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "FightCallouts",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "FightCallouts",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "PreFightCallouts",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "PreFightCallouts",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DeathDialogue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "FightCallouts_Phase0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "FightCallouts_Phase0",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GelsphereInsertedCallout",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LastCallout",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "FightCallouts_Phase1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "FightCallouts_Phase1",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "IntroComplete__DelegateSignature": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:IntroComplete__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.8"
+      },
+      "ExecuteUbergraph_BP_Hologram_ForgottenLab_Boss": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:ExecuteUbergraph_BP_Hologram_ForgottenLab_Boss'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.5"
+      },
+      "Multi_Dialogue_Fight": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multi_Dialogue_Fight'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.9"
+      },
+      "HaltDialogue": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:HaltDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.6"
+      },
+      "Multicast_SingleDialogue": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multicast_SingleDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.11"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.13"
+      },
+      "Disappear": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Disappear'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.4"
+      },
+      "TriggerFightCallout": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:TriggerFightCallout'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.15"
+      },
+      "TriggerPrefightCallout": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:TriggerPrefightCallout'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.16"
+      },
+      "Multicast_CuedDialogue": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:Multicast_CuedDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.10"
+      },
+      "StartMonologue": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:StartMonologue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.14"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.7"
+      },
+      "OnRep_HoloActive": {
+        "ObjectName": "Function'BP_Hologram_ForgottenLab_Boss_C:OnRep_HoloActive'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.12"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Hologram_ForgottenLab_Boss_C'Default__BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BP_Hologram_ForgottenLab_Boss_C",
+    "Name": "Default__BP_Hologram_ForgottenLab_Boss_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.BP_Hologram_ForgottenLab_Boss_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss",
+    "Template": {
+      "ObjectName": "BP_Hologram_Complex_Mutable_C'Default__BP_Hologram_Complex_Mutable_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "HoloActive": true,
+      "CurrentCue": -1,
+      "CalloutTimer": {
+        "Handle": 0
+      },
+      "FightCallouts": [
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_07'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_07.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_08'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_08.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_09'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_09.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_10'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_10.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_11'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_11.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_12'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_12.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_13'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_13.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_14'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_14.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_15'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_15.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_16'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_16.0"
+        }
+      ],
+      "PreFightCallouts": [
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_02'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_02.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_03'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_03.0"
+        }
+      ],
+      "DeathDialogue": {
+        "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_17'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_17.0"
+      },
+      "FightCallouts_Phase0": [
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_01'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_01.0"
+        }
+      ],
+      "GelsphereInsertedCallout": {
+        "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_01.0"
+      },
+      "FightCallouts_Phase1": [
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_09'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_09.0"
+        },
+        {
+          "ObjectName": "FcAudioEvent'AD_vob_lostharvest_zaccarath_12'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/Voice/Dialogue2D/Chapter_2/AI_Zacarath/Barks/AD_vob_lostharvest_zaccarath_12.0"
+        }
+      ],
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "HologramDialogue_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "HologramSFX_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Disappear",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Hologram_ForgottenLab_Boss",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_CustomEvent_Cues",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_CustomEvent_Cues",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FFloor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchName_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Cue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_CurrentCue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_Phase",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FFloor_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "HaltDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentCue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IntroComplete__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multi_Dialogue_Fight",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Phase",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multicast_CuedDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "Cues",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Cues",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FcAudioEvent'",
+            "ObjectPath": "/Script/FcAudio"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multicast_SingleDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_HoloActive",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentToWorld_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Hologram_Complex_Mutable_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.4"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_Hologram_Complex_Mutable_C:ReceiveBeginPlay'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.4"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartMonologue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerFightCallout",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerPrefightCallout",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'NiagaraComponent'",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent'BP_Hologram_ForgottenLab_Boss_C:HologramVFX_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.18"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Hologram_Complex_Mutable_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.0"
+            },
+            "SCSVariableName": "HologramVFX",
+            "AssociatedGuid": "8C2636AA-48D8820C-AD6F2494-80F930B6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BP_Hologram_ForgottenLab_Boss_C:SKHologramMesh_GEN_VARIABLE'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.24"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Hologram_Complex_Mutable_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.0"
+            },
+            "SCSVariableName": "SKHologramMesh",
+            "AssociatedGuid": "34451891-40D42BE7-019F31A5-C9B8F45E"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "HologramVFX_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Template": {
+      "ObjectName": "NiagaraComponent'BP_Hologram_Complex_Mutable_C:HologramVFX_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.11"
+    },
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Hologram_ForgottenLab_Boss_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.19"
+      },
+      "VariableGuid": "FE248CDB-4FA187CA-5BAC6AB7-3D9378AD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_Hologram_ForgottenLab_Boss_C:HologramDialogue_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.2"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Hologram_Complex_Mutable_C",
+      "VariableGuid": "0309FBF0-4EEC4035-B2480AB9-3D5F0442",
+      "InternalVariableName": "HologramDialogue"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_Hologram_ForgottenLab_Boss_C:HologramSFX_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.3"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Hologram_Complex_Mutable_C",
+      "VariableGuid": "BF1603F0-43385C28-E3603796-CC77F839",
+      "InternalVariableName": "HologramSFX"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.22"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Hologram_ForgottenLab_Boss_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.20"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SKHologramMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Hologram_ForgottenLab_Boss_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_Hologram_ForgottenLab_Boss.0"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'BP_Hologram_Complex_Mutable_C:SKHologramMesh_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/BP/BP_Hologram_Complex_Mutable.22"
+    },
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'A_Human_Hologram_01_Loop_01'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Hologram_01_Loop_01.0"
+        }
+      }
+    }
+  }
+]

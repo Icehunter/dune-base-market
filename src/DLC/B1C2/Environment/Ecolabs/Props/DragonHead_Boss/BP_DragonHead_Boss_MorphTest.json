@@ -1,0 +1,1038 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DragonHead_Boss_MorphTest_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_DragonHead_Boss_MorphTest_C:Timeline_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.26"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_DragonHead_Boss_MorphTest_C:InvertedShowHeadTimeline_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.25"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.23"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ExecuteUbergraph_BP_DragonHead_Boss_MorphTest'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:OnRep_bIsHeadShown'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.8"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:OnRep_bIsMouthOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.9"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SpawnVFXSystem'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.14"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:Timeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.15"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:Timeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.16"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:InvertedShowHeadTimeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.6"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:InvertedShowHeadTimeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.7"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:AnimateMouth'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.4"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ShowHideHead'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.13"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.10"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SetHeadVisibility'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.12"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SetAnimatedMouth'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.11"
+      },
+      {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ExecuteUbergraph_BP_DragonHead_Boss_MorphTest'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Char_NPC_HologramDragonGlitch_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "InvertedShowHeadTimeline_Dragon_Morph_Target_Value_678C049546C3862C2A9C5D92EE1F36C3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "InvertedShowHeadTimeline__Direction_678C049546C3862C2A9C5D92EE1F36C3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InvertedShowHeadTimeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_Dragon_Morph_Target_Value_A00C424445CF7F0887967384D14C1252",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline__Direction_A00C424445CF7F0887967384D14C1252",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "MaterialOpacityName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VFX_SpawnDespawnSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystem'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsHeadShown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 16,
+        "RepNotifyFunc": "OnRep_bIsHeadShown",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsMouthOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 17,
+        "RepNotifyFunc": "OnRep_bIsMouthOpen",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_DragonHead_Boss_MorphTest": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ExecuteUbergraph_BP_DragonHead_Boss_MorphTest'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.5"
+      },
+      "SetAnimatedMouth": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SetAnimatedMouth'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.11"
+      },
+      "SetHeadVisibility": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SetHeadVisibility'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.12"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.10"
+      },
+      "ShowHideHead": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:ShowHideHead'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.13"
+      },
+      "AnimateMouth": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:AnimateMouth'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.4"
+      },
+      "InvertedShowHeadTimeline__UpdateFunc": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:InvertedShowHeadTimeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.7"
+      },
+      "InvertedShowHeadTimeline__FinishedFunc": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:InvertedShowHeadTimeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.6"
+      },
+      "Timeline__UpdateFunc": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:Timeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.16"
+      },
+      "Timeline__FinishedFunc": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:Timeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.15"
+      },
+      "SpawnVFXSystem": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:SpawnVFXSystem'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.14"
+      },
+      "OnRep_bIsMouthOpen": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:OnRep_bIsMouthOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.9"
+      },
+      "OnRep_bIsHeadShown": {
+        "ObjectName": "Function'BP_DragonHead_Boss_MorphTest_C:OnRep_bIsHeadShown'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.8"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DragonHead_Boss_MorphTest_C'Default__BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DragonHead_Boss_MorphTest_C",
+    "Name": "Default__BP_DragonHead_Boss_MorphTest_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.BP_DragonHead_Boss_MorphTest_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MaterialOpacityName": "FadeOut",
+      "VFX_SpawnDespawnSystem": {
+        "ObjectName": "NiagaraSystem'NS_Char_NPC_DragonTurretDeath_01'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/DragonFlameTurret/Niagara/NS_Char_NPC_DragonTurretDeath_01.167"
+      },
+      "bIsHeadShown": true,
+      "bReplicates": true,
+      "NetCullDistanceSquared": 1.025E+09,
+      "ViewTargetNetCullDistanceSquared": 1.025E+09
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1_2",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimateMouth",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "OpenMouth",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_DragonHead_Boss_MorphTest",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_OpenMouth",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_ShowHead",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_BoolBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_BoolBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "InvertedShowHeadTimeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InvertedShowHeadTimeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_bIsHeadShown",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_bIsMouthOpen",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetAnimatedMouth",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetHeadVisibility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShowHideHead",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ShowHead",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SpawnVFXSystem",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentToWorld_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Char_NPC_HologramDragonGlitch_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Char_NPC_HologramDragonGlitch_01'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/DragonFlameTurret/Niagara/NS_Char_NPC_HologramDragonGlitch_01.83"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "GlitchColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.GlitchColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.GlitchColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.Skeletal Mesh",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          64,
+          64,
+          126,
+          83,
+          160,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63
+        ],
+        "DataInterfaces": [
+          {
+            "ObjectName": "NiagaraDataInterfaceSkeletalMesh'BP_DragonHead_Boss_MorphTest_C:NS_Char_NPC_HologramDragonGlitch_01_GEN_VARIABLE.NiagaraDataInterfaceSkeletalMesh_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.18"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraDataInterfaceSkeletalMesh'",
+    "Outer": {
+      "ObjectName": "NiagaraComponent'BP_DragonHead_Boss_MorphTest_C:NS_Char_NPC_HologramDragonGlitch_01_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.17"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DragonHead_Boss_MorphTest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.19"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.21"
+        }
+      ],
+      "VariableGuid": "33879ED0-466521AC-E64D6D9F-C97932DC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BP_DragonHead_Boss_MorphTest_C:SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.24"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.22"
+        }
+      ],
+      "VariableGuid": "833C8BF5-48B69CFE-659550B1-24B70EB3",
+      "InternalVariableName": "SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.23"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_DragonHead_Boss_MorphTest_C:NS_Char_NPC_HologramDragonGlitch_01_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.17"
+      },
+      "VariableGuid": "5C1DD005-4AFA6FB1-37B1F5B8-5ABC3B9A",
+      "InternalVariableName": "NS_Char_NPC_HologramDragonGlitch_01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.20"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DragonHead_Boss_MorphTest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.20"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/Meshes/SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss.1"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/Meshes/SK_DLC_B1C2_Env_Prop_EcolabB_DragonHead_Boss.1"
+      },
+      "CastShadow": false,
+      "bReplicates": true,
+      "NetUpdateFrequency": 2.0
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "InvertedShowHeadTimeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_DragonHead_Boss_MorphTest_C:CurveFloat_0_1_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.3"
+          },
+          "PropertyName": "InvertedShowHeadTimeline_Dragon_Morph_Target_Value_678C049546C3862C2A9C5D92EE1F36C3",
+          "TrackName": "Dragon Morph Target Value",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "678C0495-46C3862C-2A9C5D92-EE1F36C3",
+      "VariableName": "InvertedShowHeadTimeline",
+      "DirectionPropertyName": "InvertedShowHeadTimeline__Direction_678C049546C3862C2A9C5D92EE1F36C3",
+      "UpdateFunctionName": "InvertedShowHeadTimeline__UpdateFunc",
+      "FinishedFunctionName": "InvertedShowHeadTimeline__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DragonHead_Boss_MorphTest_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.0"
+    },
+    "Properties": {
+      "TimelineLength": 0.5,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_DragonHead_Boss_MorphTest_C:CurveFloat_0_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Props/DragonHead_Boss/BP_DragonHead_Boss_MorphTest.2"
+          },
+          "PropertyName": "Timeline_Dragon_Morph_Target_Value_A00C424445CF7F0887967384D14C1252",
+          "TrackName": "Dragon Morph Target Value",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "A00C4244-45CF7F08-87967384-D14C1252",
+      "VariableName": "Timeline",
+      "DirectionPropertyName": "Timeline__Direction_A00C424445CF7F0887967384D14C1252",
+      "UpdateFunctionName": "Timeline__UpdateFunc",
+      "FinishedFunctionName": "Timeline__FinishedFunc"
+    }
+  }
+]

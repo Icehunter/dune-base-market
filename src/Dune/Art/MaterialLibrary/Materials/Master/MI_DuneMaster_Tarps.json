@@ -1,0 +1,171 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_Tarps",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_Tarps",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_Tarps'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_Tarps.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Tiling of breakup noise for procedural masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 5.0,
+          "ExpressionGUID": "599D4E48-452F057C-01D83BB4-E1911695"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Mask Boost",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.95,
+          "ExpressionGUID": "921B0FF6-4794C779-6FA363A1-B8AFACDD"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Dust Mask Boost",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "652BAE07-4FCFFCDF-EB223288-D88F87DB"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Wind - Vertex Color Channel Input Low",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.08,
+          "ExpressionGUID": "E9D12F42-43F764FB-2D32989D-51849780"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Wind - Vertex Color Channel",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          },
+          "ExpressionGUID": "D7F1C60C-4E60A4F4-CFC9D091-A7F5B9FD"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "TwoSided": true,
+        "BlendMode": "BLEND_Masked",
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseTilingTexturesUVChannel",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "43961A49-4DAD5008-C1217C96-D808F343"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Wind",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "F2B4782E-41FB774A-2A4F339D-27403B42"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Calculate dust mask procedurally",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CD19EECF-4860C4B6-0ADE089C-4701B16E"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Dev_MaterialLibrary_Checker_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Dev_MaterialLibrary_FlatNormal_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_MLS_DetailMask_Flat_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

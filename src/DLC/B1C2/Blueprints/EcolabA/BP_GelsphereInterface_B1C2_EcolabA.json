@@ -1,0 +1,1390 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_GelsphereInterface_B1C2_EcolabA_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_GelsphereInterface_B1C2_EcolabA_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.3"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_GelsphereInterface_B1C2_EcolabA_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:ExecuteUbergraph_BP_GelsphereInterface_B1C2_EcolabA'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:OnRep_FightComplete'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.9"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.10"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:FightStateChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.6"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:BndEvt__BP_ForgottenLab_GelsphereInterface_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.4"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:Server_StartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.11"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:Multicast_ChangeVisuals'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.8"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.7"
+      },
+      {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:ExecuteUbergraph_BP_GelsphereInterface_B1C2_EcolabA'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Visuals_Gelsphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Highlight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractableBase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InteractableBaseComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractionCollision1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Visuals1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SceneComponent1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Boss Room Descriptor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_RoomDescriptor_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_RoomDescriptor.3"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "FightState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 16,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EContentGateStates'",
+          "ObjectPath": "DuneSandbox/Content/Dune/NPCBases/CampGameplay/ContentGate/EContentGateStates.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Spawner",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DialogueData",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Dialogue'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "FightComplete",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 17,
+        "RepNotifyFunc": "OnRep_FightComplete",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_GelsphereInterface_B1C2_EcolabA": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:ExecuteUbergraph_BP_GelsphereInterface_B1C2_EcolabA'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.5"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.7"
+      },
+      "Multicast_ChangeVisuals": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:Multicast_ChangeVisuals'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.8"
+      },
+      "Server_StartDialogue": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:Server_StartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.11"
+      },
+      "BndEvt__BP_ForgottenLab_GelsphereInterface_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:BndEvt__BP_ForgottenLab_GelsphereInterface_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.4"
+      },
+      "FightStateChanged": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:FightStateChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.10"
+      },
+      "OnRep_FightComplete": {
+        "ObjectName": "Function'BP_GelsphereInterface_B1C2_EcolabA_C:OnRep_FightComplete'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.9"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_GelsphereInterface_B1C2_EcolabA_C'Default__BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "InteractionCollision1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 43.910442,
+        "Y": 43.502857,
+        "Z": 23.541061
+      },
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "bGenerateOverlapEvents": true,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "Building_Structure": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Interactable": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 3.4189172E-06,
+        "Y": 1.8740437,
+        "Z": 6.2319794
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 45.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BP_GelsphereInterface_B1C2_EcolabA_C",
+    "Name": "Default__BP_GelsphereInterface_B1C2_EcolabA_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.BP_GelsphereInterface_B1C2_EcolabA_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DialogueData": {
+        "ObjectName": "Dialogue'DA_Dialogue_rgn4f'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPCs/Dialogue/Generated/DA_Dialogue_rgn4f.18"
+      },
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bReplicates": true,
+      "RemoteRole": "ROLE_SimulatedProxy"
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "InteractableBase",
+          "DelegatePropertyName": "m_NotifyOnInteract",
+          "FunctionNameToBind": "BndEvt__BP_ForgottenLab_GelsphereInterface_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_ForgottenLab_GelsphereInterface_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_GelsphereInterface_B1C2_EcolabA",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_CustomEvent_NewState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EContentGateStates'",
+          "ObjectPath": "DuneSandbox/Content/Dune/NPCBases/CampGameplay/ContentGate/EContentGateStates.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DuneCharacter_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_FindPlayerController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Player_Controller_Base",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerControllerBase'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDialoguePlayerComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DialoguePlayerComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bVisualsEnabled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Npc_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneNpcCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Dialogue'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchName_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_ContentGateComponent_C:OnStateChanged__DelegateSignature'",
+          "ObjectPath": "DuneSandbox/Content/Dune/NPCBases/CampGameplay/ContentGate/BP_ContentGateComponent.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FightStateChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "NewState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EContentGateStates'",
+          "ObjectPath": "DuneSandbox/Content/Dune/NPCBases/CampGameplay/ContentGate/EContentGateStates.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Multicast_ChangeVisuals",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bVisualsEnabled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_FightComplete",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Server_StartDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetServer | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractableBase_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "m_InteractableDisplayName": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_LostHarvest_GelsphereInterface",
+        "SourceString": "Data Storage Interface",
+        "LocalizedString": "Data Storage Interface"
+      },
+      "m_bShouldDisplayHint": true,
+      "m_bEnableAutoCollision": false,
+      "m_bUseSphereCollision": false,
+      "m_BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "m_CollisionRelativeTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 50.0
+        }
+      },
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_GelsphereConsoleInteraction_EcolabA_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereConsoleInteraction_EcolabA.0"
+        }
+      ],
+      "m_MaxInteractionDistance": 200.0,
+      "RelativeLocation": {
+        "X": -5.6720455E-07,
+        "Y": 37.860207,
+        "Z": 129.42656
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Highlight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5.684342E-14,
+        "Y": 28.642187,
+        "Z": 132.02028
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_GelsphereInterface_B1C2_EcolabA_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.14"
+      },
+      "VariableGuid": "29BA7BF5-4B3AC7FD-D88559A6-849B9719",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_GelsphereInterface_B1C2_EcolabA_C:SceneComponent1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.16"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.23"
+        }
+      ],
+      "VariableGuid": "B77B9E46-4722991C-9985B28F-7C969D50",
+      "InternalVariableName": "SceneComponent1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_GelsphereInterface_B1C2_EcolabA_C:Highlight1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.15"
+      },
+      "VariableGuid": "9F5047F7-46B6BE4B-A63A60B1-6D38A1C7",
+      "InternalVariableName": "Highlight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_GelsphereInterface_B1C2_EcolabA_C:Visuals1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.25"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.19"
+        }
+      ],
+      "VariableGuid": "BD988EBA-4DE04395-A6EF7FA4-3BF35741",
+      "InternalVariableName": "Visuals1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InteractableBaseComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InteractableBaseComponent'BP_GelsphereInterface_B1C2_EcolabA_C:InteractableBase_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.13"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.22"
+        }
+      ],
+      "VariableGuid": "BE4BE0D8-4FB6B34B-BE030DB2-D150303D",
+      "InternalVariableName": "InteractableBase"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_GelsphereInterface_B1C2_EcolabA_C:InteractionCollision1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.1"
+      },
+      "VariableGuid": "3E8B47B4-4BBD6D78-24E4FC94-0B5B87FF",
+      "InternalVariableName": "InteractionCollision1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_GelsphereInterface_B1C2_EcolabA_C:Visuals_Gelsphere_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.26"
+      },
+      "VariableGuid": "DAED9305-44D5A55B-4F974192-83D5ED6D",
+      "InternalVariableName": "Visuals_Gelsphere"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.23"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_GelsphereInterface_B1C2_EcolabA_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.17"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Visuals1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_DLC_B1C2_Env_Prop_ForgotEco_GelsphereConsole_RemovedSphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Ecolab/GelsphereConsole/Meshes/SM_DLC_B1C2_Env_Prop_ForgotEco_GelsphereConsole_RemovedSphere.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Visuals_Gelsphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_GelsphereInterface_B1C2_EcolabA_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_GelsphereInterface_B1C2_EcolabA.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_DLC_B1C2_Env_Prop_ForgotEco_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Ecolab/GelsphereConsole/Meshes/SM_DLC_B1C2_Env_Prop_ForgotEco_Gelsphere.1"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 42.0,
+        "Z": 119.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]

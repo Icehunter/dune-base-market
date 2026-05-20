@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Env_Prop_EcoB_WallShield_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoB/WallShield/Materials/MI_Env_Prop_EcoB_WallShield_01",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_B1C2_Env_Ecolab_SurfaceHologram_Primary'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Ecolabs/Materials/MI_B1C2_Env_Ecolab_SurfaceHologram_Primary.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Hologram Emissive - Global Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.5,
+          "ExpressionGUID": "1DF4DC3B-45A488AC-F8B0108B-F8D0BBDF"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Hologram Emissive - AO Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 6.0,
+          "ExpressionGUID": "7C37BA97-45A9FEBD-A8C72EA4-C5C6A122"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Curvature Highlights - Extent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.45,
+          "ExpressionGUID": "AF20160C-420270CE-47F6A7B3-E4EBF1FC"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Hologram Texture - Channel Selector",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "0000FF"
+          },
+          "ExpressionGUID": "1DA554DC-4C48589E-5AA34BAC-F773F888"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MaterialPreviewNoVT_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreviewNoVT_M.0"
+          },
+          "ExpressionGUID": "0AE72F20-451653DF-F5561685-7EB6AB70"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_SM_Env_Prop_EcoB_WallShield_01_N'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoB/WallShield/Textures/T_SM_Env_Prop_EcoB_WallShield_01_N.0"
+          },
+          "ExpressionGUID": "9B290784-417AB3CB-5E22B990-E1D849F4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailMask - Texture _M",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_DetailMask_Dirt_02_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_Lib_DetailMask_Dirt_02_M.0"
+          },
+          "ExpressionGUID": "ECF7FC32-4347401D-4E3F6D8F-1C2D1B11"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Hologram Pattern Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_DetailMask_Scratches_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_Lib_DetailMask_Scratches_01_M.0"
+          },
+          "ExpressionGUID": "B2553093-4F6C6608-0A2CB8A5-D63AECE3"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Pattern Texture",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "5CC80019-465AD2F4-FEF91FBA-ED365D50"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_DetailMask_Dirt_02_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_DetailMask_Scratches_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SM_Env_Prop_EcoB_WallShield_01_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

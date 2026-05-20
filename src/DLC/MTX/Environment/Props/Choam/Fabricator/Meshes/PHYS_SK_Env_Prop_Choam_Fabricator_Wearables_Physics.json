@@ -1,0 +1,179 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics:SkeletalBodySetup_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics.1"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": []
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Outer": {
+      "ObjectName": "PhysicsAsset'PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Fabricator/Meshes/PHYS_SK_Env_Prop_Choam_Fabricator_Wearables_Physics.0"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -32.029526,
+              "Y": 64.522194,
+              "Z": 16.84722
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 157.59998,
+            "Y": 246.86775,
+            "Z": 36.976368,
+            "RestOffset": 0.0,
+            "Name": "bottom_floor_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": -24.156527,
+              "Y": 77.12229,
+              "Z": 251.33942
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 243.60002,
+            "Y": 189.2278,
+            "Z": 36.18001,
+            "RestOffset": 0.0,
+            "Name": "top_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 57.43185,
+              "Y": 77.122,
+              "Z": 126.99113
+            },
+            "Rotation": {
+              "Pitch": -90.0,
+              "Yaw": 179.24037,
+              "Roll": -179.2406
+            },
+            "X": 258.64005,
+            "Y": 189.2278,
+            "Z": 82.54001,
+            "RestOffset": 0.0,
+            "Name": "right_wall_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": -105.14741,
+              "Y": 77.1227,
+              "Z": 126.99113
+            },
+            "Rotation": {
+              "Pitch": -90.0,
+              "Yaw": 179.92085,
+              "Roll": -179.92108
+            },
+            "X": 258.64005,
+            "Y": 189.2278,
+            "Z": 82.54001,
+            "RestOffset": 0.0,
+            "Name": "left_wall_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 20.93512,
+              "Y": 202.905,
+              "Z": 5.9892847E-07
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 93.36617,
+            "Y": 82.78104,
+            "Z": 7.5,
+            "RestOffset": 0.0,
+            "Name": "move_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": -24.915634,
+              "Y": -35.370804,
+              "Z": 37.792324
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 220.22002,
+            "Y": 48.80781,
+            "Z": 81.19636,
+            "RestOffset": 0.0,
+            "Name": "move_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": -53.949547,
+              "Y": 199.93135,
+              "Z": 62.380524
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 38.026146,
+            "Y": 35.00104,
+            "Z": 128.4,
+            "RestOffset": 0.0,
+            "Name": "move_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "move",
+      "PhysicsType": "PhysType_Kinematic",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "76E8BAC54D86D3ADA76D5AA387DBBFE1"
+  }
+]

@@ -1,0 +1,1107 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ConsoleInteract_ConsolePanel_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_ConsoleInteract_ConsolePanel_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.2"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:ExecuteUbergraph_BP_ConsoleInteract_ConsolePanel'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:BP_GetJourneyStoryEventComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.6"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:BndEvt__BP_WoH_BridgeSection_LightSwitch_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.5"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:InteractionSuccess'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.10"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:DeactivateInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.7"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:ForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.9"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:Reset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.11"
+      },
+      {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:ExecuteUbergraph_BP_ConsoleInteract_ConsolePanel'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Switch1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SuccessLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FailLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Switch",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractableBase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'InteractableBaseComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PentaShield",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_WoH_BridgePentashield_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Maps/OverlandMaps_Story/WreckOfTheHephaestus/Blueprints/BP_WoH_BridgePentashield.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CanInteract",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 16,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Door",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bRequiresTagToOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RequiredGameplayTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSingleInteractionOnly",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "VODelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SFX_VO",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DelayBetweenAdditionalVOLine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SFX_VO2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bHasPlayedVO",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 17,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ConsoleInteract_ConsolePanel": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:ExecuteUbergraph_BP_ConsoleInteract_ConsolePanel'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.8"
+      },
+      "Reset": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:Reset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.11"
+      },
+      "ForceReset": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:ForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.9"
+      },
+      "DeactivateInteraction": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:DeactivateInteraction'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.7"
+      },
+      "InteractionSuccess": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:InteractionSuccess'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.10"
+      },
+      "BndEvt__BP_WoH_BridgeSection_LightSwitch_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:BndEvt__BP_WoH_BridgeSection_LightSwitch_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.5"
+      },
+      "BP_GetJourneyStoryEventComponent": {
+        "ObjectName": "Function'BP_ConsoleInteract_ConsolePanel_C:BP_GetJourneyStoryEventComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'JourneyStoryEventInterface'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ConsoleInteract_ConsolePanel_C'Default__BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/CoreUObject.Class'\"/Script/DuneSandbox.JourneyStoryEventInterface\"'))"
+    }
+  },
+  {
+    "Type": "BP_ConsoleInteract_ConsolePanel_C",
+    "Name": "Default__BP_ConsoleInteract_ConsolePanel_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.BP_ConsoleInteract_ConsolePanel_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CanInteract": true,
+      "RequiredGameplayTag": {
+        "TagName": "None"
+      },
+      "VODelay": 0.5,
+      "DelayBetweenAdditionalVOLine": 1.25,
+      "bAlwaysRelevant": true,
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "InteractableBase",
+          "DelegatePropertyName": "m_NotifyOnInteract",
+          "FunctionNameToBind": "BndEvt__BP_WoH_BridgeSection_LightSwitch_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "m_AudioSettings": {
+        "ObjectName": "FcAudioObjectSettingsAsset'AOS_10m'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/AudioObjectSettings/AOS_10m.0"
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "m_AudioSettings": {
+        "ObjectName": "FcAudioObjectSettingsAsset'AOS_10m'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/AudioObjectSettings/AOS_10m.0"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_WoH_BridgeSection_LightSwitch_InteractableBase_K2Node_ComponentBoundEvent_0_NotifyOnInteract__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_GetJourneyStoryEventComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'JourneyStoryEventComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DeactivateInteraction",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ConsoleInteract_ConsolePanel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_DuneCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DuneCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Interaction",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Interaction'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Player_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_PlayerFlagsGetter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_BreakGameplayTagContainer_GameplayTags",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_BreakGameplayTagContainer_GameplayTags",
+          "Flags": "RF_Public",
+          "ElementSize": 12,
+          "Struct": {
+            "ObjectName": "ScriptStruct'GameplayTag'",
+            "ObjectPath": "/Script/GameplayTags"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsInteractionSuccessful",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ForceReset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InteractionSuccess",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsInteractionSuccessful",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Reset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractableBase_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "m_bShouldDisplayHint": true,
+      "m_bUseSphereCollision": false,
+      "m_BoxExtent": {
+        "X": 50.0,
+        "Y": 45.0,
+        "Z": 80.0
+      },
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_SimpleInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleInteraction.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 2.626712E-07,
+        "Y": -2.0980332,
+        "Z": 119.419304
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "FailLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "AttenuationRadius": 200.0,
+      "Intensity": 500.0,
+      "LightColor": {
+        "B": 37,
+        "G": 0,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF0025"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 17.0,
+        "Z": 152.0
+      },
+      "bVisible": false
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "SuccessLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "AttenuationRadius": 200.0,
+      "Intensity": 500.0,
+      "LightColor": {
+        "B": 83,
+        "G": 248,
+        "R": 16,
+        "A": 255,
+        "Hex": "10F853"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 17.0,
+        "Z": 152.0
+      },
+      "bVisible": false
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ConsoleInteract_ConsolePanel_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.15"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.22"
+        }
+      ],
+      "VariableGuid": "EF7949B4-466817B0-2DA12484-43FAA1BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'InteractableBaseComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "InteractableBaseComponent'BP_ConsoleInteract_ConsolePanel_C:InteractableBase_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.12"
+      },
+      "VariableGuid": "F64D36F9-4FFDBA59-F23D829B-A631ABB1",
+      "InternalVariableName": "InteractableBase"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_ConsoleInteract_ConsolePanel_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.4"
+      },
+      "VariableGuid": "4E5B122C-49853896-5DD9DCAA-EC8ECCB1",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ConsoleInteract_ConsolePanel_C:Switch_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.26"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.23"
+        }
+      ],
+      "VariableGuid": "34F4E7C1-421C3BDF-99475191-1B6E098F",
+      "InternalVariableName": "Switch"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_ConsoleInteract_ConsolePanel_C:FailLight_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.13"
+      },
+      "VariableGuid": "A59010D3-40DD471D-82B54AAB-BE1F308C",
+      "InternalVariableName": "FailLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_ConsoleInteract_ConsolePanel_C:SuccessLight_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.14"
+      },
+      "VariableGuid": "E61B131B-43266313-F295C993-8CD4EC0D",
+      "InternalVariableName": "SuccessLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_ConsoleInteract_ConsolePanel_C:DuneAudioEmitter1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.3"
+      },
+      "VariableGuid": "0B79DBAE-4A9252D5-E7E0A5BF-73358897",
+      "InternalVariableName": "DuneAudioEmitter1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ConsoleInteract_ConsolePanel_C:Switch1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.25"
+      },
+      "VariableGuid": "27250B18-45AD0ACF-29CB1BA9-09BFBDE5",
+      "InternalVariableName": "Switch1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ConsoleInteract_ConsolePanel_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Switch1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Neut_UniversalPanel_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Neut/UniversalPanels/Meshes/SM_Env_Prop_Neut_UniversalPanel_01.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGC_Green03_Emissive_INST'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Materials/BlockOut/GridColors/Emissive/LDGC_Green03_Emissive_INST.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGC_Green03_Emissive_INST'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Materials/BlockOut/GridColors/Emissive/LDGC_Green03_Emissive_INST.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 7.527987,
+        "Y": 28.49803,
+        "Z": 116.49021
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0997888,
+        "Y": 1.0997888,
+        "Z": 1.0997888
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Switch_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ConsoleInteract_ConsolePanel_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_ConsoleInteract_ConsolePanel.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Choam_Terminal_Comms01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Terminals/Meshes/SM_Env_Prop_Choam_Terminal_Comms01.1"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGC_Green03_Emissive_INST'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Materials/BlockOut/GridColors/Emissive/LDGC_Green03_Emissive_INST.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'LDGC_Green03_Emissive_INST'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Materials/BlockOut/GridColors/Emissive/LDGC_Green03_Emissive_INST.0"
+        }
+      ]
+    }
+  }
+]

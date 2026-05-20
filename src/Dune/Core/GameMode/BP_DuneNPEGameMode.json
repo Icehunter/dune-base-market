@@ -1,0 +1,724 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DuneNPEGameMode_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DuneNPEGameMode_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DuneSandboxNPEGameModeBase'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Transient | CLASS_NotPlaceable | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DuneNPEGameMode_C'Default__BP_DuneNPEGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DuneNPEGameMode_C",
+    "Name": "Default__BP_DuneNPEGameMode_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.BP_DuneNPEGameMode_C'",
+    "Package": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode",
+    "Properties": {
+      "m_CheckpointStateMap": [
+        {
+          "Key": "0",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_DisableHydrationDrain_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_DisableHydrationDrain_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_StartWithLowHP_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_StartWithLowHP_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_BP_NPE_DisableSprint_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_BP_NPE_DisableSprint.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_SetLowHydration_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_SetLowHydration_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_BP_NPE_HealthRegenMaxPercentage_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_BP_NPE_HealthRegenMaxPercentage.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_NPE_HeatExhaustionProtection_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_NPE_HeatExhaustionProtection.0"
+              }
+            ],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [],
+            "m_ExpectedNpcCount": 0
+          }
+        },
+        {
+          "Key": "400",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_DisableHydrationDrain_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_DisableHydrationDrain_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_SetLowHydration_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_SetLowHydration_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_BP_NPE_HealthRegenMaxPercentage_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_BP_NPE_HealthRegenMaxPercentage.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_NPE_HeatExhaustionProtection_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_NPE_HeatExhaustionProtection.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_StartWithLowHP_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_StartWithLowHP_GE.0"
+              }
+            ],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 4
+          }
+        },
+        {
+          "Key": "500",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_DisableHydrationDrain_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_DisableHydrationDrain_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'BP_NPE_SetLowHydration_GE_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/BP_NPE_SetLowHydration_GE.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_BP_NPE_HealthRegenMaxPercentage_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_BP_NPE_HealthRegenMaxPercentage.0"
+              },
+              {
+                "ObjectName": "BlueprintGeneratedClass'GE_NPE_HeatExhaustionProtection_C'",
+                "ObjectPath": "DuneSandbox/Content/Dune/Abilities/NPE/GE_NPE_HeatExhaustionProtection.0"
+              }
+            ],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 4
+          }
+        },
+        {
+          "Key": "550",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "MiningTool_1h_Standard"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PowerPack"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 4
+          }
+        },
+        {
+          "Key": "600",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "MiningTool_1h_Standard"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PowerPack"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 4
+          }
+        },
+        {
+          "Key": "700",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "MiningTool_1h_Standard"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PowerPack"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 2
+          }
+        },
+        {
+          "Key": "710",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "MiningTool_1h_Standard"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PowerPack"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 1
+          }
+        },
+        {
+          "Key": "720",
+          "Value": {
+            "m_PlayerStatsEffectClasses": [],
+            "m_NonDefaultItems": [
+              {
+                "TemplateId": {
+                  "Name": "ManualOfTheFriendlyDesertSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPackSchematic"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "NPE_ScrapMetalKnife"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PlantFiber"
+                },
+                "Quantity": 20,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "HealthPack_Channeled"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "MiningTool_1h_Standard"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "PowerPack"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              },
+              {
+                "TemplateId": {
+                  "Name": "Social_Choam_MaulaCastOffs01_Top_Fremkit"
+                },
+                "Quantity": 1,
+                "QualityLevel": 0,
+                "Durability": 1.0
+              }
+            ],
+            "m_HUDUnlockLevel": [
+              "EHUDUnlockLevel::PlayerMenu",
+              "EHUDUnlockLevel::Health",
+              "EHUDUnlockLevel::Stamina",
+              "EHUDUnlockLevel::Hydration"
+            ],
+            "m_ExpectedNpcCount": 1
+          }
+        }
+      ],
+      "m_NPEEffect": {
+        "ObjectName": "BlueprintGeneratedClass'GE_NPE_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPE/GE_NPE.0"
+      },
+      "m_DefaultInventory": {
+        "Name": "NPE_Start"
+      },
+      "GameStateClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DuneGameState_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameState/BP_DuneGameState.0"
+      },
+      "PlayerControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DunePlayerController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/BP_DunePlayerController.1"
+      },
+      "PlayerStateClass": {
+        "ObjectName": "Class'DunePlayerState'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "HUDClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DuneHUD_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/GUI/Blueprints/BP_DuneHUD.0"
+      },
+      "DefaultPawnClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Npe_DunePlayerCharacter_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPE/BP_Npe_DunePlayerCharacter.14"
+      },
+      "ReplaySpectatorPlayerControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DunePlayerController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/BP_DunePlayerController.1"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneNPEGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_DuneNPEGameMode_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.4"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DuneNPEGameMode_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.2"
+      },
+      "VariableGuid": "AB9D33C9-42AF7362-EE97B89B-C5B44310",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DuneNPEGameMode_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneNPEGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.3"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DuneNPEGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.3"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DuneNPEGameMode_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/GameMode/BP_DuneNPEGameMode.3"
+      }
+    }
+  }
+]

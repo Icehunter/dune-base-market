@@ -1,0 +1,425 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AISpawnLocation_FalseTitan_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AIStaticSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AIStaticSpawnLocation.2"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AISpawnLocation_FalseTitan_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AISpawnLocation_FalseTitan_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.7"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ExecuteUbergraph_BP_AISpawnLocation_FalseTitan'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AIStaticSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AIStaticSpawnLocation.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ReceiveOnNpcSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.5"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.3"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ShowHideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.6"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ExecuteUbergraph_BP_AISpawnLocation_FalseTitan'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.2"
+      },
+      {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:NPC_Spawned__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "NPC_Spawned",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:NPC_Spawned__DelegateSignature'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ResetableTrigger",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_HideNPC_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger_HideNPC.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "NPC_Spawned__DelegateSignature": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:NPC_Spawned__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.4"
+      },
+      "ExecuteUbergraph_BP_AISpawnLocation_FalseTitan": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ExecuteUbergraph_BP_AISpawnLocation_FalseTitan'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.2"
+      },
+      "ShowHideNPC": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ShowHideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.6"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.3"
+      },
+      "ReceiveOnNpcSpawned": {
+        "ObjectName": "Function'BP_AISpawnLocation_FalseTitan_C:ReceiveOnNpcSpawned'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AISpawnLocation_FalseTitan_C'Default__BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BP_AISpawnLocation_FalseTitan_C",
+    "Name": "Default__BP_AISpawnLocation_FalseTitan_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.BP_AISpawnLocation_FalseTitan_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan",
+    "Template": {
+      "ObjectName": "BP_AIStaticSpawnLocation_C'Default__BP_AIStaticSpawnLocation_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AIStaticSpawnLocation.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AISpawnLocation_FalseTitan",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsBPI_NPCSpawn",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_NPCSpawn_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BPI_NPCSpawn.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "NPC_Spawned__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnNpcSpawned",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_AIStaticSpawnLocation_C:ReceiveOnNpcSpawned'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AIStaticSpawnLocation.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_AIStaticSpawnLocation_C:ReceiveOnNpcSpawned'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Spawners/BP_AIStaticSpawnLocation.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShowHideNPC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AISpawnLocation_FalseTitan_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AISpawnLocation_FalseTitan_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.8"
+      },
+      "VariableGuid": "5D6F9CA3-43EF9D79-7877948D-ECED1F61",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AISpawnLocation_FalseTitan_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AISpawnLocation_FalseTitan_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_AISpawnLocation_FalseTitan.9"
+      }
+    }
+  }
+]

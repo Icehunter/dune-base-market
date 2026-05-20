@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_Weapon",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_Weapon",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_LayeredMaterial_Weapons'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_LayeredMaterial_Weapons.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Tiling UV Aspect X",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 3.0,
+          "ExpressionGUID": "C1BAE640-414F617B-0C9F52AA-853DADA4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Tiling UV Aspect Y",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 3.0,
+          "ExpressionGUID": "03EBE5AD-4D26D064-3D5AFEAF-64512C36"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Buildup textures tiling (in meters for triplanar)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 4.0,
+          "ExpressionGUID": "32DBA5E2-4692DC61-7C9EB681-6EBA8F26"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Mask Edge Softness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "FED71936-484D553C-9028BC98-70A59B2F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "DitheredLODTransition": true,
+        "BlendMode": "BLEND_Masked",
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseTilingTexturesUVChannel",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "43961A49-4DAD5008-C1217C96-D808F343"
+          }
+        ]
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'HumanSkinSSS'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Materials/HumanSkinSSS.0"
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 6.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_DetailMask_01_M"
+        },
+        {
+          "SamplingScale": 3.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Dev_MaterialLibrary_Checker_D"
+        },
+        {
+          "SamplingScale": 3.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Dev_MaterialLibrary_FlatNormal_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 3.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_MLS_Metal_Steel_05_D"
+        },
+        {
+          "SamplingScale": 3.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_MLS_Metal_Steel_05_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

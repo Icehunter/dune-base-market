@@ -1,0 +1,1790 @@
+[
+  {
+    "Type": "ActorInventory",
+    "Name": "AbilityInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.0"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "BackpackInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.1"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "EquipmentInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.2"
+    }
+  },
+  {
+    "Type": "ActorInventoryReplicateToAll",
+    "Name": "LootInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventoryReplicateToAll'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_CivilianBase_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.3"
+    }
+  },
+  {
+    "Type": "AIPerceptionStimuliSourceComponent",
+    "Name": "AIStimuliSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AIPerceptionStimuliSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_CivilianBase_C:AIStimuliSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.4"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FalseTitanNPC_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.5"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_FalseTitanNPC_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.28"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ExecuteUbergraph_BP_FalseTitanNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.23"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:CanStartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.20"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.25"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:StartTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.27"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ClearTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.22"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.26"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:FinalizeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.24"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:CharacterReady'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.21"
+      },
+      {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ExecuteUbergraph_BP_FalseTitanNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.23"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DeathAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MercunaGroundNavInvoker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MercunaGroundNavInvokerComponent'",
+          "ObjectPath": "/Script/Mercuna"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MercunaGroundNavigation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MercunaGroundNavigationComponent'",
+          "ObjectPath": "/Script/Mercuna"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PersonalPostProcess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TargetForgetTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BBVariableName_Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_FalseTitanNPC": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ExecuteUbergraph_BP_FalseTitanNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.23"
+      },
+      "CharacterReady": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:CharacterReady'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.21"
+      },
+      "FinalizeDialogue": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:FinalizeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.24"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.26"
+      },
+      "ClearTargetForgetTimer": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:ClearTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.22"
+      },
+      "StartTargetForgetTimer": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:StartTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.27"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.25"
+      },
+      "CanStartDialogue": {
+        "ObjectName": "Function'BP_FalseTitanNPC_C:CanStartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.20"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_NPCBehaviorTree_Interface_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/AI/Shared/Structs/BPI_NPCBehaviorTree_Interface.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      },
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/AI/Shared/Structs/BPI_NPCBehaviorTree_Interface.BPI_NPCBehaviorTree_Interface_C\"'),(Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Extended parry collision volume",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "WeaponActorComponent'Default__BP_FalseTitanNPC_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.49"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_CivilianBase_C:Weapon.Extended parry collision volume'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.6"
+    }
+  },
+  {
+    "Type": "BP_FalseTitanNPC_C",
+    "Name": "Default__BP_FalseTitanNPC_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.BP_FalseTitanNPC_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC",
+    "Template": {
+      "ObjectName": "BP_CivilianBase_C'Default__BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "TargetForgetTimer": {
+        "Handle": 0
+      },
+      "BBVariableName_Target": "Target",
+      "m_QuicksandComponent": {
+        "ObjectName": "PlayerQuicksandActorComponent'Default__BP_FalseTitanNPC_C:QuicksandComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.36"
+      },
+      "m_ContractContentComponent": {
+        "ObjectName": "ContractContentComponent'Default__BP_FalseTitanNPC_C:ContractContentComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.9"
+      },
+      "m_LootInventoryComponent": {
+        "ObjectName": "ActorInventoryReplicateToAll'Default__BP_FalseTitanNPC_C:LootInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.3"
+      },
+      "m_DuneNPCCharacterAttributeSet": null,
+      "m_AIStimuliSourceComponent": {
+        "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_FalseTitanNPC_C:AIStimuliSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.4"
+      },
+      "m_NpcCombatTargetComponent": {
+        "ObjectName": "NpcCombatTargetComponent'Default__BP_FalseTitanNPC_C:NpcCombatTarget'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.35"
+      },
+      "m_AbilitySystemComponent": {
+        "ObjectName": "DuneAbilitySystemComponent'Default__BP_FalseTitanNPC_C:AbilityComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.11"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_FalseTitanNPC_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.10"
+      },
+      "m_SandwormThreatSourceComponent": {
+        "ObjectName": "SandwormThreatSourceComponent'Default__BP_FalseTitanNPC_C:SandwormThreatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.38"
+      },
+      "m_ReplicatedAssetsListComponent": {
+        "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_FalseTitanNPC_C:SimProxyReplicatedAssetsList'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.47"
+      },
+      "m_BackpackInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:BackpackInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.1"
+      },
+      "m_EquipmentInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:EquipmentInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.2"
+      },
+      "m_AbilityInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:AbilityInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.0"
+      },
+      "m_WeaponComponent": {
+        "ObjectName": "WeaponActorComponent'Default__BP_FalseTitanNPC_C:Weapon'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.49"
+      },
+      "m_LootContainerType": {
+        "Name": "Default"
+      },
+      "m_DuneCharacterAttributeSet": {
+        "ObjectName": "DuneCharacterAttributeSet'Default__BP_FalseTitanNPC_C:CharacterStats'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.14"
+      },
+      "m_DamageMitigationAttributeSet": null,
+      "m_DuneShieldAttributeSet": null,
+      "m_DunePoiseAttributeSet": null,
+      "m_WornItemSerializableList": {
+        "DeltaFlags": "EFastArraySerializerDeltaFlags::HasBeenSerialized"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_FalseTitanNPC_C:CharacterMesh0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.48"
+      },
+      "CharacterMovement": {
+        "ObjectName": "DuneCharacterMovementComponent'Default__BP_FalseTitanNPC_C:CharMoveComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.15"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_FalseTitanNPC_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.8"
+      },
+      "AutoPossessAI": "EAutoPossessAI::PlacedInWorldOrSpawned",
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Npc_SoldierBase_AIController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_AIController.1"
+      },
+      "bUsesFgl": true,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_FalseTitanNPC_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.8"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_CivilianBase_C:CollisionCylinder'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.8"
+    },
+    "Properties": {
+      "bGenerateOverlapEvents": true,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Camera": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "ContractContentComponent",
+    "Name": "ContractContentComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContractContentComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "ContractContentComponent'Default__BP_CivilianBase_C:ContractContentComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.9"
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DamageableActorComponent'Default__BP_CivilianBase_C:DamageableActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.10"
+    }
+  },
+  {
+    "Type": "DuneAbilitySystemComponent",
+    "Name": "AbilityComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAbilitySystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneAbilitySystemComponent'Default__BP_CivilianBase_C:AbilityComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.11"
+    },
+    "Properties": {
+      "ReplicatedPredictionKeyMap": {
+        "PredictionKeys": [
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 1,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 2,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 3,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 4,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 5,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 6,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 7,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 8,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 9,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 10,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 11,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 12,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 13,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 14,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 15,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 16,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 17,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 18,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 19,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 20,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 21,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 22,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 23,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 24,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 25,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 26,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 27,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 28,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 29,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 30,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 31,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 32,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          }
+        ],
+        "ArrayReplicationKey": 32
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DeathAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    }
+  },
+  {
+    "Type": "DuneCharacterAttributeSet",
+    "Name": "CharacterStats",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterAttributeSet'Default__BP_CivilianBase_C:CharacterStats'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.12"
+    }
+  },
+  {
+    "Type": "DuneCharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterMovementComponent'Default__BP_CivilianBase_C:CharMoveComp'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.13"
+    },
+    "Properties": {
+      "m_DefaultRotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 220.0,
+        "Roll": 0.0
+      },
+      "RotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 220.0,
+        "Roll": 0.0
+      },
+      "bUseControllerDesiredRotation": true,
+      "bOrientRotationToMovement": true
+    }
+  },
+  {
+    "Type": "DuneDamageMitigationAttributeSet",
+    "Name": "DamageMitigationAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneDamageMitigationAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneDamageMitigationAttributeSet'Default__BP_CivilianBase_C:DamageMitigationAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.14"
+    }
+  },
+  {
+    "Type": "DuneNPCCharacterAttributeSet",
+    "Name": "NPCCharacterAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneNPCCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneNPCCharacterAttributeSet'Default__BP_CivilianBase_C:NPCCharacterAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.15"
+    }
+  },
+  {
+    "Type": "DunePoiseAttributeSet",
+    "Name": "PoiseAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DunePoiseAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DunePoiseAttributeSet'Default__BP_CivilianBase_C:PoiseAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.16"
+    }
+  },
+  {
+    "Type": "DuneShieldAttributeSet",
+    "Name": "ShieldAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneShieldAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "DuneShieldAttributeSet'Default__BP_CivilianBase_C:ShieldAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.17"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanStartDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DialogueInterface:CanStartDialogue'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": {
+          "ObjectName": "Enum'EDialogueCanStartResult'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeLiteralGameplayTagContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_PlayerFlagsGetter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_CanStartDialogue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDialogueCanStartResult'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "CharacterReady",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearTargetForgetTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_FalseTitanNPC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'ObjectInstanceUpdatedDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacterCustomizableObjectInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FinalizeDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DialogueInterface:FinalizeDialogue'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartTargetForgetTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "AbilityInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.0"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:AbilityInventory.AbilityInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.18"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "BackpackInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.1"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:BackpackInventory.BackpackInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.19"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "EquipmentInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_FalseTitanNPC_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.2"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:EquipmentInventory.EquipmentInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.20"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "LootInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_FalseTitanNPC_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.3"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:LootInventory.LootInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.21"
+    }
+  },
+  {
+    "Type": "MercunaGroundNavigationComponent",
+    "Name": "MercunaGroundNavigation_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MercunaGroundNavigationComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "Properties": {
+      "AgentType": {
+        "Name": "StandardHumanoid"
+      },
+      "bSetCharacterControllerRotation": false
+    }
+  },
+  {
+    "Type": "MercunaGroundNavInvokerComponent",
+    "Name": "MercunaGroundNavInvoker_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MercunaGroundNavInvokerComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "Properties": {
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NpcCombatTargetComponent",
+    "Name": "NpcCombatTarget",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NpcCombatTargetComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "NpcCombatTargetComponent'Default__BP_CivilianBase_C:NpcCombatTarget'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.22"
+    }
+  },
+  {
+    "Type": "PlayerQuicksandActorComponent",
+    "Name": "QuicksandComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlayerQuicksandActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "PlayerQuicksandActorComponent'Default__BP_CivilianBase_C:QuicksandComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.23"
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PersonalPostProcess_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "Properties": {
+      "Settings": {
+        "AutoExposureBiasBackup": 1.0,
+        "WeightedBlendables": {
+          "Array": [
+            {
+              "Weight": 1.0,
+              "Object": null
+            }
+          ]
+        }
+      },
+      "bUnbound": false
+    }
+  },
+  {
+    "Type": "SandwormThreatSourceComponent",
+    "Name": "SandwormThreatSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SandwormThreatSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "SandwormThreatSourceComponent'Default__BP_CivilianBase_C:SandwormThreatSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.24"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_FalseTitanNPC_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.39"
+      },
+      "VariableGuid": "25179C76-43FD127A-AFCEA1A3-18F94E6A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MercunaGroundNavInvokerComponent'",
+        "ObjectPath": "/Script/Mercuna"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MercunaGroundNavInvokerComponent'BP_FalseTitanNPC_C:MercunaGroundNavInvoker_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.34"
+      },
+      "VariableGuid": "2032A46A-46585504-DC630089-72A35668",
+      "InternalVariableName": "MercunaGroundNavInvoker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'BP_FalseTitanNPC_C:PersonalPostProcess_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.37"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8A4C7150-4C7E7F24-3376EEBC-4BC8C25C",
+      "InternalVariableName": "PersonalPostProcess"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MercunaGroundNavigationComponent'",
+        "ObjectPath": "/Script/Mercuna"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MercunaGroundNavigationComponent'BP_FalseTitanNPC_C:MercunaGroundNavigation_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.33"
+      },
+      "VariableGuid": "B7C2C1F1-486269BD-8BAD46A3-157FBE6D",
+      "InternalVariableName": "MercunaGroundNavigation"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_FalseTitanNPC_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.13"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E806D80C-4AAF26BE-80CEE398-3BA266BF",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_FalseTitanNPC_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_FalseTitanNPC_C:DeathAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.12"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7D3EA378-4C85F07E-354073BD-D6A5F7A5",
+      "InternalVariableName": "DeathAudioEmitter"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.5"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.45"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.45"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_FalseTitanNPC_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.40"
+      }
+    }
+  },
+  {
+    "Type": "SimProxyReplicatedAssetsList",
+    "Name": "SimProxyReplicatedAssetsList",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimProxyReplicatedAssetsList'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_CivilianBase_C:SimProxyReplicatedAssetsList'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.28"
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_CivilianBase_C:CharacterMesh0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.29"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_StaticCivilian_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPCs/StaticCivilian/AB_StaticCivilian.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Dune_LowPolyMannequin'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Bodies/Neutral/LowPoly/SK_Dune_LowPolyMannequin.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_Dune_LowPolyMannequin'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Bodies/Neutral/LowPoly/SK_Dune_LowPolyMannequin.0"
+      },
+      "bComponentUseFixedSkelBounds": true,
+      "bReceivesDecals": false,
+      "CastShadow": false,
+      "BodyInstance": {
+        "CollisionEnabled": "CharacterMeshNPC",
+        "ResponseArray": {
+          "Pawn": "Ignore",
+          "Camera": "Overlap",
+          "Vehicle": "Ignore",
+          "Trace_Combat": "Block",
+          "Trace_VehicleCamera": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_FalseTitanNPC_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.8"
+      },
+      "RelativeLocation": {
+        "X": -274.78378,
+        "Y": 2.19829E-08,
+        "Z": 101.31455
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "bVisible": false,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "WeaponActorComponent",
+    "Name": "Weapon",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WeaponActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_FalseTitanNPC_C'Default__BP_FalseTitanNPC_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.7"
+    },
+    "Template": {
+      "ObjectName": "WeaponActorComponent'Default__BP_CivilianBase_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.30"
+    },
+    "Properties": {
+      "m_ExtendedParryCollisionVolume": {
+        "ObjectName": "BoxComponent'Default__BP_FalseTitanNPC_C:Weapon.Extended parry collision volume'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_FalseTitanNPC.6"
+      }
+    }
+  }
+]

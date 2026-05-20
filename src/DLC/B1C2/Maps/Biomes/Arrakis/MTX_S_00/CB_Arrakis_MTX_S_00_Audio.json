@@ -1,0 +1,4594 @@
+[
+  {
+    "Type": "AkLateReverbComponent",
+    "Name": "LateReverb",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AkLateReverbComponent'",
+    "Outer": {
+      "ObjectName": "BP_SpatialAudioVolume_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.33"
+    },
+    "Template": {
+      "ObjectName": "AkLateReverbComponent'Default__BP_SpatialAudioVolume_C:LateReverb'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SpatialAudioVolume.0"
+    },
+    "Properties": {
+      "Priority": 3.0,
+      "AttachParent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.34"
+      },
+      "PrimaryComponentTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "AkSurfaceReflectorSetComponent",
+    "Name": "SurfaceReflector",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AkSurfaceReflectorSetComponent'",
+    "Outer": {
+      "ObjectName": "BP_SpatialAudioVolume_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.33"
+    },
+    "Template": {
+      "ObjectName": "AkSurfaceReflectorSetComponent'Default__BP_SpatialAudioVolume_C:SurfaceReflector'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SpatialAudioVolume.1"
+    },
+    "Properties": {
+      "AcousticPolys": [
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 3200000.0
+        },
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 7264521.5
+        },
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 3206513.2
+        },
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 5972347.5
+        },
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 8028213.0
+        },
+        {
+          "Texture": null,
+          "Occlusion": 1.0,
+          "EnableSurface": true,
+          "SurfaceArea": 8028213.0
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.34"
+      }
+    }
+  },
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.34"
+    },
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -100.0,
+                "Y": 100.0,
+                "Z": -100.0
+              },
+              {
+                "X": -100.0,
+                "Y": 100.0,
+                "Z": 100.0
+              },
+              {
+                "X": -100.0,
+                "Y": -100.0,
+                "Z": 100.0
+              },
+              {
+                "X": -100.0,
+                "Y": -100.0,
+                "Z": -100.0
+              },
+              {
+                "X": 126.33634,
+                "Y": 64.88526,
+                "Z": -100.0
+              },
+              {
+                "X": 126.33634,
+                "Y": 64.88526,
+                "Z": 100.0
+              },
+              {
+                "X": 86.39612,
+                "Y": -118.91385,
+                "Z": -100.0
+              },
+              {
+                "X": 86.39612,
+                "Y": -118.91385,
+                "Z": 100.0
+              }
+            ],
+            "IndexData": [
+              5,
+              4,
+              1,
+              0,
+              2,
+              1,
+              0,
+              1,
+              4,
+              3,
+              0,
+              4,
+              3,
+              2,
+              0,
+              6,
+              3,
+              4,
+              6,
+              2,
+              3,
+              5,
+              1,
+              2,
+              5,
+              6,
+              4,
+              7,
+              5,
+              2,
+              7,
+              6,
+              5,
+              7,
+              2,
+              6
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -100.0,
+                "Y": -118.91385,
+                "Z": -100.0
+              },
+              "Max": {
+                "X": 126.33634,
+                "Y": 100.0,
+                "Z": 100.0
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "bGenerateMirroredCollision": false,
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B0DF52024BBECB71784D2BADBAB0B339",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 503,
+        "SizeOnDisk": 503,
+        "OffsetInFile": "0x4D8"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.LevelBounds_CB_Template_Generic_S_00_Audio'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.70"
+    },
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "Visibility": "Ignore",
+          "Camera": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -4.9628077E-05,
+        "Z": 7643.9795
+      },
+      "RelativeScale3D": {
+        "X": 50500.0,
+        "Y": 50500.0,
+        "Z": 16833.334
+      }
+    }
+  },
+  {
+    "Type": "BP_AudioSplineEmitter_C",
+    "Name": "AS_High_Wind",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineEmitter.BP_AudioSplineEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_AudioSplineEmitter_C'Default__BP_AudioSplineEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineEmitter.1"
+    },
+    "Properties": {
+      "m_SplineComponent": {
+        "ObjectName": "FcAudioSplineComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind.Spline'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.66"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.74"
+      }
+    },
+    "ActorLabel": "AS_High_Wind"
+  },
+  {
+    "Type": "BP_AudioSplineTrigger_C",
+    "Name": "MusSplineTrigAll",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.BP_AudioSplineTrigger_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_AudioSplineTrigger_C'Default__BP_AudioSplineTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.1"
+    },
+    "Properties": {
+      "m_SplineComponent": {
+        "ObjectName": "FcAudioSplineComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll.Spline'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.67"
+      },
+      "m_NormalAudioEvents": {
+        "m_EnterEvents": [
+          {
+            "ObjectName": "FcAudioEvent'AD_Mus_Ch2LostH_Stranded_Z0_Ext'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/Music/MUS_Interactive/MUS_Map_S1/StoryLocations/Ch2-LostHarvest_J1_Stranded/AD_Mus_Ch2LostH_Stranded_Z0_Ext.0"
+          }
+        ]
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.75"
+      }
+    },
+    "ActorLabel": "MusSplineTrigAll"
+  },
+  {
+    "Type": "BP_AudioSplineTrigger_C",
+    "Name": "MusSplineTrigAll_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.BP_AudioSplineTrigger_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_AudioSplineTrigger_C'Default__BP_AudioSplineTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.1"
+    },
+    "Properties": {
+      "m_SplineComponent": {
+        "ObjectName": "FcAudioSplineComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0.Spline'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.68"
+      },
+      "m_NormalAudioEvents": {
+        "m_EnterEvents": [
+          {
+            "ObjectName": "FcAudioEvent'AD_AMB_SDM_EXT'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/AMB/AMB_StrandedDuneMen/AD_AMB_SDM_EXT.0"
+          }
+        ]
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.76"
+      }
+    },
+    "ActorLabel": "AudioSpline_Exterior"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_1.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.36"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_1.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.36"
+      }
+    },
+    "ActorLabel": "Emitter_Wreckage_A"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Medium'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Medium.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_10.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.37"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_10.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.37"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_8"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Small'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Small.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_11.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.38"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_11.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.38"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_9"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Small'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Small.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_12.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.39"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_12.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.39"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Small_1"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_13.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.40"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_13.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.40"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Large_1"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_14.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.41"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_14.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.41"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Large_2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Small'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Small.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_15.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.42"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_15.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.42"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Small_2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Small'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Small.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_16.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.43"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_16.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.43"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Small_3"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Small'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Small.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_17.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.44"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_17.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.44"
+      }
+    },
+    "ActorLabel": "Emitter_Destruction_Small_4"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Medium'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Medium.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_18.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.45"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_18.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.45"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_10"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Stress'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Stress.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_19.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.46"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_19.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.46"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Stress_1"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Destruction_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Destruction_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_2.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.47"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_2.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.47"
+      }
+    },
+    "ActorLabel": "Emitter_Wreckage_B"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Stress'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Stress.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_20.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.48"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_20.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.48"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Stress_2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Medium'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Medium.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_21.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.49"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_21.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.49"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_11"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_NPE_EXT_Fire1'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_NPE/ENV_NPE_EXT/AD_ENV_NPE_EXT_Fire1.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_22.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.50"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_22.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.50"
+      }
+    },
+    "ActorLabel": "Emitter_Fire_A"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_NPE_EXT_Fire2'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_NPE/ENV_NPE_EXT/AD_ENV_NPE_EXT_Fire2.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_23.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.51"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_23.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.51"
+      }
+    },
+    "ActorLabel": "Emitter_Fire_A2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Dying_Beast'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Dying_Beast.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_24.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.52"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_24.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.52"
+      }
+    },
+    "ActorLabel": "BP_SimpleAudioEmitter"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_25",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Dying_Beast'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Dying_Beast.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_25.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.53"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_25.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.53"
+      }
+    },
+    "ActorLabel": "BP_SimpleAudioEmitter2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Antenna_Hum'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Antenna_Hum.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_27.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.54"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_27.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.54"
+      }
+    },
+    "ActorLabel": "BP_SimpleAudioEmitter3"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_3.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.55"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_3.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.55"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_1"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_4.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.56"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_4.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.56"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_2"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_5.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.57"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_5.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.57"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_3"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_6.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.58"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_6.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.58"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_4"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_7.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.59"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_7.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.59"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_5"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Large'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Large.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_8.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.60"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_8.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.60"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_6"
+  },
+  {
+    "Type": "BP_SimpleAudioEmitter_C",
+    "Name": "BP_SimpleAudioEmitter_C_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.BP_SimpleAudioEmitter_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'Default__BP_SimpleAudioEmitter_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.1"
+    },
+    "Properties": {
+      "m_AudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_ENV_SDM_Metal_Groan_Medium'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_StrandedDuneMen/AD_ENV_SDM_Metal_Groan_Medium.0"
+      },
+      "m_AudioComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_9.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.61"
+      },
+      "RootComponent": {
+        "ObjectName": "DuneAudioEmitterComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_9.AudioComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.61"
+      }
+    },
+    "ActorLabel": "Emitter_Metal_Groan_7"
+  },
+  {
+    "Type": "BP_SpatialAudioVolume_C",
+    "Name": "BP_SpatialAudioVolume_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Audio/Blueprints/BP_SpatialAudioVolume.BP_SpatialAudioVolume_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Template": {
+      "ObjectName": "BP_SpatialAudioVolume_C'Default__BP_SpatialAudioVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SpatialAudioVolume.3"
+    },
+    "Properties": {
+      "m_RoomType": {
+        "ObjectName": "FcAudioRoomType'Indoors_General'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/RoomTypes/Indoors_General.0"
+      },
+      "m_EnvironmentAsset": {
+        "ObjectName": "FcAudioEnvironment'DA_StrandedDuneMen_AMB_Interior_DunemenCamp'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Environment_Asset/StrandedDuneMen/DA_StrandedDuneMen_AMB_Interior_DunemenCamp.0"
+      },
+      "SurfaceReflectorSet": {
+        "ObjectName": "AkSurfaceReflectorSetComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.SurfaceReflector'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.1"
+      },
+      "LateReverb": {
+        "ObjectName": "AkLateReverbComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.LateReverb'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.0"
+      },
+      "BrushType": "Brush_Add",
+      "Brush": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.71"
+      },
+      "BrushComponent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.34"
+      },
+      "SavedSelections": [
+        {
+          "Type": 3,
+          "Index": 4,
+          "SelectionIndex": 2
+        },
+        {
+          "Type": 3,
+          "Index": 5,
+          "SelectionIndex": 3
+        }
+      ],
+      "bHidden": false,
+      "SpawnCollisionHandlingMethod": "ESpawnActorCollisionHandlingMethod::AlwaysSpawn",
+      "RootComponent": {
+        "ObjectName": "BrushComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.34"
+      }
+    },
+    "ActorLabel": "AudioVolume_Interior_SubWreckage"
+  },
+  {
+    "Type": "BrushComponent",
+    "Name": "BrushComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BrushComponent'",
+    "Outer": {
+      "ObjectName": "BP_SpatialAudioVolume_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.33"
+    },
+    "Template": {
+      "ObjectName": "BrushComponent'Default__BP_SpatialAudioVolume_C:BrushComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SpatialAudioVolume.4"
+    },
+    "Properties": {
+      "Brush": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.71"
+      },
+      "BrushBodySetup": {
+        "ObjectName": "BodySetup'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0.BrushComponent0.BodySetup_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.2"
+      },
+      "bHasNoStreamableTextures": true,
+      "BodyInstance": {
+        "CollisionEnabled": "AudioOnly",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Audio": "Block"
+        },
+        "Flags": 1616,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -6522.139,
+        "Y": -1431.6978,
+        "Z": 1600.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 40.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 20.0,
+        "Y": 10.0,
+        "Z": 8.0
+      }
+    }
+  },
+  {
+    "Type": "ContentBlockWorldComponent",
+    "Name": "ContentBlockWorldComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContentBlockWorldComponent'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.7"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 5200.0,
+        "Y": 2690.0,
+        "Z": 3920.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_10'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.8"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -1510.0,
+        "Y": -1790.0,
+        "Z": 1780.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_11'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.9"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5420.0,
+        "Y": 3230.0,
+        "Z": 1780.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_12'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.10"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 620.0,
+        "Y": 7820.0,
+        "Z": 3020.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_13'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.11"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 2010.0,
+        "Y": 3910.0,
+        "Z": 2700.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_14'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.12"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -3955.7363,
+        "Y": -1531.0131,
+        "Z": 2329.5432
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_15'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.13"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5360.0,
+        "Y": 3000.0,
+        "Z": 1500.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_16'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.14"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -1290.0,
+        "Y": -2530.0,
+        "Z": 1500.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_17'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.15"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1290.0,
+        "Y": 2950.0,
+        "Z": 1620.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_18'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.16"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 530.0,
+        "Y": 8240.0,
+        "Z": 2820.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_19'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.17"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 3970.0,
+        "Y": 2300.0,
+        "Z": 3440.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_2'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.18"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5540.0,
+        "Y": -1860.0,
+        "Z": 3020.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_20'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.19"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -3080.0,
+        "Y": -1980.0,
+        "Z": 3490.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_21'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.20"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -2660.0,
+        "Y": 1900.0,
+        "Z": 1670.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_22'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.21"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -3940.0,
+        "Y": -1110.0,
+        "Z": 2960.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_23'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.22"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 3710.0,
+        "Y": 2140.0,
+        "Z": 3920.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_24'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.23"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 6040.0,
+        "Y": 2000.0,
+        "Z": 4190.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_25'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.24"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5650.0,
+        "Y": -2310.0,
+        "Z": 3420.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_27'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.25"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "m_AudioSettings": {
+        "ObjectName": "FcAudioObjectSettingsAsset'AOS_5m'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/AudioObjectSettings/AOS_5m.0"
+      },
+      "RelativeLocation": {
+        "X": 580.0,
+        "Y": -5600.0,
+        "Z": 5950.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_3'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.26"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 4650.0,
+        "Y": 5850.0,
+        "Z": 2610.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_4'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.27"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 5960.0,
+        "Y": -430.0,
+        "Z": 4650.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_5'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.28"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -6860.0,
+        "Y": 500.0,
+        "Z": 2380.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_6'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.29"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -3300.0,
+        "Y": -1000.0,
+        "Z": 2600.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_7'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.30"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5350.0,
+        "Y": -4410.0,
+        "Z": 2460.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_8'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.31"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1350.0,
+        "Y": 2790.0,
+        "Z": 2260.0
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "AudioComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_9'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.32"
+    },
+    "Template": {
+      "ObjectName": "DuneAudioEmitterComponent'Default__BP_SimpleAudioEmitter_C:AudioComponent0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_SimpleAudioEmitter.2"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 2310.0,
+        "Y": -1660.0,
+        "Z": 2040.0
+      }
+    }
+  },
+  {
+    "Type": "DuneMinimapGenerator",
+    "Name": "MinimapGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneMinimapGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+    }
+  },
+  {
+    "Type": "DuneWorldGenerator",
+    "Name": "WorldGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+    }
+  },
+  {
+    "Type": "DuneWorldPartitioner",
+    "Name": "WorldPartitioner",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldPartitioner'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+    },
+    "Properties": {
+      "GridSize": {
+        "X": 1,
+        "Y": 1
+      }
+    }
+  },
+  {
+    "Type": "DuneWorldSettings",
+    "Name": "DuneWorldSettings",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldSettings'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Properties": {
+      "m_ContentBlockWorldComponent": {
+        "ObjectName": "ContentBlockWorldComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings.ContentBlockWorldComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.35"
+      },
+      "m_WorldGenerator": {
+        "ObjectName": "DuneWorldGenerator'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings.WorldGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.63"
+      },
+      "m_MinimapGenerator": {
+        "ObjectName": "DuneMinimapGenerator'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings.MinimapGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.62"
+      },
+      "WorldPartitioner": {
+        "ObjectName": "DuneWorldPartitioner'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings.WorldPartitioner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.64"
+      },
+      "NavigationSystemConfig": {
+        "ObjectName": "NavigationSystemModuleConfig'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings.NavigationSystemModuleConfig_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.73"
+      },
+      "BookmarkArray": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "DuneWorldSettings-1"
+  },
+  {
+    "Type": "FcAudioSplineComponent",
+    "Name": "Spline",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FcAudioSplineComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.4"
+    },
+    "Template": {
+      "ObjectName": "FcAudioSplineComponent'Default__BP_AudioSplineEmitter_C:Spline'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineEmitter.2"
+    },
+    "Properties": {
+      "SplineCurves": {
+        "Position": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": 3.7157297,
+                "Y": -5929.552,
+                "Z": -0.01839267
+              },
+              "ArriveTangent": {
+                "X": 10717.657,
+                "Y": 6.7605696,
+                "Z": 0.33151203
+              },
+              "LeaveTangent": {
+                "X": 10717.657,
+                "Y": 6.7605696,
+                "Z": 0.33151203
+              },
+              "InterpMode": "CIM_CurveUser"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": 5490.177,
+                "Y": 4.0051837,
+                "Z": -0.008488414
+              },
+              "ArriveTangent": {
+                "X": -3.3410435,
+                "Y": 4313.013,
+                "Z": 0.02495595
+              },
+              "LeaveTangent": {
+                "X": -3.3410435,
+                "Y": 4313.013,
+                "Z": 0.02495595
+              },
+              "InterpMode": "CIM_CurveUser"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": -165.17662,
+                "Y": 7371.838,
+                "Z": -0.25871208
+              },
+              "ArriveTangent": {
+                "X": -11457.265,
+                "Y": -256.67474,
+                "Z": -2.4963596
+              },
+              "LeaveTangent": {
+                "X": -11457.265,
+                "Y": -256.67474,
+                "Z": -2.4963596
+              },
+              "InterpMode": "CIM_CurveUser"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": -6677.767,
+                "Y": -172.36758,
+                "Z": -0.023226509
+              },
+              "ArriveTangent": {
+                "X": 154.55168,
+                "Y": -5867.5884,
+                "Z": -0.084610924
+              },
+              "LeaveTangent": {
+                "X": 154.55168,
+                "Y": -5867.5884,
+                "Z": -0.084610924
+              },
+              "InterpMode": "CIM_CurveUser"
+            }
+          ]
+        },
+        "Rotation": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": -2.4583529E-05,
+                "Y": -8.821793E-05,
+                "Z": 0.7965702,
+                "W": 0.604547,
+                "IsNormalized": true,
+                "Size": 1.0000006,
+                "SizeSquared": 1.0000012
+              },
+              "ArriveTangent": {
+                "X": -1.9352252E-05,
+                "Y": -7.439077E-05,
+                "Z": 0.49609798,
+                "W": 0.06234646,
+                "IsNormalized": false,
+                "Size": 0.5000003,
+                "SizeSquared": 0.2500003
+              },
+              "LeaveTangent": {
+                "X": -1.9352252E-05,
+                "Y": -7.439077E-05,
+                "Z": 0.49609798,
+                "W": 0.06234646,
+                "IsNormalized": false,
+                "Size": 0.5000003,
+                "SizeSquared": 0.2500003
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": -2.350131E-06,
+                "Y": -2.2664926E-06,
+                "Z": 0.3913924,
+                "W": 0.9202239,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 1.3083478E-05,
+                "Y": 1.801764E-05,
+                "Z": 0.12956713,
+                "W": 0.48292068,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25000003
+              },
+              "LeaveTangent": {
+                "X": 1.3083478E-05,
+                "Y": 1.801764E-05,
+                "Z": 0.12956713,
+                "W": 0.48292068,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25000003
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": -3.5547895E-05,
+                "Y": 1.111514E-05,
+                "Z": 0.16200827,
+                "W": 0.9867895,
+                "IsNormalized": true,
+                "Size": 1.0000001,
+                "SizeSquared": 1.0000002
+              },
+              "ArriveTangent": {
+                "X": -3.2643653E-05,
+                "Y": 1.2791629E-05,
+                "Z": -0.035954244,
+                "W": 0.4987057,
+                "IsNormalized": false,
+                "Size": 0.50000006,
+                "SizeSquared": 0.25000006
+              },
+              "LeaveTangent": {
+                "X": -3.2643653E-05,
+                "Y": 1.2791629E-05,
+                "Z": -0.035954244,
+                "W": 0.4987057,
+                "IsNormalized": false,
+                "Size": 0.50000006,
+                "SizeSquared": 0.25000006
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": -5.3692347E-06,
+                "Y": -5.6597414E-06,
+                "Z": 0.38268316,
+                "W": 0.9238796,
+                "IsNormalized": true,
+                "Size": 0.99999994,
+                "SizeSquared": 0.99999994
+              },
+              "ArriveTangent": {
+                "X": 1.01719725E-05,
+                "Y": 1.4779548E-05,
+                "Z": 0.12042178,
+                "W": 0.48528194,
+                "IsNormalized": false,
+                "Size": 0.49999997,
+                "SizeSquared": 0.24999997
+              },
+              "LeaveTangent": {
+                "X": 1.01719725E-05,
+                "Y": 1.4779548E-05,
+                "Z": 0.12042178,
+                "W": 0.48528194,
+                "IsNormalized": false,
+                "Size": 0.49999997,
+                "SizeSquared": 0.24999997
+              },
+              "InterpMode": "CIM_CurveAuto"
+            }
+          ]
+        },
+        "ReparamTable": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": 0.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 1032.4305,
+              "OutVal": 0.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 2020.3534,
+              "OutVal": 0.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 2997.2666,
+              "OutVal": 0.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 3973.8008,
+              "OutVal": 0.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 4942.54,
+              "OutVal": 0.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 5883.6953,
+              "OutVal": 0.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 6769.5815,
+              "OutVal": 0.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 7567.7617,
+              "OutVal": 0.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 8243.481,
+              "OutVal": 0.90000004,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 8762.747,
+              "OutVal": 1.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 9324.034,
+              "OutVal": 1.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 10110.701,
+              "OutVal": 1.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 11067.436,
+              "OutVal": 1.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 12139.198,
+              "OutVal": 1.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 13274.011,
+              "OutVal": 1.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 14425.697,
+              "OutVal": 1.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 15558.311,
+              "OutVal": 1.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 16653.855,
+              "OutVal": 1.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 17724.473,
+              "OutVal": 1.9000001,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 18825.434,
+              "OutVal": 2.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 19955.186,
+              "OutVal": 2.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 21088.262,
+              "OutVal": 2.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 22252.668,
+              "OutVal": 2.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 23447.428,
+              "OutVal": 2.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 24652.248,
+              "OutVal": 2.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 25835.107,
+              "OutVal": 2.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 26957.203,
+              "OutVal": 2.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 27976.262,
+              "OutVal": 2.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 28849.436,
+              "OutVal": 2.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 29538.123,
+              "OutVal": 3.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 30184.537,
+              "OutVal": 3.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 30947.764,
+              "OutVal": 3.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 31813.166,
+              "OutVal": 3.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 32759.014,
+              "OutVal": 3.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 33761.793,
+              "OutVal": 3.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 34799.08,
+              "OutVal": 3.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 35851.844,
+              "OutVal": 3.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 36907.023,
+              "OutVal": 3.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 37960.695,
+              "OutVal": 3.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 39021.812,
+              "OutVal": 4.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            }
+          ]
+        }
+      },
+      "bSplineHasBeenEdited": true,
+      "bHasNoStreamableTextures": true,
+      "BodyInstance": {
+        "CollisionEnabled": "AudioSpline",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Audio": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.74"
+      }
+    }
+  },
+  {
+    "Type": "FcAudioSplineComponent",
+    "Name": "Spline",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FcAudioSplineComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.5"
+    },
+    "Template": {
+      "ObjectName": "FcAudioSplineComponent'Default__BP_AudioSplineTrigger_C:Spline'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.2"
+    },
+    "Properties": {
+      "SplineCurves": {
+        "Position": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": -13166.027,
+                "Y": -13901.609,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": 12357.885,
+                "Y": -19290.715,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 12357.885,
+                "Y": -19290.715,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": 11574.711,
+                "Y": -18389.979,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": 13509.287,
+                "Y": 12633.038,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 13509.287,
+                "Y": 12633.038,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": 13852.547,
+                "Y": 11364.467,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -12357.885,
+                "Y": 19290.715,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -12357.885,
+                "Y": 19290.715,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": -13141.059,
+                "Y": 20191.451,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -13509.287,
+                "Y": -12633.038,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -13509.287,
+                "Y": -12633.038,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            }
+          ]
+        },
+        "ReparamTable": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": 0.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 2398.9001,
+              "OutVal": 0.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 5047.093,
+              "OutVal": 0.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 7927.48,
+              "OutVal": 0.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 10969.749,
+              "OutVal": 0.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 14078.018,
+              "OutVal": 0.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 17145.426,
+              "OutVal": 0.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 20063.51,
+              "OutVal": 0.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 22731.684,
+              "OutVal": 0.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 25073.227,
+              "OutVal": 0.90000004,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 27071.307,
+              "OutVal": 1.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 29186.824,
+              "OutVal": 1.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 31837.11,
+              "OutVal": 1.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 34944.855,
+              "OutVal": 1.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 38385.258,
+              "OutVal": 1.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 42016.88,
+              "OutVal": 1.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 45692.883,
+              "OutVal": 1.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 49267.08,
+              "OutVal": 1.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 52599.867,
+              "OutVal": 1.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 55568.297,
+              "OutVal": 1.9000001,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 58089.734,
+              "OutVal": 2.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 60620.32,
+              "OutVal": 2.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 63602.992,
+              "OutVal": 2.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 66938.19,
+              "OutVal": 2.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 70488.57,
+              "OutVal": 2.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 74102.5,
+              "OutVal": 2.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 77624.85,
+              "OutVal": 2.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 80905.05,
+              "OutVal": 2.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 83808.88,
+              "OutVal": 2.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 86245.68,
+              "OutVal": 2.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 88244.26,
+              "OutVal": 3.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 90427.72,
+              "OutVal": 3.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 93323.58,
+              "OutVal": 3.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 96844.914,
+              "OutVal": 3.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 100825.35,
+              "OutVal": 3.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 105073.67,
+              "OutVal": 3.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 109389.9,
+              "OutVal": 3.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 113572.14,
+              "OutVal": 3.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 117421.81,
+              "OutVal": 3.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 120751.89,
+              "OutVal": 3.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 123409.06,
+              "OutVal": 4.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            }
+          ]
+        }
+      },
+      "bSplineHasBeenEdited": true,
+      "bHasNoStreamableTextures": true,
+      "BodyInstance": {
+        "CollisionEnabled": "AudioSpline",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Audio": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.75"
+      }
+    }
+  },
+  {
+    "Type": "FcAudioSplineComponent",
+    "Name": "Spline",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FcAudioSplineComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.6"
+    },
+    "Template": {
+      "ObjectName": "FcAudioSplineComponent'Default__BP_AudioSplineTrigger_C:Spline'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.2"
+    },
+    "Properties": {
+      "SplineCurves": {
+        "Position": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": -13001.345,
+                "Y": -3447.163,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -1071.2123,
+                "Y": -10381.684,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -1071.2123,
+                "Y": -10381.684,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": -2265.7217,
+                "Y": -9908.848,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": 11378.537,
+                "Y": 623.5171,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 11378.537,
+                "Y": 623.5171,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": 9755.7295,
+                "Y": -2200.1292,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": 6811.4795,
+                "Y": 7030.595,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 6811.4795,
+                "Y": 7030.595,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": 11357.237,
+                "Y": 4152.343,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -1731.0088,
+                "Y": 5578.643,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -1731.0088,
+                "Y": 5578.643,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 4.0,
+              "OutVal": {
+                "X": 6293.712,
+                "Y": 8957.157,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -5740.2676,
+                "Y": 3351.0886,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -5740.2676,
+                "Y": 3351.0886,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 5.0,
+              "OutVal": {
+                "X": -123.29709,
+                "Y": 10854.52,
+                "Z": 0.0
+              },
+              "ArriveTangent": {
+                "X": -9647.528,
+                "Y": -6202.16,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": -9647.528,
+                "Y": -6202.16,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            }
+          ]
+        },
+        "Rotation": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 4.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 5.0,
+              "OutVal": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 0.5,
+                "IsNormalized": false,
+                "Size": 0.5,
+                "SizeSquared": 0.25
+              },
+              "InterpMode": "CIM_CurveAuto"
+            }
+          ]
+        },
+        "Scale": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 1.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 2.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 3.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 4.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            },
+            {
+              "InVal": 5.0,
+              "OutVal": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "ArriveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "LeaveTangent": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "InterpMode": "CIM_CurveAuto"
+            }
+          ]
+        },
+        "ReparamTable": {
+          "Points": [
+            {
+              "InVal": 0.0,
+              "OutVal": 0.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 1040.7635,
+              "OutVal": 0.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 2158.933,
+              "OutVal": 0.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 3414.9429,
+              "OutVal": 0.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 4807.9683,
+              "OutVal": 0.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 6305.5645,
+              "OutVal": 0.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 7860.345,
+              "OutVal": 0.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 9418.061,
+              "OutVal": 0.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 10921.964,
+              "OutVal": 0.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 12316.15,
+              "OutVal": 0.90000004,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 13550.044,
+              "OutVal": 1.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 14766.278,
+              "OutVal": 1.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 16136.405,
+              "OutVal": 1.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 17639.777,
+              "OutVal": 1.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 19239.104,
+              "OutVal": 1.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 20888.654,
+              "OutVal": 1.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 22538.14,
+              "OutVal": 1.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 24134.656,
+              "OutVal": 1.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 25623.707,
+              "OutVal": 1.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 26949.824,
+              "OutVal": 1.9000001,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 28056.957,
+              "OutVal": 2.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 28985.113,
+              "OutVal": 2.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 29822.889,
+              "OutVal": 2.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 30586.988,
+              "OutVal": 2.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 31293.67,
+              "OutVal": 2.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 31957.957,
+              "OutVal": 2.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 32592.78,
+              "OutVal": 2.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 33208.29,
+              "OutVal": 2.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 33811.53,
+              "OutVal": 2.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 34406.457,
+              "OutVal": 2.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 34994.29,
+              "OutVal": 3.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 35597.098,
+              "OutVal": 3.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 36241.375,
+              "OutVal": 3.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 36927.246,
+              "OutVal": 3.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 37649.15,
+              "OutVal": 3.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 38397.973,
+              "OutVal": 3.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 39162.34,
+              "OutVal": 3.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 39929.418,
+              "OutVal": 3.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 40685.41,
+              "OutVal": 3.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 41415.855,
+              "OutVal": 3.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 42105.836,
+              "OutVal": 4.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 42781.457,
+              "OutVal": 4.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 43477.492,
+              "OutVal": 4.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 44183.863,
+              "OutVal": 4.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 44886.38,
+              "OutVal": 4.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 45573.926,
+              "OutVal": 4.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 46246.316,
+              "OutVal": 4.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 46923.094,
+              "OutVal": 4.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 47649.336,
+              "OutVal": 4.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 48490.93,
+              "OutVal": 4.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 49520.93,
+              "OutVal": 5.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 50913.227,
+              "OutVal": 5.1,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 52724.45,
+              "OutVal": 5.2,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 54843.45,
+              "OutVal": 5.3,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 57157.613,
+              "OutVal": 5.4,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 59554.35,
+              "OutVal": 5.5,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 61921.938,
+              "OutVal": 5.6,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 64150.65,
+              "OutVal": 5.7,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 66135.125,
+              "OutVal": 5.8,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 67780.66,
+              "OutVal": 5.9,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            },
+            {
+              "InVal": 69024.516,
+              "OutVal": 6.0,
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "InterpMode": "CIM_Linear"
+            }
+          ]
+        }
+      },
+      "bSplineHasBeenEdited": true,
+      "bHasNoStreamableTextures": true,
+      "BodyInstance": {
+        "CollisionEnabled": "AudioSpline",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_Shelter": "Ignore",
+          "Trace_Audio": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0.SceneRoot'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.76"
+      }
+    }
+  },
+  {
+    "Type": "Level",
+    "Name": "PersistentLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Level'",
+    "Outer": {
+      "ObjectName": "World'CB_Arrakis_MTX_S_00_Audio'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.77"
+    },
+    "Properties": {
+      "Model": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.72"
+      },
+      "LevelBuildDataId": "05BDE8E1-4F58ED94-E7E25383-1CC73F7B",
+      "WorldSettings": {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+      }
+    },
+    "Actors": [
+      {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+      },
+      null,
+      {
+        "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.LevelBounds_CB_Template_Generic_S_00_Audio'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.70"
+      },
+      {
+        "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.5"
+      },
+      {
+        "ObjectName": "BP_AudioSplineEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.4"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.7"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.18"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.26"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.27"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.28"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.29"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.30"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_8'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.31"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.32"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_10'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.8"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_11'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.9"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_12'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.10"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_13'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.11"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_14'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.12"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_15'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.13"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_16'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.14"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_17'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.15"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_18'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.16"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_19'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.17"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_20'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.19"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_21'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.20"
+      },
+      {
+        "ObjectName": "BP_SpatialAudioVolume_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.33"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_22'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.21"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_23'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.22"
+      },
+      {
+        "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.6"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_24'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.23"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_25'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.24"
+      },
+      {
+        "ObjectName": "BP_SimpleAudioEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SimpleAudioEmitter_C_27'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.25"
+      }
+    ],
+    "URL": {
+      "Protocol": "unreal",
+      "Host": "",
+      "Port": 7777,
+      "Valid": true,
+      "Map": "/Game/Dune/Maps/MainMenu",
+      "Op": [],
+      "Portal": ""
+    },
+    "Model": {
+      "ObjectName": "Model'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.Model_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.72"
+    },
+    "ModelComponents": [],
+    "LevelScriptActor": null,
+    "NavListStart": null,
+    "NavListEnd": null,
+    "PrecomputedVisibilityHandler": {
+      "PrecomputedVisibilityCellBucketOriginXY": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "PrecomputedVisibilityCellSizeXY": 0.0,
+      "PrecomputedVisibilityCellSizeZ": 0.0,
+      "PrecomputedVisibilityCellBucketSizeXY": 0,
+      "PrecomputedVisibilityNumCellBuckets": 0,
+      "PrecomputedVisibilityCellBuckets": []
+    },
+    "PrecomputedVolumeDistanceField": {
+      "VolumeMaxDistance": 0.0,
+      "VolumeBox": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 0
+      },
+      "VolumeSizeX": 0,
+      "VolumeSizeY": 0,
+      "VolumeSizeZ": 0,
+      "Data": []
+    }
+  },
+  {
+    "Type": "LevelBounds",
+    "Name": "LevelBounds_CB_Template_Generic_S_00_Audio",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'LevelBounds'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Properties": {
+      "BoxComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.LevelBounds_CB_Template_Generic_S_00_Audio.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.3"
+      },
+      "bAutoUpdateBounds": false,
+      "RootComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.LevelBounds_CB_Template_Generic_S_00_Audio.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.3"
+      }
+    },
+    "ActorLabel": "LevelBounds_CB_Template_Generic_S_00_Audio"
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Model'",
+    "Outer": {
+      "ObjectName": "BP_SpatialAudioVolume_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.BP_SpatialAudioVolume_C_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.33"
+    },
+    "Bounds": {
+      "Origin": {
+        "X": 13.168171,
+        "Y": -9.456924,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 113.16817,
+        "Y": 109.456924,
+        "Z": 100.0
+      },
+      "SphereRadius": 186.51501
+    },
+    "Vectors": [
+      {
+        "X": -1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
+      },
+      {
+        "X": 0.15330999,
+        "Y": 0.9881782,
+        "Z": 3.2223307E-10
+      },
+      {
+        "X": 1.0,
+        "Y": -0.0,
+        "Z": 0.0
+      },
+      {
+        "X": 0.9771941,
+        "Y": -0.21234788,
+        "Z": 3.0452183E-09
+      },
+      {
+        "X": 0.0,
+        "Y": -1.0,
+        "Z": 0.0
+      },
+      {
+        "X": -0.10095286,
+        "Y": -0.9948912,
+        "Z": 9.837498E-11
+      },
+      {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      }
+    ],
+    "Points": [
+      {
+        "X": -100.0,
+        "Y": -100.0,
+        "Z": -100.0
+      },
+      {
+        "X": -100.0,
+        "Y": -100.0,
+        "Z": 100.0
+      },
+      {
+        "X": -100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      {
+        "X": -100.0,
+        "Y": 100.0,
+        "Z": -100.0
+      },
+      {
+        "X": 126.33634,
+        "Y": 64.88526,
+        "Z": 100.0
+      },
+      {
+        "X": 126.33634,
+        "Y": 64.88526,
+        "Z": -100.0
+      },
+      {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": -100.0
+      },
+      {
+        "X": 86.39612,
+        "Y": -118.91385,
+        "Z": 100.0
+      },
+      {
+        "X": 86.39612,
+        "Y": -118.91385,
+        "Z": -100.0
+      },
+      {
+        "X": 100.0,
+        "Y": -100.0,
+        "Z": -100.0
+      }
+    ],
+    "Nodes": [
+      {
+        "Plane": {
+          "Vector": {
+            "X": -1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 100.0,
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "iVertPool": 0,
+        "iSurf": 0,
+        "iVertexIndex": 0,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 1,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.15330999,
+            "Y": 0.9881782,
+            "Z": 3.2223307E-10
+          },
+          "W": 83.486824,
+          "X": 0.15330999,
+          "Y": 0.9881782,
+          "Z": 3.2223307E-10
+        },
+        "iVertPool": 4,
+        "iSurf": 1,
+        "iVertexIndex": 4,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 2,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.9771941,
+            "Y": -0.21234788,
+            "Z": 3.0452183E-09
+          },
+          "W": 109.67688,
+          "X": 0.9771941,
+          "Y": -0.21234788,
+          "Z": 3.0452183E-09
+        },
+        "iVertPool": 8,
+        "iSurf": 2,
+        "iVertexIndex": 8,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 3,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": -0.10095286,
+            "Y": -0.9948912,
+            "Z": 9.837498E-11
+          },
+          "W": 109.58441,
+          "X": -0.10095286,
+          "Y": -0.9948912,
+          "Z": 9.837498E-11
+        },
+        "iVertPool": 12,
+        "iSurf": 3,
+        "iVertexIndex": 12,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 4,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 1.0
+          },
+          "W": 100.0,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "iVertPool": 16,
+        "iSurf": 4,
+        "iVertexIndex": 16,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": 5,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": -1,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      },
+      {
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -1.0
+          },
+          "W": 100.0,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "iVertPool": 20,
+        "iSurf": 5,
+        "iVertexIndex": 20,
+        "ComponentIndex": 0,
+        "ComponentNodeIndex": 0,
+        "ComponentElementIndex": 0,
+        "iBack": -1,
+        "iFront": -1,
+        "iPlane": -1,
+        "iCollisionBound": 0,
+        "iZone0": 0,
+        "iZone1": 0,
+        "NumVertices": 4,
+        "NodeFlags": 0,
+        "iLeaf0": -1,
+        "iLeaf1": -1
+      }
+    ],
+    "Surfs": [
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 0,
+        "vNormal": 0,
+        "vTextureU": 1,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": -1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "W": 100.0,
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 3,
+        "vNormal": 3,
+        "vTextureU": 4,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.15330999,
+            "Y": 0.9881782,
+            "Z": 3.2223307E-10
+          },
+          "W": 83.486824,
+          "X": 0.15330999,
+          "Y": 0.9881782,
+          "Z": 3.2223307E-10
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 6,
+        "vNormal": 5,
+        "vTextureU": 6,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.9771941,
+            "Y": -0.21234788,
+            "Z": 3.0452183E-09
+          },
+          "W": 109.67688,
+          "X": 0.9771941,
+          "Y": -0.21234788,
+          "Z": 3.0452183E-09
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 9,
+        "vNormal": 7,
+        "vTextureU": 0,
+        "vTextureV": 2,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": -0.10095286,
+            "Y": -0.9948912,
+            "Z": 9.837498E-11
+          },
+          "W": 109.58441,
+          "X": -0.10095286,
+          "Y": -0.9948912,
+          "Z": 9.837498E-11
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 2,
+        "vNormal": 8,
+        "vTextureU": 4,
+        "vTextureV": 1,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 1.0
+          },
+          "W": 100.0,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      },
+      {
+        "Material": null,
+        "PolyFlags": 0,
+        "pBase": 0,
+        "vNormal": 2,
+        "vTextureU": 4,
+        "vTextureV": 6,
+        "iBrushPoly": -1,
+        "Actor": null,
+        "Plane": {
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -1.0
+          },
+          "W": 100.0,
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1.0
+        },
+        "LightMapScale": 32.0,
+        "iLightmassIndex": 0
+      }
+    ],
+    "NumSharedSides": 4,
+    "VertexBuffer": null,
+    "LightingGuid": "AA2216D0-43C86FA5-881ECF9E-36F00879",
+    "LightmassSettings": [
+      {
+        "bUseTwoSidedLighting": false,
+        "bShadowIndirectOnly": false,
+        "bUseEmissiveForStaticLighting": false,
+        "bUseVertexNormalForHemisphereGather": false,
+        "EmissiveLightFalloffExponent": 8.0,
+        "EmissiveLightExplicitInfluenceRadius": 0.0,
+        "EmissiveBoost": 1.0,
+        "DiffuseBoost": 1.0,
+        "FullyOccludedSamplesFraction": 1.0
+      }
+    ]
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Model'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "Bounds": {
+      "Origin": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "SphereRadius": 0.0
+    },
+    "Vectors": [],
+    "Points": [],
+    "Nodes": [],
+    "Surfs": [],
+    "NumSharedSides": 4,
+    "VertexBuffer": {
+      "Vertices": []
+    },
+    "LightingGuid": "163CF927-49959638-F4D449A3-F77F2D24",
+    "LightmassSettings": []
+  },
+  {
+    "Type": "NavigationSystemModuleConfig",
+    "Name": "NavigationSystemModuleConfig_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NavigationSystemModuleConfig'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.65"
+    },
+    "Properties": {
+      "bAutoSpawnMissingNavData": true,
+      "NavigationSystemClass": {
+        "AssetPathName": "/Script/NavigationSystem.NavigationSystemV1",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineEmitter_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.AS_High_Wind'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.4"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AudioSplineEmitter_C:SceneRoot'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineEmitter.4"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1000.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.5"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AudioSplineTrigger_C:SceneRoot'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.4"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1000.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_AudioSplineTrigger_C'CB_Arrakis_MTX_S_00_Audio:PersistentLevel.MusSplineTrigAll_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.6"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AudioSplineTrigger_C:SceneRoot'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Audio/Blueprints/BP_AudioSplineTrigger.4"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 1000.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "World",
+    "Name": "CB_Arrakis_MTX_S_00_Audio",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'World'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio",
+    "PersistentLevel": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00_Audio:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00_Audio.69"
+    },
+    "ExtraReferencedObjects": [],
+    "StreamingLevels": []
+  }
+]

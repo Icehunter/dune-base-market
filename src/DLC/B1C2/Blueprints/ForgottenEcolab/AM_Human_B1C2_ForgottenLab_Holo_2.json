@@ -1,0 +1,90 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "AM_Human_B1C2_ForgottenLab_Holo_2",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimMontage'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/AM_Human_B1C2_ForgottenLab_Holo_2",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Loop",
+          "NextSectionName": "Loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_B1C2_ForgottenLab_Holo_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/AM_Human_B1C2_ForgottenLab_Holo_2.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 14.466666,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Hologram_01_Loop_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Hologram_01_Loop_01.0"
+          }
+        },
+        {
+          "SectionName": "Speak",
+          "NextSectionName": "Loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_B1C2_ForgottenLab_Holo_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/AM_Human_B1C2_ForgottenLab_Holo_2.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 14.466666,
+          "LinkValue": 14.426794,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Hologram_01_Loop_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Hologram_01_Loop_01.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "DefaultSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'A_Human_Hologram_01_Loop_01'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Hologram_01_Loop_01.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 14.466666,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'A_Human_Hologram_01_Break_01'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Civilian/A_Human_Hologram_01_Break_01.0"
+                },
+                "StartPos": 14.466666,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 13.9,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "SequenceLength": 28.366667,
+      "Skeleton": {
+        "ObjectName": "Skeleton'SKEL_SK_Mannequin_Skeleton_Update'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/SKEL_SK_Mannequin_Skeleton_Update.30"
+      }
+    },
+    "SkeletonGuid": "8C88144C-4F436C3B-DB8EB8A8-1020F09D"
+  }
+]

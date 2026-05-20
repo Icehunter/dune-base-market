@@ -1,0 +1,248 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "ArrowComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BP_Attractor_WaitToAmbush_Slot01_C'Default__BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.2"
+    },
+    "Template": {
+      "ObjectName": "ArrowComponent'Default__BP_AttractorSlot_Base_C:ArrowComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.0"
+    },
+    "Properties": {
+      "ArrowColor": {
+        "B": 255,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FFFF"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.3"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Attractor_WaitToAmbush_Slot01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AttractorSlot_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Attractor_WaitToAmbush_Slot01_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Attractor_WaitToAmbush_Slot01_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AttractorSlot_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.1"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Attractor_WaitToAmbush_Slot01_C'Default__BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Attractor_WaitToAmbush_Slot01_C",
+    "Name": "Default__BP_Attractor_WaitToAmbush_Slot01_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.BP_Attractor_WaitToAmbush_Slot01_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01",
+    "Template": {
+      "ObjectName": "BP_AttractorSlot_Base_C'Default__BP_AttractorSlot_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.2"
+    },
+    "Properties": {
+      "m_AnimationSets": [
+        {
+          "m_AnimationFromAnimWeapon": "EAiAttractorAnimType::None",
+          "m_CombinedAttractorMontagePtr": {
+            "AssetPathName": "/Game/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_Npc_Attractor_Ambush_Empty.AM_Human_Npc_Attractor_Ambush_Empty",
+            "SubPathString": ""
+          },
+          "m_CombinedAttractorMontage": null,
+          "m_IntroSectionName": "Intro",
+          "m_LoopSectionName": "Loop",
+          "m_OutroSectionName": "Outro",
+          "m_UrgentOutroSectionName": "UrgentOutro",
+          "m_BreakerSectionNames": []
+        }
+      ],
+      "m_AnimSocket": {
+        "ObjectName": "SceneComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:AnimSocket'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.6"
+      },
+      "m_CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.3"
+      },
+      "m_ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:ArrowComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.0"
+      },
+      "m_bShouldHolsterWeapon": false,
+      "m_bKeepOrientationAfterAnim": true,
+      "m_ItemToEquip": {
+        "Name": "CHOAMSword_3"
+      },
+      "m_bHasGameplayEffect": true,
+      "m_GameplayEffects": [
+        {
+          "AssetPathName": "/Game/Dune/Abilities/Sense/GE_Temp_Attractor_WaitToAmbush.GE_Temp_Attractor_WaitToAmbush_C",
+          "SubPathString": ""
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_Attractor_WaitToAmbush_Slot01_C'Default__BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.2"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_AttractorSlot_Base_C:CapsuleComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.3"
+    },
+    "Properties": {
+      "ShapeColor": {
+        "B": 255,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FFFF"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": null,
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_AttractorSlot_Base_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.1"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "35A41DCF-402EC433-460672BC-7A5517F2"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "AnimSocket",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Attractor_WaitToAmbush_Slot01_C'Default__BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.2"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_AttractorSlot_Base_C:AnimSocket'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Attractors/CivilianNPCs/Slots/BP_AttractorSlot_Base.8"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Attractor_WaitToAmbush_Slot01_C:CapsuleComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.3"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Attractor_WaitToAmbush_Slot01_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Attractor_WaitToAmbush_Slot01_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.5"
+      },
+      "VariableGuid": "F4522A44-4B255595-681BD88D-B288F0A1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Attractor_WaitToAmbush_Slot01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Attractor_WaitToAmbush_Slot01_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Attractors/Slots/BP_Attractor_WaitToAmbush_Slot01.7"
+      }
+    }
+  }
+]

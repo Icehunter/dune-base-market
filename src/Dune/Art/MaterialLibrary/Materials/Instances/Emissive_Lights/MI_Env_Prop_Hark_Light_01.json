@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Env_Prop_Hark_Light_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Instances/Emissive_Lights/MI_Env_Prop_Hark_Light_01",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Glass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Glass.0"
+      },
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_DuneMaster_Light_Glass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_Light_Glass.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Light Source - Emissive Power",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "A88CD623-43E5050F-75041BBE-1F65ECDB"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Light Wear - Texture Tiling",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "6095B848-46A47FDC-4666C6AD-852D4AF6"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Light Wear - Normal Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "3EA4282B-441AC9E1-FFFBC181-7C906D71"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Light Source - Emissive Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 1.0,
+            "G": 0.918977,
+            "B": 0.675909,
+            "A": 1.0,
+            "Hex": "FFF6D7"
+          },
+          "ExpressionGUID": "128521F7-4F75919B-1923209B-633729C5"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Light - _N Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_Light_Choam_Pattern_01_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Light/T_Lib_Light_Choam_Pattern_01_N.0"
+          },
+          "ExpressionGUID": "91FECD8A-442E2B4B-AC15648A-CC4B09F8"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Light Wear - _N Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MLS_Glass_Neut_Glass_Broken_01_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Glass/T_MLS_Glass_Neut_Glass_Broken_01_N.0"
+          },
+          "ExpressionGUID": "D01CBDFB-43AAC41E-CA95D3A0-72FFEE3C"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DisableVirtualTextureOnMeshMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "845EA8AF-45678636-BF36DA92-D29CA636"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Add Surface Grunge",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E99D22B9-496CCDB0-50B05EAA-F1913A51"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Ignore Light Source Texture",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "64A2D6BD-4AF82A02-D2DB6C97-A2E41B4A"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Wear",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "B57908D5-452FBBAB-81EEC795-9D1F43D3"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Sand",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "7C77665F-4AC575D8-03A478BE-BD5BE660"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Calculate sand mask procedurally",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "A42A4FBA-45B1D020-441AA09A-0D242A54"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Calculate dust mask procedurally",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CD19EECF-4860C4B6-0ADE089C-4701B16E"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_Light_Choam_Pattern_01_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_MLS_Glass_Neut_Glass_Broken_01_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

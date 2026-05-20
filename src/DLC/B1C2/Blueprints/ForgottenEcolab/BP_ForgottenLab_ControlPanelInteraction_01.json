@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ForgottenLab_ControlPanelInteraction_01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.0"
+    },
+    "ClassFlags": "CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ForgottenLab_ControlPanelInteraction_01_C'Default__BP_ForgottenLab_ControlPanelInteraction_01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ForgottenLab_ControlPanelInteraction_01_C",
+    "Name": "Default__BP_ForgottenLab_ControlPanelInteraction_01_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01.BP_ForgottenLab_ControlPanelInteraction_01_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01",
+    "Template": {
+      "ObjectName": "BP_SimpleConditionalInteraction_C'Default__BP_SimpleConditionalInteraction_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_SimpleConditionalInteraction.1"
+    },
+    "Properties": {
+      "m_InteractionConditions": [
+        {
+          "ObjectName": "BP_ForgottenLab_ControlPanelInteractionCondition_C'Default__BP_ForgottenLab_ControlPanelInteraction_01_C:BP_ForgottenLab_ControlPanelInteractionCondition_C_0'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01.2"
+        }
+      ],
+      "m_TagsToAddOnInteract": [
+        "Journey.MTX.B1C2.ForgottenLab.Hologram1"
+      ],
+      "m_DisplayName": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_ForgottenLab_RestorePower",
+        "SourceString": "Restore Power",
+        "LocalizedString": "Restore Power"
+      }
+    }
+  },
+  {
+    "Type": "BP_ForgottenLab_ControlPanelInteractionCondition_C",
+    "Name": "BP_ForgottenLab_ControlPanelInteractionCondition_C_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteractionCondition.BP_ForgottenLab_ControlPanelInteractionCondition_C'",
+    "Outer": {
+      "ObjectName": "BP_ForgottenLab_ControlPanelInteraction_01_C'Default__BP_ForgottenLab_ControlPanelInteraction_01_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteraction_01.1"
+    },
+    "Template": {
+      "ObjectName": "BP_ForgottenLab_ControlPanelInteractionCondition_C'Default__BP_ForgottenLab_ControlPanelInteractionCondition_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/ForgottenEcolab/BP_ForgottenLab_ControlPanelInteractionCondition.1"
+    },
+    "Properties": {
+      "ConditionFailText": {
+        "TableId": "/Game/Dune/Localization/ST_Localization_UI.ST_Localization_UI",
+        "Key": "UI/ContractInteract_ForgottenLab_Error_AlreadyPowered",
+        "SourceString": "Section Power Restored",
+        "LocalizedString": "Section Power Restored"
+      }
+    }
+  }
+]

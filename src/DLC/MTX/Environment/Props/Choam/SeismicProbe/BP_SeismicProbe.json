@@ -1,0 +1,471 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_SeismicProbe_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_SeismicProbe_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SeismicProbe'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QueryCapsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QueryCollisionSphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_SeismicProbe_C",
+    "Name": "Default__BP_SeismicProbe_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.BP_SeismicProbe_C'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe",
+    "Properties": {
+      "m_SeismicProbeLifeSpan": 600.0,
+      "m_OnSandwormDetectedCommuninetMessage": {
+        "Name": "SeismicProbeDetectedSandworm"
+      },
+      "m_OnSandwormLostCommuninetMessage": {
+        "Name": "SeismicProbeLostSandworm"
+      },
+      "m_SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_SeismicProbe_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.8"
+      },
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_SeismicProbe_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.5"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_SeismicProbe_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.4"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_SeismicProbe_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.13"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_SeismicProbe_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.2"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_SeismicProbe_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.6"
+      },
+      "m_BuildingType": {
+        "Name": "SeismicProbe_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_SeismicProbe_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.8"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_SeismicProbe_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.8"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "QueryCapsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.0"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 92.0,
+      "CapsuleRadius": 40.0,
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "Deployable_PlacementCollider",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Overlap",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Trace_Shelter_Buildables": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_BuildingStructure": "Block",
+          "Trace_Shelter": "Ignore",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    },
+    "Properties": {
+      "m_SphereRadius": 30.0,
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_PickupNoTotemPlaceableInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_PickupNoTotemPlaceableInteraction.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_SeismicProbe_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.8"
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_SeismicProbe_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_SeismicProbe_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.7"
+      },
+      "VariableGuid": "78809FD1-4DCEB745-3E775A99-BA1F52D4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_SeismicProbe_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_SeismicProbe_C:QueryCollisionSphere_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.15"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F593E42D-4B887902-1C5F289B-94E51667",
+      "InternalVariableName": "QueryCollisionSphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_SeismicProbe_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_SeismicProbe_C:QueryCapsule_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.3"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "71FBE9CD-4A8F2768-12BB0194-7267E704",
+      "InternalVariableName": "QueryCapsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_SeismicProbe_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_SeismicProbe_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.16"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5D264727-49DDB2A8-54F9E2B2-AD18AFF0",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_SeismicProbe_C'Default__BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_SeismicProbe_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.9"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "QueryCollisionSphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.0"
+    },
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "CollisionEnabled": "Deployable_CollisionNoVehicle",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Ignore",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_Shelter": "Ignore",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SeismicProbe_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/BP_SeismicProbe.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Choam_SeismicProbe_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/SeismicProbe/Meshes/SM_Env_Prop_Choam_SeismicProbe_01.1"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 72.0
+      }
+    }
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Boss_Morgana_Trigger_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Boss_Morgana_Trigger_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Boss_Morgana_Trigger_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:ExecuteUbergraph_BP_Boss_Morgana_Trigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:OnTriggerOverlapped'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.5"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:OnForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.4"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:ExecuteUbergraph_BP_Boss_Morgana_Trigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BossMorgana",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "JourneyStoryManager",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_DLCEcolabB_Manager_StoryInstanced_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_DLCEcolabB_Manager_StoryInstanced.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsinitalTrigger",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "TriggeredActors",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "TriggeredActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Boss_Morgana_Trigger": {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:ExecuteUbergraph_BP_Boss_Morgana_Trigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.3"
+      },
+      "OnForceReset": {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:OnForceReset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.4"
+      },
+      "OnTriggerOverlapped": {
+        "ObjectName": "Function'BP_Boss_Morgana_Trigger_C:OnTriggerOverlapped'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Boss_Morgana_Trigger_C'Default__BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_Boss_Morgana_Trigger_C'Default__BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.2"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_ResetableTrigger_C:CollisionComp'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.1"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 500.0,
+        "Y": 200.0,
+        "Z": 300.0
+      },
+      "bGenerateOverlapEvents": true,
+      "bForceGenerateOverlapEvents": true,
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "BP_Boss_Morgana_Trigger_C",
+    "Name": "Default__BP_Boss_Morgana_Trigger_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.BP_Boss_Morgana_Trigger_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger",
+    "Template": {
+      "ObjectName": "BP_ResetableTrigger_C'Default__BP_ResetableTrigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "bIsinitalTrigger": true,
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Boss_Morgana_Trigger_C:CollisionComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.1"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_Boss_Morgana_Trigger_C:CollisionComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.1"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Boss_Morgana_Trigger",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnForceReset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnForceReset'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnForceReset'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.5"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerOverlapped",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnTriggerOverlapped'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.6"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'BP_ResetableTrigger_C:OnTriggerOverlapped'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/BP_ResetableTrigger.6"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TriggeringActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Player_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Boss_Morgana_Trigger_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Boss_Morgana_Trigger_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.7"
+      },
+      "VariableGuid": "2F6443D0-4CFD8DFC-F03D50AC-426A7697",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Morgana_Trigger_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Boss_Morgana_Trigger_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_Boss_Morgana_Trigger.8"
+      }
+    }
+  }
+]

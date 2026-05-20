@@ -1,0 +1,1403 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Env_Prop_Choam_CargoContainer_PlacementActor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:UserConstructionScript'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.4"
+      },
+      {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.3"
+      },
+      {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Env_Prop_Choam_CargoContainer_Body_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Door_Front_Closed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Door_Back_Closed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor": {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.3"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:UserConstructionScript'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'Default__BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Env_Prop_Choam_CargoContainer_PlacementActor_C",
+    "Name": "Default__BP_Env_Prop_Choam_CargoContainer_PlacementActor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ECollisionEnabled'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 0,
+        "PushingAddress": 402,
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor[402]"
+      },
+      {
+        "Inst": "EX_ComputedJump",
+        "StatementIndex": 5,
+        "OffsetExpression": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "IntProperty",
+              "Name": "EntryPoint",
+              "Flags": "RF_Public",
+              "ElementSize": 4,
+              "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 15,
+        "PushingAddress": 211,
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor[211]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 20,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 20,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Function'SceneComponent:SetVisibility'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "Door_Front_Closed",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "PropertyFlags": "Edit | BlueprintVisible",
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 62,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "ByteProperty",
+              "Name": "Temp_byte_Variable_2",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "Enum": {
+                "ObjectName": "Enum'ECollisionEnabled'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 3
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 82,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "ByteProperty",
+              "Name": "Temp_byte_Variable_3",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "Enum": {
+                "ObjectName": "Enum'ECollisionEnabled'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 0
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 102,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Temp_bool_Variable_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Door_Front_Closed",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 121,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 67,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetCollisionEnabled",
+          "Parameters": [
+            {
+              "Inst": "EX_SwitchValue",
+              "IndexTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                    "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                  },
+                  "Property": {
+                    "Type": "BoolProperty",
+                    "Name": "Temp_bool_Variable_1",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "FieldSize": 1,
+                    "ByteOffset": 0,
+                    "ByteMask": 1,
+                    "FieldMask": 255,
+                    "BoolSize": 1,
+                    "bIsNativeBool": true
+                  }
+                }
+              },
+              "EndGotoOffset": 209,
+              "Cases": [
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_False"
+                  },
+                  "NextOffset": 186,
+                  "CaseTerm": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                      },
+                      "Property": {
+                        "Type": "ByteProperty",
+                        "Name": "Temp_byte_Variable_3",
+                        "Flags": "RF_Public",
+                        "ElementSize": 1,
+                        "Enum": {
+                          "ObjectName": "Enum'ECollisionEnabled'",
+                          "ObjectPath": "/Script/Engine"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_True"
+                  },
+                  "NextOffset": 200,
+                  "CaseTerm": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                      },
+                      "Property": {
+                        "Type": "ByteProperty",
+                        "Name": "Temp_byte_Variable_2",
+                        "Flags": "RF_Public",
+                        "ElementSize": 1,
+                        "Enum": {
+                          "ObjectName": "Enum'ECollisionEnabled'",
+                          "ObjectPath": "/Script/Engine"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "DefaultTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                    "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                  },
+                  "Property": {
+                    "Type": "ByteProperty",
+                    "Name": "K2Node_Select_Default",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "Enum": {
+                      "ObjectName": "Enum'ECollisionEnabled'",
+                      "ObjectPath": "/Script/Engine"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 210
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 211,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 20,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Function'SceneComponent:SetVisibility'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "Door_Back_Closed",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "PropertyFlags": "Edit | BlueprintVisible",
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 253,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "ByteProperty",
+              "Name": "Temp_byte_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "Enum": {
+                "ObjectName": "Enum'ECollisionEnabled'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 3
+        }
+      },
+      {
+        "Inst": "EX_Let",
+        "StatementIndex": 273,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "ByteProperty",
+              "Name": "Temp_byte_Variable_1",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "Enum": {
+                "ObjectName": "Enum'ECollisionEnabled'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_ByteConst",
+          "Value": 0
+        }
+      },
+      {
+        "Inst": "EX_LetBool",
+        "StatementIndex": 293,
+        "Variable": {
+          "Inst": "EX_LocalVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Temp_bool_Variable",
+              "Flags": "RF_Public",
+              "ElementSize": 1,
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        },
+        "Expression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "BoolProperty",
+              "Name": "Door_Back_Closed",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 1,
+              "PropertyFlags": "Edit | BlueprintVisible",
+              "FieldSize": 1,
+              "ByteOffset": 0,
+              "ByteMask": 1,
+              "FieldMask": 255,
+              "BoolSize": 1,
+              "bIsNativeBool": true
+            }
+          }
+        }
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 312,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 67,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_VirtualFunction",
+          "Function": "SetCollisionEnabled",
+          "Parameters": [
+            {
+              "Inst": "EX_SwitchValue",
+              "IndexTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                    "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                  },
+                  "Property": {
+                    "Type": "BoolProperty",
+                    "Name": "Temp_bool_Variable",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "FieldSize": 1,
+                    "ByteOffset": 0,
+                    "ByteMask": 1,
+                    "FieldMask": 255,
+                    "BoolSize": 1,
+                    "bIsNativeBool": true
+                  }
+                }
+              },
+              "EndGotoOffset": 400,
+              "Cases": [
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_False"
+                  },
+                  "NextOffset": 377,
+                  "CaseTerm": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                      },
+                      "Property": {
+                        "Type": "ByteProperty",
+                        "Name": "Temp_byte_Variable_1",
+                        "Flags": "RF_Public",
+                        "ElementSize": 1,
+                        "Enum": {
+                          "ObjectName": "Enum'ECollisionEnabled'",
+                          "ObjectPath": "/Script/Engine"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "CaseIndexValueTerm": {
+                    "Inst": "EX_True"
+                  },
+                  "NextOffset": 391,
+                  "CaseTerm": {
+                    "Inst": "EX_LocalVariable",
+                    "Variable": {
+                      "Owner": {
+                        "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                      },
+                      "Property": {
+                        "Type": "ByteProperty",
+                        "Name": "Temp_byte_Variable",
+                        "Flags": "RF_Public",
+                        "ElementSize": 1,
+                        "Enum": {
+                          "ObjectName": "Enum'ECollisionEnabled'",
+                          "ObjectPath": "/Script/Engine"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "DefaultTerm": {
+                "Inst": "EX_LocalVariable",
+                "Variable": {
+                  "Owner": {
+                    "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+                    "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+                  },
+                  "Property": {
+                    "Type": "ByteProperty",
+                    "Name": "K2Node_Select_Default_1",
+                    "Flags": "RF_Public",
+                    "ElementSize": 1,
+                    "Enum": {
+                      "ObjectName": "Enum'ECollisionEnabled'",
+                      "ObjectPath": "/Script/Engine"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 401
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 402,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 404
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_LocalFinalFunction",
+        "StatementIndex": 0,
+        "Function": {
+          "ObjectName": "Function'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.2"
+        },
+        "Parameters": [
+          {
+            "Inst": "EX_IntConst",
+            "Value": 15
+          }
+        ],
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.ExecuteUbergraph_BP_Env_Prop_Choam_CargoContainer_PlacementActor[15]"
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 15,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 17
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ScriptBytecode": [
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 0,
+        "PushingAddress": 96,
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.UserConstructionScript[96]"
+      },
+      {
+        "Inst": "EX_PushExecutionFlow",
+        "StatementIndex": 5,
+        "PushingAddress": 53,
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.UserConstructionScript[53]"
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 10,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 20,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Function'SceneComponent:SetVisibility'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "Door_Front_Closed",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "PropertyFlags": "Edit | BlueprintVisible",
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 52
+      },
+      {
+        "Inst": "EX_Context",
+        "StatementIndex": 53,
+        "ObjectExpression": {
+          "Inst": "EX_InstanceVariable",
+          "Variable": {
+            "Owner": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+              "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+            },
+            "Property": {
+              "Type": "ObjectProperty",
+              "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02",
+              "Flags": "RF_Public | RF_LoadCompleted",
+              "ElementSize": 8,
+              "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+              "PropertyClass": {
+                "ObjectName": "Class'StaticMeshComponent'",
+                "ObjectPath": "/Script/Engine"
+              }
+            }
+          }
+        },
+        "Offset": 20,
+        "RValuePointer": null,
+        "ContextExpression": {
+          "Inst": "EX_FinalFunction",
+          "Function": {
+            "ObjectName": "Function'SceneComponent:SetVisibility'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "Parameters": [
+            {
+              "Inst": "EX_InstanceVariable",
+              "Variable": {
+                "Owner": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+                },
+                "Property": {
+                  "Type": "BoolProperty",
+                  "Name": "Door_Back_Closed",
+                  "Flags": "RF_Public | RF_LoadCompleted",
+                  "ElementSize": 1,
+                  "PropertyFlags": "Edit | BlueprintVisible",
+                  "FieldSize": 1,
+                  "ByteOffset": 0,
+                  "ByteMask": 1,
+                  "FieldMask": 255,
+                  "BoolSize": 1,
+                  "bIsNativeBool": true
+                }
+              }
+            },
+            {
+              "Inst": "EX_True"
+            }
+          ]
+        }
+      },
+      {
+        "Inst": "EX_PopExecutionFlow",
+        "StatementIndex": 95
+      },
+      {
+        "Inst": "EX_Return",
+        "StatementIndex": 96,
+        "Expression": {
+          "Inst": "EX_Nothing"
+        }
+      },
+      {
+        "Inst": "EX_EndOfScript",
+        "StatementIndex": 98
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.5"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.7"
+        }
+      ],
+      "VariableGuid": "B671F995-4D8C8818-6F42DDA2-659C9E70",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SM_Env_Prop_Choam_CargoContainer_Body_01_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.9"
+        }
+      ],
+      "MetaDataArray": [
+        {
+          "DataKey": "tooltip",
+          "DataValue": ""
+        }
+      ],
+      "VariableGuid": "EC98DF50-436B2144-EB4727BC-990D6A35",
+      "InternalVariableName": "SM_Env_Prop_Choam_CargoContainer_Body_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.12"
+      },
+      "VariableGuid": "55C00EF1-4A2DCCC5-4A4BE78B-55E71DA5",
+      "InternalVariableName": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.13"
+      },
+      "VariableGuid": "F6F956B7-4F96959E-C9D9D389-D46382F6",
+      "InternalVariableName": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.7"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Env_Prop_Choam_CargoContainer_Body_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Choam_CargoContainer_Body_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/SM_Env_Prop_Choam_CargoContainer_Body_01.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_02_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Env_Prop_Choam_CargoContainer_PlacementActor_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/BP_Env_Prop_Choam_CargoContainer_PlacementActor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/Containers/Meshes/SM_Env_Prop_Choam_CargoContainer_DoorUncuttable_01.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -2.4822646E-05,
+        "Y": -1020.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "Mobility": "EComponentMobility::Static"
+    }
+  }
+]

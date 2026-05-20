@@ -1,0 +1,681 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Meshes/SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan.1"
+    },
+    "Properties": {
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BE2963054F2A195234817E9CC505F92C",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x177"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Meshes/SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Accessories'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Accessories.0"
+          },
+          "MaterialSlotName": "FalseTitan_Accessories",
+          "ImportedMaterialSlotName": "FalseTitan_Accessories",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Emissive'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Emissive.0"
+          },
+          "MaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Emissive",
+          "ImportedMaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Emissive",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Skin_Top'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Skin_Top.0"
+          },
+          "MaterialSlotName": "FalseTitan_Top",
+          "ImportedMaterialSlotName": "FalseTitan_Top",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 139.45316,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Skin_Bottom'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/MI_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Skin_Bottom.0"
+          },
+          "MaterialSlotName": "FalseTitan_Bottom",
+          "ImportedMaterialSlotName": "FalseTitan_Bottom",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 117.60321,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_Player_Underwear_Male'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Neut/Underwear02/Materials/ML_Player_Underwear_Male.0"
+          },
+          "MaterialSlotName": "Shorts",
+          "ImportedMaterialSlotName": "Shorts",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 101.708664,
+            "LocalUVDensities[1]": 602.4386,
+            "LocalUVDensities[2]": 104.965416,
+            "LocalUVDensities[3]": 911.21484
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Body_Grebles'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Body_Grebles.0"
+          },
+          "MaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Body_Grebles",
+          "ImportedMaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Body_Grebles",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 143.71107,
+            "LocalUVDensities[1]": 1771.62,
+            "LocalUVDensities[2]": 111.490105,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Chair'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Chair.0"
+          },
+          "MaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Chair",
+          "ImportedMaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Chair",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 407.2591,
+            "LocalUVDensities[1]": 4328.353,
+            "LocalUVDensities[2]": 101.571526,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Cables'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Materials/ML_DLC_B1C2_Env_Prop_EcoA_FalseTitan_Cables.0"
+          },
+          "MaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Cables",
+          "ImportedMaterialSlotName": "DLC_B1C2_Env_Prop_EcoA_FalseTitan_Cables",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 1040.1277,
+            "LocalUVDensities[1]": 16305.402,
+            "LocalUVDensities[2]": 98.04207,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 950.3946,
+      "LightMapResolution": 64,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -29.017273,
+          "Y": -279.9886,
+          "Z": 780.03595
+        },
+        "BoxExtent": {
+          "X": 632.6565,
+          "Y": 214.80966,
+          "Z": 633.3923
+        },
+        "SphereRadius": 920.6428085160254
+      },
+      "LinkedMeshDecals": [
+        {
+          "ObjectName": "StaticMesh'SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan_MD'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Meshes/SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan_MD.1"
+        }
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan:BodySetup_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/EcoA/FalseTitan/Meshes/SM_DLC_B1C2_Env_Prop_EcoA_FalseTitan.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "CA0BE4F1-48C7B422-B7F1A288-3DD12A75",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 0,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 0,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 0,
+              "NumTriangles": 0,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 0,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 2,
+              "FirstIndex": 22464,
+              "NumTriangles": 113,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 3,
+              "FirstIndex": 22803,
+              "NumTriangles": 90,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 4,
+              "FirstIndex": 23073,
+              "NumTriangles": 44,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 5,
+              "FirstIndex": 23205,
+              "NumTriangles": 19,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 6,
+              "FirstIndex": 20568,
+              "NumTriangles": 632,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 7,
+              "FirstIndex": 0,
+              "NumTriangles": 6856,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 9501,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 9502
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 4,
+            "NumVertices": 9502,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -662.8469,
+                "Y": -495.79828,
+                "Z": 145.64368
+              },
+              "Max": {
+                "X": 604.6392,
+                "Y": -63.517776,
+                "Z": 1414.4282
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -29.103882,
+                    "Y": -279.65802,
+                    "Z": 780.03595
+                  },
+                  "Extent": {
+                    "X": 216.14026,
+                    "Y": 634.3923,
+                    "Z": 643.7431
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 50.19513,
+                    "Y": -397.6405,
+                    "Z": 839.51025
+                  },
+                  "Extent": {
+                    "X": 98.15775,
+                    "Y": 574.91797,
+                    "Z": 138.77332
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -29.103882,
+                    "Y": -279.65802,
+                    "Z": 780.03595
+                  },
+                  "Extent": {
+                    "X": 216.14026,
+                    "Y": 634.3923,
+                    "Z": 643.7431
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -281.5888,
+                    "Y": -377.81577,
+                    "Z": 898.9845
+                  },
+                  "Extent": {
+                    "X": 117.982506,
+                    "Y": 475.7942,
+                    "Z": 391.2582
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -29.103882,
+                    "Y": -279.65802,
+                    "Z": 780.03595
+                  },
+                  "Extent": {
+                    "X": 633.7431,
+                    "Y": 634.3923,
+                    "Z": 226.14026
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -9.279114,
+                    "Y": -279.658,
+                    "Z": 819.6855
+                  },
+                  "Extent": {
+                    "X": 59.474274,
+                    "Y": 594.74274,
+                    "Z": 118.948555
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -29.103882,
+                    "Y": -279.65802,
+                    "Z": 780.03595
+                  },
+                  "Extent": {
+                    "X": 633.7431,
+                    "Y": 634.3923,
+                    "Z": 226.14024
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -9.279114,
+                    "Y": -432.3777,
+                    "Z": 819.6855
+                  },
+                  "Extent": {
+                    "X": 59.474274,
+                    "Y": 594.74274,
+                    "Z": 73.42061
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": -29.103943,
+                    "Y": -260.79932,
+                    "Z": 527.22644
+                  },
+                  "Extent": {
+                    "X": 515.4437,
+                    "Y": 197.28154,
+                    "Z": 391.5828
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_PayloadAtEndOfFile | BULKDATA_PayloadInSeperateFile | BULKDATA_Force_NOT_InlinePayload | BULKDATA_NoOffsetFixUp",
+          "ElementCount": 11402820,
+          "SizeOnDisk": 11402820,
+          "OffsetInFile": "0x0"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 1,
+        "PositionPrecision": 5,
+        "NormalPrecision": 8,
+        "NumInputTriangles": 556276,
+        "NumInputVertices": 347963,
+        "NumInputMeshes": 1,
+        "NumInputTexCoords": 4,
+        "NumClusters": 9112,
+        "ResourceFlags": "HAS_VERTEX_COLOR"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -29.103867,
+          "Y": -279.65802,
+          "Z": 780.03595
+        },
+        "BoxExtent": {
+          "X": 632.7431,
+          "Y": 215.14024,
+          "Z": 633.3923
+        },
+        "SphereRadius": 901.81757
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

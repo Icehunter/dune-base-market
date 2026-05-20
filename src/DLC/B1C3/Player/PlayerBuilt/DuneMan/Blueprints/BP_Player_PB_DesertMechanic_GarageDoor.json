@@ -1,0 +1,644 @@
+[
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 8.681678,
+        "Y": 43.79654,
+        "Z": 139.43188
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Player_PB_DesertMechanic_GarageDoor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PlaceableAnimatedDoorBase'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_Upper",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision_Lower",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Arrow1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ArrowComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DiegeticGuiActorComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DiegeticGuiActorComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 352.73325,
+        "Y": 79.13981,
+        "Z": 125.0
+      },
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Ignore",
+          "WorldDynamic": "Ignore",
+          "Pawn": "Overlap",
+          "Visibility": "Ignore",
+          "Camera": "Ignore",
+          "PhysicsBody": "Ignore",
+          "Vehicle": "Ignore",
+          "Destructible": "Ignore",
+          "Building_Structure": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore",
+          "Trace_BuildingOverlap": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      }
+    }
+  },
+  {
+    "Type": "BP_Player_PB_DesertMechanic_GarageDoor_C",
+    "Name": "Default__BP_Player_PB_DesertMechanic_GarageDoor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.BP_Player_PB_DesertMechanic_GarageDoor_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor",
+    "Properties": {
+      "m_SkeletalMeshComponent": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:SkeletalMeshComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.21"
+      },
+      "m_PivotComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.11"
+      },
+      "m_MeshContainerComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.10"
+      },
+      "m_SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.12"
+      },
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.7"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.5"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.19"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.4"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.8"
+      },
+      "m_BuildingType": {
+        "Name": "Neut_Desert_Mechanic_Garage_Door_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.12"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.12"
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    }
+  },
+  {
+    "Type": "DiegeticGuiActorComponent",
+    "Name": "DiegeticGuiActorComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DiegeticGuiActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "m_SetupType": {
+        "Name": "Door"
+      }
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.12"
+      },
+      "RelativeLocation": {
+        "X": -95.0,
+        "Y": 0.0,
+        "Z": 164.0
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MeshContainer",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.11"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PivotComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.12"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.9"
+      },
+      "VariableGuid": "86483DCB-448046FB-39F9B2B8-FFDDA0B5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.2"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3473088A-4630C999-DDCE0DA1-2848A003",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DiegeticGuiActorComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DiegeticGuiActorComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:DiegeticGuiActorComponent_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.6"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "43071EC4-499D7515-39625AA8-97168512",
+      "InternalVariableName": "DiegeticGuiActorComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ArrowComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ArrowComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:Arrow1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.0"
+      },
+      "ParentComponentOrVariableName": "InteractionsComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "276838D5-4FC06DD5-0121D5B1-C42E61F2",
+      "InternalVariableName": "Arrow1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:Collision_Lower_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.22"
+      },
+      "AttachToName": "door_collision_lowerSocket",
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F4000D6D-4FB77419-E39F2D8C-563B0BAA",
+      "InternalVariableName": "Collision_Lower"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Player_PB_DesertMechanic_GarageDoor_C:Collision_Upper_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.23"
+      },
+      "AttachToName": "door_collision_upperSocket",
+      "ParentComponentOrVariableName": "SkeletalMeshComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "31CDC532-4823C641-8AE28089-E75AEF47",
+      "InternalVariableName": "Collision_Upper"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Player_PB_DesertMechanic_GarageDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.13"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "SkeletalMeshComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_Player_PB_DesertMechanic_GarageDoor_C'Default__BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.3"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_MTX_B1C3_DesertMechanic_GarageDoor_C'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/AB_MTX_B1C3_DesertMechanic_GarageDoor.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_MTX_Env_PB_Neut_DesertMechanic_GarageDoor_Big'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Skeletons/SK_MTX_Env_PB_Neut_DesertMechanic_GarageDoor_Big.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_MTX_Env_PB_Neut_DesertMechanic_GarageDoor_Big'",
+        "ObjectPath": "DuneSandbox/Content/DLC/MTX/Environment/PlayerBuilt/Neut/DesertMechanicSet/Skeletons/SK_MTX_Env_PB_Neut_DesertMechanic_GarageDoor_Big.0"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "PlaceableStructure",
+        "ResponseArray": {
+          "Trace_Shelter_Buildables": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_BuildingStructure": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_GadgetPlacement": "Block",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Player_PB_DesertMechanic_GarageDoor_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Collision_Lower_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_CollisionBox'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/PlayerBuilt/Hark/Level3/Meshes/SM_CollisionBox.1"
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Collision_Upper_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Player_PB_DesertMechanic_GarageDoor_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C3/Player/PlayerBuilt/DuneMan/Blueprints/BP_Player_PB_DesertMechanic_GarageDoor.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_CollisionBox'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/PlayerBuilt/Hark/Level3/Meshes/SM_CollisionBox.1"
+      },
+      "bHiddenInGame": true
+    }
+  }
+]

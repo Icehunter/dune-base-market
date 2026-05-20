@@ -1,0 +1,2321 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_Foliage_PivotPainter",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Material'",
+    "Package": "DuneSandbox/Content/Dune/Core/Materials/M_Foliage_PivotPainter",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Grass'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Grass.0"
+      },
+      "BlendMode": "BLEND_Masked",
+      "ShadingModel": "MSM_TwoSidedFoliage",
+      "ShadingModels": {
+        "ShadingModelField": 64
+      },
+      "OpacityMaskClipValue": 0.1,
+      "TwoSided": true,
+      "bUsedWithInstancedStaticMeshes": true,
+      "bUsesDistortion": true,
+      "bUsedWithNanite": true,
+      "bUseMaterialAttributes": true,
+      "RefractionMethod": "RM_IndexOfRefraction",
+      "StateId": "E894992B-4B22AECC-E698939F-2EC0BD41",
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_BaseDiffuse_D"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedExpressionData": {
+      "RuntimeEntries": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Specular",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SS Opacity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Roughness Multiplier",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Color Desaturation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normal Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B Mask - AO Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B Mask - AO Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Tiling X",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Tiling Y",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B - Tiling X",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B - Tiling Y",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Normal Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B - Normal Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Unwrapped Trunk Normal Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "MaskedOpacityValue",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Blend Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Hue Variation Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Hue Variation Rarity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Horizontal Speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Gust World Scale",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "PreviousTime",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CurrentTime",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 4 Shelter Dot Product Modulation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 4 Shelter Dot Product Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 3's Angle Contribution to Wind 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 4 Random Rotation Change Rate",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 4 Random Rotation Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 3 Random Rotation Change Rate",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 3 Random Rotation Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2 Random Rotation Change Rate",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2 Random Rotation Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1 Random Rotation Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1 Random Rotation Change Rate",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Angle Offset 1",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Angle offset 2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Angle Offset 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind Angle Offset 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dampening Radius Multiplier 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dampening Radius Multiplier 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dampening Radius Multiplier 2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Dampening Radius Multiplier 1",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Max Rotation 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Max Rotation 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Max Rotation 2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Max Rotation 1",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 3 Shelter Dot Product Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 3 Shelter Dot Product Modulation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2 Shelter Dot Product Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2 Shelter Dot Product Modulation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1 Shelter Dot Product Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1 Shelter Dot Product Modulation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1's Angle Contribution to Wind 2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1's Angle Contribution to Wind 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2's Angle Contribution to Wind 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 2's Angle Contribution to Wind 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wind 1's Angle Contribution to Wind 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 0 - Bend Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 0 - Collision Distance",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 1 - Bend Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 1 - Collision Distance",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 2 - Collision Distance",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 2 - Bend Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 0 - Collision Distance Exponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 1 - Collision Distance Exponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 2 - Collision Distance Exponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Global Wind Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bending Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wiggle Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Wiggle Frequency",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Object Scale Hardness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Grass Z-Offset",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Object Scale Fade Threshold",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WPO Zero Distance (cm)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WPO Fade Start (cm)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Opacity Fade Start (cm)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Opacity Zero Distance (cm)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color Match Threshold",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color Match Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Mult",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Color - Base Color Desaturation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Color - New Color Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Mask Min XExtent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Mask Max XExtent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Mask power",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color Match Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color Match Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color Match Gradient Power",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Roughness - Roughness Value",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Roughness - Roughness Amount",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "RotationAngle",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Transition - Shake Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Transition - Shake Speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Size Opened",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Shrink - Size Closed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Emissive - Max Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - HasDew",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Debug Has Dew Modulation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Debug Has Dew Modulation Frequency",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Transition - Length",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Fresnel Exponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Fresnel Base",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Roughness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark - Roughness Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Noise Map World Scale",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Noise Map Mask Power",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Offset",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Color Tint Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Overlay Influence",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[1]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SS Color Multiplier",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Emissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Color Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B - Color Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tint Petals",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tint Stem",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Bottom Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normalized Wind Direction X Axis",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normalized Wind Direction Y Axis",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Vertex Color Mask Channel",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Color To Match",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Color - New Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A - Fresnel Color (A = Intensity)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Noise Map Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[2]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[3]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normal (B = SS, A = Roughness)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Mask (R = Emissive, G = Petals)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A Color (A = Roughness)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark A Normal (A = AO)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B Color (A = Roughness)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Bark B Normal (A = AO)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Unwrapped Normal (A = AO)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WindTurbulenceVectorAndGustMagnitude",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Position and Index Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "X-Vector And X-Extent Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Pivot Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - XExtent texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Overlay Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[4]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[5]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[6]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[7]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "UsesMaskedOpacity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Normals TwoSidedSign",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Hue - Per Instance Hue Variation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Trunk Material",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Emissive",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "2nd Bark - VertexColor (Red) Mask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Unwrappped Trunk Normal and AO",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Use SS from Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Tint Petals/Stem",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TwoSidedSign RG Only",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Gradient - Tint Bottom Separately",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Manually Control Pivot Painter 2 Foliage Animation Time",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Expose Previous Frame Time",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 1 Normals",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 2 Normals",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 4",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 4 Normals",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 3 Normals",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 3",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Animate Level 1",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Allow Wind 1 Calculations To Affect Wind 2's Rotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Allow Wind 2 Calculations To Affect Wind 3's Rotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Allow Wind 1 Calculations To Affect Wind 3's Rotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Allow Wind 1 Calculations To Affect Wind 4's Rotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Allow Wind 2 Calculations To Affect Wind 4's Rotation",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 1 - Use",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Collision - Level 2 - Use",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "VertexAnimation - Player Collision",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "VertexAnimation - Wind",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "HasPivotPainterData",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Enable Distance Fadeout",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Enable Opacity Fadeout?",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Enable WPO Fadeout",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Use Vertex Animation Features",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - Normalize Color Matching",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Mask - DebugMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Has Effect",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "NoDew - Debug Has Dew",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Noise Map Color Tint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Unwrapped Overlay Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Resource",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[8]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[9]": {
+        "ParameterInfoSet": []
+      },
+      "ScalarPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "ScalarValues": [
+        0.5,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.5,
+        0.8,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.02,
+        1.0,
+        0.25,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        -0.444,
+        -1.25,
+        1.0,
+        200.0,
+        0.25,
+        200.0,
+        0.25,
+        200.0,
+        0.25,
+        0.25,
+        200.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        0.009174,
+        0.009174,
+        0.009174,
+        0.009174,
+        -1.25,
+        -0.444,
+        -1.25,
+        -0.444,
+        -1.25,
+        -0.444,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.05,
+        120.0,
+        0.1,
+        120.0,
+        150.0,
+        0.15,
+        0.8,
+        0.8,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.1,
+        -100.0,
+        100.0,
+        4000.0,
+        0.0,
+        4000.0,
+        8000.0,
+        1.0,
+        0.0,
+        1.0,
+        1.4,
+        0.4,
+        0.8,
+        1.0,
+        8.0,
+        38.0,
+        0.3,
+        -0.65,
+        0.65,
+        1.0,
+        0.9,
+        1.0,
+        0.0,
+        2.0,
+        3.0,
+        2.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.5,
+        0.05,
+        0.0,
+        0.0,
+        2000.0,
+        1.0,
+        10.0,
+        0.5,
+        0.0,
+        1.0
+      ],
+      "StaticSwitchValues": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "DynamicSwitchValues": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "VectorValues": [
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FF0000"
+        },
+        {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "00FF00"
+        },
+        {
+          "R": 0.0,
+          "G": 1.0,
+          "B": 0.0,
+          "A": 0.0,
+          "Hex": "00FF00"
+        },
+        {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 0.699999,
+          "A": 1.0,
+          "Hex": "FF00DA"
+        },
+        {
+          "R": 0.140625,
+          "G": 0.091963,
+          "B": 0.067383,
+          "A": 0.0,
+          "Hex": "695549"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FFFFFF"
+        }
+      ],
+      "ScalarArrayValues": [],
+      "VectorArrayValues": [],
+      "DoubleVectorValues": [],
+      "TextureValues": [
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseDiffuse_D.T_BaseDiffuse_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseDiffuse_D.T_BaseDiffuse_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseDiffuse_D.T_BaseDiffuse_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/WindTurblenceVectorAndGustMagnitude.WindTurblenceVectorAndGustMagnitude",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/SimpExPivPos.SimpExPivPos",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/PP2_rgb_XVect_a_XExtent.PP2_rgb_XVect_a_XExtent",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M.T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M.T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Core/Textures/T_BaseNormal_Packed_N.T_BaseNormal_Packed_N",
+          "SubPathString": ""
+        }
+      ],
+      "FontValues": [],
+      "FontPageValues": [],
+      "RuntimeVirtualTextureValues": [],
+      "SparseVolumeTextureValues": [],
+      "ReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'T_BaseDiffuse_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/Textures/T_BaseDiffuse_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_BaseNormal_Packed_N'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Core/Textures/T_BaseNormal_Packed_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+          "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+        },
+        {
+          "ObjectName": "Texture2D'WindTurblenceVectorAndGustMagnitude'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/WindTurblenceVectorAndGustMagnitude.0"
+        },
+        {
+          "ObjectName": "Texture2D'SimpExPivPos'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/SimpExPivPos.0"
+        },
+        {
+          "ObjectName": "Texture2D'PP2_rgb_XVect_a_XExtent'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/PP2_rgb_XVect_a_XExtent.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Noise_Clouds_01'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/Core/Noises/T_Noise_Clouds_01.0"
+        },
+        {
+          "ObjectName": "Texture2D'BlendFunc_DefBlend'",
+          "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
+        },
+        {
+          "ObjectName": "Texture2D'BlendFunc_DefBase'",
+          "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
+        }
+      ],
+      "FunctionInfos": [
+        {
+          "StateId": "2FC1AC50-4C60089A-FB4EEF83-8609245A",
+          "Function": {
+            "ObjectName": "MaterialFunction'ComponentPivotLocation'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ComponentPivotLocation.0"
+          }
+        },
+        {
+          "StateId": "99B00DAD-480981B7-5723BE82-FD1CC41A",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_ResourceNodeHideMesh'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_ResourceNodeHideMesh.0"
+          }
+        },
+        {
+          "StateId": "B6067F67-4AC0092A-9D7DF581-EBEEE180",
+          "Function": {
+            "ObjectName": "MaterialFunction'HueShift'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/HueShift.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "AB126D3E-46D0D8F7-A271B2BC-7BC932DA",
+          "Function": {
+            "ObjectName": "MaterialFunction'SmoothStep'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SmoothStep.0"
+          }
+        },
+        {
+          "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+          "Function": {
+            "ObjectName": "MaterialFunction'BlendAngleCorrectedNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+          }
+        },
+        {
+          "StateId": "6DC7770C-47F30C64-ABBF78B7-22DC4A2E",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_BC7_Normal'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_BC7_Normal.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "8BDF3BD5-486AA3D4-E1A38E9A-9B20D640",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NormalStrength'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NormalStrength.0"
+          }
+        },
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "DFD90C09-43807297-70171F8D-5940702C",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+          }
+        },
+        {
+          "StateId": "20CB7094-472816F8-289DF892-F0CE035F",
+          "Function": {
+            "ObjectName": "MaterialFunction'FixRotateAboutAxisNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/FixRotateAboutAxisNormals.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "4B52D44F-4BE5504D-4EEC6B98-A424C4C9",
+          "Function": {
+            "ObjectName": "MaterialFunction'ObjectScale'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.0"
+          }
+        },
+        {
+          "StateId": "0E6DA192-453904E1-A425718B-ADA418AB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_PivotPainter2_FoliageAnimation'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_PivotPainter2_FoliageAnimation.0"
+          }
+        },
+        {
+          "StateId": "20CB7094-472816F8-289DF892-F0CE035F",
+          "Function": {
+            "ObjectName": "MaterialFunction'FixRotateAboutAxisNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/FixRotateAboutAxisNormals.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "4B52D44F-4BE5504D-4EEC6B98-A424C4C9",
+          "Function": {
+            "ObjectName": "MaterialFunction'ObjectScale'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.0"
+          }
+        },
+        {
+          "StateId": "0E6DA192-453904E1-A425718B-ADA418AB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_PivotPainter2_FoliageAnimation'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_PivotPainter2_FoliageAnimation.0"
+          }
+        },
+        {
+          "StateId": "20CB7094-472816F8-289DF892-F0CE035F",
+          "Function": {
+            "ObjectName": "MaterialFunction'FixRotateAboutAxisNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/FixRotateAboutAxisNormals.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "4B52D44F-4BE5504D-4EEC6B98-A424C4C9",
+          "Function": {
+            "ObjectName": "MaterialFunction'ObjectScale'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.0"
+          }
+        },
+        {
+          "StateId": "0E6DA192-453904E1-A425718B-ADA418AB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_PivotPainter2_FoliageAnimation'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_PivotPainter2_FoliageAnimation.0"
+          }
+        },
+        {
+          "StateId": "20CB7094-472816F8-289DF892-F0CE035F",
+          "Function": {
+            "ObjectName": "MaterialFunction'FixRotateAboutAxisNormals'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/FixRotateAboutAxisNormals.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        },
+        {
+          "StateId": "4B52D44F-4BE5504D-4EEC6B98-A424C4C9",
+          "Function": {
+            "ObjectName": "MaterialFunction'ObjectScale'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.0"
+          }
+        },
+        {
+          "StateId": "0E6DA192-453904E1-A425718B-ADA418AB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_PivotPainter2_FoliageAnimation'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_PivotPainter2_FoliageAnimation.0"
+          }
+        },
+        {
+          "StateId": "F1A8C6A9-4D37E691-BD787485-98A34AB8",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRange'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
+          }
+        },
+        {
+          "StateId": "1DF13CEA-46AAABD7-CBDF9C8C-111BA6C0",
+          "Function": {
+            "ObjectName": "MaterialFunction'SafeNormalize'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+          }
+        },
+        {
+          "StateId": "3161742E-4800C603-B145E1AF-56D3BE63",
+          "Function": {
+            "ObjectName": "MaterialFunction'TimeWithSpeedVariable'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Math/TimeWithSpeedVariable.0"
+          }
+        },
+        {
+          "StateId": "B860CEB9-4A749E3A-5735CEB8-09E7C0E3",
+          "Function": {
+            "ObjectName": "MaterialFunction'Lerp_Multiple_Float2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Lerp_Multiple_Float2.0"
+          }
+        },
+        {
+          "StateId": "3161742E-4800C603-B145E1AF-56D3BE63",
+          "Function": {
+            "ObjectName": "MaterialFunction'TimeWithSpeedVariable'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Math/TimeWithSpeedVariable.0"
+          }
+        },
+        {
+          "StateId": "B860CEB9-4A749E3A-5735CEB8-09E7C0E3",
+          "Function": {
+            "ObjectName": "MaterialFunction'Lerp_Multiple_Float2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Lerp_Multiple_Float2.0"
+          }
+        },
+        {
+          "StateId": "E3683186-4DE0764E-5D025C84-216E9A58",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_UnpackIntegerAsFloat'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ms_PivotPainter2_UnpackIntegerAsFloat.0"
+          }
+        },
+        {
+          "StateId": "E3683186-4DE0764E-5D025C84-216E9A58",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_UnpackIntegerAsFloat'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ms_PivotPainter2_UnpackIntegerAsFloat.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+          }
+        },
+        {
+          "StateId": "89A1214E-4A88BC52-AB039CB4-91E362E2",
+          "Function": {
+            "ObjectName": "MaterialFunction'2dArrayLookupByIndex'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/2dArrayLookupByIndex.0"
+          }
+        },
+        {
+          "StateId": "4A57310C-42C92AE4-84DE7FA4-754DFF25",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_ReturnParentTextureInfo'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_ReturnParentTextureInfo.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+          }
+        },
+        {
+          "StateId": "89A1214E-4A88BC52-AB039CB4-91E362E2",
+          "Function": {
+            "ObjectName": "MaterialFunction'2dArrayLookupByIndex'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/2dArrayLookupByIndex.0"
+          }
+        },
+        {
+          "StateId": "4A57310C-42C92AE4-84DE7FA4-754DFF25",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_ReturnParentTextureInfo'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_ReturnParentTextureInfo.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "B3A0BE7C-45E686B7-749698B7-7A89E3CC",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_CalculateMeshElementIndex'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_CalculateMeshElementIndex.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "7560E2DA-4356343C-18E6818A-A015BAC5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat2'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.0"
+          }
+        },
+        {
+          "StateId": "89A1214E-4A88BC52-AB039CB4-91E362E2",
+          "Function": {
+            "ObjectName": "MaterialFunction'2dArrayLookupByIndex'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/2dArrayLookupByIndex.0"
+          }
+        },
+        {
+          "StateId": "4A57310C-42C92AE4-84DE7FA4-754DFF25",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_ReturnParentTextureInfo'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_ReturnParentTextureInfo.0"
+          }
+        },
+        {
+          "StateId": "E3683186-4DE0764E-5D025C84-216E9A58",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_UnpackIntegerAsFloat'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ms_PivotPainter2_UnpackIntegerAsFloat.0"
+          }
+        },
+        {
+          "StateId": "212A5BE5-450AEC02-4FD9DEB0-8EE86B7A",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_PivotPainter2_Hierarchy'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_PivotPainter2_Hierarchy.0"
+          }
+        },
+        {
+          "StateId": "1DF13CEA-46AAABD7-CBDF9C8C-111BA6C0",
+          "Function": {
+            "ObjectName": "MaterialFunction'SafeNormalize'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+          }
+        },
+        {
+          "StateId": "1DF13CEA-46AAABD7-CBDF9C8C-111BA6C0",
+          "Function": {
+            "ObjectName": "MaterialFunction'SafeNormalize'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+          }
+        },
+        {
+          "StateId": "C1A4AC5A-4932C9B9-7FED7780-9AC5D5DC",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Foliage_VertexAnimation_PivotPainter'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Foliage_VertexAnimation_PivotPainter.0"
+          }
+        },
+        {
+          "StateId": "1DF13CEA-46AAABD7-CBDF9C8C-111BA6C0",
+          "Function": {
+            "ObjectName": "MaterialFunction'SafeNormalize'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+          }
+        },
+        {
+          "StateId": "F1A8C6A9-4D37E691-BD787485-98A34AB8",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRange'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
+          }
+        },
+        {
+          "StateId": "9ADBDE33-4FB24420-203DC39D-2EC924E7",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Foliage_VertexAnimation_Simple'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Foliage_VertexAnimation_Simple.0"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "B27564CF-408B3BD7-49F595AC-E9E767EC",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_CameraDistanceFade'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_CameraDistanceFade.0"
+          }
+        },
+        {
+          "StateId": "B27564CF-408B3BD7-49F595AC-E9E767EC",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_CameraDistanceFade'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_CameraDistanceFade.0"
+          }
+        },
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "DFD90C09-43807297-70171F8D-5940702C",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+          }
+        },
+        {
+          "StateId": "5B43C3EC-46C84F8E-52CAD1A3-4A073654",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Foliage_DistanceFadout'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Foliage_DistanceFadout.0"
+          }
+        },
+        {
+          "StateId": "14E6E0FD-4BADA1CC-87520181-5070A3D3",
+          "Function": {
+            "ObjectName": "MaterialFunction'MatLayerBlend_OverrideSubSurface'",
+            "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_OverrideSubSurface.0"
+          }
+        },
+        {
+          "StateId": "AE4733BE-4AB76CCC-061488B2-2C9CE197",
+          "Function": {
+            "ObjectName": "MaterialFunction'MatLayerBlend_OverrideBaseColor'",
+            "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_OverrideBaseColor.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "74B0EAEA-4A49EB74-755D17B3-65478444",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_ColorMatch'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_ColorMatch.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "9010C0FC-44EF76A8-48B835BD-BC3D0FC6",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_DecodePostion'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_DecodePostion.0"
+          }
+        },
+        {
+          "StateId": "8EE1F4DE-45EF4119-326B5BAB-D3CF16B1",
+          "Function": {
+            "ObjectName": "MaterialFunction'ms_PivotPainter2_Decode8BitAlphaAxisExtent'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/ms_PivotPainter2_Decode8BitAlphaAxisExtent.0"
+          }
+        },
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "127A25CC-4BE0E6F9-0A2D99BF-43C74E15",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat4Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat4Components.0"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "E6A85460-4E707DD6-EBF457B4-A3E80A43",
+          "Function": {
+            "ObjectName": "MaterialFunction'MakeFloat3'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.0"
+          }
+        },
+        {
+          "StateId": "20370802-4F054DE3-CEE64D96-3E3759D5",
+          "Function": {
+            "ObjectName": "MaterialFunction'MatLayerBlend_RoughnessOverride'",
+            "ObjectPath": "Engine/Content/Functions/MaterialLayerFunctions/MatLayerBlend_RoughnessOverride.0"
+          }
+        },
+        {
+          "StateId": "49637CE3-497F6537-F49E7E96-78C0735F",
+          "Function": {
+            "ObjectName": "MaterialFunction'SimpleGrassWind'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/WorldPositionOffset/SimpleGrassWind.0"
+          }
+        },
+        {
+          "StateId": "BFF9C25F-4ADD3B3A-3CCED68B-60722BAB",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_NoDewEffect'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_NoDewEffect.0"
+          }
+        },
+        {
+          "StateId": "12F0AAA4-49229A5F-048B7FAD-8D29010C",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_Foliage_VertexAnimation_NoDew'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/MaterialFunctions/MF_Foliage_VertexAnimation_NoDew.0"
+          }
+        },
+        {
+          "StateId": "12B6F73F-4D5D4FF9-D2FBF18B-43945D5B",
+          "Function": {
+            "ObjectName": "MaterialFunction'Blend_Overlay'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.0"
+          }
+        }
+      ],
+      "ParameterCollectionInfos": [
+        {
+          "StateId": "F77E1CA6-437BD266-A05D5680-DDB28D7B",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'MPC_GlobalMaterialValues'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/Global/MPC_GlobalMaterialValues.0"
+          }
+        }
+      ],
+      "GrassTypes": [],
+      "MaterialLayers": {
+        "Layers": [],
+        "Blends": []
+      },
+      "DynamicParameterNames": [],
+      "QualityLevelsUsed": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "bHasMaterialLayers": false,
+      "bHasRuntimeVirtualTextureOutput": false,
+      "bHasSceneColor": false,
+      "bHasPerInstanceCustomData": true,
+      "bHasPerInstanceRandom": true,
+      "bHasVertexInterpolator": true,
+      "PropertyConnectedBitmask": 431527
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'BlendFunc_DefBase'",
+        "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBase.0"
+      },
+      {
+        "ObjectName": "Texture2D'BlendFunc_DefBlend'",
+        "ObjectPath": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.0"
+      },
+      {
+        "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+        "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+      },
+      {
+        "ObjectName": "Texture2D'PP2_rgb_XVect_a_XExtent'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/PP2_rgb_XVect_a_XExtent.0"
+      },
+      {
+        "ObjectName": "Texture2D'SimpExPivPos'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/PivotPainter2/SimpExPivPos.0"
+      },
+      {
+        "ObjectName": "Texture2D'WindTurblenceVectorAndGustMagnitude'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/WindTurblenceVectorAndGustMagnitude.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_Noise_Clouds_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/Core/Noises/T_Noise_Clouds_01.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_BaseDiffuse_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/Textures/T_BaseDiffuse_D.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_BaseNormal_Packed_N'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/Textures/T_BaseNormal_Packed_N.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_Pivot_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Neut/Flower/Textures/T_Env_Foliage_Neut_Flower_Primrose_Lush_01_XVector_M.0"
+      }
+    ]
+  }
+]

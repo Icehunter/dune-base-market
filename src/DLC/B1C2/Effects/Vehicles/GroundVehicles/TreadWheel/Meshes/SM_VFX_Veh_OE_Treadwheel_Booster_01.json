@@ -1,0 +1,209 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_VFX_Veh_OE_Treadwheel_Booster_01'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Vehicles/GroundVehicles/TreadWheel/Meshes/SM_VFX_Veh_OE_Treadwheel_Booster_01.1"
+    },
+    "Properties": {
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9F123A5C4BCA891831528E859DCF1C9C",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x177"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_VFX_Veh_OE_Treadwheel_Booster_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Effects/Vehicles/GroundVehicles/TreadWheel/Meshes/SM_VFX_Veh_OE_Treadwheel_Booster_01",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_VFX_Veh_BoosterTreadwheel_HeatDistortion'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Vehicles/GroundVehicles/TreadWheel/Materials/MI_VFX_Veh_BoosterTreadwheel_HeatDistortion.0"
+          },
+          "MaterialSlotName": "ITW_Boost_OuterFlame",
+          "ImportedMaterialSlotName": "ITW_Boost_OuterFlame",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 24.48495,
+            "LocalUVDensities[1]": 5.3123207,
+            "LocalUVDensities[2]": 5.3123207,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 24.48495,
+      "LightMapResolution": 64,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -152.37274,
+          "Y": -0.07216835,
+          "Z": 26.79036
+        },
+        "BoxExtent": {
+          "X": 10.962151,
+          "Y": 9.292036,
+          "Z": 16.32837
+        },
+        "SphereRadius": 21.75146703257725
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_VFX_Veh_OE_Treadwheel_Booster_01:BodySetup_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Vehicles/GroundVehicles/TreadWheel/Meshes/SM_VFX_Veh_OE_Treadwheel_Booster_01.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "C3D5F153-4674BB66-355A03B8-081A7650",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 626,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 926,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 927
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 927,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -164.3349,
+                "Y": -10.364204,
+                "Z": 9.46199
+              },
+              "Max": {
+                "X": -140.41058,
+                "Y": 10.219868,
+                "Z": 44.11873
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": true,
+            "CardBuildData": []
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x8728"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -152.37274,
+          "Y": -0.07216835,
+          "Z": 26.79036
+        },
+        "BoxExtent": {
+          "X": 10.962151,
+          "Y": 9.292036,
+          "Z": 16.32837
+        },
+        "SphereRadius": 20.524452
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

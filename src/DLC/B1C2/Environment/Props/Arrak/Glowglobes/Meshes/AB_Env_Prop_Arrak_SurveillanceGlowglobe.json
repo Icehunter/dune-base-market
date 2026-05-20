@@ -1,0 +1,1739 @@
+[
+  {
+    "Type": "AB_Env_Prop_Arrak_SurveillanceGlowglobe_C",
+    "Name": "Default__AB_Env_Prop_Arrak_SurveillanceGlowglobe_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "AnimBlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 8
+        }
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'A_Arrak_SurveillanceGlowglobe_Close'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Animation/A_Arrak_SurveillanceGlowglobe_Close.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'A_Arrak_SurveillanceGlowglobe_Open'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Animation/A_Arrak_SurveillanceGlowglobe_Open.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "AnimGraphNode_ControlRig": {
+        "ControlRigClass": {
+          "ObjectName": "RigVMBlueprintGeneratedClass'SK_Env_Prop_Arrak_SurveillanceGlowglobe_CtrlRig_C'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/SK_Env_Prop_Arrak_SurveillanceGlowglobe_CtrlRig.3"
+        },
+        "ControlRig": null,
+        "Alpha": 1.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "bSetRefPoseFromSkeleton": false,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "InputMapping": [],
+        "OutputMapping": [],
+        "LODThreshold": -1,
+        "Source": {
+          "LinkID": 7
+        },
+        "bResetInputPoseToInitial": true,
+        "bTransferInputPose": true,
+        "bTransferInputCurves": true,
+        "bTransferPoseInGlobalSpace": true,
+        "InputBonesToTransfer": [],
+        "NodeMappingContainer": null,
+        "InputSettings": {
+          "bUpdatePose": true,
+          "bUpdateCurves": true
+        },
+        "OutputSettings": {
+          "bUpdatePose": true,
+          "bUpdateCurves": true
+        },
+        "bExecute": true,
+        "EventQueue": [],
+        "SourcePropertyNames": [
+          "__CustomProperty_bOpenGlobe_39AAF83F48D9A87E2B3F9898A35E767C"
+        ],
+        "DestPropertyNames": [
+          "bOpenGlobe"
+        ],
+        "TargetInstance": null
+      }
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_40": "AnimGraph",
+      "__NameProperty_41": "A_Arrak_SurveillanceGlowglobe_Close",
+      "__IntProperty_42": 0,
+      "__FloatProperty_43": 0.0,
+      "__StructProperty_44": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_45": 3.0,
+      "__FloatProperty_46": 1.0,
+      "__BoolProperty_47": false,
+      "__EnumProperty_48": "EAnimSyncMethod::DoNotSync",
+      "__ByteProperty_49": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_50": "None",
+      "__NameProperty_51": "A_Arrak_SurveillanceGlowglobe_Open",
+      "__IntProperty_52": 1,
+      "__StructProperty_53": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess": {
+        "Library": {
+          "PathSegments": [
+            {
+              "Name": "bOpenGlowGlobe",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bOpenGlowGlobe"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "__CustomProperty_bOpenGlobe_39AAF83F48D9A87E2B3F9898A35E767C",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "__CustomProperty_bOpenGlobe_39AAF83F48D9A87E2B3F9898A35E767C"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "bOpenGlowGlobe",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bOpenGlowGlobe"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "bOpenGlowGlobe",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bOpenGlowGlobe"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            },
+            {
+              "Name": "AnimGraphNode_TransitionResult_1",
+              "Struct": {
+                "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "Property": {
+                "Path": [
+                  "AnimGraphNode_TransitionResult_1"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+                  "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 1
+            },
+            {
+              "Name": "bCanEnterTransition",
+              "Struct": null,
+              "Property": {
+                "Path": [
+                  "bCanEnterTransition"
+                ],
+                "ResolvedOwner": {
+                  "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              "Function": null,
+              "ArrayIndex": -1,
+              "Flags": 2
+            }
+          ],
+          "SrcPaths": [
+            {
+              "PathSegmentStartIndex": 0,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 2,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 5,
+              "PathSegmentCount": 1
+            }
+          ],
+          "DestPaths": [
+            {
+              "PathSegmentStartIndex": 1,
+              "PathSegmentCount": 1
+            },
+            {
+              "PathSegmentStartIndex": 3,
+              "PathSegmentCount": 2
+            },
+            {
+              "PathSegmentStartIndex": 6,
+              "PathSegmentCount": 2
+            }
+          ],
+          "CopyBatchArray": [
+            {
+              "Copies": [
+                {
+                  "AccessIndex": 0,
+                  "DestAccessStartIndex": 0,
+                  "DestAccessEndIndex": 1,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 1,
+                  "DestAccessStartIndex": 1,
+                  "DestAccessEndIndex": 2,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                },
+                {
+                  "AccessIndex": 2,
+                  "DestAccessStartIndex": 2,
+                  "DestAccessEndIndex": 3,
+                  "Type": "EPropertyAccessCopyType::Bool"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "AnimBlueprintExtension_Base": {
+        "ExposedValueHandlers": [
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 2,
+                "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 1,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [],
+            "Function": null,
+            "BoundFunction": "None"
+          },
+          {
+            "CopyRecords": [
+              {
+                "CopyIndex": 0,
+                "PostCopyOperation": "EPostCopyOperation::None"
+              }
+            ],
+            "Function": null,
+            "BoundFunction": "None"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "AB_Env_Prop_Arrak_SurveillanceGlowglobe_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "GlowglobeStates",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "A_Arrak_SurveillanceGlowglobe_Close",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "NativeTransitionIdentifier": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "A_Arrak_SurveillanceGlowglobe_Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "NativeTransitionIdentifier": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SKEL_SK_Env_Prop_Arrak_SurveillanceGlowglobe_Skeleton'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/SKEL_SK_Env_Prop_Arrak_SurveillanceGlowglobe_Skeleton.0"
+      },
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            0,
+            10
+          ],
+          "NodeIndex": 0,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            10,
+            9,
+            8,
+            7,
+            4294967295,
+            6,
+            5,
+            4,
+            4294967295,
+            3,
+            7,
+            7
+          ],
+          "NodeIndex": 3,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            1,
+            10,
+            2
+          ],
+          "NodeIndex": 4,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            10,
+            9,
+            8,
+            7,
+            4294967295,
+            6,
+            5,
+            4,
+            4294967295,
+            3,
+            7,
+            7
+          ],
+          "NodeIndex": 5,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            11,
+            10,
+            12
+          ],
+          "NodeIndex": 6,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 7,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+          },
+          "Entries": [
+            13,
+            13,
+            13,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 8,
+          "Flags": 0
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "ScriptStruct'/Script/ControlRig.AnimNode_ControlRig'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "SourcePropertyNames",
+                "Value": 3
+              },
+              {
+                "Key": "DestPropertyNames",
+                "Value": 4
+              },
+              {
+                "Key": "TargetInstance",
+                "Value": 5
+              },
+              {
+                "Key": "SourceInstance",
+                "Value": 6
+              },
+              {
+                "Key": "Source",
+                "Value": 7
+              },
+              {
+                "Key": "bResetInputPoseToInitial",
+                "Value": 8
+              },
+              {
+                "Key": "bTransferInputPose",
+                "Value": 9
+              },
+              {
+                "Key": "bTransferInputCurves",
+                "Value": 10
+              },
+              {
+                "Key": "bTransferPoseInGlobalSpace",
+                "Value": 11
+              },
+              {
+                "Key": "InputBonesToTransfer",
+                "Value": 12
+              },
+              {
+                "Key": "NodeMappingContainer",
+                "Value": 13
+              },
+              {
+                "Key": "InputSettings",
+                "Value": 14
+              },
+              {
+                "Key": "OutputSettings",
+                "Value": 15
+              },
+              {
+                "Key": "bExecute",
+                "Value": 16
+              },
+              {
+                "Key": "EventQueue",
+                "Value": 17
+              },
+              {
+                "Key": "ControlRigClass",
+                "Value": 18
+              },
+              {
+                "Key": "ControlRig",
+                "Value": 19
+              },
+              {
+                "Key": "Alpha",
+                "Value": 20
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 21
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 22
+              },
+              {
+                "Key": "bSetRefPoseFromSkeleton",
+                "Value": 23
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 24
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 25
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 26
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 27
+              },
+              {
+                "Key": "InputMapping",
+                "Value": 28
+              },
+              {
+                "Key": "OutputMapping",
+                "Value": 29
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 30
+              }
+            ],
+            "NumProperties": 31
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/ControlRig.AnimNode_ControlRigBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "SourcePropertyNames",
+                "Value": 3
+              },
+              {
+                "Key": "DestPropertyNames",
+                "Value": 4
+              },
+              {
+                "Key": "TargetInstance",
+                "Value": 5
+              },
+              {
+                "Key": "SourceInstance",
+                "Value": 6
+              },
+              {
+                "Key": "Source",
+                "Value": 7
+              },
+              {
+                "Key": "bResetInputPoseToInitial",
+                "Value": 8
+              },
+              {
+                "Key": "bTransferInputPose",
+                "Value": 9
+              },
+              {
+                "Key": "bTransferInputCurves",
+                "Value": 10
+              },
+              {
+                "Key": "bTransferPoseInGlobalSpace",
+                "Value": 11
+              },
+              {
+                "Key": "InputBonesToTransfer",
+                "Value": 12
+              },
+              {
+                "Key": "NodeMappingContainer",
+                "Value": 13
+              },
+              {
+                "Key": "InputSettings",
+                "Value": 14
+              },
+              {
+                "Key": "OutputSettings",
+                "Value": 15
+              },
+              {
+                "Key": "bExecute",
+                "Value": 16
+              },
+              {
+                "Key": "EventQueue",
+                "Value": 17
+              }
+            ],
+            "NumProperties": 18
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_CustomProperty'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "SourcePropertyNames",
+                "Value": 3
+              },
+              {
+                "Key": "DestPropertyNames",
+                "Value": 4
+              },
+              {
+                "Key": "TargetInstance",
+                "Value": 5
+              },
+              {
+                "Key": "SourceInstance",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_StateMachine'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "StateMachineIndexInClass",
+                "Value": 3
+              },
+              {
+                "Key": "MaxTransitionsPerFrame",
+                "Value": 4
+              },
+              {
+                "Key": "MaxTransitionsRequests",
+                "Value": 5
+              },
+              {
+                "Key": "bSkipFirstUpdateTransition",
+                "Value": 6
+              },
+              {
+                "Key": "bReinitializeOnBecomingRelevant",
+                "Value": 7
+              },
+              {
+                "Key": "bCreateNotifyMetaData",
+                "Value": 8
+              },
+              {
+                "Key": "bAllowConduitEntryStates",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/AnimGraphRuntime.AnimNode_StateResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              },
+              {
+                "Key": "StateIndex",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "Group",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "Method",
+                "Value": 10
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 11
+              },
+              {
+                "Key": "Sequence",
+                "Value": 12
+              },
+              {
+                "Key": "PlayRateBasis",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 14
+              },
+              {
+                "Key": "PlayRateScaleBiasClampConstants",
+                "Value": 15
+              },
+              {
+                "Key": "PlayRateScaleBiasClamp",
+                "Value": 16
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 17
+              },
+              {
+                "Key": "bLoopAnimation",
+                "Value": 18
+              },
+              {
+                "Key": "bStartFromMatchingPose",
+                "Value": 19
+              }
+            ],
+            "NumProperties": 20
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "ScriptStruct'/Script/Engine.AnimNode_TransitionResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "bCanEnterTransition",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:ExecuteUbergraph_AB_Env_Prop_Arrak_SurveillanceGlowglobe'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnimInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:AnimGraph'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.2"
+      },
+      {
+        "ObjectName": "Function'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:ExecuteUbergraph_AB_Env_Prop_Arrak_SurveillanceGlowglobe'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ControlRig",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1280,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ControlRig'",
+          "ObjectPath": "/Script/ControlRig"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__CustomProperty_bOpenGlobe_39AAF83F48D9A87E2B3F9898A35E767C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bOpenGlowGlobe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AB_Env_Prop_Arrak_SurveillanceGlowglobe": {
+        "ObjectName": "Function'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:ExecuteUbergraph_AB_Env_Prop_Arrak_SurveillanceGlowglobe'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.3"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C:AnimGraph'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'Default__AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AB_Env_Prop_Arrak_SurveillanceGlowglobe",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_40",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_41",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_42",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_43",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_44",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_45",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_46",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_47",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_48",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_49",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_50",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_51",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_52",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_53",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Outer": {
+      "ObjectName": "AnimBlueprintGeneratedClass'AB_Env_Prop_Arrak_SurveillanceGlowglobe_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/AB_Env_Prop_Arrak_SurveillanceGlowglobe.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "ScriptStruct'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

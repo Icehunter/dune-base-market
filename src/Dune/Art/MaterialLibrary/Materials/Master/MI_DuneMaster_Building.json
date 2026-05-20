@@ -1,0 +1,253 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_Building",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_Building",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_LayeredMaterial_Buildings'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_LayeredMaterial_Buildings.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Sand Buildup textures tiling (in meters for triplanar)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.7,
+          "ExpressionGUID": "32DBA5E2-4692DC61-7C9EB681-6EBA8F26"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Tiling of breakup noise for procedural masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 10.24,
+          "ExpressionGUID": "599D4E48-452F057C-01D83BB4-E1911695"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Mask Edge Softness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "FED71936-484D553C-9028BC98-70A59B2F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Sand Mask Boost",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.8,
+          "ExpressionGUID": "921B0FF6-4794C779-6FA363A1-B8AFACDD"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "World Aligned Mask - Size",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2220.1306,
+          "ExpressionGUID": "4F94A6E2-4170D40C-5FCFCF92-AE14D17A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DistanceContrastFade",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 15000.0,
+          "ExpressionGUID": "E6289C9A-400ACC56-50B56495-5B0E63D2"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DistanceContrastStart",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 5000.0,
+          "ExpressionGUID": "BFFA23C8-48B8FB2A-288988A2-E2456853"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DistanceAOMin",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": -0.5,
+          "ExpressionGUID": "E52AD261-438B8309-9F1F29B2-803C8350"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DistancePDO",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 50.0,
+          "ExpressionGUID": "8B3DBCA1-434D3C2C-9CFC3FB1-7954AC17"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "World Aligned Mask - Strength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.499354,
+            "G": 0.761905,
+            "B": 1.04533,
+            "A": 0.0,
+            "Hex": "BCE3FF"
+          },
+          "ExpressionGUID": "5523D176-4E535A63-41CA74AC-CAC7BD59"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "World Aligned Mask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Wear_Metal_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/SurfaceWear/Textures/T_Wear_Metal_01_M.0"
+          },
+          "ExpressionGUID": "812E2C7C-47A9AE8F-E1B78FAC-A78BEF28"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "DitheredLODTransition": true,
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Apply Grime",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "A906FB53-49909369-2DAB01A4-9FDCAFE7"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Disable DUST mask for Sand Buildup",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "9517E334-41459E8A-C5E621A5-1A23EDD4"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Calculate dust mask procedurally",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CD19EECF-4860C4B6-0ADE089C-4701B16E"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Sand Buildup uses Triplanar Projection",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "8F27A56C-496B30B8-C09D4A9A-26827B58"
+          }
+        ]
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'HumanSkinSSS'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Materials/HumanSkinSSS.0"
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_DetailMask_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_Checker_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_FlatNormal_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_N"
+        },
+        {
+          "SamplingScale": 1.6992188,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

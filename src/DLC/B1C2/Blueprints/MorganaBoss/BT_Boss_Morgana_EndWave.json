@@ -1,0 +1,482 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Morgana_EndWave",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.8"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Morgana'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BB_Boss_Morgana.0"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "OpenMouth": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BossUseAbility_C",
+    "Name": "BP_BTTask_BossUseAbility_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.BP_BTTask_BossUseAbility_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BossUseAbility_C'Default__BP_BTTask_BossUseAbility_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.1"
+    },
+    "Properties": {
+      "GameplayEventTag": {
+        "TagName": "Abilities.Boss.Morgana.Firewave"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator4",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_EndWave:BP_BTTask_MorganaPlaySFX_C_12'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_15'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_EndWave:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.1"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_EndWave:BP_BTTask_MorganaPlaySFX_C_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_23'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BossUseAbility_C'BT_Boss_Morgana_EndWave:BP_BTTask_BossUseAbility_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_EndWave:BP_BTTask_MorganaPlaySFX_C_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_EndWave:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_EndWave:BTTask_Wait_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 100.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+    },
+    "Properties": {
+      "WaitTime": 1.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_EndWave'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_EndWave:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_EndWave.7"
+      }
+    }
+  }
+]

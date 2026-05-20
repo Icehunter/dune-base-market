@@ -1,0 +1,234 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_MLP",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_MLP",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_LayeredMaterial_Buildings'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_LayeredMaterial_Buildings.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Wear - Min",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "E503E355-4BAC3CBA-0AF68588-B124AD60"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Wear - Max",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "6B3BBF9A-4D6DF847-195D8F9B-DDBE1C5E"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Wear Factor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "D91C3864-402190E6-7FC6DCBD-1DC8058A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MaterialPreview_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_M.0"
+          },
+          "ExpressionGUID": "97E4411A-4DAFBE78-3A7CD796-5F54CB9F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MaterialPreview_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Resources/MaterialPreview/Textures/T_MaterialPreview_N.0"
+          },
+          "ExpressionGUID": "9B290784-417AB3CB-5E22B990-E1D849F4"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "DitheredLODTransition": true,
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "EnableVertexColorMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "978C3530-47120187-E73F8AB7-1CB1600B"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseAO",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "FA627F1F-4A075F51-2502AA8A-B3C20130"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "UseBakedNormal",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "088CDA72-44E2F45B-044BBCB6-D3DD39C9"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Override Wear Level",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "7969A391-4455F831-2155E4BE-6960DA56"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Apply Dirt",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "1D5747C8-49005E1D-B14D6082-04E5AA84"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Apply Grime",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "A906FB53-49909369-2DAB01A4-9FDCAFE7"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Change Shading Model",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "611CBA4C-46711344-22014C92-6D37E89D"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Cloth",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "70A6F778-412A2015-2CD820AF-41CBDC46"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Irridescence",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "D59F2518-40748FE8-CDE0EF82-DC05E418"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Silk",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "1268CDDC-4C3AF06E-415E5694-DD6D6900"
+          }
+        ]
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'HumanSkinSSS'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Materials/HumanSkinSSS.0"
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 2.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_DetailMask_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_Checker_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Dev_MaterialLibrary_FlatNormal_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MLS_Metal_Steel_05_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

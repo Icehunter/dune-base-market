@@ -1,0 +1,695 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_VFX_Cmn_Hologram_EcolabB_Water",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Material'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Effects/Environment/EcolabB/Water/Materials/M_VFX_Cmn_Hologram_EcolabB_Water",
+    "Properties": {
+      "BlendMode": "BLEND_Translucent",
+      "ShadingModel": "MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "TwoSided": true,
+      "bUsedWithNiagaraSprites": true,
+      "bUsedWithNiagaraMeshParticles": true,
+      "bUsedWithInstancedStaticMeshes": true,
+      "StateId": "9E1A04F5-48068C7A-E1B187A3-B537EBB3",
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.7499924,
+          "UVChannelIndex": 0,
+          "TextureName": "T_FX_PixelSortNoise_D"
+        },
+        {
+          "SamplingScale": 0.59724736,
+          "UVChannelIndex": 0,
+          "TextureName": "T_VFX_Cmn_SandGrainMasks_M"
+        },
+        {
+          "SamplingScale": 0.49911445,
+          "UVChannelIndex": 0,
+          "TextureName": "T_VFX_SV_OceanWater_01_D"
+        },
+        {
+          "SamplingScale": 1.2476251,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Water_Flowing_Normal_1_D"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedExpressionData": {
+      "RuntimeEntries": {
+        "ParameterInfoSet": [
+          {
+            "Name": "SmoothStep_Dissolve",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "flattenemissive_maxdissolve",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "RippleSpeed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Sourceoffset",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Source intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "flattenemissive_mindissolve",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "JitterMin",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "JitterMax",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "JitterSpeed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "OpacityFresnelExponent",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CheapContrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CameraFadeLength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CameraFadeOffset",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CameraFarFadeOffset",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "CameraFarFadeLength",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "EyeAdaptionControl",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "RippleSpeed2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SmoothStep_Softness",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Subdivisions",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Lerp_Gradient_PanningNoise",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingU_DistortLines1",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingU_DistortLines2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingRippleX",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "LinesSpeed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "LinesSpeed2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "DepthFadeDistance",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingRippleY",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Distortion",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SpeedX_01",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SpeedY_01",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingX_01",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingY_01",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SpeedX_02",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SpeedY_02",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingX_02",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TilingY_02",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SideGradientPow",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "SideGradientMulti",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "GeneralOpacity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "DepthFadeOpacity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "OpacityBaseReflectFractionIn",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "GrainNoiseContrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "GrainNoiseResolution",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "GrainNoiseSpeed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[1]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "Color2",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[2]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[3]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "DistortionTextureNoise",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "TextureNoise_B",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaterTexture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[4]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[5]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[6]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[7]": {
+        "ParameterInfoSet": [
+          {
+            "Name": "SourceGradient",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "EdgeGradient",
+            "Association": "GlobalParameter",
+            "Index": -1
+          }
+        ]
+      },
+      "RuntimeEntries[8]": {
+        "ParameterInfoSet": []
+      },
+      "RuntimeEntries[9]": {
+        "ParameterInfoSet": []
+      },
+      "ScalarPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1
+      ],
+      "ScalarValues": [
+        0.0,
+        -0.246,
+        -0.739301,
+        0.0,
+        2.0,
+        -0.106,
+        0.7,
+        1.0,
+        0.133,
+        4.0,
+        0.4,
+        340.0,
+        100.0,
+        4500.0,
+        1000.0,
+        0.9,
+        -0.683301,
+        1.0,
+        47.33,
+        0.0,
+        1.0,
+        0.75,
+        2.5,
+        0.471,
+        0.394,
+        1.0,
+        2.5,
+        0.001,
+        0.0,
+        -0.1,
+        1.0,
+        2.0,
+        0.0,
+        0.1,
+        1.0,
+        2.0,
+        2.0,
+        30.0,
+        0.05,
+        1.0,
+        0.04,
+        0.2,
+        150.0,
+        4.0
+      ],
+      "StaticSwitchValues": [
+        true,
+        false
+      ],
+      "DynamicSwitchValues": [
+        false,
+        false
+      ],
+      "VectorValues": [
+        {
+          "R": 0.43229166,
+          "G": 0.18048874,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "B07600"
+        },
+        {
+          "R": 1.0,
+          "G": 0.096131384,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FF5700"
+        }
+      ],
+      "ScalarArrayValues": [],
+      "VectorArrayValues": [],
+      "DoubleVectorValues": [],
+      "TextureValues": [
+        {
+          "AssetPathName": "/Game/Dune/Effects/PostProcess/Suspensors/T_FX_PixelSortNoise_D.T_FX_PixelSortNoise_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Art/MaterialLibrary/Textures/Noises/Water/T_Water_Flowing_Normal_1_D.T_Water_Flowing_Normal_1_D",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Dune/Effects/PostProcess/SpiceTrip/Materials/Textures/T_VFX_SV_OceanWater_01_D.T_VFX_SV_OceanWater_01_D",
+          "SubPathString": ""
+        }
+      ],
+      "FontValues": [],
+      "FontPageValues": [],
+      "RuntimeVirtualTextureValues": [],
+      "SparseVolumeTextureValues": [],
+      "ReferencedTextures": [
+        {
+          "ObjectName": "Texture2D'T_FX_PixelSortNoise_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Effects/PostProcess/Suspensors/T_FX_PixelSortNoise_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_Water_Flowing_Normal_1_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Noises/Water/T_Water_Flowing_Normal_1_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_VFX_SV_OceanWater_01_D'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Effects/PostProcess/SpiceTrip/Materials/Textures/T_VFX_SV_OceanWater_01_D.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_VFX_Cmn_SandGrainMasks_M'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Effects/Common/Textures/T_VFX_Cmn_SandGrainMasks_M.0"
+        }
+      ],
+      "FunctionInfos": [
+        {
+          "StateId": "A8371C6D-4260174D-CBFC749E-D1DD83BF",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_VFX_SmoothStepRemap'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Effects/Common/MaterialFunctions/MF_VFX_SmoothStepRemap.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C14096B-4126BD4F-D1496794-076BB998",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_VFX_ValueShift'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Effects/Common/MaterialFunctions/MF_VFX_ValueShift.0"
+          }
+        },
+        {
+          "StateId": "F1A8C6A9-4D37E691-BD787485-98A34AB8",
+          "Function": {
+            "ObjectName": "MaterialFunction'RemapValueRange'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions03/Math/RemapValueRange.0"
+          }
+        },
+        {
+          "StateId": "2CC22EBF-4B824F8F-76AB26AF-CE164915",
+          "Function": {
+            "ObjectName": "MaterialFunction'MF_VFX_JitterFloat'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Effects/Common/MaterialFunctions/MF_VFX_JitterFloat.0"
+          }
+        },
+        {
+          "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+          "Function": {
+            "ObjectName": "MaterialFunction'LinearGradient'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+          }
+        },
+        {
+          "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CheapContrast'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CameraDepthFade'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+          }
+        },
+        {
+          "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CameraDepthFade'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "B2F4A5A7-4EDE33D8-E70A4A83-A28D1503",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScaleUVsByCenter'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ScaleUVsByCenter.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "391DDAD7-4E9DCC58-FD37D7B7-2AF07FC2",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenResolution'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ScreenResolution.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "B2F4A5A7-4EDE33D8-E70A4A83-A28D1503",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScaleUVsByCenter'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Texturing/ScaleUVsByCenter.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "391DDAD7-4E9DCC58-FD37D7B7-2AF07FC2",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenResolution'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ScreenResolution.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "8530673E-4E3F2FF5-ED3C5090-177441DA",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedUVs.0"
+          }
+        },
+        {
+          "StateId": "391DDAD7-4E9DCC58-FD37D7B7-2AF07FC2",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenResolution'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ScreenResolution.0"
+          }
+        }
+      ],
+      "ParameterCollectionInfos": [],
+      "GrassTypes": [],
+      "MaterialLayers": {
+        "Layers": [],
+        "Blends": []
+      },
+      "DynamicParameterNames": [],
+      "QualityLevelsUsed": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "bHasMaterialLayers": false,
+      "bHasRuntimeVirtualTextureOutput": false,
+      "bHasSceneColor": false,
+      "bHasPerInstanceCustomData": false,
+      "bHasPerInstanceRandom": false,
+      "bHasVertexInterpolator": false,
+      "PropertyConnectedBitmask": 7
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'T_Water_Flowing_Normal_1_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Noises/Water/T_Water_Flowing_Normal_1_D.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_VFX_Cmn_SandGrainMasks_M'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Common/Textures/T_VFX_Cmn_SandGrainMasks_M.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_VFX_SV_OceanWater_01_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/PostProcess/SpiceTrip/Materials/Textures/T_VFX_SV_OceanWater_01_D.0"
+      },
+      {
+        "ObjectName": "Texture2D'T_FX_PixelSortNoise_D'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/PostProcess/Suspensors/T_FX_PixelSortNoise_D.0"
+      }
+    ]
+  }
+]

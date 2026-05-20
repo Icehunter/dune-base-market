@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_DuneMaster_SurfaceHologram",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/MI_DuneMaster_SurfaceHologram",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_DuneMaster_SurfaceHologram'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Materials/Master/M_DuneMaster_SurfaceHologram.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Hologram Transition Factor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "887FF770-429C88FC-0E36A28F-E86E6FB1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Mask (Non VT)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_Neut_Utility_Mask_Black_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Maps/Testing/Materials/Utilities/Textures/T_Lib_Neut_Utility_Mask_Black_01_M.0"
+          },
+          "ExpressionGUID": "0AE72F20-451653DF-F5561685-7EB6AB70"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailMask - Texture _M",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_DetailMask_Holo_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_Lib_DetailMask_Holo_M.0"
+          },
+          "ExpressionGUID": "ECF7FC32-4347401D-4E3F6D8F-1C2D1B11"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DisableVirtualTextureOnMeshMask",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "845EA8AF-45678636-BF36DA92-D29CA636"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseTilingTexturesUVChannel",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "43961A49-4DAD5008-C1217C96-D808F343"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Use Base Surface Material",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "98511129-4AEF3C42-265DDE97-DA791371"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Use Pattern Texture",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "5CC80019-465AD2F4-FEF91FBA-ED365D50"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Position Gradient",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "3667670B-490212E0-50DBDEA1-D6F47059"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_DetailMask_Holo_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_Neut_Utility_Mask_Black_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_MaterialPreview_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

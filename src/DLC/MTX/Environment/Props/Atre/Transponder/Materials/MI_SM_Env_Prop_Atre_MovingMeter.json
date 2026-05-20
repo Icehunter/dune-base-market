@@ -1,0 +1,2763 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_SM_Env_Prop_Atre_MovingMeter",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Atre/Transponder/Materials/MI_SM_Env_Prop_Atre_MovingMeter",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_WaterMeter'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Diegetic/WaterMeter/M_WaterMeter.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Filled Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.4875,
+            "G": 0.012928,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "BA1E00"
+          },
+          "ExpressionGUID": "231C7582-46465370-61776AB3-68440909"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Empty Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.588542,
+            "G": 0.500039,
+            "B": 0.180854,
+            "A": 1.0,
+            "Hex": "CABC76"
+          },
+          "ExpressionGUID": "09A79BB3-47E08FE8-345770A2-71753996"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "DebugFillAmount?",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "69802476-498F22D8-D8D2FBBC-2319739C"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 2,
+          "TextureName": "T_Lib_DetailMask_Scratches_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_WaterMeter_M"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [
+      {
+        "LoadedShaderMap": {
+          "ShaderMapId": {
+            "QualityLevel": "Num",
+            "FeatureLevel": "SM6",
+            "CookedShaderMapIdHash": {
+              "Hash": "usbMJ2TXQMuWUAGJLtCzRQ8KRSM="
+            },
+            "LayoutParams": {
+              "MaxFieldAlignment": 8,
+              "Flags": "Flag_Initialized, Flag_AlignBases"
+            }
+          },
+          "Content": {
+            "OrderedMeshShaderMaps": [
+              {
+                "VertexFactoryTypeName": {
+                  "Hash": 9106933604177243835
+                },
+                "ShaderHash": [],
+                "ShaderTypes": [
+                  {
+                    "Hash": 607532662917897415
+                  },
+                  {
+                    "Hash": 1762524742801408713
+                  },
+                  {
+                    "Hash": 2196396202504851004
+                  },
+                  {
+                    "Hash": 4039860621448720976
+                  },
+                  {
+                    "Hash": 4974208445782451494
+                  },
+                  {
+                    "Hash": 6838119669807707879
+                  },
+                  {
+                    "Hash": 11927223565822599404
+                  },
+                  {
+                    "Hash": 12165695713888048781
+                  },
+                  {
+                    "Hash": 16833942227387653686
+                  }
+                ],
+                "ShaderPermutations": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Shaders": [
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 1,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 6,
+                    "NumInstructions": 101,
+                    "SortKey": 2063406180
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 1,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 96,
+                          "Parameters": [
+                            {
+                              "BaseIndex": 0,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 16,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 32,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 48,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 64,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 80,
+                              "Size": 16
+                            }
+                          ]
+                        }
+                      ],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 1
+                      },
+                      {
+                        "BaseIndex": 2
+                      }
+                    ],
+                    "Type": 3,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 19,
+                    "NumInstructions": 203,
+                    "SortKey": 1020425188
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 2,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [
+                        {
+                          "BufferIndex": 0,
+                          "Type": 4,
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 2,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 3,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 0,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 6709807281650871425
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 5,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 16,
+                    "NumInstructions": 142,
+                    "SortKey": 3039749328
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 1,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 3,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 96,
+                          "Parameters": [
+                            {
+                              "BaseIndex": 0,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 16,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 32,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 48,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 64,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 80,
+                              "Size": 16
+                            }
+                          ]
+                        }
+                      ],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      },
+                      {
+                        "Hash": 6709807281650871425
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 1
+                      },
+                      {
+                        "BaseIndex": 3
+                      },
+                      {
+                        "BaseIndex": 2
+                      }
+                    ],
+                    "Type": 7,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 18,
+                    "NumInstructions": 207,
+                    "SortKey": 2368085980
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 9,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 14,
+                    "NumInstructions": 257,
+                    "SortKey": 1664896462
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 1,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 96,
+                          "Parameters": [
+                            {
+                              "BaseIndex": 0,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 16,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 32,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 48,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 64,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 80,
+                              "Size": 16
+                            }
+                          ]
+                        }
+                      ],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 1
+                      },
+                      {
+                        "BaseIndex": 2
+                      }
+                    ],
+                    "Type": 11,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 19,
+                    "NumInstructions": 203,
+                    "SortKey": 1020425188
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 13,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 5,
+                    "NumInstructions": 42,
+                    "SortKey": 3703872071
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 15,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 1,
+                    "NumInstructions": 294,
+                    "SortKey": 908536078
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 1,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 96,
+                          "Parameters": [
+                            {
+                              "BaseIndex": 0,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 16,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 32,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 48,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 64,
+                              "Size": 16
+                            },
+                            {
+                              "BaseIndex": 80,
+                              "Size": 16
+                            }
+                          ]
+                        }
+                      ],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 1
+                      },
+                      {
+                        "BaseIndex": 2
+                      }
+                    ],
+                    "Type": 17,
+                    "VFType": 1,
+                    "Target": {},
+                    "ResourceIndex": 0,
+                    "NumInstructions": 313,
+                    "SortKey": 1820625664
+                  }
+                ],
+                "ShaderPipelines": [],
+                "ShaderPlatform": "SP_PCD3D_SM6"
+              },
+              {
+                "VertexFactoryTypeName": {
+                  "Hash": 11475683181038621400
+                },
+                "ShaderHash": [],
+                "ShaderTypes": [
+                  {
+                    "Hash": 607532662917897415
+                  },
+                  {
+                    "Hash": 1762524742801408713
+                  },
+                  {
+                    "Hash": 2196396202504851004
+                  },
+                  {
+                    "Hash": 4039860621448720976
+                  },
+                  {
+                    "Hash": 4974208445782451494
+                  },
+                  {
+                    "Hash": 6838119669807707879
+                  },
+                  {
+                    "Hash": 11927223565822599404
+                  },
+                  {
+                    "Hash": 12165695713888048781
+                  },
+                  {
+                    "Hash": 16833942227387653686
+                  }
+                ],
+                "ShaderPermutations": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Shaders": [
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 1,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 8,
+                    "NumInstructions": 101,
+                    "SortKey": 366086009
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 3,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 15,
+                    "NumInstructions": 139,
+                    "SortKey": 744338896
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 2,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [
+                        {
+                          "BufferIndex": 0,
+                          "Type": 4,
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 2,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 3,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 0,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 6709807281650871425
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 5,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 12,
+                    "NumInstructions": 142,
+                    "SortKey": 1293994681
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 2,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      },
+                      {
+                        "Hash": 6709807281650871425
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 2
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 7,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 11,
+                    "NumInstructions": 144,
+                    "SortKey": 2950714797
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 9,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 9,
+                    "NumInstructions": 250,
+                    "SortKey": 2586196117
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 11,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 15,
+                    "NumInstructions": 139,
+                    "SortKey": 744338896
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 13,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 10,
+                    "NumInstructions": 42,
+                    "SortKey": 191450008
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 15,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 13,
+                    "NumInstructions": 287,
+                    "SortKey": 2478656443
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 1,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 3,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 4,
+                          "Parameters": [
+                            {
+                              "BaseIndex": 0,
+                              "Size": 4
+                            }
+                          ]
+                        }
+                      ],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 7125842719399982320
+                      },
+                      {
+                        "Hash": 4786502046143188898
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 1
+                      },
+                      {
+                        "BaseIndex": 2
+                      },
+                      {
+                        "BaseIndex": 3
+                      }
+                    ],
+                    "Type": 17,
+                    "VFType": 3,
+                    "Target": {},
+                    "ResourceIndex": 20,
+                    "NumInstructions": 268,
+                    "SortKey": 3287186414
+                  }
+                ],
+                "ShaderPipelines": [],
+                "ShaderPlatform": "SP_PCD3D_SM6"
+              },
+              {
+                "VertexFactoryTypeName": {
+                  "Hash": 13739479390537355187
+                },
+                "ShaderHash": [],
+                "ShaderTypes": [
+                  {
+                    "Hash": 2196396202504851004
+                  },
+                  {
+                    "Hash": 4974208445782451494
+                  },
+                  {
+                    "Hash": 8380376840104457312
+                  },
+                  {
+                    "Hash": 9773587179203699715
+                  },
+                  {
+                    "Hash": 12063185602596565517
+                  },
+                  {
+                    "Hash": 12165695713888048781
+                  }
+                ],
+                "ShaderPermutations": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "Shaders": [
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 3,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [
+                        {
+                          "BufferIndex": 0,
+                          "Type": 4,
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 2,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 3,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 0,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      },
+                      {
+                        "Hash": 6709807281650871425
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      },
+                      {
+                        "BaseIndex": 1
+                      }
+                    ],
+                    "Type": 5,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 4,
+                    "NumInstructions": 670,
+                    "SortKey": 1005240635
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 9,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 2,
+                    "NumInstructions": 871,
+                    "SortKey": 1354870823
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 19,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 17,
+                    "NumInstructions": 794,
+                    "SortKey": 1530093010
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 21,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 7,
+                    "NumInstructions": 587,
+                    "SortKey": 2073138802
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [
+                        {
+                          "BufferIndex": 0,
+                          "Type": 4,
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 2,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 3,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        },
+                        {
+                          "BufferIndex": 0,
+                          "Type": 0,
+                          "BaseIndex": 1024,
+                          "Size": 0
+                        }
+                      ],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 23,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 21,
+                    "NumInstructions": 761,
+                    "SortKey": 740095995
+                  },
+                  {
+                    "Bindings": {
+                      "Parameters": [],
+                      "Textures": null,
+                      "SRVs": null,
+                      "UAVs": null,
+                      "Samplers": null,
+                      "GraphTextures": null,
+                      "GraphSRVs": null,
+                      "GraphUAVs": null,
+                      "ResourceParameters": [],
+                      "BindlessResourceParameters": [],
+                      "GraphUniformBuffers": [],
+                      "ParameterReferences": [],
+                      "StructureLayoutHash": 0,
+                      "RootParameterBufferIndex": 65535
+                    },
+                    "ParameterMapInfo": {
+                      "UniformBuffers": [
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        },
+                        {
+                          "BaseIndex": 0,
+                          "Size": 0
+                        }
+                      ],
+                      "TextureSamplers": [],
+                      "SRVs": [],
+                      "LooseParameterBuffers": [],
+                      "Hash": 0
+                    },
+                    "UniformBufferParameterStructs": [
+                      {
+                        "Hash": 17369492150422830198
+                      }
+                    ],
+                    "UniformBufferParameters": [
+                      {
+                        "BaseIndex": 0
+                      }
+                    ],
+                    "Type": 15,
+                    "VFType": 5,
+                    "Target": {},
+                    "ResourceIndex": 3,
+                    "NumInstructions": 908,
+                    "SortKey": 2278794285
+                  }
+                ],
+                "ShaderPipelines": [],
+                "ShaderPlatform": "SP_PCD3D_SM6"
+              }
+            ],
+            "MaterialCompilationOutput": {
+              "UniformExpressionSet": {
+                "UniformVectorPreshaders": [],
+                "UniformScalarPreshaders": [],
+                "UniformScalarParameters": [],
+                "UniformVectorParameters": [],
+                "UniformParameterEvaluations": [],
+                "UniformPreshaders": [
+                  {
+                    "FieldIndex": 0,
+                    "NumFields": 1,
+                    "OpcodeOffset": 0,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 1,
+                    "NumFields": 1,
+                    "OpcodeOffset": 3,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 2,
+                    "NumFields": 1,
+                    "OpcodeOffset": 6,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 3,
+                    "NumFields": 1,
+                    "OpcodeOffset": 9,
+                    "OpcodeSize": 9
+                  },
+                  {
+                    "FieldIndex": 4,
+                    "NumFields": 1,
+                    "OpcodeOffset": 18,
+                    "OpcodeSize": 9
+                  },
+                  {
+                    "FieldIndex": 5,
+                    "NumFields": 1,
+                    "OpcodeOffset": 27,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 6,
+                    "NumFields": 1,
+                    "OpcodeOffset": 30,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 7,
+                    "NumFields": 1,
+                    "OpcodeOffset": 40,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 8,
+                    "NumFields": 1,
+                    "OpcodeOffset": 43,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 9,
+                    "NumFields": 1,
+                    "OpcodeOffset": 46,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 10,
+                    "NumFields": 1,
+                    "OpcodeOffset": 56,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 11,
+                    "NumFields": 1,
+                    "OpcodeOffset": 59,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 12,
+                    "NumFields": 1,
+                    "OpcodeOffset": 69,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 13,
+                    "NumFields": 1,
+                    "OpcodeOffset": 72,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 14,
+                    "NumFields": 1,
+                    "OpcodeOffset": 82,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 15,
+                    "NumFields": 1,
+                    "OpcodeOffset": 92,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 16,
+                    "NumFields": 1,
+                    "OpcodeOffset": 95,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 17,
+                    "NumFields": 1,
+                    "OpcodeOffset": 98,
+                    "OpcodeSize": 10
+                  },
+                  {
+                    "FieldIndex": 18,
+                    "NumFields": 1,
+                    "OpcodeOffset": 108,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 19,
+                    "NumFields": 1,
+                    "OpcodeOffset": 111,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 20,
+                    "NumFields": 1,
+                    "OpcodeOffset": 114,
+                    "OpcodeSize": 9
+                  },
+                  {
+                    "FieldIndex": 21,
+                    "NumFields": 1,
+                    "OpcodeOffset": 123,
+                    "OpcodeSize": 9
+                  },
+                  {
+                    "FieldIndex": 22,
+                    "NumFields": 1,
+                    "OpcodeOffset": 132,
+                    "OpcodeSize": 3
+                  },
+                  {
+                    "FieldIndex": 23,
+                    "NumFields": 1,
+                    "OpcodeOffset": 135,
+                    "OpcodeSize": 9
+                  },
+                  {
+                    "FieldIndex": 24,
+                    "NumFields": 1,
+                    "OpcodeOffset": 144,
+                    "OpcodeSize": 3
+                  }
+                ],
+                "UniformPreshaderFields": [
+                  {
+                    "BufferOffset": 0,
+                    "ComponentIndex": 0,
+                    "Type": "Float4"
+                  },
+                  {
+                    "BufferOffset": 4,
+                    "ComponentIndex": 0,
+                    "Type": "Float4"
+                  },
+                  {
+                    "BufferOffset": 8,
+                    "ComponentIndex": 0,
+                    "Type": "Float4"
+                  },
+                  {
+                    "BufferOffset": 12,
+                    "ComponentIndex": 0,
+                    "Type": "Float3"
+                  },
+                  {
+                    "BufferOffset": 16,
+                    "ComponentIndex": 0,
+                    "Type": "Float3"
+                  },
+                  {
+                    "BufferOffset": 19,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 20,
+                    "ComponentIndex": 0,
+                    "Type": "Float2"
+                  },
+                  {
+                    "BufferOffset": 22,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 23,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 24,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 25,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 26,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 27,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 28,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 29,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 30,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 31,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 32,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 33,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 34,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 35,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  },
+                  {
+                    "BufferOffset": 36,
+                    "ComponentIndex": 0,
+                    "Type": "Float3"
+                  },
+                  {
+                    "BufferOffset": 40,
+                    "ComponentIndex": 0,
+                    "Type": "Float4"
+                  },
+                  {
+                    "BufferOffset": 44,
+                    "ComponentIndex": 0,
+                    "Type": "Float3"
+                  },
+                  {
+                    "BufferOffset": 47,
+                    "ComponentIndex": 0,
+                    "Type": "Float1"
+                  }
+                ],
+                "UniformNumericParameters": [
+                  {
+                    "ParameterInfo": {
+                      "Name": "SelectionColor",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Vector",
+                    "DefaultValueOffset": 0,
+                    "Value": {
+                      "R": 0.0,
+                      "G": 0.0,
+                      "B": 0.0,
+                      "A": 0.0,
+                      "Hex": "000000"
+                    }
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "Filled Color",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Vector",
+                    "DefaultValueOffset": 16,
+                    "Value": {
+                      "R": 0.077188,
+                      "G": 0.322777,
+                      "B": 0.4875,
+                      "A": 1.0,
+                      "Hex": "4E9ABA"
+                    }
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "Empty Color",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Vector",
+                    "DefaultValueOffset": 32,
+                    "Value": {
+                      "R": 0.026041677,
+                      "G": 0.0070933327,
+                      "B": 0.0065104193,
+                      "A": 1.0,
+                      "Hex": "2C1413"
+                    }
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "CellCount",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 48,
+                    "Value": 20.0
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "MicroCellCount",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 52,
+                    "Value": 100.0
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "MicroCellIntensity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 56,
+                    "Value": 0.75
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "VignetteIntensity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 60,
+                    "Value": 0.5
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "GrungeContrast",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 64,
+                    "Value": 2.0
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "GrungeIntensity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 68,
+                    "Value": 0.1
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "EmissiveGrungeIntensity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 72,
+                    "Value": 0.8
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "GradientOverlayOpacity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 60,
+                    "Value": 0.5
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "EmissiveIntensity",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 76,
+                    "Value": 5.0
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "Background Color",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Vector",
+                    "DefaultValueOffset": 80,
+                    "Value": {
+                      "R": 0.025,
+                      "G": 0.025,
+                      "B": 0.025,
+                      "A": 1.0,
+                      "Hex": "2B2B2B"
+                    }
+                  },
+                  {
+                    "ParameterInfo": {
+                      "Name": "Roughness",
+                      "Index": -1,
+                      "Association": "GlobalParameter"
+                    },
+                    "ParameterType": "Scalar",
+                    "DefaultValueOffset": 68,
+                    "Value": 0.1
+                  }
+                ],
+                "UniformTextureParameters": [
+                  [
+                    {
+                      "TextureIndex": 1,
+                      "SamplerSource": "SSM_FromTextureAsset",
+                      "VirtualTextureLayerIndex": 255,
+                      "ParameterInfo": {
+                        "Name": "CellTexture",
+                        "Index": -1,
+                        "Association": "GlobalParameter"
+                      },
+                      "ParameterInfoOld": null,
+                      "ParameterName": null
+                    },
+                    {
+                      "TextureIndex": 0,
+                      "SamplerSource": "SSM_FromTextureAsset",
+                      "VirtualTextureLayerIndex": 255,
+                      "ParameterInfo": {
+                        "Name": "GrungeTexture",
+                        "Index": -1,
+                        "Association": "GlobalParameter"
+                      },
+                      "ParameterInfoOld": null,
+                      "ParameterName": null
+                    }
+                  ],
+                  [],
+                  [],
+                  [],
+                  [],
+                  []
+                ],
+                "UniformExternalTextureParameters": [],
+                "UniformTextureCollectionParameters": null,
+                "UniformPreshaderBufferSize": 12,
+                "UniformPreshaderData": {
+                  "Names": [],
+                  "NamesOffset": null,
+                  "StructTypes": [],
+                  "StructComponentTypes": [],
+                  "Data": "AwAAAwEAAwIAAwIAJAMAAQL/AwEAJAMAAQL/AwMAAgEAAIA/AwMAJQMEAAMFAAIBAACAPwMFAAUDBgACAQAAgD8DBgAFAwcAAwcAAgEAAIA/BAIBAAAAAAMHAAUDCAADCQACAQAAgD8DCQAFAwoAAwsAAwAAJAED////AwAAJAMAAQL/AwwAAwwAJAMAAQL/Aw0A",
+                  "bPreshader2": false,
+                  "bPreFixup": false,
+                  "Preshader2TemporarySize": 0
+                },
+                "DefaultValues": "AAAAAAAAAAAAAAAAAAAAAL4Unj0HQ6U+mpn5PgAAgD9bVdU8MG/oO1tV1TsAAIA/AACgQQAAyEIAAEA/AAAAPwAAAEDNzMw9zcxMPwAAoEDNzMw8zczMPM3MzDwAAIA/",
+                "VTStacks": [],
+                "MaterialCacheTagStacks": null,
+                "ParameterCollections": [],
+                "UniformBufferLayoutInitializer": {
+                  "Name": "Material",
+                  "Resources": [
+                    {
+                      "MemberOffset": 192,
+                      "MemberType": "EUniformBufferBaseType_NumBits"
+                    },
+                    {
+                      "MemberOffset": 200,
+                      "MemberType": "UBMT_SAMPLER"
+                    },
+                    {
+                      "MemberOffset": 208,
+                      "MemberType": "EUniformBufferBaseType_NumBits"
+                    },
+                    {
+                      "MemberOffset": 216,
+                      "MemberType": "UBMT_SAMPLER"
+                    },
+                    {
+                      "MemberOffset": 224,
+                      "MemberType": "UBMT_SAMPLER"
+                    },
+                    {
+                      "MemberOffset": 232,
+                      "MemberType": "UBMT_SAMPLER"
+                    }
+                  ],
+                  "GraphResources": [],
+                  "GraphTextures": [],
+                  "GraphBuffers": [],
+                  "GraphUniformBuffers": [],
+                  "UniformBuffers": [],
+                  "Hash": 100469000,
+                  "ConstantBufferSize": 240,
+                  "RenderTargetsOffset": 65535,
+                  "StaticSlot": 255,
+                  "BindingFlags": "Shader",
+                  "Flags": "None"
+                },
+                "CompactUniformsVSOptional": null
+              },
+              "UserSceneTextureInputs": [],
+              "UsedSceneTextures": 0,
+              "UsedPathTracingBufferTextures": 0,
+              "StrataMaterialCompilationOutput": null,
+              "UsedDBufferTextures": 7,
+              "RuntimeVirtualTextureOutputAttributeMask": 0,
+              "b1": 2,
+              "b2": 0,
+              "b3": 0
+            },
+            "ShaderContentHash": {
+              "Hash": "yWjEP3eqZSHwntSLCFvKxmxoHtg="
+            },
+            "UserSceneTextureOutput": "None",
+            "UserTextureDivisorX": 0,
+            "UserTextureDivisorY": 0,
+            "ResolutionRelativeToInput": "None",
+            "ShaderHash": [],
+            "ShaderTypes": [],
+            "ShaderPermutations": [],
+            "Shaders": [],
+            "ShaderPipelines": [],
+            "ShaderPlatform": "SP_PCD3D_SM6"
+          },
+          "PointerTable": {
+            "Types": [
+              {
+                "Hash": 607532662917897415
+              },
+              {
+                "Hash": 1762524742801408713
+              },
+              {
+                "Hash": 2196396202504851004
+              },
+              {
+                "Hash": 4039860621448720976
+              },
+              {
+                "Hash": 4974208445782451494
+              },
+              {
+                "Hash": 6838119669807707879
+              },
+              {
+                "Hash": 11927223565822599404
+              },
+              {
+                "Hash": 12165695713888048781
+              },
+              {
+                "Hash": 16833942227387653686
+              },
+              {
+                "Hash": 8380376840104457312
+              },
+              {
+                "Hash": 9773587179203699715
+              },
+              {
+                "Hash": 12063185602596565517
+              }
+            ],
+            "VFTypes": [
+              {
+                "Hash": 9106933604177243835
+              },
+              {
+                "Hash": 11475683181038621400
+              },
+              {
+                "Hash": 13739479390537355187
+              }
+            ],
+            "TypeDependencies": [
+              {
+                "Name": "FMaterialShaderMapContent",
+                "SavedLayoutSize": 612,
+                "SavedLayoutHash": {
+                  "Hash": "bvEL6ypyJM9LXSH5y7v0WJTMmNw="
+                }
+              },
+              {
+                "Name": "FMeshMaterialShaderMap",
+                "SavedLayoutSize": 104,
+                "SavedLayoutHash": {
+                  "Hash": "zANaDAtVgoYooly7TfVeSKy1SHw="
+                }
+              },
+              {
+                "Name": "FHashedName",
+                "SavedLayoutSize": 8,
+                "SavedLayoutHash": {
+                  "Hash": "MP1a95C3VeVrBAn8Q2AliQc5Urs="
+                }
+              },
+              {
+                "Name": "FLumenCardPS<false>",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "847bJw//LfJxQM0VvJSeSMXViSg="
+                }
+              },
+              {
+                "Name": "FShaderUniformBufferParameterInfo",
+                "SavedLayoutSize": 2,
+                "SavedLayoutHash": {
+                  "Hash": "Sbku9PH/jPjNrS3aEGO3q3Cgumc="
+                }
+              },
+              {
+                "Name": "FShaderUniformBufferParameter",
+                "SavedLayoutSize": 2,
+                "SavedLayoutHash": {
+                  "Hash": "vfMpsloEv9kxM2HNR8UWMhi4U3o="
+                }
+              },
+              {
+                "Name": "FInstancedStaticMeshVertexFactoryShaderParameters",
+                "SavedLayoutSize": 72,
+                "SavedLayoutHash": {
+                  "Hash": "oWOrJMHa9NBwO8QLawyGbTGKyfg="
+                }
+              },
+              {
+                "Name": "FSmartCardVS",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "1zmsuhIqng6jiSwEve5kY2rzRKQ="
+                }
+              },
+              {
+                "Name": "FShaderLooseParameterBufferInfo",
+                "SavedLayoutSize": 24,
+                "SavedLayoutHash": {
+                  "Hash": "685KZ++iyIdYTcVEkvkkl8V2hys="
+                }
+              },
+              {
+                "Name": "FShaderLooseParameterInfo",
+                "SavedLayoutSize": 4,
+                "SavedLayoutHash": {
+                  "Hash": "dABqPr+dpTSB63cMX/z/vTCEpfE="
+                }
+              },
+              {
+                "Name": "FSmartVoxelizePS",
+                "SavedLayoutSize": 296,
+                "SavedLayoutHash": {
+                  "Hash": "oyyhKGcKWlHAHPmVHaeCb8ookac="
+                }
+              },
+              {
+                "Name": "FShaderResourceParameterInfo",
+                "SavedLayoutSize": 4,
+                "SavedLayoutHash": {
+                  "Hash": "/18ayvXbFEMnSHydAH5eIOVL76g="
+                }
+              },
+              {
+                "Name": "FSmartVoxelizeVS",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "SSuvWWXKZhZcSbvb/BBxkmJccm0="
+                }
+              },
+              {
+                "Name": "TBasePassPSFNoLightMapPolicy",
+                "SavedLayoutSize": 288,
+                "SavedLayoutHash": {
+                  "Hash": "sZU3fJvgmFT+rVylWdlTIPexT6g="
+                }
+              },
+              {
+                "Name": "FLumenCardVS",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "LoUxq3v6F8MH4CQB8lgPyHx7BTQ="
+                }
+              },
+              {
+                "Name": "FSmartCardPS<false>",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "UMMLV82SYzFZf2huNY30gfolU8E="
+                }
+              },
+              {
+                "Name": "TBasePassPSFNoLightMapPolicySkylight",
+                "SavedLayoutSize": 288,
+                "SavedLayoutHash": {
+                  "Hash": "b1dYOQ/7xhQyhE+TcNahsbRbtvI="
+                }
+              },
+              {
+                "Name": "TBasePassVSFNoLightMapPolicy",
+                "SavedLayoutSize": 288,
+                "SavedLayoutHash": {
+                  "Hash": "8rRn0d9TptQniUamtmeX0P6lcFI="
+                }
+              },
+              {
+                "Name": "FLocalVertexFactoryShaderParameters",
+                "SavedLayoutSize": 18,
+                "SavedLayoutHash": {
+                  "Hash": "gUGPiZKsSbjir9Ma87V1MKI+CF4="
+                }
+              },
+              {
+                "Name": "FLumenCardPS<true>",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "VqBYlxX7CnEO+UnK/g/h96wM994="
+                }
+              },
+              {
+                "Name": "FSmartCardPS<true>",
+                "SavedLayoutSize": 280,
+                "SavedLayoutHash": {
+                  "Hash": "d2g5IX39r4tsewx7wJ16yFgdyIU="
+                }
+              },
+              {
+                "Name": "FSmartNaniteCapturePS",
+                "SavedLayoutSize": 296,
+                "SavedLayoutHash": {
+                  "Hash": "PVUVa1x4GeMhkO0MOs4gbiGWTlA="
+                }
+              },
+              {
+                "Name": "FMaterialUniformPreshaderHeader",
+                "SavedLayoutSize": 16,
+                "SavedLayoutHash": {
+                  "Hash": "CuuT+byNM+p3ONFDtqyQtyQkIuU="
+                }
+              },
+              {
+                "Name": "FMaterialUniformPreshaderField",
+                "SavedLayoutSize": 9,
+                "SavedLayoutHash": {
+                  "Hash": "pG+R31ZhWzKfCqE5qbcRdhDbrWE="
+                }
+              },
+              {
+                "Name": "FMaterialNumericParameterInfo",
+                "SavedLayoutSize": 28,
+                "SavedLayoutHash": {
+                  "Hash": "eKxLErh0nedgMDfDr/1c/N/u5Rs="
+                }
+              },
+              {
+                "Name": "FMaterialTextureParameterInfo",
+                "SavedLayoutSize": 26,
+                "SavedLayoutHash": {
+                  "Hash": "v/PWFQWNlC7azCLU59o+ri5pAhs="
+                }
+              },
+              {
+                "Name": "FRHIUniformBufferResource",
+                "SavedLayoutSize": 3,
+                "SavedLayoutHash": {
+                  "Hash": "36hwqPJv+5EloFJN7I09G4F1MkQ="
+                }
+              }
+            ]
+          },
+          "ResourceHash": {
+            "Hash": "6o023pGyMdeD6ma1XYBCv5qDujc="
+          },
+          "Code": null,
+          "ShaderPlatform": "SP_PCD3D_SM6",
+          "FrozenArchive": {
+            "LayoutParameters": {
+              "MaxFieldAlignment": 8,
+              "Flags": "Flag_Initialized, Flag_AlignBases"
+            },
+            "VTables": [],
+            "ScriptNames": [
+              {
+                "Name": "Background Color",
+                "Patches": [
+                  {
+                    "Offset": 9932
+                  }
+                ]
+              },
+              {
+                "Name": "CellCount",
+                "Patches": [
+                  {
+                    "Offset": 9680
+                  }
+                ]
+              },
+              {
+                "Name": "CellTexture",
+                "Patches": [
+                  {
+                    "Offset": 9988
+                  }
+                ]
+              },
+              {
+                "Name": "EmissiveGrungeIntensity",
+                "Patches": [
+                  {
+                    "Offset": 9848
+                  }
+                ]
+              },
+              {
+                "Name": "EmissiveIntensity",
+                "Patches": [
+                  {
+                    "Offset": 9904
+                  }
+                ]
+              },
+              {
+                "Name": "Empty Color",
+                "Patches": [
+                  {
+                    "Offset": 9652
+                  }
+                ]
+              },
+              {
+                "Name": "Filled Color",
+                "Patches": [
+                  {
+                    "Offset": 9624
+                  }
+                ]
+              },
+              {
+                "Name": "GradientOverlayOpacity",
+                "Patches": [
+                  {
+                    "Offset": 9876
+                  }
+                ]
+              },
+              {
+                "Name": "GrungeContrast",
+                "Patches": [
+                  {
+                    "Offset": 9792
+                  }
+                ]
+              },
+              {
+                "Name": "GrungeIntensity",
+                "Patches": [
+                  {
+                    "Offset": 9820
+                  }
+                ]
+              },
+              {
+                "Name": "GrungeTexture",
+                "Patches": [
+                  {
+                    "Offset": 10016
+                  }
+                ]
+              },
+              {
+                "Name": "MicroCellCount",
+                "Patches": [
+                  {
+                    "Offset": 9708
+                  }
+                ]
+              },
+              {
+                "Name": "MicroCellIntensity",
+                "Patches": [
+                  {
+                    "Offset": 9736
+                  }
+                ]
+              },
+              {
+                "Name": "Roughness",
+                "Patches": [
+                  {
+                    "Offset": 9960
+                  }
+                ]
+              },
+              {
+                "Name": "SelectionColor",
+                "Patches": [
+                  {
+                    "Offset": 9596
+                  }
+                ]
+              },
+              {
+                "Name": "VignetteIntensity",
+                "Patches": [
+                  {
+                    "Offset": 9764
+                  }
+                ]
+              }
+            ],
+            "MinimalNames": [
+              {
+                "Name": "PCD3D_SM6",
+                "Patches": [
+                  {
+                    "Offset": 88
+                  },
+                  {
+                    "Offset": 728
+                  },
+                  {
+                    "Offset": 4080
+                  },
+                  {
+                    "Offset": 6928
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

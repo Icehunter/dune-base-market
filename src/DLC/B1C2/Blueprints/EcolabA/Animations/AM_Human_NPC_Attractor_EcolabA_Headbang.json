@@ -1,0 +1,169 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "AM_Human_NPC_Attractor_EcolabA_Headbang",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AnimMontage'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_NPC_Attractor_EcolabA_Headbang",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Intro",
+          "NextSectionName": "Loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_NPC_Attractor_EcolabA_Headbang'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_NPC_Attractor_EcolabA_Headbang.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.5,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_In_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_In_01.0"
+          }
+        },
+        {
+          "SectionName": "Loop",
+          "NextSectionName": "Loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_NPC_Attractor_EcolabA_Headbang'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_NPC_Attractor_EcolabA_Headbang.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 2.5,
+          "SegmentLength": 23.8,
+          "LinkValue": 2.5,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_Loop_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_Loop_01.0"
+          }
+        },
+        {
+          "SectionName": "Outro",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_NPC_Attractor_EcolabA_Headbang'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_NPC_Attractor_EcolabA_Headbang.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 26.3,
+          "SegmentLength": 1.5,
+          "LinkValue": 26.3,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_Out_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_Out_01.0"
+          }
+        },
+        {
+          "SectionName": "UrgentOutro",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'AM_Human_NPC_Attractor_EcolabA_Headbang'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/Animations/AM_Human_NPC_Attractor_EcolabA_Headbang.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 26.3,
+          "SegmentLength": 1.5,
+          "LinkValue": 26.3,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_Out_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_Out_01.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "DefaultSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_In_01'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_In_01.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.5,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_Loop_01'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_Loop_01.0"
+                },
+                "StartPos": 2.5,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 23.8,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'A_Human_Blight_Wall_01_Out_01'",
+                  "ObjectPath": "DuneSandbox/Content/Dune/Animations/Humans/Common/NPC/Ecolab/Blight/A_Human_Blight_Wall_01_Out_01.0"
+                },
+                "StartPos": 26.3,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.5,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "SequenceLength": 27.8,
+      "RawCurveData": {
+        "FloatCurves": [
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 1.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "RCCE_Constant",
+              "PostInfinityExtrap": "RCCE_Constant"
+            },
+            "Name": {
+              "DisplayName": "HideEquippedWeapon"
+            },
+            "CurveTypeFlags": 20
+          }
+        ]
+      },
+      "Skeleton": {
+        "ObjectName": "Skeleton'SKEL_SK_Mannequin_Skeleton_Update'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/SKEL_SK_Mannequin_Skeleton_Update.30"
+      }
+    },
+    "SkeletonGuid": "8C88144C-4F436C3B-DB8EB8A8-1020F09D"
+  }
+]

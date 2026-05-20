@@ -1,0 +1,2415 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Door_ConsoleAccessbile_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_Door_ConsoleAccessbile_C:TL_DoorMovement_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.51"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_Door_ConsoleAccessbile_C:FailTimeline_Template'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.50"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Door_ConsoleAccessbile_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.38"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ExecuteUbergraph_BP_Door_ConsoleAccessbile'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.16"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'NPCDoor'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnRep_bIsDoorOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.25"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:CanOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.14"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.33"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.37"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__UnsealAudio__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.36"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__End__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.32"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Continue__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.31"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Pause__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.34"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Start__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.35"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.20"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.21"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__AudioOpen__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.19"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__Audio_Close__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.18"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:EventReceived_9A2EE7F44296A823A7D2AC9E85F3AF58'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.15"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.28"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnStateChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.26"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnPawnInTheWayChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.24"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:LoopFailAnim'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.23"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailAnim'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.17"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OpenCloseDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.27"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ForceOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.22"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ResetDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.30"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ResetAudioTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.29"
+      },
+      {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ExecuteUbergraph_BP_Door_ConsoleAccessbile'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.16"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Door_S",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box_PlayerOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FailTimeline_X_Mult_5B15E4C248DBE8C2E70FC787B56EDDDF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "FailTimeline__Direction_5B15E4C248DBE8C2E70FC787B56EDDDF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FailTimeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TL_DoorMovement_MovementVectorMultiplier_96619C3F401B86A3CDC838B59F13BDEA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TL_DoorMovement__Direction_96619C3F401B86A3CDC838B59F13BDEA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TL_DoorMovement",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "InitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FinalOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "DoorActivity",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "RepIndex": 18,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'E_Door_States'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Level/E_Door_States.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EventTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFailAnimWhileClosed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StartingRockPosition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDoorOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepIndex": 19,
+        "RepNotifyFunc": "OnRep_bIsDoorOpen",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Door_ConsoleAccessbile": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ExecuteUbergraph_BP_Door_ConsoleAccessbile'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.16"
+      },
+      "ResetAudioTrigger": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ResetAudioTrigger'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.29"
+      },
+      "ResetDoor": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ResetDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.30"
+      },
+      "ForceOpen": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ForceOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.22"
+      },
+      "OpenCloseDoor": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OpenCloseDoor'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.27"
+      },
+      "FailAnim": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailAnim'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.17"
+      },
+      "LoopFailAnim": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:LoopFailAnim'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.23"
+      },
+      "OnPawnInTheWayChanged": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnPawnInTheWayChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.24"
+      },
+      "OnStateChanged": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnStateChanged'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.26"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.28"
+      },
+      "EventReceived_9A2EE7F44296A823A7D2AC9E85F3AF58": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:EventReceived_9A2EE7F44296A823A7D2AC9E85F3AF58'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.15"
+      },
+      "FailTimeline__Audio_Close__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__Audio_Close__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.18"
+      },
+      "FailTimeline__AudioOpen__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__AudioOpen__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.19"
+      },
+      "FailTimeline__UpdateFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.21"
+      },
+      "FailTimeline__FinishedFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:FailTimeline__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.20"
+      },
+      "TL_DoorMovement__Start__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Start__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.35"
+      },
+      "TL_DoorMovement__Pause__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Pause__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.34"
+      },
+      "TL_DoorMovement__Continue__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__Continue__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.31"
+      },
+      "TL_DoorMovement__End__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__End__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.32"
+      },
+      "TL_DoorMovement__UnsealAudio__EventFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__UnsealAudio__EventFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.36"
+      },
+      "TL_DoorMovement__UpdateFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__UpdateFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.37"
+      },
+      "TL_DoorMovement__FinishedFunc": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:TL_DoorMovement__FinishedFunc'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.33"
+      },
+      "CanOpen": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:CanOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.14"
+      },
+      "OnRep_bIsDoorOpen": {
+        "ObjectName": "Function'BP_Door_ConsoleAccessbile_C:OnRep_bIsDoorOpen'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.25"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Door_ConsoleAccessbile_C'Default__BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 25.0,
+        "Y": 175.0,
+        "Z": 190.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "WorldStatic": "Overlap",
+          "WorldDynamic": "Overlap",
+          "Pawn": "Overlap",
+          "Camera": "Overlap",
+          "PhysicsBody": "Overlap",
+          "Vehicle": "Overlap",
+          "Destructible": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "Trace_Interactable": "Block",
+          "Building_Structure": "Ignore",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.36347198,
+        "Y": -7.397156E-13,
+        "Z": 6.8860146E-08
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_PlayerOffset_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 192.39671,
+        "Y": 25.0,
+        "Z": 176.05475
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Shelter": "Ignore",
+          "Pawn": "Overlap",
+          "Camera": "Ignore",
+          "Vehicle": "Overlap",
+          "Building_Structure": "Ignore",
+          "Visibility": "Ignore",
+          "WorldStatic": "Overlap",
+          "WorldDynamic": "Overlap",
+          "PhysicsBody": "Overlap",
+          "Destructible": "Ignore",
+          "Weapon_Projectile": "Ignore",
+          "SpiceField": "Ignore"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.8277429,
+        "Y": -0.2280275,
+        "Z": 180.0
+      }
+    }
+  },
+  {
+    "Type": "BP_Door_ConsoleAccessbile_C",
+    "Name": "Default__BP_Door_ConsoleAccessbile_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.BP_Door_ConsoleAccessbile_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TL_DoorMovement_MovementVectorMultiplier_96619C3F401B86A3CDC838B59F13BDEA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "InitialLocation": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "FinalOffset": {
+        "X": -280.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "DoorActivity": "E_Door_States::NewEnumerator2",
+      "EventTag": {
+        "TagName": "ContentDesign.Level.TriggerActivated"
+      },
+      "StartingRockPosition": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "m_bHasBlueprintAnimation": true,
+      "m_PivotComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Door_ConsoleAccessbile_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.41"
+      },
+      "m_MeshContainerComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Door_ConsoleAccessbile_C:MeshContainer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.40"
+      },
+      "m_PawnInTheWayBoxData": {
+        "m_LocalOffset": {
+          "X": 130.0,
+          "Y": -20.0,
+          "Z": 150.0
+        },
+        "m_Extent": {
+          "X": 300.0,
+          "Y": 60.0,
+          "Z": 200.0
+        }
+      },
+      "m_OpeningDoorAudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_INT_Door_EcolabB_IntroDoor_Open'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ItemInteractions/INT_Doors/INT_Doors_Ecolabs/INT_Doors_EcolabB/AD_INT_Door_EcolabB_IntroDoor_Open.0"
+      },
+      "m_ClosingDoorAudioEvent": {
+        "ObjectName": "FcAudioEvent'AD_INT_Door_EcolabB_IntroDoor_Close'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ItemInteractions/INT_Doors/INT_Doors_Ecolabs/INT_Doors_EcolabB/AD_INT_Door_EcolabB_IntroDoor_Close.0"
+      },
+      "m_OpenedScale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bReplicateMovement": true,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Door_ConsoleAccessbile_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.42"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.05,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.65,
+            "Value": -0.01,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.75,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 3.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_3",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_4",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 8.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_5",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_6",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.01,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_8",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.1,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "CurveVector",
+    "Name": "CurveVector_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveVector'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "FloatCurves": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": -0.0024043322,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[1]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": -0.007045388,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[2]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    },
+    "FloatCurves": [
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": -0.0024043322,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": -0.007045388,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 4.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      }
+    ]
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanOpen",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'NPCDoor:CanOpen'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "EventReceived_9A2EE7F44296A823A7D2AC9E85F3AF58",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Door_ConsoleAccessbile",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'AbilityAsync_WaitGameplayEvent:EventReceivedDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_NewDoorState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDoorState'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_NewPawnIsInTheWay",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_EDoorState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDoorState'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayEventToActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityAsync_WaitGameplayEvent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_MakeVector_X_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailTimeline__Audio_Close__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailTimeline__AudioOpen__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailTimeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailTimeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ForceOpen",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LoopFailAnim",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPawnInTheWayChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'NPCDoor:OnPawnInTheWayChanged'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "NewPawnIsInTheWay",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_bIsDoorOpen",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStateChanged",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'NPCDoor:OnStateChanged'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "NewDoorState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EDoorState'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenCloseDoor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "EDoorState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EDoorState'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetAudioTrigger",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetDoor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__Continue__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__End__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__Pause__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__Start__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__UnsealAudio__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_DoorMovement__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MeshContainer",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_ConsoleAccessbile_C'Default__BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Door_ConsoleAccessbile_C:PivotComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.41"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PivotComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_ConsoleAccessbile_C'Default__BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.3"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Door_ConsoleAccessbile_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.42"
+      },
+      "RelativeLocation": {
+        "X": -50.0,
+        "Y": -1.8353637E-12,
+        "Z": 6.2096156E-08
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Door_ConsoleAccessbile_C'Default__BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Door_ConsoleAccessbile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.39"
+      },
+      "VariableGuid": "29BA7BF5-4B3AC7FD-D88559A6-849B9719",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_Door_ConsoleAccessbile_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.13"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1DD30BA9-4B24093D-5012E596-A9D0A7C0",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Door_ConsoleAccessbile_C:Box_PlayerOffset_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.2"
+      },
+      "ParentComponentOrVariableName": "Root",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B3157228-41644B0C-DC2621B8-82065C49",
+      "InternalVariableName": "Box_PlayerOffset"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Door_ConsoleAccessbile_C:Box1_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.1"
+      },
+      "VariableGuid": "C1988A6E-4938BCF5-533410BE-33D97079",
+      "InternalVariableName": "Box1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.48"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Door_ConsoleAccessbile_C:SM_Door_S_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.49"
+      },
+      "ParentComponentOrVariableName": "MeshContainer",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.46"
+        }
+      ],
+      "VariableGuid": "517E36FF-41FC151A-958A7E90-73506547",
+      "InternalVariableName": "SM_Door_S"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.44"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.44"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Door_ConsoleAccessbile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.43"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Door_S_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Arch_Eco_Kit01_Door_Medium_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Architecture/Ecolabs/Kit01/Meshes/SM_Env_Arch_Eco_Kit01_Door_Medium_01.1"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Trace_Combat": "Block",
+          "Trace_BuildingStructure": "Block",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_BuildingOverlap": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0275,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "PlaceableStaticMesh"
+      ]
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "FailTimeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.2,
+      "EventTracks": [
+        {
+          "FunctionName": "FailTimeline__Audio_Close__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.9"
+          },
+          "TrackName": "Audio_Close",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "FailTimeline__AudioOpen__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_6'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.10"
+          },
+          "TrackName": "AudioOpen",
+          "bIsExternalCurve": false
+        }
+      ],
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.4"
+          },
+          "PropertyName": "FailTimeline_X_Mult_5B15E4C248DBE8C2E70FC787B56EDDDF",
+          "TrackName": "X Mult",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "5B15E4C2-48DBE8C2-E70FC787-B56EDDDF",
+      "VariableName": "FailTimeline",
+      "DirectionPropertyName": "FailTimeline__Direction_5B15E4C248DBE8C2E70FC787B56EDDDF",
+      "UpdateFunctionName": "FailTimeline__UpdateFunc",
+      "FinishedFunctionName": "FailTimeline__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TL_DoorMovement_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Door_ConsoleAccessbile_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.0"
+    },
+    "Properties": {
+      "EventTracks": [
+        {
+          "FunctionName": "TL_DoorMovement__Start__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.5"
+          },
+          "TrackName": "Start",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TL_DoorMovement__Pause__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.6"
+          },
+          "TrackName": "Pause",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TL_DoorMovement__Continue__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.7"
+          },
+          "TrackName": "Continue",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TL_DoorMovement__End__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.8"
+          },
+          "TrackName": "End",
+          "bIsExternalCurve": false
+        },
+        {
+          "FunctionName": "TL_DoorMovement__UnsealAudio__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_Door_ConsoleAccessbile_C:CurveFloat_8'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.11"
+          },
+          "TrackName": "UnsealAudio",
+          "bIsExternalCurve": false
+        }
+      ],
+      "VectorTracks": [
+        {
+          "CurveVector": {
+            "ObjectName": "CurveVector'BP_Door_ConsoleAccessbile_C:CurveVector_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_Door_ConsoleAccessbile.12"
+          },
+          "PropertyName": "TL_DoorMovement_MovementVectorMultiplier_96619C3F401B86A3CDC838B59F13BDEA",
+          "TrackName": "MovementVectorMultiplier",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "96619C3F-401B86A3-CDC838B5-9F13BDEA",
+      "VariableName": "TL_DoorMovement",
+      "DirectionPropertyName": "TL_DoorMovement__Direction_96619C3F401B86A3CDC838B59F13BDEA",
+      "UpdateFunctionName": "TL_DoorMovement__UpdateFunc",
+      "FinishedFunctionName": "TL_DoorMovement__FinishedFunc"
+    }
+  }
+]

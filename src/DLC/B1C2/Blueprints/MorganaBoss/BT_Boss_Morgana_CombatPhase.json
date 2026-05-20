@@ -1,0 +1,3018 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Morgana_CombatPhase",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_10'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.46"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Morgana'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BB_Boss_Morgana.0"
+      }
+    }
+  },
+  {
+    "Type": "BP_BB_CheckIntValue_C",
+    "Name": "BP_BB_CheckIntValue_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BB_CheckIntValue.BP_BB_CheckIntValue_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BB_CheckIntValue_C'Default__BP_BB_CheckIntValue_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BB_CheckIntValue.1"
+    },
+    "Properties": {
+      "IntBlackboardKey": {
+        "SelectedKeyName": "Phase"
+      },
+      "bIsLessThanEqual": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+      }
+    }
+  },
+  {
+    "Type": "BP_BB_CheckIntValue_C",
+    "Name": "BP_BB_CheckIntValue_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BB_CheckIntValue.BP_BB_CheckIntValue_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BB_CheckIntValue_C'Default__BP_BB_CheckIntValue_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BB_CheckIntValue.1"
+    },
+    "Properties": {
+      "IntBlackboardKey": {
+        "SelectedKeyName": "Phase"
+      },
+      "bIsGreater": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.45"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTD_BB_IsActorInRange_C",
+    "Name": "BP_BTD_BB_IsActorInRange_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.BP_BTD_BB_IsActorInRange_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTD_BB_IsActorInRange_C'Default__BP_BTD_BB_IsActorInRange_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.1"
+    },
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "Target"
+      },
+      "MaxRange": 1000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.42"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTD_BB_IsActorInRange_C",
+    "Name": "BP_BTD_BB_IsActorInRange_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.BP_BTD_BB_IsActorInRange_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTD_BB_IsActorInRange_C'Default__BP_BTD_BB_IsActorInRange_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.1"
+    },
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "Target"
+      },
+      "MaxRange": 1000.0,
+      "ObservedKeyNames": [
+        "Target"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_18'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.47"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTD_BB_IsActorInRange_C",
+    "Name": "BP_BTD_BB_IsActorInRange_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.BP_BTD_BB_IsActorInRange_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTD_BB_IsActorInRange_C'Default__BP_BTD_BB_IsActorInRange_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.1"
+    },
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "Target"
+      },
+      "MaxRange": 1000.0,
+      "ObservedKeyNames": [
+        "Target"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTD_BB_IsActorInRange_C",
+    "Name": "BP_BTD_BB_IsActorInRange_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.BP_BTD_BB_IsActorInRange_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTD_BB_IsActorInRange_C'Default__BP_BTD_BB_IsActorInRange_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_BB_IsActorInRange.1"
+    },
+    "Properties": {
+      "TargetActor": {
+        "SelectedKeyName": "Target"
+      },
+      "MaxRange": 1000.0,
+      "ObservedKeyNames": [
+        "Target"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_8'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.55"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTD_TargetPositionZCompare_C",
+    "Name": "BP_BTD_TargetPositionZCompare_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_TargetPositionZCompare.BP_BTD_TargetPositionZCompare_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTD_TargetPositionZCompare_C'Default__BP_BTD_TargetPositionZCompare_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTD_TargetPositionZCompare.1"
+    },
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "zCheckOffset": -100.0,
+      "ObservedKeyNames": [
+        "Target"
+      ],
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Compare Target Z to Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.43"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "OpenMouth": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "OpenMouth": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "OpenMouth": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "OpenMouth": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C",
+    "Name": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'Default__BP_BTTask_BlueprintBase_MorganaBossAnimate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BlueprintBase_MorganaBossAnimate.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BossUseAbility_C",
+    "Name": "BP_BTTask_BossUseAbility_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.BP_BTTask_BossUseAbility_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BossUseAbility_C'Default__BP_BTTask_BossUseAbility_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.1"
+    },
+    "Properties": {
+      "GameplayEventTag": {
+        "TagName": "Abilities.Boss.Morgana.FireWaveTopBottom"
+      },
+      "RequiresTarget": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BossUseAbility_C",
+    "Name": "BP_BTTask_BossUseAbility_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.BP_BTTask_BossUseAbility_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BossUseAbility_C'Default__BP_BTTask_BossUseAbility_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BossUseAbility_C",
+    "Name": "BP_BTTask_BossUseAbility_C_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.BP_BTTask_BossUseAbility_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BossUseAbility_C'Default__BP_BTTask_BossUseAbility_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_BossUseAbility_C",
+    "Name": "BP_BTTask_BossUseAbility_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.BP_BTTask_BossUseAbility_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_BossUseAbility_C'Default__BP_BTTask_BossUseAbility_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_BossUseAbility.1"
+    },
+    "Properties": {
+      "GameplayEventTag": {
+        "TagName": "Abilities.Boss.Morgana.FireWaveBelow"
+      },
+      "RequiresTarget": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaCheckTarget_C",
+    "Name": "BP_BTTask_MorganaCheckTarget_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaCheckTarget.BP_BTTask_MorganaCheckTarget_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaCheckTarget_C'Default__BP_BTTask_MorganaCheckTarget_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaCheckTarget.1"
+    },
+    "Properties": {
+      "NewTargetKey": {
+        "SelectedKeyName": "NewTarget"
+      },
+      "Key": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_10'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.46"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator4",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator4",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_8'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.55"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_8'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.55"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaPlaySFX_C",
+    "Name": "BP_BTTask_MorganaPlaySFX_C_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.BP_BTTask_MorganaPlaySFX_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaPlaySFX_C'Default__BP_BTTask_MorganaPlaySFX_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaPlaySFX.1"
+    },
+    "Properties": {
+      "EMorganaSFX": "EMorganaSFX::NewEnumerator3",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaTurret_Rotate_C",
+    "Name": "BP_BTTask_MorganaTurret_Rotate_C_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.BP_BTTask_MorganaTurret_Rotate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'Default__BP_BTTask_MorganaTurret_Rotate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.1"
+    },
+    "Properties": {
+      "BBKeyTarget": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.39"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaTurret_Rotate_C",
+    "Name": "BP_BTTask_MorganaTurret_Rotate_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.BP_BTTask_MorganaTurret_Rotate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'Default__BP_BTTask_MorganaTurret_Rotate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.1"
+    },
+    "Properties": {
+      "BBKeyTarget": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.38"
+      }
+    }
+  },
+  {
+    "Type": "BP_BTTask_MorganaTurret_Rotate_C",
+    "Name": "BP_BTTask_MorganaTurret_Rotate_C_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.BP_BTTask_MorganaTurret_Rotate_C'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Template": {
+      "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'Default__BP_BTTask_MorganaTurret_Rotate_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BP_BTTask_MorganaTurret_Rotate.1"
+    },
+    "Properties": {
+      "BBKeyTarget": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.41"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaTurret_Rotate_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.36"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Morgana_CombatPhase:BTDecorator_Blackboard_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.60"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry'BT_Boss_Morgana_CombatPhase:BTTask_RotateToFaceBBEntry_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.59"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaTurret_Rotate_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.35"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Morgana_CombatPhase:BTDecorator_Blackboard_3'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.61"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry'BT_Boss_Morgana_CombatPhase:BTTask_RotateToFaceBBEntry_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_8'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.55"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_18'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.47"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaTurret_Rotate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaTurret_Rotate_C_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.37"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Morgana_CombatPhase:BTDecorator_Blackboard_4'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.62"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RotateToFaceBBEntry'BT_Boss_Morgana_CombatPhase:BTTask_RotateToFaceBBEntry_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.58"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.43"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BTD_BB_IsActorInRange_C'BT_Boss_Morgana_CombatPhase:BP_BTD_BB_IsActorInRange_C_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.45"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_10'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.46"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.52"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BTD_TargetPositionZCompare_C'BT_Boss_Morgana_CombatPhase:BP_BTD_TargetPositionZCompare_C_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.7"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Morgana_CombatPhase:BTDecorator_Cooldown_1'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.49"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.42"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_8'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_14'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BossUseAbility_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BossUseAbility_C_15'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_8'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.93"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_12'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_18'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.47"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_19'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.48"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BB_CheckIntValue_C'BT_Boss_Morgana_CombatPhase:BP_BB_CheckIntValue_C_1'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.2"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Morgana_CombatPhase:BTDecorator_Cooldown_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.63"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.42"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaCheckTarget_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaCheckTarget_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.42"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.40"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BTD_BB_IsActorInRange_C'BT_Boss_Morgana_CombatPhase:BP_BTD_BB_IsActorInRange_C_1'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Fireball Sequence",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_19'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.48"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_18'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.47"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.45"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_7'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_22'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.43"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_27'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_21'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BossUseAbility_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BossUseAbility_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_29'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_16'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_9'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_17'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.49"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_10'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.39"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_9'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_25'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_11'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BossUseAbility_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BossUseAbility_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_10'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.57"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_16'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.43"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_12'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_15'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_6'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_23'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BossUseAbility_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BossUseAbility_C_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_28'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.86"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_18'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_7'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_19'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.52"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.59"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BB_CheckIntValue_C'BT_Boss_Morgana_CombatPhase:BP_BB_CheckIntValue_C_0'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.1"
+            },
+            {
+              "ObjectName": "BP_BTD_BB_IsActorInRange_C'BT_Boss_Morgana_CombatPhase:BP_BTD_BB_IsActorInRange_C_2'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.40"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_6'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.58"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BP_BTD_BB_IsActorInRange_C'BT_Boss_Morgana_CombatPhase:BP_BTD_BB_IsActorInRange_C_3'",
+              "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_7'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.40"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_MorganaPlaySFX_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_MorganaPlaySFX_C_1'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.57"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BP_BTTask_BlueprintBase_MorganaBossAnimate_C'BT_Boss_Morgana_CombatPhase:BP_BTTask_BlueprintBase_MorganaBossAnimate_C_5'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_13'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.45"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_2'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_11'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_3'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.41"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_8'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.55"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Morgana_CombatPhase:BTTask_Wait_6'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_0'",
+            "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.38"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_7'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.54"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.38"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.39"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.41"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "CoolDownTime": 15.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.45"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "CoolDownTime": 12.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_RotateToFaceBBEntry'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "InitialForwardVector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_RotateToFaceBBEntry'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "InitialForwardVector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RotateToFaceBBEntry",
+    "Name": "BTTask_RotateToFaceBBEntry_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_RotateToFaceBBEntry'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "InitialForwardVector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Morgana_CombatPhase:BTComposite_Selector_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_19'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.48"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.58"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.52"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.57"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.49"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_25",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_28",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.53,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.53"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_29",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.53,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.52"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.51"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_9'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.56"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Boss_Morgana_CombatPhase:BTComposite_SimpleParallel_5'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.59"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 0.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_2'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.49"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.44"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Outer": {
+      "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+    },
+    "Properties": {
+      "WaitTime": 3.25,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Morgana_CombatPhase'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Morgana_CombatPhase:BTComposite_Sequence_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/MorganaBoss/BT_Boss_Morgana_CombatPhase.50"
+      }
+    }
+  }
+]

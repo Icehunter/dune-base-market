@@ -1,0 +1,525 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Deployable_HeatSource_Base_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.17"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'HeatsourceDeployable'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:CanPlayerInteractWith'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.4"
+      },
+      {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:GetLocationForToolStalk'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.5"
+      },
+      {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:GetToolStalkSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.6"
+      },
+      {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:ShouldShowToolStalk'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ScannableActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ScannableActorComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ShouldShowToolStalk": {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:ShouldShowToolStalk'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.7"
+      },
+      "GetToolStalkSettings": {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:GetToolStalkSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.6"
+      },
+      "GetLocationForToolStalk": {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:GetLocationForToolStalk'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.5"
+      },
+      "CanPlayerInteractWith": {
+        "ObjectName": "Function'BP_Deployable_HeatSource_Base_C:CanPlayerInteractWith'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.4"
+      }
+    },
+    "ClassFlags": "CLASS_Abstract | CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'ToolStalkSource'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/CoreUObject.Class'\"/Script/DuneSandbox.ToolStalkSource\"'))"
+    }
+  },
+  {
+    "Type": "BP_Deployable_HeatSource_Base_C",
+    "Name": "Default__BP_Deployable_HeatSource_Base_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.BP_Deployable_HeatSource_Base_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base",
+    "Properties": {
+      "m_HeatSourceComponent": {
+        "ObjectName": "HeatSourceActorComponent'Default__BP_Deployable_HeatSource_Base_C:HeatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.8"
+      },
+      "m_FireZoneClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_FireZone_HeatSource_C'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Systems/Coldness/HeatSources/BP_FireZone_HeatSource.0"
+      },
+      "m_SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Deployable_HeatSource_Base_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.13"
+      },
+      "m_InteractionsComponent": {
+        "ObjectName": "InteractableBaseComponent'Default__BP_Deployable_HeatSource_Base_C:InteractionsComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.9"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_Deployable_HeatSource_Base_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.3"
+      },
+      "m_SecurityZoneMemberComponent": {
+        "ObjectName": "SecurityZoneMemberComponent'Default__BP_Deployable_HeatSource_Base_C:SecurityZoneComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.16"
+      },
+      "m_BuildStaticSockets": {
+        "ObjectName": "BuildableStaticSocketComponent'Default__BP_Deployable_HeatSource_Base_C:BuildStaticSockets'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.2"
+      },
+      "m_PlaceablePersistenceComponent": {
+        "ObjectName": "PlaceablePersistenceComponent'Default__BP_Deployable_HeatSource_Base_C:PlaceablePersistenceComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.10"
+      },
+      "m_BuildingType": {
+        "Name": "Heatsource_Placeable"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Deployable_HeatSource_Base_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.13"
+      }
+    }
+  },
+  {
+    "Type": "BuildableStaticSocketComponent",
+    "Name": "BuildStaticSockets",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BuildableStaticSocketComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Deployable_HeatSource_Base_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.13"
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    },
+    "Properties": {
+      "m_bKillable": false
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanPlayerInteractWith",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerCharacter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetLocationForToolStalk",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DetectingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetToolStalkSettings",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "Class'ToolStalkSettings'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "ShouldShowToolStalk",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DetectingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 240,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "HeatSourceActorComponent",
+    "Name": "HeatSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HeatSourceActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    },
+    "Properties": {
+      "m_ChargingDamageTypes": [
+        {
+          "Key": {
+            "AttributeName": "HarvestMitigation",
+            "Attribute": {
+              "Path": [
+                "HarvestMitigation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DuneDamageMitigationAttributeSet'",
+                "ObjectPath": "/Script/DuneSandbox"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'DuneDamageMitigationAttributeSet'",
+              "ObjectPath": "/Script/DuneSandbox"
+            }
+          },
+          "Value": 1.0
+        },
+        {
+          "Key": {
+            "AttributeName": "HeatMitigation",
+            "Attribute": {
+              "Path": [
+                "HeatMitigation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'DuneDamageMitigationAttributeSet'",
+                "ObjectPath": "/Script/DuneSandbox"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'DuneDamageMitigationAttributeSet'",
+              "ObjectPath": "/Script/DuneSandbox"
+            }
+          },
+          "Value": 1.0
+        }
+      ],
+      "m_MaxCharge": 20.0
+    }
+  },
+  {
+    "Type": "InteractableBaseComponent",
+    "Name": "InteractionsComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InteractableBaseComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    },
+    "Properties": {
+      "m_InteractionList": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'BP_PickupHeatsourceInteraction_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_PickupHeatsourceInteraction.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_Deployable_HeatSource_Base_C:Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.13"
+      }
+    }
+  },
+  {
+    "Type": "PlaceablePersistenceComponent",
+    "Name": "PlaceablePersistenceComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlaceablePersistenceComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    }
+  },
+  {
+    "Type": "ScannableActorComponent",
+    "Name": "ScannableActor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ScannableActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "Properties": {
+      "m_MapMarkerType": {
+        "Name": "HeatSource"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Deployable_HeatSource_Base_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.12"
+      },
+      "VariableGuid": "D979EBFA-44E505B2-96EB4CA5-72D989CB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.17"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ScannableActorComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ScannableActorComponent'BP_Deployable_HeatSource_Base_C:ScannableActor_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.11"
+      },
+      "VariableGuid": "23565E1E-4D6B8063-693B439C-B76AC300",
+      "InternalVariableName": "ScannableActor"
+    }
+  },
+  {
+    "Type": "SecurityZoneMemberComponent",
+    "Name": "SecurityZoneComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SecurityZoneMemberComponent'",
+    "Outer": {
+      "ObjectName": "BP_Deployable_HeatSource_Base_C'Default__BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Deployable_HeatSource_Base_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Deployable_HeatSource_Base_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C4/Player/PlayerBuilt/HeatSources/BP_Deployable_HeatSource_Base.14"
+      }
+    }
+  }
+]

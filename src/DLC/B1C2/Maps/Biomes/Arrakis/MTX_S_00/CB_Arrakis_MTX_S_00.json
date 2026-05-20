@@ -1,0 +1,613 @@
+[
+  {
+    "Type": "Actor",
+    "Name": "Actor_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Actor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "ActorLabel": "Actor3"
+  },
+  {
+    "Type": "Actor",
+    "Name": "Actor_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Actor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "ActorLabel": "Actor4"
+  },
+  {
+    "Type": "Actor",
+    "Name": "Actor_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Actor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "ActorLabel": "Actor6"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BP_CollisionVolume_C'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.5"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'BP_CollisionVolume_C:Box_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.1"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 128.0,
+        "Y": 128.0,
+        "Z": 128.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1904,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.15"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00:PersistentLevel.LevelBounds_CB_Template_Generic_S_00'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.12"
+    },
+    "Properties": {
+      "AreaClassOverride": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "BodyInstance": {
+        "CollisionEnabled": "NoCollision",
+        "ResponseArray": {
+          "Visibility": "Ignore",
+          "Camera": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeLocation": {
+        "X": 5.6547615E-05,
+        "Y": -1.4551915E-11,
+        "Z": 6973.244
+      },
+      "RelativeScale3D": {
+        "X": 70000.0,
+        "Y": 70000.0,
+        "Z": 70000.0
+      }
+    }
+  },
+  {
+    "Type": "BP_CollisionVolume_C",
+    "Name": "BP_CollisionVolume_C_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.BP_CollisionVolume_C'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Template": {
+      "ObjectName": "BP_CollisionVolume_C'Default__BP_CollisionVolume_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.2"
+    },
+    "Properties": {
+      "TextRender": null,
+      "BottomCap": null,
+      "TopCap": null,
+      "Root": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.15"
+      },
+      "Capsule": null,
+      "Sphere": null,
+      "Box": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Box'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.3"
+      },
+      "CollisionVisualization": null,
+      "PhysicalMaterial": "EPhysicsMaterials::NewEnumerator8",
+      "RootComponent": {
+        "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Root'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.15"
+      },
+      "BlueprintCreatedComponents": [
+        {
+          "ObjectName": "SceneComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Root'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.15"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1.Box'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.3"
+        },
+        null,
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "BP_CollisionVolume29"
+  },
+  {
+    "Type": "ContentBlockWorldComponent",
+    "Name": "ContentBlockWorldComponent",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContentBlockWorldComponent'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+    }
+  },
+  {
+    "Type": "DuneMinimapGenerator",
+    "Name": "MinimapGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneMinimapGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+    }
+  },
+  {
+    "Type": "DuneWorldGenerator",
+    "Name": "WorldGenerator",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldGenerator'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+    }
+  },
+  {
+    "Type": "DuneWorldPartitioner",
+    "Name": "WorldPartitioner",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldPartitioner'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+    },
+    "Properties": {
+      "GridSize": {
+        "X": 1,
+        "Y": 1
+      }
+    }
+  },
+  {
+    "Type": "DuneWorldSettings",
+    "Name": "DuneWorldSettings",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneWorldSettings'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Properties": {
+      "m_ContentBlockWorldComponent": {
+        "ObjectName": "ContentBlockWorldComponent'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings.ContentBlockWorldComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.6"
+      },
+      "m_WorldGenerator": {
+        "ObjectName": "DuneWorldGenerator'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings.WorldGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.8"
+      },
+      "m_MinimapGenerator": {
+        "ObjectName": "DuneMinimapGenerator'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings.MinimapGenerator'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.7"
+      },
+      "bEnableWorldComposition": true,
+      "WorldPartitioner": {
+        "ObjectName": "DuneWorldPartitioner'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings.WorldPartitioner'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.9"
+      },
+      "NavigationSystemConfig": {
+        "ObjectName": "NavigationSystemModuleConfig'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings.NavigationSystemModuleConfig_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.14"
+      },
+      "BookmarkArray": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "ActorLabel": "DuneWorldSettings-1"
+  },
+  {
+    "Type": "Level",
+    "Name": "PersistentLevel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Level'",
+    "Outer": {
+      "ObjectName": "World'CB_Arrakis_MTX_S_00'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.20"
+    },
+    "Properties": {
+      "Model": {
+        "ObjectName": "Model'CB_Arrakis_MTX_S_00:PersistentLevel.Model_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.13"
+      },
+      "LevelBuildDataId": "05BDE8E1-4F58ED94-E7E25383-1CC73F7B",
+      "WorldSettings": {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+      }
+    },
+    "Actors": [
+      {
+        "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+      },
+      null,
+      {
+        "ObjectName": "LevelBounds'CB_Arrakis_MTX_S_00:PersistentLevel.LevelBounds_CB_Template_Generic_S_00'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.12"
+      },
+      {
+        "ObjectName": "Actor'CB_Arrakis_MTX_S_00:PersistentLevel.Actor_6'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.2"
+      },
+      {
+        "ObjectName": "Actor'CB_Arrakis_MTX_S_00:PersistentLevel.Actor_3'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.0"
+      },
+      {
+        "ObjectName": "Actor'CB_Arrakis_MTX_S_00:PersistentLevel.Actor_4'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.1"
+      },
+      {
+        "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_12'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.17"
+      },
+      {
+        "ObjectName": "BP_CollisionVolume_C'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.5"
+      },
+      {
+        "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.16"
+      }
+    ],
+    "URL": {
+      "Protocol": "unreal",
+      "Host": "",
+      "Port": 7777,
+      "Valid": true,
+      "Map": "/Game/Dune/Maps/MainMenu",
+      "Op": [],
+      "Portal": ""
+    },
+    "Model": {
+      "ObjectName": "Model'CB_Arrakis_MTX_S_00:PersistentLevel.Model_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.13"
+    },
+    "ModelComponents": [],
+    "LevelScriptActor": null,
+    "NavListStart": null,
+    "NavListEnd": null,
+    "PrecomputedVisibilityHandler": {
+      "PrecomputedVisibilityCellBucketOriginXY": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "PrecomputedVisibilityCellSizeXY": 0.0,
+      "PrecomputedVisibilityCellSizeZ": 0.0,
+      "PrecomputedVisibilityCellBucketSizeXY": 0,
+      "PrecomputedVisibilityNumCellBuckets": 0,
+      "PrecomputedVisibilityCellBuckets": []
+    },
+    "PrecomputedVolumeDistanceField": {
+      "VolumeMaxDistance": 0.0,
+      "VolumeBox": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 0
+      },
+      "VolumeSizeX": 0,
+      "VolumeSizeY": 0,
+      "VolumeSizeZ": 0,
+      "Data": []
+    }
+  },
+  {
+    "Type": "LevelBounds",
+    "Name": "LevelBounds_CB_Template_Generic_S_00",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'LevelBounds'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Properties": {
+      "BoxComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00:PersistentLevel.LevelBounds_CB_Template_Generic_S_00.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.4"
+      },
+      "bAutoUpdateBounds": false,
+      "RootComponent": {
+        "ObjectName": "BoxComponent'CB_Arrakis_MTX_S_00:PersistentLevel.LevelBounds_CB_Template_Generic_S_00.BoxComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.4"
+      }
+    },
+    "ActorLabel": "LevelBounds_CB_Template_Generic_S_00"
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Model'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Bounds": {
+      "Origin": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "SphereRadius": 0.0
+    },
+    "Vectors": [],
+    "Points": [],
+    "Nodes": [],
+    "Surfs": [],
+    "NumSharedSides": 4,
+    "VertexBuffer": {
+      "Vertices": []
+    },
+    "LightingGuid": "1448D07C-4BEE5EA8-C7AA00A6-E9D79D55",
+    "LightmassSettings": []
+  },
+  {
+    "Type": "NavigationSystemModuleConfig",
+    "Name": "NavigationSystemModuleConfig_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NavigationSystemModuleConfig'",
+    "Outer": {
+      "ObjectName": "DuneWorldSettings'CB_Arrakis_MTX_S_00:PersistentLevel.DuneWorldSettings'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.10"
+    },
+    "Properties": {
+      "bAutoSpawnMissingNavData": true,
+      "NavigationSystemClass": {
+        "AssetPathName": "/Script/NavigationSystem.NavigationSystemV1",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Root",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BP_CollisionVolume_C'CB_Arrakis_MTX_S_00:PersistentLevel.BP_CollisionVolume_C_1'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.5"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_CollisionVolume_C:Root_GEN_VARIABLE'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Art/TechArt/CollisionVolume/BP_CollisionVolume.12"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -2943.199,
+        "Y": 939.39905,
+        "Z": 1822.735
+      },
+      "RelativeRotation": {
+        "Pitch": 9.034919,
+        "Yaw": 52.896523,
+        "Roll": -10.771573
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 1.615,
+        "Z": 0.5
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "StaticMeshActor",
+    "Name": "StaticMeshActor_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshActor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.18"
+      },
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.18"
+      }
+    },
+    "ActorLabel": "SM_Env_Mineral_Arrakis_Rock_Large_102"
+  },
+  {
+    "Type": "StaticMeshActor",
+    "Name": "StaticMeshActor_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshActor'",
+    "Outer": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_12.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.19"
+      },
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_12.StaticMeshComponent0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.19"
+      }
+    },
+    "ActorLabel": "StaticMeshActor12"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.16"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Mineral_Arrakis_Rock_Large_03'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Minerals/Arrakis/Rock/Meshes/SM_Env_Mineral_Arrakis_Rock_Large_03.1"
+      },
+      "RelativeLocation": {
+        "X": -3052.6677,
+        "Y": -529.41266,
+        "Z": 1251.8582
+      },
+      "RelativeRotation": {
+        "Pitch": -12.243619,
+        "Yaw": -19.625948,
+        "Roll": -7.696853
+      },
+      "RelativeScale3D": {
+        "X": 1.5224999,
+        "Y": 2.0275,
+        "Z": 1.236098
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Flags": "RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "StaticMeshActor'CB_Arrakis_MTX_S_00:PersistentLevel.StaticMeshActor_12'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.17"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Env_Prop_Neut_PipesKit_PipeStraight_01_Medium_Destroyed'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Neut/PipesKit/Meshes/SM_Env_Prop_Neut_PipesKit_PipeStraight_01_Medium_Destroyed.1"
+      },
+      "bDisallowMeshPaintPerInstance": true,
+      "bUseDefaultCollision": false,
+      "OverrideMaterials": [
+        null
+      ],
+      "bMultiBodyOverlap": true,
+      "RelativeLocation": {
+        "X": -7528.1025,
+        "Y": -1507.9894,
+        "Z": 1356.7557
+      },
+      "RelativeRotation": {
+        "Pitch": -78.691956,
+        "Yaw": -135.5293,
+        "Roll": -64.33663
+      },
+      "RelativeScale3D": {
+        "X": 1.151804,
+        "Y": 1.151804,
+        "Z": 1.151804
+      }
+    }
+  },
+  {
+    "Type": "World",
+    "Name": "CB_Arrakis_MTX_S_00",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'World'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00",
+    "Properties": {
+      "WorldComposition": null
+    },
+    "PersistentLevel": {
+      "ObjectName": "Level'CB_Arrakis_MTX_S_00:PersistentLevel'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Maps/Biomes/Arrakis/MTX_S_00/CB_Arrakis_MTX_S_00.11"
+    },
+    "ExtraReferencedObjects": [],
+    "StreamingLevels": []
+  }
+]

@@ -1,0 +1,1201 @@
+[
+  {
+    "Type": "ActorInventory",
+    "Name": "AbilityInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_SoldierBase_Character_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.0"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "BackpackInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_SoldierBase_Character_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.1"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "EquipmentInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_SoldierBase_Character_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.2"
+    }
+  },
+  {
+    "Type": "ActorInventoryReplicateToAll",
+    "Name": "LootInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventoryReplicateToAll'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_Npc_SoldierBase_Character_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.3"
+    }
+  },
+  {
+    "Type": "AIPerceptionStimuliSourceComponent",
+    "Name": "AIStimuliSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AIPerceptionStimuliSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_Npc_SoldierBase_Character_C:AIStimuliSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.4"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Npc_ClonePod_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_SoldierBase_Character_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.5"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Npc_ClonePod_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.31"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Npc_ClonePod_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.21"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:ExecuteUbergraph_BP_Npc_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_SoldierBase_Character_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.19"
+      },
+      {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:ExecuteUbergraph_BP_Npc_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.18"
+      },
+      {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:ReceivedTargetedMsg__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.20"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "ReceivedTargetedMsg",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Npc_ClonePod_C:ReceivedTargetedMsg__DelegateSignature'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.20"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ReceivedTargetedMsg__DelegateSignature": {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:ReceivedTargetedMsg__DelegateSignature'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.20"
+      },
+      "ExecuteUbergraph_BP_Npc_ClonePod": {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:ExecuteUbergraph_BP_Npc_ClonePod'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.18"
+      },
+      "HandleTargetedMsg": {
+        "ObjectName": "Function'BP_Npc_ClonePod_C:HandleTargetedMsg'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.19"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_TargetedMsg_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/Prototyping/Blueprints/Messaging/BPI_TargetedMsg.BPI_TargetedMsg_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Extended parry collision volume",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "WeaponActorComponent'Default__BP_Npc_ClonePod_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.34"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_Npc_SoldierBase_Character_C:Weapon.Extended parry collision volume'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.6"
+    }
+  },
+  {
+    "Type": "BP_Npc_ClonePod_C",
+    "Name": "Default__BP_Npc_ClonePod_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.BP_Npc_ClonePod_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod",
+    "Template": {
+      "ObjectName": "BP_Npc_SoldierBase_Character_C'Default__BP_Npc_SoldierBase_Character_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.8"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "m_QuicksandComponent": {
+        "ObjectName": "PlayerQuicksandActorComponent'Default__BP_Npc_ClonePod_C:QuicksandComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.27"
+      },
+      "m_ContractContentComponent": {
+        "ObjectName": "ContractContentComponent'Default__BP_Npc_ClonePod_C:ContractContentComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.9"
+      },
+      "m_LootInventoryComponent": {
+        "ObjectName": "ActorInventoryReplicateToAll'Default__BP_Npc_ClonePod_C:LootInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.3"
+      },
+      "m_DuneNPCCharacterAttributeSet": {
+        "ObjectName": "DuneNPCCharacterAttributeSet'Default__BP_Npc_ClonePod_C:NPCCharacterAttributes'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.15"
+      },
+      "m_AIStimuliSourceComponent": {
+        "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_Npc_ClonePod_C:AIStimuliSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.4"
+      },
+      "m_NpcCombatTargetComponent": {
+        "ObjectName": "NpcCombatTargetComponent'Default__BP_Npc_ClonePod_C:NpcCombatTarget'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.26"
+      },
+      "m_AbilitySystemComponent": {
+        "ObjectName": "DuneAbilitySystemComponent'Default__BP_Npc_ClonePod_C:AbilityComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.11"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_Npc_ClonePod_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.10"
+      },
+      "m_SandwormThreatSourceComponent": {
+        "ObjectName": "SandwormThreatSourceComponent'Default__BP_Npc_ClonePod_C:SandwormThreatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.28"
+      },
+      "m_ReplicatedAssetsListComponent": {
+        "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_Npc_ClonePod_C:SimProxyReplicatedAssetsList'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.32"
+      },
+      "m_BackpackInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:BackpackInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.1"
+      },
+      "m_EquipmentInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:EquipmentInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.2"
+      },
+      "m_AbilityInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:AbilityInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.0"
+      },
+      "m_WeaponComponent": {
+        "ObjectName": "WeaponActorComponent'Default__BP_Npc_ClonePod_C:Weapon'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.34"
+      },
+      "m_DuneCharacterAttributeSet": {
+        "ObjectName": "DuneCharacterAttributeSet'Default__BP_Npc_ClonePod_C:CharacterStats'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.12"
+      },
+      "m_DamageMitigationAttributeSet": {
+        "ObjectName": "DuneDamageMitigationAttributeSet'Default__BP_Npc_ClonePod_C:DamageMitigationAttributes'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.14"
+      },
+      "m_DuneShieldAttributeSet": {
+        "ObjectName": "DuneShieldAttributeSet'Default__BP_Npc_ClonePod_C:ShieldAttributes'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.17"
+      },
+      "m_DunePoiseAttributeSet": {
+        "ObjectName": "DunePoiseAttributeSet'Default__BP_Npc_ClonePod_C:PoiseAttributes'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.16"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_Npc_ClonePod_C:CharacterMesh0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.33"
+      },
+      "CharacterMovement": {
+        "ObjectName": "DuneCharacterMovementComponent'Default__BP_Npc_ClonePod_C:CharMoveComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.13"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Npc_ClonePod_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.8"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Npc_ClonePod_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.8"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_Npc_SoldierBase_Character_C:CollisionCylinder'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.9"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Weapon_Projectile": "Ignore",
+          "Trace_VehicleImmediatePhysicsOverlap": "Block",
+          "Visibility": "Ignore",
+          "Trace_BuildingOverlap": "Overlap",
+          "Camera": "Ignore",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "ContractContentComponent",
+    "Name": "ContractContentComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContractContentComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "ContractContentComponent'Default__BP_Npc_SoldierBase_Character_C:ContractContentComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.11"
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DamageableActorComponent'Default__BP_Npc_SoldierBase_Character_C:DamageableActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.12"
+    }
+  },
+  {
+    "Type": "DuneAbilitySystemComponent",
+    "Name": "AbilityComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAbilitySystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneAbilitySystemComponent'Default__BP_Npc_SoldierBase_Character_C:AbilityComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.13"
+    },
+    "Properties": {
+      "ReplicatedPredictionKeyMap": {
+        "PredictionKeys": [
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": -1,
+            "ReplicationKey": -1,
+            "MostRecentArrayReplicationKey": -1
+          }
+        ],
+        "ArrayReplicationKey": 96
+      }
+    }
+  },
+  {
+    "Type": "DuneCharacterAttributeSet",
+    "Name": "CharacterStats",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterAttributeSet'Default__BP_Npc_SoldierBase_Character_C:CharacterStats'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.14"
+    }
+  },
+  {
+    "Type": "DuneCharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterMovementComponent'Default__BP_Npc_SoldierBase_Character_C:CharMoveComp'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.15"
+    }
+  },
+  {
+    "Type": "DuneDamageMitigationAttributeSet",
+    "Name": "DamageMitigationAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneDamageMitigationAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneDamageMitigationAttributeSet'Default__BP_Npc_SoldierBase_Character_C:DamageMitigationAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.16"
+    }
+  },
+  {
+    "Type": "DuneNPCCharacterAttributeSet",
+    "Name": "NPCCharacterAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneNPCCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneNPCCharacterAttributeSet'Default__BP_Npc_SoldierBase_Character_C:NPCCharacterAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.17"
+    }
+  },
+  {
+    "Type": "DunePoiseAttributeSet",
+    "Name": "PoiseAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DunePoiseAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DunePoiseAttributeSet'Default__BP_Npc_SoldierBase_Character_C:PoiseAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.18"
+    }
+  },
+  {
+    "Type": "DuneShieldAttributeSet",
+    "Name": "ShieldAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneShieldAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "DuneShieldAttributeSet'Default__BP_Npc_SoldierBase_Character_C:ShieldAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.19"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Npc_ClonePod",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleTargetedMsg",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceivedTargetedMsg__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Msg",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'FBP_TargetedMsg'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Prototyping/Blueprints/Messaging/FBP_TargetedMsg.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "AbilityInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.0"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_Npc_SoldierBase_Character_C:AbilityInventory.AbilityInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.26"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "BackpackInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.1"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_Npc_SoldierBase_Character_C:BackpackInventory.BackpackInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.27"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "EquipmentInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_Npc_ClonePod_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.2"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_Npc_SoldierBase_Character_C:EquipmentInventory.EquipmentInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.28"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "LootInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_Npc_ClonePod_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.3"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_Npc_SoldierBase_Character_C:LootInventory.LootInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.29"
+    }
+  },
+  {
+    "Type": "NpcCombatTargetComponent",
+    "Name": "NpcCombatTarget",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NpcCombatTargetComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "NpcCombatTargetComponent'Default__BP_Npc_SoldierBase_Character_C:NpcCombatTarget'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.32"
+    }
+  },
+  {
+    "Type": "PlayerQuicksandActorComponent",
+    "Name": "QuicksandComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlayerQuicksandActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "PlayerQuicksandActorComponent'Default__BP_Npc_SoldierBase_Character_C:QuicksandComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.33"
+    }
+  },
+  {
+    "Type": "SandwormThreatSourceComponent",
+    "Name": "SandwormThreatSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SandwormThreatSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "SandwormThreatSourceComponent'Default__BP_Npc_SoldierBase_Character_C:SandwormThreatSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.34"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Npc_ClonePod_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.31"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Npc_ClonePod_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.29"
+      },
+      "VariableGuid": "1BB27F52-4D02AD0E-4E8E3188-8CA45B41",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.5"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Npc_ClonePod_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.30"
+      }
+    }
+  },
+  {
+    "Type": "SimProxyReplicatedAssetsList",
+    "Name": "SimProxyReplicatedAssetsList",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimProxyReplicatedAssetsList'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_Npc_SoldierBase_Character_C:SimProxyReplicatedAssetsList'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.40"
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_Npc_SoldierBase_Character_C:CharacterMesh0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.41"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_Npc_ClonePod_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.8"
+      }
+    }
+  },
+  {
+    "Type": "WeaponActorComponent",
+    "Name": "Weapon",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WeaponActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_Npc_ClonePod_C'Default__BP_Npc_ClonePod_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.7"
+    },
+    "Template": {
+      "ObjectName": "WeaponActorComponent'Default__BP_Npc_SoldierBase_Character_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_Character.42"
+    },
+    "Properties": {
+      "m_ExtendedParryCollisionVolume": {
+        "ObjectName": "BoxComponent'Default__BP_Npc_ClonePod_C:Weapon.Extended parry collision volume'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabA/BP_Npc_ClonePod.6"
+      }
+    }
+  }
+]

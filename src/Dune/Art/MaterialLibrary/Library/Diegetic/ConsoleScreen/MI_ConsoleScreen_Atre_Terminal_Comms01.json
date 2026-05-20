@@ -1,0 +1,198 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_ConsoleScreen_Atre_Terminal_Comms01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Diegetic/ConsoleScreen/MI_ConsoleScreen_Atre_Terminal_Comms01",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_ConsoleScreen_Scav'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Library/Diegetic/ConsoleScreen/MI_ConsoleScreen_Scav.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "28FFFF50-44A3183F-33854B95-781939C1"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Text scrolling speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "E2EF5BE5-4683210C-94FBD994-7AB65A27"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Text Step Distance",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 15.0,
+          "ExpressionGUID": "E4C663D2-4606156B-5E8FF188-6603D4C9"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Glitch - Speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.01,
+          "ExpressionGUID": "68F926D8-4E579866-7CC9969C-7C74D75F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Glitch - Wear Starting Point",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.75,
+          "ExpressionGUID": "2581E55D-4B9D90C6-B321609D-D74D060A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Glith - Deform Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.1,
+          "ExpressionGUID": "914758F1-4DCE5D57-034EDFB2-B401C9C3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Depth",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.5,
+          "ExpressionGUID": "9EB56C65-4C304D49-177B929C-BF86000A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Screen Emissive - Grunge Emissive Bias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": -0.2,
+          "ExpressionGUID": "D17E8ECA-4CE76D01-48AFCCB4-B586BDCE"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Secondary Elements - Intensity",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.25,
+          "ExpressionGUID": "2ED32BF3-45C86275-A18C3894-F54D3467"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Static Effect - Contrast",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 2.0,
+          "ExpressionGUID": "23C2C0B4-42193EE4-ABF12E89-C485F6F3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Static Effect - Speed",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.1,
+          "ExpressionGUID": "7A95791F-4E7B9F11-FF94D18A-DEF767E2"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Env_Prop_Atre_Terminal_Comms_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Terminals/Textures/T_Env_Prop_Atre_Terminal_Comms_01_M.0"
+          },
+          "ExpressionGUID": "97E4411A-4DAFBE78-3A7CD796-5F54CB9F"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Disable SAND mask for Sand Buildup",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "579E15A2-41018D07-C3E57294-6781C845"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Disable DUST mask for Sand Buildup",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "9517E334-41459E8A-C5E621A5-1A23EDD4"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Calculate dust mask procedurally",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "CD19EECF-4860C4B6-0ADE089C-4701B16E"
+          }
+        ]
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 0.099975586,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Diegetic_Screen_01_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Lib_DetailMask_Scratches_01_M"
+        },
+        {
+          "SamplingScale": 1.0234375,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

@@ -1,0 +1,503 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Harvester_Cockpit_Interior_01'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Struct/Atre/WShipInt/Cockpit/Meshes/SM_Harvester_Cockpit_Interior_01.1"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 543.236,
+              "Y": 169.43549,
+              "Z": 263.64227
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 70.89366,
+            "Y": 232.9972,
+            "Z": 91.9055,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 544.236,
+              "Y": 169.43549,
+              "Z": 305.91022
+            },
+            "Rotation": {
+              "Pitch": -60.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 39.427113,
+            "Y": 232.9972,
+            "Z": 57.473495,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 507.23602,
+              "Y": 271.4355,
+              "Z": 255.64227
+            },
+            "Rotation": {
+              "Pitch": 6.6133575E-29,
+              "Yaw": 90.0,
+              "Roll": -3.9790393E-13
+            },
+            "X": 25.624533,
+            "Y": 119.65628,
+            "Z": 64.66468,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          },
+          {
+            "Center": {
+              "X": 447.23602,
+              "Y": 271.4355,
+              "Z": 243.64227
+            },
+            "Rotation": {
+              "Pitch": 6.6133575E-29,
+              "Yaw": 90.0,
+              "Roll": -3.9790393E-13
+            },
+            "X": 25.624533,
+            "Y": 90.22396,
+            "Z": 39.628513,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "8EE68E9544A06EDE24E99AB82FE5F115",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 28,
+        "SizeOnDisk": 28,
+        "OffsetInFile": "0x7CE"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Harvester_Cockpit_Interior_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Struct/Atre/WShipInt/Cockpit/Meshes/SM_Harvester_Cockpit_Interior_01",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Env_Prop_Neut_PipesKit_Industrial_PipeStraight_01'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Neut/PipesKit/Materials/MI_Env_Prop_Neut_PipesKit_Industrial_PipeStraight_01.0"
+          },
+          "MaterialSlotName": "Veh_Ground_Choam_CIGC_Interior",
+          "ImportedMaterialSlotName": "Veh_Ground_Choam_CIGC_Interior",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 1020.2753,
+            "LocalUVDensities[1]": 30022.18,
+            "LocalUVDensities[2]": 100.13081,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_ATR_1MGC_ConsoleScreen_Wrecked'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Vehicles/GroundVehicles/GroundCar/AtreidesFaction/1Man/Materials/Wrecked/MI_ATR_1MGC_ConsoleScreen_Wrecked.0"
+          },
+          "MaterialSlotName": "CIGC_Cockpit_Interior_Screen",
+          "ImportedMaterialSlotName": "CIGC_Cockpit_Interior_Screen",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 831.40564,
+            "LocalUVDensities[1]": 24021.633,
+            "LocalUVDensities[2]": 99.7219,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 1018.7751,
+      "LightMapResolution": 64,
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 491.23602,
+          "Y": 169.43549,
+          "Z": 289.64227
+        },
+        "BoxExtent": {
+          "X": 90.67639,
+          "Y": 116.4986,
+          "Z": 66.68512
+        },
+        "SphereRadius": 161.99085186630074
+      },
+      "LinkedMeshDecals": [
+        null
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Harvester_Cockpit_Interior_01:BodySetup_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Struct/Atre/WShipInt/Cockpit/Meshes/SM_Harvester_Cockpit_Interior_01.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "31CB8950-4CBEF447-E6E72DA6-76F0DF68",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 4933,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 5923,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 14799,
+              "NumTriangles": 34,
+              "MinVertexIndex": 5924,
+              "MaxVertexIndex": 5963,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 5964
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 5964,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": 399.55963,
+                "Y": 51.93689,
+                "Z": 221.95715
+              },
+              "Max": {
+                "X": 582.9124,
+                "Y": 286.93408,
+                "Z": 357.3274
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 491.23602,
+                    "Y": 169.43549,
+                    "Z": 289.64227
+                  },
+                  "Extent": {
+                    "X": 115.0,
+                    "Y": 67.68512,
+                    "Z": 95.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 556.236,
+                    "Y": 174.43549,
+                    "Z": 328.48483
+                  },
+                  "Extent": {
+                    "X": 110.0,
+                    "Y": 28.84256,
+                    "Z": 30.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 491.23602,
+                    "Y": 169.43549,
+                    "Z": 289.64227
+                  },
+                  "Extent": {
+                    "X": 90.0,
+                    "Y": 67.68512,
+                    "Z": 120.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 536.236,
+                    "Y": 264.4355,
+                    "Z": 289.64227
+                  },
+                  "Extent": {
+                    "X": 45.0,
+                    "Y": 67.68512,
+                    "Z": 25.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 491.23602,
+                    "Y": 169.43549,
+                    "Z": 294.64227
+                  },
+                  "Extent": {
+                    "X": 90.0,
+                    "Y": 115.0,
+                    "Z": 70.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 466.23602,
+                    "Y": 174.43549,
+                    "Z": 244.64227
+                  },
+                  "Extent": {
+                    "X": 65.0,
+                    "Y": 110.0,
+                    "Z": 20.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x36402"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 491.23602,
+          "Y": 169.43549,
+          "Z": 289.64227
+        },
+        "BoxExtent": {
+          "X": 90.67639,
+          "Y": 116.4986,
+          "Z": 66.68512
+        },
+        "SphereRadius": 161.98927
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

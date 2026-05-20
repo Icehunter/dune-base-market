@@ -1,0 +1,74 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Env_Prop_Choam_Projector_Hologram_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/Projector/Materials/MI_Env_Prop_Choam_Projector_Hologram_01",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Material'M_Foliage_PivotPainter'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Core/Materials/M_Foliage_PivotPainter.0"
+      },
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Color",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Env_Foliage_Eco_Plant_Kentia_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Eco/Plant/Textures/T_Env_Foliage_Eco_Plant_Kentia_D.0"
+          },
+          "ExpressionGUID": "978D5F00-41D914C8-4F7A7395-37D3891B"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Normal (B = SS, A = Roughness)",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Env_Foliage_Eco_Plant_Kentia_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Foliage/Eco/Plant/Textures/T_Env_Foliage_Eco_Plant_Kentia_N.0"
+          },
+          "ExpressionGUID": "46D134F2-4D2A90A5-F43D6589-AC44315C"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "TwoSided": true,
+        "BlendMode": "BLEND_Masked",
+        "ShadingModel": "MSM_TwoSidedFoliage",
+        "OpacityMaskClipValue": 0.1
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Env_Foliage_Eco_Plant_Kentia_D"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Env_Foliage_Eco_Plant_Kentia_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

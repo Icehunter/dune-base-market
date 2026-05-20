@@ -1,0 +1,653 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BodySetup'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Atre_Couch'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch.1"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.03781515,
+              "Y": 1.8881234,
+              "Z": 24.221783
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 144.0615,
+            "Y": 58.604527,
+            "Z": 46.827396,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ],
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -70.11594,
+                "Y": -14.096534,
+                "Z": 40.127533
+              },
+              {
+                "X": 69.922615,
+                "Y": -14.096534,
+                "Z": 40.127533
+              },
+              {
+                "X": -70.11431,
+                "Y": -25.997557,
+                "Z": 94.976616
+              },
+              {
+                "X": -70.11431,
+                "Y": -35.57519,
+                "Z": 94.976616
+              },
+              {
+                "X": 69.746765,
+                "Y": -25.997557,
+                "Z": 94.976616
+              },
+              {
+                "X": 69.746765,
+                "Y": -35.57519,
+                "Z": 94.976616
+              },
+              {
+                "X": -70.11552,
+                "Y": -34.567703,
+                "Z": 54.1584
+              },
+              {
+                "X": -70.11594,
+                "Y": -20.186241,
+                "Z": 40.127533
+              },
+              {
+                "X": 69.922615,
+                "Y": -20.18624,
+                "Z": 40.127533
+              },
+              {
+                "X": 69.87763,
+                "Y": -34.567703,
+                "Z": 54.1584
+              }
+            ],
+            "IndexData": [
+              5,
+              3,
+              6,
+              7,
+              0,
+              8,
+              2,
+              0,
+              3,
+              7,
+              8,
+              9,
+              2,
+              1,
+              0,
+              4,
+              2,
+              3,
+              4,
+              1,
+              2,
+              5,
+              4,
+              3,
+              9,
+              5,
+              6,
+              9,
+              8,
+              1,
+              7,
+              9,
+              6,
+              8,
+              0,
+              1,
+              9,
+              4,
+              5,
+              9,
+              1,
+              4,
+              7,
+              3,
+              0,
+              7,
+              6,
+              3
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -70.11594,
+                "Y": -35.57519,
+                "Z": 40.127533
+              },
+              "Max": {
+                "X": 69.922615,
+                "Y": -14.096534,
+                "Z": 94.976616
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "CollisionEnabled": "BlockAll",
+        "ResponseArray": {
+          "Trace_Harvesting": "Block",
+          "Trace_Combat": "Block",
+          "Trace_BuildingOverlap": "Overlap",
+          "Trace_VehicleImmediatePhysicsOverlap": "Overlap",
+          "Trace_VehicleGroundTrace": "Block",
+          "Trace_VehicleCamera": "Block",
+          "Trace_Audio": "Block",
+          "Trace_MapMesh": "Block",
+          "Trace_GadgetPlacement": "Block"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0BF0A84A4D77508A70AF40822704A793",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1124,
+        "SizeOnDisk": 1124,
+        "OffsetInFile": "0x800"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_Env_Prop_Atre_Couch",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMesh'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceLayered'ML_Env_Prop_Atre_Couch'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Materials/ML_Env_Prop_Atre_Couch.0"
+          },
+          "MaterialSlotName": "Env_Prop_Atre_Couch",
+          "ImportedMaterialSlotName": "Env_Prop_Atre_Couch",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 823.89966,
+            "LocalUVDensities[1]": 5911.2637,
+            "LocalUVDensities[2]": 102.338585,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 823.89966,
+      "LightMapResolution": 64,
+      "bLoadNaniteFallbackMeshGeometry": true,
+      "Sockets": [
+        {
+          "ObjectName": "StaticMeshSocket'SM_Env_Prop_Atre_Couch:StaticMeshSocket_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch.2"
+        }
+      ],
+      "PositiveBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NegativeBoundsExtension": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.037815094,
+          "Y": -2.1443443,
+          "Z": 47.48993
+        },
+        "BoxExtent": {
+          "X": 72.03075,
+          "Y": 34.144337,
+          "Z": 47.48993
+        },
+        "SphereRadius": 92.78770144603735
+      },
+      "LinkedMeshDecals": [
+        {
+          "ObjectName": "StaticMesh'SM_Env_Prop_Atre_Couch_MD'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch_MD.1"
+        }
+      ]
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_Env_Prop_Atre_Couch:BodySetup_0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "28342F20-4CB7D753-CEEAF081-4B64E97F",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 1975,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 2240,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 2241
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 2241,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -72.992935,
+                "Y": -37.28868,
+                "Z": -1.0
+              },
+              "Max": {
+                "X": 73.06856,
+                "Y": 32.999992,
+                "Z": 95.97986
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": -1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -64.96219,
+                    "Y": -2.1443443,
+                    "Z": 47.48993
+                  },
+                  "Extent": {
+                    "X": 35.0,
+                    "Y": 48.48993,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 0
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 65.03781,
+                    "Y": -2.1443443,
+                    "Z": 47.48993
+                  },
+                  "Extent": {
+                    "X": 35.0,
+                    "Y": 48.48993,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 1
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": -27.144344,
+                    "Z": 47.48993
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 48.48993,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": -2.1443443,
+                    "Z": 47.48993
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 48.48993,
+                    "Z": 40.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": -2.1443443,
+                    "Z": 47.48993
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 35.0,
+                    "Z": 55.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": 2.8556557,
+                    "Z": 37.48993
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 30.0,
+                    "Z": 15.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": -2.1443443,
+                    "Z": 67.48993
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 35.0,
+                    "Z": 35.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": 0.03781128,
+                    "Y": -2.1443443,
+                    "Z": 12.489929
+                  },
+                  "Extent": {
+                    "X": 73.03075,
+                    "Y": 35.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_PayloadAtEndOfFile | BULKDATA_PayloadInSeperateFile | BULKDATA_Force_NOT_InlinePayload | BULKDATA_NoOffsetFixUp",
+          "ElementCount": 92904,
+          "SizeOnDisk": 92904,
+          "OffsetInFile": "0x0"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": null,
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": null,
+        "PageRangeLookup": null,
+        "NumRootPages": 1,
+        "PositionPrecision": 4,
+        "NormalPrecision": 8,
+        "NumInputTriangles": 3307,
+        "NumInputVertices": 3290,
+        "NumInputMeshes": 1,
+        "NumInputTexCoords": 3,
+        "NumClusters": 54,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": 0.037815094,
+          "Y": -2.1443443,
+          "Z": 47.48993
+        },
+        "BoxExtent": {
+          "X": 72.03075,
+          "Y": 34.144337,
+          "Z": 47.48993
+        },
+        "SphereRadius": 92.23174
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshSocket",
+    "Name": "StaticMeshSocket_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshSocket'",
+    "Outer": {
+      "ObjectName": "StaticMesh'SM_Env_Prop_Atre_Couch'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Atre/Couch/Meshes/SM_Env_Prop_Atre_Couch.1"
+    },
+    "Properties": {
+      "SocketName": "m_FrontExitLocation",
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 75.0,
+        "Z": 90.0
+      }
+    }
+  }
+]

@@ -1,0 +1,201 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "MI_Char_Head_Neut_Clone_EcolabA_Male",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Characters/Clothing/Neut/Clone_EcolabA/MI_Char_Head_Neut_Clone_EcolabA_Male",
+    "Properties": {
+      "PhysMaterial": {
+        "ObjectName": "PhysicalMaterial'PM_Flesh'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Art/PhysicalMaterials/PM_Flesh.0"
+      },
+      "Parent": {
+        "ObjectName": "MaterialInstanceConstant'MI_Char_Body_Basic'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Bodies/Materials/MI_Char_Body_Basic.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Roughness Tweak",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.3,
+          "ExpressionGUID": "522B2DBB-4C1DA25C-34C57FB6-CF4943F3"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "SkinColorTint",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.8,
+            "G": 0.32,
+            "B": 0.4,
+            "A": 1.0,
+            "Hex": "E899AA"
+          },
+          "ExpressionGUID": "19E0AEC7-4861E30C-000E5588-7FEC3291"
+        }
+      ],
+      "TextureParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Head_Neut_01_Male_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Textures/Faces/T_Char_Head_Neut_01_Male_N.0"
+          },
+          "ExpressionGUID": "CB65B520-4C44B051-F71B17B7-EA6F26C9"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "High values Melanin Skin Albedo",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Head_Neut_Suboid_Male_01_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Neut/Suboid/Textures/T_Char_Head_Neut_Suboid_Male_01_D.0"
+          },
+          "ExpressionGUID": "D8F3618D-4FD94E4B-18563F9F-BF3A0864"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Low values Melanin Skin Albedo",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Head_Neut_Suboid_Male_01_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Neut/Suboid/Textures/T_Char_Head_Neut_Suboid_Male_01_D.0"
+          },
+          "ExpressionGUID": "27A42C1B-4C4094EE-761034BF-0FC402CF"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Medium values Melanin Skin Albedo",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Head_Neut_Male_03_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Textures/Skin/T_Char_Head_Neut_Male_03_D.0"
+          },
+          "ExpressionGUID": "4BCAA019-40731D07-64BE8AB0-BE12C62D"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "bOverride_BlendMode": true,
+        "ShadingModel": "MSM_FromMaterialExpression",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParametersRuntime": {
+        "StaticSwitchParameters": [
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Use 3 values of melanin skin",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "004EFF99-425DF2DB-556550B9-CBD4C625"
+          },
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "Enable Sand",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "A5076B39-41D93551-11F13A83-247A1120"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "EnableTattoo",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E9A4B8B1-4A595714-AD236C83-72D16245"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "Enable Age Morph",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "E175B059-4A479E5A-6A7F6281-DFD0BAC6"
+          },
+          {
+            "Value": false,
+            "ParameterInfo": {
+              "Name": "EnableWPO?",
+              "Association": "GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "4916780C-4C667277-E51BA8A6-7BA9234F"
+          }
+        ]
+      },
+      "SubsurfaceProfile": {
+        "ObjectName": "SubsurfaceProfile'SSP_NeutralSkinTester'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Heads/Materials/MaterialBaseComponents/SSP_NeutralSkinTester.0"
+      },
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Char_Head_Neut_01_Male_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Char_Head_Neut_Male_03_D"
+        },
+        {
+          "SamplingScale": 85.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Char_Head_Neut_SkinPore_01_N"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_Char_Skin_Dirt_Neut_Male_M"
+        },
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "T_SandBuildup_02_N"
+        }
+      ]
+    },
+    "LoadedMaterialResources": [],
+    "CachedData": {
+      "ParentLayerIndexRemap": []
+    }
+  }
+]

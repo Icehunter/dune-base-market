@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PHYS_SK_Plac_Choam_Fabricator_Large_01",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Package": "DuneSandbox/Content/Dune/Environment/Props/Choam/FabricatorLarge/Meshes/PHYS_SK_Plac_Choam_Fabricator_Large_01",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'PHYS_SK_Plac_Choam_Fabricator_Large_01:SkeletalBodySetup_19'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/FabricatorLarge/Meshes/PHYS_SK_Plac_Choam_Fabricator_Large_01.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'PHYS_SK_Plac_Choam_Fabricator_Large_01:SkeletalBodySetup_0'",
+          "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/FabricatorLarge/Meshes/PHYS_SK_Plac_Choam_Fabricator_Large_01.1"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false
+      },
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      }
+    ]
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Outer": {
+      "ObjectName": "PhysicsAsset'PHYS_SK_Plac_Choam_Fabricator_Large_01'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/FabricatorLarge/Meshes/PHYS_SK_Plac_Choam_Fabricator_Large_01.0"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 3.5780943E-09,
+              "Y": 2.2651285E-13,
+              "Z": 4.6882796
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 298.0,
+            "Y": 7.5,
+            "Z": 298.0,
+            "RestOffset": 0.0,
+            "Name": "console_top_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "console_top",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex",
+      "CollisionReponse": "EBodyCollisionResponse::BodyCollision_Disabled"
+    },
+    "BodySetupGuid": "CEE7308B47E4769A9A727F810FE5A096"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Outer": {
+      "ObjectName": "PhysicsAsset'PHYS_SK_Plac_Choam_Fabricator_Large_01'",
+      "ObjectPath": "DuneSandbox/Content/Dune/Environment/Props/Choam/FabricatorLarge/Meshes/PHYS_SK_Plac_Choam_Fabricator_Large_01.0"
+    },
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -0.64897156,
+              "Y": -54.317966,
+              "Z": 1.3018649
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -0.0
+            },
+            "X": 258.30984,
+            "Y": 111.27528,
+            "Z": 322.96564,
+            "RestOffset": 0.0,
+            "Name": "console_bottom_box",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "console_bottom",
+      "PhysicsType": "PhysType_Kinematic",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "422C32314DAC7CFB5E9E1C9AE646E31A"
+  }
+]

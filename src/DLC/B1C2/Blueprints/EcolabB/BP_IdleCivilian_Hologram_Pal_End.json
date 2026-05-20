@@ -1,0 +1,4148 @@
+[
+  {
+    "Type": "ActorInventory",
+    "Name": "AbilityInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.0"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "BackpackInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.1"
+    }
+  },
+  {
+    "Type": "ActorInventory",
+    "Name": "EquipmentInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventory'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventory'Default__BP_CivilianBase_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.2"
+    }
+  },
+  {
+    "Type": "ActorInventoryReplicateToAll",
+    "Name": "LootInventory",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ActorInventoryReplicateToAll'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_CivilianBase_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.3"
+    }
+  },
+  {
+    "Type": "AIPerceptionStimuliSourceComponent",
+    "Name": "AIStimuliSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AIPerceptionStimuliSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_CivilianBase_C:AIStimuliSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.4"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_IdleCivilian_Hologram_Pal_End_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.5"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_IdleCivilian_Hologram_Pal_End_C:InheritableComponentHandler'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.36"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ExecuteUbergraph_BP_IdleCivilian_Hologram_Pal_End'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.23"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:CanStartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.21"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:GetDialogueInteractionComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.26"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:SetMaterialTexuresToInstances'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.32"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:SetDynMaterialParameters'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.31"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:UpdateMutableAppearance'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.35"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:StartTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.33"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ClearTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.22"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:InitializeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.28"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:FinalizeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.24"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:Reset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.30"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:HideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.27"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ForceHologram'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.25"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.29"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:TestForMeshUpdate'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.34"
+      },
+      {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ExecuteUbergraph_BP_IdleCivilian_Hologram_Pal_End'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.23"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DuneAudioEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DuneAudioEmitterComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DialogueInteraction",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DialogueInteractionComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CustomizableSkeletalComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableSkeletalComponent'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PersonalPostProcess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HologramVFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MercunaGroundNavInvoker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MercunaGroundNavInvokerComponent'",
+          "ObjectPath": "/Script/Mercuna"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MercunaGroundNavigation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MercunaGroundNavigationComponent'",
+          "ObjectPath": "/Script/Mercuna"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TargetForgetTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BBVariableName_Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mutable Instance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Current Mutable Instance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "TexPar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "TexPar",
+          "Flags": "RF_Public",
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "ScriptStruct'TextureParameterValue'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Source Material",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynM",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "MinJitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "MaxJitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Color",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "GlitchNoise",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HueshiftColorCorrection",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Rng",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsSkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Mask_R",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Mask_G",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Mask_B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DialogInteraction",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DialogueInteractionComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HologramEffectOnMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CheckGameplayTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Tags_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "Tags_0",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SFX_GelSphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'FcAudioEvent'",
+          "ObjectPath": "/Script/FcAudio"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RuntimeBodyMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Transient | DisableEditOnInstance | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMesh'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_IdleCivilian_Hologram_Pal_End": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ExecuteUbergraph_BP_IdleCivilian_Hologram_Pal_End'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.23"
+      },
+      "TestForMeshUpdate": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:TestForMeshUpdate'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.34"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ReceiveBeginPlay'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.29"
+      },
+      "ForceHologram": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ForceHologram'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.25"
+      },
+      "HideNPC": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:HideNPC'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.27"
+      },
+      "Reset": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:Reset'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.30"
+      },
+      "FinalizeDialogue": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:FinalizeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.24"
+      },
+      "InitializeDialogue": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:InitializeDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.28"
+      },
+      "ClearTargetForgetTimer": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:ClearTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.22"
+      },
+      "StartTargetForgetTimer": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:StartTargetForgetTimer'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.33"
+      },
+      "UpdateMutableAppearance": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:UpdateMutableAppearance'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.35"
+      },
+      "SetDynMaterialParameters": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:SetDynMaterialParameters'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.31"
+      },
+      "SetMaterialTexuresToInstances": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:SetMaterialTexuresToInstances'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.32"
+      },
+      "GetDialogueInteractionComponent": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:GetDialogueInteractionComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.26"
+      },
+      "CanStartDialogue": {
+        "ObjectName": "Function'BP_IdleCivilian_Hologram_Pal_End_C:CanStartDialogue'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.21"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_NPCBehaviorTree_Interface_C'",
+          "ObjectPath": "DuneSandbox/Content/Dune/AI/Shared/Structs/BPI_NPCBehaviorTree_Interface.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=/Script/Engine.BlueprintGeneratedClass'\"/Game/Dune/AI/Shared/Structs/BPI_NPCBehaviorTree_Interface.BPI_NPCBehaviorTree_Interface_C\"'))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Extended parry collision volume",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "WeaponActorComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.62"
+    },
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_CivilianBase_C:Weapon.Extended parry collision volume'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.6"
+    }
+  },
+  {
+    "Type": "BP_IdleCivilian_Hologram_Pal_End_C",
+    "Name": "Default__BP_IdleCivilian_Hologram_Pal_End_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.BP_IdleCivilian_Hologram_Pal_End_C'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End",
+    "Template": {
+      "ObjectName": "BP_CivilianBase_C'Default__BP_CivilianBase_C'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "TargetForgetTimer": {
+        "Handle": 0
+      },
+      "BBVariableName_Target": "Target",
+      "Mutable Instance": {
+        "ObjectName": "CustomizableObjectInstance'COI_NPC_PaladinAI'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/MutableDev/Mutable_CharacterInstances/COI_NPC_PaladinAI.1"
+      },
+      "TexPar": [
+        {
+          "ParameterInfo": {
+            "Name": "Layer BaseColor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Surface Wear - BaseColor_43'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.4"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Layer Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Surface Wear - Normal_44'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.5"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Pattern Texture",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Pattern Texture_25'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.2"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailMask",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_DetailMask_42'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.1"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Wear - BaseColor",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Surface Wear - BaseColor_43'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.4"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Wear - Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Surface Wear - Normal_44'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.5"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Edge - Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2DRefArray'ML_Char_Clothing_Choam_StillSuit01_Scarf:ML_Char_Clothing_Choam_StillSuit01_Scarf_Surface Edge - Normal_29'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/materials/ML_Char_Clothing_Choam_StillSuit01_Scarf.3"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Masks",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Clothing_Choam_StillSuit01_Scarf_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/textures/T_Char_Clothing_Choam_StillSuit01_Scarf_M.0"
+          },
+          "ExpressionGUID": "97E4411A-4DAFBE78-3A7CD796-5F54CB9F"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Mesh Normal",
+            "Association": "GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Char_Clothing_Choam_StillSuit01_Scarf_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Characters/Clothing/Choam/Stillsuit01/textures/T_Char_Clothing_Choam_StillSuit01_Scarf_N.0"
+          },
+          "ExpressionGUID": "9B290784-417AB3CB-5E22B990-E1D849F4"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DetailMask",
+            "Association": "LayerParameter",
+            "Index": 0
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_Lib_DetailMask_Scratches_01_M'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/DetailMasks/T_Lib_DetailMask_Scratches_01_M.0"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Layer BaseColor",
+            "Association": "LayerParameter",
+            "Index": 0
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MLS_Fabric_Neut_Canvas_02_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Fabric_Neut_Canvas_02_D.0"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Layer Normal",
+            "Association": "LayerParameter",
+            "Index": 0
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MLS_Fabric_Neut_Canvas_02_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Fabric_Neut_Canvas_02_N.0"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Wear - BaseColor",
+            "Association": "LayerParameter",
+            "Index": 0
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MLS_Fabric_Neut_Canvas_02_D'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Fabric_Neut_Canvas_02_D.0"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Surface Wear - Normal",
+            "Association": "LayerParameter",
+            "Index": 0
+          },
+          "ParameterValue": {
+            "ObjectName": "Texture2D'T_MLS_Fabric_Neut_Canvas_02_N'",
+            "ObjectPath": "DuneSandbox/Content/Dune/Art/MaterialLibrary/Textures/Surfaces/Fabric/T_MLS_Fabric_Neut_Canvas_02_N.0"
+          },
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "Source Material": {
+        "ObjectName": "MaterialInstanceConstant'MI_VFX_BPHologram_Complex'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Solido/Material/LegacyHologram/MI_VFX_BPHologram_Complex.0"
+      },
+      "MinJitter": 0.5,
+      "MaxJitter": 1.0,
+      "Color": {
+        "R": 1.0,
+        "G": 0.072038,
+        "B": 0.0,
+        "A": 0.05,
+        "Hex": "0CFF4C00"
+      },
+      "GlitchNoise": 0.4,
+      "Rng": 6.894131,
+      "IsSkeletalMesh": true,
+      "Mask_R": 1.0,
+      "Mask_G": 1.0,
+      "Mask_B": 1.0,
+      "HologramEffectOnMesh": {
+        "ObjectName": "MaterialInstanceConstant'MI_VFX_BPHologram_Simple_PAL'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Solido/Material/LegacyHologram/MI_VFX_BPHologram_Simple_PAL.0"
+      },
+      "CheckGameplayTag": {
+        "TagName": "DialogueFlags.MTX_EcoLabB.GelSphereComplete"
+      },
+      "SFX_GelSphere": {
+        "ObjectName": "FcAudioEvent'AD_ENV_Ecolab_B_Take_Gelsphere'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/Events/AAA_NEW/ENV_AMB/ENV/ENV_Ecolab/DLC_ENV_Ecolab_B1C2/DLC_ENV_Ecolab_B/AD_ENV_Ecolab_B_Take_Gelsphere.0"
+      },
+      "m_QuicksandComponent": {
+        "ObjectName": "PlayerQuicksandActorComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:QuicksandComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.45"
+      },
+      "m_ContractContentComponent": {
+        "ObjectName": "ContractContentComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:ContractContentComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.9"
+      },
+      "m_LootInventoryComponent": {
+        "ObjectName": "ActorInventoryReplicateToAll'Default__BP_IdleCivilian_Hologram_Pal_End_C:LootInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.3"
+      },
+      "m_DuneNPCCharacterAttributeSet": null,
+      "m_AIStimuliSourceComponent": {
+        "ObjectName": "AIPerceptionStimuliSourceComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:AIStimuliSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.4"
+      },
+      "m_NpcCombatTargetComponent": {
+        "ObjectName": "NpcCombatTargetComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:NpcCombatTarget'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.44"
+      },
+      "m_AbilitySystemComponent": {
+        "ObjectName": "DuneAbilitySystemComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:AbilityComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.13"
+      },
+      "m_DamageableActorComponent": {
+        "ObjectName": "DamageableActorComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:DamageableActorComponent'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.11"
+      },
+      "m_SandwormThreatSourceComponent": {
+        "ObjectName": "SandwormThreatSourceComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:SandwormThreatSource'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.48"
+      },
+      "m_ReplicatedAssetsListComponent": {
+        "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_IdleCivilian_Hologram_Pal_End_C:SimProxyReplicatedAssetsList'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.60"
+      },
+      "m_BackpackInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:BackpackInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.1"
+      },
+      "m_EquipmentInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:EquipmentInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.2"
+      },
+      "m_AbilityInventoryComponent": {
+        "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:AbilityInventory'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.0"
+      },
+      "m_WeaponComponent": {
+        "ObjectName": "WeaponActorComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:Weapon'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.62"
+      },
+      "m_LootContainerType": {
+        "Name": "Default"
+      },
+      "m_DuneCharacterAttributeSet": {
+        "ObjectName": "DuneCharacterAttributeSet'Default__BP_IdleCivilian_Hologram_Pal_End_C:CharacterStats'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.15"
+      },
+      "m_DamageMitigationAttributeSet": null,
+      "m_DuneShieldAttributeSet": null,
+      "m_DunePoiseAttributeSet": null,
+      "m_WornItemSerializableList": {
+        "DeltaFlags": "EFastArraySerializerDeltaFlags::HasBeenSerialized"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_IdleCivilian_Hologram_Pal_End_C:CharacterMesh0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.61"
+      },
+      "CharacterMovement": {
+        "ObjectName": "DuneCharacterMovementComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:CharMoveComp'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.16"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.8"
+      },
+      "AutoPossessAI": "EAutoPossessAI::PlacedInWorldOrSpawned",
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Npc_SoldierBase_AIController_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_SoldierBase/Characters/BP_Npc_SoldierBase_AIController.1"
+      },
+      "bUsesFgl": true,
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.8"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_CivilianBase_C:CollisionCylinder'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.8"
+    },
+    "Properties": {
+      "bGenerateOverlapEvents": true,
+      "BodyInstance": {
+        "CollisionEnabled": "Custom",
+        "ResponseArray": {
+          "Camera": "Ignore"
+        },
+        "Flags": 1648,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "ContractContentComponent",
+    "Name": "ContractContentComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ContractContentComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "ContractContentComponent'Default__BP_CivilianBase_C:ContractContentComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.9"
+    }
+  },
+  {
+    "Type": "CustomizableSkeletalComponent",
+    "Name": "CustomizableSkeletalComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CustomizableSkeletalComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "CustomizableObjectInstance": {
+        "ObjectName": "CustomizableObjectInstance'COI_NPC_PaladinAI'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/MutableDev/Mutable_CharacterInstances/COI_NPC_PaladinAI.1"
+      },
+      "RelativeLocation": {
+        "X": 2.0071771E-07,
+        "Y": 3.4793823E-13,
+        "Z": 34.879837
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "DamageableActorComponent",
+    "Name": "DamageableActorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DamageableActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DamageableActorComponent'Default__BP_CivilianBase_C:DamageableActorComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.10"
+    }
+  },
+  {
+    "Type": "DialogueInteractionComponent",
+    "Name": "DialogueInteraction_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DialogueInteractionComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "m_Interaction": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DialogueTalkInteraction_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Player/Interactions/Objects/BP_DialogueTalkInteraction.0"
+      },
+      "m_InteractionFeedbackUIOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 25.0
+      },
+      "m_DialogueMaxInteractionDistance": 200.0,
+      "m_DialogueToStart": {
+        "AssetPathName": "/Game/Dune/NPCs/Dialogue/Generated/DA_Dialogue_lqn08.DA_Dialogue_lqn08",
+        "SubPathString": ""
+      },
+      "CapsuleRadius": 35.0,
+      "RelativeLocation": {
+        "X": 305.78735,
+        "Y": 8.147135E-12,
+        "Z": -2.5480265E-06
+      }
+    }
+  },
+  {
+    "Type": "DuneAbilitySystemComponent",
+    "Name": "AbilityComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAbilitySystemComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneAbilitySystemComponent'Default__BP_CivilianBase_C:AbilityComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.11"
+    },
+    "Properties": {
+      "ReplicatedPredictionKeyMap": {
+        "PredictionKeys": [
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 1,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 2,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 3,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 4,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 5,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 6,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 7,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 8,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 9,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 10,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 11,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 12,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 13,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 14,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 15,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 16,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 17,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 18,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 19,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 20,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 21,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 22,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 23,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 24,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 25,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 26,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 27,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 28,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 29,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 30,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 31,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 32,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          }
+        ],
+        "ArrayReplicationKey": 32
+      }
+    }
+  },
+  {
+    "Type": "DuneAudioEmitterComponent",
+    "Name": "DuneAudioEmitter_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneAudioEmitterComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "m_AudioSettings": {
+        "ObjectName": "FcAudioObjectSettingsAsset'AOS_10m'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Audio/AudioObjectSettings/AOS_10m.0"
+      }
+    }
+  },
+  {
+    "Type": "DuneCharacterAttributeSet",
+    "Name": "CharacterStats",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterAttributeSet'Default__BP_CivilianBase_C:CharacterStats'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.12"
+    }
+  },
+  {
+    "Type": "DuneCharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneCharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneCharacterMovementComponent'Default__BP_CivilianBase_C:CharMoveComp'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.13"
+    },
+    "Properties": {
+      "m_DefaultRotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 220.0,
+        "Roll": 0.0
+      },
+      "RotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 220.0,
+        "Roll": 0.0
+      },
+      "bUseControllerDesiredRotation": true,
+      "bOrientRotationToMovement": true
+    }
+  },
+  {
+    "Type": "DuneDamageMitigationAttributeSet",
+    "Name": "DamageMitigationAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneDamageMitigationAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneDamageMitigationAttributeSet'Default__BP_CivilianBase_C:DamageMitigationAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.14"
+    }
+  },
+  {
+    "Type": "DuneNPCCharacterAttributeSet",
+    "Name": "NPCCharacterAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneNPCCharacterAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneNPCCharacterAttributeSet'Default__BP_CivilianBase_C:NPCCharacterAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.15"
+    }
+  },
+  {
+    "Type": "DunePoiseAttributeSet",
+    "Name": "PoiseAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DunePoiseAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DunePoiseAttributeSet'Default__BP_CivilianBase_C:PoiseAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.16"
+    }
+  },
+  {
+    "Type": "DuneShieldAttributeSet",
+    "Name": "ShieldAttributes",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DuneShieldAttributeSet'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "DuneShieldAttributeSet'Default__BP_CivilianBase_C:ShieldAttributes'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.17"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CanStartDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DialogueInterface:CanStartDialogue'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Enum": {
+          "ObjectName": "Enum'EDialogueCanStartResult'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_PlayerFlagsGetter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_CanStartDialogue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDialogueCanStartResult'",
+          "ObjectPath": "/Script/DuneSandbox"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearTargetForgetTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_IdleCivilian_Hologram_Pal_End",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_K2_GetPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDune_Player_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DunePlayerCharacter'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_PlayerFlagsGetter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "ScriptStruct'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkeletalMeshAsset_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMesh'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSkeletalMeshAsset_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMesh'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FinalizeDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DialogueInterface:FinalizeDialogue'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ForceHologram",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDialogueInteractionComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DuneNpcCharacter:GetDialogueInteractionComponent'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DialogueInteractionComponent'",
+          "ObjectPath": "/Script/DuneSandbox"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "HideNPC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitializeDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'DialogueInterface:InitializeDialogue'",
+      "ObjectPath": "/Script/DuneSandbox"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Reset",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetDynMaterialParameters",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DynMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetMaterialTexuresToInstances",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Materials",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Materials",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'MaterialInterface'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetMaterials_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetMaterials_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'MaterialInterface'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TextureParameterValue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsMaterial_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartTargetForgetTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TestForMeshUpdate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateMutableAppearance",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'ObjectInstanceUpdatedDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Clone_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CustomizableObjectInstance'",
+          "ObjectPath": "/Script/CustomizableObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "AbilityInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:AbilityInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.0"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:AbilityInventory.AbilityInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.18"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "BackpackInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:BackpackInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.1"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:BackpackInventory.BackpackInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.19"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "EquipmentInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventory'Default__BP_IdleCivilian_Hologram_Pal_End_C:EquipmentInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.2"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:EquipmentInventory.EquipmentInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.20"
+    }
+  },
+  {
+    "Type": "ItemInventory",
+    "Name": "LootInventory_Inner",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ItemInventory'",
+    "Outer": {
+      "ObjectName": "ActorInventoryReplicateToAll'Default__BP_IdleCivilian_Hologram_Pal_End_C:LootInventory'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.3"
+    },
+    "Template": {
+      "ObjectName": "ItemInventory'Default__BP_CivilianBase_C:LootInventory.LootInventory_Inner'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.21"
+    }
+  },
+  {
+    "Type": "MercunaGroundNavigationComponent",
+    "Name": "MercunaGroundNavigation_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MercunaGroundNavigationComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "AgentType": {
+        "Name": "StandardHumanoid"
+      },
+      "bSetCharacterControllerRotation": false
+    }
+  },
+  {
+    "Type": "MercunaGroundNavInvokerComponent",
+    "Name": "MercunaGroundNavInvoker_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MercunaGroundNavInvokerComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "HologramVFX_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_VFX_Ast_Hologram_Beam_01'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Effects/Assets/Holograms/Niagara/NS_VFX_Ast_Hologram_Beam_01.68"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "TimeOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.TimeOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "JitterMin",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.JitterMin",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "JitterMax",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.JitterMax",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IsSK",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IsSK",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerFresnelOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerFresnelOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "InnerAttenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.InnerAttenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareZOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareZOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareSize",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareSize",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FlareGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FlareGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamOffset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "BeamGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.BeamGlow",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SpawnPosition",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SpawnPosition",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Attenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Attenuation",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "DirectionRescaleAmount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.DirectionRescaleAmount",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_FarRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_FarRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLIght_Fading_FarStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLIght_Fading_FarStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_NearRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_NearRange",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Fading_NearStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Fading_NearStart",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Offset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Offset",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLight_Spawn",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLight_Spawn",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraInt32'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightColor",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightContrast",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightContrast",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "FakeLightStrength",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.FakeLightStrength",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Attenuation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 4,
+            "Name": "User.BeamGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 8,
+            "Name": "User.BeamOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 12,
+            "Name": "User.BeamWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 92,
+            "Name": "User.DirectionRescaleAmount",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 96,
+            "Name": "User.FakeLight_Fading_FarRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 100,
+            "Name": "User.FakeLIght_Fading_FarStart",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 104,
+            "Name": "User.FakeLight_Fading_NearRange",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 108,
+            "Name": "User.FakeLight_Fading_NearStart",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 112,
+            "Name": "User.FakeLight_Offset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 124,
+            "Name": "User.FakeLight_Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 128,
+            "Name": "User.FakeLight_Spawn",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraInt32'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 132,
+            "Name": "User.FakeLightColor",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 148,
+            "Name": "User.FakeLightContrast",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 152,
+            "Name": "User.FakeLightStrength",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.FlareGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.FlareSize",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.FlareZOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 44,
+            "Name": "User.InnerAttenuation",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 48,
+            "Name": "User.InnerFresnelOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 52,
+            "Name": "User.InnerGlow",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 56,
+            "Name": "User.InnerOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 60,
+            "Name": "User.InnerWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 64,
+            "Name": "User.IsSK",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.JitterMax",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 72,
+            "Name": "User.JitterMin",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 76,
+            "Name": "User.SpawnPosition",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 88,
+            "Name": "User.TimeOffset",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          32,
+          39,
+          12,
+          68,
+          152,
+          191,
+          22,
+          63,
+          0,
+          0,
+          0,
+          0,
+          209,
+          118,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          169,
+          136,
+          147,
+          61,
+          0,
+          0,
+          0,
+          0,
+          205,
+          204,
+          76,
+          61,
+          0,
+          0,
+          128,
+          63,
+          212,
+          5,
+          75,
+          67,
+          0,
+          0,
+          0,
+          0,
+          78,
+          2,
+          136,
+          67,
+          0,
+          0,
+          0,
+          0,
+          34,
+          167,
+          145,
+          63,
+          0,
+          0,
+          32,
+          193,
+          44,
+          127,
+          14,
+          190,
+          255,
+          255,
+          255,
+          255,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          205,
+          204,
+          76,
+          63,
+          0,
+          64,
+          28,
+          69,
+          0,
+          64,
+          28,
+          69,
+          0,
+          0,
+          250,
+          67,
+          0,
+          0,
+          200,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          38,
+          67,
+          0,
+          0,
+          225,
+          67,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          56,
+          63,
+          31,
+          214,
+          103,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          192,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": 1.7865723E-06,
+        "Y": -3.233444E-06,
+        "Z": -94.810265
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "NpcCombatTargetComponent",
+    "Name": "NpcCombatTarget",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NpcCombatTargetComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "NpcCombatTargetComponent'Default__BP_CivilianBase_C:NpcCombatTarget'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.22"
+    }
+  },
+  {
+    "Type": "PlayerQuicksandActorComponent",
+    "Name": "QuicksandComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PlayerQuicksandActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "PlayerQuicksandActorComponent'Default__BP_CivilianBase_C:QuicksandComponent'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.23"
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "AttenuationRadius": 400.0,
+      "Intensity": 25.0,
+      "LightColor": {
+        "B": 0,
+        "G": 182,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFB600"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 1.7865723E-06,
+        "Y": -2.2334439E-06,
+        "Z": -20.265701
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PersonalPostProcess_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "Settings": {
+        "AutoExposureBiasBackup": 1.0,
+        "WeightedBlendables": {
+          "Array": [
+            {
+              "Weight": 1.0,
+              "Object": null
+            }
+          ]
+        }
+      },
+      "bUnbound": false
+    }
+  },
+  {
+    "Type": "SandwormThreatSourceComponent",
+    "Name": "SandwormThreatSource",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SandwormThreatSourceComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "SandwormThreatSourceComponent'Default__BP_CivilianBase_C:SandwormThreatSource'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.24"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_IdleCivilian_Hologram_Pal_End_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.49"
+      },
+      "VariableGuid": "25179C76-43FD127A-AFCEA1A3-18F94E6A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MercunaGroundNavInvokerComponent'",
+        "ObjectPath": "/Script/Mercuna"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MercunaGroundNavInvokerComponent'BP_IdleCivilian_Hologram_Pal_End_C:MercunaGroundNavInvoker_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.42"
+      },
+      "VariableGuid": "2032A46A-46585504-DC630089-72A35668",
+      "InternalVariableName": "MercunaGroundNavInvoker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CustomizableSkeletalComponent'",
+        "ObjectPath": "/Script/CustomizableObject"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CustomizableSkeletalComponent'BP_IdleCivilian_Hologram_Pal_End_C:CustomizableSkeletalComponent_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.10"
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "729833CA-4B8F5877-29202884-05D5C2F6",
+      "InternalVariableName": "CustomizableSkeletalComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'BP_IdleCivilian_Hologram_Pal_End_C:PersonalPostProcess_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.47"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C70CC8F1-4A93A951-C884FEAD-88645AAB",
+      "InternalVariableName": "PersonalPostProcess"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MercunaGroundNavigationComponent'",
+        "ObjectPath": "/Script/Mercuna"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MercunaGroundNavigationComponent'BP_IdleCivilian_Hologram_Pal_End_C:MercunaGroundNavigation_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.41"
+      },
+      "VariableGuid": "B7C2C1F1-486269BD-8BAD46A3-157FBE6D",
+      "InternalVariableName": "MercunaGroundNavigation"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DuneAudioEmitterComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DuneAudioEmitterComponent'BP_IdleCivilian_Hologram_Pal_End_C:DuneAudioEmitter_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.14"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "02A0437B-49DB3748-48512C8C-2EAF2E70",
+      "InternalVariableName": "DuneAudioEmitter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DialogueInteractionComponent'",
+        "ObjectPath": "/Script/DuneSandbox"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DialogueInteractionComponent'BP_IdleCivilian_Hologram_Pal_End_C:DialogueInteraction_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.12"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A4EC6610-477A8BBB-6399A881-298B0954",
+      "InternalVariableName": "DialogueInteraction"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_IdleCivilian_Hologram_Pal_End_C:HologramVFX_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.43"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D4192146-410BFB45-B24403BA-767A3C81",
+      "InternalVariableName": "HologramVFX"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_IdleCivilian_Hologram_Pal_End_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.46"
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CB7CAC86-4FF8EEEB-B799E297-BAA1863B",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.5"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.55"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.55"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_IdleCivilian_Hologram_Pal_End_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.50"
+      }
+    }
+  },
+  {
+    "Type": "SimProxyReplicatedAssetsList",
+    "Name": "SimProxyReplicatedAssetsList",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimProxyReplicatedAssetsList'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "SimProxyReplicatedAssetsList'Default__BP_CivilianBase_C:SimProxyReplicatedAssetsList'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.28"
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponentBudgeted'Default__BP_CivilianBase_C:CharacterMesh0'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.29"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'AB_StaticCivilian_C'",
+        "ObjectPath": "DuneSandbox/Content/Dune/NPCs/StaticCivilian/AB_StaticCivilian.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_BaseBody_Mutable'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/Mutable/SK_BaseBody_Mutable.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'SK_BaseBody_Mutable'",
+        "ObjectPath": "DuneSandbox/Content/Dune/Characters/Mannequin/Rigupdate_01/Mutable/SK_BaseBody_Mutable.0"
+      },
+      "bComponentUseFixedSkelBounds": true,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_VFX_Char_SolidoEnemy_01'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Effects/Holograms/HologramNPCs/Materials/MI_VFX_Char_SolidoEnemy_01.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionEnabled": "CharacterMeshNPC",
+        "ResponseArray": {
+          "Pawn": "Ignore",
+          "Camera": "Overlap",
+          "Vehicle": "Ignore",
+          "Trace_Combat": "Block",
+          "Trace_VehicleCamera": "Overlap",
+          "Trace_Audio": "Block",
+          "Trace_SandwormDangerZones": "Overlap"
+        },
+        "Flags": 1872,
+        "SomeVector": {
+          "X": 100.0,
+          "Y": 0.01,
+          "Z": 0.0
+        },
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:CollisionCylinder'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.8"
+      },
+      "RelativeLocation": {
+        "X": -3.4793823E-13,
+        "Y": 2.0071771E-07,
+        "Z": -34.879837
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "WeaponActorComponent",
+    "Name": "Weapon",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WeaponActorComponent'",
+    "Outer": {
+      "ObjectName": "BP_IdleCivilian_Hologram_Pal_End_C'Default__BP_IdleCivilian_Hologram_Pal_End_C'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.7"
+    },
+    "Template": {
+      "ObjectName": "WeaponActorComponent'Default__BP_CivilianBase_C:Weapon'",
+      "ObjectPath": "DuneSandbox/Content/Dune/AI/Characters/Npc_Civilian/Characters/BP_CivilianBase.30"
+    },
+    "Properties": {
+      "m_ExtendedParryCollisionVolume": {
+        "ObjectName": "BoxComponent'Default__BP_IdleCivilian_Hologram_Pal_End_C:Weapon.Extended parry collision volume'",
+        "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Blueprints/EcolabB/BP_IdleCivilian_Hologram_Pal_End.6"
+      }
+    }
+  }
+]

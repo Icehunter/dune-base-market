@@ -1,0 +1,124 @@
+<h2>Piece Catalog Layout</h2>
+<p class="subtitle">How should 3D previews appear in the left panel? The catalog will show all pieces across all DLC sets.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="A" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#1a1a1f;border-radius:6px;padding:12px;font-family:monospace;font-size:11px;color:#ccc">
+        <div style="background:#2a2a32;border-radius:4px;padding:8px;margin-bottom:8px;display:flex;gap:8px;align-items:center">
+          <span style="color:#aaa;font-size:10px">FILTER:</span>
+          <span style="background:#3a3a44;padding:2px 6px;border-radius:3px;font-size:10px">All</span>
+          <span style="background:#4a3020;padding:2px 6px;border-radius:3px;font-size:10px">Atreides</span>
+          <span style="background:#2a2030;padding:2px 6px;border-radius:3px;font-size:10px">Choam</span>
+        </div>
+        <div style="color:#888;font-size:10px;margin-bottom:6px">▸ Foundation (3)</div>
+        <div style="background:#252530;border-radius:3px;padding:6px;margin-bottom:3px;display:flex;align-items:center;gap:8px;border:1px solid #3a6a3a">
+          <div style="width:40px;height:40px;background:#1a1a22;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#666;font-size:18px">🧱</div>
+          <div>
+            <div style="font-size:11px;color:#ddd">Foundation</div>
+            <div style="font-size:9px;color:#888">Atreides · Tier 1</div>
+          </div>
+        </div>
+        <div style="background:#1e1e28;border-radius:3px;padding:6px;margin-bottom:3px;display:flex;align-items:center;gap:8px">
+          <div style="width:40px;height:40px;background:#1a1a22;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#666;font-size:18px">🧱</div>
+          <div>
+            <div style="font-size:11px;color:#bbb">Foundation (DLC)</div>
+            <div style="font-size:9px;color:#888">Choam · Tier 2</div>
+          </div>
+        </div>
+        <div style="color:#888;font-size:10px;margin:6px 0">▸ Wall (12)</div>
+        <div style="color:#888;font-size:10px">▸ Floor (8)</div>
+        <div style="margin-top:8px;padding:6px;background:#1e2a1e;border-radius:3px;border:1px solid #3a5a3a">
+          <div style="font-size:9px;color:#888;margin-bottom:4px">HOVER PREVIEW</div>
+          <div style="width:100%;height:60px;background:#0d0d12;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#555;font-size:10px">[ 3D mini-canvas ]</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Hover Tooltip Preview</h3>
+      <p>Emoji icon stays in the list. A floating 3D mini-canvas appears on hover with the rendered piece. Compact list view, preview is on-demand.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="B" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#1a1a1f;border-radius:6px;padding:12px;font-family:monospace;font-size:11px;color:#ccc">
+        <div style="background:#2a2a32;border-radius:4px;padding:8px;margin-bottom:8px;display:flex;gap:8px;align-items:center">
+          <span style="color:#aaa;font-size:10px">FILTER:</span>
+          <span style="background:#3a3a44;padding:2px 6px;border-radius:3px;font-size:10px">All</span>
+          <span style="background:#4a3020;padding:2px 6px;border-radius:3px;font-size:10px">Atreides</span>
+        </div>
+        <div style="color:#888;font-size:10px;margin-bottom:6px">Foundation (3)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:8px">
+          <div style="background:#252530;border-radius:3px;padding:4px;border:1px solid #3a6a3a">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px;display:flex;align-items:center;justify-content:center;color:#555;font-size:9px">3D</div>
+            <div style="font-size:9px;color:#ccc;text-align:center">Foundation</div>
+          </div>
+          <div style="background:#1e1e28;border-radius:3px;padding:4px">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px;display:flex;align-items:center;justify-content:center;color:#555;font-size:9px">3D</div>
+            <div style="font-size:9px;color:#bbb;text-align:center">Foundation DLC</div>
+          </div>
+          <div style="background:#1e1e28;border-radius:3px;padding:4px">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px;display:flex;align-items:center;justify-content:center;color:#555;font-size:9px">3D</div>
+            <div style="font-size:9px;color:#bbb;text-align:center">Foundation T2</div>
+          </div>
+        </div>
+        <div style="color:#888;font-size:10px;margin-bottom:4px">Wall (12)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">
+          <div style="background:#1e1e28;border-radius:3px;padding:4px">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px"></div>
+            <div style="font-size:9px;color:#bbb;text-align:center">Wall</div>
+          </div>
+          <div style="background:#1e1e28;border-radius:3px;padding:4px">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px"></div>
+            <div style="font-size:9px;color:#bbb;text-align:center">Wall Half</div>
+          </div>
+          <div style="background:#1e1e28;border-radius:3px;padding:4px">
+            <div style="width:100%;height:36px;background:#0d0d12;border-radius:2px;margin-bottom:3px"></div>
+            <div style="font-size:9px;color:#bbb;text-align:center">...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Grid Thumbnails (always visible)</h3>
+      <p>Each piece shows as a small 3D-rendered tile. Dense grid view grouped by category. More pieces visible at once, but each thumbnail is smaller. Each is its own mini Babylon canvas.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="C" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#1a1a1f;border-radius:6px;padding:12px;font-family:monospace;font-size:11px;color:#ccc">
+        <div style="background:#2a2a32;border-radius:4px;padding:8px;margin-bottom:8px;display:flex;gap:8px;align-items:center">
+          <span style="color:#aaa;font-size:10px">FILTER:</span>
+          <span style="background:#3a3a44;padding:2px 6px;border-radius:3px;font-size:10px">All</span>
+          <span style="background:#4a3020;padding:2px 6px;border-radius:3px;font-size:10px">Atreides</span>
+        </div>
+        <div style="width:100%;height:80px;background:#0d0d12;border-radius:4px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;border:1px solid #2a3a2a;position:relative">
+          <span style="color:#555;font-size:10px">[ Selected piece 3D preview — shared canvas ]</span>
+          <div style="position:absolute;bottom:4px;right:4px;font-size:9px;color:#556644">↻ rotate</div>
+        </div>
+        <div style="color:#888;font-size:10px;margin-bottom:4px">▸ Foundation (3)</div>
+        <div style="background:#252530;border-radius:3px;padding:5px;margin-bottom:2px;display:flex;align-items:center;gap:6px;border:1px solid #3a6a3a">
+          <div style="width:24px;height:24px;background:#1a1a22;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px">🧱</div>
+          <span style="font-size:10px;color:#ddd">Foundation</span>
+          <span style="font-size:9px;color:#888;margin-left:auto">Tier 1</span>
+        </div>
+        <div style="background:#1e1e28;border-radius:3px;padding:5px;margin-bottom:2px;display:flex;align-items:center;gap:6px">
+          <div style="width:24px;height:24px;background:#1a1a22;border-radius:2px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px">🧱</div>
+          <span style="font-size:10px;color:#bbb">Foundation (DLC)</span>
+          <span style="font-size:9px;color:#888;margin-left:auto">Tier 2</span>
+        </div>
+        <div style="color:#888;font-size:10px;margin:4px 0">▸ Wall (12)</div>
+        <div style="color:#888;font-size:10px">▸ Floor (8)</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Top Preview Panel + List</h3>
+      <p>A shared 3D canvas sits at the top of the catalog panel. When you hover or click a piece in the list, the canvas renders it. Single Babylon engine reused across all pieces — much cheaper than thumbnails.</p>
+    </div>
+  </div>
+
+</div>
+<p class="subtitle" style="margin-top:16px">Click your preferred layout above, then reply in the terminal.</p>

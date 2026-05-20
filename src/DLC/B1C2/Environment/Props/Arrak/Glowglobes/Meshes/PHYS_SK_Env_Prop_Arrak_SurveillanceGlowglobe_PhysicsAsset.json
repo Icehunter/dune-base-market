@@ -1,0 +1,52 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Package": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset",
+    "Properties": {
+      "BoundsBodies": [
+        0
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset.1"
+        }
+      ]
+    },
+    "CollisionDisableTable": []
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Outer": {
+      "ObjectName": "PhysicsAsset'PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset'",
+      "ObjectPath": "DuneSandbox/Content/DLC/B1C2/Environment/Props/Arrak/Glowglobes/Meshes/PHYS_SK_Env_Prop_Arrak_SurveillanceGlowglobe_PhysicsAsset.0"
+    },
+    "Properties": {
+      "AggGeom": {
+        "SphereElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Radius": 0.75,
+            "RestOffset": 0.0,
+            "Name": "root_sphere",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "4B4643AB4219EE7D4C5D368F4270CCC1"
+  }
+]
