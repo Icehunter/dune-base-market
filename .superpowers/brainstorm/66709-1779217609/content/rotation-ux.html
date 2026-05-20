@@ -1,0 +1,31 @@
+<h2>Rotation UX During Placement</h2>
+<p class="subtitle">When you have a piece selected and are hovering it over the scene to place, how should rotation work?</p>
+
+<div class="options">
+
+  <div class="option" data-choice="A" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>R key cycles (current) + scroll wheel rotates</h3>
+      <p>Keep the existing R key for 90° increments. Also let the mouse scroll wheel rotate while in place mode. Ghost updates live as you rotate.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="B" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Q / E keys for rotation (no camera pan)</h3>
+      <p>Q and E currently pan the camera. Reassign them to rotate the placement piece (Q = −90°, E = +90°). Camera panning moves to middle-mouse or another combo. Clean, game-like feel.</p>
+    </div>
+  </div>
+
+  <div class="option" data-choice="C" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Both: R / scroll wheel rotate, Q/E stay on camera</h3>
+      <p>R key and scroll wheel both rotate the ghost piece. Q and E remain on camera pan. Two input paths for rotation means you never have to take hands off mouse.</p>
+    </div>
+  </div>
+
+</div>
+<p class="subtitle" style="margin-top:16px">Click your preference and reply in the terminal.</p>

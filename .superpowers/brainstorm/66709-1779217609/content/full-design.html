@@ -1,0 +1,87 @@
+<h2>Proposed Design — 4 Features</h2>
+<p class="subtitle">Review each section. Reply in terminal with any changes.</p>
+
+<div class="section">
+  <h3>1. Piece Registry ETL — Show All Available Pieces</h3>
+  <p>A build-time script (<code>scripts/build-piece-registry.ts</code>) reads <code>CDT_BuildingData.json</code> (659 pieces), maps each UE asset path to a local GLB under <code>src/</code>, and emits <code>src/data/pieceRegistry.generated.ts</code> containing both MODEL_PATHS and PIECE_CATALOG. Replaces the hand-maintained <code>modelRegistry.ts</code> and <code>pieces.ts</code>. Run with <code>npm run build:registry</code>.</p>
+  <p>Pieces without a found GLB get a placeholder entry (no 3D model, shown greyed out in catalog). The generated file also captures <code>buildableGroupType</code>, <code>tier</code>, <code>faction</code>, and <code>connectionCost</code> directly from the CDT data, so the designer always reflects the current game state.</p>
+</div>
+
+<div class="section">
+  <h3>2. Catalog Redesign — Grid Thumbnails</h3>
+  <div class="mockup">
+    <div class="mockup-header">Left Panel — Piece Catalog</div>
+    <div class="mockup-body" style="padding:10px;font-family:monospace;font-size:11px;background:#111117;color:#ccc">
+      <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap">
+        <span style="background:#2a2a32;padding:2px 8px;border-radius:10px;font-size:10px">All</span>
+        <span style="background:#4a3020;padding:2px 8px;border-radius:10px;font-size:10px">Atreides</span>
+        <span style="background:#2a2030;padding:2px 8px;border-radius:10px;font-size:10px">Choam</span>
+        <span style="background:#302020;padding:2px 8px;border-radius:10px;font-size:10px">Harkonnen</span>
+        <span style="background:#203020;padding:2px 8px;border-radius:10px;font-size:10px">Smuggler</span>
+        <span style="background:#1e1e28;padding:2px 8px;border-radius:10px;font-size:10px">DLC</span>
+      </div>
+      <input style="background:#1e1e28;border:1px solid #333;border-radius:4px;padding:4px 8px;color:#ccc;font-size:10px;width:100%;box-sizing:border-box;margin-bottom:8px" placeholder="🔍 Search pieces..." />
+      <div style="color:#888;font-size:9px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Foundation · 6</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:10px">
+        <div style="background:#1e1e28;border-radius:4px;padding:4px;border:2px solid #3a6a3a;cursor:pointer">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#3a6a3a">3D</div>
+          <div style="font-size:8px;color:#ddd;margin-top:2px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Foundation</div>
+          <div style="font-size:7px;color:#888;text-align:center">T1 · Atre</div>
+        </div>
+        <div style="background:#1e1e28;border-radius:4px;padding:4px">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#556">3D</div>
+          <div style="font-size:8px;color:#bbb;margin-top:2px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Foundation (DLC)</div>
+          <div style="font-size:7px;color:#888;text-align:center">T2 · Choam</div>
+        </div>
+        <div style="background:#1e1e28;border-radius:4px;padding:4px">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#556">3D</div>
+          <div style="font-size:8px;color:#bbb;margin-top:2px;text-align:center">Corner</div>
+          <div style="font-size:7px;color:#888;text-align:center">T1 · Atre</div>
+        </div>
+        <div style="background:#1e1e28;border-radius:4px;padding:4px;opacity:0.5">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#444">—</div>
+          <div style="font-size:8px;color:#666;margin-top:2px;text-align:center">Wedge</div>
+          <div style="font-size:7px;color:#555;text-align:center">No mesh</div>
+        </div>
+      </div>
+      <div style="color:#888;font-size:9px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px">Wall · 18</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+        <div style="background:#1e1e28;border-radius:4px;padding:4px">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#556">3D</div>
+          <div style="font-size:8px;color:#bbb;margin-top:2px;text-align:center">Wall</div>
+          <div style="font-size:7px;color:#888;text-align:center">T1 · Atre</div>
+        </div>
+        <div style="background:#1e1e28;border-radius:4px;padding:4px">
+          <div style="width:100%;aspect-ratio:1;background:#0d0d14;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#556">3D</div>
+          <div style="font-size:8px;color:#bbb;margin-top:2px;text-align:center">Wall Half</div>
+          <div style="font-size:7px;color:#888;text-align:center">T1 · Atre</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:8px">Thumbnails rendered off-screen by a single shared Babylon engine → cached as <code>data:</code> URLs → displayed as <code>&lt;img&gt;</code> tags. Lazy via IntersectionObserver — only pieces scrolled into view get rendered. Re-renders when substrate mode toggles. Greyed-out tile with "—" for pieces missing a GLB.</p>
+</div>
+
+<div class="section">
+  <h3>3. Placement Ghost — Real Materials + Rotation</h3>
+  <p>Ghost mesh currently uses flat transparent green. Updated: ghost uses actual substrate materials with an additive semi-transparent overlay (green when valid, red when invalid). The ghost updates on every pointer move and on every rotation.</p>
+  <p><strong>Scroll wheel rotation:</strong> While <code>activeTool === 'place'</code>, the wheel event fires instead of camera zoom. Each detent = 90°. Ghost re-renders immediately. R key continues to work. When the tool changes away from 'place', wheel resumes controlling camera zoom.</p>
+  <p><strong>Note:</strong> Substrate materials on the ghost require the ghost to go through the same material load path as real pieces. The ghost will share the preloaded container from <code>PieceManager</code>'s cache, so no extra network requests.</p>
+</div>
+
+<div class="section">
+  <h3>4. Foundation Support System</h3>
+  <p><strong>Data source:</strong> socket costs from <code>DT_DuneSocketCostsData.json</code> (Foundation_Edge=100, Up/Sideways/Down=10) and foundation health from CDT (Tier0=5000, Tier1=7000, Tier2=10000).</p>
+  <p><strong>Rules:</strong></p>
+  <ul style="margin:6px 0 6px 20px;line-height:1.6">
+    <li>At least 1 Foundation must exist before any other piece can be placed</li>
+    <li>Every non-foundation piece must be connected (directly or transitively) to a Foundation</li>
+    <li>Each Foundation has a weight budget = its tier health value</li>
+    <li>Pieces touching Foundation edges (walls/pillars/doors) cost <strong>100</strong> each</li>
+    <li>Pieces connecting via Up/Sideways/Down sockets (stacked floors, upper walls) cost <strong>10</strong> each</li>
+    <li>If total cost across all pieces routed through one Foundation exceeds its budget, placement is blocked</li>
+  </ul>
+  <p>New file: <code>src/engine/SupportSystem.ts</code> — validates placement, computes per-foundation load. Ghost turns red + tooltip "No foundation support" or "Foundation at capacity" when invalid. Inspector panel shows weight budget bar per foundation.</p>
+</div>
+
+<p class="subtitle" style="margin-top:16px">Does this all look right? Reply in terminal with any changes or approval.</p>
