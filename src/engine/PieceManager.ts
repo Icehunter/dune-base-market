@@ -259,8 +259,10 @@ export class PieceManager {
     root.getChildMeshes(false).forEach(m => { m.metadata = { pieceId: id, templateId }; });
 
     if (this.shadowGenerator) {
-      this.shadowGenerator.addShadowCaster(root, true);
-      root.getChildMeshes(false).forEach(m => { m.receiveShadows = true; });
+      root.getChildMeshes(false).forEach(m => {
+        this.shadowGenerator!.addShadowCaster(m);
+        m.receiveShadows = true;
+      });
     }
 
     const placed: PlacedMesh = { id, templateId, root, position: position.clone(), rotation };
