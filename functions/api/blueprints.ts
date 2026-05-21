@@ -88,6 +88,14 @@ export function extractBlueprintTags(jsonText: string): string[] {
   return [...categories];
 }
 
+function tagsFromRaw(raw: RawBlueprint): string[] {
+  const allTypes = [
+    ...(raw.instances ?? []).map((i) => i.building_type),
+    ...(raw.placeables ?? []).map((p) => p.building_type),
+  ];
+  return [...new Set(allTypes.map(categoryFromType).filter(Boolean))];
+}
+
 function categoryFromType(id: string): string {
   const l = id.toLowerCase();
   if (l.includes('foundation')) return 'Foundation';
@@ -116,14 +124,15 @@ export async function onRequestPost(ctx: Ctx): Promise<Response> {
   if (file.size > 2 * 1024 * 1024) return json({ error: 'File too large (max 2MB)' }, 413);
 
   const jsonText = await file.text();
+  let raw: RawBlueprint;
   let tags: string[];
   try {
-    tags = extractBlueprintTags(jsonText);
+    raw = JSON.parse(jsonText);
+    tags = tagsFromRaw(raw);
   } catch {
     return json({ error: 'Invalid blueprint JSON' }, 400);
   }
 
-  const raw: RawBlueprint = JSON.parse(jsonText);
   const pieceCount = (raw.instances?.length ?? 0) + (raw.placeables?.length ?? 0);
 
   const id = crypto.randomUUID();
