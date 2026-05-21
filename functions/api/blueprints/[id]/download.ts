@@ -27,11 +27,12 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
       .bind(id).run()
   );
 
-  const filename = `${row.title.replace(/[^a-zA-Z0-9_-]/g, '_')}.json`;
+  const safeName = row.title.replace(/[^a-zA-Z0-9_-]/g, '_') || 'blueprint';
+  const filename = `${safeName}.json`;
   return new Response(object.body, {
     headers: {
       'Content-Type': 'application/json',
-      'Content-Disposition': `attachment; filename="${filename}"`,
+      'Content-Disposition': `attachment; filename="${filename.replace(/"/g, '\\"')}"`,
     },
   });
 }
