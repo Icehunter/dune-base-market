@@ -36,3 +36,40 @@ describe('GET /api/blueprints', () => {
     expect((body.blueprints[0] as any).id).toBe('bp1');
   });
 });
+
+describe('POST /api/blueprints', () => {
+  it('returns 401 when not authenticated', async () => {
+    const body = new FormData();
+    body.append('title', 'My Base');
+    body.append('is_public', 'true');
+    body.append('file', new Blob(['{"instances":[],"placeables":[]}'], { type: 'application/json' }), 'bp.json');
+    const req = new Request('http://localhost/api/blueprints', { method: 'POST', body });
+    const env: Partial<Env> = { DB: makeDb([]), CLERK_SECRET_KEY: 'sk_test', BUCKET: {} as R2Bucket };
+    const ctx = { request: req, env, params: {}, waitUntil: vi.fn(), next: vi.fn(), data: {} };
+    const res = await (await import('./blueprints')).onRequestPost(ctx as any);
+    expect(res.status).toBe(401);
+  });
+
+  it('extractBlueprintTags returns correct categories', async () => {
+    const { extractBlueprintTags } = await import('./blueprints');
+    const json = JSON.stringify({
+      instances: [
+        { building_type: 'wall_segment', x: 0, y: 0, z: 0, rotation: 0 },
+        { building_type: 'foundation_base', x: 1, y: 0, z: 0, rotation: 0 },
+      ],
+      placeables: [
+        { building_type: 'door_frame', x: 0, y: 0, z: 0 },
+      ],
+    });
+    const tags = extractBlueprintTags(json);
+    expect(tags).toContain('Wall');
+    expect(tags).toContain('Foundation');
+    expect(tags).toContain('Door');
+    expect(tags).toHaveLength(3);
+  });
+
+  it('extractBlueprintTags throws on invalid JSON', async () => {
+    const { extractBlueprintTags } = await import('./blueprints');
+    expect(() => extractBlueprintTags('not json')).toThrow();
+  });
+});
