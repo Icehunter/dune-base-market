@@ -35,18 +35,14 @@ export async function listBlueprints(
 
   const headers = getToken ? await authHeaders(getToken) : {};
   const res = await fetch(url, { headers });
-  if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) {
-    throw new Error('API unavailable — run with wrangler pages dev');
-  }
+  if (!res.ok) throw new Error(`Failed to list blueprints: ${res.status}`);
   const body = await res.json() as { blueprints: BlueprintMeta[] };
   return body.blueprints;
 }
 
 export async function getBlueprint(id: string): Promise<BlueprintDetail> {
   const res = await fetch(`/api/blueprints/${id}`);
-  if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) {
-    throw new Error('Blueprint not found');
-  }
+  if (!res.ok) throw new Error(`Blueprint not found: ${res.status}`);
   return res.json() as Promise<BlueprintDetail>;
 }
 
