@@ -36,7 +36,7 @@ export default function NavBar() {
       <div style={{ flex: 1 }} />
 
       {isSignedIn ? (
-        <UserButton afterSignOutUrl="/" />
+        <UserButton />
       ) : (
         <div style={{ display: 'flex', gap: 8 }}>
           <SignInButton mode="modal">
