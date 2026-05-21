@@ -14,18 +14,19 @@ import {
   TransformNode,
   Mesh,
   ShadowGenerator,
-} from '@babylonjs/core';
-import '@babylonjs/loaders/glTF';
-import { degreesToRadians, type ValidRotation } from './GridSystem';
-import { MODEL_PATHS } from '../data/catalog';
-import { EXTRA_ROTATION, ROTATION_BY_STORED } from '../data/modelRegistry';
+} from "@babylonjs/core";
+import "@babylonjs/loaders/glTF";
+import { degreesToRadians } from "./GridSystem";
+import { MODEL_PATHS } from "../data/catalog";
+import { resolveGlb } from "../data/modelRegistry";
+import { EXTRA_ROTATION, ROTATION_BY_STORED } from "../data/modelRegistry";
 
 export interface PlacedMesh {
   id: string;
   templateId: string;
   root: TransformNode | Mesh;
   position: Vector3;
-  rotation: ValidRotation;
+  rotation: number;
 }
 
 // ── Flat shader ───────────────────────────────────────────────────────────────
@@ -87,8 +88,16 @@ void main() {
 }`;
 
 const FLAT_NAME = `flat_viewer_${Math.floor(Math.random() * 1_000_000)}`;
-Effect.ShadersStore[`${FLAT_NAME}VertexShader`]   = FLAT_VERT;
+Effect.ShadersStore[`${FLAT_NAME}VertexShader`] = FLAT_VERT;
 Effect.ShadersStore[`${FLAT_NAME}FragmentShader`] = FLAT_FRAG;
+
+// Pentashield GLB native extents in meters (from FModel export).
+// UE Actor Scale [s.x, s.y, s.z] maps to GLB axes as: UE-X→GLB-X, UE-Y→GLB-Z, UE-Z→GLB-Y.
+// Normalizing by native extent converts scale values (target meters) to Babylon scale factors.
+const PENTASHIELD_DIMS: Partial<Record<string, { x: number; y: number; z: number }>> = {
+  Choam_PentashieldSurfaceHorizontal_Placeable: { x: 7.66, y: 0.4, z: 5.16 },
+  Choam_PentashieldSurfaceVertical_Placeable: { x: 7.66, y: 5.16, z: 0.4 },
+};
 
 export class PieceManager {
   private scene: Scene;
@@ -98,6 +107,7 @@ export class PieceManager {
   private shadowGenerator: ShadowGenerator | null = null;
   private matCache: Map<string, Material> = new Map();
   private flatMat: ShaderMaterial | null = null;
+  private selectedId: string | null = null;
 
   constructor(scene: Scene) {
     this.scene = scene;
@@ -108,29 +118,38 @@ export class PieceManager {
   // orientation. Shadow map is wired up in onBindObservable each frame.
   private getFlatShader(): ShaderMaterial {
     if (this.flatMat) return this.flatMat;
-    const m = new ShaderMaterial('flat_default', this.scene,
+    const m = new ShaderMaterial(
+      "flat_default",
+      this.scene,
       { vertex: FLAT_NAME, fragment: FLAT_NAME },
       {
-        attributes: ['position', 'normal'],
-        uniforms: ['worldViewProjection', 'world', 'uLightMatrix',
-                   'uColor', 'uHasShadow', 'uShadowBias', 'uShadowMapSize'],
-        samplers: ['uShadowMap'],
+        attributes: ["position", "normal"],
+        uniforms: [
+          "worldViewProjection",
+          "world",
+          "uLightMatrix",
+          "uColor",
+          "uHasShadow",
+          "uShadowBias",
+          "uShadowMapSize",
+        ],
+        samplers: ["uShadowMap"],
       },
     );
-    m.setColor3('uColor', new Color3(0.88, 0.90, 0.92));
-    m.setFloat('uHasShadow', 0.0);
-    m.setFloat('uShadowBias', 0.012);
-    m.setFloat('uShadowMapSize', 2048);
-    m.setMatrix('uLightMatrix', Matrix.Identity());
+    m.setColor3("uColor", new Color3(0.88, 0.9, 0.92));
+    m.setFloat("uHasShadow", 0.0);
+    m.setFloat("uShadowBias", 0.012);
+    m.setFloat("uShadowMapSize", 2048);
+    m.setMatrix("uLightMatrix", Matrix.Identity());
     m.backFaceCulling = true;
     m.onBindObservable.add(() => {
       const sg = this.shadowGenerator;
       if (!sg) return;
       const sm = sg.getShadowMap();
       if (!sm) return;
-      m.setTexture('uShadowMap', sm);
-      m.setMatrix('uLightMatrix', sg.getTransformMatrix());
-      m.setFloat('uHasShadow', 1.0);
+      m.setTexture("uShadowMap", sm);
+      m.setMatrix("uLightMatrix", sg.getTransformMatrix());
+      m.setFloat("uHasShadow", 1.0);
     });
     this.flatMat = m;
     return m;
@@ -138,41 +157,57 @@ export class PieceManager {
 
   // Returns a material matched to the GLB source material name.
   private getFlatMaterial(sourceName: string): Material {
-    const n = (sourceName ?? '').toLowerCase();
+    const n = (sourceName ?? "").toLowerCase();
 
-    if (n.includes('glass') || n.includes('translucent')) {
-      return this.getCached('glass', () => {
-        const m = new PBRMaterial('flat_glass', this.scene);
+    if (n.includes("glass") || n.includes("translucent")) {
+      return this.getCached("glass", () => {
+        const m = new PBRMaterial("flat_glass", this.scene);
         m.albedoColor = new Color3(0.45, 0.62, 0.75);
-        m.alpha = 0.28; m.metallic = 0; m.roughness = 0.1;
+        m.alpha = 0.28;
+        m.metallic = 0;
+        m.roughness = 0.1;
         return m;
       });
     }
-    if (n.includes('forcefield') || n.includes('force_field') || n.includes('hologram') || n.includes('shield') || n.includes('prudence_energy')) {
-      return this.getCached('ff', () => {
-        const m = new PBRMaterial('flat_ff', this.scene);
+    if (
+      n.includes("forcefield") ||
+      n.includes("force_field") ||
+      n.includes("hologram") ||
+      n.includes("shield") ||
+      n.includes("prudence_energy")
+    ) {
+      return this.getCached("ff", () => {
+        const m = new PBRMaterial("flat_ff", this.scene);
         m.albedoColor = new Color3(0.2, 0.8, 0.9);
         m.emissiveColor = new Color3(0.08, 0.4, 0.5);
-        m.alpha = 0.4; m.metallic = 0; m.roughness = 0.3;
+        m.alpha = 0.4;
+        m.metallic = 0;
+        m.roughness = 0.3;
         return m;
       });
     }
-    if (n.includes('light_blue') || n.includes('lightblue')) {
-      return this.getCached('lblue', () => {
-        const m = new PBRMaterial('flat_lblue', this.scene);
+    // Skip light/color treatments for player-built wall materials — names like
+    // MI_*_PB_*_Light_Blue_* and MI_*_PB_*_Lights are accent colors, not fixtures.
+    const isPropLight = !n.includes("_pb_");
+    if (isPropLight && (n.includes("light_blue") || n.includes("lightblue"))) {
+      return this.getCached("lblue", () => {
+        const m = new PBRMaterial("flat_lblue", this.scene);
         m.albedoColor = new Color3(0.2, 0.55, 0.7);
         m.emissiveColor = new Color3(0.4, 0.85, 1.0);
-        m.alpha = 0.75; m.metallic = 0.1; m.roughness = 0.2;
+        m.alpha = 0.75;
+        m.metallic = 0.1;
+        m.roughness = 0.2;
         m.transparencyMode = 2;
         return m;
       });
     }
-    if (/_lights?(\d+)?$/.test(n) && !n.includes('light_blue')) {
-      return this.getCached('light', () => {
-        const m = new PBRMaterial('flat_light', this.scene);
+    if (isPropLight && /_lights?(\d+)?$/.test(n) && !n.includes("light_blue")) {
+      return this.getCached("light", () => {
+        const m = new PBRMaterial("flat_light", this.scene);
         m.albedoColor = new Color3(1.0, 0.92, 0.65);
         m.emissiveColor = new Color3(0.85, 0.7, 0.4);
-        m.metallic = 0; m.roughness = 0.4;
+        m.metallic = 0;
+        m.roughness = 0.4;
         return m;
       });
     }
@@ -182,7 +217,10 @@ export class PieceManager {
 
   private getCached(key: string, build: () => Material): Material {
     let m = this.matCache.get(key);
-    if (!m) { m = build(); this.matCache.set(key, m); }
+    if (!m) {
+      m = build();
+      this.matCache.set(key, m);
+    }
     return m;
   }
 
@@ -194,12 +232,15 @@ export class PieceManager {
     if (this.containerCache.has(templateId)) return;
     if (this.loadingPromises.has(templateId)) return this.loadingPromises.get(templateId);
 
-    const url = MODEL_PATHS[templateId];
-    if (!url) return;
+    const url = MODEL_PATHS[templateId] ?? resolveGlb(templateId);
+    if (!url) {
+      console.warn(`[PieceManager] No GLB found for: ${templateId}`);
+      return;
+    }
 
     const promise = (async () => {
       try {
-        const lastSlash = url.lastIndexOf('/');
+        const lastSlash = url.lastIndexOf("/");
         const rootUrl = url.substring(0, lastSlash + 1);
         const fileName = url.substring(lastSlash + 1);
         const container = await SceneLoader.LoadAssetContainerAsync(rootUrl, fileName, this.scene);
@@ -217,7 +258,8 @@ export class PieceManager {
     id: string,
     templateId: string,
     position: Vector3,
-    rotation: ValidRotation,
+    rotation: number,
+    scale?: { x: number; y: number; z: number },
   ): PlacedMesh | null {
     this.removePiece(id);
 
@@ -228,38 +270,53 @@ export class PieceManager {
       return this.placePlaceholder(id, templateId, position, rotation);
     }
 
-    const entries = container.instantiateModelsToScene(name => `${id}_${name}`, false);
+    const entries = container.instantiateModelsToScene((name) => `${id}_${name}`, false);
     if (!entries.rootNodes.length) return null;
 
     const root = entries.rootNodes[0] as TransformNode;
 
-    root.getChildMeshes(false).forEach(m => {
+    root.getChildMeshes(false).forEach((m) => {
       // Replace the GLB's PBR material (which renders black without embedded
       // textures) with our flat material, dispatched by source material name.
-      m.material = this.getFlatMaterial(m.material?.name ?? '');
+      m.material = this.getFlatMaterial(m.material?.name ?? "");
       // GLB loader can set hasVertexAlpha from COLOR_0, forcing alpha blending.
       m.hasVertexAlpha = false;
       m.visibility = 1.0;
     });
 
     // FModel exports in meters; grid is in UE centimetres → scale ×100.
-    root.scaling = new Vector3(100, 100, 100);
+    // Pentashields carry a target-metres scale [s.x, s.y, s.z] (UE Actor Scale axes).
+    // Normalise each axis by the native GLB extent so the panel renders at the correct size.
+    // UE axis mapping to GLB: UE-X→GLB-X, UE-Y→GLB-Z, UE-Z→GLB-Y.
+    const dims = PENTASHIELD_DIMS[templateId];
+    if (dims && scale) {
+      root.scaling = new Vector3((100 * scale.x) / dims.x, (100 * scale.z) / dims.y, (100 * scale.y) / dims.z);
+    } else {
+      const s = scale ?? { x: 1, y: 1, z: 1 };
+      root.scaling = new Vector3(100 * s.x, 100 * s.y, 100 * s.z);
+    }
     root.position = position;
 
     // Babylon's GLB loader applies a 180° Y + Z-flip coord correction to the root
     // (rotationQuaternion set on load). We add our yaw on top of that — do NOT
     // zero-reset rotation or the coord correction is lost.
+    //
+    // Canonicalize rotation to (-180, 180] so ROTATION_BY_STORED key lookups work
+    // regardless of whether the stored value is -180 or 180, 270 or -90, etc.
+    // Preserves non-90° values (60°, 120°) for wedge-based layouts.
+    const n = ((rotation % 360) + 360) % 360;
+    const key = n > 180 ? n - 360 : n;
     const byStored = ROTATION_BY_STORED[templateId];
-    const extra = byStored != null
-      ? (byStored[rotation] ?? 0)
-      : (EXTRA_ROTATION[templateId] ?? 0);
+    const extra = byStored != null ? (byStored[key] ?? 0) : (EXTRA_ROTATION[templateId] ?? 0);
     root.addRotation(0, degreesToRadians(rotation + 90 + extra), 0);
 
     root.metadata = { pieceId: id, templateId };
-    root.getChildMeshes(false).forEach(m => { m.metadata = { pieceId: id, templateId }; });
+    root.getChildMeshes(false).forEach((m) => {
+      m.metadata = { pieceId: id, templateId };
+    });
 
     if (this.shadowGenerator) {
-      root.getChildMeshes(false).forEach(m => {
+      root.getChildMeshes(false).forEach((m) => {
         this.shadowGenerator!.addShadowCaster(m);
         m.receiveShadows = true;
       });
@@ -270,18 +327,13 @@ export class PieceManager {
     return placed;
   }
 
-  private placePlaceholder(
-    id: string,
-    templateId: string,
-    position: Vector3,
-    rotation: ValidRotation,
-  ): PlacedMesh {
+  private placePlaceholder(id: string, templateId: string, position: Vector3, rotation: number): PlacedMesh {
     // 256-unit cube — half a foundation tile, enough to be noticeable.
     const box = MeshBuilder.CreateBox(`ph_${id}`, { size: 256 }, this.scene);
     box.position = position.add(new Vector3(0, 128, 0));
     box.rotation.y = degreesToRadians(rotation + 90);
-    box.material = this.getCached('placeholder', () => {
-      const m = new StandardMaterial('ph_mat', this.scene);
+    box.material = this.getCached("placeholder", () => {
+      const m = new StandardMaterial("ph_mat", this.scene);
       m.diffuseColor = new Color3(0.35, 0.55, 0.75);
       m.wireframe = true;
       return m;
@@ -290,6 +342,29 @@ export class PieceManager {
     const placed: PlacedMesh = { id, templateId, root: box, position: position.clone(), rotation };
     this.placedMeshes.set(id, placed);
     return placed;
+  }
+
+  selectPiece(id: string): void {
+    this.clearSelection();
+    const placed = this.placedMeshes.get(id);
+    if (!placed) return;
+    placed.root.getChildMeshes(false).forEach((m) => {
+      if (m instanceof Mesh) {
+        m.renderOutline = true;
+        m.outlineColor = new Color3(1.0, 0.85, 0.1);
+        m.outlineWidth = 0.04;
+      }
+    });
+    this.selectedId = id;
+  }
+
+  clearSelection(): void {
+    if (!this.selectedId) return;
+    const placed = this.placedMeshes.get(this.selectedId);
+    placed?.root.getChildMeshes(false).forEach((m) => {
+      if (m instanceof Mesh) m.renderOutline = false;
+    });
+    this.selectedId = null;
   }
 
   removePiece(id: string): void {
@@ -301,15 +376,15 @@ export class PieceManager {
   }
 
   clearAll(): void {
-    this.placedMeshes.forEach(p => p.root.dispose());
+    this.placedMeshes.forEach((p) => p.root.dispose());
     this.placedMeshes.clear();
   }
 
   dispose(): void {
     this.clearAll();
-    this.containerCache.forEach(c => c.dispose());
+    this.containerCache.forEach((c) => c.dispose());
     this.containerCache.clear();
-    this.matCache.forEach(m => m.dispose());
+    this.matCache.forEach((m) => m.dispose());
     this.matCache.clear();
     this.flatMat?.dispose();
     this.flatMat = null;
