@@ -5,7 +5,7 @@ export const EXTRA_ROTATION: Partial<Record<string, number>> = {
   Atreides_Outpost_Wall_02: 180, // exterior face on -Z
   Atreides_Outpost_Wall_04: 180, // exterior face on -Z
   Atreides_Outpost_Wall_Half: 180, // exterior face on -Z
-  Atreides_Outpost_Stairs_Half: 180, // front face on -Z
+  // Atreides_Outpost_Stairs_Half: 180, // front face on -Z
   Atreides_Outpost_Passageway: 180, // front face on -Z
   MTX_Atreides_Outpost_Bookshelf: 180,
   WindTurbineDirectional_Placeable: -90,
@@ -21,7 +21,7 @@ export const EXTRA_ROTATION: Partial<Record<string, number>> = {
 // ── Rotation patterns ─────────────────────────────────────────────────────────
 // N/S faces (stored ±90) need +180° vs E/W faces (stored 0/180) — caused by the
 // x↔y position axis swap in loadFromRaw not being matched by a rotation swap.
-type RotMap = Partial<Record<number, number>>;
+export type RotMap = Partial<Record<number, number>>;
 
 // Triangle wedges, inclined walls: N/S ±90 → flip 180°; E/W 0/180 → no change.
 const NS_FLIP: RotMap = { 0: 0, 90: 180, 180: 0, [-90]: 180 };
@@ -42,31 +42,23 @@ function group(ids: string[], pattern: RotMap): Array<[string, RotMap]> {
 
 // Per-stored-rotation extras for pieces whose offset depends on which face they're on.
 export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEntries([
-  ...group(["MTX_Neut_DesertMechanic_Window_01"], FB_FLIP),
+  // MTX_Neut_DesertMechanic_Window_01 gets a merged entry below (FB_FLIP + pending non-90° keys)
   // Triangle wedges — all factions (NS_FLIP)
   ...group(
     [
-      // Atreides
-      "Atreides_Outpost_Floor_Triangle_Wide_Left",
-      "Atreides_Outpost_Floor_Triangle_Wide_Right",
-      "Atreides_Outpost_Wall_Triangle_Bottom_Left",
-      "Atreides_Outpost_Wall_Triangle_Bottom_Right",
+      // Atreides (Floor_Triangle_Wide_* get overriding entries below)
       "Atreides_Outpost_Wall_Triangle_Bottom_Half_Left",
       "Atreides_Outpost_Wall_Triangle_Bottom_Half_Right",
       "Atreides_Outpost_Wall_Triangle_Top_Left",
-      "Atreides_Outpost_Wall_Triangle_Top_Right",
       "Atreides_Outpost_Wall_Triangle_Top_Half_Left",
       "Atreides_Outpost_Wall_Triangle_Top_Half_Right",
       "Atreides_Outpost_Wall_Triangle_Top_Wide_Left",
       "Atreides_Outpost_Wall_Triangle_Top_Wide_Right",
-      // Choam Level2
+      // Choam Level2 (Bottom_Half_Left, Bottom_Half_Right, Top_Half_Right get overriding entries below)
       "Choam_Level2_Wall_Triangle_Bottom_Left",
       "Choam_Level2_Wall_Triangle_Bottom_Right",
-      "Choam_Level2_Wall_Triangle_Bottom_Half_Left",
-      "Choam_Level2_Wall_Triangle_Bottom_Half_Right",
       "Choam_Level2_Wall_Triangle_Top_Right",
       "Choam_Level2_Wall_Triangle_Top_Half_Left",
-      "Choam_Level2_Wall_Triangle_Top_Half_Right",
       // Choam Shelter (New)
       "Choam_Shelter_Wall_Triangle_Bottom_Left_New",
       "Choam_Shelter_Wall_Triangle_Bottom_Right_New",
@@ -111,24 +103,21 @@ export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEn
     ],
     NS_FLIP,
   ),
-  // L-corner floor/wall pieces (CORNER_SWAP)
+  // L-corner floor/wall pieces (CORNER_SWAP) — Half and 03 get overriding merged entries below
   ...group(
     [
-      "Atreides_Outpost_Wall_Round_Corner_Half",
-      "Atreides_Outpost_Wall_Round_Corner_03",
       "Atreides_Outpost_Floor_Round_Corner_Inverted",
     ],
     CORNER_SWAP,
   ),
   // Round corners — all factions (PARTIAL_CORNER)
+  // Atreides_Outpost_Floor_Round_Corner and Harkonnen_Outpost_Floor_Round_Corner get merged entries below
   ...group(
     [
-      "Atreides_Outpost_Floor_Round_Corner",
       "Atreides_Outpost_Railing_Round_Corner",
       "Choam_Shelter_Floor_Round_Corner_Inverted_New",
       "Choam_Shelter_Railing_Round_Corner_New",
       "Choam_Shelter_Wall_Round_Corner_Half_New",
-      "Harkonnen_Outpost_Floor_Round_Corner",
       "MTX_Atre_BreakfastRoom_FloorRoundCorner",
       "MTX_Atre_BreakfastRoom_WallRoundCorner",
       "MTX_Choam_TwitchReward_Floor_Round",
@@ -178,9 +167,9 @@ export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEn
     { [0]: 90, [90]: -90, [-90]: 270, [180]: 90 },
   ),
   // Inclined railings — all factions (NS_INCLINED)
+  // Atreides_Outpost_Railing_Inclined gets a merged entry below
   ...group(
     [
-      "Atreides_Outpost_Railing_Inclined",
       "Atreides_Outpost_Railing_Inclined_Half",
       "Choam_Level2_Railing_Inclined",
       "Choam_Level2_Railing_Inclined_Half",
@@ -194,7 +183,95 @@ export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEn
     ],
     NS_INCLINED,
   ),
-  ["Atreides_Outpost_Railing", { 0: 180, 90: 0, 180: 180, [-90]: 0 }],
+  // Atreides_Outpost_Railing: base 90°-step keys merged with non-90° pending keys
+  ["Atreides_Outpost_Railing", { 0: 180, 90: 0, 180: 180, [-90]: 0, [30]: 120, [60]: 60, [120]: 120, [150]: 60, [-30]: 60, [-60]: -60, [-120]: 60, [-150]: 120 }],
+  ["Atreides_Outpost_Wall_Inclined_Wide_Left",  { [0]: 142.5, [90]: -37.5, [180]: -37.5, [-90]: -37.5 }],
+  ["Atreides_Outpost_Wall_Inclined_Wide_Right", { [0]: -142.5, [90]: 37.5, [180]: 37.5, [-90]: 37.5 }],
+  // Pieces from named groups that need extra keys merged in (last-write-wins):
+  // CORNER_SWAP group overrides
+  ["Atreides_Outpost_Wall_Round_Corner_Half",   { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Wall_Round_Corner_03",     { [0]: 90, [90]: -90, [180]: 90, [-90]: -90, [150]: 150 }],
+  // PARTIAL_CORNER group overrides
+  ["Atreides_Outpost_Floor_Round_Corner",       { [180]: 90, [-90]: -90, [90]: -90, [0]: 90, [150]: 150 }],
+  ["Harkonnen_Outpost_Floor_Round_Corner",      { [180]: 90, [-90]: -90, [90]: -90, [0]: 90, [-30]: 150 }],
+  // NS_FLIP group overrides (Floor_Triangle_Wide_* fully replaced by pending map)
+  ["Atreides_Outpost_Floor_Triangle_Wide_Right", { [0]: 180, [90]: 0, [180]: 180, [-90]: 0 }],
+  ["Atreides_Outpost_Floor_Triangle_Wide_Left",  { [0]: 180, [90]: 0, [180]: 180, [-90]: 0 }],
+  ["Atreides_Outpost_Wall_Triangle_Bottom_Right", { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [-60]: 120 }],
+  ["Atreides_Outpost_Wall_Triangle_Bottom_Left",  { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [120]: 120 }],
+  ["Atreides_Outpost_Wall_Triangle_Top_Right",    { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [-150]: -60 }],
+  ["Choam_Level2_Wall_Triangle_Bottom_Half_Left",  { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [-150]: -60 }],
+  ["Choam_Level2_Wall_Triangle_Bottom_Half_Right", { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [-30]: 60 }],
+  ["Choam_Level2_Wall_Triangle_Top_Half_Right",    { [0]: 0, [90]: 180, [180]: 0, [-90]: 180, [60]: 60, [120]: -60 }],
+  // NS_INCLINED group override
+  ["Atreides_Outpost_Railing_Inclined",         { [90]: 180, [-90]: 180, [120]: 120, [150]: 52.5, [-150]: -60 }],
+  // FB_FLIP group override (MTX_Neut_DesertMechanic_Window_01)
+  ["MTX_Neut_DesertMechanic_Window_01",         { [0]: 180, [180]: 180, [30]: 120, [150]: -120 }],
+  // Pieces not previously in ROTATION_BY_STORED — all new individual entries:
+  ["Atreides_Outpost_Floor_Round_Corner_Inverted", { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Roof_Cover_Top_Half_Left",  { [30]: -60, [150]: 52.5, [-30]: 60, [-60]: 120, [-90]: 180 }],
+  ["Atreides_Outpost_Roof_Cover_Top_Half_Right", { [60]: -120, [150]: 67.5, [-90]: 180 }],
+  ["Atreides_Outpost_Stairs_Half",               { [0]: 180, [90]: 0, [180]: 180 }],
+  ["MTX_Neut_DesertMechanic_Ramp",               { [0]: 180, [180]: 180 }],
+  ["Choam_Level2_Stairs_Corner_Inward",          { [180]: 90 }],
+  ["Choam_Level2_Rooftop_Wedge",                 { [-120]: 180 }],
+  ["Choam_Level2_Ramp_Half",                     { [180]: 180 }],
+  ["Choam_Level2_Roof_Corner_Half_Inward",       { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Choam_Level2_Roof_Corner_Half",              { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Choam_Level2_Stairs_Half",                   { [0]: 180 }],
+  ["Choam_Level2_Stairs",                        { [0]: 180 }],
+  ["Atreides_Outpost_Foundation_Round_Corner",   { [0]: 90, [90]: -90, [-90]: -90 }],
+  ["Atreides_Outpost_Wall_Round_Corner_02",      { [0]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Stairs",                    { [0]: 180, [180]: 180, [-60]: -60, [-120]: 60 }],
+  ["Atreides_Outpost_Roof_Cover_Bottom_Half_Right", { [60]: -120, [90]: 180, [150]: 67.5, [-90]: 180 }],
+  ["Atreides_Outpost_Roof_Cover_Bottom_Half_Left",  { [30]: -60, [90]: 180, [-30]: 52.5, [-60]: 120, [-90]: 180, [-120]: -120 }],
+  ["Atreides_Outpost_Roof_Round_Corner_Half",    { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Roof_Half",                 { [0]: 180, [150]: -120, [180]: 180 }],
+  ["Atreides_Outpost_Roof_Corner_Half",          { [0]: 90, [60]: -30, [90]: -90, [150]: 150, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Roof_Corner_Half_Inward",   { [0]: 90, [90]: -90 }],
+  ["Atreides_Outpost_Ramp",                      { [0]: 180, [180]: 180, [-150]: 120 }],
+  ["Atreides_Outpost_Ramp_Wide",                 { [0]: 180, [180]: 180 }],
+  ["Atreides_Outpost_Floor_Wedge",               { [0]: 60, [60]: 60, [120]: 60, [180]: 60, [-120]: 60, [-60]: 60 }],
+  ["Atreides_Outpost_Pillar_Top",                { [180]: 15 }],
+  ["Atreides_Outpost_Foundation",                { [30]: 30, [60]: 150, [120]: 30, [-150]: 30, [-60]: 30 }],
+  ["Atreides_Outpost_Wall_01",                   { [30]: 120, [120]: -60, [150]: -120, [-150]: 120, [-30]: -120 }],
+  ["Atreides_Outpost_Ramp_Corner",               { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Ramp_Corner_Inward",        { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Ramp_Corner_Half",          { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Ramp_Corner_Half_Inward",   { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["Atreides_Outpost_Stair_Wide",                { [0]: 180, [180]: 180 }],
+  ["MTX_Atre_BreakfastRoom_Floor",               { [0]: 0 }],
+  ["Atreides_Outpost_Ramp_Edge_Wide_Right",      { [0]: 180, [90]: 0, [180]: 180, [-90]: 0 }],
+  ["Atreides_Outpost_Ramp_Edge_Wide_Left",       { [0]: 180, [90]: 0, [180]: 180 }],
+  ["Atreides_Outpost_Ramp_Half",                 { [0]: 180, [180]: 180 }],
+  ["Atreides_Outpost_Rooftop_Wedge",             { [0]: 60, [60]: 60, [-60]: 60, [-120]: 60 }],
+  ["Atreides_Outpost_Window_04",                 { [120]: 120, [150]: 60, [-120]: 60, [-150]: -60 }],
+  ["Atreides_Outpost_Window_01",                 { [120]: 120, [150]: 60, [-120]: 60, [-150]: 120 }],
+  ["Atreides_Outpost_Rooftop_02",                { [-150]: 30, [-30]: -30, [-60]: 30 }],
+  ["MTX_Atreides_Outpost_FloorLight_Movie",      { [30]: 30, [60]: 60, [120]: 30, [150]: 60 }],
+  ["Atreides_Outpost_Floor",                     { [30]: 30, [60]: 60, [150]: 60, [-60]: 30, [-30]: -30, [-120]: 60 }],
+  ["MTX_Atre_BreakfastRoom_Wall_01",             { [30]: -60, [-30]: 60 }],
+  ["Atreides_Outpost_Wall_Half",                 { [60]: 60, [150]: 60, [-60]: 120, [-120]: 67.5 }],
+  ["Atreides_Outpost_Foundation_Wedge",          { [180]: 60 }],
+  ["Atreides_Outpost_Rooftop_Round_Corner",      { [150]: 150 }],
+  ["MediumOreRefinery_Placeable",                { [0]: -90, [90]: 90 }],
+  ["SmallChemicalRefinery_Placeable",            { [0]: 180 }],
+  ["VehiclesFabricator_Placeable",               { [180]: 180 }],
+  ["Atre_CouchCorner_In_1_Placeable",            { [-45]: -135 }],
+  ["Atre_Couch_1_Placeable",                     { [0]: 180, [-90]: 180 }],
+  ["Atre_Chair_2_Placeable",                     { [5]: 180, [145]: 157.5, [180]: 180, [-150]: 180 }],
+  ["Atre_Chair_1_Placeable",                     { [50]: 172.5 }],
+  ["Harkonnen_Outpost_Floor_Wedge",              { [0]: 60, [60]: 60, [-60]: -60 }],
+  ["Atreides_Outpost_Window_03",                 { [60]: 60, [-60]: 120 }],
+  ["Atreides_Outpost_Window_02",                 { [60]: 60, [-30]: 60, [-60]: 120 }],
+  ["Atreides_Outpost_Roof_Wedge_Top_Half",       { [180]: 180 }],
+  ["Atreides_Outpost_Roof_Wedge_Bottom_Half",    { [0]: 180 }],
+  ["Atreides_Outpost_Wall_04",                   { [60]: 60, [-60]: 120 }],
+  ["MTX_Atreides_Outpost_Window_Movie",          { [60]: 60, [-30]: 60 }],
+  ["MTX_Choam_TwitchReward_Railing_01",          { [150]: 60 }],
+  ["Atreides_Outpost_Rooftop_Round_Corner_Inverted", { [0]: 90, [90]: -90, [180]: 90, [-90]: -90 }],
+  ["MTX_Choam_TwitchReward_Stairs",              { [180]: 180 }],
+  ["Atreides_Outpost_Passageway",                { [-30]: 60 }],
 ]);
 
 // ── GLB auto-discovery ────────────────────────────────────────────────────────

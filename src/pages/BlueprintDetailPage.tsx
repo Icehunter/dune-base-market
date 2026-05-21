@@ -1,9 +1,11 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAuth, SignInButton } from '@clerk/react';
 import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint } from '../lib/api';
 import type { BlueprintDetail } from '../lib/api';
 import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
+import type { RotMap } from '../data/modelRegistry';
+import type { SceneCanvasHandle } from '../components/Scene';
 
 const SceneCanvas = lazy(() =>
   import('../components/Scene').then((m) => ({ default: m.SceneCanvas }))
@@ -22,12 +24,41 @@ export default function BlueprintDetailPage() {
   const [tagInput, setTagInput] = useState('');
   const [locked, setLocked] = useState(false);
   const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
+  // devMapRef holds the live map — never triggers re-renders on its own.
+  // devDisplayMap is a copy used only to re-render the HUD.
+  const sceneRef  = useRef<SceneCanvasHandle | null>(null);
+  const devMapRef = useRef<Partial<Record<string, RotMap>>>({});
+  const [devDisplayMap, setDevDisplayMap] = useState<Partial<Record<string, RotMap>>>({});
 
   useEffect(() => {
     const onChange = () => setLocked(document.pointerLockElement !== null);
     document.addEventListener('pointerlockchange', onChange);
     return () => document.removeEventListener('pointerlockchange', onChange);
   }, []);
+
+  useEffect(() => {
+    if (!selectedPiece) return;
+    const DEV_CYCLE = [0, 7.5, 15, 22.5, 30, 37.5, 45, 52.5, 60, 67.5, 75, 82.5, 90, 97.5, 105, 112.5, 120, 127.5, 135, 142.5, 150, 157.5, 165, 172.5, 180, -172.5, -165, -157.5, -150, -142.5, -135, -127.5, -120, -112.5, -105, -97.5, -90, -82.5, -75, -67.5, -60, -52.5, -45, -37.5, -30, -22.5, -15, -7.5] as const;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'r' && e.key !== 'R') return;
+      e.preventDefault();
+      const { templateId, transform: { rotation } } = selectedPiece;
+      const n = ((rotation % 360) + 360) % 360;
+      const key = n > 180 ? n - 360 : n;
+      const current = devMapRef.current[templateId]?.[key] ?? 0;
+      const idx = DEV_CYCLE.indexOf(current as typeof DEV_CYCLE[number]);
+      const next = DEV_CYCLE[(idx + 1) % DEV_CYCLE.length];
+      devMapRef.current = {
+        ...devMapRef.current,
+        [templateId]: { ...devMapRef.current[templateId], [key]: next },
+      };
+      sceneRef.current?.applyDevOverrides(devMapRef.current);
+      setDevDisplayMap({ ...devMapRef.current });
+      console.log('[DEV] ROTATION_BY_STORED override:', devMapRef.current);
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [selectedPiece]); // no devMapRef dep — handler always reads from the ref directly
 
   useEffect(() => {
     if (!id) return;
@@ -84,6 +115,7 @@ export default function BlueprintDetailPage() {
         {blueprint.blueprint_data ? (
           <Suspense fallback={null}>
             <SceneCanvas
+              ref={sceneRef}
               onSelectPiece={setSelectedPiece}
               initialDistanceScale={1}
               initialBlueprint={blueprint.blueprint_data as unknown as RawBlueprint}
@@ -159,6 +191,20 @@ export default function BlueprintDetailPage() {
               &nbsp;&nbsp;
               <span style={{ color: '#fff' }}>Category:</span> {selectedPiece.category}
             </div>
+            {(() => {
+              const n = ((selectedPiece.transform.rotation % 360) + 360) % 360;
+              const key = n > 180 ? n - 360 : n;
+              const devVal = devDisplayMap[selectedPiece.templateId]?.[key];
+              return devVal !== undefined ? (
+                <div style={{ color: '#7ec8e3', fontSize: 10 }}>
+                  [DEV] override: {devVal > 0 ? '+' : ''}{devVal}° &nbsp;press R to cycle
+                </div>
+              ) : (
+                <div style={{ color: 'rgba(255,255,255,0.25)', fontSize: 10 }}>
+                  press R to add rotation override
+                </div>
+              );
+            })()}
             <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10 }}>
               x={selectedPiece.transform.position.x}&nbsp;
               y={selectedPiece.transform.position.y}&nbsp;
