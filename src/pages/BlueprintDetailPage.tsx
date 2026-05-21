@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useAuth, SignInButton } from '@clerk/react';
 import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint } from '../lib/api';
 import type { BlueprintDetail } from '../lib/api';
-import type { RawBlueprint } from '../stores/buildingStore';
+import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
 
 const SceneCanvas = lazy(() =>
   import('../components/Scene').then((m) => ({ default: m.SceneCanvas }))
@@ -18,6 +18,14 @@ export default function BlueprintDetailPage() {
   const [editing, setEditing] = useState(false);
   const [editTitle, setEditTitle] = useState('');
   const [editPublic, setEditPublic] = useState(true);
+  const [locked, setLocked] = useState(false);
+  const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
+
+  useEffect(() => {
+    const onChange = () => setLocked(document.pointerLockElement !== null);
+    document.addEventListener('pointerlockchange', onChange);
+    return () => document.removeEventListener('pointerlockchange', onChange);
+  }, []);
 
   useEffect(() => {
     if (!id) return;
@@ -69,11 +77,11 @@ export default function BlueprintDetailPage() {
   return (
     <div style={{ display: 'flex', height: 'calc(100vh - 52px)', overflow: 'hidden' }}>
       {/* 3D Viewer */}
-      <div style={{ flex: 1, position: 'relative', background: '#000' }}>
+      <div style={{ flex: 1, position: 'relative', background: '#000', overflow: 'hidden' }}>
         {blueprint.blueprint_data ? (
           <Suspense fallback={null}>
             <SceneCanvas
-              onSelectPiece={() => {}}
+              onSelectPiece={setSelectedPiece}
               initialDistanceScale={1}
               initialBlueprint={blueprint.blueprint_data as unknown as RawBlueprint}
             />
@@ -81,6 +89,83 @@ export default function BlueprintDetailPage() {
         ) : (
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'rgba(255,255,255,0.2)' }}>
             No preview available
+          </div>
+        )}
+
+        {/* Crosshair */}
+        {locked && (
+          <div style={{
+            position: 'absolute', top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            pointerEvents: 'none', color: 'rgba(255,255,255,0.7)',
+            fontSize: 20, lineHeight: 1, userSelect: 'none',
+          }}>+</div>
+        )}
+
+        {/* Click-to-enter overlay */}
+        {!locked && blueprint.blueprint_data && (
+          <div style={{
+            position: 'absolute', top: '50%', left: '50%',
+            transform: 'translate(-50%, -50%)',
+            background: 'rgba(0,0,0,0.75)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            borderRadius: 16,
+            padding: '28px 44px',
+            textAlign: 'center',
+            color: '#fff',
+            pointerEvents: 'none',
+            backdropFilter: 'blur(4px)',
+          }}>
+            <div style={{ fontSize: 20, fontWeight: 700, marginBottom: 16 }}>
+              Click to enter the base
+            </div>
+            <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 2 }}>
+              <span style={{ color: '#fff', fontWeight: 600 }}>WASD</span> — fly forward/back/left/right
+              <br />
+              <span style={{ color: '#fff', fontWeight: 600 }}>Space</span> — fly up&nbsp;&nbsp;
+              <span style={{ color: '#fff', fontWeight: 600 }}>Shift</span> — fly down
+              <br />
+              <span style={{ color: '#fff', fontWeight: 600 }}>Esc</span> — release mouse
+            </div>
+          </div>
+        )}
+
+        {/* Selected piece info */}
+        {selectedPiece && (
+          <div style={{
+            position: 'absolute', bottom: 16, left: 16,
+            background: 'rgba(20,20,28,0.92)',
+            border: '1px solid rgba(255,255,255,0.12)',
+            borderRadius: 8,
+            padding: '10px 14px',
+            color: '#fff',
+            fontSize: 11,
+            pointerEvents: 'none',
+            userSelect: 'none',
+            maxWidth: 320,
+            lineHeight: 1.7,
+          }}>
+            <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 2 }}>
+              {selectedPiece.category}
+            </div>
+            <div style={{ fontSize: 12, fontWeight: 600, color: '#ffd84a', wordBreak: 'break-all', marginBottom: 4 }}>
+              {selectedPiece.templateId}
+            </div>
+            <div style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <span style={{ color: '#fff' }}>Rotation:</span> {selectedPiece.transform.rotation}°
+              &nbsp;&nbsp;
+              <span style={{ color: '#fff' }}>Category:</span> {selectedPiece.category}
+            </div>
+            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10 }}>
+              x={selectedPiece.transform.position.x}&nbsp;
+              y={selectedPiece.transform.position.y}&nbsp;
+              z={selectedPiece.transform.position.z}
+            </div>
+            {selectedPiece.scale && (
+              <div style={{ color: 'rgba(100,200,255,0.7)', fontSize: 10 }}>
+                scale {selectedPiece.scale.x}×{selectedPiece.scale.y}×{selectedPiece.scale.z}
+              </div>
+            )}
           </div>
         )}
       </div>
