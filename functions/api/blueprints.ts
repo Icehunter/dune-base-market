@@ -4,6 +4,11 @@ import { verifyAuth } from '../_lib/auth';
 
 type Ctx = EventContext<Env, string, Record<string, unknown>>;
 
+const VALID_SORTS: Record<string, string> = {
+  new: 'created_at DESC',
+  popular: 'download_count DESC',
+};
+
 export async function onRequestGet(ctx: Ctx): Promise<Response> {
   const { request, env } = ctx;
   const url = new URL(request.url);
@@ -11,7 +16,11 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
   const tag = url.searchParams.get('tag');
   const mine = url.searchParams.get('mine') === 'true';
 
-  const orderBy = sort === 'popular' ? 'download_count DESC' : 'created_at DESC';
+  if (tag && !/^[a-zA-Z0-9_-]+$/.test(tag)) {
+    return json({ error: 'Invalid tag' }, 400);
+  }
+
+  const orderBy = VALID_SORTS[sort] ?? 'created_at DESC';
 
   if (mine) {
     const userId = await verifyAuth(request, env);
@@ -46,7 +55,15 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
 }
 
 function deserialize(row: Record<string, unknown>) {
-  return { ...row, tags: row.tags ? JSON.parse(row.tags as string) : [] };
+  let tags: unknown[] = [];
+  if (row.tags) {
+    try {
+      tags = JSON.parse(row.tags as string);
+    } catch {
+      tags = [];
+    }
+  }
+  return { ...row, tags };
 }
 
 function json(data: unknown, status = 200): Response {
