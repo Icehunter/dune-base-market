@@ -3,17 +3,12 @@
 // Placeables: building_blueprint_placeables (equipment / props)
 
 import type { PlacedPiece } from '../stores/buildingStore';
-import type { ValidRotation } from '../engine/GridSystem';
 import { DEFAULT_BASE_RAW } from './defaultBaseData';
 
 // ── Building instances ────────────────────────────────────────────────────────
 
-function normalizeRotation(rot: number): ValidRotation {
-  const n = ((rot % 360) + 360) % 360;
-  if (n > 315 || n < 45) return 0;
-  if (n < 135) return 90;
-  if (n < 225) return 180;
-  return -90;
+function cleanRotation(rot: number): number {
+  return Math.round(rot);
 }
 
 function round3(v: number) { return Math.round(v * 1000) / 1000; }
@@ -52,7 +47,7 @@ export function getDefaultBasePieces(): Omit<PlacedPiece, 'id'>[] {
     transform: {
       position: { x: round3(raw.x), y: round3(raw.y), z: round3(raw.z) },
       // Dune/UE and Babylon use opposite yaw direction for this dataset.
-      rotation: normalizeRotation(-raw.rotation),
+      rotation: cleanRotation(-raw.rotation),
     },
     faction: 'Atreides',
     category: category(raw.templateId),
@@ -64,7 +59,7 @@ export function getDefaultBasePieces(): Omit<PlacedPiece, 'id'>[] {
       // Swap x↔y so SceneCanvas (which does Vector3(x, z, y)) places placeables
       // in the same coordinate frame as instances. Raw values are restored on export.
       position: { x: round3(raw.y), y: round3(raw.x), z: round3(raw.z) },
-      rotation: normalizeRotation(raw.ry),
+      rotation: cleanRotation(raw.ry),
     },
     faction: 'Generic',
     category: 'Decoration',
