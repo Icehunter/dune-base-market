@@ -8,17 +8,25 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:registry": "npx tsx scripts/build-piece-registry.ts"
+    "build:registry": "npx tsx scripts/build-piece-registry.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@babylonjs/core": "^9.8.0",
     "@babylonjs/loaders": "^9.8.0",
     "@babylonjs/materials": "^9.8.0",
+    "@clerk/backend": "^3.4.11",
+    "@clerk/react": "^6.6.6",
+    "@heroui/react": "^3.0.5",
+    "@heroui/styles": "^3.0.5",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.1",
+    "tailwind-variants": "^3.2.2",
     "zustand": "^5.0.13"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260521.1",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.0",
     "@types/node": "^24.12.3",
@@ -32,6 +40,7 @@
     "tailwindcss": "^4.3.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vitest": "^4.1.7"
   }
 }
