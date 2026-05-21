@@ -58,6 +58,8 @@ export default function UploadModal({ isOpen, onClose, onUploaded }: Props) {
         file_size: file.size,
         tags: [],
         download_count: 0,
+        rating_count: 0,
+        snapshot_url: null,
         created_at: new Date().toISOString(),
       };
       onUploaded(newBlueprint);

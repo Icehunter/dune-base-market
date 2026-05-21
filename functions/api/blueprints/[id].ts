@@ -11,7 +11,7 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
 
   const row = await env.DB.prepare(
     `SELECT id, title, username, user_id, is_public, piece_count, file_size,
-            tags, download_count, created_at, blueprint_data
+            tags, download_count, rating_count, snapshot_url, created_at, blueprint_data, rotation_overrides
      FROM blueprints WHERE id = ?`
   ).bind(id).first<Record<string, unknown>>();
 
@@ -22,10 +22,20 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     return json({ error: 'Not found' }, 404);
   }
 
+  let userRated = false;
+  if (userId) {
+    const vote = await env.DB.prepare(
+      'SELECT 1 FROM ratings WHERE blueprint_id = ? AND user_id = ?'
+    ).bind(id, userId).first();
+    userRated = !!vote;
+  }
+
   return json({
     ...row,
     tags: safeParseJson(row.tags as string | null, []),
     blueprint_data: safeParseJson(row.blueprint_data as string | null, null),
+    rotation_overrides: safeParseJson(row.rotation_overrides as string | null, null),
+    user_rated: userRated,
   });
 }
 
@@ -40,7 +50,12 @@ export async function onRequestPatch(ctx: Ctx): Promise<Response> {
   if (!row) return json({ error: 'Not found' }, 404);
   if (row.user_id !== userId) return json({ error: 'Forbidden' }, 403);
 
-  const body = await request.json<{ title?: string; is_public?: boolean; tags?: string[] }>();
+  const body = await request.json<{
+    title?: string;
+    is_public?: boolean;
+    tags?: string[];
+    rotation_overrides?: Record<string, Record<number, number>> | null;
+  }>();
   const updates: string[] = [];
   const vals: unknown[] = [];
 
@@ -58,6 +73,10 @@ export async function onRequestPatch(ctx: Ctx): Promise<Response> {
     if (!Array.isArray(body.tags)) return json({ error: 'tags must be an array' }, 400);
     updates.push('tags = ?');
     vals.push(JSON.stringify(body.tags));
+  }
+  if ('rotation_overrides' in body) {
+    updates.push('rotation_overrides = ?');
+    vals.push(body.rotation_overrides != null ? JSON.stringify(body.rotation_overrides) : null);
   }
   if (!updates.length) return json({ error: 'Nothing to update' }, 400);
 
