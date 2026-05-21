@@ -19,6 +19,7 @@ export default function BlueprintDetailPage() {
   const [editTitle, setEditTitle] = useState('');
   const [editPublic, setEditPublic] = useState(true);
   const [editTags, setEditTags] = useState<string[]>([]);
+  const [tagInput, setTagInput] = useState('');
   const [locked, setLocked] = useState(false);
   const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
 
@@ -208,7 +209,7 @@ export default function BlueprintDetailPage() {
             </label>
             <div>
               <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 6px' }}>Tags</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 6 }}>
                 {['Foundation','Wall','Floor','Rooftop','Ramp','Stairs','Pillar','Door','Decoration'].map((tag) => {
                   const active = editTags.includes(tag);
                   return (
@@ -224,7 +225,31 @@ export default function BlueprintDetailPage() {
                     >{tag}</button>
                   );
                 })}
+                {editTags.filter(t => !['Foundation','Wall','Floor','Rooftop','Ramp','Stairs','Pillar','Door','Decoration'].includes(t)).map((tag) => (
+                  <span key={tag} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'rgba(200,168,75,0.2)', border: '1px solid rgba(200,168,75,0.5)', color: '#c8a84b', borderRadius: 12, padding: '2px 9px', fontSize: 10 }}>
+                    {tag}
+                    <button onClick={() => setEditTags(editTags.filter(t2 => t2 !== tag))} style={{ background: 'none', border: 'none', color: '#c8a84b', cursor: 'pointer', padding: 0, fontSize: 11, lineHeight: 1 }}>×</button>
+                  </span>
+                ))}
               </div>
+              <input
+                value={tagInput}
+                onChange={(e) => setTagInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if ((e.key === 'Enter' || e.key === ',') && tagInput.trim()) {
+                    e.preventDefault();
+                    const t = tagInput.trim().replace(/,/g, '');
+                    if (t && !editTags.includes(t)) setEditTags([...editTags, t]);
+                    setTagInput('');
+                  }
+                }}
+                placeholder="Type a tag, press Enter"
+                style={{
+                  width: '100%', background: '#0a0a0f', border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 4, padding: '5px 8px', color: '#fff', fontSize: 11,
+                  boxSizing: 'border-box',
+                }}
+              />
             </div>
             <div style={{ display: 'flex', gap: 6 }}>
               <button onClick={handleSaveEdit} style={{ flex: 1, background: '#c8a84b', border: 'none', borderRadius: 4, color: '#000', fontWeight: 700, fontSize: 12, padding: '5px 0', cursor: 'pointer' }}>Save</button>
