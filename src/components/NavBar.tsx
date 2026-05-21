@@ -23,7 +23,7 @@ export default function NavBar() {
         to="/"
         style={{ color: '#c8a84b', fontWeight: 700, fontSize: 15, letterSpacing: 2, textDecoration: 'none' }}
       >
-        ⬡ DUNE
+        ⬡ Solido Market
       </Link>
 
       <Link
