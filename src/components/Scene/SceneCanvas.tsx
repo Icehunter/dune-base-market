@@ -13,7 +13,7 @@ import {
 } from '@babylonjs/core';
 import { GRID } from '../../engine/GridSystem';
 import { PieceManager } from '../../engine/PieceManager';
-import { useBuildingStore } from '../../stores/buildingStore';
+import { useBuildingStore, type PlacedPiece, type RawBlueprint } from '../../stores/buildingStore';
 
 DracoCompression.Configuration = {
   decoder: {
@@ -23,11 +23,27 @@ DracoCompression.Configuration = {
   },
 };
 
-const FLY_SPEED = 400; // units/s — tune up/down to taste
+const FLY_SPEED       = 400;
+const FLY_SPEED_FAST  = 1600;
 
-export function SceneCanvas() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { pieces } = useBuildingStore();
+interface Props {
+  onSelectPiece?: (piece: PlacedPiece | null) => void;
+  initialDistanceScale?: number;
+  initialBlueprint?: RawBlueprint;
+}
+
+export function SceneCanvas({ onSelectPiece, initialDistanceScale = 1, initialBlueprint }: Props) {
+  const canvasRef        = useRef<HTMLCanvasElement>(null);
+  const onSelectRef      = useRef(onSelectPiece);
+  const { pieces }       = useBuildingStore();
+  const loadFromRaw = useBuildingStore((s) => s.loadFromRaw);
+
+  useEffect(() => {
+    if (initialBlueprint) loadFromRaw(initialBlueprint);
+  }, [initialBlueprint, loadFromRaw]);
+
+  // Keep callback ref current without re-running the heavy effect.
+  useEffect(() => { onSelectRef.current = onSelectPiece; }, [onSelectPiece]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -43,16 +59,10 @@ export function SceneCanvas() {
     scene.clearColor = new Color4(0.08, 0.08, 0.10, 1);
     scene.ambientColor = new Color3(1, 1, 1);
     scene.environmentIntensity = 0;
-    // ShaderMaterial writes directly to gl_FragColor and is immune to Babylon's
-    // image-processing pipeline. Disable it so the pipeline doesn't crush the
-    // flat shader's output toward black (known Babylon incompatibility).
     scene.imageProcessingConfiguration.isEnabled = false;
     scene.imageProcessingConfiguration.toneMappingEnabled = false;
 
-    // ── Auto-frame: compute bounding box of the base ──────────────────────────
-    // Game coords:  position.x → Babylon X
-    //               position.y → Babylon Z  (horizontal forward)
-    //               position.z → Babylon Y  (height)
+    // ── Auto-frame ────────────────────────────────────────────────────────────
     const TILE = GRID.FOUNDATION_SIZE;
 
     let cx = 0, cy = 200, cz = 0;
@@ -72,11 +82,10 @@ export function SceneCanvas() {
       cy = maxZ * 0.35;
 
       const spanH = Math.max(maxX - minX, maxY - minY) + TILE * 2;
-      const dist  = (spanH / 2) / Math.tan(0.4) * 1.3;
+      const dist  = (spanH / 2) / Math.tan(0.4) * 1.3 * initialDistanceScale;
       const hDist = dist * Math.cos(Math.PI / 4);
       const vDist = dist * Math.sin(Math.PI / 4);
 
-      // SE direction: +BabX, -BabZ
       startPos = new Vector3(cx + hDist, cy + vDist, cz - hDist);
     } else {
       startPos = new Vector3(0, 500, -4000);
@@ -86,12 +95,12 @@ export function SceneCanvas() {
     const camera = new UniversalCamera('fps', startPos, scene);
     camera.setTarget(new Vector3(cx, cy, cz));
 
-    camera.keysUp       = [87, 38]; // W / ↑
-    camera.keysDown     = [83, 40]; // S / ↓
-    camera.keysLeft     = [65, 37]; // A / ←
-    camera.keysRight    = [68, 39]; // D / →
-    camera.keysUpward   = [32];     // Space
-    camera.keysDownward = [16];     // Shift
+    camera.keysUp    = [87, 38]; // W / ↑
+    camera.keysDown  = [83, 40]; // S / ↓
+    camera.keysLeft  = [65, 37]; // A / ←
+    camera.keysRight = [68, 39]; // D / →
+    // Space and Shift are NOT bound to vertical movement —
+    // Shift is used as a speed modifier instead (see below).
 
     camera.speed              = FLY_SPEED;
     camera.angularSensibility = 600;
@@ -99,10 +108,21 @@ export function SceneCanvas() {
     camera.minZ               = 5;
     camera.maxZ               = 200000;
 
-    // ── Pointer lock ──────────────────────────────────────────────────────────
-    const requestLock = () => canvas.requestPointerLock();
-    canvas.addEventListener('click', requestLock);
+    // Shift = fast mode while held.
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        camera.speed = FLY_SPEED_FAST;
+      }
+    };
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        camera.speed = FLY_SPEED;
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('keyup',   onKeyUp);
 
+    // ── Pointer lock ──────────────────────────────────────────────────────────
     const onLockChange = () => {
       if (document.pointerLockElement === canvas) {
         camera.attachControl(canvas, true);
@@ -113,13 +133,11 @@ export function SceneCanvas() {
     document.addEventListener('pointerlockchange', onLockChange);
 
     // ── Lighting ──────────────────────────────────────────────────────────────
-    // Hemisphere gives cheap ambient fill from sky + ground bounce.
     const hemi = new HemisphericLight('hemi', new Vector3(0, 1, 0), scene);
-    hemi.intensity  = 0.6;
-    hemi.diffuse    = new Color3(0.9, 0.88, 0.84);
+    hemi.intensity   = 0.6;
+    hemi.diffuse     = new Color3(0.9, 0.88, 0.84);
     hemi.groundColor = new Color3(0.4, 0.38, 0.35);
 
-    // Key sun — world-fixed, casts shadows.
     const sun = new DirectionalLight('sun', new Vector3(0.3, -1.0, 0.5).normalize(), scene);
     sun.intensity = 1.2;
     sun.diffuse   = new Color3(1.0, 0.97, 0.90);
@@ -140,14 +158,37 @@ export function SceneCanvas() {
     Promise.all(uniqueTemplates.map(t => pm.preloadModel(t))).then(() => {
       if (cancelled) return;
       for (const piece of pieces) {
+        if (piece.templateId.toLowerCase().includes('pentashield')) continue;
         pm.placePiece(
           piece.id,
           piece.templateId,
           new Vector3(piece.transform.position.x, piece.transform.position.z, piece.transform.position.y),
           piece.transform.rotation,
+          piece.scale,
         );
       }
     });
+
+    // ── Click: pick at crosshair when locked; re-lock when unlocked ──────────
+    const onClick = () => {
+      if (document.pointerLockElement === canvas) {
+        // Pick at the crosshair (canvas centre) while flying.
+        const pick = scene.pick(canvas.clientWidth / 2, canvas.clientHeight / 2);
+        if (pick.hit && pick.pickedMesh?.metadata?.pieceId) {
+          const pieceId = pick.pickedMesh.metadata.pieceId as string;
+          pm.selectPiece(pieceId);
+          const piece = pieces.find(p => p.id === pieceId) ?? null;
+          onSelectRef.current?.(piece);
+        } else {
+          pm.clearSelection();
+          onSelectRef.current?.(null);
+        }
+      } else {
+        // Unlocked (post-Escape): click just re-enters fly mode, no selection.
+        canvas.requestPointerLock();
+      }
+    };
+    canvas.addEventListener('click', onClick);
 
     // ── Render loop ───────────────────────────────────────────────────────────
     engine.runRenderLoop(() => scene.render());
@@ -157,14 +198,16 @@ export function SceneCanvas() {
 
     return () => {
       cancelled = true;
-      canvas.removeEventListener('click', requestLock);
+      canvas.removeEventListener('click', onClick);
       document.removeEventListener('pointerlockchange', onLockChange);
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('keyup',   onKeyUp);
       window.removeEventListener('resize', onResize);
       pm.dispose();
       scene.dispose();
       engine.dispose();
     };
-  }, [pieces]);
+  }, [pieces, initialDistanceScale]);
 
   return (
     <canvas
