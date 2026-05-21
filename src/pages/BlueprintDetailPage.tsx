@@ -18,6 +18,7 @@ export default function BlueprintDetailPage() {
   const [editing, setEditing] = useState(false);
   const [editTitle, setEditTitle] = useState('');
   const [editPublic, setEditPublic] = useState(true);
+  const [editTags, setEditTags] = useState<string[]>([]);
   const [locked, setLocked] = useState(false);
   const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
 
@@ -35,6 +36,7 @@ export default function BlueprintDetailPage() {
         setBlueprint(bp);
         setEditTitle(bp.title);
         setEditPublic(!!bp.is_public);
+        setEditTags(bp.tags ?? []);
       })
       .catch(() => setError('Blueprint not found'))
       .finally(() => setLoading(false));
@@ -56,8 +58,8 @@ export default function BlueprintDetailPage() {
   async function handleSaveEdit() {
     if (!id) return;
     try {
-      await updateBlueprint(id, { title: editTitle, is_public: editPublic }, getToken);
-      setBlueprint((prev) => prev ? { ...prev, title: editTitle, is_public: editPublic ? 1 : 0 } : prev);
+      await updateBlueprint(id, { title: editTitle, is_public: editPublic, tags: editTags }, getToken);
+      setBlueprint((prev) => prev ? { ...prev, title: editTitle, is_public: editPublic ? 1 : 0, tags: editTags } : prev);
       setEditing(false);
     } catch (err) { console.error(err); }
   }
@@ -204,6 +206,26 @@ export default function BlueprintDetailPage() {
               <input type="checkbox" checked={editPublic} onChange={(e) => setEditPublic(e.target.checked)} />
               Public
             </label>
+            <div>
+              <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 6px' }}>Tags</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+                {['Foundation','Wall','Floor','Rooftop','Ramp','Stairs','Pillar','Door','Decoration'].map((tag) => {
+                  const active = editTags.includes(tag);
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => setEditTags(active ? editTags.filter(t => t !== tag) : [...editTags, tag])}
+                      style={{
+                        background: active ? 'rgba(200,168,75,0.2)' : 'rgba(255,255,255,0.05)',
+                        border: `1px solid ${active ? 'rgba(200,168,75,0.5)' : 'rgba(255,255,255,0.1)'}`,
+                        color: active ? '#c8a84b' : 'rgba(255,255,255,0.4)',
+                        borderRadius: 12, padding: '2px 9px', fontSize: 10, cursor: 'pointer',
+                      }}
+                    >{tag}</button>
+                  );
+                })}
+              </div>
+            </div>
             <div style={{ display: 'flex', gap: 6 }}>
               <button onClick={handleSaveEdit} style={{ flex: 1, background: '#c8a84b', border: 'none', borderRadius: 4, color: '#000', fontWeight: 700, fontSize: 12, padding: '5px 0', cursor: 'pointer' }}>Save</button>
               <button onClick={() => setEditing(false)} style={{ flex: 1, background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4, color: 'rgba(255,255,255,0.5)', fontSize: 12, padding: '5px 0', cursor: 'pointer' }}>Cancel</button>

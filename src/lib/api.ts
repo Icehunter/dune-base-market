@@ -72,7 +72,7 @@ export async function uploadBlueprint(
 
 export async function updateBlueprint(
   id: string,
-  data: { title?: string; is_public?: boolean },
+  data: { title?: string; is_public?: boolean; tags?: string[] },
   getToken: () => Promise<string | null>
 ): Promise<void> {
   const token = await getToken();

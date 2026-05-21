@@ -40,7 +40,7 @@ export async function onRequestPatch(ctx: Ctx): Promise<Response> {
   if (!row) return json({ error: 'Not found' }, 404);
   if (row.user_id !== userId) return json({ error: 'Forbidden' }, 403);
 
-  const body = await request.json<{ title?: string; is_public?: boolean }>();
+  const body = await request.json<{ title?: string; is_public?: boolean; tags?: string[] }>();
   const updates: string[] = [];
   const vals: unknown[] = [];
 
@@ -53,6 +53,11 @@ export async function onRequestPatch(ctx: Ctx): Promise<Response> {
   if (body.is_public !== undefined) {
     updates.push('is_public = ?');
     vals.push(body.is_public ? 1 : 0);
+  }
+  if (body.tags !== undefined) {
+    if (!Array.isArray(body.tags)) return json({ error: 'tags must be an array' }, 400);
+    updates.push('tags = ?');
+    vals.push(JSON.stringify(body.tags));
   }
   if (!updates.length) return json({ error: 'Nothing to update' }, 400);
 
