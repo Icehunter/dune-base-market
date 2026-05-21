@@ -20,7 +20,7 @@ export type ValidRotation = typeof GRID.VALID_ROTATIONS[number];
 
 export interface Transform {
   position: WorldPosition;
-  rotation: ValidRotation;
+  rotation: number;
 }
 
 // Snap world position to nearest foundation grid point.
