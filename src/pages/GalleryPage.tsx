@@ -55,9 +55,9 @@ export default function GalleryPage() {
       <div style={{ padding: '32px 0 20px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 16 }}>
           <div>
-            <h1 style={{ color: '#fff', fontSize: 22, fontWeight: 700, margin: 0 }}>Blueprint Gallery</h1>
+            <h1 style={{ color: '#fff', fontSize: 22, fontWeight: 700, margin: 0 }}>Dune Solido Market</h1>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, margin: '4px 0 0' }}>
-              Browse community Dune bases · {blueprints.length} blueprints
+              Browse & share Dune base blueprints · {blueprints.length} designs
             </p>
           </div>
           {isSignedIn ? (
