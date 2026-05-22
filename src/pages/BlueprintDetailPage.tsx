@@ -85,7 +85,8 @@ export default function BlueprintDetailPage() {
 
   useEffect(() => {
     if (!id) return;
-    setLoading(true);
+    // Only show spinner on first load; re-fetching for auth state doesn't flash the page.
+    if (!blueprint) setLoading(true);
     getBlueprint(id, isSignedIn ? getToken : undefined)
       .then((bp) => {
         setBlueprint(bp);
@@ -102,7 +103,7 @@ export default function BlueprintDetailPage() {
       })
       .catch(() => setError('Blueprint not found'))
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [id, isSignedIn]); // isSignedIn: re-fetch once auth resolves so user_rated is correct
 
   const isOwnerForEffect = !!userId && !!blueprint && userId === blueprint.user_id;
 
