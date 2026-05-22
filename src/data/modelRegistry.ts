@@ -156,7 +156,7 @@ export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEn
     ],
     RAMP_FLIP,
   ),
-  ...group(["MTX_Smug_Ramp_Corner_Inverted"], { [-90]: -90, [180]: 90 }),
+  ...group(["MTX_Smug_Ramp_Corner_Inverted", "MTX_Neut_DesertMechanic_Rooftop_Corner_Inverted"], { [-90]: -90, [180]: 90 }),
   ...group(
     [
       "Harkonnen_Outpost_Roof_Corner",

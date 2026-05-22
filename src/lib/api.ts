@@ -50,8 +50,9 @@ export async function listBlueprints(
   return body.blueprints.map(b => ({ ...b, snapshot_url: normaliseSnapshotUrl(b.id, b.snapshot_url) }));
 }
 
-export async function getBlueprint(id: string): Promise<BlueprintDetail> {
-  const res = await fetch(`/api/blueprints/${id}`);
+export async function getBlueprint(id: string, getToken?: () => Promise<string | null>): Promise<BlueprintDetail> {
+  const headers = getToken ? await authHeaders(getToken) : {};
+  const res = await fetch(`/api/blueprints/${id}`, { headers });
   if (!res.ok) throw new Error(`Blueprint not found: ${res.status}`);
   const bp = await res.json() as BlueprintDetail;
   return { ...bp, snapshot_url: normaliseSnapshotUrl(bp.id, bp.snapshot_url) };

@@ -86,7 +86,7 @@ export default function BlueprintDetailPage() {
   useEffect(() => {
     if (!id) return;
     setLoading(true);
-    getBlueprint(id)
+    getBlueprint(id, isSignedIn ? getToken : undefined)
       .then((bp) => {
         setBlueprint(bp);
         setEditTitle(bp.title);
