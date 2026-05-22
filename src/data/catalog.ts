@@ -152,7 +152,15 @@ const PLACEABLE_PATHS: Record<string, string> = {
   Neut_Statue_DesertMouse_Placeable:          MNP + 'Statues/Meshes/SM_MTX_Env_Prop_Neut_Statue_DesertMouse.glb',
 };
 
-export const MODEL_PATHS: Record<string, string> = cdnPaths({ ...GENERATED_PATHS, ...PLACEABLE_PATHS });
+const GLB_SWAPS: Record<string, string> = {
+  // L/R GLBs appear swapped vs blueprint data
+  Atreides_Outpost_Floor_Triangle_Wide_Left:  GENERATED_PATHS['Atreides_Outpost_Floor_Triangle_Wide_Right'],
+  Atreides_Outpost_Floor_Triangle_Wide_Right: GENERATED_PATHS['Atreides_Outpost_Floor_Triangle_Wide_Left'],
+  Atreides_Outpost_Ramp_Edge_Wide_Left:       GENERATED_PATHS['Atreides_Outpost_Ramp_Edge_Wide_Right'],
+  Atreides_Outpost_Ramp_Edge_Wide_Right:      GENERATED_PATHS['Atreides_Outpost_Ramp_Edge_Wide_Left'],
+};
+
+export const MODEL_PATHS: Record<string, string> = cdnPaths({ ...GENERATED_PATHS, ...PLACEABLE_PATHS, ...GLB_SWAPS });
 
 export const PIECE_CATALOG = GENERATED;
 

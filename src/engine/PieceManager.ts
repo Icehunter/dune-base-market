@@ -14,12 +14,13 @@ import {
   TransformNode,
   Mesh,
   ShadowGenerator,
+  Quaternion,
 } from "@babylonjs/core";
 import "@babylonjs/loaders/glTF";
 import { degreesToRadians } from "./GridSystem";
 import { MODEL_PATHS } from "../data/catalog";
 import { resolveGlb } from "../data/modelRegistry";
-import { EXTRA_ROTATION, ROTATION_BY_STORED } from "../data/modelRegistry";
+import { EXTRA_ROTATION, ROTATION_BY_STORED, type RotMap } from "../data/modelRegistry";
 
 export interface PlacedMesh {
   id: string;
@@ -27,6 +28,7 @@ export interface PlacedMesh {
   root: TransformNode | Mesh;
   position: Vector3;
   rotation: number;
+  baseQuaternion: Quaternion; // GLB coord-correction quat, captured before our yaw is applied
 }
 
 // ── Flat shader ───────────────────────────────────────────────────────────────
@@ -260,6 +262,7 @@ export class PieceManager {
     position: Vector3,
     rotation: number,
     scale?: { x: number; y: number; z: number },
+    devOverrides: Partial<Record<string, RotMap>> = {},
   ): PlacedMesh | null {
     this.removePiece(id);
 
@@ -306,8 +309,13 @@ export class PieceManager {
     // Preserves non-90° values (60°, 120°) for wedge-based layouts.
     const n = ((rotation % 360) + 360) % 360;
     const key = n > 180 ? n - 360 : n;
-    const byStored = ROTATION_BY_STORED[templateId];
+    const staticMap  = ROTATION_BY_STORED[templateId];
+    const devMap     = devOverrides[templateId];
+    const byStored = (staticMap || devMap)
+      ? { ...staticMap, ...devMap }
+      : undefined;
     const extra = byStored != null ? (byStored[key] ?? 0) : (EXTRA_ROTATION[templateId] ?? 0);
+    const baseQuaternion = (root.rotationQuaternion ?? Quaternion.Identity()).clone();
     root.addRotation(0, degreesToRadians(rotation + 90 + extra), 0);
 
     root.metadata = { pieceId: id, templateId };
@@ -322,7 +330,7 @@ export class PieceManager {
       });
     }
 
-    const placed: PlacedMesh = { id, templateId, root, position: position.clone(), rotation };
+    const placed: PlacedMesh = { id, templateId, root, position: position.clone(), rotation, baseQuaternion };
     this.placedMeshes.set(id, placed);
     return placed;
   }
@@ -339,7 +347,7 @@ export class PieceManager {
       return m;
     });
     box.metadata = { pieceId: id, templateId };
-    const placed: PlacedMesh = { id, templateId, root: box, position: position.clone(), rotation };
+    const placed: PlacedMesh = { id, templateId, root: box, position: position.clone(), rotation, baseQuaternion: Quaternion.Identity() };
     this.placedMeshes.set(id, placed);
     return placed;
   }
@@ -365,6 +373,20 @@ export class PieceManager {
       if (m instanceof Mesh) m.renderOutline = false;
     });
     this.selectedId = null;
+  }
+
+  applyDevOverrides(devOverrides: Partial<Record<string, RotMap>>): void {
+    this.placedMeshes.forEach((placed) => {
+      const devMap = devOverrides[placed.templateId];
+      if (!devMap) return;
+      const n = ((placed.rotation % 360) + 360) % 360;
+      const key = n > 180 ? n - 360 : n;
+      const staticMap  = ROTATION_BY_STORED[placed.templateId];
+      const byStored = { ...staticMap, ...devMap };
+      const extra = byStored[key] ?? (EXTRA_ROTATION[placed.templateId] ?? 0);
+      placed.root.rotationQuaternion = placed.baseQuaternion.clone();
+      placed.root.addRotation(0, degreesToRadians(placed.rotation + 90 + extra), 0);
+    });
   }
 
   removePiece(id: string): void {
