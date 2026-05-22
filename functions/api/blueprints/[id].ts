@@ -45,10 +45,35 @@ export async function onRequestPatch(ctx: Ctx): Promise<Response> {
   const userId = await verifyAuth(request, env);
   if (!userId) return json({ error: 'Unauthorized' }, 401);
 
-  const row = await env.DB.prepare('SELECT user_id FROM blueprints WHERE id = ?')
-    .bind(id).first<{ user_id: string }>();
+  const row = await env.DB.prepare('SELECT user_id, r2_key FROM blueprints WHERE id = ?')
+    .bind(id).first<{ user_id: string; r2_key: string }>();
   if (!row) return json({ error: 'Not found' }, 404);
   if (row.user_id !== userId) return json({ error: 'Forbidden' }, 403);
+
+  // Multipart: replace blueprint JSON file
+  const contentType = request.headers.get('Content-Type') ?? '';
+  if (contentType.includes('multipart/form-data')) {
+    const formData = await request.formData();
+    const file = formData.get('file') as File | null;
+    if (!file) return json({ error: 'Missing file' }, 400);
+    if (file.size > 2 * 1024 * 1024) return json({ error: 'File too large (max 2MB)' }, 413);
+
+    const jsonText = await file.text();
+    let raw: { instances?: unknown[]; placeables?: unknown[] };
+    try {
+      raw = JSON.parse(jsonText);
+    } catch {
+      return json({ error: 'Invalid blueprint JSON' }, 400);
+    }
+
+    const pieceCount = (raw.instances?.length ?? 0) + (raw.placeables?.length ?? 0);
+    await env.BUCKET.put(row.r2_key, jsonText, { httpMetadata: { contentType: 'application/json' } });
+    await env.DB.prepare(
+      'UPDATE blueprints SET blueprint_data = ?, piece_count = ?, file_size = ? WHERE id = ?'
+    ).bind(jsonText, pieceCount, file.size, id).run();
+
+    return json({ success: true, piece_count: pieceCount, file_size: file.size });
+  }
 
   const body = await request.json<{
     title?: string;

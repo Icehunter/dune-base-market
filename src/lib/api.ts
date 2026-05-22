@@ -165,6 +165,29 @@ export async function uploadSnapshot(
   return res.json() as Promise<{ snapshot_url: string }>;
 }
 
+export async function replaceBlueprintJson(
+  id: string,
+  file: File,
+  getToken: () => Promise<string | null>
+): Promise<{ piece_count: number; file_size: number }> {
+  const token = await getToken();
+  if (!token) throw new Error('Not authenticated');
+
+  const form = new FormData();
+  form.append('file', file);
+
+  const res = await fetch(`/api/blueprints/${id}`, {
+    method: 'PATCH',
+    headers: { Authorization: `Bearer ${token}` },
+    body: form,
+  });
+  if (!res.ok) {
+    const body = await res.json() as { error: string };
+    throw new Error(body.error ?? `Replace failed: ${res.status}`);
+  }
+  return res.json() as Promise<{ piece_count: number; file_size: number }>;
+}
+
 export async function rateBlueprint(
   id: string,
   getToken: () => Promise<string | null>

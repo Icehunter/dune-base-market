@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAuth, SignInButton } from '@clerk/react';
-import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint } from '../lib/api';
+import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint, replaceBlueprintJson } from '../lib/api';
 import type { BlueprintDetail } from '../lib/api';
 import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
 import type { RotMap } from '../data/modelRegistry';
@@ -28,6 +28,9 @@ export default function BlueprintDetailPage() {
   const [snapshotUrl, setSnapshotUrl] = useState<string | null>(null);
   const [userRated, setUserRated] = useState(false);
   const [ratingCount, setRatingCount] = useState(0);
+  const [replacing, setReplacing] = useState(false);
+  const [replaceError, setReplaceError] = useState<string | null>(null);
+  const replaceInputRef = useRef<HTMLInputElement>(null);
   const [viewerMode, setViewerMode] = useState<'orbit' | 'fly'>('orbit');
   const [isEditMode, setIsEditMode] = useState(false);
   // devMapRef holds the live map — never triggers re-renders on its own.
@@ -156,7 +159,7 @@ export default function BlueprintDetailPage() {
     if (!file || !id) return;
     try {
       const { snapshot_url } = await uploadSnapshot(id, file, getToken);
-      setSnapshotUrl(snapshot_url);
+      setSnapshotUrl(`${snapshot_url}?t=${Date.now()}`);
     } catch (err) {
       console.error('Snapshot upload failed', err);
     }
@@ -168,7 +171,7 @@ export default function BlueprintDetailPage() {
       const blob = await sceneRef.current!.captureScreenshot();
       const file = new File([blob], 'cover.png', { type: 'image/png' });
       const { snapshot_url } = await uploadSnapshot(id, file, getToken);
-      setSnapshotUrl(snapshot_url);
+      setSnapshotUrl(`${snapshot_url}?t=${Date.now()}`);
     } catch (err) {
       console.error('Save view as cover failed', err);
     }
@@ -182,6 +185,32 @@ export default function BlueprintDetailPage() {
       setRatingCount(rating_count);
     } catch (err) {
       console.error('Rate failed', err);
+    }
+  }
+
+  async function handleReplaceJson(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file || !id) return;
+    if (!file.name.endsWith('.json')) { setReplaceError('File must be a .json blueprint'); return; }
+    if (file.size > 2 * 1024 * 1024) { setReplaceError('File too large (max 2MB)'); return; }
+    try {
+      const text = await file.text();
+      JSON.parse(text);
+    } catch {
+      setReplaceError('Invalid JSON — could not parse blueprint');
+      return;
+    }
+    setReplacing(true);
+    setReplaceError(null);
+    try {
+      await replaceBlueprintJson(id, file, getToken);
+      const bp = await getBlueprint(id, isSignedIn ? getToken : undefined);
+      setBlueprint(bp);
+    } catch (err) {
+      setReplaceError(err instanceof Error ? err.message : 'Replace failed');
+    } finally {
+      setReplacing(false);
     }
   }
 
@@ -500,7 +529,23 @@ export default function BlueprintDetailPage() {
               >
                 🗑 Delete
               </button>
+              <label
+                style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a1e2e', border: '1px solid rgba(100,130,255,0.25)', borderRadius: 4, color: replacing ? 'rgba(100,130,255,0.4)' : 'rgba(100,130,255,0.7)', fontSize: 12, padding: '6px 0', cursor: replacing ? 'default' : 'pointer', textAlign: 'center' }}
+              >
+                {replacing ? '⏳' : '🔄'} Replace
+                <input
+                  ref={replaceInputRef}
+                  type="file"
+                  accept=".json"
+                  style={{ display: 'none' }}
+                  disabled={replacing}
+                  onChange={handleReplaceJson}
+                />
+              </label>
             </div>
+            {replaceError && (
+              <p style={{ color: '#e05555', fontSize: 11, margin: 0 }}>{replaceError}</p>
+            )}
             {isOwner && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <button
