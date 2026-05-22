@@ -77,15 +77,15 @@ float sampleShadow() {
           + tap(uvd.xy + vec2(-t, 0.0), depth)
           + tap(uvd.xy + vec2(0.0,  t), depth)
           + tap(uvd.xy + vec2(0.0, -t), depth);
-  return max(0.5, s / 5.0);
+  return max(0.05, s / 5.0);
 }
 void main() {
   vec3 N   = normalize(vN);
-  float kd = max(0.0, dot(N, normalize(vec3( 0.4, 1.0, -0.3)))) * 0.25;
-  float fd = max(0.0, dot(N, normalize(vec3(-0.6, 0.5,  0.4)))) * 0.15;
-  float bd = max(0.0, dot(N, normalize(vec3( 0.0,-1.0,  0.0)))) * 0.10;
+  float kd = max(0.0, dot(N, normalize(vec3( 0.4, 1.0, -0.3)))) * 0.65;
+  float fd = max(0.0, dot(N, normalize(vec3(-0.6, 0.5,  0.4)))) * 0.28;
+  float bd = max(0.0, dot(N, normalize(vec3( 0.0,-1.0,  0.0)))) * 0.08;
   float shadow = sampleShadow();
-  float lum = clamp(0.72 + (kd + fd) * shadow + bd, 0.0, 1.0);
+  float lum = clamp(0.28 + (kd + fd) * shadow + bd, 0.0, 1.0);
   gl_FragColor = vec4(uColor * lum, 1.0);
 }`;
 
