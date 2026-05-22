@@ -5,8 +5,9 @@ import { verifyAuth } from '../_lib/auth';
 type Ctx = EventContext<Env, string, Record<string, unknown>>;
 
 const VALID_SORTS: Record<string, string> = {
-  new: 'created_at DESC',
+  new:     'created_at DESC',
   popular: 'download_count DESC',
+  top:     'rating_count DESC',
 };
 
 export async function onRequestGet(ctx: Ctx): Promise<Response> {
@@ -26,12 +27,12 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     const userId = await verifyAuth(request, env);
     if (!userId) return json({ error: 'Unauthorized' }, 401);
 
-    let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, created_at
+    let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
                  FROM blueprints WHERE user_id = ? ORDER BY ${orderBy}`;
     const params: unknown[] = [userId];
 
     if (tag) {
-      query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, created_at
+      query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
                FROM blueprints WHERE user_id = ? AND tags LIKE ? ORDER BY ${orderBy}`;
       params.push(`%"${tag}"%`);
     }
@@ -40,12 +41,12 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     return json({ blueprints: results.map(deserialize) });
   }
 
-  let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, created_at
+  let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
                FROM blueprints WHERE is_public = 1 ORDER BY ${orderBy}`;
   const params: unknown[] = [];
 
   if (tag) {
-    query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, created_at
+    query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
              FROM blueprints WHERE is_public = 1 AND tags LIKE ? ORDER BY ${orderBy}`;
     params.push(`%"${tag}"%`);
   }

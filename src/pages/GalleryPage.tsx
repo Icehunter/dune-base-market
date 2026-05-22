@@ -13,7 +13,7 @@ export default function GalleryPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'all' | 'mine'>('all');
-  const [sort, setSort] = useState<'new' | 'popular'>('new');
+  const [sort, setSort] = useState<'new' | 'popular' | 'top'>('new');
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [uploadOpen, setUploadOpen] = useState(false);
 
@@ -134,7 +134,7 @@ export default function GalleryPage() {
 
           {activeTab === 'all' && (
             <div style={{ display: 'flex', gap: 6, marginLeft: 'auto' }}>
-              {(['new', 'popular'] as const).map((s) => (
+              {(['new', 'popular', 'top'] as const).map((s) => (
                 <button
                   key={s}
                   onClick={() => setSort(s)}
@@ -149,7 +149,7 @@ export default function GalleryPage() {
                     textTransform: 'capitalize',
                   }}
                 >
-                  {s === 'new' ? 'New' : 'Popular'}
+                  {s === 'new' ? 'New' : s === 'popular' ? 'Popular' : 'Top Rated'}
                 </button>
               ))}
             </div>

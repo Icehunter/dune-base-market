@@ -7,6 +7,8 @@ export interface BlueprintMeta {
   file_size: number | null;
   tags: string[];
   download_count: number;
+  rating_count: number;
+  snapshot_url: string | null;
   created_at: string;
 }
 
@@ -17,6 +19,8 @@ export interface BlueprintDetail extends BlueprintMeta {
     placeables: { building_type: string; x: number; y: number; z: number; rx?: number; ry?: number; rz?: number }[];
     pentashields?: { placeable_id: number; scale: [number, number, number] }[];
   } | null;
+  rotation_overrides: Record<string, Record<number, number>> | null;
+  user_rated: boolean;
 }
 
 async function authHeaders(getToken: () => Promise<string | null>): Promise<HeadersInit> {
@@ -24,8 +28,14 @@ async function authHeaders(getToken: () => Promise<string | null>): Promise<Head
   return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
+function normaliseSnapshotUrl(id: string, url: string | null): string | null {
+  if (!url) return null;
+  if (url.startsWith('snapshots/')) return `/api/blueprints/${id}/snapshot`;
+  return url;
+}
+
 export async function listBlueprints(
-  params: { sort?: 'new' | 'popular'; tag?: string; mine?: boolean },
+  params: { sort?: 'new' | 'popular' | 'top'; tag?: string; mine?: boolean },
   getToken?: () => Promise<string | null>
 ): Promise<BlueprintMeta[]> {
   const url = new URL('/api/blueprints', window.location.origin);
@@ -37,13 +47,14 @@ export async function listBlueprints(
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`Failed to list blueprints: ${res.status}`);
   const body = await res.json() as { blueprints: BlueprintMeta[] };
-  return body.blueprints;
+  return body.blueprints.map(b => ({ ...b, snapshot_url: normaliseSnapshotUrl(b.id, b.snapshot_url) }));
 }
 
 export async function getBlueprint(id: string): Promise<BlueprintDetail> {
   const res = await fetch(`/api/blueprints/${id}`);
   if (!res.ok) throw new Error(`Blueprint not found: ${res.status}`);
-  return res.json() as Promise<BlueprintDetail>;
+  const bp = await res.json() as BlueprintDetail;
+  return { ...bp, snapshot_url: normaliseSnapshotUrl(bp.id, bp.snapshot_url) };
 }
 
 export async function uploadBlueprint(
@@ -85,6 +96,20 @@ export async function updateBlueprint(
   if (!res.ok) throw new Error(`Update failed: ${res.status}`);
 }
 
+export async function saveRotationOverrides(
+  id: string,
+  overrides: Record<string, Record<number, number>> | null,
+  getToken: () => Promise<string | null>
+): Promise<void> {
+  const headers = await authHeaders(getToken);
+  const res = await fetch(`/api/blueprints/${id}`, {
+    method: 'PATCH',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ rotation_overrides: overrides }),
+  });
+  if (!res.ok) throw new Error(`Failed to save rotation overrides: ${res.status}`);
+}
+
 export async function deleteBlueprint(
   id: string,
   getToken: () => Promise<string | null>
@@ -120,4 +145,34 @@ export async function downloadBlueprint(
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
+}
+
+export async function uploadSnapshot(
+  id: string,
+  file: File,
+  getToken: () => Promise<string | null>
+): Promise<{ snapshot_url: string }> {
+  const headers = await authHeaders(getToken);
+  const form = new FormData();
+  form.append('file', file);
+  const res = await fetch(`/api/blueprints/${id}/snapshot`, {
+    method: 'PUT',
+    headers,
+    body: form,
+  });
+  if (!res.ok) throw new Error(`Snapshot upload failed: ${res.status}`);
+  return res.json() as Promise<{ snapshot_url: string }>;
+}
+
+export async function rateBlueprint(
+  id: string,
+  getToken: () => Promise<string | null>
+): Promise<{ rated: boolean; rating_count: number }> {
+  const headers = await authHeaders(getToken);
+  const res = await fetch(`/api/blueprints/${id}/rate`, {
+    method: 'POST',
+    headers,
+  });
+  if (!res.ok) throw new Error(`Rate failed: ${res.status}`);
+  return res.json() as Promise<{ rated: boolean; rating_count: number }>;
 }

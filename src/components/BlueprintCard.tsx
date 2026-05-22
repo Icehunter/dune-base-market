@@ -23,22 +23,41 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
 
   return (
     <div style={{ background: '#13131a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, overflow: 'hidden' }}>
-      {/* Thumbnail */}
+      {/* Cover / placeholder — always 16:9 */}
       <Link
         to={`/blueprint/${blueprint.id}`}
         style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: 110,
+          display: 'block',
           width: '100%',
-          background: 'linear-gradient(135deg, #1a1a2e 0%, #2a2040 50%, #1a2a2e 100%)',
-          color: 'rgba(200,168,75,0.25)',
-          fontSize: 32,
+          aspectRatio: '16 / 9',
+          overflow: 'hidden',
+          borderRadius: '6px 6px 0 0',
+          background: '#0a0a0f',
+          flexShrink: 0,
           textDecoration: 'none',
         }}
       >
-        ⬡
+        {blueprint.snapshot_url ? (
+          <img
+            src={blueprint.snapshot_url}
+            alt={blueprint.title}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            loading="lazy"
+          />
+        ) : (
+          <div style={{
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #2a2040 50%, #1a2a2e 100%)',
+            color: 'rgba(200,168,75,0.25)',
+            fontSize: 32,
+          }}>
+            ⬡
+          </div>
+        )}
       </Link>
 
       {/* Body */}
@@ -80,6 +99,7 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
         >
           👁 View
         </Link>
+        <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11 }}>♥ {blueprint.rating_count ?? 0}</span>
         <div style={{ flex: 1 }} />
 
         {onDelete && (

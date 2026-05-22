@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAuth, SignInButton } from '@clerk/react';
-import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint } from '../lib/api';
+import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint } from '../lib/api';
 import type { BlueprintDetail } from '../lib/api';
 import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
 import type { RotMap } from '../data/modelRegistry';
 import type { SceneCanvasHandle } from '../components/Scene';
+import { ViewerHUD } from '../components/Scene';
 
 const SceneCanvas = lazy(() =>
   import('../components/Scene').then((m) => ({ default: m.SceneCanvas }))
@@ -24,6 +25,11 @@ export default function BlueprintDetailPage() {
   const [tagInput, setTagInput] = useState('');
   const [locked, setLocked] = useState(false);
   const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
+  const [snapshotUrl, setSnapshotUrl] = useState<string | null>(null);
+  const [userRated, setUserRated] = useState(false);
+  const [ratingCount, setRatingCount] = useState(0);
+  const [viewerMode, setViewerMode] = useState<'orbit' | 'fly'>('orbit');
+  const [isEditMode, setIsEditMode] = useState(false);
   // devMapRef holds the live map — never triggers re-renders on its own.
   // devDisplayMap is a copy used only to re-render the HUD.
   const sceneRef  = useRef<SceneCanvasHandle | null>(null);
@@ -37,28 +43,45 @@ export default function BlueprintDetailPage() {
   }, []);
 
   useEffect(() => {
-    if (!selectedPiece) return;
+    if (!selectedPiece || !isEditMode) return;
     const DEV_CYCLE = [0, 7.5, 15, 22.5, 30, 37.5, 45, 52.5, 60, 67.5, 75, 82.5, 90, 97.5, 105, 112.5, 120, 127.5, 135, 142.5, 150, 157.5, 165, 172.5, 180, -172.5, -165, -157.5, -150, -142.5, -135, -127.5, -120, -112.5, -105, -97.5, -90, -82.5, -75, -67.5, -60, -52.5, -45, -37.5, -30, -22.5, -15, -7.5] as const;
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== 'r' && e.key !== 'R') return;
-      e.preventDefault();
       const { templateId, transform: { rotation } } = selectedPiece;
       const n = ((rotation % 360) + 360) % 360;
       const key = n > 180 ? n - 360 : n;
+
+      // Backspace/Delete — clear override for this piece's stored rotation
+      if (e.key === 'Backspace' || e.key === 'Delete') {
+        e.preventDefault();
+        const newTemplateMap = { ...devMapRef.current[templateId] };
+        delete newTemplateMap[key];
+        // Keep empty object rather than deleting the key — applyDevOverrides needs
+        // to see the templateId to revert those pieces to their base rotation.
+        const newMap = { ...devMapRef.current, [templateId]: newTemplateMap };
+        devMapRef.current = newMap;
+        sceneRef.current?.applyDevOverrides(devMapRef.current, devMapRef.current);
+        setDevDisplayMap({ ...devMapRef.current });
+        console.log('[DEV] reset override for', templateId, key, '→', devMapRef.current);
+        return;
+      }
+
+      if (e.key !== 'r' && e.key !== 'R') return;
+      e.preventDefault();
       const current = devMapRef.current[templateId]?.[key] ?? 0;
       const idx = DEV_CYCLE.indexOf(current as typeof DEV_CYCLE[number]);
-      const next = DEV_CYCLE[(idx + 1) % DEV_CYCLE.length];
+      const step = e.shiftKey ? -1 : 1;
+      const next = DEV_CYCLE[((idx + step) % DEV_CYCLE.length + DEV_CYCLE.length) % DEV_CYCLE.length];
       devMapRef.current = {
         ...devMapRef.current,
         [templateId]: { ...devMapRef.current[templateId], [key]: next },
       };
-      sceneRef.current?.applyDevOverrides(devMapRef.current);
+      sceneRef.current?.applyDevOverrides(devMapRef.current, devMapRef.current);
       setDevDisplayMap({ ...devMapRef.current });
       console.log('[DEV] ROTATION_BY_STORED override:', devMapRef.current);
     };
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
-  }, [selectedPiece]); // no devMapRef dep — handler always reads from the ref directly
+  }, [selectedPiece, isEditMode]); // isEditMode gates the listener
 
   useEffect(() => {
     if (!id) return;
@@ -69,10 +92,41 @@ export default function BlueprintDetailPage() {
         setEditTitle(bp.title);
         setEditPublic(!!bp.is_public);
         setEditTags(bp.tags ?? []);
+        setSnapshotUrl(bp.snapshot_url ?? null);
+        setUserRated(bp.user_rated ?? false);
+        setRatingCount(bp.rating_count ?? 0);
+        if (bp.rotation_overrides) {
+          devMapRef.current = bp.rotation_overrides as Partial<Record<string, RotMap>>;
+          setDevDisplayMap({ ...bp.rotation_overrides });
+        }
       })
       .catch(() => setError('Blueprint not found'))
       .finally(() => setLoading(false));
   }, [id]);
+
+  const isOwnerForEffect = !!userId && !!blueprint && userId === blueprint.user_id;
+
+  useEffect(() => {
+    if (!isOwnerForEffect) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'r') {
+        e.preventDefault();
+        setIsEditMode(m => !m);
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isOwnerForEffect]);
+
+  useEffect(() => {
+    if (!isOwnerForEffect || !id || !isSignedIn) return;
+    const timer = setTimeout(() => {
+      const map = Object.keys(devMapRef.current).length > 0 ? devMapRef.current : null;
+      saveRotationOverrides(id, map as Record<string, Record<number, number>> | null, getToken)
+        .catch(console.error);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [devDisplayMap, isOwnerForEffect, id, isSignedIn, getToken]);
 
   async function handleDownload() {
     if (!id) return;
@@ -96,6 +150,40 @@ export default function BlueprintDetailPage() {
     } catch (err) { console.error(err); }
   }
 
+  async function handleSnapshotUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file || !id) return;
+    try {
+      const { snapshot_url } = await uploadSnapshot(id, file, getToken);
+      setSnapshotUrl(snapshot_url);
+    } catch (err) {
+      console.error('Snapshot upload failed', err);
+    }
+  }
+
+  async function handleSaveViewAsCover() {
+    if (!id) return;
+    try {
+      const blob = await sceneRef.current!.captureScreenshot();
+      const file = new File([blob], 'cover.png', { type: 'image/png' });
+      const { snapshot_url } = await uploadSnapshot(id, file, getToken);
+      setSnapshotUrl(snapshot_url);
+    } catch (err) {
+      console.error('Save view as cover failed', err);
+    }
+  }
+
+  async function handleRate() {
+    if (!id || !isSignedIn) return;
+    try {
+      const { rated, rating_count } = await rateBlueprint(id, getToken);
+      setUserRated(rated);
+      setRatingCount(rating_count);
+    } catch (err) {
+      console.error('Rate failed', err);
+    }
+  }
+
   if (loading) return (
     <div style={{ color: 'rgba(255,255,255,0.3)', textAlign: 'center', paddingTop: 80 }}>Loading...</div>
   );
@@ -117,8 +205,10 @@ export default function BlueprintDetailPage() {
             <SceneCanvas
               ref={sceneRef}
               onSelectPiece={setSelectedPiece}
+              onModeChange={setViewerMode}
               initialDistanceScale={1}
               initialBlueprint={blueprint.blueprint_data as unknown as RawBlueprint}
+              userRotationOverrides={devDisplayMap}
             />
           </Suspense>
         ) : (
@@ -137,32 +227,32 @@ export default function BlueprintDetailPage() {
           }}>+</div>
         )}
 
-        {/* Click-to-enter overlay */}
-        {!locked && blueprint.blueprint_data && (
-          <div style={{
-            position: 'absolute', top: '50%', left: '50%',
-            transform: 'translate(-50%, -50%)',
-            background: 'rgba(0,0,0,0.75)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            borderRadius: 16,
-            padding: '28px 44px',
-            textAlign: 'center',
-            color: '#fff',
-            pointerEvents: 'none',
-            backdropFilter: 'blur(4px)',
-          }}>
-            <div style={{ fontSize: 20, fontWeight: 700, marginBottom: 16 }}>
-              Click to enter the base
-            </div>
-            <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.65)', lineHeight: 2 }}>
-              <span style={{ color: '#fff', fontWeight: 600 }}>WASD</span> — fly forward/back/left/right
-              <br />
-              <span style={{ color: '#fff', fontWeight: 600 }}>Space</span> — fly up&nbsp;&nbsp;
-              <span style={{ color: '#fff', fontWeight: 600 }}>Shift</span> — fly down
-              <br />
-              <span style={{ color: '#fff', fontWeight: 600 }}>Esc</span> — release mouse
-            </div>
-          </div>
+        <ViewerHUD
+          mode={viewerMode}
+          locked={locked}
+          pieceSelected={!!selectedPiece}
+          isOwner={isOwner}
+          isEditMode={isEditMode}
+        />
+
+        {/* Edit mode toggle — owner only */}
+        {isOwner && blueprint.blueprint_data && (
+          <button
+            onClick={() => setIsEditMode(m => !m)}
+            style={{
+              position: 'absolute', top: 12, right: 12,
+              background: isEditMode ? 'rgba(200,168,75,0.2)' : 'rgba(0,0,0,0.5)',
+              border: `1px solid ${isEditMode ? 'rgba(200,168,75,0.6)' : 'rgba(255,255,255,0.15)'}`,
+              borderRadius: 6,
+              color: isEditMode ? '#c8a84b' : 'rgba(255,255,255,0.5)',
+              fontSize: 11,
+              padding: '5px 10px',
+              cursor: 'pointer',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
+            {isEditMode ? '✓ Editing' : 'Edit Rotations'}
+          </button>
         )}
 
         {/* Selected piece info */}
@@ -191,17 +281,17 @@ export default function BlueprintDetailPage() {
               &nbsp;&nbsp;
               <span style={{ color: '#fff' }}>Category:</span> {selectedPiece.category}
             </div>
-            {(() => {
+            {isOwner && isEditMode && (() => {
               const n = ((selectedPiece.transform.rotation % 360) + 360) % 360;
               const key = n > 180 ? n - 360 : n;
               const devVal = devDisplayMap[selectedPiece.templateId]?.[key];
               return devVal !== undefined ? (
                 <div style={{ color: '#7ec8e3', fontSize: 10 }}>
-                  [DEV] override: {devVal > 0 ? '+' : ''}{devVal}° &nbsp;press R to cycle
+                  [override] {devVal > 0 ? '+' : ''}{devVal}° · R / Shift+R to cycle
                 </div>
               ) : (
                 <div style={{ color: 'rgba(255,255,255,0.25)', fontSize: 10 }}>
-                  press R to add rotation override
+                  R to add rotation fix
                 </div>
               );
             })()}
@@ -236,6 +326,14 @@ export default function BlueprintDetailPage() {
         <Link to="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, textDecoration: 'none' }}>
           ← Back to gallery
         </Link>
+
+        {snapshotUrl && (
+          <img
+            src={snapshotUrl}
+            alt="Cover"
+            style={{ width: '100%', borderRadius: 6, objectFit: 'cover', aspectRatio: '16/9' }}
+          />
+        )}
 
         {/* Title / edit mode */}
         {editing ? (
@@ -366,21 +464,80 @@ export default function BlueprintDetailPage() {
           </SignInButton>
         )}
 
+        {/* Like button */}
+        {isSignedIn && (
+          <button
+            onClick={handleRate}
+            style={{
+              width: '100%',
+              background: userRated ? 'rgba(200,50,50,0.2)' : 'transparent',
+              border: `1px solid ${userRated ? 'rgba(200,50,50,0.5)' : 'rgba(255,255,255,0.15)'}`,
+              borderRadius: 6,
+              color: userRated ? '#e05555' : 'rgba(255,255,255,0.4)',
+              padding: '9px 0',
+              fontSize: 13,
+              cursor: 'pointer',
+            }}
+          >
+            {userRated ? '♥' : '♡'} {ratingCount} {userRated ? 'Liked' : 'Like'}
+          </button>
+        )}
+
         {/* Owner controls */}
         {isOwner && !editing && (
-          <div style={{ display: 'flex', gap: 6 }}>
-            <button
-              onClick={() => setEditing(true)}
-              style={{ flex: 1, background: '#1e1e2e', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 4, color: '#aaa', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
-            >
-              ✏ Edit
-            </button>
-            <button
-              onClick={handleDelete}
-              style={{ flex: 1, background: '#2e1a1a', border: '1px solid #4a2a2a', borderRadius: 4, color: '#9a5a5a', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
-            >
-              🗑 Delete
-            </button>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div style={{ display: 'flex', gap: 6 }}>
+              <button
+                onClick={() => setEditing(true)}
+                style={{ flex: 1, background: '#1e1e2e', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 4, color: '#aaa', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
+              >
+                ✏ Edit
+              </button>
+              <button
+                onClick={handleDelete}
+                style={{ flex: 1, background: '#2e1a1a', border: '1px solid #4a2a2a', borderRadius: 4, color: '#9a5a5a', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
+              >
+                🗑 Delete
+              </button>
+            </div>
+            {isOwner && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <button
+                  onClick={handleSaveViewAsCover}
+                  style={{
+                    width: '100%',
+                    background: '#1e1e2e',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: 4,
+                    color: '#aaa',
+                    fontSize: 12,
+                    padding: '6px 0',
+                    cursor: 'pointer',
+                  }}
+                >
+                  📷 Save View as Cover
+                </button>
+                <label style={{
+                  display: 'block',
+                  textAlign: 'center',
+                  background: '#1e1e2e',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  borderRadius: 4,
+                  color: '#aaa',
+                  fontSize: 12,
+                  padding: '6px 0',
+                  cursor: 'pointer',
+                }}>
+                  📁 Upload Cover File
+                  <input
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    style={{ display: 'none' }}
+                    onChange={handleSnapshotUpload}
+                  />
+                </label>
+              </div>
+            )}
           </div>
         )}
 

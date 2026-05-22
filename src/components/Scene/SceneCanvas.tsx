@@ -3,6 +3,7 @@ import {
   Engine,
   Scene,
   UniversalCamera,
+  ArcRotateCamera,
   HemisphericLight,
   DirectionalLight,
   ShadowGenerator,
@@ -28,21 +29,32 @@ const FLY_SPEED       = 400;
 const FLY_SPEED_FAST  = 1600;
 
 export interface SceneCanvasHandle {
-  applyDevOverrides: (map: Partial<Record<string, RotMap>>) => void;
+  applyDevOverrides: (devMap: Partial<Record<string, RotMap>>, userMap?: Partial<Record<string, RotMap>>) => void;
+  setMode: (mode: 'orbit' | 'fly') => void;
+  captureScreenshot: () => Promise<Blob>;
 }
 
 interface Props {
+  ref?: React.Ref<SceneCanvasHandle>;
   onSelectPiece?: (piece: PlacedPiece | null) => void;
+  onModeChange?: (mode: 'orbit' | 'fly') => void;
   initialDistanceScale?: number;
   initialBlueprint?: RawBlueprint;
+  userRotationOverrides?: Partial<Record<string, RotMap>>;
 }
 
 export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
-  function SceneCanvas({ onSelectPiece, initialDistanceScale = 1, initialBlueprint }, ref) {
+  function SceneCanvas({ onSelectPiece, onModeChange, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
     const canvasRef     = useRef<HTMLCanvasElement>(null);
     const onSelectRef   = useRef(onSelectPiece);
     const pmRef         = useRef<PieceManager | null>(null);
     const selectedIdRef = useRef<string | null>(null);
+    const modeRef              = useRef<'orbit' | 'fly'>('orbit');
+    const onModeChangeRef      = useRef(onModeChange);
+    const userOverridesRef     = useRef(userRotationOverrides);
+    const orbitCamRef     = useRef<ArcRotateCamera | null>(null);
+    const flyCamRef       = useRef<UniversalCamera | null>(null);
+    const babylonScene    = useRef<Scene | null>(null);
 
     // Selector-scoped subscriptions so internal Zustand events don't re-render
     // this component (which would trigger the heavy scene useEffect).
@@ -50,7 +62,34 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     const loadFromRaw = useBuildingStore((s) => s.loadFromRaw);
 
     useImperativeHandle(ref, () => ({
-      applyDevOverrides: (map) => pmRef.current?.applyDevOverrides(map),
+      applyDevOverrides: (devMap, userMap = {}) => pmRef.current?.applyDevOverrides(devMap, userMap),
+      captureScreenshot: () => new Promise<Blob>((resolve, reject) => {
+        const canvas = canvasRef.current;
+        if (!canvas) { reject(new Error('No canvas')); return; }
+        canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('toBlob failed')), 'image/png');
+      }),
+      setMode: (mode) => {
+        const orbitCam = orbitCamRef.current;
+        const flyCam   = flyCamRef.current;
+        const scene    = babylonScene.current;
+        const canvas   = canvasRef.current;
+        if (!orbitCam || !flyCam || !scene || !canvas) return;
+        if (mode === modeRef.current) return;
+        if (mode === 'fly') {
+          orbitCam.detachControl();
+          scene.activeCamera = flyCam;
+          modeRef.current = 'fly';
+          canvas.requestPointerLock();
+          onModeChangeRef.current?.('fly');
+        } else {
+          if (document.pointerLockElement === canvas) document.exitPointerLock();
+          flyCam.detachControl();
+          scene.activeCamera = orbitCam;
+          orbitCam.attachControl(canvas, true);
+          modeRef.current = 'orbit';
+          onModeChangeRef.current?.('orbit');
+        }
+      },
     }));
 
     useEffect(() => {
@@ -59,6 +98,8 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
 
     // Keep callback ref current without re-running the heavy effect.
     useEffect(() => { onSelectRef.current = onSelectPiece; }, [onSelectPiece]);
+    useEffect(() => { onModeChangeRef.current = onModeChange; }, [onModeChange]);
+    useEffect(() => { userOverridesRef.current = userRotationOverrides; }, [userRotationOverrides]);
 
     useEffect(() => {
       const canvas = canvasRef.current;
@@ -82,6 +123,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
 
       let cx = 0, cy = 200, cz = 0;
       let startPos: Vector3;
+      let initRadius = 4000;
 
       if (pieces.length > 0) {
         const xs = pieces.map(p => p.transform.position.x);
@@ -96,42 +138,75 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
         cz = (minY + maxY) / 2;
         cy = maxZ * 0.35;
 
-        const spanH = Math.max(maxX - minX, maxY - minY) + TILE * 2;
-        const dist  = (spanH / 2) / Math.tan(0.4) * 1.3 * initialDistanceScale;
-        const hDist = dist * Math.cos(Math.PI / 4);
-        const vDist = dist * Math.sin(Math.PI / 4);
+        const spanX = maxX - minX + TILE * 2;
+        const spanY = maxY - minY + TILE * 2;
+        const spanZ = maxZ - Math.min(...zs) + TILE;
+        const diag  = Math.sqrt(spanX * spanX + spanY * spanY + spanZ * spanZ);
+        initRadius  = (diag / 2) / Math.tan(Math.PI / 6) * 0.85 * initialDistanceScale;
 
-        startPos = new Vector3(cx + hDist, cy + vDist, cz - hDist);
+        startPos = new Vector3(cx + initRadius * 0.6, cy + initRadius * 0.5, cz - initRadius * 0.6);
       } else {
         startPos = new Vector3(0, 500, -4000);
       }
 
-      // ── Fly camera ──────────────────────────────────────────────────────────
-      const camera = new UniversalCamera('fps', startPos, scene);
-      camera.setTarget(new Vector3(cx, cy, cz));
+      // ── Cameras ───────────────────────────────────────────────────────────────────
+      const target = new Vector3(cx, cy, cz);
 
-      camera.keysUp    = [87, 38]; // W / ↑
-      camera.keysDown  = [83, 40]; // S / ↓
-      camera.keysLeft  = [65, 37]; // A / ←
-      camera.keysRight = [68, 39]; // D / →
-      // Space and Shift are NOT bound to vertical movement —
-      // Shift is used as a speed modifier instead (see below).
+      // Orbit camera (default) — rotates around base, no pointer lock needed
+      const orbitCam = new ArcRotateCamera('orbit', -Math.PI / 4, Math.PI / 4, initRadius, target, scene);
+      orbitCam.lowerRadiusLimit = 100;
+      orbitCam.upperRadiusLimit = 200000;
+      orbitCam.wheelPrecision   = 0.5;
+      orbitCam.panningSensibility = 200;
+      orbitCam.minZ = 5;
+      orbitCam.maxZ = 200000;
 
-      camera.speed              = FLY_SPEED;
-      camera.angularSensibility = 600;
-      camera.inertia            = 0.05;
-      camera.minZ               = 5;
-      camera.maxZ               = 200000;
+      // Fly camera (Ctrl+M) — free-fly, requires pointer lock
+      const flyCam = new UniversalCamera('fly', startPos, scene);
+      flyCam.setTarget(target);
+      flyCam.keysUp    = [87, 38];
+      flyCam.keysDown  = [83, 40];
+      flyCam.keysLeft  = [65, 37];
+      flyCam.keysRight = [68, 39];
+      flyCam.speed              = FLY_SPEED;
+      flyCam.angularSensibility = 600;
+      flyCam.inertia            = 0.05;
+      flyCam.minZ               = 5;
+      flyCam.maxZ               = 200000;
 
-      // Shift = fast mode while held.
+      scene.activeCamera = orbitCam;
+      orbitCam.attachControl(canvas, true);
+      modeRef.current = 'orbit';
+
+      orbitCamRef.current  = orbitCam;
+      flyCamRef.current    = flyCam;
+      babylonScene.current = scene;
+
       const onKeyDown = (e: KeyboardEvent) => {
         if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
-          camera.speed = FLY_SPEED_FAST;
+          flyCam.speed = FLY_SPEED_FAST;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
+          e.preventDefault();
+          if (modeRef.current === 'orbit') {
+            orbitCam.detachControl();
+            scene.activeCamera = flyCam;
+            modeRef.current = 'fly';
+            canvas.requestPointerLock();
+            onModeChangeRef.current?.('fly');
+          } else {
+            if (document.pointerLockElement === canvas) document.exitPointerLock();
+            flyCam.detachControl();
+            scene.activeCamera = orbitCam;
+            orbitCam.attachControl(canvas, true);
+            modeRef.current = 'orbit';
+            onModeChangeRef.current?.('orbit');
+          }
         }
       };
       const onKeyUp = (e: KeyboardEvent) => {
         if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
-          camera.speed = FLY_SPEED;
+          flyCam.speed = FLY_SPEED;
         }
       };
       document.addEventListener('keydown', onKeyDown);
@@ -139,10 +214,13 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
 
       // ── Pointer lock ────────────────────────────────────────────────────────
       const onLockChange = () => {
+        if (modeRef.current !== 'fly') return;
         if (document.pointerLockElement === canvas) {
-          camera.attachControl(canvas, true);
+          flyCam.attachControl(canvas, true);
         } else {
-          camera.detachControl();
+          // Pointer lock released (Escape) — stay in fly mode, just pause controls.
+          // Clicking the canvas will re-lock and resume flying.
+          flyCam.detachControl();
         }
       };
       document.addEventListener('pointerlockchange', onLockChange);
@@ -181,15 +259,34 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
             new Vector3(piece.transform.position.x, piece.transform.position.z, piece.transform.position.y),
             piece.transform.rotation,
             piece.scale,
+            {},
+            userOverridesRef.current,
           );
         }
       });
 
       // ── Click: pick at crosshair when locked; re-lock when unlocked ─────────
       const onClick = () => {
-        if (document.pointerLockElement === canvas) {
-          // Pick at the crosshair (canvas centre) while flying.
-          const pick = scene.pick(canvas.clientWidth / 2, canvas.clientHeight / 2);
+        if (modeRef.current === 'fly') {
+          if (document.pointerLockElement === canvas) {
+            const pick = scene.pick(canvas.clientWidth / 2, canvas.clientHeight / 2);
+            if (pick.hit && pick.pickedMesh?.metadata?.pieceId) {
+              const pieceId = pick.pickedMesh.metadata.pieceId as string;
+              pm.selectPiece(pieceId);
+              selectedIdRef.current = pieceId;
+              const piece = pieces.find(p => p.id === pieceId) ?? null;
+              onSelectRef.current?.(piece);
+            } else {
+              pm.clearSelection();
+              selectedIdRef.current = null;
+              onSelectRef.current?.(null);
+            }
+          } else {
+            canvas.requestPointerLock();
+          }
+        } else {
+          // Orbit mode: pick at pointer position
+          const pick = scene.pick(scene.pointerX, scene.pointerY);
           if (pick.hit && pick.pickedMesh?.metadata?.pieceId) {
             const pieceId = pick.pickedMesh.metadata.pieceId as string;
             pm.selectPiece(pieceId);
@@ -201,9 +298,6 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
             selectedIdRef.current = null;
             onSelectRef.current?.(null);
           }
-        } else {
-          // Unlocked (post-Escape): click just re-enters fly mode, no selection.
-          canvas.requestPointerLock();
         }
       };
       canvas.addEventListener('click', onClick);
@@ -218,6 +312,9 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
         cancelled = true;
         pmRef.current = null;
         selectedIdRef.current = null;
+        orbitCamRef.current  = null;
+        flyCamRef.current    = null;
+        babylonScene.current = null;
         canvas.removeEventListener('click', onClick);
         document.removeEventListener('pointerlockchange', onLockChange);
         document.removeEventListener('keydown', onKeyDown);

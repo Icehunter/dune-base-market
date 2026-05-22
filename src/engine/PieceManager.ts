@@ -263,6 +263,7 @@ export class PieceManager {
     rotation: number,
     scale?: { x: number; y: number; z: number },
     devOverrides: Partial<Record<string, RotMap>> = {},
+    userOverrides: Partial<Record<string, RotMap>> = {},
   ): PlacedMesh | null {
     this.removePiece(id);
 
@@ -310,9 +311,10 @@ export class PieceManager {
     const n = ((rotation % 360) + 360) % 360;
     const key = n > 180 ? n - 360 : n;
     const staticMap  = ROTATION_BY_STORED[templateId];
+    const userMap    = userOverrides[templateId];
     const devMap     = devOverrides[templateId];
-    const byStored = (staticMap || devMap)
-      ? { ...staticMap, ...devMap }
+    const byStored = (staticMap || userMap || devMap)
+      ? { ...staticMap, ...userMap, ...devMap }
       : undefined;
     const extra = byStored != null ? (byStored[key] ?? 0) : (EXTRA_ROTATION[templateId] ?? 0);
     const baseQuaternion = (root.rotationQuaternion ?? Quaternion.Identity()).clone();
@@ -375,14 +377,18 @@ export class PieceManager {
     this.selectedId = null;
   }
 
-  applyDevOverrides(devOverrides: Partial<Record<string, RotMap>>): void {
+  applyDevOverrides(
+    devOverrides: Partial<Record<string, RotMap>>,
+    userOverrides: Partial<Record<string, RotMap>> = {},
+  ): void {
     this.placedMeshes.forEach((placed) => {
-      const devMap = devOverrides[placed.templateId];
-      if (!devMap) return;
+      const devMap  = devOverrides[placed.templateId];
+      const userMap = userOverrides[placed.templateId];
+      if (!devMap && !userMap) return;
       const n = ((placed.rotation % 360) + 360) % 360;
       const key = n > 180 ? n - 360 : n;
-      const staticMap  = ROTATION_BY_STORED[placed.templateId];
-      const byStored = { ...staticMap, ...devMap };
+      const staticMap = ROTATION_BY_STORED[placed.templateId];
+      const byStored = { ...staticMap, ...userMap, ...devMap };
       const extra = byStored[key] ?? (EXTRA_ROTATION[placed.templateId] ?? 0);
       placed.root.rotationQuaternion = placed.baseQuaternion.clone();
       placed.root.addRotation(0, degreesToRadians(placed.rotation + 90 + extra), 0);
