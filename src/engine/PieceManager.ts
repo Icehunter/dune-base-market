@@ -56,6 +56,7 @@ precision highp float;
 varying vec3 vN;
 varying vec4 vLightSpacePos;
 uniform vec3  uColor;
+uniform vec3  uSunDir;
 uniform float uHasShadow;
 uniform float uShadowBias;
 uniform float uShadowMapSize;
@@ -81,9 +82,10 @@ float sampleShadow() {
 }
 void main() {
   vec3 N   = normalize(vN);
-  float kd = max(0.0, dot(N, normalize(vec3( 0.4, 1.0, -0.3)))) * 0.65;
-  float fd = max(0.0, dot(N, normalize(vec3(-0.6, 0.5,  0.4)))) * 0.28;
-  float bd = max(0.0, dot(N, normalize(vec3( 0.0,-1.0,  0.0)))) * 0.08;
+  float kd = max(0.0, dot(N, uSunDir)) * 0.65;
+  vec3 fillDir = normalize(vec3(-uSunDir.z, 0.5, uSunDir.x));
+  float fd = max(0.0, dot(N, fillDir)) * 0.28;
+  float bd = max(0.0, dot(N, vec3(0.0, -1.0, 0.0))) * 0.08;
   float shadow = sampleShadow();
   float lum = clamp(0.28 + (kd + fd) * shadow + bd, 0.0, 1.0);
   gl_FragColor = vec4(uColor * lum, 1.0);
@@ -131,6 +133,7 @@ export class PieceManager {
           "world",
           "uLightMatrix",
           "uColor",
+          "uSunDir",
           "uHasShadow",
           "uShadowBias",
           "uShadowMapSize",
@@ -139,6 +142,7 @@ export class PieceManager {
       },
     );
     m.setColor3("uColor", new Color3(0.88, 0.9, 0.92));
+    m.setVector3("uSunDir", new Vector3(-0.3, 1.0, -0.5).normalize());
     m.setFloat("uHasShadow", 0.0);
     m.setFloat("uShadowBias", 0.012);
     m.setFloat("uShadowMapSize", 2048);
@@ -152,6 +156,8 @@ export class PieceManager {
       m.setTexture("uShadowMap", sm);
       m.setMatrix("uLightMatrix", sg.getTransformMatrix());
       m.setFloat("uHasShadow", 1.0);
+      const lightDir = (sg.getLight() as { direction?: Vector3 }).direction;
+      if (lightDir) m.setVector3("uSunDir", lightDir.negate());
     });
     this.flatMat = m;
     return m;

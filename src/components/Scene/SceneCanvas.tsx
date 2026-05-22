@@ -240,6 +240,17 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
       sg.usePoissonSampling = true;
       sg.bias = 0.0008;
 
+      // In orbit mode the sun orbits with the camera so shadows shift as you
+      // spin — gives the illusion of rotating the model in front of a fixed sun.
+      // In fly mode the sun direction is left unchanged (world-fixed).
+      const SUN_HORIZ = Math.sqrt(0.3 * 0.3 + 0.5 * 0.5);
+      const SUN_ALPHA_OFFSET = Math.atan2(0.5, 0.3) - orbitCam.alpha;
+      scene.onBeforeRenderObservable.add(() => {
+        if (modeRef.current !== 'orbit') return;
+        const a = orbitCam.alpha + SUN_ALPHA_OFFSET;
+        sun.direction = new Vector3(Math.cos(a) * SUN_HORIZ, -1.0, Math.sin(a) * SUN_HORIZ).normalize();
+      });
+
       // ── Piece Manager ────────────────────────────────────────────────────────
       const pm = new PieceManager(scene);
       pmRef.current = pm;
