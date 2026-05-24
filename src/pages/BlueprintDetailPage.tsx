@@ -1,17 +1,33 @@
-import { useState, useEffect, useMemo, useRef, lazy, Suspense } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
-import { useAuth, SignInButton } from '@clerk/react';
-import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint, replaceBlueprintJson, getVariant, createVariant, updateVariant, deleteVariant, forkBlueprint } from '../lib/api';
-import type { BlueprintDetail, BlueprintVariantSummary, BlueprintVariant } from '../lib/api';
-import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
-import type { RotMap } from '../data/modelRegistry';
-import { findEquivalents, getSetLabel, getShape } from '../data/pieceEquivalents';
-import type { SceneCanvasHandle } from '../components/Scene';
-import { ViewerHUD } from '../components/Scene';
+import { useState, useEffect, useMemo, useRef, lazy, Suspense } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { useAuth, SignInButton } from "@clerk/react";
+import { Button, Drawer, Select, ListBox } from "@heroui/react";
+import { Icon } from "@iconify/react";
+import { PromptDialog } from "../components/dialogs/PromptDialog";
+import { ConfirmDialog } from "../components/dialogs/ConfirmDialog";
+import {
+  getBlueprint,
+  downloadBlueprint,
+  deleteBlueprint,
+  updateBlueprint,
+  saveRotationOverrides,
+  uploadSnapshot,
+  rateBlueprint,
+  replaceBlueprintJson,
+  getVariant,
+  createVariant,
+  updateVariant,
+  deleteVariant,
+  forkBlueprint,
+} from "../lib/api";
+import type { BlueprintDetail, BlueprintVariantSummary, BlueprintVariant } from "../lib/api";
+import type { RawBlueprint, PlacedPiece } from "../stores/buildingStore";
+import type { RotMap } from "../data/modelRegistry";
+import { findEquivalents, getSetLabel, getShape } from "../data/pieceEquivalents";
+import type { SceneCanvasHandle } from "../components/Scene";
+import { ViewerHUD } from "../components/Scene";
 
-const SceneCanvas = lazy(() =>
-  import('../components/Scene').then((m) => ({ default: m.SceneCanvas }))
-);
+const SceneCanvas = lazy(() => import("../components/Scene").then((m) => ({ default: m.SceneCanvas })));
 
 export default function BlueprintDetailPage() {
   const { id, variantId: variantIdFromUrl } = useParams<{ id: string; variantId?: string }>();
@@ -21,10 +37,10 @@ export default function BlueprintDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [editing, setEditing] = useState(false);
-  const [editTitle, setEditTitle] = useState('');
+  const [editTitle, setEditTitle] = useState("");
   const [editPublic, setEditPublic] = useState(true);
   const [editTags, setEditTags] = useState<string[]>([]);
-  const [tagInput, setTagInput] = useState('');
+  const [tagInput, setTagInput] = useState("");
   const [locked, setLocked] = useState(false);
   const [selectedPiece, setSelectedPiece] = useState<PlacedPiece | null>(null);
   const [snapshotUrl, setSnapshotUrl] = useState<string | null>(null);
@@ -33,7 +49,8 @@ export default function BlueprintDetailPage() {
   const [replacing, setReplacing] = useState(false);
   const [replaceError, setReplaceError] = useState<string | null>(null);
   const replaceInputRef = useRef<HTMLInputElement>(null);
-  const [viewerMode, setViewerMode] = useState<'orbit' | 'fly'>('orbit');
+  const snapshotInputRef = useRef<HTMLInputElement>(null);
+  const [viewerMode, setViewerMode] = useState<"orbit" | "fly">("orbit");
   const [isEditMode, setIsEditMode] = useState(false);
   // Template overrides (originalTemplateId → replacementTemplateId). Applied to the
   // live scene via imperative swaps; persisted per-variant on the server.
@@ -47,32 +64,42 @@ export default function BlueprintDetailPage() {
   const suppressDirtyRef = useRef(false);
   const [pieceVariantsOpen, setPieceVariantsOpen] = useState(false);
   const [sceneReady, setSceneReady] = useState(false);
+  // Dialog state for the prompt/confirm modals that replaced window.prompt/confirm.
+  const [saveVariantOpen, setSaveVariantOpen] = useState(false);
+  const [renameVariantOpen, setRenameVariantOpen] = useState(false);
+  const [deleteVariantOpen, setDeleteVariantOpen] = useState(false);
+  const [deleteBlueprintOpen, setDeleteBlueprintOpen] = useState(false);
   // Default: open on desktop, collapsed on mobile.
-  const [infoOpen, setInfoOpen] = useState(() =>
-    typeof window === 'undefined' ? true : window.innerWidth >= 768,
-  );
+  const [infoOpen, setInfoOpen] = useState(() => (typeof window === "undefined" ? true : window.innerWidth >= 768));
   // devMapRef holds the live map — never triggers re-renders on its own.
   // devDisplayMap is a copy used only to re-render the HUD.
-  const sceneRef  = useRef<SceneCanvasHandle | null>(null);
+  const sceneRef = useRef<SceneCanvasHandle | null>(null);
   const devMapRef = useRef<Partial<Record<string, RotMap>>>({});
   const [devDisplayMap, setDevDisplayMap] = useState<Partial<Record<string, RotMap>>>({});
 
   useEffect(() => {
     const onChange = () => setLocked(document.pointerLockElement !== null);
-    document.addEventListener('pointerlockchange', onChange);
-    return () => document.removeEventListener('pointerlockchange', onChange);
+    document.addEventListener("pointerlockchange", onChange);
+    return () => document.removeEventListener("pointerlockchange", onChange);
   }, []);
 
   useEffect(() => {
     if (!selectedPiece || !isEditMode) return;
-    const DEV_CYCLE = [0, 7.5, 15, 22.5, 30, 37.5, 45, 52.5, 60, 67.5, 75, 82.5, 90, 97.5, 105, 112.5, 120, 127.5, 135, 142.5, 150, 157.5, 165, 172.5, 180, -172.5, -165, -157.5, -150, -142.5, -135, -127.5, -120, -112.5, -105, -97.5, -90, -82.5, -75, -67.5, -60, -52.5, -45, -37.5, -30, -22.5, -15, -7.5] as const;
+    const DEV_CYCLE = [
+      0, 7.5, 15, 22.5, 30, 37.5, 45, 52.5, 60, 67.5, 75, 82.5, 90, 97.5, 105, 112.5, 120, 127.5, 135, 142.5, 150,
+      157.5, 165, 172.5, 180, -172.5, -165, -157.5, -150, -142.5, -135, -127.5, -120, -112.5, -105, -97.5, -90, -82.5,
+      -75, -67.5, -60, -52.5, -45, -37.5, -30, -22.5, -15, -7.5,
+    ] as const;
     const onKeyDown = (e: KeyboardEvent) => {
-      const { templateId, transform: { rotation } } = selectedPiece;
+      const {
+        templateId,
+        transform: { rotation },
+      } = selectedPiece;
       const n = ((rotation % 360) + 360) % 360;
       const key = n > 180 ? n - 360 : n;
 
       // Backspace/Delete — clear override for this piece's stored rotation
-      if (e.key === 'Backspace' || e.key === 'Delete') {
+      if (e.key === "Backspace" || e.key === "Delete") {
         e.preventDefault();
         const newTemplateMap = { ...devMapRef.current[templateId] };
         delete newTemplateMap[key];
@@ -82,26 +109,26 @@ export default function BlueprintDetailPage() {
         devMapRef.current = newMap;
         sceneRef.current?.applyDevOverrides(devMapRef.current, devMapRef.current);
         setDevDisplayMap({ ...devMapRef.current });
-        console.log('[DEV] reset override for', templateId, key, '→', devMapRef.current);
+        console.log("[DEV] reset override for", templateId, key, "→", devMapRef.current);
         return;
       }
 
-      if (e.key !== 'r' && e.key !== 'R') return;
+      if (e.key !== "r" && e.key !== "R") return;
       e.preventDefault();
       const current = devMapRef.current[templateId]?.[key] ?? 0;
-      const idx = DEV_CYCLE.indexOf(current as typeof DEV_CYCLE[number]);
+      const idx = DEV_CYCLE.indexOf(current as (typeof DEV_CYCLE)[number]);
       const step = e.shiftKey ? -1 : 1;
-      const next = DEV_CYCLE[((idx + step) % DEV_CYCLE.length + DEV_CYCLE.length) % DEV_CYCLE.length];
+      const next = DEV_CYCLE[(((idx + step) % DEV_CYCLE.length) + DEV_CYCLE.length) % DEV_CYCLE.length];
       devMapRef.current = {
         ...devMapRef.current,
         [templateId]: { ...devMapRef.current[templateId], [key]: next },
       };
       sceneRef.current?.applyDevOverrides(devMapRef.current, devMapRef.current);
       setDevDisplayMap({ ...devMapRef.current });
-      console.log('[DEV] ROTATION_BY_STORED override:', devMapRef.current);
+      console.log("[DEV] ROTATION_BY_STORED override:", devMapRef.current);
     };
-    document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [selectedPiece, isEditMode]); // isEditMode gates the listener
 
   useEffect(() => {
@@ -123,7 +150,7 @@ export default function BlueprintDetailPage() {
           setDevDisplayMap({ ...bp.rotation_overrides });
         }
       })
-      .catch(() => setError('Blueprint not found'))
+      .catch(() => setError("Blueprint not found"))
       .finally(() => setLoading(false));
   }, [id, isSignedIn]); // isSignedIn: re-fetch once auth resolves so user_rated is correct
 
@@ -132,21 +159,20 @@ export default function BlueprintDetailPage() {
   useEffect(() => {
     if (!isOwnerForEffect) return;
     const onKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'r') {
+      if ((e.ctrlKey || e.metaKey) && e.key === "r") {
         e.preventDefault();
-        setIsEditMode(m => !m);
+        setIsEditMode((m) => !m);
       }
     };
-    document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, [isOwnerForEffect]);
 
   useEffect(() => {
     if (!isOwnerForEffect || !id || !isSignedIn) return;
     const timer = setTimeout(() => {
       const map = Object.keys(devMapRef.current).length > 0 ? devMapRef.current : null;
-      saveRotationOverrides(id, map as Record<string, Record<number, number>> | null, getToken)
-        .catch(console.error);
+      saveRotationOverrides(id, map as Record<string, Record<number, number>> | null, getToken).catch(console.error);
     }, 1500);
     return () => clearTimeout(timer);
   }, [devDisplayMap, isOwnerForEffect, id, isSignedIn, getToken]);
@@ -173,7 +199,7 @@ export default function BlueprintDetailPage() {
     prevOverridesRef.current = { ...next };
     if (swaps.length > 0) {
       if (suppressDirtyRef.current) suppressDirtyRef.current = false;
-      else                          setVariantDirty(true);
+      else setVariantDirty(true);
     }
 
     // After swaps resolve, if a piece is selected, sync its templateId so subsequent
@@ -188,11 +214,13 @@ export default function BlueprintDetailPage() {
     });
   }, [templateOverrides, sceneReady]);
 
-
   async function handleDownload() {
     if (!id) return;
-    try { await downloadBlueprint(id, getToken, selectedVariantId ?? undefined); }
-    catch (err) { console.error(err); }
+    try {
+      await downloadBlueprint(id, getToken, selectedVariantId ?? undefined);
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // Auto-select the variant from the URL once the scene is ready. Only runs when
@@ -225,50 +253,80 @@ export default function BlueprintDetailPage() {
       setSelectedVariantId(variantId);
       setVariantDirty(false);
       navigate(`/blueprint/${id}/v/${variantId}`, { replace: true });
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  async function handleSaveAsNewVariant() {
+  function handleSaveAsNewVariant() {
+    setSaveVariantOpen(true);
+  }
+  async function confirmSaveAsNewVariant(name: string) {
     if (!id) return;
-    const name = window.prompt('Name this variant', '')?.trim();
-    if (!name) return;
     try {
-      const v = await createVariant(id, {
-        name,
-        piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
-      }, getToken);
-      setVariants((prev) => [...prev, { id: v.id, name: v.name, snapshot_url: v.snapshot_url, download_count: v.download_count, created_at: v.created_at }]);
+      const v = await createVariant(
+        id,
+        {
+          name,
+          piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
+        },
+        getToken,
+      );
+      setVariants((prev) => [
+        ...prev,
+        {
+          id: v.id,
+          name: v.name,
+          snapshot_url: v.snapshot_url,
+          download_count: v.download_count,
+          created_at: v.created_at,
+        },
+      ]);
       setSelectedVariantId(v.id);
       setVariantDirty(false);
       navigate(`/blueprint/${id}/v/${v.id}`, { replace: true });
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   async function handleSaveVariantChanges() {
     if (!id || !selectedVariantId) return;
     try {
-      await updateVariant(id, selectedVariantId, {
-        piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
-      }, getToken);
+      await updateVariant(
+        id,
+        selectedVariantId,
+        {
+          piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
+        },
+        getToken,
+      );
       setVariantDirty(false);
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  async function handleRenameVariant() {
+  function handleRenameVariant() {
+    if (!selectedVariantId) return;
+    setRenameVariantOpen(true);
+  }
+  async function confirmRenameVariant(name: string) {
     if (!id || !selectedVariantId) return;
-    const current = variants.find((v) => v.id === selectedVariantId);
-    const name = window.prompt('Rename variant', current?.name ?? '')?.trim();
-    if (!name) return;
     try {
       await updateVariant(id, selectedVariantId, { name }, getToken);
-      setVariants((prev) => prev.map((v) => v.id === selectedVariantId ? { ...v, name } : v));
-    } catch (err) { console.error(err); }
+      setVariants((prev) => prev.map((v) => (v.id === selectedVariantId ? { ...v, name } : v)));
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  async function handleDeleteVariant() {
+  function handleDeleteVariant() {
+    if (!selectedVariantId) return;
+    setDeleteVariantOpen(true);
+  }
+  async function confirmDeleteVariant() {
     if (!id || !selectedVariantId) return;
-    const current = variants.find((v) => v.id === selectedVariantId);
-    if (!confirm(`Delete variant "${current?.name}"?`)) return;
     try {
       await deleteVariant(id, selectedVariantId, getToken);
       setVariants((prev) => prev.filter((v) => v.id !== selectedVariantId));
@@ -276,33 +334,42 @@ export default function BlueprintDetailPage() {
       setTemplateOverrides({});
       setVariantDirty(false);
       navigate(`/blueprint/${id}`, { replace: true });
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  async function handleDelete() {
-    if (!id || !confirm('Delete this blueprint?')) return;
+  function handleDelete() {
+    setDeleteBlueprintOpen(true);
+  }
+  async function confirmDelete() {
+    if (!id) return;
     try {
       await deleteBlueprint(id, getToken);
-      window.location.href = '/';
-    } catch (err) { console.error(err); }
+      window.location.href = "/";
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   async function handleSaveEdit() {
     if (!id) return;
     try {
       await updateBlueprint(id, { title: editTitle, is_public: editPublic, tags: editTags }, getToken);
-      setBlueprint((prev) => prev ? { ...prev, title: editTitle, is_public: editPublic ? 1 : 0, tags: editTags } : prev);
+      setBlueprint((prev) =>
+        prev ? { ...prev, title: editTitle, is_public: editPublic ? 1 : 0, tags: editTags } : prev,
+      );
       setEditing(false);
-    } catch (err) { console.error(err); }
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   // When a variant is selected, snapshots target that variant. Selecting Original
   // updates the blueprint cover. Cover URL state is refreshed so the sidebar img reloads.
   function applyUploadedSnapshotUrl(url: string) {
     if (selectedVariantId) {
-      setVariants((prev) => prev.map((v) =>
-        v.id === selectedVariantId ? { ...v, snapshot_url: url } : v,
-      ));
+      setVariants((prev) => prev.map((v) => (v.id === selectedVariantId ? { ...v, snapshot_url: url } : v)));
     } else {
       setSnapshotUrl(`${url}?t=${Date.now()}`);
     }
@@ -315,7 +382,7 @@ export default function BlueprintDetailPage() {
       const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
       applyUploadedSnapshotUrl(snapshot_url);
     } catch (err) {
-      console.error('Snapshot upload failed', err);
+      console.error("Snapshot upload failed", err);
     }
   }
 
@@ -323,11 +390,11 @@ export default function BlueprintDetailPage() {
     if (!id) return;
     try {
       const blob = await sceneRef.current!.captureScreenshot();
-      const file = new File([blob], 'cover.jpg', { type: 'image/jpeg' });
+      const file = new File([blob], "cover.jpg", { type: "image/jpeg" });
       const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
       applyUploadedSnapshotUrl(snapshot_url);
     } catch (err) {
-      console.error('Save view as cover failed', err);
+      console.error("Save view as cover failed", err);
     }
   }
 
@@ -337,7 +404,7 @@ export default function BlueprintDetailPage() {
       const { id: newId } = await forkBlueprint(id, getToken, selectedVariantId ?? undefined);
       navigate(`/blueprint/${newId}`);
     } catch (err) {
-      console.error('Fork failed', err);
+      console.error("Fork failed", err);
     }
   }
 
@@ -348,21 +415,27 @@ export default function BlueprintDetailPage() {
       setUserRated(rated);
       setRatingCount(rating_count);
     } catch (err) {
-      console.error('Rate failed', err);
+      console.error("Rate failed", err);
     }
   }
 
   async function handleReplaceJson(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
-    e.target.value = '';
+    e.target.value = "";
     if (!file || !id) return;
-    if (!file.name.endsWith('.json')) { setReplaceError('File must be a .json blueprint'); return; }
-    if (file.size > 2 * 1024 * 1024) { setReplaceError('File too large (max 2MB)'); return; }
+    if (!file.name.endsWith(".json")) {
+      setReplaceError("File must be a .json blueprint");
+      return;
+    }
+    if (file.size > 2 * 1024 * 1024) {
+      setReplaceError("File too large (max 2MB)");
+      return;
+    }
     try {
       const text = await file.text();
       JSON.parse(text);
     } catch {
-      setReplaceError('Invalid JSON — could not parse blueprint');
+      setReplaceError("Invalid JSON — could not parse blueprint");
       return;
     }
     setReplacing(true);
@@ -372,26 +445,29 @@ export default function BlueprintDetailPage() {
       const bp = await getBlueprint(id, isSignedIn ? getToken : undefined);
       setBlueprint(bp);
     } catch (err) {
-      setReplaceError(err instanceof Error ? err.message : 'Replace failed');
+      setReplaceError(err instanceof Error ? err.message : "Replace failed");
     } finally {
       setReplacing(false);
     }
   }
 
-  if (loading) return (
-    <div style={{ color: 'rgba(255,255,255,0.3)', textAlign: 'center', paddingTop: 80 }}>Loading...</div>
-  );
-  if (error || !blueprint) return (
-    <div style={{ color: '#e05555', textAlign: 'center', paddingTop: 80 }}>
-      {error ?? 'Not found'} · <Link to="/" style={{ color: '#c8a84b' }}>Back to gallery</Link>
-    </div>
-  );
+  if (loading)
+    return <div style={{ color: "rgba(255,255,255,0.3)", textAlign: "center", paddingTop: 80 }}>Loading...</div>;
+  if (error || !blueprint)
+    return (
+      <div style={{ color: "#e05555", textAlign: "center", paddingTop: 80 }}>
+        {error ?? "Not found"} ·{" "}
+        <Link to="/" style={{ color: "#c8a84b" }}>
+          Back to gallery
+        </Link>
+      </div>
+    );
 
   const isOwner = !!userId && userId === blueprint.user_id;
   const pieceGroups = buildPieceBreakdown(blueprint);
 
   return (
-    <div style={{ display: 'flex', height: 'calc(100vh - 52px)', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ display: "flex", height: "calc(100vh - 52px)", overflow: "hidden", position: "relative" }}>
       {/* Piece variants drawer — overlays the right side when open */}
       <PieceVariantsDrawer
         open={pieceVariantsOpen}
@@ -401,8 +477,45 @@ export default function BlueprintDetailPage() {
         onChange={setTemplateOverrides}
       />
 
+      {/* Prompt + confirm modals (replacing window.prompt / window.confirm) */}
+      <PromptDialog
+        isOpen={saveVariantOpen}
+        onClose={() => setSaveVariantOpen(false)}
+        title="Save as new variant"
+        description="Give this set of piece swaps a name so you can switch to it later."
+        placeholder="e.g. Harkonnen reskin"
+        confirmLabel="Save variant"
+        onConfirm={confirmSaveAsNewVariant}
+      />
+      <PromptDialog
+        isOpen={renameVariantOpen}
+        onClose={() => setRenameVariantOpen(false)}
+        title="Rename variant"
+        defaultValue={variants.find((v) => v.id === selectedVariantId)?.name ?? ""}
+        confirmLabel="Rename"
+        onConfirm={confirmRenameVariant}
+      />
+      <ConfirmDialog
+        isOpen={deleteVariantOpen}
+        onClose={() => setDeleteVariantOpen(false)}
+        title="Delete variant?"
+        message={`"${variants.find((v) => v.id === selectedVariantId)?.name ?? "This variant"}" will be removed. This cannot be undone.`}
+        confirmLabel="Delete variant"
+        destructive
+        onConfirm={confirmDeleteVariant}
+      />
+      <ConfirmDialog
+        isOpen={deleteBlueprintOpen}
+        onClose={() => setDeleteBlueprintOpen(false)}
+        title="Delete blueprint?"
+        message="This will permanently delete the blueprint, all variants, and its cover image. This cannot be undone."
+        confirmLabel="Delete blueprint"
+        destructive
+        onConfirm={confirmDelete}
+      />
+
       {/* 3D Viewer */}
-      <div style={{ flex: 1, position: 'relative', background: '#000', overflow: 'hidden' }}>
+      <div style={{ flex: 1, position: "relative", background: "#000", overflow: "hidden" }}>
         {blueprint.blueprint_data ? (
           <Suspense fallback={null}>
             <SceneCanvas
@@ -416,19 +529,36 @@ export default function BlueprintDetailPage() {
             />
           </Suspense>
         ) : (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'rgba(255,255,255,0.2)' }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100%",
+              color: "rgba(255,255,255,0.2)",
+            }}
+          >
             No preview available
           </div>
         )}
 
         {/* Crosshair */}
         {locked && (
-          <div style={{
-            position: 'absolute', top: '50%', left: '50%',
-            transform: 'translate(-50%, -50%)',
-            pointerEvents: 'none', color: 'rgba(255,255,255,0.7)',
-            fontSize: 20, lineHeight: 1, userSelect: 'none',
-          }}>+</div>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              pointerEvents: "none",
+              color: "rgba(255,255,255,0.7)",
+              fontSize: 20,
+              lineHeight: 1,
+              userSelect: "none",
+            }}
+          >
+            +
+          </div>
         )}
 
         <ViewerHUD
@@ -437,78 +567,70 @@ export default function BlueprintDetailPage() {
           pieceSelected={!!selectedPiece}
           isOwner={isOwner}
           isEditMode={isEditMode}
+          rightOffset={infoOpen ? 320 + 16 : 16}
         />
 
-        {/* Edit mode toggle — owner only */}
+        {/* Edit mode toggle — owner only. Tracks the sidebar's right edge so it never gets covered. */}
         {isOwner && blueprint.blueprint_data && (
           <button
-            onClick={() => setIsEditMode(m => !m)}
-            style={{
-              position: 'absolute', top: 12, right: 12,
-              background: isEditMode ? 'rgba(200,168,75,0.2)' : 'rgba(0,0,0,0.5)',
-              border: `1px solid ${isEditMode ? 'rgba(200,168,75,0.6)' : 'rgba(255,255,255,0.15)'}`,
-              borderRadius: 6,
-              color: isEditMode ? '#c8a84b' : 'rgba(255,255,255,0.5)',
-              fontSize: 11,
-              padding: '5px 10px',
-              cursor: 'pointer',
-              backdropFilter: 'blur(4px)',
-            }}
+            onClick={() => setIsEditMode((m) => !m)}
+            style={{ right: infoOpen ? 320 + 12 : 12, transition: "right 200ms ease-out" }}
+            className={`${btnBase} absolute top-3 z-10 w-auto py-1.5 backdrop-blur ${
+              isEditMode
+                ? "bg-[rgba(200,168,75,0.2)] border-[rgba(200,168,75,0.55)] text-[#c8a84b]"
+                : "bg-black/55 border-white/15 text-white/55 hover:bg-black/70 hover:text-white/80"
+            }`}
           >
-            {isEditMode ? '✓ Editing' : 'Edit Rotations'}
+            <Icon icon={isEditMode ? "lucide:check" : "lucide:rotate-3d"} width={14} height={14} />
+            {isEditMode ? "Editing" : "Edit Rotations"}
           </button>
         )}
 
         {/* Selected piece info */}
         {selectedPiece && (
-          <div style={{
-            position: 'absolute', bottom: 16, left: 16,
-            background: 'rgba(20,20,28,0.92)',
-            border: '1px solid rgba(255,255,255,0.12)',
-            borderRadius: 8,
-            padding: '10px 14px',
-            color: '#fff',
-            fontSize: 11,
-            pointerEvents: 'none',
-            userSelect: 'none',
-            maxWidth: 320,
-            lineHeight: 1.7,
-          }}>
-            <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 2 }}>
+          <div
+            style={{ transition: "left 200ms ease-out" }}
+            className="pointer-events-none absolute bottom-4 left-4 flex max-w-[320px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[11px] text-white backdrop-blur"
+          >
+            <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
+              <Icon icon="lucide:box-select" width={11} height={11} />
               {selectedPiece.category}
             </div>
-            <div style={{ fontSize: 12, fontWeight: 600, color: '#ffd84a', wordBreak: 'break-all', marginBottom: 4 }}>
+            <div className="break-all text-xs font-semibold text-[#ffd84a]">
               {selectedPiece.templateId}
             </div>
-            <div style={{ color: 'rgba(255,255,255,0.6)' }}>
-              <span style={{ color: '#fff' }}>Rotation:</span> {selectedPiece.transform.rotation}°
-              &nbsp;&nbsp;
-              <span style={{ color: '#fff' }}>Category:</span> {selectedPiece.category}
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/55">
+              <span className="inline-flex items-center gap-1">
+                <Icon icon="lucide:rotate-cw" width={10} height={10} />
+                {selectedPiece.transform.rotation}°
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <Icon icon="lucide:move-3d" width={10} height={10} />
+                {selectedPiece.transform.position.x}, {selectedPiece.transform.position.y}, {selectedPiece.transform.position.z}
+              </span>
+              {selectedPiece.scale && (
+                <span className="inline-flex items-center gap-1 text-[rgba(100,200,255,0.7)]">
+                  <Icon icon="lucide:scaling" width={10} height={10} />
+                  {selectedPiece.scale.x}×{selectedPiece.scale.y}×{selectedPiece.scale.z}
+                </span>
+              )}
             </div>
-            {isOwner && isEditMode && (() => {
-              const n = ((selectedPiece.transform.rotation % 360) + 360) % 360;
-              const key = n > 180 ? n - 360 : n;
-              const devVal = devDisplayMap[selectedPiece.templateId]?.[key];
-              return devVal !== undefined ? (
-                <div style={{ color: '#7ec8e3', fontSize: 10 }}>
-                  [override] {devVal > 0 ? '+' : ''}{devVal}° · R / Shift+R to cycle
-                </div>
-              ) : (
-                <div style={{ color: 'rgba(255,255,255,0.25)', fontSize: 10 }}>
-                  R to add rotation fix
-                </div>
-              );
-            })()}
-            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10 }}>
-              x={selectedPiece.transform.position.x}&nbsp;
-              y={selectedPiece.transform.position.y}&nbsp;
-              z={selectedPiece.transform.position.z}
-            </div>
-            {selectedPiece.scale && (
-              <div style={{ color: 'rgba(100,200,255,0.7)', fontSize: 10 }}>
-                scale {selectedPiece.scale.x}×{selectedPiece.scale.y}×{selectedPiece.scale.z}
-              </div>
-            )}
+            {isOwner &&
+              isEditMode &&
+              (() => {
+                const n = ((selectedPiece.transform.rotation % 360) + 360) % 360;
+                const key = n > 180 ? n - 360 : n;
+                const devVal = devDisplayMap[selectedPiece.templateId]?.[key];
+                return devVal !== undefined ? (
+                  <div className="inline-flex items-center gap-1 text-[10px] text-[#7ec8e3]">
+                    <Icon icon="lucide:wand" width={10} height={10} />
+                    override {devVal > 0 ? "+" : ""}
+                    {devVal}° · R / Shift+R to cycle
+                  </div>
+                ) : (
+                  <div className="text-[10px] text-white/30">R to add a rotation fix</div>
+                );
+              })()}
           </div>
         )}
       </div>
@@ -519,360 +641,337 @@ export default function BlueprintDetailPage() {
         <button
           onClick={() => setInfoOpen(true)}
           aria-label="Show info"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            right: 0,
-            transform: 'translateY(-50%)',
-            zIndex: 50,
-            background: 'rgba(30,30,42,0.92)',
-            border: '1px solid rgba(255,255,255,0.25)',
-            borderRight: 'none',
-            borderTopLeftRadius: 6,
-            borderBottomLeftRadius: 6,
-            color: '#fff',
-            fontSize: 12,
-            fontWeight: 600,
-            padding: '12px 8px',
-            cursor: 'pointer',
-            backdropFilter: 'blur(6px)',
-            boxShadow: '-2px 2px 6px rgba(0,0,0,0.4)',
-            writingMode: 'vertical-rl',
-          }}
+          className={`${btnBase} absolute right-0 top-1/2 z-50 -translate-y-1/2 rounded-r-none border-r-0 bg-[#1e1e2e] border-white/20 text-white/85 px-2 py-3 backdrop-blur hover:bg-[#26263a]`}
         >
-          ‹ Info
+          <Icon icon="lucide:panel-right-open" width={18} height={18} />
         </button>
       )}
 
-      {/* Sidebar */}
-      {infoOpen && (
+      {/* Sidebar — absolutely positioned + translateX so it slides cleanly off
+          the right edge instead of shrinking. Header stays sticky inside. */}
       <div
-        style={{
-          width: 280,
-          background: '#13131a',
-          borderLeft: '1px solid rgba(255,255,255,0.07)',
-          overflowY: 'auto',
-          padding: 20,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 16,
-          flexShrink: 0,
-        }}
+        className={`absolute right-0 top-0 bottom-0 z-40 flex w-[320px] shrink-0 flex-col border-l border-white/10 bg-[#13131a] transition-transform duration-200 ease-out ${
+          infoOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, textDecoration: 'none' }}>
-            ← Back to gallery
+        {/* Sticky header — Back-to-gallery + collapse, persistent above scroll. */}
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#13131a]/95 px-5 py-3 backdrop-blur">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-xs text-white/60 no-underline hover:text-white">
+            <Icon icon="lucide:arrow-left" width={14} height={14} />
+            Back to gallery
           </Link>
           <button
             onClick={() => setInfoOpen(false)}
-            aria-label="Hide info"
-            style={{
-              background: 'transparent', border: 'none',
-              color: 'rgba(255,255,255,0.5)', fontSize: 18,
-              cursor: 'pointer', padding: '0 4px', lineHeight: 1,
-            }}
-          >×</button>
+            aria-label="Collapse info panel"
+            title="Collapse panel"
+            className="inline-flex h-7 w-7 cursor-pointer items-center justify-center border-none bg-transparent text-white/55 hover:text-white"
+          >
+            <Icon icon="lucide:panel-right-close" width={18} height={18} />
+          </button>
         </div>
 
-        {/* Variant switcher — always shown; owners can save / rename / delete variants */}
-        <VariantSwitcher
-          variants={variants}
-          selectedVariantId={selectedVariantId}
-          dirty={variantDirty}
-          isOwner={isOwner}
-          hasOverrides={Object.keys(templateOverrides).length > 0}
-          onSelect={handleSelectVariant}
-          onSaveNew={handleSaveAsNewVariant}
-          onSaveChanges={handleSaveVariantChanges}
-          onRename={handleRenameVariant}
-          onDelete={handleDeleteVariant}
-        />
+        {/* Scrollable body */}
+        <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-5">
 
-        {(() => {
-          const variantSnap = selectedVariantId
-            ? variants.find((v) => v.id === selectedVariantId)?.snapshot_url ?? null
-            : null;
-          const url = variantSnap ?? snapshotUrl;
-          return url ? (
-            <img
-              src={url}
-              alt="Cover"
-              style={{ width: '100%', borderRadius: 6, objectFit: 'cover', aspectRatio: '16/9' }}
-            />
-          ) : null;
-        })()}
+          {/* Variant switcher — always shown; owners can save / rename / delete variants */}
+          <VariantSwitcher
+            variants={variants}
+            selectedVariantId={selectedVariantId}
+            dirty={variantDirty}
+            isOwner={isOwner}
+            hasOverrides={Object.keys(templateOverrides).length > 0}
+            onSelect={handleSelectVariant}
+            onSaveNew={handleSaveAsNewVariant}
+            onSaveChanges={handleSaveVariantChanges}
+            onRename={handleRenameVariant}
+            onDelete={handleDeleteVariant}
+          />
 
-        {/* Title / edit mode */}
-        {editing ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <input
-              value={editTitle}
-              onChange={(e) => setEditTitle(e.target.value)}
-              maxLength={80}
-              style={{
-                background: '#0a0a0f', border: '1px solid rgba(255,255,255,0.15)',
-                borderRadius: 4, padding: '6px 8px', color: '#fff', fontSize: 13,
-              }}
-            />
-            <label style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.5)', fontSize: 12 }}>
-              <input type="checkbox" checked={editPublic} onChange={(e) => setEditPublic(e.target.checked)} />
-              Public
-            </label>
-            <div>
-              <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 6px' }}>Tags</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 6 }}>
-                {['Foundation','Wall','Floor','Rooftop','Ramp','Stairs','Pillar','Door','Decoration'].map((tag) => {
-                  const active = editTags.includes(tag);
-                  return (
-                    <button
-                      key={tag}
-                      onClick={() => setEditTags(active ? editTags.filter(t => t !== tag) : [...editTags, tag])}
-                      style={{
-                        background: active ? 'rgba(200,168,75,0.2)' : 'rgba(255,255,255,0.05)',
-                        border: `1px solid ${active ? 'rgba(200,168,75,0.5)' : 'rgba(255,255,255,0.1)'}`,
-                        color: active ? '#c8a84b' : 'rgba(255,255,255,0.4)',
-                        borderRadius: 12, padding: '2px 9px', fontSize: 10, cursor: 'pointer',
-                      }}
-                    >{tag}</button>
-                  );
-                })}
-                {editTags.filter(t => !['Foundation','Wall','Floor','Rooftop','Ramp','Stairs','Pillar','Door','Decoration'].includes(t)).map((tag) => (
-                  <span key={tag} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'rgba(200,168,75,0.2)', border: '1px solid rgba(200,168,75,0.5)', color: '#c8a84b', borderRadius: 12, padding: '2px 9px', fontSize: 10 }}>
-                    {tag}
-                    <button onClick={() => setEditTags(editTags.filter(t2 => t2 !== tag))} style={{ background: 'none', border: 'none', color: '#c8a84b', cursor: 'pointer', padding: 0, fontSize: 11, lineHeight: 1 }}>×</button>
-                  </span>
-                ))}
-              </div>
-              <input
-                value={tagInput}
-                onChange={(e) => setTagInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if ((e.key === 'Enter' || e.key === ',') && tagInput.trim()) {
-                    e.preventDefault();
-                    const t = tagInput.trim().replace(/,/g, '');
-                    if (t && !editTags.includes(t)) setEditTags([...editTags, t]);
-                    setTagInput('');
-                  }
-                }}
-                placeholder="Type a tag, press Enter"
-                style={{
-                  width: '100%', background: '#0a0a0f', border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: 4, padding: '5px 8px', color: '#fff', fontSize: 11,
-                  boxSizing: 'border-box',
-                }}
+          {(() => {
+            const variantSnap = selectedVariantId
+              ? (variants.find((v) => v.id === selectedVariantId)?.snapshot_url ?? null)
+              : null;
+            const url = variantSnap ?? snapshotUrl;
+            return url ? (
+              <img
+                src={url}
+                alt="Cover"
+                style={{ width: "100%", borderRadius: 6, objectFit: "cover", aspectRatio: "16/9" }}
               />
+            ) : null;
+          })()}
+
+          {/* Title / edit mode */}
+          {editing ? (
+            <div className="flex flex-col gap-2">
+              <input
+                value={editTitle}
+                onChange={(e) => setEditTitle(e.target.value)}
+                maxLength={80}
+                className="rounded-[2px] border border-white/15 bg-black/30 px-2 py-1.5 text-sm text-white outline-none focus:border-accent"
+              />
+              <label className="inline-flex items-center gap-2 text-xs text-white/60">
+                <input
+                  type="checkbox"
+                  checked={editPublic}
+                  onChange={(e) => setEditPublic(e.target.checked)}
+                  className="accent-[#c8a84b]"
+                />
+                Public
+              </label>
+              <div>
+                <p className="m-0 mb-1.5 text-[10px] uppercase tracking-wide text-white/40">Tags</p>
+                <div className="mb-1.5 flex flex-wrap gap-1">
+                  {STANDARD_TAGS.map((tag) => {
+                    const active = editTags.includes(tag);
+                    return (
+                      <button
+                        key={tag}
+                        onClick={() => setEditTags(active ? editTags.filter((t) => t !== tag) : [...editTags, tag])}
+                        className={
+                          active
+                            ? "cursor-pointer rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.18)] px-2.5 py-0.5 text-[10px] text-[#c8a84b]"
+                            : "cursor-pointer rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[10px] text-white/45 hover:border-white/20 hover:text-white/70"
+                        }
+                      >
+                        {tag}
+                      </button>
+                    );
+                  })}
+                  {editTags
+                    .filter((t) => !(STANDARD_TAGS as readonly string[]).includes(t))
+                    .map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1 rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.2)] px-2.5 py-0.5 text-[10px] text-[#c8a84b]"
+                      >
+                        {tag}
+                        <button
+                          onClick={() => setEditTags(editTags.filter((t2) => t2 !== tag))}
+                          aria-label={`Remove tag ${tag}`}
+                          className="inline-flex cursor-pointer items-center border-none bg-transparent p-0 text-[#c8a84b] hover:text-white"
+                        >
+                          <Icon icon="lucide:x" width={11} height={11} />
+                        </button>
+                      </span>
+                    ))}
+                </div>
+                <input
+                  value={tagInput}
+                  onChange={(e) => setTagInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if ((e.key === "Enter" || e.key === ",") && tagInput.trim()) {
+                      e.preventDefault();
+                      const t = tagInput.trim().replace(/,/g, "");
+                      if (t && !editTags.includes(t)) setEditTags([...editTags, t]);
+                      setTagInput("");
+                    }
+                  }}
+                  placeholder="Type a tag, press Enter"
+                  className="box-border w-full rounded-[2px] border border-white/10 bg-black/30 px-2 py-1 text-xs text-white outline-none placeholder:text-white/30 focus:border-accent"
+                />
+              </div>
+              <div className="flex gap-1.5">
+                <button onClick={handleSaveEdit} className={`${btnGold} flex-1 text-xs py-1.5`}>
+                  <Icon icon="lucide:check" width={14} height={14} />
+                  Save
+                </button>
+                <button onClick={() => setEditing(false)} className={`${btnGhost} flex-1 text-xs py-1.5`}>
+                  Cancel
+                </button>
+              </div>
             </div>
-            <div style={{ display: 'flex', gap: 6 }}>
-              <button onClick={handleSaveEdit} style={{ flex: 1, background: '#c8a84b', border: 'none', borderRadius: 4, color: '#000', fontWeight: 700, fontSize: 12, padding: '5px 0', cursor: 'pointer' }}>Save</button>
-              <button onClick={() => setEditing(false)} style={{ flex: 1, background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4, color: 'rgba(255,255,255,0.5)', fontSize: 12, padding: '5px 0', cursor: 'pointer' }}>Cancel</button>
+          ) : (
+            <div className="flex flex-col gap-1">
+              <h1 className="m-0 text-base font-bold text-white">{blueprint.title}</h1>
+              <p className="m-0 flex items-center gap-1.5 text-xs text-white/45">
+                <Icon icon="lucide:user" width={12} height={12} />
+                {blueprint.username}
+                <span className="text-white/25">·</span>
+                <Icon icon="lucide:calendar" width={12} height={12} />
+                {new Date(blueprint.created_at).toLocaleDateString()}
+              </p>
+              <span
+                className={`mt-1 inline-flex w-fit items-center gap-1 rounded-[2px] border px-1.5 py-0.5 text-[10px] ${
+                  blueprint.is_public
+                    ? "border-[#2a4a2a] bg-[#1a2e1a] text-[#5a9a5a]"
+                    : "border-[#4a2a2a] bg-[#2e1a1a] text-[#9a5a5a]"
+                }`}
+              >
+                <Icon icon={blueprint.is_public ? "lucide:globe" : "lucide:lock"} width={10} height={10} />
+                {blueprint.is_public ? "public" : "private"}
+              </span>
             </div>
+          )}
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { label: "Pieces", value: blueprint.piece_count ?? "—", icon: "lucide:box" },
+              {
+                label: "Size",
+                value: blueprint.file_size ? `${(blueprint.file_size / 1024).toFixed(1)}KB` : "—",
+                icon: "lucide:hard-drive",
+              },
+              { label: "Downloads", value: blueprint.download_count, icon: "lucide:download" },
+              { label: "Tags", value: blueprint.tags.length || "—", icon: "lucide:tags" },
+            ].map(({ label, value, icon }) => (
+              <div
+                key={label}
+                className="flex flex-col items-center justify-center gap-1 rounded-[2px] border border-white/10 bg-black/25 px-2.5 py-2 text-center"
+              >
+                <Icon icon={icon} width={14} height={14} className="text-white/35" />
+                <div className="text-base font-bold leading-none text-[#c8a84b]">{value}</div>
+                <div className="text-[10px] uppercase tracking-wide text-white/35">{label}</div>
+              </div>
+            ))}
           </div>
-        ) : (
-          <div>
-            <h1 style={{ color: '#fff', fontSize: 16, fontWeight: 700, margin: '0 0 4px' }}>{blueprint.title}</h1>
-            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, margin: 0 }}>
-              by {blueprint.username} · {new Date(blueprint.created_at).toLocaleDateString()}
-            </p>
-            <span style={{
-              display: 'inline-block',
-              marginTop: 6,
-              background: blueprint.is_public ? '#1a2e1a' : '#2e1a1a',
-              border: `1px solid ${blueprint.is_public ? '#2a4a2a' : '#4a2a2a'}`,
-              color: blueprint.is_public ? '#5a9a5a' : '#9a5a5a',
-              fontSize: 9,
-              padding: '1px 5px',
-              borderRadius: 3,
-            }}>
-              {blueprint.is_public ? 'public' : 'private'}
-            </span>
-          </div>
-        )}
 
-        {/* Stats grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
-          {[
-            { label: 'Pieces', value: blueprint.piece_count ?? '—' },
-            { label: 'Size', value: blueprint.file_size ? `${(blueprint.file_size / 1024).toFixed(1)}KB` : '—' },
-            { label: 'Downloads', value: blueprint.download_count },
-            { label: 'Tags', value: blueprint.tags.length || '—' },
-          ].map(({ label, value }) => (
-            <div
-              key={label}
-              style={{
-                background: '#0a0a0f', border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: 6, padding: '8px 10px', textAlign: 'center',
-              }}
-            >
-              <div style={{ color: '#c8a84b', fontSize: 14, fontWeight: 700 }}>{value}</div>
-              <div style={{ color: 'rgba(255,255,255,0.3)', fontSize: 10, marginTop: 2 }}>{label}</div>
-            </div>
-          ))}
-        </div>
+          {/* Piece variants — opens a drawer overlaying the right side */}
+          <PieceVariantsTrigger
+            raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
+            overrides={templateOverrides}
+            onOpen={() => setPieceVariantsOpen(true)}
+          />
 
-        {/* Piece variants — opens a drawer overlaying the right side */}
-        <PieceVariantsTrigger
-          raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
-          overrides={templateOverrides}
-          onOpen={() => setPieceVariantsOpen(true)}
-        />
-
-        {/* Download */}
-        {isSignedIn ? (
-          <button
-            onClick={handleDownload}
-            style={{
-              width: '100%', background: '#c8a84b', border: 'none', borderRadius: 6,
-              color: '#000', fontWeight: 700, padding: '9px 0', fontSize: 13, cursor: 'pointer',
-            }}
-          >
-            ⬇ Download{Object.keys(templateOverrides).length > 0 ? ' (with swaps)' : ''}
-          </button>
-        ) : (
-          <SignInButton mode="modal">
-            <button style={{
-              width: '100%', background: 'transparent', border: '1px solid rgba(255,255,255,0.15)',
-              borderRadius: 6, color: 'rgba(255,255,255,0.4)', padding: '9px 0', fontSize: 13, cursor: 'pointer',
-            }}>
-              🔒 Sign in to download
+          {/* Download */}
+          {isSignedIn ? (
+            <button onClick={handleDownload} className={btnGold}>
+              <Icon icon="lucide:download" width={16} height={16} />
+              Download{Object.keys(templateOverrides).length > 0 ? " (with swaps)" : ""}
             </button>
-          </SignInButton>
-        )}
-
-        {/* Fork — any signed-in user except the owner. Creates a private copy of the
-            currently-selected variant (or Original) in their own account. */}
-        {isSignedIn && !isOwner && (
-          <button
-            onClick={handleFork}
-            style={{
-              width: '100%', background: 'transparent',
-              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 6,
-              color: 'rgba(255,255,255,0.7)', padding: '8px 0',
-              fontSize: 12, fontWeight: 600, cursor: 'pointer',
-            }}
-            title="Make a private copy in your account"
-          >
-            ⑂ Fork{selectedVariantId ? ' this variant' : ''}
-          </button>
-        )}
-
-        {/* Like button */}
-        {isSignedIn && (
-          <button
-            onClick={handleRate}
-            style={{
-              width: '100%',
-              background: userRated ? 'rgba(200,50,50,0.2)' : 'transparent',
-              border: `1px solid ${userRated ? 'rgba(200,50,50,0.5)' : 'rgba(255,255,255,0.15)'}`,
-              borderRadius: 6,
-              color: userRated ? '#e05555' : 'rgba(255,255,255,0.4)',
-              padding: '9px 0',
-              fontSize: 13,
-              cursor: 'pointer',
-            }}
-          >
-            {userRated ? '♥' : '♡'} {ratingCount} {userRated ? 'Liked' : 'Like'}
-          </button>
-        )}
-
-        {/* Owner controls */}
-        {isOwner && !editing && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            <div style={{ display: 'flex', gap: 6 }}>
-              <button
-                onClick={() => setEditing(true)}
-                style={{ flex: 1, background: '#1e1e2e', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 4, color: '#aaa', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
-              >
-                ✏ Edit
+          ) : (
+            <SignInButton mode="modal">
+              <button className={btnGhost}>
+                <Icon icon="lucide:lock" width={14} height={14} />
+                Sign in to download
               </button>
-              <button
-                onClick={handleDelete}
-                style={{ flex: 1, background: '#2e1a1a', border: '1px solid #4a2a2a', borderRadius: 4, color: '#9a5a5a', fontSize: 12, padding: '6px 0', cursor: 'pointer' }}
-              >
-                🗑 Delete
-              </button>
-              <label
-                style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a1e2e', border: '1px solid rgba(100,130,255,0.25)', borderRadius: 4, color: replacing ? 'rgba(100,130,255,0.4)' : 'rgba(100,130,255,0.7)', fontSize: 12, padding: '6px 0', cursor: replacing ? 'default' : 'pointer', textAlign: 'center' }}
-              >
-                {replacing ? '⏳' : '🔄'} Replace
+            </SignInButton>
+          )}
+
+          {/* Fork — any signed-in user except the owner. */}
+          {isSignedIn && !isOwner && (
+            <button onClick={handleFork} className={btnGhost} title="Make a private copy in your account">
+              <Icon icon="lucide:git-fork" width={14} height={14} />
+              Fork{selectedVariantId ? " this variant" : ""}
+            </button>
+          )}
+
+          {/* Like button */}
+          {isSignedIn && (
+            <button onClick={handleRate} className={userRated ? btnLiked : btnGhost}>
+              <Icon icon={userRated ? "lucide:heart" : "lucide:heart"} width={14} height={14} className={userRated ? "fill-current" : ""} />
+              {ratingCount} {userRated ? "Liked" : "Like"}
+            </button>
+          )}
+
+          {/* Owner controls */}
+          {isOwner && !editing && (
+            <div className="flex flex-col gap-1.5">
+              <div className="flex gap-1.5">
+                <button onClick={() => setEditing(true)} className={`${btnDark} flex-1`}>
+                  <Icon icon="lucide:pencil" width={14} height={14} />
+                  Edit
+                </button>
+                <button onClick={handleDelete} className={`${btnDanger} flex-1`}>
+                  <Icon icon="lucide:trash-2" width={14} height={14} />
+                  Delete
+                </button>
+                <button
+                  className={`${btnBlue} flex-1 disabled:opacity-50`}
+                  disabled={replacing}
+                  onClick={() => replaceInputRef.current?.click()}
+                >
+                  <Icon icon={replacing ? "lucide:loader-2" : "lucide:refresh-cw"} width={14} height={14} className={replacing ? "animate-spin" : ""} />
+                  Replace
+                </button>
                 <input
                   ref={replaceInputRef}
                   type="file"
                   accept=".json"
-                  style={{ display: 'none' }}
+                  className="hidden"
                   disabled={replacing}
                   onChange={handleReplaceJson}
                 />
-              </label>
-            </div>
-            {replaceError && (
-              <p style={{ color: '#e05555', fontSize: 11, margin: 0 }}>{replaceError}</p>
-            )}
-            {isOwner && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <button
-                  onClick={handleSaveViewAsCover}
-                  style={{
-                    width: '100%',
-                    background: '#1e1e2e',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: 4,
-                    color: '#aaa',
-                    fontSize: 12,
-                    padding: '6px 0',
-                    cursor: 'pointer',
-                  }}
-                >
-                  📷 Save View as Cover
-                </button>
-                <label style={{
-                  display: 'block',
-                  textAlign: 'center',
-                  background: '#1e1e2e',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: 4,
-                  color: '#aaa',
-                  fontSize: 12,
-                  padding: '6px 0',
-                  cursor: 'pointer',
-                }}>
-                  📁 Upload Cover File
-                  <input
-                    type="file"
-                    accept="image/jpeg,image/png,image/webp"
-                    style={{ display: 'none' }}
-                    onChange={handleSnapshotUpload}
-                  />
-                </label>
               </div>
-            )}
-          </div>
-        )}
+              {replaceError && <p className="m-0 text-xs text-red-400">{replaceError}</p>}
+              <div className="flex flex-col gap-1.5">
+                <button onClick={handleSaveViewAsCover} className={btnDark}>
+                  <Icon icon="lucide:camera" width={14} height={14} />
+                  Save View as Cover
+                </button>
+                <button onClick={() => snapshotInputRef.current?.click()} className={btnDark}>
+                  <Icon icon="lucide:image-up" width={14} height={14} />
+                  Upload Cover File
+                </button>
+                <input
+                  ref={snapshotInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  className="hidden"
+                  onChange={handleSnapshotUpload}
+                />
+              </div>
+            </div>
+          )}
 
-        {/* Piece breakdown */}
-        {pieceGroups.length > 0 && (
-          <div>
-            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.5, margin: '0 0 8px' }}>
-              Piece Breakdown
-            </p>
-            {pieceGroups.map(({ category, count }) => (
-              <div
-                key={category}
+          {/* Piece breakdown */}
+          {pieceGroups.length > 0 && (
+            <div>
+              <p
                 style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '4px 0', fontSize: 11,
+                  color: "rgba(255,255,255,0.4)",
+                  fontSize: 10,
+                  textTransform: "uppercase",
+                  letterSpacing: 0.5,
+                  margin: "0 0 8px",
                 }}
               >
-                <span style={{ color: 'rgba(255,255,255,0.6)' }}>{category}</span>
-                <span style={{ color: '#c8a84b', fontWeight: 600 }}>×{count}</span>
-              </div>
-            ))}
-          </div>
-        )}
+                Piece Breakdown
+              </p>
+              {pieceGroups.map(({ category, count }) => (
+                <div
+                  key={category}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    borderBottom: "1px solid rgba(255,255,255,0.05)",
+                    padding: "4px 0",
+                    fontSize: 11,
+                  }}
+                >
+                  <span style={{ color: "rgba(255,255,255,0.6)" }}>{category}</span>
+                  <span style={{ color: "#c8a84b", fontWeight: 600 }}>×{count}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
-      )}
     </div>
   );
 }
+
+// Categories surfaced as one-click chips in the edit-tags row. Anything else the
+// user types becomes a free-form tag chip with a remove button.
+const STANDARD_TAGS = [
+  "Foundation", "Wall", "Floor", "Rooftop", "Ramp", "Stairs", "Pillar", "Door", "Decoration",
+] as const satisfies readonly string[];
+
+// Button class presets — keep the dune look (1px borders, near-square corners,
+// distinct intent per action) while still composable via Tailwind className.
+const btnBase =
+  "inline-flex items-center justify-center gap-1.5 cursor-pointer select-none " +
+  "rounded-[2px] border px-3 py-2 text-xs font-semibold leading-none transition-colors " +
+  "disabled:cursor-default disabled:opacity-50";
+
+const btnGold = `${btnBase} w-full bg-[#c8a84b] border-[#c8a84b] text-black text-sm py-2.5 hover:bg-[#d4b659]`;
+const btnGhost = `${btnBase} w-full bg-transparent border-white/15 text-white/70 hover:bg-white/5 hover:text-white`;
+const btnDark = `${btnBase} w-full bg-[#1e1e2e] border-white/10 text-white/80 hover:bg-[#26263a]`;
+const btnDanger = `${btnBase} bg-[#2e1a1a] border-[#4a2a2a] text-[#d97070] hover:bg-[#3a2222]`;
+const btnBlue = `${btnBase} bg-[#1a1e2e] border-[rgba(100,130,255,0.25)] text-[rgba(100,130,255,0.75)] hover:bg-[#22263a]`;
+const btnLiked = `${btnBase} w-full bg-[rgba(200,50,50,0.18)] border-[rgba(200,50,50,0.45)] text-[#e05555] hover:bg-[rgba(200,50,50,0.28)]`;
 
 interface VariantSwitcherProps {
   variants: BlueprintVariantSummary[];
@@ -888,62 +987,73 @@ interface VariantSwitcherProps {
 }
 
 function VariantSwitcher({
-  variants, selectedVariantId, dirty, isOwner, hasOverrides,
-  onSelect, onSaveNew, onSaveChanges, onRename, onDelete,
+  variants,
+  selectedVariantId,
+  dirty,
+  isOwner,
+  hasOverrides,
+  onSelect,
+  onSaveNew,
+  onSaveChanges,
+  onRename,
+  onDelete,
 }: VariantSwitcherProps) {
   // Hide entirely for non-owners with no variants to pick from.
   if (!isOwner && variants.length === 0) return null;
 
   return (
-    <div style={{
-      background: '#0a0a0f',
-      border: '1px solid rgba(255,255,255,0.07)',
-      borderRadius: 6,
-      padding: 10,
-      display: 'flex', flexDirection: 'column', gap: 8,
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-        <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.4 }}>
-          Variant
-        </span>
-        {dirty && (
-          <span style={{ color: '#c8a84b', fontSize: 10, fontWeight: 700 }}>· unsaved</span>
-        )}
+    <div className="flex flex-col gap-2 rounded-md border border-white/10 bg-black/30 p-3">
+      <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
+        <span>Variant</span>
+        {dirty && <span className="font-bold text-accent normal-case tracking-normal">· unsaved</span>}
       </div>
 
-      <select
-        value={selectedVariantId ?? ''}
-        onChange={(e) => onSelect(e.target.value || null)}
-        style={{
-          width: '100%', background: '#13131a',
-          border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4,
-          color: '#fff', fontSize: 12, padding: '6px 8px',
-        }}
+      <Select
+        className="w-full"
+        selectedKey={selectedVariantId ?? "original"}
+        onSelectionChange={(key) => onSelect(key === "original" ? null : String(key))}
+        aria-label="Variant"
       >
-        <option value="">Original</option>
-        {variants.map((v) => (
-          <option key={v.id} value={v.id}>{v.name}</option>
-        ))}
-      </select>
+        <Select.Trigger>
+          <Select.Value />
+          <Select.Indicator />
+        </Select.Trigger>
+        <Select.Popover>
+          <ListBox>
+            <ListBox.Item id="original" textValue="Original">
+              Original
+              <ListBox.ItemIndicator />
+            </ListBox.Item>
+            {variants.map((v) => (
+              <ListBox.Item key={v.id} id={v.id} textValue={v.name}>
+                {v.name}
+                <ListBox.ItemIndicator />
+              </ListBox.Item>
+            ))}
+          </ListBox>
+        </Select.Popover>
+      </Select>
 
       {isOwner && (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+        <div className="flex flex-wrap gap-1.5">
           {selectedVariantId && dirty && (
-            <button
-              onClick={onSaveChanges}
-              style={btnPrimary}
-            >Save changes</button>
+            <Button size="sm" variant="primary" onPress={onSaveChanges}>
+              Save changes
+            </Button>
           )}
           {hasOverrides && (
-            <button
-              onClick={onSaveNew}
-              style={btnSecondary}
-            >Save as new…</button>
+            <Button size="sm" variant="secondary" onPress={onSaveNew}>
+              Save as new…
+            </Button>
           )}
           {selectedVariantId && (
             <>
-              <button onClick={onRename} style={btnSecondary}>Rename</button>
-              <button onClick={onDelete} style={btnDanger}>Delete</button>
+              <Button size="sm" variant="secondary" onPress={onRename}>
+                Rename
+              </Button>
+              <Button size="sm" variant="danger" onPress={onDelete}>
+                Delete
+              </Button>
             </>
           )}
         </div>
@@ -951,22 +1061,6 @@ function VariantSwitcher({
     </div>
   );
 }
-
-const btnPrimary: React.CSSProperties = {
-  background: '#c8a84b', border: 'none', borderRadius: 4,
-  color: '#000', fontSize: 11, fontWeight: 700,
-  padding: '4px 10px', cursor: 'pointer',
-};
-const btnSecondary: React.CSSProperties = {
-  background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4,
-  color: 'rgba(255,255,255,0.7)', fontSize: 11,
-  padding: '4px 10px', cursor: 'pointer',
-};
-const btnDanger: React.CSSProperties = {
-  background: 'transparent', border: '1px solid rgba(200,80,80,0.4)', borderRadius: 4,
-  color: '#d97070', fontSize: 11,
-  padding: '4px 10px', cursor: 'pointer',
-};
 
 interface PieceVariantsTriggerProps {
   raw: RawBlueprint | undefined;
@@ -984,34 +1078,18 @@ function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerPr
   const overrideCount = Object.keys(overrides).length;
 
   return (
-    <button
-      onClick={onOpen}
-      style={{
-        width: '100%',
-        background: overrideCount > 0 ? 'rgba(200,168,75,0.12)' : '#0a0a0f',
-        border: `1px solid ${overrideCount > 0 ? 'rgba(200,168,75,0.35)' : 'rgba(255,255,255,0.1)'}`,
-        borderRadius: 6,
-        color: overrideCount > 0 ? '#c8a84b' : 'rgba(255,255,255,0.7)',
-        padding: '8px 10px',
-        fontSize: 12,
-        fontWeight: 600,
-        cursor: 'pointer',
-        textAlign: 'left',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
+    <Button
+      onPress={onOpen}
+      variant={overrideCount > 0 ? "primary" : "tertiary"}
+      size="lg"
+      className="w-full justify-between p-3 justify-items-center"
     >
-      <span>
+      <span className="font-semibold">
         Piece variants
-        {overrideCount > 0 && (
-          <span style={{ marginLeft: 6, fontWeight: 400 }}>· {overrideCount} swapped</span>
-        )}
+        {overrideCount > 0 && <span className="ml-1.5 font-normal opacity-80">· {overrideCount} swapped</span>}
       </span>
-      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, fontWeight: 400 }}>
-        {swappableCount} swappable ›
-      </span>
-    </button>
+      <span className="text-xs opacity-70">{swappableCount} swappable ›</span>
+    </Button>
   );
 }
 
@@ -1031,126 +1109,96 @@ function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceV
   );
   const overrideCount = Object.keys(overrides).length;
 
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [open, onClose]);
-
-  if (!open) return null;
-
   return (
-    <div style={{
-      position: 'absolute', top: 0, right: 0, bottom: 0,
-      width: 360, maxWidth: '100%',
-      background: '#13131a',
-      borderLeft: '1px solid rgba(255,255,255,0.08)',
-      boxShadow: '-8px 0 24px rgba(0,0,0,0.4)',
-      zIndex: 100,
-      display: 'flex', flexDirection: 'column',
-    }}>
-        <div style={{
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-          padding: '12px 16px',
-          borderBottom: '1px solid rgba(255,255,255,0.07)',
-        }}>
-          <div>
-            <div style={{ color: '#fff', fontSize: 14, fontWeight: 700 }}>Piece variants</div>
-            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, marginTop: 2 }}>
-              {swappable.length} piece types with alternates
-              {overrideCount > 0 && ` · ${overrideCount} swapped`}
-            </div>
-          </div>
-          <button
-            onClick={onClose}
-            style={{
-              background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.6)',
-              fontSize: 20, cursor: 'pointer', padding: '0 4px', lineHeight: 1,
-            }}
-            aria-label="Close"
-          >×</button>
-        </div>
+    <Drawer
+      isOpen={open}
+      onOpenChange={(o) => {
+        if (!o) onClose();
+      }}
+    >
+      {/* Transparent backdrop — the user explicitly wanted no dimming behind the drawer. */}
+      <Drawer.Backdrop variant="transparent">
+        <Drawer.Content placement="right">
+          <Drawer.Dialog className="w-[360px] max-w-full">
+            <Drawer.CloseTrigger />
+            <Drawer.Header>
+              <Drawer.Heading>Piece variants</Drawer.Heading>
+              <p className="text-xs text-muted">
+                {swappable.length} piece types with alternates
+                {overrideCount > 0 && ` · ${overrideCount} swapped`}
+              </p>
+            </Drawer.Header>
 
-        {overrideCount > 0 && (
-          <div style={{ padding: '8px 16px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            <button
-              onClick={() => onChange({})}
-              style={{
-                background: 'transparent', border: '1px solid rgba(255,255,255,0.15)',
-                borderRadius: 4, color: 'rgba(255,255,255,0.7)', fontSize: 11,
-                padding: '5px 10px', cursor: 'pointer',
-              }}
-            >
-              Reset all swaps
-            </button>
-          </div>
-        )}
+            <Drawer.Body className="flex flex-col gap-2">
+              {overrideCount > 0 && (
+                <Button size="sm" variant="secondary" onPress={() => onChange({})}>
+                  Reset all swaps
+                </Button>
+              )}
 
-        <div style={{
-          flex: 1, overflowY: 'auto', padding: 12,
-          display: 'flex', flexDirection: 'column', gap: 8,
-        }}>
-          {swappable.map((row) => {
-            const equivalents = findEquivalents(row.originalTemplateId);
-            const currentTemplate = overrides[row.originalTemplateId] ?? row.originalTemplateId;
-            const isSwapped = currentTemplate !== row.originalTemplateId;
-            return (
-              <div key={row.originalTemplateId} style={{
-                background: 'rgba(255,255,255,0.025)',
-                border: `1px solid ${isSwapped ? 'rgba(200,168,75,0.5)' : 'rgba(255,255,255,0.06)'}`,
-                borderRadius: 5, padding: '8px 10px',
-              }}>
-                <div style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                  marginBottom: 2,
-                }}>
-                  <span style={{ color: '#fff', fontSize: 12, fontWeight: 600 }}>
-                    {getShape(row.originalTemplateId)}
-                  </span>
-                  <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10 }}>
-                    ×{row.count}
-                  </span>
-                </div>
-                <div style={{
-                  color: 'rgba(255,255,255,0.45)', fontSize: 10, marginBottom: 6,
-                }}>
-                  from {getSetLabel(row.originalTemplateId)}
-                </div>
-                <select
-                  value={currentTemplate}
-                  onChange={(e) => {
-                    const v = e.target.value;
-                    const next = { ...overrides };
-                    if (v === row.originalTemplateId) delete next[row.originalTemplateId];
-                    else next[row.originalTemplateId] = v;
-                    onChange(next);
-                  }}
-                  style={{
-                    width: '100%',
-                    background: '#0a0a0f',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    borderRadius: 4,
-                    color: '#fff', fontSize: 11, padding: '5px 8px',
-                  }}
-                >
-                  <option value={row.originalTemplateId}>
-                    {getSetLabel(row.originalTemplateId)} (original)
-                  </option>
-                  {equivalents.map((eq) => (
-                    <option key={eq.templateId} value={eq.templateId}>{eq.setLabel}</option>
-                  ))}
-                </select>
-              </div>
-            );
-          })}
-        </div>
-    </div>
+              {swappable.map((row) => {
+                const equivalents = findEquivalents(row.originalTemplateId);
+                const currentTemplate = overrides[row.originalTemplateId] ?? row.originalTemplateId;
+                const isSwapped = currentTemplate !== row.originalTemplateId;
+                return (
+                  <div
+                    key={row.originalTemplateId}
+                    className={`flex flex-col gap-1.5 rounded-md border bg-white/5 p-2.5 ${
+                      isSwapped ? "border-accent/60" : "border-white/10"
+                    }`}
+                  >
+                    <div className="flex items-baseline justify-between">
+                      <span className="text-sm font-semibold text-white">{getShape(row.originalTemplateId)}</span>
+                      <span className="text-xs text-white/40">×{row.count}</span>
+                    </div>
+                    <div className="text-xs text-white/45">from {getSetLabel(row.originalTemplateId)}</div>
+                    <Select
+                      className="w-full"
+                      selectedKey={currentTemplate}
+                      onSelectionChange={(key) => {
+                        const v = String(key);
+                        const next = { ...overrides };
+                        if (v === row.originalTemplateId) delete next[row.originalTemplateId];
+                        else next[row.originalTemplateId] = v;
+                        onChange(next);
+                      }}
+                      aria-label={`Variant for ${getShape(row.originalTemplateId)}`}
+                    >
+                      <Select.Trigger>
+                        <Select.Value />
+                        <Select.Indicator />
+                      </Select.Trigger>
+                      <Select.Popover>
+                        <ListBox>
+                          <ListBox.Item
+                            id={row.originalTemplateId}
+                            textValue={`${getSetLabel(row.originalTemplateId)} (original)`}
+                          >
+                            {getSetLabel(row.originalTemplateId)} (original)
+                            <ListBox.ItemIndicator />
+                          </ListBox.Item>
+                          {equivalents.map((eq) => (
+                            <ListBox.Item key={eq.templateId} id={eq.templateId} textValue={eq.setLabel}>
+                              {eq.setLabel}
+                              <ListBox.ItemIndicator />
+                            </ListBox.Item>
+                          ))}
+                        </ListBox>
+                      </Select.Popover>
+                    </Select>
+                  </div>
+                );
+              })}
+            </Drawer.Body>
+          </Drawer.Dialog>
+        </Drawer.Content>
+      </Drawer.Backdrop>
+    </Drawer>
   );
 }
 
 interface TemplateBreakdownEntry {
-  templateId: string;        // current (post-override) templateId in the displayed scene
+  templateId: string; // current (post-override) templateId in the displayed scene
   originalTemplateId: string; // pre-override templateId — key for overrides map
   count: number;
 }
@@ -1162,7 +1210,7 @@ function buildTemplateBreakdown(
   if (!raw) return [];
   const counts: Record<string, number> = {};
   const all = [
-    ...(raw.instances  ?? []).map((i) => i.building_type),
+    ...(raw.instances ?? []).map((i) => i.building_type),
     ...(raw.placeables ?? []).map((p) => p.building_type),
   ];
   for (const t of all) counts[t] = (counts[t] ?? 0) + 1;
@@ -1193,13 +1241,13 @@ function buildPieceBreakdown(bp: BlueprintDetail): { category: string; count: nu
 
 function categoryFromType(id: string): string {
   const l = id.toLowerCase();
-  if (l.includes('foundation')) return 'Foundation';
-  if (l.includes('wall'))       return 'Wall';
-  if (l.includes('floor'))      return 'Floor';
-  if (l.includes('roof') || l.includes('rooftop')) return 'Rooftop';
-  if (l.includes('ramp'))       return 'Ramp';
-  if (l.includes('stair'))      return 'Stairs';
-  if (l.includes('pillar') || l.includes('column')) return 'Pillar';
-  if (l.includes('door') || l.includes('window'))   return 'Door';
-  return 'Decoration';
+  if (l.includes("foundation")) return "Foundation";
+  if (l.includes("wall")) return "Wall";
+  if (l.includes("floor")) return "Floor";
+  if (l.includes("roof") || l.includes("rooftop")) return "Rooftop";
+  if (l.includes("ramp")) return "Ramp";
+  if (l.includes("stair")) return "Stairs";
+  if (l.includes("pillar") || l.includes("column")) return "Pillar";
+  if (l.includes("door") || l.includes("window")) return "Door";
+  return "Decoration";
 }

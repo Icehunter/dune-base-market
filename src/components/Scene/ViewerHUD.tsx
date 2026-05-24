@@ -4,9 +4,10 @@ interface Props {
   pieceSelected: boolean;
   isOwner: boolean;
   isEditMode: boolean;
+  rightOffset?: number; // px from the right edge — page sets this to track the sidebar
 }
 
-export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode }: Props) {
+export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode, rightOffset = 16 }: Props) {
   const tips: string[] = [];
 
   if (mode === 'orbit') {
@@ -40,11 +41,12 @@ export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode }: 
 
   return (
     <div style={{
-      position: 'absolute', bottom: 16, right: 16,
+      position: 'absolute', bottom: 16, right: rightOffset,
+      transition: 'right 200ms ease-out',
       background: 'rgba(0,0,0,0.55)',
       backdropFilter: 'blur(6px)',
       border: '1px solid rgba(255,255,255,0.08)',
-      borderRadius: 8,
+      borderRadius: 4,
       padding: '8px 12px',
       color: 'rgba(255,255,255,0.6)',
       fontSize: 10,

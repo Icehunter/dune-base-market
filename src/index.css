@@ -9,6 +9,16 @@
   --dune-accent: #e07c24;
 }
 
+/* HeroUI v3 theme override — dune-gold accent + tighter radii.
+   --radius cascades into every component (cards, buttons, popovers); --field-radius
+   is derived from it (calc(--radius * 1.5)) so inputs/selects stay slightly softer
+   than surfaces, which keeps the hierarchy readable. */
+:root, [data-theme='dark'] {
+  --accent: oklch(0.7585 0.1379 86.5); /* ≈ #c8a84b dune gold */
+  --accent-foreground: oklch(0.18 0.005 286); /* dark text for contrast on gold */
+  --radius: 0.125rem; /* 2px — near-square, architectural */
+}
+
 * {
   box-sizing: border-box;
 }

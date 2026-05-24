@@ -1,68 +1,37 @@
 import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/react';
 import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
 export default function NavBar() {
   const { isSignedIn } = useAuth();
 
   return (
-    <nav
-      style={{
-        background: '#13131a',
-        borderBottom: '1px solid rgba(255,255,255,0.08)',
-        padding: '0 24px',
-        height: 52,
-        display: 'flex',
-        alignItems: 'center',
-        gap: 24,
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-      }}
-    >
+    <nav className="sticky top-0 z-[100] flex h-[52px] items-center gap-6 border-b border-white/10 bg-[#13131a] px-6">
       <Link
         to="/"
-        style={{ color: '#c8a84b', fontWeight: 700, fontSize: 15, letterSpacing: 2, textDecoration: 'none' }}
+        className="inline-flex items-center gap-2 text-[15px] font-bold tracking-[0.15em] text-[#c8a84b] no-underline"
       >
-        ⬡ Solido Market
+        <Icon icon="lucide:hexagon" width={18} height={18} />
+        SOLIDO MARKET
       </Link>
 
-      <Link
-        to="/"
-        style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, textDecoration: 'none' }}
-      >
+      <Link to="/" className="text-sm text-white/60 no-underline hover:text-white">
         Blueprints
       </Link>
 
-      <div style={{ flex: 1 }} />
+      <div className="flex-1" />
 
       {isSignedIn ? (
         <UserButton />
       ) : (
-        <div style={{ display: 'flex', gap: 8 }}>
+        <div className="flex gap-2">
           <SignInButton mode="modal">
-            <button style={{
-              background: 'transparent',
-              border: '1px solid rgba(255,255,255,0.2)',
-              borderRadius: 6,
-              color: 'rgba(255,255,255,0.7)',
-              padding: '5px 14px',
-              fontSize: 12,
-              cursor: 'pointer',
-            }}>
+            <button className="cursor-pointer rounded-[2px] border border-white/20 bg-transparent px-3.5 py-1.5 text-xs text-white/70 transition-colors hover:bg-white/5 hover:text-white">
               Sign In
             </button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <button style={{
-              background: '#c8a84b',
-              border: 'none',
-              borderRadius: 6,
-              color: '#000',
-              padding: '5px 14px',
-              fontSize: 12,
-              fontWeight: 700,
-              cursor: 'pointer',
-            }}>
+            <button className="cursor-pointer rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-3.5 py-1.5 text-xs font-bold text-black transition-colors hover:bg-[#d4b659]">
               Sign Up
             </button>
           </SignUpButton>
