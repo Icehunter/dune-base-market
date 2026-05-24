@@ -26,7 +26,7 @@ export async function onRequestPut(ctx: Ctx): Promise<Response> {
   if (file.size > MAX_SIZE) return json({ error: 'Max 5MB' }, 400);
 
   const r2Key = `snapshots/${id}`;
-  await env.BUCKET.put(r2Key, file.stream(), {
+  await env.SNAPSHOT_BUCKET.put(r2Key, file.stream(), {
     httpMetadata: { contentType: file.type },
   });
 
@@ -45,7 +45,7 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
   const { env, params } = ctx;
   const { id } = params;
 
-  const obj = await env.BUCKET.get(`snapshots/${id}`);
+  const obj = await env.SNAPSHOT_BUCKET.get(`snapshots/${id}`);
   if (!obj) return new Response('Not found', { status: 404 });
 
   return new Response(obj.body, {
