@@ -169,7 +169,7 @@ export default function BlueprintDetailPage() {
     if (!id) return;
     try {
       const blob = await sceneRef.current!.captureScreenshot();
-      const file = new File([blob], 'cover.png', { type: 'image/png' });
+      const file = new File([blob], 'cover.jpg', { type: 'image/jpeg' });
       const { snapshot_url } = await uploadSnapshot(id, file, getToken);
       setSnapshotUrl(`${snapshot_url}?t=${Date.now()}`);
     } catch (err) {
@@ -481,7 +481,7 @@ export default function BlueprintDetailPage() {
               color: '#000', fontWeight: 700, padding: '9px 0', fontSize: 13, cursor: 'pointer',
             }}
           >
-            ⬇ Download JSON
+            ⬇ Download
           </button>
         ) : (
           <SignInButton mode="modal">

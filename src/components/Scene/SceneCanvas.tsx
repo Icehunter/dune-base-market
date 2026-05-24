@@ -66,7 +66,20 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
       captureScreenshot: () => new Promise<Blob>((resolve, reject) => {
         const canvas = canvasRef.current;
         if (!canvas) { reject(new Error('No canvas')); return; }
-        canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('toBlob failed')), 'image/png');
+        // Cover images are used as gallery thumbnails and OG previews — full retina canvas
+        // (often 3–4k wide) is wasteful. Downscale to 1280px on the long edge, output JPEG.
+        const MAX_DIM = 1280;
+        const srcW = canvas.width, srcH = canvas.height;
+        const scale = Math.min(1, MAX_DIM / Math.max(srcW, srcH));
+        const dstW = Math.round(srcW * scale);
+        const dstH = Math.round(srcH * scale);
+        const off = document.createElement('canvas');
+        off.width = dstW; off.height = dstH;
+        const ctx = off.getContext('2d');
+        if (!ctx) { reject(new Error('2d context unavailable')); return; }
+        ctx.imageSmoothingQuality = 'high';
+        ctx.drawImage(canvas, 0, 0, dstW, dstH);
+        off.toBlob((blob) => blob ? resolve(blob) : reject(new Error('toBlob failed')), 'image/jpeg', 0.85);
       }),
       setMode: (mode) => {
         const orbitCam = orbitCamRef.current;
