@@ -154,7 +154,9 @@ export function formatSetLabel(prefix: string): string {
 export function findEquivalents(templateId: string): Equivalent[] {
   const sourceDef = getPieceDefinition(templateId);
 
-  // Registry path: group by buildableGroupType, deduplicate by faction
+  // Registry path: CDT groupType narrows to the right category; string-parsing
+  // then picks the best shape+variant match within each faction's bucket.
+  const sourceParsed = parseTemplate(templateId);
   if (sourceDef?.buildableGroupType) {
     const idx = getGroupTypeIndex();
     const bucket = idx.get(sourceDef.buildableGroupType) ?? [];
@@ -169,7 +171,16 @@ export function findEquivalents(templateId: string): Equivalent[] {
       if (byFaction.size > 0) {
         const result: Equivalent[] = [];
         for (const [faction, entries] of byFaction) {
-          const pick = entries[0];
+          let pick = entries[0];
+          if (sourceParsed) {
+            // Prefer same normalizedShape, then same variant within that shape.
+            const sameShape = entries.filter((e) => {
+              const p = parseTemplate(e.templateId);
+              return p?.normalizedShape === sourceParsed.normalizedShape;
+            });
+            const pool = sameShape.length > 0 ? sameShape : entries;
+            pick = pool.find((e) => parseTemplate(e.templateId)?.variant === sourceParsed.variant) ?? pool[0];
+          }
           result.push({
             templateId: pick.templateId,
             setLabel: FACTION_LABELS[faction] ?? formatSetLabel(faction),

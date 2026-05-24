@@ -304,7 +304,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
             userOverridesRef.current,
           );
         }
-        onReadyRef.current?.();
+        if (pieces.length > 0) onReadyRef.current?.();
       });
 
       // Build a PlacedPiece for a picked mesh. The store holds the *original* templateId;
