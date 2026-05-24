@@ -22,8 +22,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        // Split large/static vendors and the generated piece registry so the
+        // detail-page chunk stays small and shared deps cache across pages.
         manualChunks: (id) => {
           if (id.includes('@babylonjs')) return 'babylon';
+          if (id.includes('@heroui')) return 'heroui';
+          if (id.includes('@iconify')) return 'iconify';
+          if (id.includes('@clerk')) return 'clerk';
+          if (id.includes('pieceRegistry.generated')) return 'piece-registry';
         },
       },
     },

@@ -1,11 +1,18 @@
-import { useState, useEffect, useMemo, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth, SignInButton } from "@clerk/react";
-import { Drawer, Select, ListBox, Skeleton, toast } from "@heroui/react";
+import { Select, ListBox, Skeleton, toast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { PromptDialog } from "../components/dialogs/PromptDialog";
 import { ConfirmDialog } from "../components/dialogs/ConfirmDialog";
-import { ShortcutsDialog } from "../components/dialogs/ShortcutsDialog";
+
+// Lazy chunks: the piece variants drawer brings in pieceEquivalents (which
+// pulls the 8k-line piece registry); the shortcuts dialog is rarely opened.
+// Both load on first interaction rather than with the page chunk.
+const PieceVariantsDrawer = lazy(() => import("../components/PieceVariantsDrawer"));
+const ShortcutsDialog = lazy(() =>
+  import("../components/dialogs/ShortcutsDialog").then((m) => ({ default: m.ShortcutsDialog })),
+);
 import {
   getBlueprint,
   downloadBlueprint,
@@ -24,11 +31,12 @@ import {
 import type { BlueprintDetail, BlueprintVariantSummary, BlueprintVariant } from "../lib/api";
 import type { RawBlueprint, PlacedPiece } from "../stores/buildingStore";
 import type { RotMap } from "../data/modelRegistry";
-import { findEquivalents, getSetLabel, getShape } from "../data/pieceEquivalents";
-import type { SceneCanvasHandle } from "../components/Scene";
-import { ViewerHUD } from "../components/Scene";
+// findEquivalents pulls in the 8k-line pieceRegistry.generated chunk; load it
+// only when the page needs the swappable count (lazy via dynamic import).
+import type { SceneCanvasHandle } from "../components/Scene/SceneCanvas";
+import { ViewerHUD } from "../components/Scene/ViewerHUD";
 
-const SceneCanvas = lazy(() => import("../components/Scene").then((m) => ({ default: m.SceneCanvas })));
+const SceneCanvas = lazy(() => import("../components/Scene/SceneCanvas").then((m) => ({ default: m.SceneCanvas })));
 
 export default function BlueprintDetailPage() {
   const { id, variantId: variantIdFromUrl } = useParams<{ id: string; variantId?: string }>();
@@ -556,16 +564,21 @@ export default function BlueprintDetailPage() {
 
   return (
     <div className="relative flex h-[calc(100vh-52px)] overflow-hidden">
-      {/* Piece variants drawer — overlays the right side when open */}
-      <PieceVariantsDrawer
-        open={pieceVariantsOpen}
-        onClose={() => setPieceVariantsOpen(false)}
-        raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
-        overrides={templateOverrides}
-        onChange={setTemplateOverrides}
-        onPreview={handlePreview}
-        onPreviewEnd={handlePreviewEnd}
-      />
+      {/* Lazy-loaded overlays: drawer + shortcuts dialog. Nothing to render while
+          loading — Suspense fallback is null since neither is visible until the
+          user opens it. */}
+      <Suspense fallback={null}>
+        <PieceVariantsDrawer
+          open={pieceVariantsOpen}
+          onClose={() => setPieceVariantsOpen(false)}
+          raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
+          overrides={templateOverrides}
+          onChange={setTemplateOverrides}
+          onPreview={handlePreview}
+          onPreviewEnd={handlePreviewEnd}
+          btnGhost={btnGhost}
+        />
+      </Suspense>
 
       {/* Prompt + confirm modals (replacing window.prompt / window.confirm) */}
       <PromptDialog
@@ -603,11 +616,13 @@ export default function BlueprintDetailPage() {
         destructive
         onConfirm={confirmDelete}
       />
-      <ShortcutsDialog
-        isOpen={shortcutsOpen}
-        onClose={() => setShortcutsOpen(false)}
-        showOwnerShortcuts={isOwner}
-      />
+      <Suspense fallback={null}>
+        <ShortcutsDialog
+          isOpen={shortcutsOpen}
+          onClose={() => setShortcutsOpen(false)}
+          showOwnerShortcuts={isOwner}
+        />
+      </Suspense>
 
       {/* 3D Viewer */}
       <div className="relative flex-1 overflow-hidden bg-black">
@@ -1160,12 +1175,21 @@ interface PieceVariantsTriggerProps {
 }
 
 function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerProps) {
-  const swappableCount = useMemo(() => {
-    const breakdown = buildTemplateBreakdown(raw, overrides);
-    return breakdown.filter((r) => findEquivalents(r.originalTemplateId).length > 0).length;
+  // null while loading the lazy pieceEquivalents chunk; once known, the count
+  // either renders the trigger or hides it (when no swappable pieces exist).
+  const [swappableCount, setSwappableCount] = useState<number | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    void import("../data/pieceEquivalents").then(({ findEquivalents }) => {
+      if (cancelled) return;
+      const breakdown = buildTemplateBreakdown(raw, overrides);
+      const count = breakdown.filter((r) => findEquivalents(r.originalTemplateId).length > 0).length;
+      setSwappableCount(count);
+    });
+    return () => { cancelled = true; };
   }, [raw, overrides]);
 
-  if (swappableCount === 0) return null;
+  if (swappableCount === null || swappableCount === 0) return null;
   const overrideCount = Object.keys(overrides).length;
 
   // Two-line layout — primary label + swapped count on the first line, swappable
@@ -1195,129 +1219,6 @@ function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerPr
   );
 }
 
-interface PieceVariantsDrawerProps {
-  open: boolean;
-  onClose: () => void;
-  raw: RawBlueprint | undefined;
-  overrides: Record<string, string>;
-  onChange: (next: Record<string, string>) => void;
-  /** Hover-preview: swap scene to the hovered template without changing React state. */
-  onPreview: (originalId: string, targetId: string) => void;
-  /** Hover-leave: restore to whatever the committed override is for this piece. */
-  onPreviewEnd: (originalId: string) => void;
-}
-
-function PieceVariantsDrawer({
-  open, onClose, raw, overrides, onChange, onPreview, onPreviewEnd,
-}: PieceVariantsDrawerProps) {
-  const breakdown = useMemo(() => buildTemplateBreakdown(raw, overrides), [raw, overrides]);
-  const swappable = useMemo(
-    () => breakdown.filter((row) => findEquivalents(row.originalTemplateId).length > 0),
-    [breakdown],
-  );
-  const overrideCount = Object.keys(overrides).length;
-
-  return (
-    <Drawer
-      isOpen={open}
-      onOpenChange={(o) => {
-        if (!o) onClose();
-      }}
-    >
-      {/* Transparent backdrop — the user explicitly wanted no dimming behind the drawer. */}
-      <Drawer.Backdrop variant="transparent">
-        <Drawer.Content placement="right">
-          <Drawer.Dialog className="w-full sm:w-[360px] max-w-full">
-            <Drawer.CloseTrigger />
-            <Drawer.Header>
-              <Drawer.Heading>Piece variants</Drawer.Heading>
-              <p className="text-xs text-muted">
-                {swappable.length} piece types with alternates
-                {overrideCount > 0 && ` · ${overrideCount} swapped`}
-              </p>
-            </Drawer.Header>
-
-            <Drawer.Body className="flex flex-col gap-2">
-              {overrideCount > 0 && (
-                <button
-                  onClick={() => onChange({})}
-                  className={`${btnGhost} px-2.5 py-1.5 text-xs`}
-                >
-                  <Icon icon="lucide:rotate-ccw" width={12} height={12} />
-                  Reset all swaps
-                </button>
-              )}
-
-              {swappable.map((row) => {
-                const equivalents = findEquivalents(row.originalTemplateId);
-                const currentTemplate = overrides[row.originalTemplateId] ?? row.originalTemplateId;
-                const isSwapped = currentTemplate !== row.originalTemplateId;
-                return (
-                  <div
-                    key={row.originalTemplateId}
-                    className={`flex flex-col gap-1.5 rounded-md border bg-white/5 p-2.5 ${
-                      isSwapped ? "border-accent/60" : "border-white/10"
-                    }`}
-                  >
-                    <div className="flex items-baseline justify-between">
-                      <span className="text-sm font-semibold text-white">{getShape(row.originalTemplateId)}</span>
-                      <span className="text-xs text-white/40">×{row.count}</span>
-                    </div>
-                    <div className="text-xs text-white/45">from {getSetLabel(row.originalTemplateId)}</div>
-                    <Select
-                      className="w-full"
-                      selectedKey={currentTemplate}
-                      onSelectionChange={(key) => {
-                        const v = String(key);
-                        const next = { ...overrides };
-                        if (v === row.originalTemplateId) delete next[row.originalTemplateId];
-                        else next[row.originalTemplateId] = v;
-                        onChange(next);
-                      }}
-                      aria-label={`Variant for ${getShape(row.originalTemplateId)}`}
-                    >
-                      <Select.Trigger>
-                        <Select.Value />
-                        <Select.Indicator />
-                      </Select.Trigger>
-                      <Select.Popover>
-                        <ListBox
-                          onAction={() => {/* selection handled by Select.onSelectionChange */}}
-                        >
-                          <ListBox.Item
-                            id={row.originalTemplateId}
-                            textValue={`${getSetLabel(row.originalTemplateId)} (original)`}
-                            onHoverStart={() => onPreview(row.originalTemplateId, row.originalTemplateId)}
-                            onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
-                          >
-                            {getSetLabel(row.originalTemplateId)} (original)
-                            <ListBox.ItemIndicator />
-                          </ListBox.Item>
-                          {equivalents.map((eq) => (
-                            <ListBox.Item
-                              key={eq.templateId}
-                              id={eq.templateId}
-                              textValue={eq.setLabel}
-                              onHoverStart={() => onPreview(row.originalTemplateId, eq.templateId)}
-                              onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
-                            >
-                              {eq.setLabel}
-                              <ListBox.ItemIndicator />
-                            </ListBox.Item>
-                          ))}
-                        </ListBox>
-                      </Select.Popover>
-                    </Select>
-                  </div>
-                );
-              })}
-            </Drawer.Body>
-          </Drawer.Dialog>
-        </Drawer.Content>
-      </Drawer.Backdrop>
-    </Drawer>
-  );
-}
 
 interface TemplateBreakdownEntry {
   templateId: string; // current (post-override) templateId in the displayed scene
