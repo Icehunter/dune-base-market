@@ -20,6 +20,7 @@ const SHAPE_KEYWORDS = [
   'Floor',
   'Wall',
   'Window',
+  'Garage',      // must precede Door — Garage_Door_Frame should be one shape, not Door_Frame
   'Door',
   'PrudenceDoor',
   'Hatch',
@@ -44,10 +45,37 @@ interface Parsed {
 // Strip a single trailing _NN segment so art variants (Wall_01/02/03,
 // Wall_Round_Corner_01/02/03) collapse to one normalized shape. Descriptive
 // suffixes like _Half / _Left / _Round_Corner are preserved.
+// Also strips _New (Choam Shelter style variant marker) so those pieces match
+// their cross-faction equivalents.
 function splitVariant(shape: string): { normalized: string; variant: string } {
+  if (shape.endsWith('_New')) return { normalized: shape.slice(0, -4), variant: 'New' };
   const m = shape.match(/^(.*?)_(\d+)$/);
   if (!m) return { normalized: shape, variant: '' };
   return { normalized: m[1], variant: m[2] };
+}
+
+// Canonical shape aliases: maps non-standard shape names to their equivalents.
+// Needed for cross-faction naming inconsistencies in the generated registry.
+const SHAPE_ALIASES: Record<string, string> = {
+  // Watershippers stair/ramp corners abbreviate _Inward as _In
+  'Stairs_Corner_In':             'Stairs_Corner_Inward',
+  'Stairs_Corner_Half_In':        'Stairs_Corner_Half_Inward',
+  'Ramp_Corner_In':               'Ramp_Corner_Inward',
+  'Ramp_Corner_Half_In':          'Ramp_Corner_Half_Inward',
+  // Watershippers ramp corners append a stray 's'
+  'Ramp_Corner_Inwards':          'Ramp_Corner_Inward',
+  'Ramp_Corner_Half_Inwards':     'Ramp_Corner_Half_Inward',
+  // Smug / TwitchReward use _Inverted where others use _Inward (stairs + ramps)
+  'Stairs_Corner_Inverted':       'Stairs_Corner_Inward',
+  'Stairs_Corner_Inverted_Half':  'Stairs_Corner_Half_Inward',
+  'Ramp_Corner_Inverted':         'Ramp_Corner_Inward',
+  'Ramp_Corner_Inverted_Half':    'Ramp_Corner_Half_Inward',
+};
+
+function canonicalizeShape(shape: string): string {
+  // Watershippers abbreviates _Left/_Right as _L/_R at the end of triangle/railing names
+  const expanded = shape.replace(/_([LR])$/, (_, lr) => (lr === 'L' ? '_Left' : '_Right'));
+  return SHAPE_ALIASES[expanded] ?? expanded;
 }
 
 function parseTemplate(id: string): Parsed | null {
@@ -63,7 +91,7 @@ function parseTemplate(id: string): Parsed | null {
   const prefix = bestStart === 0 ? '' : id.slice(0, bestStart - 1);
   const shape  = id.slice(bestStart);
   const { normalized, variant } = splitVariant(shape);
-  return { templateId: id, prefix, shape, normalizedShape: normalized, variant };
+  return { templateId: id, prefix, shape, normalizedShape: canonicalizeShape(normalized), variant };
 }
 
 // Indexed by normalizedShape so e.g. Wall_01, Wall_02, Wall_03 all share a bucket.
