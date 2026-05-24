@@ -1,9 +1,14 @@
 /**
- * ETL script: reads CDT_BuildingData.json + scans src/ for GLBs and icon PNGs,
- * emits src/data/pieceRegistry.generated.ts with MODEL_PATHS and PIECE_CATALOG.
+ * ETL script: reads CDT_BuildingData.json + scans src/ for GLBs and dune-awakening/ for
+ * icon PNGs, emits src/data/pieceRegistry.generated.ts with MODEL_PATHS and PIECE_CATALOG.
  *
  * Run: npm run build:registry
- * Or:  SYSTEMS_DIR=/absolute/path npx tsx scripts/build-piece-registry.ts
+ * Or:  SYSTEMS_DIR=/absolute/path ICON_DIR=/absolute/path npx tsx scripts/build-piece-registry.ts
+ *
+ * SYSTEMS_DIR — parent of Building/Data/CDT_BuildingData.json
+ *               default: ../dune-item-data/dune-awakening/Dune/Systems
+ * ICON_DIR    — CDN-mirror root whose directory layout becomes /src/<relative> URLs
+ *               default: ../dune-item-data/dune-awakening
  */
 
 import fs from 'node:fs';
@@ -12,13 +17,19 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const SYSTEMS_DIR = process.env.SYSTEMS_DIR ?? path.resolve(PROJECT_ROOT, '../systems');
+const SYSTEMS_DIR = process.env.SYSTEMS_DIR ?? path.resolve(PROJECT_ROOT, '../dune-item-data/dune-awakening/Dune/Systems');
+const ICON_DIR    = process.env.ICON_DIR    ?? path.resolve(PROJECT_ROOT, '../dune-item-data/dune-awakening');
 const SRC_DIR = path.join(PROJECT_ROOT, 'src');
 const OUT_FILE = path.join(SRC_DIR, 'data', 'pieceRegistry.generated.ts');
 
 // ── Asset index (GLBs and PNGs) ───────────────────────────────────────────────
 
-function scanByExtension(dir: string, ext: string): Map<string, string> {
+// relRoot: directory used as the base for computing relative URL paths.
+// urlPrefix: prepended before the relative path (GLBs use '/', icons use '/src/').
+//   GLBs live in src/ which is inside PROJECT_ROOT → '/' + relative(PROJECT_ROOT, file) = /src/...
+//   PNGs live in ICON_DIR (CDN mirror) → '/src/' + relative(ICON_DIR, file) = /src/Dune/...
+//   catalog.ts's cdnPath() strips the leading /src and prepends CDN_BASE.
+function scanByExtension(dir: string, ext: string, relRoot: string, urlPrefix = '/'): Map<string, string> {
   const index = new Map<string, string>();
   function walk(current: string) {
     for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
@@ -26,16 +37,13 @@ function scanByExtension(dir: string, ext: string): Map<string, string> {
       if (entry.isDirectory()) { walk(full); continue; }
       if (!entry.name.endsWith(ext)) continue;
       const stem = entry.name.slice(0, -ext.length);
-      const urlPath = '/' + path.relative(PROJECT_ROOT, full).replaceAll(path.sep, '/');
+      const urlPath = urlPrefix + path.relative(relRoot, full).replaceAll(path.sep, '/');
       if (!index.has(stem)) index.set(stem, urlPath);
     }
   }
   walk(dir);
   return index;
 }
-
-const scanGlbs = (dir: string) => scanByExtension(dir, '.glb');
-const scanPngs = (dir: string) => scanByExtension(dir, '.png');
 
 // ── CDT parsing ───────────────────────────────────────────────────────────────
 
@@ -161,9 +169,10 @@ function meshStem(assetPath: string): string {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-console.log('Scanning GLBs and PNGs in', SRC_DIR, '...');
-const glbIndex = scanGlbs(SRC_DIR);
-const pngIndex = scanPngs(SRC_DIR);
+console.log('Scanning GLBs in', SRC_DIR, '...');
+const glbIndex = scanByExtension(SRC_DIR, '.glb', PROJECT_ROOT);
+console.log('Scanning icon PNGs in', ICON_DIR, '...');
+const pngIndex = scanByExtension(ICON_DIR, '.png', ICON_DIR, '/src/');
 console.log(`Found ${glbIndex.size} GLB files, ${pngIndex.size} PNG files`);
 
 console.log('Reading CDT_BuildingData.json ...');

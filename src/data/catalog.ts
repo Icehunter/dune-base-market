@@ -162,8 +162,10 @@ const GLB_SWAPS: Record<string, string> = {
 
 export const MODEL_PATHS: Record<string, string> = cdnPaths({ ...GENERATED_PATHS, ...PLACEABLE_PATHS, ...GLB_SWAPS });
 
-export const PIECE_CATALOG = GENERATED;
+export const PIECE_CATALOG = GENERATED.map((p) =>
+  p.iconPath ? { ...p, iconPath: cdnPath(p.iconPath) } : p,
+);
 
 export function getPieceDefinition(templateId: string) {
-  return GENERATED.find(p => p.templateId === templateId) ?? inferPieceDefinition(templateId);
+  return PIECE_CATALOG.find(p => p.templateId === templateId) ?? inferPieceDefinition(templateId);
 }

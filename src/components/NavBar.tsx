@@ -1,6 +1,6 @@
-import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/react';
-import { Link } from 'react-router-dom';
-import { Icon } from '@iconify/react';
+import { useAuth, SignInButton, SignUpButton, UserButton } from "@clerk/react";
+import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export default function NavBar() {
   const { isSignedIn } = useAuth();

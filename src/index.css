@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+@font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-Medium.ttf') format('truetype'); font-weight: 400 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-Bold-Italic_MonoNumbers_Kommafix_Cyrfix.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-Italic_MonoNumbers_Kommafix_Cyrfix.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'ImperialFont'; src: url('/fonts/ImperialFont.ttf') format('truetype'); font-weight: normal; font-style: normal; font-display: swap; }
+
+@theme {
+  --font-sans: 'Duneway', ui-sans-serif, system-ui, sans-serif;
+}
+
 :root {
   --grid-color: rgba(255, 180, 100, 0.3);
   --grid-accent: rgba(255, 180, 100, 0.6);
@@ -25,7 +36,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Duneway', system-ui, -apple-system, sans-serif;
   background: var(--dune-dark);
   color: #e5e5e5;
 }

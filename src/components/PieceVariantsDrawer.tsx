@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Drawer, Select, ListBox } from "@heroui/react";
 import { Icon } from "@iconify/react";
-import { findEquivalents, getSetLabel, getShape } from "../data/pieceEquivalents";
+import { findEquivalents, getSetLabel, getDisplayName, getIconUrl } from "../data/pieceEquivalents";
 import type { RawBlueprint } from "../stores/buildingStore";
 
 interface TemplateBreakdownEntry {
@@ -42,6 +42,20 @@ interface Props {
   onPreviewEnd: (originalId: string) => void;
   /** Pulled in via prop so this lazy chunk doesn't have to re-import the class preset. */
   btnGhost: string;
+}
+
+function PieceIcon({ src }: { src: string | undefined }) {
+  if (!src) return <span className="w-6 h-6 shrink-0" />;
+  return (
+    <img
+      src={src}
+      alt=""
+      width={24}
+      height={24}
+      loading="lazy"
+      className="w-6 h-6 shrink-0 rounded object-contain bg-white/5"
+    />
+  );
 }
 
 export function PieceVariantsDrawer({
@@ -93,9 +107,12 @@ export function PieceVariantsDrawer({
                       isSwapped ? "border-accent/60" : "border-white/10"
                     }`}
                   >
-                    <div className="flex items-baseline justify-between">
-                      <span className="text-sm font-semibold text-white">{getShape(row.originalTemplateId)}</span>
-                      <span className="text-xs text-white/40">×{row.count}</span>
+                    <div className="flex items-center gap-2">
+                      <PieceIcon src={getIconUrl(row.originalTemplateId)} />
+                      <div className="flex items-baseline justify-between flex-1 min-w-0">
+                        <span className="text-sm font-semibold text-white truncate">{getDisplayName(row.originalTemplateId)}</span>
+                        <span className="text-xs text-white/40 ml-2 shrink-0">×{row.count}</span>
+                      </div>
                     </div>
                     <div className="text-xs text-white/45">from {getSetLabel(row.originalTemplateId)}</div>
                     <Select
@@ -108,7 +125,7 @@ export function PieceVariantsDrawer({
                         else next[row.originalTemplateId] = v;
                         onChange(next);
                       }}
-                      aria-label={`Variant for ${getShape(row.originalTemplateId)}`}
+                      aria-label={`Variant for ${getDisplayName(row.originalTemplateId)}`}
                     >
                       <Select.Trigger>
                         <Select.Value />
@@ -122,7 +139,10 @@ export function PieceVariantsDrawer({
                             onHoverStart={() => onPreview(row.originalTemplateId, row.originalTemplateId)}
                             onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
                           >
-                            {getSetLabel(row.originalTemplateId)} (original)
+                            <div className="flex items-center gap-2">
+                              <PieceIcon src={getIconUrl(row.originalTemplateId)} />
+                              <span>{getSetLabel(row.originalTemplateId)} (original)</span>
+                            </div>
                             <ListBox.ItemIndicator />
                           </ListBox.Item>
                           {equivalents.map((eq) => (
@@ -133,7 +153,10 @@ export function PieceVariantsDrawer({
                               onHoverStart={() => onPreview(row.originalTemplateId, eq.templateId)}
                               onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
                             >
-                              {eq.setLabel}
+                              <div className="flex items-center gap-2">
+                                <PieceIcon src={eq.iconUrl} />
+                                <span>{eq.setLabel}</span>
+                              </div>
                               <ListBox.ItemIndicator />
                             </ListBox.Item>
                           ))}

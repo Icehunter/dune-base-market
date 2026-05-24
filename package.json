@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:local": "concurrently -n vite,wrangler -c cyan,yellow \"vite\" \"npx wrangler pages dev --proxy 5173 --d1 DB=dune-blueprints --r2 BUCKET=dune-blueprints\"",
+    "dev:local": "concurrently -n vite,wrangler -c cyan,yellow \"vite build --watch -m development\" \"npx wrangler pages dev --proxy 5173 --d1 DB=dune-blueprints --r2 BUCKET=dune-blueprints\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:registry": "npx tsx scripts/build-piece-registry.ts",
+    "copy:fonts": "npx tsx scripts/copy-fonts.ts",
     "test": "vitest run"
   },
   "dependencies": {
