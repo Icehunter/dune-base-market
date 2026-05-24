@@ -6,7 +6,8 @@ function makeDb(row: object | null) {
     prepare: () => ({
       bind: () => ({
         first: async () => row,
-        run: async () => ({ success: true }),
+        all:   async () => ({ results: [] }),
+        run:   async () => ({ success: true }),
       }),
     }),
   } as unknown as D1Database;

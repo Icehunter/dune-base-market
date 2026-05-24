@@ -4,11 +4,30 @@ import { verifyAuth } from '../_lib/auth';
 
 type Ctx = EventContext<Env, string, Record<string, unknown>>;
 
+// Sort columns are aliases produced by the SELECT below so "popular" reflects
+// downloads across the Original + all variants.
 const VALID_SORTS: Record<string, string> = {
-  new:     'created_at DESC',
-  popular: 'download_count DESC',
-  top:     'rating_count DESC',
+  new:     'b.created_at DESC',
+  popular: 'total_downloads DESC',
+  top:     'b.rating_count DESC',
 };
+
+// Columns we return. Joined against an aggregate of blueprint_variants so each
+// row carries variant_count + total_downloads without a second query.
+const BASE_SELECT = `
+  SELECT b.id, b.title, b.username, b.is_public, b.piece_count, b.file_size,
+         b.tags, b.download_count, b.rating_count, b.snapshot_url, b.created_at,
+         COALESCE(v.variant_count, 0)     AS variant_count,
+         b.download_count + COALESCE(v.variant_downloads, 0) AS total_downloads
+  FROM blueprints b
+  LEFT JOIN (
+    SELECT blueprint_id,
+           COUNT(*)               AS variant_count,
+           SUM(download_count)    AS variant_downloads
+    FROM blueprint_variants
+    GROUP BY blueprint_id
+  ) v ON v.blueprint_id = b.id
+`;
 
 export async function onRequestGet(ctx: Ctx): Promise<Response> {
   const { request, env } = ctx;
@@ -21,37 +40,31 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     return json({ error: 'Invalid tag' }, 400);
   }
 
-  const orderBy = VALID_SORTS[sort] ?? 'created_at DESC';
+  const orderBy = VALID_SORTS[sort] ?? 'b.created_at DESC';
 
   if (mine) {
     const userId = await verifyAuth(request, env);
     if (!userId) return json({ error: 'Unauthorized' }, 401);
 
-    let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
-                 FROM blueprints WHERE user_id = ? ORDER BY ${orderBy}`;
     const params: unknown[] = [userId];
-
+    let where = 'WHERE b.user_id = ?';
     if (tag) {
-      query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
-               FROM blueprints WHERE user_id = ? AND tags LIKE ? ORDER BY ${orderBy}`;
+      where += ' AND b.tags LIKE ?';
       params.push(`%"${tag}"%`);
     }
-
-    const { results } = await env.DB.prepare(query).bind(...params).all();
+    const { results } = await env.DB.prepare(`${BASE_SELECT} ${where} ORDER BY ${orderBy}`)
+      .bind(...params).all();
     return json({ blueprints: results.map(deserialize) });
   }
 
-  let query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
-               FROM blueprints WHERE is_public = 1 ORDER BY ${orderBy}`;
   const params: unknown[] = [];
-
+  let where = 'WHERE b.is_public = 1';
   if (tag) {
-    query = `SELECT id, title, username, is_public, piece_count, file_size, tags, download_count, rating_count, snapshot_url, created_at
-             FROM blueprints WHERE is_public = 1 AND tags LIKE ? ORDER BY ${orderBy}`;
+    where += ' AND b.tags LIKE ?';
     params.push(`%"${tag}"%`);
   }
-
-  const { results } = await env.DB.prepare(query).bind(...params).all();
+  const { results } = await env.DB.prepare(`${BASE_SELECT} ${where} ORDER BY ${orderBy}`)
+    .bind(...params).all();
   return json({ blueprints: results.map(deserialize) });
 }
 

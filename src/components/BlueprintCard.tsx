@@ -21,8 +21,21 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
     }
   }
 
+  // Older API responses may not yet include these — fall back so this component
+  // still works against an un-migrated server.
+  const totalDownloads = blueprint.total_downloads ?? blueprint.download_count ?? 0;
+  const variantCount   = blueprint.variant_count ?? 0;
+
   return (
-    <div style={{ background: '#13131a', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, overflow: 'hidden' }}>
+    <div style={{
+      background: '#13131a',
+      border: '1px solid rgba(255,255,255,0.08)',
+      borderRadius: 8,
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column',
+      height: '100%',
+    }}>
       {/* Cover / placeholder — always 16:9 */}
       <Link
         to={`/blueprint/${blueprint.id}`}
@@ -60,14 +73,15 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
         )}
       </Link>
 
-      {/* Body */}
-      <div style={{ padding: '8px 12px' }}>
+      {/* Body — flex: 1 so all cards have the same overall height regardless of
+          title wrapping. The footer sits at the bottom of every card. */}
+      <div style={{ padding: '8px 12px', flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
         <Link to={`/blueprint/${blueprint.id}`} style={{ textDecoration: 'none' }}>
           <p style={{ color: '#fff', fontWeight: 600, fontSize: 13, margin: 0 }}>
             {blueprint.title}
           </p>
         </Link>
-        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, margin: '2px 0 0' }}>
+        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 11, margin: 0 }}>
           by {blueprint.username}
           {showVisibility && (
             <span style={{
@@ -83,6 +97,34 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
             </span>
           )}
         </p>
+
+        {/* Metrics row — pushes the footer down via the flex:1 body */}
+        <div style={{
+          marginTop: 'auto',
+          display: 'flex',
+          gap: 8,
+          flexWrap: 'wrap',
+          color: 'rgba(255,255,255,0.5)',
+          fontSize: 10,
+        }}>
+          <span title="Total downloads (Original + variants)">⬇ {totalDownloads}</span>
+          {variantCount > 0 && (
+            <span
+              title={`${variantCount} variant${variantCount === 1 ? '' : 's'}`}
+              style={{
+                background: 'rgba(200,168,75,0.12)',
+                border: '1px solid rgba(200,168,75,0.35)',
+                color: '#c8a84b',
+                padding: '1px 6px',
+                borderRadius: 3,
+                fontWeight: 600,
+              }}
+            >
+              {variantCount} variant{variantCount === 1 ? '' : 's'}
+            </span>
+          )}
+          <span>♥ {blueprint.rating_count ?? 0}</span>
+        </div>
       </div>
 
       {/* Footer */}
@@ -99,7 +141,6 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
         >
           👁 View
         </Link>
-        <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11 }}>♥ {blueprint.rating_count ?? 0}</span>
         <div style={{ flex: 1 }} />
 
         {onDelete && (
@@ -132,7 +173,7 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
               cursor: 'pointer',
             }}
           >
-            ⬇ Download JSON
+            ⬇ Download
           </button>
         ) : (
           <button

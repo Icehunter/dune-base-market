@@ -24,11 +24,13 @@ import { EXTRA_ROTATION, ROTATION_BY_STORED, type RotMap } from "../data/modelRe
 
 export interface PlacedMesh {
   id: string;
-  templateId: string;
+  templateId: string;          // currently rendered templateId (changes on swap)
+  originalTemplateId: string;  // stable id from the blueprint JSON; key for cross-faction swaps
   root: TransformNode | Mesh;
   position: Vector3;
   rotation: number;
-  baseQuaternion: Quaternion; // GLB coord-correction quat, captured before our yaw is applied
+  baseQuaternion: Quaternion;  // GLB coord-correction quat, captured before our yaw is applied
+  scale?: { x: number; y: number; z: number };
 }
 
 // ── Flat shader ───────────────────────────────────────────────────────────────
@@ -270,14 +272,16 @@ export class PieceManager {
     scale?: { x: number; y: number; z: number },
     devOverrides: Partial<Record<string, RotMap>> = {},
     userOverrides: Partial<Record<string, RotMap>> = {},
+    originalTemplateId?: string,
   ): PlacedMesh | null {
+    const origId = originalTemplateId ?? templateId;
     this.removePiece(id);
 
     const container = this.containerCache.get(templateId);
     if (!container) {
       // GLB not loaded (model not yet extracted from UE) — show a wireframe
       // placeholder so the piece position is still visible in the scene.
-      return this.placePlaceholder(id, templateId, position, rotation);
+      return this.placePlaceholder(id, templateId, position, rotation, origId, scale);
     }
 
     const entries = container.instantiateModelsToScene((name) => `${id}_${name}`, false);
@@ -338,12 +342,22 @@ export class PieceManager {
       });
     }
 
-    const placed: PlacedMesh = { id, templateId, root, position: position.clone(), rotation, baseQuaternion };
+    const placed: PlacedMesh = {
+      id, templateId, originalTemplateId: origId,
+      root, position: position.clone(), rotation, baseQuaternion, scale,
+    };
     this.placedMeshes.set(id, placed);
     return placed;
   }
 
-  private placePlaceholder(id: string, templateId: string, position: Vector3, rotation: number): PlacedMesh {
+  private placePlaceholder(
+    id: string,
+    templateId: string,
+    position: Vector3,
+    rotation: number,
+    originalTemplateId: string,
+    scale?: { x: number; y: number; z: number },
+  ): PlacedMesh {
     // 256-unit cube — half a foundation tile, enough to be noticeable.
     const box = MeshBuilder.CreateBox(`ph_${id}`, { size: 256 }, this.scene);
     box.position = position.add(new Vector3(0, 128, 0));
@@ -355,7 +369,10 @@ export class PieceManager {
       return m;
     });
     box.metadata = { pieceId: id, templateId };
-    const placed: PlacedMesh = { id, templateId, root: box, position: position.clone(), rotation, baseQuaternion: Quaternion.Identity() };
+    const placed: PlacedMesh = {
+      id, templateId, originalTemplateId,
+      root: box, position: position.clone(), rotation, baseQuaternion: Quaternion.Identity(), scale,
+    };
     this.placedMeshes.set(id, placed);
     return placed;
   }
@@ -406,6 +423,41 @@ export class PieceManager {
     if (placed) {
       placed.root.dispose();
       this.placedMeshes.delete(id);
+    }
+  }
+
+  // Read-only access to the current state of a placed piece (post any swaps).
+  getPlaced(id: string): PlacedMesh | undefined {
+    return this.placedMeshes.get(id);
+  }
+
+  // Replace every piece currently associated with `originalTemplateId` with `newTemplateId`,
+  // preserving id / position / rotation / scale. Used by cross-faction piece swaps so the
+  // scene mutates incrementally without a full rebuild (and without resetting the camera).
+  async swapTemplate(
+    originalTemplateId: string,
+    newTemplateId: string,
+    userOverrides: Partial<Record<string, RotMap>> = {},
+    devOverrides: Partial<Record<string, RotMap>> = {},
+  ): Promise<void> {
+    if (originalTemplateId === newTemplateId) {
+      // Revert path: re-place the original template for matching pieces.
+    }
+    await this.preloadModel(newTemplateId);
+    const matches = [...this.placedMeshes.values()].filter(
+      (p) => p.originalTemplateId === originalTemplateId,
+    );
+    for (const m of matches) {
+      this.placePiece(
+        m.id,
+        newTemplateId,
+        m.position.clone(),
+        m.rotation,
+        m.scale,
+        devOverrides,
+        userOverrides,
+        originalTemplateId,
+      );
     }
   }
 

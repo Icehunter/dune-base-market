@@ -6,10 +6,24 @@ export interface BlueprintMeta {
   piece_count: number | null;
   file_size: number | null;
   tags: string[];
-  download_count: number;
+  download_count: number;       // blueprint's own (Original variant) downloads
+  variant_count: number;        // number of saved variants
+  total_downloads: number;      // download_count + sum of variant download_counts
   rating_count: number;
   snapshot_url: string | null;
   created_at: string;
+}
+
+export interface BlueprintVariantSummary {
+  id: string;
+  name: string;
+  snapshot_url: string | null;
+  download_count: number;
+  created_at: string;
+}
+
+export interface BlueprintVariant extends BlueprintVariantSummary {
+  piece_overrides: Record<string, string> | null;
 }
 
 export interface BlueprintDetail extends BlueprintMeta {
@@ -21,6 +35,7 @@ export interface BlueprintDetail extends BlueprintMeta {
   } | null;
   rotation_overrides: Record<string, Record<number, number>> | null;
   user_rated: boolean;
+  variants: BlueprintVariantSummary[];
 }
 
 async function authHeaders(getToken: () => Promise<string | null>): Promise<HeadersInit> {
@@ -111,6 +126,64 @@ export async function saveRotationOverrides(
   if (!res.ok) throw new Error(`Failed to save rotation overrides: ${res.status}`);
 }
 
+export async function getVariant(
+  id: string,
+  variantId: string,
+  getToken?: () => Promise<string | null>,
+): Promise<BlueprintVariant> {
+  const headers = getToken ? await authHeaders(getToken) : {};
+  const res = await fetch(`/api/blueprints/${id}/variants/${variantId}`, { headers });
+  if (!res.ok) throw new Error(`Variant not found: ${res.status}`);
+  const body = await res.json() as { variant: BlueprintVariant };
+  return body.variant;
+}
+
+export async function createVariant(
+  id: string,
+  payload: { name: string; piece_overrides: Record<string, string> | null },
+  getToken: () => Promise<string | null>,
+): Promise<BlueprintVariant> {
+  const headers = await authHeaders(getToken);
+  const res = await fetch(`/api/blueprints/${id}/variants`, {
+    method: 'POST',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error(`Failed to create variant: ${res.status}`);
+  const body = await res.json() as { variant: BlueprintVariant };
+  return body.variant;
+}
+
+export async function updateVariant(
+  id: string,
+  variantId: string,
+  payload: { name?: string; piece_overrides?: Record<string, string> | null },
+  getToken: () => Promise<string | null>,
+): Promise<BlueprintVariant> {
+  const headers = await authHeaders(getToken);
+  const res = await fetch(`/api/blueprints/${id}/variants/${variantId}`, {
+    method: 'PATCH',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error(`Failed to update variant: ${res.status}`);
+  const body = await res.json() as { variant: BlueprintVariant };
+  return body.variant;
+}
+
+export async function deleteVariant(
+  id: string,
+  variantId: string,
+  getToken: () => Promise<string | null>,
+): Promise<void> {
+  const headers = await authHeaders(getToken);
+  const res = await fetch(`/api/blueprints/${id}/variants/${variantId}`, {
+    method: 'DELETE',
+    headers,
+  });
+  if (!res.ok) throw new Error(`Failed to delete variant: ${res.status}`);
+}
+
 export async function deleteBlueprint(
   id: string,
   getToken: () => Promise<string | null>
@@ -126,11 +199,15 @@ export async function deleteBlueprint(
 
 export async function downloadBlueprint(
   id: string,
-  getToken: () => Promise<string | null>
+  getToken: () => Promise<string | null>,
+  variantId?: string,
 ): Promise<void> {
   const token = await getToken();
   if (!token) throw new Error('Not authenticated');
-  const res = await fetch(`/api/blueprints/${id}/download`, {
+  const endpoint = variantId
+    ? `/api/blueprints/${id}/download?v=${encodeURIComponent(variantId)}`
+    : `/api/blueprints/${id}/download`;
+  const res = await fetch(endpoint, {
     headers: { Authorization: `Bearer ${token}` },
   });
   if (!res.ok) throw new Error(`Download failed: ${res.status}`);
@@ -140,29 +217,47 @@ export async function downloadBlueprint(
   const filename = match?.[1] ?? `blueprint_${id}.json`;
 
   const blob = await res.blob();
-  const url = URL.createObjectURL(blob);
+  const blobUrl = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
+  a.href = blobUrl;
   a.download = filename;
   a.click();
-  URL.revokeObjectURL(url);
+  URL.revokeObjectURL(blobUrl);
 }
 
 export async function uploadSnapshot(
   id: string,
   file: File,
-  getToken: () => Promise<string | null>
+  getToken: () => Promise<string | null>,
+  variantId?: string,
 ): Promise<{ snapshot_url: string }> {
   const headers = await authHeaders(getToken);
   const form = new FormData();
   form.append('file', file);
-  const res = await fetch(`/api/blueprints/${id}/snapshot`, {
+  const url = variantId
+    ? `/api/blueprints/${id}/variants/${variantId}/snapshot`
+    : `/api/blueprints/${id}/snapshot`;
+  const res = await fetch(url, {
     method: 'PUT',
     headers,
     body: form,
   });
   if (!res.ok) throw new Error(`Snapshot upload failed: ${res.status}`);
   return res.json() as Promise<{ snapshot_url: string }>;
+}
+
+export async function forkBlueprint(
+  id: string,
+  getToken: () => Promise<string | null>,
+  variantId?: string,
+): Promise<{ id: string }> {
+  const headers = await authHeaders(getToken);
+  const url = variantId
+    ? `/api/blueprints/${id}/fork?v=${encodeURIComponent(variantId)}`
+    : `/api/blueprints/${id}/fork`;
+  const res = await fetch(url, { method: 'POST', headers });
+  if (!res.ok) throw new Error(`Fork failed: ${res.status}`);
+  return res.json() as Promise<{ id: string }>;
 }
 
 export async function replaceBlueprintJson(

@@ -32,25 +32,35 @@ export interface SceneCanvasHandle {
   applyDevOverrides: (devMap: Partial<Record<string, RotMap>>, userMap?: Partial<Record<string, RotMap>>) => void;
   setMode: (mode: 'orbit' | 'fly') => void;
   captureScreenshot: () => Promise<Blob>;
+  // Replace every instance of `originalTemplateId` with `newTemplateId` in place.
+  // Pass newTemplateId === originalTemplateId to revert to the original. No camera reset.
+  swapTemplate: (originalTemplateId: string, newTemplateId: string) => Promise<void>;
+  // Current (post-swap) templateId for a piece. Used by the page to keep selectedPiece
+  // in sync after a variant swap so rotation overrides target the displayed template.
+  getCurrentTemplateId: (pieceId: string) => string | null;
 }
 
 interface Props {
   ref?: React.Ref<SceneCanvasHandle>;
   onSelectPiece?: (piece: PlacedPiece | null) => void;
   onModeChange?: (mode: 'orbit' | 'fly') => void;
+  // Fired once initial pieces have been placed — used by the page to apply
+  // any persisted piece overrides imperatively without rebuilding the scene.
+  onReady?: () => void;
   initialDistanceScale?: number;
   initialBlueprint?: RawBlueprint;
   userRotationOverrides?: Partial<Record<string, RotMap>>;
 }
 
 export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
-  function SceneCanvas({ onSelectPiece, onModeChange, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
+  function SceneCanvas({ onSelectPiece, onModeChange, onReady, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
     const canvasRef     = useRef<HTMLCanvasElement>(null);
     const onSelectRef   = useRef(onSelectPiece);
     const pmRef         = useRef<PieceManager | null>(null);
     const selectedIdRef = useRef<string | null>(null);
     const modeRef              = useRef<'orbit' | 'fly'>('orbit');
     const onModeChangeRef      = useRef(onModeChange);
+    const onReadyRef           = useRef(onReady);
     const userOverridesRef     = useRef(userRotationOverrides);
     const orbitCamRef     = useRef<ArcRotateCamera | null>(null);
     const flyCamRef       = useRef<UniversalCamera | null>(null);
@@ -103,6 +113,12 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
           onModeChangeRef.current?.('orbit');
         }
       },
+      swapTemplate: async (originalTemplateId, newTemplateId) => {
+        const pm = pmRef.current;
+        if (!pm) return;
+        await pm.swapTemplate(originalTemplateId, newTemplateId, userOverridesRef.current);
+      },
+      getCurrentTemplateId: (pieceId) => pmRef.current?.getPlaced(pieceId)?.templateId ?? null,
     }));
 
     useEffect(() => {
@@ -112,6 +128,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     // Keep callback ref current without re-running the heavy effect.
     useEffect(() => { onSelectRef.current = onSelectPiece; }, [onSelectPiece]);
     useEffect(() => { onModeChangeRef.current = onModeChange; }, [onModeChange]);
+    useEffect(() => { onReadyRef.current   = onReady;        }, [onReady]);
     useEffect(() => { userOverridesRef.current = userRotationOverrides; }, [userRotationOverrides]);
 
     useEffect(() => {
@@ -287,7 +304,19 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
             userOverridesRef.current,
           );
         }
+        onReadyRef.current?.();
       });
+
+      // Build a PlacedPiece for a picked mesh. The store holds the *original* templateId;
+      // the mesh metadata holds the *current* (post-swap) templateId — we use metadata so
+      // rotation overrides key the actually rendered piece, not the original.
+      const pieceFromPick = (pieceId: string): PlacedPiece | null => {
+        const stored = pieces.find((p) => p.id === pieceId);
+        if (!stored) return null;
+        const placed = pm.getPlaced(pieceId);
+        const currentTemplateId = placed?.templateId ?? stored.templateId;
+        return { ...stored, templateId: currentTemplateId };
+      };
 
       // ── Click: pick at crosshair when locked; re-lock when unlocked ─────────
       const onClick = () => {
@@ -298,8 +327,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
               const pieceId = pick.pickedMesh.metadata.pieceId as string;
               pm.selectPiece(pieceId);
               selectedIdRef.current = pieceId;
-              const piece = pieces.find(p => p.id === pieceId) ?? null;
-              onSelectRef.current?.(piece);
+              onSelectRef.current?.(pieceFromPick(pieceId));
             } else {
               pm.clearSelection();
               selectedIdRef.current = null;
@@ -315,8 +343,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
             const pieceId = pick.pickedMesh.metadata.pieceId as string;
             pm.selectPiece(pieceId);
             selectedIdRef.current = pieceId;
-            const piece = pieces.find(p => p.id === pieceId) ?? null;
-            onSelectRef.current?.(piece);
+            onSelectRef.current?.(pieceFromPick(pieceId));
           } else {
             pm.clearSelection();
             selectedIdRef.current = null;

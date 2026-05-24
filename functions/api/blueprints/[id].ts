@@ -11,7 +11,8 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
 
   const row = await env.DB.prepare(
     `SELECT id, title, username, user_id, is_public, piece_count, file_size,
-            tags, download_count, rating_count, snapshot_url, created_at, blueprint_data, rotation_overrides
+            tags, download_count, rating_count, snapshot_url, created_at, blueprint_data,
+            rotation_overrides
      FROM blueprints WHERE id = ?`
   ).bind(id).first<Record<string, unknown>>();
 
@@ -30,12 +31,19 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     userRated = !!vote;
   }
 
+  const variants = await env.DB.prepare(
+    `SELECT id, name, snapshot_url, download_count, created_at
+     FROM blueprint_variants WHERE blueprint_id = ?
+     ORDER BY created_at ASC`,
+  ).bind(id).all<{ id: string; name: string; snapshot_url: string | null; download_count: number; created_at: string }>();
+
   return json({
     ...row,
     tags: safeParseJson(row.tags as string | null, []),
     blueprint_data: safeParseJson(row.blueprint_data as string | null, null),
     rotation_overrides: safeParseJson(row.rotation_overrides as string | null, null),
     user_rated: userRated,
+    variants: variants.results ?? [],
   });
 }
 

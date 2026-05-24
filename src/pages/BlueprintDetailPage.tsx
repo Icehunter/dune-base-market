@@ -1,10 +1,11 @@
-import { useState, useEffect, useRef, lazy, Suspense } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useState, useEffect, useMemo, useRef, lazy, Suspense } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth, SignInButton } from '@clerk/react';
-import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint, replaceBlueprintJson } from '../lib/api';
-import type { BlueprintDetail } from '../lib/api';
+import { getBlueprint, downloadBlueprint, deleteBlueprint, updateBlueprint, saveRotationOverrides, uploadSnapshot, rateBlueprint, replaceBlueprintJson, getVariant, createVariant, updateVariant, deleteVariant, forkBlueprint } from '../lib/api';
+import type { BlueprintDetail, BlueprintVariantSummary, BlueprintVariant } from '../lib/api';
 import type { RawBlueprint, PlacedPiece } from '../stores/buildingStore';
 import type { RotMap } from '../data/modelRegistry';
+import { findEquivalents, getSetLabel, getShape } from '../data/pieceEquivalents';
 import type { SceneCanvasHandle } from '../components/Scene';
 import { ViewerHUD } from '../components/Scene';
 
@@ -13,7 +14,8 @@ const SceneCanvas = lazy(() =>
 );
 
 export default function BlueprintDetailPage() {
-  const { id } = useParams<{ id: string }>();
+  const { id, variantId: variantIdFromUrl } = useParams<{ id: string; variantId?: string }>();
+  const navigate = useNavigate();
   const { isSignedIn, userId, getToken } = useAuth();
   const [blueprint, setBlueprint] = useState<BlueprintDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -33,6 +35,22 @@ export default function BlueprintDetailPage() {
   const replaceInputRef = useRef<HTMLInputElement>(null);
   const [viewerMode, setViewerMode] = useState<'orbit' | 'fly'>('orbit');
   const [isEditMode, setIsEditMode] = useState(false);
+  // Template overrides (originalTemplateId → replacementTemplateId). Applied to the
+  // live scene via imperative swaps; persisted per-variant on the server.
+  const [templateOverrides, setTemplateOverrides] = useState<Record<string, string>>({});
+  // null = "Original" (no variant); otherwise the variant id currently displayed.
+  const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
+  const [variants, setVariants] = useState<BlueprintVariantSummary[]>([]);
+  // Has the current set of overrides drifted from the variant's saved state?
+  const [variantDirty, setVariantDirty] = useState(false);
+  // Set true by handleSelectVariant so the next override-effect run skips dirty-marking.
+  const suppressDirtyRef = useRef(false);
+  const [pieceVariantsOpen, setPieceVariantsOpen] = useState(false);
+  const [sceneReady, setSceneReady] = useState(false);
+  // Default: open on desktop, collapsed on mobile.
+  const [infoOpen, setInfoOpen] = useState(() =>
+    typeof window === 'undefined' ? true : window.innerWidth >= 768,
+  );
   // devMapRef holds the live map — never triggers re-renders on its own.
   // devDisplayMap is a copy used only to re-render the HUD.
   const sceneRef  = useRef<SceneCanvasHandle | null>(null);
@@ -99,6 +117,7 @@ export default function BlueprintDetailPage() {
         setSnapshotUrl(bp.snapshot_url ?? null);
         setUserRated(bp.user_rated ?? false);
         setRatingCount(bp.rating_count ?? 0);
+        setVariants(bp.variants ?? []);
         if (bp.rotation_overrides) {
           devMapRef.current = bp.rotation_overrides as Partial<Record<string, RotMap>>;
           setDevDisplayMap({ ...bp.rotation_overrides });
@@ -132,9 +151,132 @@ export default function BlueprintDetailPage() {
     return () => clearTimeout(timer);
   }, [devDisplayMap, isOwnerForEffect, id, isSignedIn, getToken]);
 
+  // Apply template-override changes to the live scene imperatively (no React reload,
+  // no camera reset). Also gates on sceneReady so persisted overrides hydrated from
+  // the API are applied once the initial placement finishes.
+  const prevOverridesRef = useRef<Record<string, string>>({});
+  useEffect(() => {
+    if (!sceneReady) return;
+    const handle = sceneRef.current;
+    if (!handle) return;
+    const prev = prevOverridesRef.current;
+    const next = templateOverrides;
+    const keys = new Set([...Object.keys(prev), ...Object.keys(next)]);
+    const swaps: Promise<void>[] = [];
+    for (const origId of keys) {
+      const prevTarget = prev[origId] ?? origId;
+      const nextTarget = next[origId] ?? origId;
+      if (prevTarget !== nextTarget) {
+        swaps.push(handle.swapTemplate(origId, nextTarget));
+      }
+    }
+    prevOverridesRef.current = { ...next };
+    if (swaps.length > 0) {
+      if (suppressDirtyRef.current) suppressDirtyRef.current = false;
+      else                          setVariantDirty(true);
+    }
+
+    // After swaps resolve, if a piece is selected, sync its templateId so subsequent
+    // rotation overrides (R / Shift+R) target the *currently displayed* template.
+    Promise.all(swaps).then(() => {
+      setSelectedPiece((prev) => {
+        if (!prev) return prev;
+        const cur = sceneRef.current?.getCurrentTemplateId(prev.id);
+        if (!cur || cur === prev.templateId) return prev;
+        return { ...prev, templateId: cur };
+      });
+    });
+  }, [templateOverrides, sceneReady]);
+
+
   async function handleDownload() {
     if (!id) return;
-    try { await downloadBlueprint(id, getToken); } catch (err) { console.error(err); }
+    try { await downloadBlueprint(id, getToken, selectedVariantId ?? undefined); }
+    catch (err) { console.error(err); }
+  }
+
+  // Auto-select the variant from the URL once the scene is ready. Only runs when
+  // the URL variant param differs from the currently-selected one, so navigating
+  // back/forward between variants applies the right state.
+  useEffect(() => {
+    if (!sceneReady || !id) return;
+    if (variantIdFromUrl === selectedVariantId) return;
+    handleSelectVariant(variantIdFromUrl ?? null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [variantIdFromUrl, sceneReady, id]);
+
+  // Variant selection — fetches overrides for the picked variant and applies via
+  // imperative swap. Selecting "Original" (null) clears all overrides.
+  async function handleSelectVariant(variantId: string | null) {
+    if (!id || variantId === selectedVariantId) return;
+    if (variantId === null) {
+      suppressDirtyRef.current = true;
+      setTemplateOverrides({});
+      setSelectedVariantId(null);
+      setVariantDirty(false);
+      // Keep URL clean — drop /v/:variantId when reverting to Original.
+      navigate(`/blueprint/${id}`, { replace: true });
+      return;
+    }
+    try {
+      const v: BlueprintVariant = await getVariant(id, variantId, getToken);
+      suppressDirtyRef.current = true;
+      setTemplateOverrides(v.piece_overrides ?? {});
+      setSelectedVariantId(variantId);
+      setVariantDirty(false);
+      navigate(`/blueprint/${id}/v/${variantId}`, { replace: true });
+    } catch (err) { console.error(err); }
+  }
+
+  async function handleSaveAsNewVariant() {
+    if (!id) return;
+    const name = window.prompt('Name this variant', '')?.trim();
+    if (!name) return;
+    try {
+      const v = await createVariant(id, {
+        name,
+        piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
+      }, getToken);
+      setVariants((prev) => [...prev, { id: v.id, name: v.name, snapshot_url: v.snapshot_url, download_count: v.download_count, created_at: v.created_at }]);
+      setSelectedVariantId(v.id);
+      setVariantDirty(false);
+      navigate(`/blueprint/${id}/v/${v.id}`, { replace: true });
+    } catch (err) { console.error(err); }
+  }
+
+  async function handleSaveVariantChanges() {
+    if (!id || !selectedVariantId) return;
+    try {
+      await updateVariant(id, selectedVariantId, {
+        piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
+      }, getToken);
+      setVariantDirty(false);
+    } catch (err) { console.error(err); }
+  }
+
+  async function handleRenameVariant() {
+    if (!id || !selectedVariantId) return;
+    const current = variants.find((v) => v.id === selectedVariantId);
+    const name = window.prompt('Rename variant', current?.name ?? '')?.trim();
+    if (!name) return;
+    try {
+      await updateVariant(id, selectedVariantId, { name }, getToken);
+      setVariants((prev) => prev.map((v) => v.id === selectedVariantId ? { ...v, name } : v));
+    } catch (err) { console.error(err); }
+  }
+
+  async function handleDeleteVariant() {
+    if (!id || !selectedVariantId) return;
+    const current = variants.find((v) => v.id === selectedVariantId);
+    if (!confirm(`Delete variant "${current?.name}"?`)) return;
+    try {
+      await deleteVariant(id, selectedVariantId, getToken);
+      setVariants((prev) => prev.filter((v) => v.id !== selectedVariantId));
+      setSelectedVariantId(null);
+      setTemplateOverrides({});
+      setVariantDirty(false);
+      navigate(`/blueprint/${id}`, { replace: true });
+    } catch (err) { console.error(err); }
   }
 
   async function handleDelete() {
@@ -154,12 +296,24 @@ export default function BlueprintDetailPage() {
     } catch (err) { console.error(err); }
   }
 
+  // When a variant is selected, snapshots target that variant. Selecting Original
+  // updates the blueprint cover. Cover URL state is refreshed so the sidebar img reloads.
+  function applyUploadedSnapshotUrl(url: string) {
+    if (selectedVariantId) {
+      setVariants((prev) => prev.map((v) =>
+        v.id === selectedVariantId ? { ...v, snapshot_url: url } : v,
+      ));
+    } else {
+      setSnapshotUrl(`${url}?t=${Date.now()}`);
+    }
+  }
+
   async function handleSnapshotUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file || !id) return;
     try {
-      const { snapshot_url } = await uploadSnapshot(id, file, getToken);
-      setSnapshotUrl(`${snapshot_url}?t=${Date.now()}`);
+      const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
+      applyUploadedSnapshotUrl(snapshot_url);
     } catch (err) {
       console.error('Snapshot upload failed', err);
     }
@@ -170,10 +324,20 @@ export default function BlueprintDetailPage() {
     try {
       const blob = await sceneRef.current!.captureScreenshot();
       const file = new File([blob], 'cover.jpg', { type: 'image/jpeg' });
-      const { snapshot_url } = await uploadSnapshot(id, file, getToken);
-      setSnapshotUrl(`${snapshot_url}?t=${Date.now()}`);
+      const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
+      applyUploadedSnapshotUrl(snapshot_url);
     } catch (err) {
       console.error('Save view as cover failed', err);
+    }
+  }
+
+  async function handleFork() {
+    if (!id) return;
+    try {
+      const { id: newId } = await forkBlueprint(id, getToken, selectedVariantId ?? undefined);
+      navigate(`/blueprint/${newId}`);
+    } catch (err) {
+      console.error('Fork failed', err);
     }
   }
 
@@ -227,7 +391,16 @@ export default function BlueprintDetailPage() {
   const pieceGroups = buildPieceBreakdown(blueprint);
 
   return (
-    <div style={{ display: 'flex', height: 'calc(100vh - 52px)', overflow: 'hidden' }}>
+    <div style={{ display: 'flex', height: 'calc(100vh - 52px)', overflow: 'hidden', position: 'relative' }}>
+      {/* Piece variants drawer — overlays the right side when open */}
+      <PieceVariantsDrawer
+        open={pieceVariantsOpen}
+        onClose={() => setPieceVariantsOpen(false)}
+        raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
+        overrides={templateOverrides}
+        onChange={setTemplateOverrides}
+      />
+
       {/* 3D Viewer */}
       <div style={{ flex: 1, position: 'relative', background: '#000', overflow: 'hidden' }}>
         {blueprint.blueprint_data ? (
@@ -236,6 +409,7 @@ export default function BlueprintDetailPage() {
               ref={sceneRef}
               onSelectPiece={setSelectedPiece}
               onModeChange={setViewerMode}
+              onReady={() => setSceneReady(true)}
               initialDistanceScale={1}
               initialBlueprint={blueprint.blueprint_data as unknown as RawBlueprint}
               userRotationOverrides={devDisplayMap}
@@ -339,7 +513,39 @@ export default function BlueprintDetailPage() {
         )}
       </div>
 
+      {/* Slim re-open tab when the sidebar is closed. Vertically centered on the right
+          edge so it never collides with the Edit Rotations / mode chips up top. */}
+      {!infoOpen && (
+        <button
+          onClick={() => setInfoOpen(true)}
+          aria-label="Show info"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            right: 0,
+            transform: 'translateY(-50%)',
+            zIndex: 50,
+            background: 'rgba(30,30,42,0.92)',
+            border: '1px solid rgba(255,255,255,0.25)',
+            borderRight: 'none',
+            borderTopLeftRadius: 6,
+            borderBottomLeftRadius: 6,
+            color: '#fff',
+            fontSize: 12,
+            fontWeight: 600,
+            padding: '12px 8px',
+            cursor: 'pointer',
+            backdropFilter: 'blur(6px)',
+            boxShadow: '-2px 2px 6px rgba(0,0,0,0.4)',
+            writingMode: 'vertical-rl',
+          }}
+        >
+          ‹ Info
+        </button>
+      )}
+
       {/* Sidebar */}
+      {infoOpen && (
       <div
         style={{
           width: 280,
@@ -353,17 +559,48 @@ export default function BlueprintDetailPage() {
           flexShrink: 0,
         }}
       >
-        <Link to="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, textDecoration: 'none' }}>
-          ← Back to gallery
-        </Link>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Link to="/" style={{ color: 'rgba(255,255,255,0.4)', fontSize: 11, textDecoration: 'none' }}>
+            ← Back to gallery
+          </Link>
+          <button
+            onClick={() => setInfoOpen(false)}
+            aria-label="Hide info"
+            style={{
+              background: 'transparent', border: 'none',
+              color: 'rgba(255,255,255,0.5)', fontSize: 18,
+              cursor: 'pointer', padding: '0 4px', lineHeight: 1,
+            }}
+          >×</button>
+        </div>
 
-        {snapshotUrl && (
-          <img
-            src={snapshotUrl}
-            alt="Cover"
-            style={{ width: '100%', borderRadius: 6, objectFit: 'cover', aspectRatio: '16/9' }}
-          />
-        )}
+        {/* Variant switcher — always shown; owners can save / rename / delete variants */}
+        <VariantSwitcher
+          variants={variants}
+          selectedVariantId={selectedVariantId}
+          dirty={variantDirty}
+          isOwner={isOwner}
+          hasOverrides={Object.keys(templateOverrides).length > 0}
+          onSelect={handleSelectVariant}
+          onSaveNew={handleSaveAsNewVariant}
+          onSaveChanges={handleSaveVariantChanges}
+          onRename={handleRenameVariant}
+          onDelete={handleDeleteVariant}
+        />
+
+        {(() => {
+          const variantSnap = selectedVariantId
+            ? variants.find((v) => v.id === selectedVariantId)?.snapshot_url ?? null
+            : null;
+          const url = variantSnap ?? snapshotUrl;
+          return url ? (
+            <img
+              src={url}
+              alt="Cover"
+              style={{ width: '100%', borderRadius: 6, objectFit: 'cover', aspectRatio: '16/9' }}
+            />
+          ) : null;
+        })()}
 
         {/* Title / edit mode */}
         {editing ? (
@@ -472,6 +709,13 @@ export default function BlueprintDetailPage() {
           ))}
         </div>
 
+        {/* Piece variants — opens a drawer overlaying the right side */}
+        <PieceVariantsTrigger
+          raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
+          overrides={templateOverrides}
+          onOpen={() => setPieceVariantsOpen(true)}
+        />
+
         {/* Download */}
         {isSignedIn ? (
           <button
@@ -481,7 +725,7 @@ export default function BlueprintDetailPage() {
               color: '#000', fontWeight: 700, padding: '9px 0', fontSize: 13, cursor: 'pointer',
             }}
           >
-            ⬇ Download
+            ⬇ Download{Object.keys(templateOverrides).length > 0 ? ' (with swaps)' : ''}
           </button>
         ) : (
           <SignInButton mode="modal">
@@ -492,6 +736,23 @@ export default function BlueprintDetailPage() {
               🔒 Sign in to download
             </button>
           </SignInButton>
+        )}
+
+        {/* Fork — any signed-in user except the owner. Creates a private copy of the
+            currently-selected variant (or Original) in their own account. */}
+        {isSignedIn && !isOwner && (
+          <button
+            onClick={handleFork}
+            style={{
+              width: '100%', background: 'transparent',
+              border: '1px solid rgba(255,255,255,0.18)', borderRadius: 6,
+              color: 'rgba(255,255,255,0.7)', padding: '8px 0',
+              fontSize: 12, fontWeight: 600, cursor: 'pointer',
+            }}
+            title="Make a private copy in your account"
+          >
+            ⑂ Fork{selectedVariantId ? ' this variant' : ''}
+          </button>
         )}
 
         {/* Like button */}
@@ -608,8 +869,310 @@ export default function BlueprintDetailPage() {
           </div>
         )}
       </div>
+      )}
     </div>
   );
+}
+
+interface VariantSwitcherProps {
+  variants: BlueprintVariantSummary[];
+  selectedVariantId: string | null;
+  dirty: boolean;
+  isOwner: boolean;
+  hasOverrides: boolean;
+  onSelect: (variantId: string | null) => void;
+  onSaveNew: () => void;
+  onSaveChanges: () => void;
+  onRename: () => void;
+  onDelete: () => void;
+}
+
+function VariantSwitcher({
+  variants, selectedVariantId, dirty, isOwner, hasOverrides,
+  onSelect, onSaveNew, onSaveChanges, onRename, onDelete,
+}: VariantSwitcherProps) {
+  // Hide entirely for non-owners with no variants to pick from.
+  if (!isOwner && variants.length === 0) return null;
+
+  return (
+    <div style={{
+      background: '#0a0a0f',
+      border: '1px solid rgba(255,255,255,0.07)',
+      borderRadius: 6,
+      padding: 10,
+      display: 'flex', flexDirection: 'column', gap: 8,
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, textTransform: 'uppercase', letterSpacing: 0.4 }}>
+          Variant
+        </span>
+        {dirty && (
+          <span style={{ color: '#c8a84b', fontSize: 10, fontWeight: 700 }}>· unsaved</span>
+        )}
+      </div>
+
+      <select
+        value={selectedVariantId ?? ''}
+        onChange={(e) => onSelect(e.target.value || null)}
+        style={{
+          width: '100%', background: '#13131a',
+          border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4,
+          color: '#fff', fontSize: 12, padding: '6px 8px',
+        }}
+      >
+        <option value="">Original</option>
+        {variants.map((v) => (
+          <option key={v.id} value={v.id}>{v.name}</option>
+        ))}
+      </select>
+
+      {isOwner && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+          {selectedVariantId && dirty && (
+            <button
+              onClick={onSaveChanges}
+              style={btnPrimary}
+            >Save changes</button>
+          )}
+          {hasOverrides && (
+            <button
+              onClick={onSaveNew}
+              style={btnSecondary}
+            >Save as new…</button>
+          )}
+          {selectedVariantId && (
+            <>
+              <button onClick={onRename} style={btnSecondary}>Rename</button>
+              <button onClick={onDelete} style={btnDanger}>Delete</button>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+const btnPrimary: React.CSSProperties = {
+  background: '#c8a84b', border: 'none', borderRadius: 4,
+  color: '#000', fontSize: 11, fontWeight: 700,
+  padding: '4px 10px', cursor: 'pointer',
+};
+const btnSecondary: React.CSSProperties = {
+  background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 4,
+  color: 'rgba(255,255,255,0.7)', fontSize: 11,
+  padding: '4px 10px', cursor: 'pointer',
+};
+const btnDanger: React.CSSProperties = {
+  background: 'transparent', border: '1px solid rgba(200,80,80,0.4)', borderRadius: 4,
+  color: '#d97070', fontSize: 11,
+  padding: '4px 10px', cursor: 'pointer',
+};
+
+interface PieceVariantsTriggerProps {
+  raw: RawBlueprint | undefined;
+  overrides: Record<string, string>;
+  onOpen: () => void;
+}
+
+function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerProps) {
+  const swappableCount = useMemo(() => {
+    const breakdown = buildTemplateBreakdown(raw, overrides);
+    return breakdown.filter((r) => findEquivalents(r.originalTemplateId).length > 0).length;
+  }, [raw, overrides]);
+
+  if (swappableCount === 0) return null;
+  const overrideCount = Object.keys(overrides).length;
+
+  return (
+    <button
+      onClick={onOpen}
+      style={{
+        width: '100%',
+        background: overrideCount > 0 ? 'rgba(200,168,75,0.12)' : '#0a0a0f',
+        border: `1px solid ${overrideCount > 0 ? 'rgba(200,168,75,0.35)' : 'rgba(255,255,255,0.1)'}`,
+        borderRadius: 6,
+        color: overrideCount > 0 ? '#c8a84b' : 'rgba(255,255,255,0.7)',
+        padding: '8px 10px',
+        fontSize: 12,
+        fontWeight: 600,
+        cursor: 'pointer',
+        textAlign: 'left',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <span>
+        Piece variants
+        {overrideCount > 0 && (
+          <span style={{ marginLeft: 6, fontWeight: 400 }}>· {overrideCount} swapped</span>
+        )}
+      </span>
+      <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, fontWeight: 400 }}>
+        {swappableCount} swappable ›
+      </span>
+    </button>
+  );
+}
+
+interface PieceVariantsDrawerProps {
+  open: boolean;
+  onClose: () => void;
+  raw: RawBlueprint | undefined;
+  overrides: Record<string, string>;
+  onChange: (next: Record<string, string>) => void;
+}
+
+function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceVariantsDrawerProps) {
+  const breakdown = useMemo(() => buildTemplateBreakdown(raw, overrides), [raw, overrides]);
+  const swappable = useMemo(
+    () => breakdown.filter((row) => findEquivalents(row.originalTemplateId).length > 0),
+    [breakdown],
+  );
+  const overrideCount = Object.keys(overrides).length;
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  return (
+    <div style={{
+      position: 'absolute', top: 0, right: 0, bottom: 0,
+      width: 360, maxWidth: '100%',
+      background: '#13131a',
+      borderLeft: '1px solid rgba(255,255,255,0.08)',
+      boxShadow: '-8px 0 24px rgba(0,0,0,0.4)',
+      zIndex: 100,
+      display: 'flex', flexDirection: 'column',
+    }}>
+        <div style={{
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          padding: '12px 16px',
+          borderBottom: '1px solid rgba(255,255,255,0.07)',
+        }}>
+          <div>
+            <div style={{ color: '#fff', fontSize: 14, fontWeight: 700 }}>Piece variants</div>
+            <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10, marginTop: 2 }}>
+              {swappable.length} piece types with alternates
+              {overrideCount > 0 && ` · ${overrideCount} swapped`}
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            style={{
+              background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.6)',
+              fontSize: 20, cursor: 'pointer', padding: '0 4px', lineHeight: 1,
+            }}
+            aria-label="Close"
+          >×</button>
+        </div>
+
+        {overrideCount > 0 && (
+          <div style={{ padding: '8px 16px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+            <button
+              onClick={() => onChange({})}
+              style={{
+                background: 'transparent', border: '1px solid rgba(255,255,255,0.15)',
+                borderRadius: 4, color: 'rgba(255,255,255,0.7)', fontSize: 11,
+                padding: '5px 10px', cursor: 'pointer',
+              }}
+            >
+              Reset all swaps
+            </button>
+          </div>
+        )}
+
+        <div style={{
+          flex: 1, overflowY: 'auto', padding: 12,
+          display: 'flex', flexDirection: 'column', gap: 8,
+        }}>
+          {swappable.map((row) => {
+            const equivalents = findEquivalents(row.originalTemplateId);
+            const currentTemplate = overrides[row.originalTemplateId] ?? row.originalTemplateId;
+            const isSwapped = currentTemplate !== row.originalTemplateId;
+            return (
+              <div key={row.originalTemplateId} style={{
+                background: 'rgba(255,255,255,0.025)',
+                border: `1px solid ${isSwapped ? 'rgba(200,168,75,0.5)' : 'rgba(255,255,255,0.06)'}`,
+                borderRadius: 5, padding: '8px 10px',
+              }}>
+                <div style={{
+                  display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
+                  marginBottom: 2,
+                }}>
+                  <span style={{ color: '#fff', fontSize: 12, fontWeight: 600 }}>
+                    {getShape(row.originalTemplateId)}
+                  </span>
+                  <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: 10 }}>
+                    ×{row.count}
+                  </span>
+                </div>
+                <div style={{
+                  color: 'rgba(255,255,255,0.45)', fontSize: 10, marginBottom: 6,
+                }}>
+                  from {getSetLabel(row.originalTemplateId)}
+                </div>
+                <select
+                  value={currentTemplate}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    const next = { ...overrides };
+                    if (v === row.originalTemplateId) delete next[row.originalTemplateId];
+                    else next[row.originalTemplateId] = v;
+                    onChange(next);
+                  }}
+                  style={{
+                    width: '100%',
+                    background: '#0a0a0f',
+                    border: '1px solid rgba(255,255,255,0.15)',
+                    borderRadius: 4,
+                    color: '#fff', fontSize: 11, padding: '5px 8px',
+                  }}
+                >
+                  <option value={row.originalTemplateId}>
+                    {getSetLabel(row.originalTemplateId)} (original)
+                  </option>
+                  {equivalents.map((eq) => (
+                    <option key={eq.templateId} value={eq.templateId}>{eq.setLabel}</option>
+                  ))}
+                </select>
+              </div>
+            );
+          })}
+        </div>
+    </div>
+  );
+}
+
+interface TemplateBreakdownEntry {
+  templateId: string;        // current (post-override) templateId in the displayed scene
+  originalTemplateId: string; // pre-override templateId — key for overrides map
+  count: number;
+}
+
+function buildTemplateBreakdown(
+  raw: RawBlueprint | undefined,
+  overrides: Record<string, string>,
+): TemplateBreakdownEntry[] {
+  if (!raw) return [];
+  const counts: Record<string, number> = {};
+  const all = [
+    ...(raw.instances  ?? []).map((i) => i.building_type),
+    ...(raw.placeables ?? []).map((p) => p.building_type),
+  ];
+  for (const t of all) counts[t] = (counts[t] ?? 0) + 1;
+  return Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([originalTemplateId, count]) => ({
+      originalTemplateId,
+      templateId: overrides[originalTemplateId] ?? originalTemplateId,
+      count,
+    }));
 }
 
 function buildPieceBreakdown(bp: BlueprintDetail): { category: string; count: number }[] {

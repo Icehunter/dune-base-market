@@ -1,5 +1,6 @@
 import type { EventContext } from '@cloudflare/workers-types';
 import type { Env } from '../env';
+import { rewriteOg, resolveImage } from './_og';
 
 type Ctx = EventContext<Env, 'id', Record<string, unknown>>;
 
@@ -12,8 +13,7 @@ interface Row {
 }
 
 // Intercept /blueprint/:id so social crawlers (Discord, Twitter, Slack, etc.)
-// see blueprint-specific OG/Twitter meta tags. The SPA HTML is otherwise unchanged,
-// so normal browser navigation still mounts the React app as before.
+// see blueprint-specific OG/Twitter meta tags.
 export async function onRequest(ctx: Ctx): Promise<Response> {
   const { params, env, request } = ctx;
   const id = String(params.id);
@@ -33,31 +33,10 @@ export async function onRequest(ctx: Ctx): Promise<Response> {
   if (!row || !row.is_public) return indexResp;
 
   const origin = new URL(request.url).origin;
-  const title = `${row.title} — Dune Solido Market`;
-  const description = `Blueprint by ${row.username} · ${row.piece_count} pieces`;
-  const image = row.snapshot_url
-    ? (row.snapshot_url.startsWith('http')
-        ? row.snapshot_url
-        : `${origin}${row.snapshot_url}`)
-    : `${origin}/og-image.png`;
-
-  const setContent = (val: string) => ({
-    element(el: { setAttribute: (k: string, v: string) => void }) {
-      el.setAttribute('content', val);
-    },
+  return rewriteOg(indexResp, {
+    origin,
+    title: `${row.title} — Dune Solido Market`,
+    description: `Blueprint by ${row.username} · ${row.piece_count} pieces`,
+    image: resolveImage(origin, row.snapshot_url),
   });
-
-  return new HTMLRewriter()
-    .on('title', {
-      element(el) { el.setInnerContent(title); },
-    })
-    .on('meta[name="description"]', setContent(description))
-    .on('meta[property="og:type"]', setContent('article'))
-    .on('meta[property="og:title"]', setContent(title))
-    .on('meta[property="og:description"]', setContent(description))
-    .on('meta[property="og:image"]', setContent(image))
-    .on('meta[name="twitter:title"]', setContent(title))
-    .on('meta[name="twitter:description"]', setContent(description))
-    .on('meta[name="twitter:image"]', setContent(image))
-    .transform(indexResp);
 }

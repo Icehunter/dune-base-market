@@ -13,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<GalleryPage />} />
           <Route path="/blueprint/:id" element={<BlueprintDetailPage />} />
+          <Route path="/blueprint/:id/v/:variantId" element={<BlueprintDetailPage />} />
         </Routes>
       </Suspense>
     </div>
