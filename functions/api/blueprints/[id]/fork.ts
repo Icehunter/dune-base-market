@@ -83,8 +83,12 @@ export async function onRequestPost(ctx: Ctx): Promise<Response> {
 
   // Title: include variant name if forked from a variant, plus a (fork) marker
   // so the user can quickly distinguish their copy from the source.
-  const baseTitle = variant ? `${source.title} — ${variant.name}` : source.title;
-  const newTitle = `${baseTitle} (fork)`.slice(0, 80);
+  // Forking the original blueprint → "{title} (fork)". Forking a specific
+  // variant → "Remix: {title} — {variant}" so the relationship is obvious.
+  const newTitle = (variant
+    ? `Remix: ${source.title} — ${variant.name}`
+    : `${source.title} (fork)`
+  ).slice(0, 80);
 
   await env.BUCKET.put(r2Key, jsonText, { httpMetadata: { contentType: 'application/json' } });
 

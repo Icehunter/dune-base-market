@@ -8,11 +8,15 @@ interface VariantRow {
   id: string;
   blueprint_id: string;
   name: string;
+  description: string | null;
   piece_overrides: string | null;
   snapshot_url: string | null;
   download_count: number;
+  rating_count: number;
   created_at: string;
 }
+
+const DESCRIPTION_MAX = 280;
 
 // List all variants for a blueprint.
 export async function onRequestGet(ctx: Ctx): Promise<Response> {
@@ -30,7 +34,7 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
   }
 
   const rows = await env.DB.prepare(
-    `SELECT id, name, piece_overrides, snapshot_url, download_count, created_at
+    `SELECT id, name, description, piece_overrides, snapshot_url, download_count, rating_count, created_at
      FROM blueprint_variants WHERE blueprint_id = ?
      ORDER BY created_at ASC`,
   ).bind(id).all<VariantRow>();
@@ -58,6 +62,7 @@ export async function onRequestPost(ctx: Ctx): Promise<Response> {
 
   const body = await request.json<{
     name?: string;
+    description?: string | null;
     piece_overrides?: Record<string, string> | null;
   }>();
 
@@ -66,20 +71,25 @@ export async function onRequestPost(ctx: Ctx): Promise<Response> {
   if (body.piece_overrides != null && (typeof body.piece_overrides !== 'object' || Array.isArray(body.piece_overrides))) {
     return json({ error: 'piece_overrides must be an object' }, 400);
   }
+  const description = body.description ? String(body.description).trim() : null;
+  if (description && description.length > DESCRIPTION_MAX) {
+    return json({ error: `Description max ${DESCRIPTION_MAX} chars` }, 400);
+  }
 
   const variantId = crypto.randomUUID();
   await env.DB.prepare(
-    `INSERT INTO blueprint_variants (id, blueprint_id, name, piece_overrides)
-     VALUES (?, ?, ?, ?)`,
+    `INSERT INTO blueprint_variants (id, blueprint_id, name, description, piece_overrides)
+     VALUES (?, ?, ?, ?, ?)`,
   ).bind(
     variantId,
     id,
     name,
+    description,
     body.piece_overrides ? JSON.stringify(body.piece_overrides) : null,
   ).run();
 
   const row = await env.DB.prepare(
-    `SELECT id, name, piece_overrides, snapshot_url, download_count, created_at
+    `SELECT id, name, description, piece_overrides, snapshot_url, download_count, rating_count, created_at
      FROM blueprint_variants WHERE id = ?`,
   ).bind(variantId).first<VariantRow>();
 

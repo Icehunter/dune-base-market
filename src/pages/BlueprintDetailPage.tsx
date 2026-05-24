@@ -3,8 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth, SignInButton } from "@clerk/react";
 import { Select, ListBox, Skeleton, toast } from "@heroui/react";
 import { Icon } from "@iconify/react";
-import { PromptDialog } from "../components/dialogs/PromptDialog";
 import { ConfirmDialog } from "../components/dialogs/ConfirmDialog";
+import { VariantEditDialog } from "../components/dialogs/VariantEditDialog";
 
 // Lazy chunks: the piece variants drawer brings in pieceEquivalents (which
 // pulls the 8k-line piece registry); the shortcuts dialog is rarely opened.
@@ -277,13 +277,14 @@ export default function BlueprintDetailPage() {
   function handleSaveAsNewVariant() {
     setSaveVariantOpen(true);
   }
-  async function confirmSaveAsNewVariant(name: string) {
+  async function confirmSaveAsNewVariant({ name, description }: { name: string; description: string }) {
     if (!id) return;
     try {
       const v = await createVariant(
         id,
         {
           name,
+          description: description || null,
           piece_overrides: Object.keys(templateOverrides).length ? templateOverrides : null,
         },
         getToken,
@@ -293,6 +294,7 @@ export default function BlueprintDetailPage() {
         {
           id: v.id,
           name: v.name,
+          description: v.description ?? null,
           snapshot_url: v.snapshot_url,
           download_count: v.download_count,
           rating_count: v.rating_count ?? 0,
@@ -329,19 +331,23 @@ export default function BlueprintDetailPage() {
     }
   }
 
-  function handleRenameVariant() {
+  function handleEditVariant() {
     if (!selectedVariantId) return;
     setRenameVariantOpen(true);
   }
-  async function confirmRenameVariant(name: string) {
+  async function confirmEditVariant({ name, description }: { name: string; description: string }) {
     if (!id || !selectedVariantId) return;
     try {
-      await updateVariant(id, selectedVariantId, { name }, getToken);
-      setVariants((prev) => prev.map((v) => (v.id === selectedVariantId ? { ...v, name } : v)));
-      toast.success("Variant renamed");
+      await updateVariant(id, selectedVariantId, { name, description: description || null }, getToken);
+      setVariants((prev) =>
+        prev.map((v) =>
+          v.id === selectedVariantId ? { ...v, name, description: description || null } : v,
+        ),
+      );
+      toast.success("Variant updated");
     } catch (err) {
       console.error(err);
-      toast.danger("Rename failed");
+      toast.danger("Update failed");
     }
   }
 
@@ -461,13 +467,14 @@ export default function BlueprintDetailPage() {
 
   async function handleFork() {
     if (!id) return;
+    const isRemix = !!selectedVariantId;
     try {
       const { id: newId } = await forkBlueprint(id, getToken, selectedVariantId ?? undefined);
-      toast.success("Blueprint forked to your account");
+      toast.success(isRemix ? "Remix created in your account" : "Blueprint forked to your account");
       navigate(`/blueprint/${newId}`);
     } catch (err) {
       console.error("Fork failed", err);
-      toast.danger("Fork failed");
+      toast.danger(isRemix ? "Remix failed" : "Fork failed");
     }
   }
 
@@ -580,23 +587,22 @@ export default function BlueprintDetailPage() {
         />
       </Suspense>
 
-      {/* Prompt + confirm modals (replacing window.prompt / window.confirm) */}
-      <PromptDialog
+      {/* Variant editor — used for both "Save as new" and "Edit" (name + description). */}
+      <VariantEditDialog
         isOpen={saveVariantOpen}
         onClose={() => setSaveVariantOpen(false)}
         title="Save as new variant"
-        description="Give this set of piece swaps a name so you can switch to it later."
-        placeholder="e.g. Harkonnen reskin"
         confirmLabel="Save variant"
         onConfirm={confirmSaveAsNewVariant}
       />
-      <PromptDialog
+      <VariantEditDialog
         isOpen={renameVariantOpen}
         onClose={() => setRenameVariantOpen(false)}
-        title="Rename variant"
-        defaultValue={variants.find((v) => v.id === selectedVariantId)?.name ?? ""}
-        confirmLabel="Rename"
-        onConfirm={confirmRenameVariant}
+        title="Edit variant"
+        defaultName={variants.find((v) => v.id === selectedVariantId)?.name ?? ""}
+        defaultDescription={variants.find((v) => v.id === selectedVariantId)?.description ?? ""}
+        confirmLabel="Save"
+        onConfirm={confirmEditVariant}
       />
       <ConfirmDialog
         isOpen={deleteVariantOpen}
@@ -785,7 +791,7 @@ export default function BlueprintDetailPage() {
             onSelect={handleSelectVariant}
             onSaveNew={handleSaveAsNewVariant}
             onSaveChanges={handleSaveVariantChanges}
-            onRename={handleRenameVariant}
+            onRename={handleEditVariant}
             onDelete={handleDeleteVariant}
           />
 
@@ -951,11 +957,18 @@ export default function BlueprintDetailPage() {
             </SignInButton>
           )}
 
-          {/* Fork — any signed-in user except the owner. */}
-          {isSignedIn && !isOwner && (
-            <button onClick={handleFork} className={btnGhost} title="Make a private copy in your account">
-              <Icon icon="lucide:git-fork" width={14} height={14} />
-              Fork{selectedVariantId ? " this variant" : ""}
+          {/* Fork / Remix — any signed-in user can fork another user's blueprint;
+              owner can also "Remix" their own variant into a standalone blueprint.
+              Variant selected → Remix (with the variant baked in). No variant
+              → Fork (only non-owners; an owner forking their own original is a no-op). */}
+          {isSignedIn && (selectedVariantId || !isOwner) && (
+            <button
+              onClick={handleFork}
+              className={btnGhost}
+              aria-label={selectedVariantId ? "Remix this variant into a new blueprint" : "Make a private copy in your account"}
+            >
+              <Icon icon={selectedVariantId ? "lucide:layers" : "lucide:git-fork"} width={14} height={14} />
+              {selectedVariantId ? "Remix this variant" : "Fork"}
             </button>
           )}
 
@@ -1134,6 +1147,17 @@ function VariantSwitcher({
         </Select.Popover>
       </Select>
 
+      {/* Selected variant's description as a short blurb under the picker. */}
+      {(() => {
+        const sel = selectedVariantId
+          ? variants.find((v) => v.id === selectedVariantId)
+          : null;
+        if (!sel?.description) return null;
+        return (
+          <p className="m-0 text-[11px] leading-snug text-white/55">{sel.description}</p>
+        );
+      })()}
+
       {isOwner && (
         // Tight icon+label cluster — buttons share the available width and
         // never wrap to a second row inside the 320px sidebar.
@@ -1154,7 +1178,7 @@ function VariantSwitcher({
             <>
               <button onClick={onRename} className={`${btnGhost} px-2 py-1.5 text-xs`}>
                 <Icon icon="lucide:pencil" width={12} height={12} />
-                Rename
+                Edit
               </button>
               <button onClick={onDelete} className={`${btnDanger} px-2 py-1.5 text-xs`}>
                 <Icon icon="lucide:trash-2" width={12} height={12} />

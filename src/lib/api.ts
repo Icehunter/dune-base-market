@@ -17,6 +17,7 @@ export interface BlueprintMeta {
 export interface BlueprintVariantSummary {
   id: string;
   name: string;
+  description: string | null;
   snapshot_url: string | null;
   download_count: number;
   rating_count: number;
@@ -142,7 +143,7 @@ export async function getVariant(
 
 export async function createVariant(
   id: string,
-  payload: { name: string; piece_overrides: Record<string, string> | null },
+  payload: { name: string; description?: string | null; piece_overrides: Record<string, string> | null },
   getToken: () => Promise<string | null>,
 ): Promise<BlueprintVariant> {
   const headers = await authHeaders(getToken);
@@ -159,7 +160,7 @@ export async function createVariant(
 export async function updateVariant(
   id: string,
   variantId: string,
-  payload: { name?: string; piece_overrides?: Record<string, string> | null },
+  payload: { name?: string; description?: string | null; piece_overrides?: Record<string, string> | null },
   getToken: () => Promise<string | null>,
 ): Promise<BlueprintVariant> {
   const headers = await authHeaders(getToken);

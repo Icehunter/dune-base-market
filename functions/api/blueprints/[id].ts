@@ -34,11 +34,11 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
   }
 
   const variants = await env.DB.prepare(
-    `SELECT id, name, snapshot_url, download_count, rating_count, created_at
+    `SELECT id, name, description, snapshot_url, download_count, rating_count, created_at
      FROM blueprint_variants WHERE blueprint_id = ?
      ORDER BY created_at ASC`,
   ).bind(id).all<{
-    id: string; name: string; snapshot_url: string | null;
+    id: string; name: string; description: string | null; snapshot_url: string | null;
     download_count: number; rating_count: number; created_at: string;
   }>();
 
