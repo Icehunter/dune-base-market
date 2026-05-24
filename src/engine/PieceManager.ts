@@ -440,13 +440,16 @@ export class PieceManager {
     userOverrides: Partial<Record<string, RotMap>> = {},
     devOverrides: Partial<Record<string, RotMap>> = {},
   ): Promise<void> {
-    if (originalTemplateId === newTemplateId) {
-      // Revert path: re-place the original template for matching pieces.
-    }
-    await this.preloadModel(newTemplateId);
     const matches = [...this.placedMeshes.values()].filter(
       (p) => p.originalTemplateId === originalTemplateId,
     );
+    if (matches.length === 0) return;
+    // No-op if every matching piece is already rendered as the requested template.
+    // Avoids redundant GLB instantiation when hover-preview commits to its own state
+    // or when the diff effect re-fires for an already-applied override.
+    if (matches.every((m) => m.templateId === newTemplateId)) return;
+
+    await this.preloadModel(newTemplateId);
     for (const m of matches) {
       this.placePiece(
         m.id,

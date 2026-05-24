@@ -23,19 +23,40 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     return json({ error: 'Not found' }, 404);
   }
 
+  // Blueprint-level user_rated only — variant-level ratings live in the
+  // variants array below and are looked up per variant.
   let userRated = false;
   if (userId) {
     const vote = await env.DB.prepare(
-      'SELECT 1 FROM ratings WHERE blueprint_id = ? AND user_id = ?'
+      'SELECT 1 FROM ratings WHERE blueprint_id = ? AND variant_id IS NULL AND user_id = ?'
     ).bind(id, userId).first();
     userRated = !!vote;
   }
 
   const variants = await env.DB.prepare(
-    `SELECT id, name, snapshot_url, download_count, created_at
+    `SELECT id, name, snapshot_url, download_count, rating_count, created_at
      FROM blueprint_variants WHERE blueprint_id = ?
      ORDER BY created_at ASC`,
-  ).bind(id).all<{ id: string; name: string; snapshot_url: string | null; download_count: number; created_at: string }>();
+  ).bind(id).all<{
+    id: string; name: string; snapshot_url: string | null;
+    download_count: number; rating_count: number; created_at: string;
+  }>();
+
+  // Per-variant user_rated — one extra query (small N) so the client can know
+  // up front which variants this user has liked.
+  const variantRows = variants.results ?? [];
+  let userRatedVariantIds: string[] = [];
+  if (userId && variantRows.length > 0) {
+    const ratedRows = await env.DB.prepare(
+      `SELECT variant_id FROM ratings
+       WHERE blueprint_id = ? AND user_id = ? AND variant_id IS NOT NULL`,
+    ).bind(id, userId).all<{ variant_id: string }>();
+    userRatedVariantIds = (ratedRows.results ?? []).map((r) => r.variant_id);
+  }
+  const variantsWithRated = variantRows.map((v) => ({
+    ...v,
+    user_rated: userRatedVariantIds.includes(v.id),
+  }));
 
   return json({
     ...row,
@@ -43,7 +64,7 @@ export async function onRequestGet(ctx: Ctx): Promise<Response> {
     blueprint_data: safeParseJson(row.blueprint_data as string | null, null),
     rotation_overrides: safeParseJson(row.rotation_overrides as string | null, null),
     user_rated: userRated,
-    variants: variants.results ?? [],
+    variants: variantsWithRated,
   });
 }
 

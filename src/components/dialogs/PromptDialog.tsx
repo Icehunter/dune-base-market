@@ -30,7 +30,9 @@ export function PromptDialog({
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Seed + focus when opening; clear on close so reopening starts blank.
+  // (Sync-from-prop pattern; the alternative is wrapping every close path.)
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     if (isOpen) {
       setValue(defaultValue);
       // Wait a tick for the modal to mount before focusing.
@@ -38,6 +40,7 @@ export function PromptDialog({
     } else {
       setValue("");
     }
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [isOpen, defaultValue]);
 
   const trimmed = value.trim();

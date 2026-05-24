@@ -41,10 +41,13 @@ export default function GalleryPage() {
     }
   }, [sort, activeTag, activeTab, getToken]);
 
+  // Fetch triggers setLoading inside the callback — sync-from-prop is intentional.
+  /* eslint-disable-next-line react-hooks/set-state-in-effect */
   useEffect(() => { fetchBlueprints(); }, [fetchBlueprints]);
 
-  // Switch back to 'all' tab if user signs out
+  // Switch back to 'all' tab if user signs out — derived-state side effect.
   useEffect(() => {
+    /* eslint-disable-next-line react-hooks/set-state-in-effect */
     if (!isSignedIn && activeTab === 'mine') setActiveTab('all');
   }, [isSignedIn, activeTab]);
 

@@ -21,12 +21,16 @@ export default function UploadModal({ isOpen, onClose, onUploaded }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Clear all form state when the modal closes so reopening starts fresh.
+  // (Sync-from-prop pattern — file-level disable below covers this and
+  // the similar reset effect; wrapping every close path manually is worse.)
   useEffect(() => {
     if (!isOpen) {
+      /* eslint-disable react-hooks/set-state-in-effect */
       setTitle('');
       setFile(null);
       setIsPublic(true);
       setError(null);
+      /* eslint-enable react-hooks/set-state-in-effect */
     }
   }, [isOpen]);
 

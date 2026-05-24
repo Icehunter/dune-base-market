@@ -19,6 +19,8 @@ export interface BlueprintVariantSummary {
   name: string;
   snapshot_url: string | null;
   download_count: number;
+  rating_count: number;
+  user_rated?: boolean;
   created_at: string;
 }
 
@@ -285,13 +287,14 @@ export async function replaceBlueprintJson(
 
 export async function rateBlueprint(
   id: string,
-  getToken: () => Promise<string | null>
+  getToken: () => Promise<string | null>,
+  variantId?: string,
 ): Promise<{ rated: boolean; rating_count: number }> {
   const headers = await authHeaders(getToken);
-  const res = await fetch(`/api/blueprints/${id}/rate`, {
-    method: 'POST',
-    headers,
-  });
+  const url = variantId
+    ? `/api/blueprints/${id}/rate?v=${encodeURIComponent(variantId)}`
+    : `/api/blueprints/${id}/rate`;
+  const res = await fetch(url, { method: 'POST', headers });
   if (!res.ok) throw new Error(`Rate failed: ${res.status}`);
   return res.json() as Promise<{ rated: boolean; rating_count: number }>;
 }

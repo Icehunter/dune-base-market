@@ -136,6 +136,7 @@ export default function BlueprintDetailPage() {
   useEffect(() => {
     if (!id) return;
     // Only show spinner on first load; re-fetching for auth state doesn't flash the page.
+    /* eslint-disable-next-line react-hooks/set-state-in-effect */
     if (!blueprint) setLoading(true);
     getBlueprint(id, isSignedIn ? getToken : undefined)
       .then((bp) => {
@@ -154,6 +155,9 @@ export default function BlueprintDetailPage() {
       })
       .catch(() => setError("Blueprint not found"))
       .finally(() => setLoading(false));
+    // `blueprint` and `getToken` intentionally excluded — including blueprint
+    // would loop after each fetch; getToken changes per render but is stable.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, isSignedIn]); // isSignedIn: re-fetch once auth resolves so user_rated is correct
 
   const isOwnerForEffect = !!userId && !!blueprint && userId === blueprint.user_id;
@@ -283,6 +287,8 @@ export default function BlueprintDetailPage() {
           name: v.name,
           snapshot_url: v.snapshot_url,
           download_count: v.download_count,
+          rating_count: v.rating_count ?? 0,
+          user_rated: false,
           created_at: v.created_at,
         },
       ]);
@@ -418,6 +424,33 @@ export default function BlueprintDetailPage() {
     }
   }
 
+  // Latest committed overrides — read by hover-preview end handlers so they
+  // restore against the most recent state, including a freshly-committed swap.
+  const overridesRef = useRef(templateOverrides);
+  useEffect(() => { overridesRef.current = templateOverrides; }, [templateOverrides]);
+
+  // Latest hover intent — when the user moves between options, the hover-end
+  // handler defers a tick and only restores if no newer hover-start has taken
+  // over. Avoids flicker-back-to-original between adjacent options.
+  const previewTargetRef = useRef<{ orig: string; target: string } | null>(null);
+
+  function handlePreview(originalId: string, targetId: string) {
+    previewTargetRef.current = { orig: originalId, target: targetId };
+    void sceneRef.current?.swapTemplate(originalId, targetId);
+  }
+  function handlePreviewEnd(originalId: string) {
+    // Defer so a sibling option's hover-start (fired in the same tick) can claim
+    // the ref first; if it did, we skip the restore and let that swap stand.
+    requestAnimationFrame(() => {
+      const latest = previewTargetRef.current;
+      if (latest && latest.orig === originalId) {
+        const committed = overridesRef.current[originalId] ?? originalId;
+        void sceneRef.current?.swapTemplate(originalId, committed);
+        previewTargetRef.current = null;
+      }
+    });
+  }
+
   async function handleFork() {
     if (!id) return;
     try {
@@ -433,9 +466,17 @@ export default function BlueprintDetailPage() {
   async function handleRate() {
     if (!id || !isSignedIn) return;
     try {
-      const { rated, rating_count } = await rateBlueprint(id, getToken);
-      setUserRated(rated);
-      setRatingCount(rating_count);
+      const { rated, rating_count } = await rateBlueprint(id, getToken, selectedVariantId ?? undefined);
+      if (selectedVariantId) {
+        setVariants((prev) =>
+          prev.map((v) =>
+            v.id === selectedVariantId ? { ...v, rating_count, user_rated: rated } : v,
+          ),
+        );
+      } else {
+        setUserRated(rated);
+        setRatingCount(rating_count);
+      }
     } catch (err) {
       console.error("Rate failed", err);
     }
@@ -522,6 +563,8 @@ export default function BlueprintDetailPage() {
         raw={blueprint.blueprint_data as unknown as RawBlueprint | undefined}
         overrides={templateOverrides}
         onChange={setTemplateOverrides}
+        onPreview={handlePreview}
+        onPreviewEnd={handlePreviewEnd}
       />
 
       {/* Prompt + confirm modals (replacing window.prompt / window.confirm) */}
@@ -901,13 +944,23 @@ export default function BlueprintDetailPage() {
             </button>
           )}
 
-          {/* Like button */}
-          {isSignedIn && (
-            <button onClick={handleRate} className={userRated ? btnLiked : btnGhost}>
-              <Icon icon={userRated ? "lucide:heart" : "lucide:heart"} width={14} height={14} className={userRated ? "fill-current" : ""} />
-              {ratingCount} {userRated ? "Liked" : "Like"}
-            </button>
-          )}
+          {/* Like button — rates the selected variant when one's chosen,
+              otherwise the blueprint itself. Display state derives from the
+              current selection so switching variants reflects per-variant likes. */}
+          {isSignedIn && (() => {
+            const sel = selectedVariantId
+              ? variants.find((v) => v.id === selectedVariantId)
+              : null;
+            const liked = sel ? !!sel.user_rated : userRated;
+            const count = sel ? sel.rating_count : ratingCount;
+            return (
+              <button onClick={handleRate} className={liked ? btnLiked : btnGhost}>
+                <Icon icon="lucide:heart" width={14} height={14} className={liked ? "fill-current" : ""} />
+                {count} {liked ? "Liked" : "Like"}
+                {sel && <span className="ml-1 opacity-60">· this variant</span>}
+              </button>
+            );
+          })()}
 
           {/* Owner controls */}
           {isOwner && !editing && (
@@ -1148,9 +1201,15 @@ interface PieceVariantsDrawerProps {
   raw: RawBlueprint | undefined;
   overrides: Record<string, string>;
   onChange: (next: Record<string, string>) => void;
+  /** Hover-preview: swap scene to the hovered template without changing React state. */
+  onPreview: (originalId: string, targetId: string) => void;
+  /** Hover-leave: restore to whatever the committed override is for this piece. */
+  onPreviewEnd: (originalId: string) => void;
 }
 
-function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceVariantsDrawerProps) {
+function PieceVariantsDrawer({
+  open, onClose, raw, overrides, onChange, onPreview, onPreviewEnd,
+}: PieceVariantsDrawerProps) {
   const breakdown = useMemo(() => buildTemplateBreakdown(raw, overrides), [raw, overrides]);
   const swappable = useMemo(
     () => breakdown.filter((row) => findEquivalents(row.originalTemplateId).length > 0),
@@ -1222,16 +1281,26 @@ function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceV
                         <Select.Indicator />
                       </Select.Trigger>
                       <Select.Popover>
-                        <ListBox>
+                        <ListBox
+                          onAction={() => {/* selection handled by Select.onSelectionChange */}}
+                        >
                           <ListBox.Item
                             id={row.originalTemplateId}
                             textValue={`${getSetLabel(row.originalTemplateId)} (original)`}
+                            onHoverStart={() => onPreview(row.originalTemplateId, row.originalTemplateId)}
+                            onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
                           >
                             {getSetLabel(row.originalTemplateId)} (original)
                             <ListBox.ItemIndicator />
                           </ListBox.Item>
                           {equivalents.map((eq) => (
-                            <ListBox.Item key={eq.templateId} id={eq.templateId} textValue={eq.setLabel}>
+                            <ListBox.Item
+                              key={eq.templateId}
+                              id={eq.templateId}
+                              textValue={eq.setLabel}
+                              onHoverStart={() => onPreview(row.originalTemplateId, eq.templateId)}
+                              onHoverEnd={() => onPreviewEnd(row.originalTemplateId)}
+                            >
                               {eq.setLabel}
                               <ListBox.ItemIndicator />
                             </ListBox.Item>
