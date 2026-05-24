@@ -1,10 +1,11 @@
 import { useState, useEffect, useMemo, useRef, lazy, Suspense } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth, SignInButton } from "@clerk/react";
-import { Button, Drawer, Select, ListBox, toast } from "@heroui/react";
+import { Drawer, Select, ListBox, Skeleton, toast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { PromptDialog } from "../components/dialogs/PromptDialog";
 import { ConfirmDialog } from "../components/dialogs/ConfirmDialog";
+import { ShortcutsDialog } from "../components/dialogs/ShortcutsDialog";
 import {
   getBlueprint,
   downloadBlueprint,
@@ -69,6 +70,7 @@ export default function BlueprintDetailPage() {
   const [renameVariantOpen, setRenameVariantOpen] = useState(false);
   const [deleteVariantOpen, setDeleteVariantOpen] = useState(false);
   const [deleteBlueprintOpen, setDeleteBlueprintOpen] = useState(false);
+  const [shortcutsOpen, setShortcutsOpen] = useState(false);
   // Default: open on desktop, collapsed on mobile.
   const [infoOpen, setInfoOpen] = useState(() => (typeof window === "undefined" ? true : window.innerWidth >= 768));
   // devMapRef holds the live map — never triggers re-renders on its own.
@@ -476,9 +478,24 @@ export default function BlueprintDetailPage() {
 
   if (loading)
     return (
-      <div className="flex flex-col items-center gap-2 pt-20 text-white/35">
-        <Icon icon="lucide:loader-2" width={22} height={22} className="animate-spin" />
-        <p className="m-0 text-sm">Loading blueprint…</p>
+      // Match the real detail layout so the page doesn't reflow when content arrives.
+      <div className="flex h-[calc(100vh-52px)] overflow-hidden">
+        <div className="flex flex-1 items-center justify-center bg-black">
+          <Skeleton className="h-2/3 w-2/3 rounded-[2px]" />
+        </div>
+        <div className="flex w-[320px] shrink-0 flex-col gap-4 border-l border-white/10 bg-[#13131a] p-5">
+          <Skeleton className="h-4 w-1/2 rounded-[2px]" />
+          <Skeleton className="aspect-[16/9] w-full rounded-[2px]" />
+          <Skeleton className="h-5 w-3/4 rounded-[2px]" />
+          <Skeleton className="h-3 w-2/3 rounded-[2px]" />
+          <div className="grid grid-cols-2 gap-2">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <Skeleton key={i} className="h-14 rounded-[2px]" />
+            ))}
+          </div>
+          <Skeleton className="h-10 w-full rounded-[2px]" />
+          <Skeleton className="h-10 w-full rounded-[2px]" />
+        </div>
       </div>
     );
   if (error || !blueprint)
@@ -543,6 +560,11 @@ export default function BlueprintDetailPage() {
         destructive
         onConfirm={confirmDelete}
       />
+      <ShortcutsDialog
+        isOpen={shortcutsOpen}
+        onClose={() => setShortcutsOpen(false)}
+        showOwnerShortcuts={isOwner}
+      />
 
       {/* 3D Viewer */}
       <div className="relative flex-1 overflow-hidden bg-black">
@@ -580,6 +602,16 @@ export default function BlueprintDetailPage() {
           isEditMode={isEditMode}
           rightOffset={infoOpen ? 320 + 16 : 16}
         />
+
+        {/* Keyboard shortcuts opener — bottom-left of the viewer */}
+        <button
+          onClick={() => setShortcutsOpen(true)}
+          aria-label="Show keyboard shortcuts"
+          title="Keyboard shortcuts"
+          className={`${btnBase} absolute bottom-3 left-3 z-10 h-8 w-8 justify-center bg-black/55 border-white/15 text-white/55 backdrop-blur hover:bg-black/70 hover:text-white/85`}
+        >
+          <Icon icon="lucide:keyboard" width={14} height={14} />
+        </button>
 
         {/* Edit mode toggle — owner only. Tracks the sidebar's right edge so it never gets covered. */}
         {isOwner && blueprint.blueprint_data && (
@@ -659,9 +691,10 @@ export default function BlueprintDetailPage() {
       )}
 
       {/* Sidebar — absolutely positioned + translateX so it slides cleanly off
-          the right edge instead of shrinking. Header stays sticky inside. */}
+          the right edge instead of shrinking. Full-width on mobile, fixed 320px
+          on sm+ so it overlays only a portion of the viewer on desktop. */}
       <div
-        className={`absolute right-0 top-0 bottom-0 z-40 flex w-[320px] shrink-0 flex-col border-l border-white/10 bg-[#13131a] transition-transform duration-200 ease-out ${
+        className={`absolute right-0 top-0 bottom-0 z-40 flex w-full sm:w-[320px] shrink-0 flex-col border-l border-white/10 bg-[#13131a] transition-transform duration-200 ease-out ${
           infoOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -1034,25 +1067,31 @@ function VariantSwitcher({
       </Select>
 
       {isOwner && (
-        <div className="flex flex-wrap gap-1.5">
+        // Tight icon+label cluster — buttons share the available width and
+        // never wrap to a second row inside the 320px sidebar.
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-1.5">
           {selectedVariantId && dirty && (
-            <Button size="sm" variant="primary" onPress={onSaveChanges}>
-              Save changes
-            </Button>
+            <button onClick={onSaveChanges} className={`${btnGold} px-2 py-1.5 text-xs`}>
+              <Icon icon="lucide:save" width={12} height={12} />
+              Save
+            </button>
           )}
           {hasOverrides && (
-            <Button size="sm" variant="secondary" onPress={onSaveNew}>
-              Save as new…
-            </Button>
+            <button onClick={onSaveNew} className={`${btnGhost} px-2 py-1.5 text-xs`}>
+              <Icon icon="lucide:plus" width={12} height={12} />
+              New
+            </button>
           )}
           {selectedVariantId && (
             <>
-              <Button size="sm" variant="secondary" onPress={onRename}>
+              <button onClick={onRename} className={`${btnGhost} px-2 py-1.5 text-xs`}>
+                <Icon icon="lucide:pencil" width={12} height={12} />
                 Rename
-              </Button>
-              <Button size="sm" variant="danger" onPress={onDelete}>
+              </button>
+              <button onClick={onDelete} className={`${btnDanger} px-2 py-1.5 text-xs`}>
+                <Icon icon="lucide:trash-2" width={12} height={12} />
                 Delete
-              </Button>
+              </button>
             </>
           )}
         </div>
@@ -1076,19 +1115,30 @@ function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerPr
   if (swappableCount === 0) return null;
   const overrideCount = Object.keys(overrides).length;
 
+  // Two-line layout — primary label + swapped count on the first line, swappable
+  // count + chevron on the second. Gold when active so the swapped state pops.
+  const active = overrideCount > 0;
   return (
-    <Button
-      onPress={onOpen}
-      variant={overrideCount > 0 ? "primary" : "tertiary"}
-      size="lg"
-      className="w-full justify-between p-3 justify-items-center"
+    <button
+      onClick={onOpen}
+      className={`${btnBase} w-full flex-col items-stretch gap-1 px-3 py-2 ${
+        active
+          ? "bg-[#c8a84b] border-[#c8a84b] text-black hover:bg-[#d4b659]"
+          : "bg-[#1e1e2e] border-white/10 text-white/80 hover:bg-[#26263a]"
+      }`}
     >
-      <span className="font-semibold">
-        Piece variants
-        {overrideCount > 0 && <span className="ml-1.5 font-normal opacity-80">· {overrideCount} swapped</span>}
+      <span className="flex items-center justify-between text-sm font-semibold">
+        <span className="inline-flex items-center gap-1.5">
+          <Icon icon="lucide:layers" width={14} height={14} />
+          Piece variants
+        </span>
+        {active && <span className="font-normal opacity-80">· {overrideCount} swapped</span>}
       </span>
-      <span className="text-xs opacity-70">{swappableCount} swappable ›</span>
-    </Button>
+      <span className={`flex items-center justify-between text-[11px] ${active ? "opacity-80" : "opacity-60"}`}>
+        <span>{swappableCount} swappable</span>
+        <Icon icon="lucide:chevron-right" width={12} height={12} />
+      </span>
+    </button>
   );
 }
 
@@ -1118,7 +1168,7 @@ function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceV
       {/* Transparent backdrop — the user explicitly wanted no dimming behind the drawer. */}
       <Drawer.Backdrop variant="transparent">
         <Drawer.Content placement="right">
-          <Drawer.Dialog className="w-[360px] max-w-full">
+          <Drawer.Dialog className="w-full sm:w-[360px] max-w-full">
             <Drawer.CloseTrigger />
             <Drawer.Header>
               <Drawer.Heading>Piece variants</Drawer.Heading>
@@ -1130,9 +1180,13 @@ function PieceVariantsDrawer({ open, onClose, raw, overrides, onChange }: PieceV
 
             <Drawer.Body className="flex flex-col gap-2">
               {overrideCount > 0 && (
-                <Button size="sm" variant="secondary" onPress={() => onChange({})}>
+                <button
+                  onClick={() => onChange({})}
+                  className={`${btnGhost} px-2.5 py-1.5 text-xs`}
+                >
+                  <Icon icon="lucide:rotate-ccw" width={12} height={12} />
                   Reset all swaps
-                </Button>
+                </button>
               )}
 
               {swappable.map((row) => {

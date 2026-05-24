@@ -6,16 +6,17 @@ export default function NavBar() {
   const { isSignedIn } = useAuth();
 
   return (
-    <nav className="sticky top-0 z-[100] flex h-[52px] items-center gap-6 border-b border-white/10 bg-[#13131a] px-6">
+    <nav className="sticky top-0 z-[100] flex h-[52px] items-center gap-3 border-b border-white/10 bg-[#13131a] px-3 sm:gap-6 sm:px-6">
       <Link
         to="/"
-        className="inline-flex items-center gap-2 text-[15px] font-bold tracking-[0.15em] text-[#c8a84b] no-underline"
+        className="inline-flex items-center gap-2 text-[13px] font-bold tracking-[0.1em] text-[#c8a84b] no-underline sm:text-[15px] sm:tracking-[0.15em]"
       >
         <Icon icon="lucide:hexagon" width={18} height={18} />
         SOLIDO MARKET
       </Link>
 
-      <Link to="/" className="text-sm text-white/60 no-underline hover:text-white">
+      {/* Secondary nav link — hide on very narrow screens; logo already links home. */}
+      <Link to="/" className="hidden text-sm text-white/60 no-underline hover:text-white sm:inline">
         Blueprints
       </Link>
 

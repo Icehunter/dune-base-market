@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth, SignInButton } from '@clerk/react';
 import { Icon } from '@iconify/react';
-import { toast } from '@heroui/react';
+import { Skeleton, toast } from '@heroui/react';
 import BlueprintCard from '../components/BlueprintCard';
 import UploadModal from '../components/UploadModal';
 import { listBlueprints, deleteBlueprint } from '../lib/api';
@@ -159,9 +159,21 @@ export default function GalleryPage() {
       {/* Grid */}
       <div className="mt-6">
         {loading && (
-          <div className="flex flex-col items-center gap-2 pt-12 text-white/35">
-            <Icon icon="lucide:loader-2" width={20} height={20} className="animate-spin" />
-            <p className="m-0 text-sm">Loading…</p>
+          // Skeleton grid mirroring the real card layout — placeholder cover
+          // (16/9), title line, byline line, footer row. Eight cards is enough
+          // to fill the typical desktop viewport without overcomitting.
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="flex flex-col gap-2 rounded-[2px] border border-white/10 bg-[#13131a] p-3">
+                <Skeleton className="aspect-[16/9] w-full rounded-[2px]" />
+                <Skeleton className="h-3 w-3/4 rounded-[2px]" />
+                <Skeleton className="h-3 w-2/5 rounded-[2px]" />
+                <div className="mt-1 flex gap-2">
+                  <Skeleton className="h-3 w-10 rounded-[2px]" />
+                  <Skeleton className="h-3 w-8 rounded-[2px]" />
+                </div>
+              </div>
+            ))}
           </div>
         )}
         {error && (
@@ -171,10 +183,29 @@ export default function GalleryPage() {
           </div>
         )}
         {!loading && !error && blueprints.length === 0 && (
-          <div className="flex flex-col items-center gap-2 pt-12 text-white/30">
-            <Icon icon="lucide:inbox" width={28} height={28} />
-            <p className="m-0 text-sm">No blueprints found.</p>
-          </div>
+          activeTab === 'mine' ? (
+            <div className="flex flex-col items-center gap-3 pt-16 text-center">
+              <Icon icon="lucide:layers-2" width={36} height={36} className="text-[#c8a84b]/60" />
+              <h2 className="m-0 text-base font-semibold text-white">You haven't uploaded any blueprints yet</h2>
+              <p className="m-0 max-w-[360px] text-sm text-white/45">
+                Upload your first Dune base blueprint and share it with the community — or keep it private and use it as your own catalog.
+              </p>
+              <button
+                onClick={() => setUploadOpen(true)}
+                className="mt-2 inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-[#d4b659]"
+              >
+                <Icon icon="lucide:upload" width={14} height={14} />
+                Upload Blueprint
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-col items-center gap-2 pt-12 text-white/30">
+              <Icon icon="lucide:inbox" width={28} height={28} />
+              <p className="m-0 text-sm">
+                {activeTag ? `No blueprints tagged "${activeTag}".` : 'No blueprints found.'}
+              </p>
+            </div>
+          )
         )}
         {!loading && !error && blueprints.length > 0 && (
           <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4">
