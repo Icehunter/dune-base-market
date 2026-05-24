@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useRef, lazy, Suspense } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth, SignInButton } from "@clerk/react";
-import { Button, Drawer, Select, ListBox } from "@heroui/react";
+import { Button, Drawer, Select, ListBox, toast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { PromptDialog } from "../components/dialogs/PromptDialog";
 import { ConfirmDialog } from "../components/dialogs/ConfirmDialog";
@@ -218,8 +218,10 @@ export default function BlueprintDetailPage() {
     if (!id) return;
     try {
       await downloadBlueprint(id, getToken, selectedVariantId ?? undefined);
+      toast.success("Blueprint downloaded");
     } catch (err) {
       console.error(err);
+      toast.danger("Download failed");
     }
   }
 
@@ -285,8 +287,10 @@ export default function BlueprintDetailPage() {
       setSelectedVariantId(v.id);
       setVariantDirty(false);
       navigate(`/blueprint/${id}/v/${v.id}`, { replace: true });
+      toast.success(`Variant "${v.name}" saved`);
     } catch (err) {
       console.error(err);
+      toast.danger("Could not save variant");
     }
   }
 
@@ -302,8 +306,10 @@ export default function BlueprintDetailPage() {
         getToken,
       );
       setVariantDirty(false);
+      toast.success("Variant changes saved");
     } catch (err) {
       console.error(err);
+      toast.danger("Could not save changes");
     }
   }
 
@@ -316,8 +322,10 @@ export default function BlueprintDetailPage() {
     try {
       await updateVariant(id, selectedVariantId, { name }, getToken);
       setVariants((prev) => prev.map((v) => (v.id === selectedVariantId ? { ...v, name } : v)));
+      toast.success("Variant renamed");
     } catch (err) {
       console.error(err);
+      toast.danger("Rename failed");
     }
   }
 
@@ -334,8 +342,10 @@ export default function BlueprintDetailPage() {
       setTemplateOverrides({});
       setVariantDirty(false);
       navigate(`/blueprint/${id}`, { replace: true });
+      toast.success("Variant deleted");
     } catch (err) {
       console.error(err);
+      toast.danger("Delete failed");
     }
   }
 
@@ -346,9 +356,11 @@ export default function BlueprintDetailPage() {
     if (!id) return;
     try {
       await deleteBlueprint(id, getToken);
+      toast.success("Blueprint deleted");
       window.location.href = "/";
     } catch (err) {
       console.error(err);
+      toast.danger("Delete failed");
     }
   }
 
@@ -360,8 +372,10 @@ export default function BlueprintDetailPage() {
         prev ? { ...prev, title: editTitle, is_public: editPublic ? 1 : 0, tags: editTags } : prev,
       );
       setEditing(false);
+      toast.success("Blueprint updated");
     } catch (err) {
       console.error(err);
+      toast.danger("Could not save changes");
     }
   }
 
@@ -381,8 +395,10 @@ export default function BlueprintDetailPage() {
     try {
       const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
       applyUploadedSnapshotUrl(snapshot_url);
+      toast.success("Cover image updated");
     } catch (err) {
       console.error("Snapshot upload failed", err);
+      toast.danger("Cover upload failed");
     }
   }
 
@@ -393,8 +409,10 @@ export default function BlueprintDetailPage() {
       const file = new File([blob], "cover.jpg", { type: "image/jpeg" });
       const { snapshot_url } = await uploadSnapshot(id, file, getToken, selectedVariantId ?? undefined);
       applyUploadedSnapshotUrl(snapshot_url);
+      toast.success("Cover saved from current view");
     } catch (err) {
       console.error("Save view as cover failed", err);
+      toast.danger("Could not save cover");
     }
   }
 
@@ -402,9 +420,11 @@ export default function BlueprintDetailPage() {
     if (!id) return;
     try {
       const { id: newId } = await forkBlueprint(id, getToken, selectedVariantId ?? undefined);
+      toast.success("Blueprint forked to your account");
       navigate(`/blueprint/${newId}`);
     } catch (err) {
       console.error("Fork failed", err);
+      toast.danger("Fork failed");
     }
   }
 
@@ -444,20 +464,30 @@ export default function BlueprintDetailPage() {
       await replaceBlueprintJson(id, file, getToken);
       const bp = await getBlueprint(id, isSignedIn ? getToken : undefined);
       setBlueprint(bp);
+      toast.success("Blueprint JSON replaced");
     } catch (err) {
-      setReplaceError(err instanceof Error ? err.message : "Replace failed");
+      const msg = err instanceof Error ? err.message : "Replace failed";
+      setReplaceError(msg);
+      toast.danger(msg);
     } finally {
       setReplacing(false);
     }
   }
 
   if (loading)
-    return <div style={{ color: "rgba(255,255,255,0.3)", textAlign: "center", paddingTop: 80 }}>Loading...</div>;
+    return (
+      <div className="flex flex-col items-center gap-2 pt-20 text-white/35">
+        <Icon icon="lucide:loader-2" width={22} height={22} className="animate-spin" />
+        <p className="m-0 text-sm">Loading blueprint…</p>
+      </div>
+    );
   if (error || !blueprint)
     return (
-      <div style={{ color: "#e05555", textAlign: "center", paddingTop: 80 }}>
-        {error ?? "Not found"} ·{" "}
-        <Link to="/" style={{ color: "#c8a84b" }}>
+      <div className="flex flex-col items-center gap-2 pt-20 text-[#e05555]">
+        <Icon icon="lucide:triangle-alert" width={22} height={22} />
+        <p className="m-0 text-sm">{error ?? "Blueprint not found"}</p>
+        <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-[#c8a84b] no-underline hover:underline">
+          <Icon icon="lucide:arrow-left" width={14} height={14} />
           Back to gallery
         </Link>
       </div>
@@ -467,7 +497,7 @@ export default function BlueprintDetailPage() {
   const pieceGroups = buildPieceBreakdown(blueprint);
 
   return (
-    <div style={{ display: "flex", height: "calc(100vh - 52px)", overflow: "hidden", position: "relative" }}>
+    <div className="relative flex h-[calc(100vh-52px)] overflow-hidden">
       {/* Piece variants drawer — overlays the right side when open */}
       <PieceVariantsDrawer
         open={pieceVariantsOpen}
@@ -515,7 +545,7 @@ export default function BlueprintDetailPage() {
       />
 
       {/* 3D Viewer */}
-      <div style={{ flex: 1, position: "relative", background: "#000", overflow: "hidden" }}>
+      <div className="relative flex-1 overflow-hidden bg-black">
         {blueprint.blueprint_data ? (
           <Suspense fallback={null}>
             <SceneCanvas
@@ -529,35 +559,16 @@ export default function BlueprintDetailPage() {
             />
           </Suspense>
         ) : (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              color: "rgba(255,255,255,0.2)",
-            }}
-          >
-            No preview available
+          <div className="flex h-full items-center justify-center gap-2 text-white/25">
+            <Icon icon="lucide:image-off" width={20} height={20} />
+            <span className="text-sm">No preview available</span>
           </div>
         )}
 
-        {/* Crosshair */}
+        {/* Crosshair — only visible while pointer is locked in fly mode */}
         {locked && (
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              pointerEvents: "none",
-              color: "rgba(255,255,255,0.7)",
-              fontSize: 20,
-              lineHeight: 1,
-              userSelect: "none",
-            }}
-          >
-            +
+          <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-white/70">
+            <Icon icon="lucide:crosshair" width={20} height={20} />
           </div>
         )}
 
@@ -917,32 +928,20 @@ export default function BlueprintDetailPage() {
 
           {/* Piece breakdown */}
           {pieceGroups.length > 0 && (
-            <div>
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: 10,
-                  textTransform: "uppercase",
-                  letterSpacing: 0.5,
-                  margin: "0 0 8px",
-                }}
-              >
+            <div className="flex flex-col">
+              <p className="m-0 mb-2 text-[10px] uppercase tracking-wide text-white/40">
                 Piece Breakdown
               </p>
               {pieceGroups.map(({ category, count }) => (
                 <div
                   key={category}
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    borderBottom: "1px solid rgba(255,255,255,0.05)",
-                    padding: "4px 0",
-                    fontSize: 11,
-                  }}
+                  className="flex items-center justify-between border-b border-white/5 py-1 text-[11px] last:border-b-0"
                 >
-                  <span style={{ color: "rgba(255,255,255,0.6)" }}>{category}</span>
-                  <span style={{ color: "#c8a84b", fontWeight: 600 }}>×{count}</span>
+                  <span className="inline-flex items-center gap-1.5 text-white/60">
+                    <Icon icon={categoryIcon(category)} width={11} height={11} className="text-white/35" />
+                    {category}
+                  </span>
+                  <span className="font-semibold text-[#c8a84b]">×{count}</span>
                 </div>
               ))}
             </div>
@@ -1250,4 +1249,19 @@ function categoryFromType(id: string): string {
   if (l.includes("pillar") || l.includes("column")) return "Pillar";
   if (l.includes("door") || l.includes("window")) return "Door";
   return "Decoration";
+}
+
+// Visual cue for the piece-breakdown rows. Closest Lucide icon for each category.
+function categoryIcon(category: string): string {
+  switch (category) {
+    case "Foundation": return "lucide:square";
+    case "Wall":       return "lucide:rectangle-vertical";
+    case "Floor":      return "lucide:layout-grid";
+    case "Rooftop":    return "lucide:triangle";
+    case "Ramp":       return "lucide:trending-up";
+    case "Stairs":     return "lucide:stairs";
+    case "Pillar":     return "lucide:columns-3";
+    case "Door":       return "lucide:door-open";
+    default:           return "lucide:shapes";
+  }
 }

@@ -1,6 +1,7 @@
 import { useAuth } from '@clerk/react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import { toast } from '@heroui/react';
 import type { BlueprintMeta } from '../lib/api';
 import { downloadBlueprint } from '../lib/api';
 
@@ -17,8 +18,10 @@ export default function BlueprintCard({ blueprint, showVisibility, onDelete }: P
     e.preventDefault();
     try {
       await downloadBlueprint(blueprint.id, getToken);
+      toast.success(`Downloaded "${blueprint.title}"`);
     } catch (err) {
       console.error('Download failed', err);
+      toast.danger('Download failed');
     }
   }
 

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth, SignInButton } from '@clerk/react';
 import { Icon } from '@iconify/react';
+import { toast } from '@heroui/react';
 import BlueprintCard from '../components/BlueprintCard';
 import UploadModal from '../components/UploadModal';
 import { listBlueprints, deleteBlueprint } from '../lib/api';
@@ -51,8 +52,10 @@ export default function GalleryPage() {
     try {
       await deleteBlueprint(id, getToken);
       setBlueprints((prev) => prev.filter((b) => b.id !== id));
+      toast.success('Blueprint deleted');
     } catch (err) {
       console.error('Delete failed', err);
+      toast.danger('Delete failed');
     }
   }
 

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAuth } from '@clerk/react';
-import { Modal, Button } from '@heroui/react';
+import { Modal, Button, toast } from '@heroui/react';
 import { Icon } from '@iconify/react';
 import { uploadBlueprint } from '../lib/api';
 import type { BlueprintMeta } from '../lib/api';
@@ -77,9 +77,12 @@ export default function UploadModal({ isOpen, onClose, onUploaded }: Props) {
         created_at: new Date().toISOString(),
       };
       onUploaded(newBlueprint);
+      toast.success(`Uploaded "${title.trim()}"`);
       onClose();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Upload failed');
+      const msg = err instanceof Error ? err.message : 'Upload failed';
+      setError(msg);
+      toast.danger(msg);
     } finally {
       setLoading(false);
     }
