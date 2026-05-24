@@ -26,12 +26,12 @@ export default function NavBar() {
         <UserButton />
       ) : (
         <div className="flex gap-2">
-          <SignInButton mode="modal">
+          <SignInButton>
             <button className="cursor-pointer rounded-[2px] border border-white/20 bg-transparent px-3.5 py-1.5 text-xs text-white/70 transition-colors hover:bg-white/5 hover:text-white">
               Sign In
             </button>
           </SignInButton>
-          <SignUpButton mode="modal">
+          <SignUpButton>
             <button className="cursor-pointer rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-3.5 py-1.5 text-xs font-bold text-black transition-colors hover:bg-[#d4b659]">
               Sign Up
             </button>

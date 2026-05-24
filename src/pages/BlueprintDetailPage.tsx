@@ -949,7 +949,7 @@ export default function BlueprintDetailPage() {
               Download{Object.keys(templateOverrides).length > 0 ? " (with swaps)" : ""}
             </button>
           ) : (
-            <SignInButton mode="modal">
+            <SignInButton>
               <button className={btnGhost}>
                 <Icon icon="lucide:lock" width={14} height={14} />
                 Sign in to download

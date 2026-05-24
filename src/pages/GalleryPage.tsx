@@ -82,7 +82,7 @@ export default function GalleryPage() {
               Upload Blueprint
             </button>
           ) : (
-            <SignInButton mode="modal">
+            <SignInButton>
               <button className="inline-flex shrink-0 cursor-pointer items-center gap-1.5 rounded-[2px] border border-white/20 bg-transparent px-4 py-2 text-sm text-white/70 transition-colors hover:bg-white/5 hover:text-white">
                 <Icon icon="lucide:lock" width={14} height={14} />
                 Sign in to upload
