@@ -113,14 +113,16 @@ export default function DesignerPage() {
     setPieces(prev =>
       prev.map(p => p.id === replaceMode.instanceId ? { ...p, building_type: newType } : p),
     );
+    toast.success('Replaced 1 piece');
   };
 
   const handleReplaceAll = (newType: string) => {
     if (!replaceMode) return;
-    const oldType = replaceMode.building_type;
+    const { building_type: oldType, count } = replaceMode;
     setPieces(prev =>
       prev.map(p => p.building_type === oldType ? { ...p, building_type: newType } : p),
     );
+    toast.success(`Replaced ${count} piece${count !== 1 ? 's' : ''}`);
   };
 
   const handleExitReplaceMode = () => setReplaceSourceId(null);
@@ -367,25 +369,18 @@ export default function DesignerPage() {
                 <kbd className="rounded bg-white/10 px-1 py-px font-mono text-white/50">Del</kbd> remove
               </div>
               <div className="flex gap-1.5 pt-0.5">
-                {(() => {
-                  const sameTypeCount = pieces.filter(p => p.building_type === selectedPiece.building_type).length;
-                  return (
-                    <>
-                      <button
-                        className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b55] bg-[#c8a84b12] px-2 py-0.5 text-[10px] text-[#c8a84b] transition-colors hover:bg-[#c8a84b22]"
-                        onClick={() => handleStartReplace(selectedPiece.id)}
-                      >
-                        Replace
-                      </button>
-                      <button
-                        className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-white/60 transition-colors hover:bg-white/10 hover:text-white/90"
-                        onClick={() => handleStartReplace(selectedPiece.id)}
-                      >
-                        Replace All ({sameTypeCount})
-                      </button>
-                    </>
-                  );
-                })()}
+                <button
+                  className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b55] bg-[#c8a84b12] px-2 py-0.5 text-[10px] text-[#c8a84b] transition-colors hover:bg-[#c8a84b22]"
+                  onClick={() => handleStartReplace(selectedPiece.id)}
+                >
+                  Replace
+                </button>
+                <button
+                  className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-white/60 transition-colors hover:bg-white/10 hover:text-white/90"
+                  onClick={() => handleStartReplace(selectedPiece.id)}
+                >
+                  Replace All ({pieces.filter(p => p.building_type === selectedPiece.building_type).length})
+                </button>
               </div>
             </div>
           )}
