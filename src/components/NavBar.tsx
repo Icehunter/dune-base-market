@@ -15,9 +15,15 @@ export default function NavBar() {
         SOLIDO MARKET
       </Link>
 
-      {/* Secondary nav link — hide on very narrow screens; logo already links home. */}
+      {/* Secondary nav links — hide on very narrow screens; logo already links home. */}
       <Link to="/" className="hidden text-sm text-white/60 no-underline hover:text-white sm:inline">
         Blueprints
+      </Link>
+      <Link to="/designer" className="hidden items-center gap-1.5 text-sm text-white/60 no-underline hover:text-white sm:inline-flex">
+        Designer
+        <span className="rounded-[2px] bg-amber-800/60 px-1 py-px text-[9px] font-bold uppercase tracking-wider text-amber-300/90">
+          Alpha
+        </span>
       </Link>
 
       <div className="flex-1" />

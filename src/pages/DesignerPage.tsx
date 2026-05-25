@@ -27,7 +27,7 @@ const STRUCTURE_CATALOG = PIECE_CATALOG.filter(
 function hasFoundation(pieces: DesignerPiece[]): boolean {
   return pieces.some(p => {
     const entry = STRUCTURE_CATALOG.find(c => c.templateId === p.building_type);
-    return entry?.isFoundation ?? p.building_type.toLowerCase().includes('foundation');
+    return (entry?.isFoundation === true) || p.building_type.toLowerCase().includes('foundation');
   });
 }
 
@@ -240,16 +240,13 @@ export default function DesignerPage() {
       <div className="flex shrink-0 items-center gap-3 border-b border-amber-900/40 bg-amber-950/50 px-4 py-2.5 backdrop-blur-sm">
         <Icon icon="lucide:flask-conical" width={14} height={14} className="shrink-0 text-amber-400/80" />
         <p className="text-[12px] text-amber-200/75">
-          <span className="font-semibold text-amber-300">Designer is in beta.</span>
+          <span className="font-semibold text-amber-300">Designer is in alpha.</span>
           {' '}Layouts and snapping logic are still evolving — exported files may not produce valid Solido designs and are subject to change. Some actions may cause the server to restart or client to crash. Use at your own risk.
         </p>
       </div>
 
-      {/* Canvas + Palette stacked vertically */}
-      <div className="flex flex-1 flex-col overflow-hidden">
-
-        {/* Canvas area */}
-        <div className="relative flex-1 overflow-hidden">
+      {/* Canvas area — palette floats over it */}
+      <div className="relative flex-1 overflow-hidden">
           <DesignerCanvas
             ref={canvasRef}
             pieces={pieces}
@@ -330,9 +327,12 @@ export default function DesignerPage() {
             </div>
           )}
 
-          {/* Placement HUD — bottom centre */}
+          {/* Placement HUD — bottom centre, shifts up when palette open */}
           {placingTemplate && (
-            <div className="pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 rounded-[2px] border border-white/10 bg-black/70 px-4 py-2 text-center text-[12px] text-white/70 backdrop-blur-sm">
+            <div
+              className="pointer-events-none absolute left-1/2 -translate-x-1/2 rounded-[2px] border border-white/10 bg-black/70 px-4 py-2 text-center text-[12px] text-white/70 backdrop-blur-sm transition-[bottom] duration-200"
+              style={{ bottom: paletteOpen ? '240px' : '20px' }}
+            >
               <span className="text-white/90">Click</span> to place
               &nbsp;·&nbsp;
               <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[11px] font-mono text-white/80">R</kbd> rotate ({placingRotation}°)
@@ -343,9 +343,12 @@ export default function DesignerPage() {
             </div>
           )}
 
-          {/* Selected piece info — bottom left */}
+          {/* Selected piece info — bottom left, shifts up when palette open */}
           {selectedPiece && !placingTemplate && (
-            <div className="pointer-events-none absolute bottom-4 left-4 flex max-w-[280px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[11px] text-white backdrop-blur">
+            <div
+              className="pointer-events-none absolute left-4 flex max-w-[280px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[11px] text-white backdrop-blur transition-[bottom] duration-200"
+              style={{ bottom: paletteOpen ? '236px' : '16px' }}
+            >
               <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
                 <Icon icon="lucide:box-select" width={11} height={11} />
                 {selectedCatalogEntry?.faction ?? 'Piece'}
@@ -370,16 +373,14 @@ export default function DesignerPage() {
               </div>
               <div className="flex gap-1.5 pt-0.5">
                 <button
-                  className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b55] bg-[#c8a84b12] px-2 py-0.5 text-[10px] text-[#c8a84b] transition-colors hover:bg-[#c8a84b22]"
-                  onClick={() => handleStartReplace(selectedPiece.id)}
+                  className={`pointer-events-auto cursor-pointer rounded-[2px] border px-2 py-0.5 text-[10px] transition-colors ${
+                    replaceMode
+                      ? 'border-[#c8a84b] bg-[#c8a84b22] text-[#c8a84b]'
+                      : 'border-[#c8a84b55] bg-[#c8a84b12] text-[#c8a84b] hover:bg-[#c8a84b22]'
+                  }`}
+                  onClick={() => replaceMode ? handleExitReplaceMode() : handleStartReplace(selectedPiece.id)}
                 >
-                  Replace
-                </button>
-                <button
-                  className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-white/60 transition-colors hover:bg-white/10 hover:text-white/90"
-                  onClick={() => handleStartReplace(selectedPiece.id)}
-                >
-                  Replace All ({pieces.filter(p => p.building_type === selectedPiece.building_type).length})
+                  {replaceMode ? 'Cancel Replace' : 'Replace…'}
                 </button>
               </div>
             </div>
@@ -404,21 +405,21 @@ export default function DesignerPage() {
               ▲ Palette · Space
             </button>
           )}
+        {/* Palette Drawer — floating overlay at bottom */}
+        <div className="absolute inset-x-0 bottom-0 z-20">
+          <PaletteDrawer
+            isOpen={paletteOpen}
+            onToggle={() => setPaletteOpen(p => !p)}
+            pieces={STRUCTURE_CATALOG}
+            placingTemplate={placingTemplate}
+            foundationPlaced={foundationPlaced}
+            onSelectTemplate={selectTemplate}
+            replaceMode={replaceMode}
+            onExitReplaceMode={handleExitReplaceMode}
+            onReplaceOne={handleReplaceOne}
+            onReplaceAll={handleReplaceAll}
+          />
         </div>
-
-        {/* Palette Drawer */}
-        <PaletteDrawer
-          isOpen={paletteOpen}
-          onToggle={() => setPaletteOpen(p => !p)}
-          pieces={STRUCTURE_CATALOG}
-          placingTemplate={placingTemplate}
-          foundationPlaced={foundationPlaced}
-          onSelectTemplate={selectTemplate}
-          replaceMode={replaceMode}
-          onExitReplaceMode={handleExitReplaceMode}
-          onReplaceOne={handleReplaceOne}
-          onReplaceAll={handleReplaceAll}
-        />
 
       </div>
     </div>

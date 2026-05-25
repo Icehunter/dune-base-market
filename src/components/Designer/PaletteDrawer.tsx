@@ -1,5 +1,5 @@
 // src/components/Designer/PaletteDrawer.tsx
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { FACTION_LABELS } from '../../data/pieceEquivalents';
 import type { PieceDefinition } from '../../data/catalog';
@@ -46,11 +46,16 @@ export function PaletteDrawer({
 }: Props) {
   const [activeFaction, setActiveFaction] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [hoveredTile, setHoveredTile] = useState<string | null>(null);
+  const [selectedTile, setSelectedTile] = useState<string | null>(null);
 
   const catalogEntry = replaceMode
     ? (pieces.find(p => p.templateId === replaceMode.building_type) ?? null)
     : null;
+
+  // Clear tile selection when replace mode exits
+  useEffect(() => {
+    if (!replaceMode) setSelectedTile(null);
+  }, [replaceMode]);
 
   const factions = useMemo(
     () => ORDERED_FACTIONS.filter(f => pieces.some(p => p.faction === f)),
@@ -62,14 +67,26 @@ export function PaletteDrawer({
     return CATEGORY_ORDER.filter(c => base.some(p => p.category === c));
   }, [pieces, activeFaction]);
 
-  const filtered = useMemo(
-    () => pieces.filter(p => {
+  const filtered = useMemo(() => {
+    const base = pieces.filter(p => {
       if (activeFaction && p.faction !== activeFaction) return false;
       if (activeCategory && p.category !== activeCategory) return false;
       return true;
-    }),
-    [pieces, activeFaction, activeCategory],
-  );
+    });
+
+    // Sort: (when showing all categories) category order → subtype → name
+    //       (when category filtered) subtype → name
+    const catIndex = (p: PieceDefinition) =>
+      activeCategory ? 0 : CATEGORY_ORDER.indexOf(p.category as typeof CATEGORY_ORDER[number]);
+
+    return [...base].sort((a, b) => {
+      const ci = catIndex(a) - catIndex(b);
+      if (ci !== 0) return ci;
+      const si = a.buildableGroupType.localeCompare(b.buildableGroupType);
+      if (si !== 0) return si;
+      return a.name.localeCompare(b.name);
+    });
+  }, [pieces, activeFaction, activeCategory]);
 
   const setFaction = (f: string | null) => {
     setActiveFaction(f);
@@ -94,7 +111,7 @@ export function PaletteDrawer({
             <span className="ml-1 font-normal text-[#c8a84b70]">×{replaceMode.count}</span>
           </span>
           <button
-            onClick={() => { onExitReplaceMode(); setHoveredTile(null); }}
+            onClick={() => { onExitReplaceMode(); setSelectedTile(null); }}
             className="shrink-0 cursor-pointer text-white/30 transition-colors hover:text-white/70"
           >
             <Icon icon="lucide:x" width={13} height={13} />
@@ -170,19 +187,26 @@ export function PaletteDrawer({
           filtered.map(p => {
             const locked = !replaceMode && !foundationPlaced && !p.isFoundation;
             const active = placingTemplate === p.templateId;
-            const isHovered = hoveredTile === p.templateId;
+            const isSelected = selectedTile === p.templateId;
+
             return (
               <button
                 key={p.templateId}
-                onClick={() => { if (!replaceMode && !locked) onSelectTemplate(p.templateId); }}
-                onMouseEnter={() => replaceMode && setHoveredTile(p.templateId)}
-                onMouseLeave={() => setHoveredTile(null)}
+                onClick={() => {
+                  if (replaceMode) {
+                    setSelectedTile(prev => prev === p.templateId ? null : p.templateId);
+                  } else if (!locked) {
+                    onSelectTemplate(p.templateId);
+                  }
+                }}
                 disabled={locked}
-                title={p.templateId}
+                title={p.name}
                 className={[
                   'relative flex w-[80px] shrink-0 flex-col items-center gap-1 rounded-[2px] border p-1 transition-colors',
                   locked ? 'cursor-not-allowed opacity-30' : 'cursor-pointer',
-                  active
+                  isSelected
+                    ? 'border-[#c8a84b] bg-[#c8a84b18]'
+                    : active
                     ? 'border-[#c8a84b] bg-[#c8a84b18]'
                     : !locked
                     ? 'border-white/10 bg-white/[0.03] hover:border-white/25 hover:bg-white/[0.06]'
@@ -205,23 +229,23 @@ export function PaletteDrawer({
                 </div>
                 <span
                   className={`w-full truncate text-center text-[8px] leading-tight ${
-                    active ? 'text-[#c8a84b]' : 'text-white/50'
+                    isSelected || active ? 'text-[#c8a84b]' : 'text-white/50'
                   }`}
                 >
                   {p.name}
                 </span>
 
-                {/* Replace mini-buttons — replace mode + this tile hovered */}
-                {replaceMode && isHovered && (
+                {/* Replace action buttons — replace mode + this tile selected */}
+                {replaceMode && isSelected && (
                   <div className="absolute inset-x-0 bottom-0 flex flex-col gap-px px-1 pb-1">
                     <button
-                      onClick={e => { e.stopPropagation(); onReplaceOne(p.templateId); setHoveredTile(null); }}
+                      onClick={e => { e.stopPropagation(); onReplaceOne(p.templateId); setSelectedTile(null); }}
                       className="w-full cursor-pointer rounded-[2px] bg-[#c8a84b] py-0.5 text-center text-[8px] font-bold text-black"
                     >
                       Replace ×1
                     </button>
                     <button
-                      onClick={e => { e.stopPropagation(); onReplaceAll(p.templateId); setHoveredTile(null); }}
+                      onClick={e => { e.stopPropagation(); onReplaceAll(p.templateId); setSelectedTile(null); }}
                       className="w-full cursor-pointer rounded-[2px] bg-white/15 py-0.5 text-center text-[8px] text-white/80"
                     >
                       All ×{replaceMode.count}
