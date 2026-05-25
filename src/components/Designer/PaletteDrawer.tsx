@@ -101,7 +101,7 @@ export function PaletteDrawer({
       <div className="flex gap-1 overflow-x-auto border-b border-white/10 px-3 py-2">
         <button
           onClick={() => setActiveCategory(null)}
-          className={`shrink-0 cursor-pointer rounded-[2px] px-2.5 py-1 text-[10px] transition-colors ${
+          className={`shrink-0 cursor-pointer rounded-[2px] border border-transparent px-2.5 py-1 text-[10px] transition-colors ${
             activeCategory === null ? 'bg-white/15 text-white' : 'text-white/40 hover:text-white/70'
           }`}
         >
