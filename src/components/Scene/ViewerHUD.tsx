@@ -51,7 +51,7 @@ export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode, ri
       borderRadius: 4,
       padding: '8px 12px',
       color: 'rgba(255,255,255,0.6)',
-      fontSize: 10,
+      fontSize: 12,
       lineHeight: 1.9,
       textAlign: 'right',
       pointerEvents: 'none',

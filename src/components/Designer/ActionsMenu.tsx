@@ -30,7 +30,7 @@ export function ActionsMenu({ isSignedIn, pieceCount, onSave, onExport, onImport
     <div ref={ref} className="absolute right-2.5 top-2.5 z-20">
       <button
         onClick={() => setOpen(o => !o)}
-        className="flex cursor-pointer items-center gap-1.5 rounded-[2px] border border-white/20 bg-[#13131a]/90 px-3 py-1.5 text-[11px] text-white/70 backdrop-blur transition-colors hover:border-white/35 hover:text-white"
+        className="flex cursor-pointer items-center gap-1.5 rounded-[2px] border border-white/20 bg-[#13131a]/90 px-3 py-1.5 text-[13px] text-white/70 backdrop-blur transition-colors hover:border-white/35 hover:text-white"
       >
         <Icon icon="lucide:hexagon" width={12} height={12} className="text-[#c8a84b]" />
         Actions
@@ -48,7 +48,7 @@ export function ActionsMenu({ isSignedIn, pieceCount, onSave, onExport, onImport
                 <Icon icon="lucide:save" width={13} height={13} />
                 <div>
                   <div className="font-semibold">Save to account</div>
-                  <div className="text-[10px] text-[#c8a84b70]">Saves as private blueprint</div>
+                  <div className="text-[12px] text-[#c8a84b70]">Saves as private blueprint</div>
                 </div>
               </button>
               <div className="border-t border-white/10" />

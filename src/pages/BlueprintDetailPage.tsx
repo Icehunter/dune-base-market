@@ -639,6 +639,7 @@ export default function BlueprintDetailPage() {
               onSelectPiece={setSelectedPiece}
               onModeChange={setViewerMode}
               onReady={() => setSceneReady(true)}
+              onSceneReset={() => { prevOverridesRef.current = {}; setSceneReady(false); }}
               initialDistanceScale={1}
               initialBlueprint={blueprint.blueprint_data as unknown as RawBlueprint}
               userRotationOverrides={devDisplayMap}
@@ -697,16 +698,16 @@ export default function BlueprintDetailPage() {
         {selectedPiece && (
           <div
             style={{ transition: "left 200ms ease-out" }}
-            className="pointer-events-none absolute bottom-4 left-4 flex max-w-[320px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[11px] text-white backdrop-blur"
+            className="pointer-events-none absolute bottom-4 left-4 flex max-w-[320px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[13px] text-white backdrop-blur"
           >
-            <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
+            <div className="flex items-center gap-1.5 text-[12px] uppercase tracking-wide text-white/40">
               <Icon icon="lucide:box-select" width={11} height={11} />
               {selectedPiece.category}
             </div>
-            <div className="break-all text-xs font-semibold text-[#ffd84a]">
+            <div className="break-all text-sm font-semibold text-[#ffd84a]">
               {selectedPiece.templateId}
             </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/55">
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-[12px] text-white/55">
               <span className="inline-flex items-center gap-1">
                 <Icon icon="lucide:rotate-cw" width={10} height={10} />
                 {selectedPiece.transform.rotation}°
@@ -729,13 +730,13 @@ export default function BlueprintDetailPage() {
                 const key = n > 180 ? n - 360 : n;
                 const devVal = devDisplayMap[selectedPiece.templateId]?.[key];
                 return devVal !== undefined ? (
-                  <div className="inline-flex items-center gap-1 text-[10px] text-[#7ec8e3]">
+                  <div className="inline-flex items-center gap-1 text-[12px] text-[#7ec8e3]">
                     <Icon icon="lucide:wand" width={10} height={10} />
                     override {devVal > 0 ? "+" : ""}
                     {devVal}° · R / Shift+R to cycle
                   </div>
                 ) : (
-                  <div className="text-[10px] text-white/30">R to add a rotation fix</div>
+                  <div className="text-[12px] text-white/30">R to add a rotation fix</div>
                 );
               })()}
           </div>
@@ -764,7 +765,7 @@ export default function BlueprintDetailPage() {
       >
         {/* Sticky header — Back-to-gallery + collapse, persistent above scroll. */}
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#13131a]/95 px-5 py-3 backdrop-blur">
-          <Link to="/" className="inline-flex items-center gap-1.5 text-xs text-white/60 no-underline hover:text-white">
+          <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-white/60 no-underline hover:text-white">
             <Icon icon="lucide:arrow-left" width={14} height={14} />
             Back to gallery
           </Link>
@@ -818,7 +819,7 @@ export default function BlueprintDetailPage() {
                 maxLength={80}
                 className="rounded-[2px] border border-white/15 bg-black/30 px-2 py-1.5 text-sm text-white outline-none focus:border-accent"
               />
-              <label className="inline-flex items-center gap-2 text-xs text-white/60">
+              <label className="inline-flex items-center gap-2 text-sm text-white/60">
                 <input
                   type="checkbox"
                   checked={editPublic}
@@ -828,7 +829,7 @@ export default function BlueprintDetailPage() {
                 Public
               </label>
               <div>
-                <p className="m-0 mb-1.5 text-[10px] uppercase tracking-wide text-white/40">Tags</p>
+                <p className="m-0 mb-1.5 text-[12px] uppercase tracking-wide text-white/40">Tags</p>
                 <div className="mb-1.5 flex flex-wrap gap-1">
                   {STANDARD_TAGS.map((tag) => {
                     const active = editTags.includes(tag);
@@ -838,8 +839,8 @@ export default function BlueprintDetailPage() {
                         onClick={() => setEditTags(active ? editTags.filter((t) => t !== tag) : [...editTags, tag])}
                         className={
                           active
-                            ? "cursor-pointer rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.18)] px-2.5 py-0.5 text-[10px] text-[#c8a84b]"
-                            : "cursor-pointer rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[10px] text-white/45 hover:border-white/20 hover:text-white/70"
+                            ? "cursor-pointer rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.18)] px-2.5 py-0.5 text-[12px] text-[#c8a84b]"
+                            : "cursor-pointer rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[12px] text-white/45 hover:border-white/20 hover:text-white/70"
                         }
                       >
                         {tag}
@@ -851,7 +852,7 @@ export default function BlueprintDetailPage() {
                     .map((tag) => (
                       <span
                         key={tag}
-                        className="inline-flex items-center gap-1 rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.2)] px-2.5 py-0.5 text-[10px] text-[#c8a84b]"
+                        className="inline-flex items-center gap-1 rounded-full border border-[rgba(200,168,75,0.5)] bg-[rgba(200,168,75,0.2)] px-2.5 py-0.5 text-[12px] text-[#c8a84b]"
                       >
                         {tag}
                         <button
@@ -876,15 +877,15 @@ export default function BlueprintDetailPage() {
                     }
                   }}
                   placeholder="Type a tag, press Enter"
-                  className="box-border w-full rounded-[2px] border border-white/10 bg-black/30 px-2 py-1 text-xs text-white outline-none placeholder:text-white/30 focus:border-accent"
+                  className="box-border w-full rounded-[2px] border border-white/10 bg-black/30 px-2 py-1 text-sm text-white outline-none placeholder:text-white/30 focus:border-accent"
                 />
               </div>
               <div className="flex gap-1.5">
-                <button onClick={handleSaveEdit} className={`${btnGold} flex-1 text-xs py-1.5`}>
+                <button onClick={handleSaveEdit} className={`${btnGold} flex-1 text-sm py-1.5`}>
                   <Icon icon="lucide:check" width={14} height={14} />
                   Save
                 </button>
-                <button onClick={() => setEditing(false)} className={`${btnGhost} flex-1 text-xs py-1.5`}>
+                <button onClick={() => setEditing(false)} className={`${btnGhost} flex-1 text-sm py-1.5`}>
                   Cancel
                 </button>
               </div>
@@ -892,7 +893,7 @@ export default function BlueprintDetailPage() {
           ) : (
             <div className="flex flex-col gap-1">
               <h1 className="m-0 text-base font-bold text-white">{blueprint.title}</h1>
-              <p className="m-0 flex items-center gap-1.5 text-xs text-white/45">
+              <p className="m-0 flex items-center gap-1.5 text-sm text-white/45">
                 <Icon icon="lucide:user" width={12} height={12} />
                 {blueprint.username}
                 <span className="text-white/25">·</span>
@@ -900,7 +901,7 @@ export default function BlueprintDetailPage() {
                 {new Date(blueprint.created_at).toLocaleDateString()}
               </p>
               <span
-                className={`mt-1 inline-flex w-fit items-center gap-1 rounded-[2px] border px-1.5 py-0.5 text-[10px] ${
+                className={`mt-1 inline-flex w-fit items-center gap-1 rounded-[2px] border px-1.5 py-0.5 text-[12px] ${
                   blueprint.is_public
                     ? "border-[#2a4a2a] bg-[#1a2e1a] text-[#5a9a5a]"
                     : "border-[#4a2a2a] bg-[#2e1a1a] text-[#9a5a5a]"
@@ -930,7 +931,7 @@ export default function BlueprintDetailPage() {
               >
                 <Icon icon={icon} width={14} height={14} className="text-white/35" />
                 <div className="text-base font-bold leading-none text-[#c8a84b]">{value}</div>
-                <div className="text-[10px] uppercase tracking-wide text-white/35">{label}</div>
+                <div className="text-[12px] uppercase tracking-wide text-white/35">{label}</div>
               </div>
             ))}
           </div>
@@ -1019,7 +1020,7 @@ export default function BlueprintDetailPage() {
                   onChange={handleReplaceJson}
                 />
               </div>
-              {replaceError && <p className="m-0 text-xs text-red-400">{replaceError}</p>}
+              {replaceError && <p className="m-0 text-sm text-red-400">{replaceError}</p>}
               <div className="flex flex-col gap-1.5">
                 <button onClick={handleSaveViewAsCover} className={btnDark}>
                   <Icon icon="lucide:camera" width={14} height={14} />
@@ -1043,13 +1044,13 @@ export default function BlueprintDetailPage() {
           {/* Piece breakdown */}
           {pieceGroups.length > 0 && (
             <div className="flex flex-col">
-              <p className="m-0 mb-2 text-[10px] uppercase tracking-wide text-white/40">
+              <p className="m-0 mb-2 text-[12px] uppercase tracking-wide text-white/40">
                 Piece Breakdown
               </p>
               {pieceGroups.map(({ category, count }) => (
                 <div
                   key={category}
-                  className="flex items-center justify-between border-b border-white/5 py-1 text-[11px] last:border-b-0"
+                  className="flex items-center justify-between border-b border-white/5 py-1 text-[13px] last:border-b-0"
                 >
                   <span className="inline-flex items-center gap-1.5 text-white/60">
                     <Icon icon={categoryIcon(category)} width={11} height={11} className="text-white/35" />
@@ -1076,7 +1077,7 @@ const STANDARD_TAGS = [
 // distinct intent per action) while still composable via Tailwind className.
 const btnBase =
   "inline-flex items-center justify-center gap-1.5 cursor-pointer select-none " +
-  "rounded-[2px] border px-3 py-2 text-xs font-semibold leading-none transition-colors " +
+  "rounded-[2px] border px-3 py-2 text-sm font-semibold leading-none transition-colors " +
   "disabled:cursor-default disabled:opacity-50";
 
 const btnGold = `${btnBase} w-full bg-[#c8a84b] border-[#c8a84b] text-black text-sm py-2.5 hover:bg-[#d4b659]`;
@@ -1116,7 +1117,7 @@ function VariantSwitcher({
 
   return (
     <div className="flex flex-col gap-2 rounded-md border border-white/10 bg-black/30 p-3">
-      <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
+      <div className="flex items-center gap-1.5 text-[12px] uppercase tracking-wide text-white/40">
         <span>Variant</span>
         {dirty && <span className="font-bold text-accent normal-case tracking-normal">· unsaved</span>}
       </div>
@@ -1154,7 +1155,7 @@ function VariantSwitcher({
           : null;
         if (!sel?.description) return null;
         return (
-          <p className="m-0 text-[11px] leading-snug text-white/55">{sel.description}</p>
+          <p className="m-0 text-[13px] leading-snug text-white/55">{sel.description}</p>
         );
       })()}
 
@@ -1163,24 +1164,24 @@ function VariantSwitcher({
         // never wrap to a second row inside the 320px sidebar.
         <div className="grid grid-cols-[repeat(auto-fit,minmax(0,1fr))] gap-1.5">
           {selectedVariantId && dirty && (
-            <button onClick={onSaveChanges} className={`${btnGold} px-2 py-1.5 text-xs`}>
+            <button onClick={onSaveChanges} className={`${btnGold} px-2 py-1.5 text-sm`}>
               <Icon icon="lucide:save" width={12} height={12} />
               Save
             </button>
           )}
           {hasOverrides && (
-            <button onClick={onSaveNew} className={`${btnGhost} px-2 py-1.5 text-xs`}>
+            <button onClick={onSaveNew} className={`${btnGhost} px-2 py-1.5 text-sm`}>
               <Icon icon="lucide:plus" width={12} height={12} />
               New
             </button>
           )}
           {selectedVariantId && (
             <>
-              <button onClick={onRename} className={`${btnGhost} px-2 py-1.5 text-xs`}>
+              <button onClick={onRename} className={`${btnGhost} px-2 py-1.5 text-sm`}>
                 <Icon icon="lucide:pencil" width={12} height={12} />
                 Edit
               </button>
-              <button onClick={onDelete} className={`${btnDanger} px-2 py-1.5 text-xs`}>
+              <button onClick={onDelete} className={`${btnDanger} px-2 py-1.5 text-sm`}>
                 <Icon icon="lucide:trash-2" width={12} height={12} />
                 Delete
               </button>
@@ -1235,7 +1236,7 @@ function PieceVariantsTrigger({ raw, overrides, onOpen }: PieceVariantsTriggerPr
         </span>
         {active && <span className="font-normal opacity-80">· {overrideCount} swapped</span>}
       </span>
-      <span className={`flex items-center justify-between text-[11px] ${active ? "opacity-80" : "opacity-60"}`}>
+      <span className={`flex items-center justify-between text-[13px] ${active ? "opacity-80" : "opacity-60"}`}>
         <span>{swappableCount} swappable</span>
         <Icon icon="lucide:chevron-right" width={12} height={12} />
       </span>
