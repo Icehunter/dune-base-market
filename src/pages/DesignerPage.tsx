@@ -121,8 +121,9 @@ export default function DesignerPage() {
       setPieces(imported);
       setSelectedPieceId(null);
       setPlacingTemplate(null);
+      toast.success(`Imported ${imported.length} piece${imported.length !== 1 ? 's' : ''}`);
     } catch {
-      // silently ignore malformed JSON
+      toast.danger('Could not parse blueprint — is it a valid Solido JSON file?');
     }
   };
 
@@ -238,7 +239,7 @@ export default function DesignerPage() {
             onChange={e => {
               const f = e.target.files?.[0];
               if (!f) return;
-              f.text().then(handleImport);
+              f.text().then(handleImport).catch(() => toast.danger('Could not read file'));
               e.target.value = '';
             }}
           />
