@@ -100,7 +100,7 @@ export function PaletteDrawer({
           ) : (
             <Icon icon="lucide:box" width={16} height={16} className="shrink-0 text-white/30" />
           )}
-          <span className="min-w-0 flex-1 truncate text-[11px] font-semibold text-[#c8a84b]">
+          <span className="min-w-0 flex-1 truncate text-[13px] font-semibold text-[#c8a84b]">
             Replacing {catalogEntry?.name ?? replaceMode.building_type}
             <span className="ml-1 font-normal text-[#c8a84b70]">×{replaceMode.count}</span>
           </span>
@@ -117,7 +117,7 @@ export function PaletteDrawer({
       <div className="flex items-stretch overflow-x-auto border-b border-white/10">
         <button
           onClick={() => setFaction(null)}
-          className={`shrink-0 cursor-pointer border-b-2 px-3 py-2 text-[11px] transition-colors ${
+          className={`shrink-0 cursor-pointer border-b-2 px-3 py-2 text-[13px] transition-colors ${
             activeFaction === null
               ? 'border-[#c8a84b] font-bold text-[#c8a84b]'
               : 'border-transparent text-white/40 hover:text-white/70'
@@ -129,7 +129,7 @@ export function PaletteDrawer({
           <button
             key={f}
             onClick={() => setFaction(activeFaction === f ? null : f)}
-            className={`shrink-0 cursor-pointer whitespace-nowrap border-b-2 px-3 py-2 text-[11px] transition-colors ${
+            className={`shrink-0 cursor-pointer whitespace-nowrap border-b-2 px-3 py-2 text-[13px] transition-colors ${
               activeFaction === f
                 ? 'border-[#c8a84b] font-bold text-[#c8a84b]'
                 : 'border-transparent text-white/40 hover:text-white/70'
@@ -141,7 +141,7 @@ export function PaletteDrawer({
         <div className="flex-1" />
         <button
           onClick={onToggle}
-          className="flex shrink-0 cursor-pointer items-center gap-1.5 border-l border-white/10 px-3 py-2 text-[10px] text-white/30 transition-colors hover:text-white/60"
+          className="flex shrink-0 cursor-pointer items-center gap-1.5 border-l border-white/10 px-3 py-2 text-[12px] text-white/30 transition-colors hover:text-white/60"
         >
           <Icon icon="lucide:chevron-down" width={12} height={12} />
           Space
@@ -152,7 +152,7 @@ export function PaletteDrawer({
       <div className="flex gap-1 overflow-x-auto border-b border-white/10 px-3 py-2">
         <button
           onClick={() => setActiveCategory(null)}
-          className={`shrink-0 cursor-pointer rounded-[2px] border border-transparent px-2.5 py-1 text-[10px] transition-colors ${
+          className={`shrink-0 cursor-pointer rounded-[2px] border border-transparent px-2.5 py-1 text-[12px] transition-colors ${
             activeCategory === null ? 'bg-white/15 text-white' : 'text-white/40 hover:text-white/70'
           }`}
         >
@@ -162,7 +162,7 @@ export function PaletteDrawer({
           <button
             key={c}
             onClick={() => setActiveCategory(activeCategory === c ? null : c)}
-            className={`shrink-0 cursor-pointer whitespace-nowrap rounded-[2px] border px-2.5 py-1 text-[10px] transition-colors ${
+            className={`shrink-0 cursor-pointer whitespace-nowrap rounded-[2px] border px-2.5 py-1 text-[12px] transition-colors ${
               activeCategory === c
                 ? 'border-white/20 bg-white/15 text-white'
                 : 'border-transparent text-white/40 hover:text-white/70'
@@ -176,7 +176,7 @@ export function PaletteDrawer({
       {/* Icon row — 80px tiles, single scrollable row */}
       <div className="flex gap-2 overflow-x-auto px-3 py-2">
         {filtered.length === 0 ? (
-          <p className="py-4 text-[11px] text-white/25">No pieces</p>
+          <p className="py-4 text-[13px] text-white/25">No pieces</p>
         ) : (
           filtered.map(p => {
             const locked = !replaceMode && !foundationPlaced && !p.isFoundation;
@@ -220,7 +220,7 @@ export function PaletteDrawer({
                   )}
                 </div>
                 <span
-                  className={`w-full truncate text-center text-[8px] leading-tight ${
+                  className={`w-full truncate text-center text-[10px] leading-tight ${
                     isSelected || active ? 'text-[#c8a84b]' : 'text-white/50'
                   }`}
                 >

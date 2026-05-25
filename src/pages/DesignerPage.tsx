@@ -246,7 +246,7 @@ export default function DesignerPage() {
       {/* Beta banner */}
       <div className="flex shrink-0 items-center gap-3 border-b border-amber-900/40 bg-amber-950/50 px-4 py-2.5 backdrop-blur-sm">
         <Icon icon="lucide:flask-conical" width={14} height={14} className="shrink-0 text-amber-400/80" />
-        <p className="text-[12px] text-amber-200/75">
+        <p className="text-[13px] text-amber-200/75">
           <span className="font-semibold text-amber-300">Designer is in alpha.</span>
           {' '}Layouts and snapping logic are still evolving — exported files may not produce valid Solido designs and are subject to change. Some actions may cause the server to restart or client to crash. Use at your own risk.
         </p>
@@ -322,7 +322,7 @@ export default function DesignerPage() {
                   className="shrink-0 rounded object-contain"
                 />
               )}
-              <span className="text-[11px] text-[#c8a84b]">
+              <span className="text-[13px] text-[#c8a84b]">
                 {placingEntry?.name ?? placingTemplate}
               </span>
               <button
@@ -337,16 +337,16 @@ export default function DesignerPage() {
           {/* Placement HUD — bottom centre, shifts up when palette open */}
           {placingTemplate && (
             <div
-              className="pointer-events-none absolute left-1/2 -translate-x-1/2 rounded-[2px] border border-white/10 bg-black/70 px-4 py-2 text-center text-[12px] text-white/70 backdrop-blur-sm transition-[bottom] duration-200"
+              className="pointer-events-none absolute left-1/2 -translate-x-1/2 rounded-[2px] border border-white/10 bg-black/70 px-4 py-2 text-center text-sm text-white/70 backdrop-blur-sm transition-[bottom] duration-200"
               style={{ bottom: paletteOpen ? '240px' : '20px' }}
             >
               <span className="text-white/90">Click</span> to place
               &nbsp;·&nbsp;
-              <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[11px] font-mono text-white/80">R</kbd> rotate ({placingRotation}°)
+              <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[12px] font-mono text-white/80">R</kbd> rotate ({placingRotation}°)
               &nbsp;·&nbsp;
               <span className="text-[#c8a84b]/80">snaps to sockets</span>
               &nbsp;·&nbsp;
-              <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[11px] font-mono text-white/80">Esc</kbd> cancel
+              <kbd className="rounded bg-white/10 px-1.5 py-0.5 text-[12px] font-mono text-white/80">Esc</kbd> cancel
             </div>
           )}
 
@@ -356,14 +356,14 @@ export default function DesignerPage() {
               className="pointer-events-none absolute left-4 flex max-w-[280px] select-none flex-col gap-1 rounded-[2px] border border-white/15 bg-[rgba(20,20,28,0.92)] px-3.5 py-2.5 text-[11px] text-white backdrop-blur transition-[bottom] duration-200"
               style={{ bottom: paletteOpen ? '236px' : '16px' }}
             >
-              <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wide text-white/40">
+              <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-wide text-white/40">
                 <Icon icon="lucide:box-select" width={11} height={11} />
                 {selectedCatalogEntry?.faction ?? 'Piece'}
               </div>
-              <div className="break-all text-xs font-semibold text-[#ffd84a]">
+              <div className="break-all text-sm font-semibold text-[#ffd84a]">
                 {selectedCatalogEntry?.name ?? selectedPiece.building_type}
               </div>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-white/55">
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-[12px] text-white/55">
                 <span className="inline-flex items-center gap-1">
                   <Icon icon="lucide:rotate-cw" width={10} height={10} />
                   {selectedPiece.rotation}°
@@ -373,33 +373,33 @@ export default function DesignerPage() {
                   {selectedPiece.x}, {selectedPiece.y}, {selectedPiece.z}
                 </span>
               </div>
-              <div className="text-[10px] text-white/30">
+              <div className="text-[12px] text-white/30">
                 <kbd className="rounded bg-white/10 px-1 py-px font-mono text-white/50">R</kbd> rotate
                 &nbsp;·&nbsp;
                 <kbd className="rounded bg-white/10 px-1 py-px font-mono text-white/50">Del</kbd> remove
               </div>
               {replaceMode && replaceTileEntry ? (
                 <div className="flex flex-col gap-1 pt-0.5">
-                  <div className="flex items-center gap-1.5 text-[10px] text-white/40">
+                  <div className="flex items-center gap-1.5 text-[12px] text-white/40">
                     <Icon icon="lucide:arrow-right" width={9} height={9} />
                     <span className="truncate text-[#c8a84b]/80">{replaceTileEntry.name}</span>
                   </div>
                   <div className="flex gap-1.5">
                     <button
-                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-2 py-0.5 text-[10px] font-semibold text-black transition-opacity hover:opacity-90"
+                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-2 py-0.5 text-[12px] font-semibold text-black transition-opacity hover:opacity-90"
                       onClick={() => { handleReplaceOne(replaceTileId!); setReplaceTileId(null); }}
                     >
                       Replace ×1
                     </button>
                     <button
-                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/20 bg-white/10 px-2 py-0.5 text-[10px] text-white/80 transition-colors hover:bg-white/15"
+                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/20 bg-white/10 px-2 py-0.5 text-[12px] text-white/80 transition-colors hover:bg-white/15"
                       onClick={() => { handleReplaceAll(replaceTileId!); setReplaceTileId(null); }}
                     >
                       All ×{replaceMode.count}
                     </button>
                   </div>
                   <button
-                    className="pointer-events-auto w-fit cursor-pointer text-[9px] text-white/30 hover:text-white/60"
+                    className="pointer-events-auto w-fit cursor-pointer text-[11px] text-white/30 hover:text-white/60"
                     onClick={handleExitReplaceMode}
                   >
                     cancel
@@ -409,7 +409,7 @@ export default function DesignerPage() {
                 <div className="flex flex-col gap-1 pt-0.5">
                   <div className="flex gap-1.5">
                     <button
-                      className={`pointer-events-auto cursor-pointer rounded-[2px] border px-2 py-0.5 text-[10px] transition-colors ${
+                      className={`pointer-events-auto cursor-pointer rounded-[2px] border px-2 py-0.5 text-[12px] transition-colors ${
                         replaceMode
                           ? 'border-[#c8a84b] bg-[#c8a84b22] text-[#c8a84b]'
                           : 'border-[#c8a84b55] bg-[#c8a84b12] text-[#c8a84b] hover:bg-[#c8a84b22]'
@@ -420,7 +420,7 @@ export default function DesignerPage() {
                     </button>
                   </div>
                   {replaceMode && (
-                    <p className="text-[9px] text-white/30">← pick a piece in the palette</p>
+                    <p className="text-[11px] text-white/30">← pick a piece in the palette</p>
                   )}
                 </div>
               )}
