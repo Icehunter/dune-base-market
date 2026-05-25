@@ -5,9 +5,10 @@ interface Props {
   isOwner: boolean;
   isEditMode: boolean;
   rightOffset?: number; // px from the right edge — page sets this to track the sidebar
+  paletteClosed?: boolean;
 }
 
-export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode, rightOffset = 16 }: Props) {
+export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode, rightOffset = 16, paletteClosed }: Props) {
   const tips: string[] = [];
 
   if (mode === 'orbit') {
@@ -16,6 +17,7 @@ export function ViewerHUD({ mode, locked, pieceSelected, isOwner, isEditMode, ri
     tips.push('Scroll — zoom');
     tips.push('Click — select piece');
     tips.push('Ctrl+M — enter fly mode');
+    if (paletteClosed) tips.push('Space — open palette');
   } else if (!locked) {
     tips.push('Click to enter fly mode');
   } else {
