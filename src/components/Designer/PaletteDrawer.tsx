@@ -13,6 +13,12 @@ const CATEGORY_ORDER = [
   'Foundation', 'Wall', 'Floor', 'Door', 'Pillar', 'Ramp', 'Rooftop', 'Decoration',
 ] as const;
 
+interface ReplaceMode {
+  instanceId: string;
+  building_type: string;
+  count: number;
+}
+
 interface Props {
   isOpen: boolean;
   onToggle: () => void;
@@ -20,6 +26,10 @@ interface Props {
   placingTemplate: string | null;
   foundationPlaced: boolean;
   onSelectTemplate: (templateId: string) => void;
+  replaceMode: ReplaceMode | null;
+  onExitReplaceMode: () => void;
+  onReplaceOne: (newType: string) => void;
+  onReplaceAll: (newType: string) => void;
 }
 
 export function PaletteDrawer({
@@ -29,9 +39,18 @@ export function PaletteDrawer({
   placingTemplate,
   foundationPlaced,
   onSelectTemplate,
+  replaceMode,
+  onExitReplaceMode,
+  onReplaceOne,
+  onReplaceAll,
 }: Props) {
   const [activeFaction, setActiveFaction] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [hoveredTile, setHoveredTile] = useState<string | null>(null);
+
+  const catalogEntry = replaceMode
+    ? (pieces.find(p => p.templateId === replaceMode.building_type) ?? null)
+    : null;
 
   const factions = useMemo(
     () => ORDERED_FACTIONS.filter(f => pieces.some(p => p.faction === f)),
@@ -62,6 +81,27 @@ export function PaletteDrawer({
       className="shrink-0 overflow-hidden border-t border-[#c8a84b55] bg-[#13131af5] backdrop-blur-sm transition-[max-height] duration-200 ease-out"
       style={{ maxHeight: isOpen ? '220px' : '0px' }}
     >
+      {/* Replace mode banner */}
+      {replaceMode && (
+        <div className="flex items-center gap-2 border-b border-[#c8a84b30] bg-[#c8a84b0a] px-3 py-2">
+          {catalogEntry?.iconPath ? (
+            <img src={catalogEntry.iconPath} width={18} height={18} alt="" className="shrink-0 rounded object-contain" />
+          ) : (
+            <Icon icon="lucide:box" width={16} height={16} className="shrink-0 text-white/30" />
+          )}
+          <span className="min-w-0 flex-1 truncate text-[11px] font-semibold text-[#c8a84b]">
+            Replacing {catalogEntry?.name ?? replaceMode.building_type}
+            <span className="ml-1 font-normal text-[#c8a84b70]">×{replaceMode.count}</span>
+          </span>
+          <button
+            onClick={onExitReplaceMode}
+            className="shrink-0 cursor-pointer text-white/30 transition-colors hover:text-white/70"
+          >
+            <Icon icon="lucide:x" width={13} height={13} />
+          </button>
+        </div>
+      )}
+
       {/* Faction tabs */}
       <div className="flex items-stretch overflow-x-auto border-b border-white/10">
         <button
@@ -128,16 +168,19 @@ export function PaletteDrawer({
           <p className="py-4 text-[11px] text-white/25">No pieces</p>
         ) : (
           filtered.map(p => {
-            const locked = !foundationPlaced && !p.isFoundation;
+            const locked = !replaceMode && !foundationPlaced && !p.isFoundation;
             const active = placingTemplate === p.templateId;
+            const isHovered = hoveredTile === p.templateId;
             return (
               <button
                 key={p.templateId}
-                onClick={() => !locked && onSelectTemplate(p.templateId)}
+                onClick={() => { if (!replaceMode && !locked) onSelectTemplate(p.templateId); }}
+                onMouseEnter={() => replaceMode && setHoveredTile(p.templateId)}
+                onMouseLeave={() => setHoveredTile(null)}
                 disabled={locked}
                 title={p.templateId}
                 className={[
-                  'flex w-[80px] shrink-0 flex-col items-center gap-1 rounded-[2px] border p-1 transition-colors',
+                  'relative flex w-[80px] shrink-0 flex-col items-center gap-1 rounded-[2px] border p-1 transition-colors',
                   locked ? 'cursor-not-allowed opacity-30' : 'cursor-pointer',
                   active
                     ? 'border-[#c8a84b] bg-[#c8a84b18]'
@@ -167,6 +210,24 @@ export function PaletteDrawer({
                 >
                   {p.name}
                 </span>
+
+                {/* Replace mini-buttons — replace mode + this tile hovered */}
+                {replaceMode && isHovered && (
+                  <div className="absolute inset-x-0 bottom-0 flex flex-col gap-px px-1 pb-1">
+                    <button
+                      onClick={e => { e.stopPropagation(); onReplaceOne(p.templateId); setHoveredTile(null); }}
+                      className="w-full cursor-pointer rounded-[2px] bg-[#c8a84b] py-0.5 text-center text-[8px] font-bold text-black"
+                    >
+                      Replace ×1
+                    </button>
+                    <button
+                      onClick={e => { e.stopPropagation(); onReplaceAll(p.templateId); setHoveredTile(null); }}
+                      className="w-full cursor-pointer rounded-[2px] bg-white/15 py-0.5 text-center text-[8px] text-white/80"
+                    >
+                      All ×{replaceMode.count}
+                    </button>
+                  </div>
+                )}
               </button>
             );
           })
