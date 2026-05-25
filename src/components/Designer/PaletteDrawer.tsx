@@ -94,7 +94,7 @@ export function PaletteDrawer({
             <span className="ml-1 font-normal text-[#c8a84b70]">×{replaceMode.count}</span>
           </span>
           <button
-            onClick={onExitReplaceMode}
+            onClick={() => { onExitReplaceMode(); setHoveredTile(null); }}
             className="shrink-0 cursor-pointer text-white/30 transition-colors hover:text-white/70"
           >
             <Icon icon="lucide:x" width={13} height={13} />
@@ -151,10 +151,10 @@ export function PaletteDrawer({
           <button
             key={c}
             onClick={() => setActiveCategory(activeCategory === c ? null : c)}
-            className={`shrink-0 cursor-pointer whitespace-nowrap rounded-[2px] px-2.5 py-1 text-[10px] transition-colors ${
+            className={`shrink-0 cursor-pointer whitespace-nowrap rounded-[2px] border px-2.5 py-1 text-[10px] transition-colors ${
               activeCategory === c
-                ? 'border border-white/20 bg-white/15 text-white'
-                : 'text-white/40 hover:text-white/70'
+                ? 'border-white/20 bg-white/15 text-white'
+                : 'border-transparent text-white/40 hover:text-white/70'
             }`}
           >
             {c}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useAuth } from '@clerk/react';
 import { toast } from '@heroui/react';
 import { Icon } from '@iconify/react';
@@ -43,6 +43,7 @@ export default function DesignerPage() {
   const [viewerMode, setViewerMode] = useState<'orbit' | 'fly'>('orbit');
   const [locked, setLocked] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(true);
+  const [replaceSourceId, setReplaceSourceId] = useState<string | null>(null);
 
   const counterRef = useRef(0);
   const importInputRef = useRef<HTMLInputElement>(null);
@@ -78,6 +79,7 @@ export default function DesignerPage() {
   };
 
   const handleSelectPiece = (id: string | null) => {
+    if (id !== replaceSourceId) setReplaceSourceId(null);
     setSelectedPieceId(id);
     if (id) setPlacingTemplate(null);
   };
@@ -93,11 +95,42 @@ export default function DesignerPage() {
     ));
   };
 
+  const replaceMode = useMemo(() => {
+    if (!replaceSourceId) return null;
+    const src = pieces.find(p => p.id === replaceSourceId);
+    if (!src) return null;
+    const count = pieces.filter(p => p.building_type === src.building_type).length;
+    return { instanceId: replaceSourceId, building_type: src.building_type, count };
+  }, [replaceSourceId, pieces]);
+
+  const handleStartReplace = (instanceId: string) => {
+    setReplaceSourceId(instanceId);
+    setPaletteOpen(true);
+  };
+
+  const handleReplaceOne = (newType: string) => {
+    if (!replaceMode) return;
+    setPieces(prev =>
+      prev.map(p => p.id === replaceMode.instanceId ? { ...p, building_type: newType } : p),
+    );
+  };
+
+  const handleReplaceAll = (newType: string) => {
+    if (!replaceMode) return;
+    const oldType = replaceMode.building_type;
+    setPieces(prev =>
+      prev.map(p => p.building_type === oldType ? { ...p, building_type: newType } : p),
+    );
+  };
+
+  const handleExitReplaceMode = () => setReplaceSourceId(null);
+
   const foundationPlaced = hasFoundation(pieces);
 
   const selectTemplate = (templateId: string) => {
     const entry = STRUCTURE_CATALOG.find(c => c.templateId === templateId);
     if (!foundationPlaced && !entry?.isFoundation) return;
+    setReplaceSourceId(null);
     setPlacingTemplate(templateId);
     setPlacingRotation(0);
     setSelectedPieceId(null);
@@ -333,6 +366,27 @@ export default function DesignerPage() {
                 &nbsp;·&nbsp;
                 <kbd className="rounded bg-white/10 px-1 py-px font-mono text-white/50">Del</kbd> remove
               </div>
+              <div className="flex gap-1.5 pt-0.5">
+                {(() => {
+                  const sameTypeCount = pieces.filter(p => p.building_type === selectedPiece.building_type).length;
+                  return (
+                    <>
+                      <button
+                        className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b55] bg-[#c8a84b12] px-2 py-0.5 text-[10px] text-[#c8a84b] transition-colors hover:bg-[#c8a84b22]"
+                        onClick={() => handleStartReplace(selectedPiece.id)}
+                      >
+                        Replace
+                      </button>
+                      <button
+                        className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-white/60 transition-colors hover:bg-white/10 hover:text-white/90"
+                        onClick={() => handleStartReplace(selectedPiece.id)}
+                      >
+                        Replace All ({sameTypeCount})
+                      </button>
+                    </>
+                  );
+                })()}
+              </div>
             </div>
           )}
 
@@ -365,6 +419,10 @@ export default function DesignerPage() {
           placingTemplate={placingTemplate}
           foundationPlaced={foundationPlaced}
           onSelectTemplate={selectTemplate}
+          replaceMode={replaceMode}
+          onExitReplaceMode={handleExitReplaceMode}
+          onReplaceOne={handleReplaceOne}
+          onReplaceAll={handleReplaceAll}
         />
 
       </div>
