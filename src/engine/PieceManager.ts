@@ -418,6 +418,20 @@ export class PieceManager {
     });
   }
 
+  // Update a placed piece's yaw in-place without destroying/recreating the mesh.
+  // Used by the ghost to track snap rotation changes without flickering.
+  updatePieceYaw(id: string, rotation: number): void {
+    const placed = this.placedMeshes.get(id);
+    if (!placed) return;
+    const n = ((rotation % 360) + 360) % 360;
+    const key = n > 180 ? n - 360 : n;
+    const staticMap = ROTATION_BY_STORED[placed.templateId];
+    const extra = staticMap != null ? (staticMap[key] ?? 0) : (EXTRA_ROTATION[placed.templateId] ?? 0);
+    placed.root.rotationQuaternion = placed.baseQuaternion.clone();
+    placed.root.addRotation(0, degreesToRadians(rotation + 90 + extra), 0);
+    placed.rotation = rotation;
+  }
+
   removePiece(id: string): void {
     const placed = this.placedMeshes.get(id);
     if (placed) {

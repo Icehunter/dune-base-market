@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const BlueprintDetailPage = lazy(() => import('./pages/BlueprintDetailPage'));
+const DesignerPage = lazy(() => import('./pages/DesignerPage'));
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<GalleryPage />} />
           <Route path="/blueprint/:id" element={<BlueprintDetailPage />} />
           <Route path="/blueprint/:id/v/:variantId" element={<BlueprintDetailPage />} />
+          <Route path="/designer" element={<DesignerPage />} />
         </Routes>
       </Suspense>
       {/* Single global toast outlet — all `toast.success(...)` / `toast.danger(...)`

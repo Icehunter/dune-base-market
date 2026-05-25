@@ -16,6 +16,12 @@ export const EXTRA_ROTATION: Partial<Record<string, number>> = {
   Advanced_VehiclesFabricator_Placeable: 180,
   RepairStation_Placeable: 180,
   LargeWaterCistern_Placeable: 180,
+  Atreides_Outpost_Foundation_Wedge: 60,
+  Harkonnen_Outpost_Foundation_Wedge: 60,
+  Choam_Shelter_Foundation_Wedge_New: 60,
+  Choam_Level2_Foundation_Wedge: 60,
+  MTX_Neut_DesertMechanic_Foundation_Wedge: 60,
+  MTX_Smug_Foundation_Wedge: 60,
 };
 
 // ── Rotation patterns ─────────────────────────────────────────────────────────
@@ -260,7 +266,7 @@ export const ROTATION_BY_STORED: Partial<Record<string, RotMap>> = Object.fromEn
   ["Atreides_Outpost_Floor",                     { [0]: 0, [30]: 30, [60]: 60, [150]: 60, [-60]: 30, [-30]: -30, [-120]: 60 }],
   ["MTX_Atre_BreakfastRoom_Wall_01",             { [0]: 180, [180]: 180, [30]: -60, [-30]: 60 }],
   ["Atreides_Outpost_Wall_Half",                 { [0]: 0, [90]: 0, [-90]: 0, [60]: 60, [150]: 60, [-60]: 120, [-120]: 67.5 }],
-  ["Atreides_Outpost_Foundation_Wedge",          { [180]: 60 }],
+  // Foundation_Wedge pieces use EXTRA_ROTATION (constant +60° at all rotations)
   ["Atreides_Outpost_Rooftop_Round_Corner",      { [150]: 150 }],
   ["MediumOreRefinery_Placeable",                { [0]: -90, [90]: 90 }],
   ["SmallChemicalRefinery_Placeable",            { [0]: 180 }],

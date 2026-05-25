@@ -26,6 +26,7 @@ import {
   isPositionOccupied,
   isPlacementColliding,
   isFoundationPiece,
+  isFloorPiece,
   gridSnapPos,
   cycleSnapHalf,
   cycleSnapAll,
@@ -366,6 +367,7 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
         snapResultRef.current = snap;
 
         let finalBx: number, finalBy: number, finalBz: number, finalRot: number;
+        let forceBlocked = false;
 
         if (snap) {
           const bab = ueToBabylon(snap.pos.x, snap.pos.y, snap.pos.z);
@@ -378,6 +380,15 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           const bab = ueToBabylon(rawUE.x, rawUE.y, rawUE.z);
           finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
           finalRot = placingRotationRef.current;
+        } else if (isFloorPiece(tmpl)) {
+          // Floors with no snap: show at grid height, always blocked (no support = invalid placement)
+          const gx = Math.round(rawUE.x / TILE) * TILE;
+          const gy = Math.round(rawUE.y / TILE) * TILE;
+          ghostUERef.current = { x: gx, y: gy, z: GRID.FLOOR_HEIGHT };
+          const bab = ueToBabylon(gx, gy, GRID.FLOOR_HEIGHT);
+          finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
+          finalRot = placingRotationRef.current;
+          forceBlocked = true;
         } else {
           // Non-foundation pieces grid-snap when not near a socket
           const gridPos = gridSnapPos(rawUE.x, rawUE.y, rawUE.z);
@@ -388,8 +399,8 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           finalRot = placingRotationRef.current;
         }
 
-        // Polygon collision check for foundations
-        const blocked = isPlacementColliding(
+        // Polygon collision check (foundations + floors)
+        const blocked = forceBlocked || isPlacementColliding(
           tmpl, ghostUERef.current.x, ghostUERef.current.y, ghostUERef.current.z,
           finalRot, piecesRef.current,
         );

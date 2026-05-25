@@ -47,13 +47,16 @@ interface Props {
   // Fired once initial pieces have been placed — used by the page to apply
   // any persisted piece overrides imperatively without rebuilding the scene.
   onReady?: () => void;
+  // Fired at the start of each scene rebuild (pieces changed). Lets the page
+  // reset ready state so overrides are re-applied against the new scene.
+  onSceneReset?: () => void;
   initialDistanceScale?: number;
   initialBlueprint?: RawBlueprint;
   userRotationOverrides?: Partial<Record<string, RotMap>>;
 }
 
 export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
-  function SceneCanvas({ onSelectPiece, onModeChange, onReady, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
+  function SceneCanvas({ onSelectPiece, onModeChange, onReady, onSceneReset, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
     const canvasRef     = useRef<HTMLCanvasElement>(null);
     const onSelectRef   = useRef(onSelectPiece);
     const pmRef         = useRef<PieceManager | null>(null);
@@ -61,6 +64,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     const modeRef              = useRef<'orbit' | 'fly'>('orbit');
     const onModeChangeRef      = useRef(onModeChange);
     const onReadyRef           = useRef(onReady);
+    const onSceneResetRef      = useRef(onSceneReset);
     const userOverridesRef     = useRef(userRotationOverrides);
     const orbitCamRef     = useRef<ArcRotateCamera | null>(null);
     const flyCamRef       = useRef<UniversalCamera | null>(null);
@@ -128,12 +132,15 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     // Keep callback ref current without re-running the heavy effect.
     useEffect(() => { onSelectRef.current = onSelectPiece; }, [onSelectPiece]);
     useEffect(() => { onModeChangeRef.current = onModeChange; }, [onModeChange]);
-    useEffect(() => { onReadyRef.current   = onReady;        }, [onReady]);
+    useEffect(() => { onReadyRef.current      = onReady;      }, [onReady]);
+    useEffect(() => { onSceneResetRef.current = onSceneReset; }, [onSceneReset]);
     useEffect(() => { userOverridesRef.current = userRotationOverrides; }, [userRotationOverrides]);
 
     useEffect(() => {
       const canvas = canvasRef.current;
       if (!canvas) return;
+
+      onSceneResetRef.current?.();
 
       // ── Engine & scene ──────────────────────────────────────────────────────
       const engine = new Engine(canvas, true, {

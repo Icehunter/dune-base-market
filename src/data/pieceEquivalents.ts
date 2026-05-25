@@ -10,7 +10,7 @@ import { PIECE_CATALOG, getPieceDefinition } from './catalog';
 
 // ── Faction → human-readable set label ───────────────────────────────────────
 
-const FACTION_LABELS: Record<string, string> = {
+export const FACTION_LABELS: Record<string, string> = {
   Atreides:      'Atreides Outpost',
   Harkonnen:     'Harkonnen Outpost',
   Choam:         'Choam Shelter',
