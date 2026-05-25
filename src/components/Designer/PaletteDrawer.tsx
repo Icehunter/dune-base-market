@@ -1,5 +1,5 @@
 // src/components/Designer/PaletteDrawer.tsx
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { FACTION_LABELS } from '../../data/pieceEquivalents';
 import type { PieceDefinition } from '../../data/catalog';
@@ -27,9 +27,9 @@ interface Props {
   foundationPlaced: boolean;
   onSelectTemplate: (templateId: string) => void;
   replaceMode: ReplaceMode | null;
+  selectedTile: string | null;
+  onTileSelect: (id: string | null) => void;
   onExitReplaceMode: () => void;
-  onReplaceOne: (newType: string) => void;
-  onReplaceAll: (newType: string) => void;
 }
 
 export function PaletteDrawer({
@@ -40,22 +40,16 @@ export function PaletteDrawer({
   foundationPlaced,
   onSelectTemplate,
   replaceMode,
+  selectedTile,
+  onTileSelect,
   onExitReplaceMode,
-  onReplaceOne,
-  onReplaceAll,
 }: Props) {
   const [activeFaction, setActiveFaction] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [selectedTile, setSelectedTile] = useState<string | null>(null);
 
   const catalogEntry = replaceMode
     ? (pieces.find(p => p.templateId === replaceMode.building_type) ?? null)
     : null;
-
-  // Clear tile selection when replace mode exits
-  useEffect(() => {
-    if (!replaceMode) setSelectedTile(null);
-  }, [replaceMode]);
 
   const factions = useMemo(
     () => ORDERED_FACTIONS.filter(f => pieces.some(p => p.faction === f)),
@@ -111,7 +105,7 @@ export function PaletteDrawer({
             <span className="ml-1 font-normal text-[#c8a84b70]">×{replaceMode.count}</span>
           </span>
           <button
-            onClick={() => { onExitReplaceMode(); setSelectedTile(null); }}
+            onClick={() => { onExitReplaceMode(); onTileSelect(null); }}
             className="shrink-0 cursor-pointer text-white/30 transition-colors hover:text-white/70"
           >
             <Icon icon="lucide:x" width={13} height={13} />
@@ -194,7 +188,7 @@ export function PaletteDrawer({
                 key={p.templateId}
                 onClick={() => {
                   if (replaceMode) {
-                    setSelectedTile(prev => prev === p.templateId ? null : p.templateId);
+                    onTileSelect(isSelected ? null : p.templateId);
                   } else if (!locked) {
                     onSelectTemplate(p.templateId);
                   }
@@ -202,11 +196,9 @@ export function PaletteDrawer({
                 disabled={locked}
                 title={p.name}
                 className={[
-                  'relative flex w-[80px] shrink-0 flex-col items-center gap-1 rounded-[2px] border p-1 transition-colors',
+                  'flex w-[80px] shrink-0 flex-col items-center gap-1 rounded-[2px] border p-1 transition-colors',
                   locked ? 'cursor-not-allowed opacity-30' : 'cursor-pointer',
-                  isSelected
-                    ? 'border-[#c8a84b] bg-[#c8a84b18]'
-                    : active
+                  isSelected || active
                     ? 'border-[#c8a84b] bg-[#c8a84b18]'
                     : !locked
                     ? 'border-white/10 bg-white/[0.03] hover:border-white/25 hover:bg-white/[0.06]'
@@ -234,24 +226,6 @@ export function PaletteDrawer({
                 >
                   {p.name}
                 </span>
-
-                {/* Replace action buttons — replace mode + this tile selected */}
-                {replaceMode && isSelected && (
-                  <div className="absolute inset-x-0 bottom-0 flex flex-col gap-px px-1 pb-1">
-                    <button
-                      onClick={e => { e.stopPropagation(); onReplaceOne(p.templateId); setSelectedTile(null); }}
-                      className="w-full cursor-pointer rounded-[2px] bg-[#c8a84b] py-0.5 text-center text-[8px] font-bold text-black"
-                    >
-                      Replace ×1
-                    </button>
-                    <button
-                      onClick={e => { e.stopPropagation(); onReplaceAll(p.templateId); setSelectedTile(null); }}
-                      className="w-full cursor-pointer rounded-[2px] bg-white/15 py-0.5 text-center text-[8px] text-white/80"
-                    >
-                      All ×{replaceMode.count}
-                    </button>
-                  </div>
-                )}
               </button>
             );
           })

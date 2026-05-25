@@ -44,6 +44,7 @@ export default function DesignerPage() {
   const [locked, setLocked] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(true);
   const [replaceSourceId, setReplaceSourceId] = useState<string | null>(null);
+  const [replaceTileId, setReplaceTileId] = useState<string | null>(null);
 
   const counterRef = useRef(0);
   const importInputRef = useRef<HTMLInputElement>(null);
@@ -79,7 +80,7 @@ export default function DesignerPage() {
   };
 
   const handleSelectPiece = (id: string | null) => {
-    if (id !== replaceSourceId) setReplaceSourceId(null);
+    if (id !== replaceSourceId) { setReplaceSourceId(null); setReplaceTileId(null); }
     setSelectedPieceId(id);
     if (id) setPlacingTemplate(null);
   };
@@ -105,6 +106,7 @@ export default function DesignerPage() {
 
   const handleStartReplace = (instanceId: string) => {
     setReplaceSourceId(instanceId);
+    setReplaceTileId(null);
     setPaletteOpen(true);
   };
 
@@ -125,7 +127,7 @@ export default function DesignerPage() {
     toast.success(`Replaced ${count} piece${count !== 1 ? 's' : ''}`);
   };
 
-  const handleExitReplaceMode = () => setReplaceSourceId(null);
+  const handleExitReplaceMode = () => { setReplaceSourceId(null); setReplaceTileId(null); };
 
   const foundationPlaced = hasFoundation(pieces);
 
@@ -133,6 +135,7 @@ export default function DesignerPage() {
     const entry = STRUCTURE_CATALOG.find(c => c.templateId === templateId);
     if (!foundationPlaced && !entry?.isFoundation) return;
     setReplaceSourceId(null);
+    setReplaceTileId(null);
     setPlacingTemplate(templateId);
     setPlacingRotation(0);
     setSelectedPieceId(null);
@@ -229,6 +232,10 @@ export default function DesignerPage() {
 
   const placingEntry = placingTemplate
     ? (STRUCTURE_CATALOG.find(p => p.templateId === placingTemplate) ?? null)
+    : null;
+
+  const replaceTileEntry = replaceTileId
+    ? (STRUCTURE_CATALOG.find(p => p.templateId === replaceTileId) ?? null)
     : null;
 
   // ── Render ─────────────────────────────────────────────────────────────────
@@ -371,18 +378,52 @@ export default function DesignerPage() {
                 &nbsp;·&nbsp;
                 <kbd className="rounded bg-white/10 px-1 py-px font-mono text-white/50">Del</kbd> remove
               </div>
-              <div className="flex gap-1.5 pt-0.5">
-                <button
-                  className={`pointer-events-auto cursor-pointer rounded-[2px] border px-2 py-0.5 text-[10px] transition-colors ${
-                    replaceMode
-                      ? 'border-[#c8a84b] bg-[#c8a84b22] text-[#c8a84b]'
-                      : 'border-[#c8a84b55] bg-[#c8a84b12] text-[#c8a84b] hover:bg-[#c8a84b22]'
-                  }`}
-                  onClick={() => replaceMode ? handleExitReplaceMode() : handleStartReplace(selectedPiece.id)}
-                >
-                  {replaceMode ? 'Cancel Replace' : 'Replace…'}
-                </button>
-              </div>
+              {replaceMode && replaceTileEntry ? (
+                <div className="flex flex-col gap-1 pt-0.5">
+                  <div className="flex items-center gap-1.5 text-[10px] text-white/40">
+                    <Icon icon="lucide:arrow-right" width={9} height={9} />
+                    <span className="truncate text-[#c8a84b]/80">{replaceTileEntry.name}</span>
+                  </div>
+                  <div className="flex gap-1.5">
+                    <button
+                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-[#c8a84b] bg-[#c8a84b] px-2 py-0.5 text-[10px] font-semibold text-black transition-opacity hover:opacity-90"
+                      onClick={() => { handleReplaceOne(replaceTileId!); setReplaceTileId(null); }}
+                    >
+                      Replace ×1
+                    </button>
+                    <button
+                      className="pointer-events-auto cursor-pointer rounded-[2px] border border-white/20 bg-white/10 px-2 py-0.5 text-[10px] text-white/80 transition-colors hover:bg-white/15"
+                      onClick={() => { handleReplaceAll(replaceTileId!); setReplaceTileId(null); }}
+                    >
+                      All ×{replaceMode.count}
+                    </button>
+                  </div>
+                  <button
+                    className="pointer-events-auto w-fit cursor-pointer text-[9px] text-white/30 hover:text-white/60"
+                    onClick={handleExitReplaceMode}
+                  >
+                    cancel
+                  </button>
+                </div>
+              ) : (
+                <div className="flex flex-col gap-1 pt-0.5">
+                  <div className="flex gap-1.5">
+                    <button
+                      className={`pointer-events-auto cursor-pointer rounded-[2px] border px-2 py-0.5 text-[10px] transition-colors ${
+                        replaceMode
+                          ? 'border-[#c8a84b] bg-[#c8a84b22] text-[#c8a84b]'
+                          : 'border-[#c8a84b55] bg-[#c8a84b12] text-[#c8a84b] hover:bg-[#c8a84b22]'
+                      }`}
+                      onClick={() => replaceMode ? handleExitReplaceMode() : handleStartReplace(selectedPiece.id)}
+                    >
+                      {replaceMode ? 'Cancel Replace' : 'Replace…'}
+                    </button>
+                  </div>
+                  {replaceMode && (
+                    <p className="text-[9px] text-white/30">← pick a piece in the palette</p>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
@@ -415,9 +456,9 @@ export default function DesignerPage() {
             foundationPlaced={foundationPlaced}
             onSelectTemplate={selectTemplate}
             replaceMode={replaceMode}
+            selectedTile={replaceTileId}
+            onTileSelect={setReplaceTileId}
             onExitReplaceMode={handleExitReplaceMode}
-            onReplaceOne={handleReplaceOne}
-            onReplaceAll={handleReplaceAll}
           />
         </div>
 
