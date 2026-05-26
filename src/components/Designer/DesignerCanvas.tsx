@@ -20,6 +20,7 @@ import {
 import '@babylonjs/loaders/glTF';
 import { GRID } from '../../engine/GridSystem';
 import { PieceManager } from '../../engine/PieceManager';
+import { babylonToUEPosition, toViewerStoredYaw, ueToBabylonPosition } from '../../engine/ueTransform';
 import {
   findSnapPoint,
   buildOccupiedSet,
@@ -124,16 +125,6 @@ function applyGhostStyle(
       }
     }
   }
-}
-
-// Babylon coords → UE coords
-function babylonToUE(bx: number, by: number, bz: number) {
-  return { x: bz, y: bx, z: by };
-}
-
-// UE coords → Babylon coords
-function ueToBabylon(ueX: number, ueY: number, ueZ: number) {
-  return { bx: ueY, by: ueZ, bz: ueX };
 }
 
 export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
@@ -326,7 +317,7 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
         pm.removePiece(GHOST_ID);
         await pm.preloadModel(template);
         if (!pmRef.current || placingTemplateRef.current !== template) return;
-        pm.placePiece(GHOST_ID, template, new Vector3(bx, 0, bz), -rot);
+        pm.placePiece(GHOST_ID, template, new Vector3(bx, 0, bz), toViewerStoredYaw(template, rot));
         ghostBlockedRef.current = false;
         applyGhostStyle(pm, false, highlightLayer, blockedMat);
       };
@@ -355,7 +346,7 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
         const pt = pick.pickedPoint;
 
         // Raw cursor in UE coords
-        const rawUE = babylonToUE(pt.x, pt.y, pt.z);
+        const rawUE = babylonToUEPosition({ x: pt.x, y: pt.y, z: pt.z });
 
         // Try socket snap
         const snap = findSnapPoint(
@@ -370,15 +361,15 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
         let forceBlocked = false;
 
         if (snap) {
-          const bab = ueToBabylon(snap.pos.x, snap.pos.y, snap.pos.z);
-          finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
+          const bab = ueToBabylonPosition(snap.pos);
+          finalBx = bab.x; finalBy = bab.y; finalBz = bab.z;
           finalRot = snap.rotation;
           ghostUERef.current = snap.pos;
         } else if (isFoundationPiece(tmpl)) {
           // Foundations follow cursor freely when not snapping
           ghostUERef.current = rawUE;
-          const bab = ueToBabylon(rawUE.x, rawUE.y, rawUE.z);
-          finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
+          const bab = ueToBabylonPosition(rawUE);
+          finalBx = bab.x; finalBy = bab.y; finalBz = bab.z;
           finalRot = placingRotationRef.current;
         } else if (isFloorPiece(tmpl)) {
           // Floors with no snap: show at grid height, always blocked (no support = invalid placement)
@@ -394,8 +385,8 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           const gridPos = gridSnapPos(rawUE.x, rawUE.y, rawUE.z);
           if (isPositionOccupied(occupiedRef.current, gridPos.x, gridPos.y, gridPos.z)) return;
           ghostUERef.current = gridPos;
-          const bab = ueToBabylon(gridPos.x, gridPos.y, gridPos.z);
-          finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
+          const bab = ueToBabylonPosition(gridPos);
+          finalBx = bab.x; finalBy = bab.y; finalBz = bab.z;
           finalRot = placingRotationRef.current;
         }
 
@@ -411,8 +402,9 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           placed.root.position.x = finalBx;
           placed.root.position.y = finalBy;
           placed.root.position.z = finalBz;
-          if (placed.rotation !== -finalRot) {
-            pm.updatePieceYaw(GHOST_ID, -finalRot);
+          const nextYaw = toViewerStoredYaw(tmpl, finalRot);
+          if (placed.rotation !== nextYaw) {
+            pm.updatePieceYaw(GHOST_ID, nextYaw);
           }
           applyGhostStyle(pm, blocked, highlightLayer, blockedMat);
         }
@@ -523,7 +515,10 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
                 return; // SnapOne — locked
               }
               if (pmRef.current) {
-                pmRef.current.updatePieceYaw(GHOST_ID, -snap.rotation);
+                pmRef.current.updatePieceYaw(
+                  GHOST_ID,
+                  toViewerStoredYaw(placingTemplateRef.current!, snap.rotation),
+                );
                 const blocked = isPlacementColliding(
                   placingTemplateRef.current!, snap.pos.x, snap.pos.y, snap.pos.z,
                   snap.rotation, piecesRef.current,
@@ -602,12 +597,12 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           pm.preloadModel(snap.building_type).then(() => {
             if (!pmRef.current) return;
             if (!piecesRef.current.find(x => x.id === snap.id)) return;
-            // UE → Babylon: Vector3(UE_Y, UE_Z, UE_X); rotation negated
+            // UE → Babylon: Vector3(UE_Y, UE_Z, UE_X)
             pmRef.current.placePiece(
               snap.id,
               snap.building_type,
-              new Vector3(snap.y, snap.z, snap.x),
-              -snap.rotation,
+              ueToBabylonPosition({ x: snap.x, y: snap.y, z: snap.z }),
+              toViewerStoredYaw(snap.building_type, snap.rotation),
             );
           });
         } else {
@@ -621,12 +616,12 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
               pmRef.current.placePiece(
                 snap.id,
                 snap.building_type,
-                new Vector3(snap.y, snap.z, snap.x),
-                -snap.rotation,
+                ueToBabylonPosition({ x: snap.x, y: snap.y, z: snap.z }),
+                toViewerStoredYaw(snap.building_type, snap.rotation),
               );
             });
           } else if (prevPiece && prevPiece.rotation !== p.rotation) {
-            pm.updatePieceYaw(p.id, -p.rotation);
+            pm.updatePieceYaw(p.id, toViewerStoredYaw(p.building_type, p.rotation));
           }
         }
       }
@@ -651,8 +646,8 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
       const tmpl = placingTemplateRef.current;
       if (!tmpl || snapResultRef.current) return; // snap controls rotation; skip
       const ue = ghostUERef.current;
-      const { bx, bz } = ueToBabylon(ue.x, ue.y, ue.z);
-      refreshGhostRef.current?.(tmpl, bx, bz, placingRotation);
+      const bab = ueToBabylonPosition(ue);
+      refreshGhostRef.current?.(tmpl, bab.x, bab.z, placingRotation);
     }, [placingRotation]);
 
     // ── External selection sync ───────────────────────────────────────────────

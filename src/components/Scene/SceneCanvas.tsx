@@ -14,6 +14,7 @@ import {
 } from '@babylonjs/core';
 import { GRID } from '../../engine/GridSystem';
 import { PieceManager } from '../../engine/PieceManager';
+import { toViewerStoredYaw, ueToBabylonPosition } from '../../engine/ueTransform';
 import { useBuildingStore, type PlacedPiece, type RawBlueprint } from '../../stores/buildingStore';
 import type { RotMap } from '../../data/modelRegistry';
 
@@ -163,9 +164,10 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
       let initRadius = 4000;
 
       if (pieces.length > 0) {
-        const xs = pieces.map(p => p.transform.position.x);
-        const ys = pieces.map(p => p.transform.position.y);
-        const zs = pieces.map(p => p.transform.position.z);
+        const babylonPositions = pieces.map((p) => ueToBabylonPosition(p.transform.position));
+        const xs = babylonPositions.map((p) => p.x);
+        const ys = babylonPositions.map((p) => p.z);
+        const zs = babylonPositions.map((p) => p.y);
 
         const minX = Math.min(...xs), maxX = Math.max(...xs);
         const minY = Math.min(...ys), maxY = Math.max(...ys);
@@ -304,11 +306,13 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
           pm.placePiece(
             piece.id,
             piece.templateId,
-            new Vector3(piece.transform.position.x, piece.transform.position.z, piece.transform.position.y),
-            piece.transform.rotation,
+            ueToBabylonPosition(piece.transform.position),
+            toViewerStoredYaw(piece.templateId, piece.transform.rotation),
             piece.scale,
             {},
             userOverridesRef.current,
+            undefined,
+            { pitch: piece.transform.pitch, roll: piece.transform.roll },
           );
         }
         if (pieces.length > 0) onReadyRef.current?.();
