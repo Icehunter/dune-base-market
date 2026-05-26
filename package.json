@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.28.1",
   "scripts": {
     "dev": "vite",
     "dev:local": "concurrently -n vite,wrangler -c cyan,yellow \"vite build --watch -m development\" \"npx wrangler pages dev --proxy 5173 --d1 DB=dune-blueprints --r2 BUCKET=dune-blueprints\"",

@@ -14,13 +14,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'pnpm'
 
-      - run: npm install
+      - run: pnpm install --frozen-lockfile
 
-      - run: npm run build
+      - run: pnpm run build
+        env:
+          VITE_CLERK_PUBLISHABLE_KEY: ${{ secrets.CLERK_PUBLISHABLE_KEY }}
+          VITE_CDN_BASE_URL: ${{ vars.VITE_CDN_BASE_URL }}
 
       - uses: cloudflare/wrangler-action@v3
         with:
