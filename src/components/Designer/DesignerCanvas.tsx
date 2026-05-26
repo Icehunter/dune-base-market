@@ -376,8 +376,8 @@ export const DesignerCanvas = memo(forwardRef<DesignerCanvasHandle, Props>(
           const gx = Math.round(rawUE.x / TILE) * TILE;
           const gy = Math.round(rawUE.y / TILE) * TILE;
           ghostUERef.current = { x: gx, y: gy, z: GRID.FLOOR_HEIGHT };
-          const bab = ueToBabylon(gx, gy, GRID.FLOOR_HEIGHT);
-          finalBx = bab.bx; finalBy = bab.by; finalBz = bab.bz;
+          const bab = ueToBabylonPosition({ x: gx, y: gy, z: GRID.FLOOR_HEIGHT });
+          finalBx = bab.x; finalBy = bab.y; finalBz = bab.z;
           finalRot = placingRotationRef.current;
           forceBlocked = true;
         } else {
