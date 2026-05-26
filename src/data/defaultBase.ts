@@ -46,8 +46,7 @@ export function getDefaultBasePieces(): Omit<PlacedPiece, 'id'>[] {
     templateId: raw.templateId,
     transform: {
       position: { x: round3(raw.x), y: round3(raw.y), z: round3(raw.z) },
-      // Dune/UE and Babylon use opposite yaw direction for this dataset.
-      rotation: cleanRotation(-raw.rotation),
+      rotation: cleanRotation(raw.rotation),
     },
     faction: 'Atreides',
     category: category(raw.templateId),
@@ -56,9 +55,7 @@ export function getDefaultBasePieces(): Omit<PlacedPiece, 'id'>[] {
   const placeables: Omit<PlacedPiece, 'id'>[] = PLACEABLES_RAW.map(raw => ({
     templateId: raw.templateId,
     transform: {
-      // Swap x↔y so SceneCanvas (which does Vector3(x, z, y)) places placeables
-      // in the same coordinate frame as instances. Raw values are restored on export.
-      position: { x: round3(raw.y), y: round3(raw.x), z: round3(raw.z) },
+      position: { x: round3(raw.x), y: round3(raw.y), z: round3(raw.z) },
       rotation: cleanRotation(raw.ry),
     },
     faction: 'Generic',

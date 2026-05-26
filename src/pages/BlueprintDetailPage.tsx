@@ -31,6 +31,7 @@ import {
 import type { BlueprintDetail, BlueprintVariantSummary, BlueprintVariant } from "../lib/api";
 import type { RawBlueprint, PlacedPiece } from "../stores/buildingStore";
 import type { RotMap } from "../data/modelRegistry";
+import { toViewerStoredYaw } from "../engine/ueTransform";
 // findEquivalents pulls in the 8k-line pieceRegistry.generated chunk; load it
 // only when the page needs the swappable count (lazy via dynamic import).
 import type { SceneCanvasHandle } from "../components/Scene/SceneCanvas";
@@ -105,7 +106,8 @@ export default function BlueprintDetailPage() {
         templateId,
         transform: { rotation },
       } = selectedPiece;
-      const n = ((rotation % 360) + 360) % 360;
+      const viewerYaw = toViewerStoredYaw(templateId, rotation);
+      const n = ((viewerYaw % 360) + 360) % 360;
       const key = n > 180 ? n - 360 : n;
 
       // Backspace/Delete — clear override for this piece's stored rotation

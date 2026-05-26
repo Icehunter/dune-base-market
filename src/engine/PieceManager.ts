@@ -18,18 +18,21 @@ import {
 } from "@babylonjs/core";
 import "@babylonjs/loaders/glTF";
 import { degreesToRadians } from "./GridSystem";
+import { uePitchToBabylonPitch, ueRollToBabylonRoll, ueYawToBabylonYaw } from "./ueTransform";
 import { MODEL_PATHS } from "../data/catalog";
 import { resolveGlb } from "../data/modelRegistry";
-import { EXTRA_ROTATION, ROTATION_BY_STORED, type RotMap } from "../data/modelRegistry";
+import { EXTRA_ROTATION, type RotMap } from "../data/modelRegistry";
 
 export interface PlacedMesh {
   id: string;
-  templateId: string;          // currently rendered templateId (changes on swap)
-  originalTemplateId: string;  // stable id from the blueprint JSON; key for cross-faction swaps
+  templateId: string; // currently rendered templateId (changes on swap)
+  originalTemplateId: string; // stable id from the blueprint JSON; key for cross-faction swaps
   root: TransformNode | Mesh;
   position: Vector3;
-  rotation: number;
-  baseQuaternion: Quaternion;  // GLB coord-correction quat, captured before our yaw is applied
+  rotation: number; // viewer-stored yaw (legacy convention)
+  pitch: number; // UE pitch (degrees)
+  roll: number; // UE roll (degrees)
+  baseQuaternion: Quaternion; // GLB coord-correction quat, captured before our yaw is applied
   scale?: { x: number; y: number; z: number };
 }
 
@@ -273,6 +276,7 @@ export class PieceManager {
     devOverrides: Partial<Record<string, RotMap>> = {},
     userOverrides: Partial<Record<string, RotMap>> = {},
     originalTemplateId?: string,
+    ueRotation?: Partial<{ pitch: number; roll: number }>,
   ): PlacedMesh | null {
     const origId = originalTemplateId ?? templateId;
     this.removePiece(id);
@@ -311,24 +315,24 @@ export class PieceManager {
     }
     root.position = position;
 
-    // Babylon's GLB loader applies a 180° Y + Z-flip coord correction to the root
-    // (rotationQuaternion set on load). We add our yaw on top of that — do NOT
-    // zero-reset rotation or the coord correction is lost.
-    //
-    // Canonicalize rotation to (-180, 180] so ROTATION_BY_STORED key lookups work
-    // regardless of whether the stored value is -180 or 180, 270 or -90, etc.
-    // Preserves non-90° values (60°, 120°) for wedge-based layouts.
+    // Babylon's GLB loader applies a coord-correction quaternion on the root.
+    // Reset to that base each time, then apply yaw/pitch/roll on top.
     const n = ((rotation % 360) + 360) % 360;
     const key = n > 180 ? n - 360 : n;
-    const staticMap  = ROTATION_BY_STORED[templateId];
-    const userMap    = userOverrides[templateId];
-    const devMap     = devOverrides[templateId];
-    const byStored = (staticMap || userMap || devMap)
-      ? { ...staticMap, ...userMap, ...devMap }
-      : undefined;
+    const userMap = userOverrides[templateId];
+    const devMap = devOverrides[templateId];
+    const byStored = userMap || devMap ? { ...userMap, ...devMap } : undefined;
     const extra = byStored != null ? (byStored[key] ?? 0) : (EXTRA_ROTATION[templateId] ?? 0);
+    // console.log(`Placing piece ${id} with template ${templateId} at yaw ${rotation}° (extra ${extra}°)`);
+    const pitch = ueRotation?.pitch ?? 0;
+    const roll = ueRotation?.roll ?? 0;
     const baseQuaternion = (root.rotationQuaternion ?? Quaternion.Identity()).clone();
-    root.addRotation(0, degreesToRadians(rotation + 90 + extra), 0);
+    root.rotationQuaternion = baseQuaternion.clone();
+    root.addRotation(
+      degreesToRadians(uePitchToBabylonPitch(pitch)),
+      degreesToRadians(ueYawToBabylonYaw(templateId, rotation + extra)),
+      degreesToRadians(ueRollToBabylonRoll(roll)),
+    );
 
     root.metadata = { pieceId: id, templateId };
     root.getChildMeshes(false).forEach((m) => {
@@ -343,8 +347,16 @@ export class PieceManager {
     }
 
     const placed: PlacedMesh = {
-      id, templateId, originalTemplateId: origId,
-      root, position: position.clone(), rotation, baseQuaternion, scale,
+      id,
+      templateId,
+      originalTemplateId: origId,
+      root,
+      position: position.clone(),
+      rotation,
+      pitch,
+      roll,
+      baseQuaternion,
+      scale,
     };
     this.placedMeshes.set(id, placed);
     return placed;
@@ -361,7 +373,7 @@ export class PieceManager {
     // 256-unit cube — half a foundation tile, enough to be noticeable.
     const box = MeshBuilder.CreateBox(`ph_${id}`, { size: 256 }, this.scene);
     box.position = position.add(new Vector3(0, 128, 0));
-    box.rotation.y = degreesToRadians(rotation + 90);
+    box.rotation.y = degreesToRadians(ueYawToBabylonYaw(templateId, rotation));
     box.material = this.getCached("placeholder", () => {
       const m = new StandardMaterial("ph_mat", this.scene);
       m.diffuseColor = new Color3(0.35, 0.55, 0.75);
@@ -370,8 +382,16 @@ export class PieceManager {
     });
     box.metadata = { pieceId: id, templateId };
     const placed: PlacedMesh = {
-      id, templateId, originalTemplateId,
-      root: box, position: position.clone(), rotation, baseQuaternion: Quaternion.Identity(), scale,
+      id,
+      templateId,
+      originalTemplateId,
+      root: box,
+      position: position.clone(),
+      rotation,
+      pitch: 0,
+      roll: 0,
+      baseQuaternion: Quaternion.Identity(),
+      scale,
     };
     this.placedMeshes.set(id, placed);
     return placed;
@@ -405,17 +425,33 @@ export class PieceManager {
     userOverrides: Partial<Record<string, RotMap>> = {},
   ): void {
     this.placedMeshes.forEach((placed) => {
-      const devMap  = devOverrides[placed.templateId];
+      const devMap = devOverrides[placed.templateId];
       const userMap = userOverrides[placed.templateId];
       if (!devMap && !userMap) return;
       const n = ((placed.rotation % 360) + 360) % 360;
       const key = n > 180 ? n - 360 : n;
-      const staticMap = ROTATION_BY_STORED[placed.templateId];
-      const byStored = { ...staticMap, ...userMap, ...devMap };
-      const extra = byStored[key] ?? (EXTRA_ROTATION[placed.templateId] ?? 0);
+      const byStored = { ...userMap, ...devMap };
+      const extra = byStored[key] ?? EXTRA_ROTATION[placed.templateId] ?? 0;
       placed.root.rotationQuaternion = placed.baseQuaternion.clone();
-      placed.root.addRotation(0, degreesToRadians(placed.rotation + 90 + extra), 0);
+      placed.root.addRotation(
+        degreesToRadians(uePitchToBabylonPitch(placed.pitch)),
+        degreesToRadians(ueYawToBabylonYaw(placed.templateId, placed.rotation + extra)),
+        degreesToRadians(ueRollToBabylonRoll(placed.roll)),
+      );
     });
+  }
+
+  updatePieceYaw(id: string, viewerYaw: number): void {
+    const placed = this.placedMeshes.get(id);
+    if (!placed) return;
+    placed.rotation = viewerYaw;
+    const extra = EXTRA_ROTATION[placed.templateId] ?? 0;
+    placed.root.rotationQuaternion = placed.baseQuaternion.clone();
+    placed.root.addRotation(
+      degreesToRadians(uePitchToBabylonPitch(placed.pitch)),
+      degreesToRadians(ueYawToBabylonYaw(placed.templateId, placed.rotation + extra)),
+      degreesToRadians(ueRollToBabylonRoll(placed.roll)),
+    );
   }
 
   removePiece(id: string): void {
@@ -440,9 +476,7 @@ export class PieceManager {
     userOverrides: Partial<Record<string, RotMap>> = {},
     devOverrides: Partial<Record<string, RotMap>> = {},
   ): Promise<void> {
-    const matches = [...this.placedMeshes.values()].filter(
-      (p) => p.originalTemplateId === originalTemplateId,
-    );
+    const matches = [...this.placedMeshes.values()].filter((p) => p.originalTemplateId === originalTemplateId);
     if (matches.length === 0) return;
     // No-op if every matching piece is already rendered as the requested template.
     // Avoids redundant GLB instantiation when hover-preview commits to its own state
@@ -460,6 +494,7 @@ export class PieceManager {
         devOverrides,
         userOverrides,
         originalTemplateId,
+        { pitch: m.pitch, roll: m.roll },
       );
     }
   }

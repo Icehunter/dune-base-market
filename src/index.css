@@ -8,11 +8,9 @@
 @font-face { font-family: 'Duneway'; src: url('/fonts/Duneway-Italic_MonoNumbers_Kommafix_Cyrfix.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: 'ImperialFont'; src: url('/fonts/ImperialFont.ttf') format('truetype'); font-weight: normal; font-style: normal; font-display: swap; }
 
-@theme {
-  --font-sans: 'Duneway', ui-sans-serif, system-ui, sans-serif;
-}
-
 :root {
+  /* Override HeroUI's --font-sans (regular CSS beats @layer theme) */
+  --font-sans: 'Duneway', ui-sans-serif, system-ui, sans-serif;
   --grid-color: rgba(255, 180, 100, 0.3);
   --grid-accent: rgba(255, 180, 100, 0.6);
   --dune-sand: #c4a35a;

@@ -14,6 +14,7 @@ import {
 } from '@babylonjs/core';
 import { GRID } from '../../engine/GridSystem';
 import { PieceManager } from '../../engine/PieceManager';
+import { toViewerStoredYaw, ueToBabylonPosition } from '../../engine/ueTransform';
 import { useBuildingStore, type PlacedPiece, type RawBlueprint } from '../../stores/buildingStore';
 import type { RotMap } from '../../data/modelRegistry';
 
@@ -47,13 +48,16 @@ interface Props {
   // Fired once initial pieces have been placed — used by the page to apply
   // any persisted piece overrides imperatively without rebuilding the scene.
   onReady?: () => void;
+  // Fired at the start of each scene rebuild (pieces changed). Lets the page
+  // reset ready state so overrides are re-applied against the new scene.
+  onSceneReset?: () => void;
   initialDistanceScale?: number;
   initialBlueprint?: RawBlueprint;
   userRotationOverrides?: Partial<Record<string, RotMap>>;
 }
 
 export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
-  function SceneCanvas({ onSelectPiece, onModeChange, onReady, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
+  function SceneCanvas({ onSelectPiece, onModeChange, onReady, onSceneReset, initialDistanceScale = 1, initialBlueprint, userRotationOverrides = {} }, ref) {
     const canvasRef     = useRef<HTMLCanvasElement>(null);
     const onSelectRef   = useRef(onSelectPiece);
     const pmRef         = useRef<PieceManager | null>(null);
@@ -61,6 +65,7 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     const modeRef              = useRef<'orbit' | 'fly'>('orbit');
     const onModeChangeRef      = useRef(onModeChange);
     const onReadyRef           = useRef(onReady);
+    const onSceneResetRef      = useRef(onSceneReset);
     const userOverridesRef     = useRef(userRotationOverrides);
     const orbitCamRef     = useRef<ArcRotateCamera | null>(null);
     const flyCamRef       = useRef<UniversalCamera | null>(null);
@@ -128,12 +133,15 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
     // Keep callback ref current without re-running the heavy effect.
     useEffect(() => { onSelectRef.current = onSelectPiece; }, [onSelectPiece]);
     useEffect(() => { onModeChangeRef.current = onModeChange; }, [onModeChange]);
-    useEffect(() => { onReadyRef.current   = onReady;        }, [onReady]);
+    useEffect(() => { onReadyRef.current      = onReady;      }, [onReady]);
+    useEffect(() => { onSceneResetRef.current = onSceneReset; }, [onSceneReset]);
     useEffect(() => { userOverridesRef.current = userRotationOverrides; }, [userRotationOverrides]);
 
     useEffect(() => {
       const canvas = canvasRef.current;
       if (!canvas) return;
+
+      onSceneResetRef.current?.();
 
       // ── Engine & scene ──────────────────────────────────────────────────────
       const engine = new Engine(canvas, true, {
@@ -156,9 +164,10 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
       let initRadius = 4000;
 
       if (pieces.length > 0) {
-        const xs = pieces.map(p => p.transform.position.x);
-        const ys = pieces.map(p => p.transform.position.y);
-        const zs = pieces.map(p => p.transform.position.z);
+        const babylonPositions = pieces.map((p) => ueToBabylonPosition(p.transform.position));
+        const xs = babylonPositions.map((p) => p.x);
+        const ys = babylonPositions.map((p) => p.z);
+        const zs = babylonPositions.map((p) => p.y);
 
         const minX = Math.min(...xs), maxX = Math.max(...xs);
         const minY = Math.min(...ys), maxY = Math.max(...ys);
@@ -297,11 +306,13 @@ export const SceneCanvas = memo(forwardRef<SceneCanvasHandle, Props>(
           pm.placePiece(
             piece.id,
             piece.templateId,
-            new Vector3(piece.transform.position.x, piece.transform.position.z, piece.transform.position.y),
-            piece.transform.rotation,
+            ueToBabylonPosition(piece.transform.position),
+            toViewerStoredYaw(piece.templateId, piece.transform.rotation),
             piece.scale,
             {},
             userOverridesRef.current,
+            undefined,
+            { pitch: piece.transform.pitch, roll: piece.transform.roll },
           );
         }
         if (pieces.length > 0) onReadyRef.current?.();
